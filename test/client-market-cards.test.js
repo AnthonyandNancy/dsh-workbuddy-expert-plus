@@ -86,7 +86,9 @@ test('every bundled expert lands in one of the 15 original categories', () => {
   assert.equal(chips.length, 15)
   assert.equal(chips.some((chip) => chip.id === module.NO_CATEGORY), false)
   assert.equal(chips.reduce((sum, chip) => sum + chip.count, 0), 429)
-  assert.deepEqual(chips.map((chip) => chip.id).sort(), Object.keys(ORIGINAL_CATEGORIES).sort())
+  // Array.from unwraps the vm realm's Array prototype before deep equality.
+  assert.deepEqual(Array.from(chips, (chip) => chip.id).sort(),
+    Object.keys(ORIGINAL_CATEGORIES).sort())
 })
 
 test('category labels are the original 15 Chinese names', () => {

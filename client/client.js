@@ -1233,19 +1233,33 @@ function marketCounts (body, cards) {
 /** Chip id for experts whose plugin.json carried no categoryId. */
 var NO_CATEGORY = '·uncategorized·'
 
-/** WorkBuddy marketplace grouping keys seen in the real corpus, localized. */
+/** The original WorkBuddy marketplace taxonomy (expert_center.json v1.0.0). */
 var KNOWN_CATEGORY_LABELS = {
   '01-ProductDesign': { zh: '产品设计', en: 'Product Design' },
-  '02-Engineering': { zh: '工程开发', en: 'Engineering' },
-  '04-DataAI': { zh: '数据与 AI', en: 'Data & AI' },
-  '06-ContentCreative': { zh: '内容创作', en: 'Content & Creative' },
-  '08-FinanceInvestment': { zh: '金融投资', en: 'Finance & Investment' },
-  '10-ProjectQuality': { zh: '项目与质量', en: 'Project & Quality' }
+  '02-Engineering': { zh: '技术工程', en: 'Engineering' },
+  '03-GameSpatial': { zh: '游戏空间', en: 'Game & Spatial' },
+  '04-DataAI': { zh: '数据智能', en: 'Data & AI' },
+  '05-MarketingGrowth': { zh: '营销增长', en: 'Marketing Growth' },
+  '06-ContentCreative': { zh: '内容创作', en: 'Content Creative' },
+  '07-SalesCommerce': { zh: '销售商务', en: 'Sales Commerce' },
+  '08-FinanceInvestment': { zh: '金融投资', en: 'Finance Investment' },
+  '09-OperationsHR': { zh: '运营人力', en: 'Operations HR' },
+  '10-ProjectQuality': { zh: '项目质量', en: 'Project Quality' },
+  '11-SecurityCompliance': { zh: '法务安全', en: 'Security Compliance' },
+  '12-IndustryConsultant': { zh: '行业顾问', en: 'Industry Consultant' },
+  '13-TencentZone': { zh: '腾讯专区', en: 'Tencent Zone' },
+  '14-GlobalDevelopment': { zh: '全球发展', en: 'Global Development' },
+  '15-BackToSchool': { zh: '开学季', en: 'Back to School' }
 }
 
-/** The card's raw category string ('' when the source had none). */
+/**
+ * The card's raw category key. Bundled catalog cards carry `categoryId`;
+ * legacy local WorkBuddy scans carry `category`. Reading both at the SOURCE
+ * keeps every chip, count, filter and search in agreement.
+ */
 function categoryOf (expert) {
-  return strOf(expert !== null && typeof expert === 'object' ? expert.category : undefined)
+  if (expert === null || typeof expert !== 'object') return ''
+  return strOf(expert.categoryId) || strOf(expert.category)
 }
 
 /** The card's chip key: the raw category, or the uncategorized sentinel. */
