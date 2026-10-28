@@ -1,7 +1,7 @@
 # Verification Report
 
 Date: 2026-10-28  
-Package: `dsh-workbuddy-expert-plus@0.1.0`  
+Package: `dsh-workbuddy-expert-plus@0.1.1`  
 Baseline plan: `docs/superpowers/plans/2026-10-28-workbuddy-dual-mode-implementation.md`
 
 ## Automated evidence
@@ -44,12 +44,12 @@ Important limitation: the locally installed profile
 (`resources/catalog.json`, `src/market/*`, `src/integrations/*`) that is not the
 current repository tree. The automated evidence above is for the current
 source and the freshly packed `.tgz`; the live profile must be reinstalled from
-`build/dsh-workbuddy-expert-plus-0.1.0.tgz` before the three screenshots can be
+`build/dsh-workbuddy-expert-plus-0.1.1.tgz` before the three screenshots can be
 re-tested against this build.
 
 ## Artifact
 
-- `.tgz`: `build/dsh-workbuddy-expert-plus-0.1.0.tgz`
+- `.tgz`: `build/dsh-workbuddy-expert-plus-0.1.1.tgz`
 - Manifest experts: 39
 - Resource files: 190
 - Contents report: `build/reports/packaged-contents.json`

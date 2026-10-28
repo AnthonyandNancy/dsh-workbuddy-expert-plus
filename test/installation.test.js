@@ -11,7 +11,7 @@ const { createInstallService } = await import('../src/services/install-expert.js
 const { scanDiscoveryRoots } = await import('../src/registry.js')
 
 const resourceRoot = fileURLToPath(new URL('../resources/experts/', import.meta.url))
-const catalog = createBundledCatalog({ root: resourceRoot, pluginVersion: '0.1.0' })
+const catalog = createBundledCatalog({ root: resourceRoot, pluginVersion: '0.1.1' })
 
 test('install exports complete bundled prompt, metadata and ownership evidence', async () => {
   const expertsRoot = await mkdtemp(join(tmpdir(), 'wb-install-'))
@@ -19,7 +19,7 @@ test('install exports complete bundled prompt, metadata and ownership evidence',
     const service = createInstallService({
       adapter: createBundledSourceAdapter(catalog),
       expertsRoot,
-      pluginVersion: '0.1.0',
+      pluginVersion: '0.1.1',
       now: () => '2026-10-28T00:00:00.000Z',
     })
     const first = await catalog.firstId()
@@ -29,7 +29,7 @@ test('install exports complete bundled prompt, metadata and ownership evidence',
     assert.equal(role, await catalog.readPrompt(first))
     assert.equal(manifest.source, 'bundled')
     assert.equal(manifest.contentSha256, await catalog.fingerprint(first))
-    assert.equal(manifest.pluginVersion, '0.1.0')
+    assert.equal(manifest.pluginVersion, '0.1.1')
     assert.ok((await readFile(join(result.dir, 'expert.yml'), 'utf8')).includes(`id: "${first}"`))
   } finally {
     await rm(expertsRoot, { recursive: true, force: true })
@@ -44,7 +44,7 @@ test('install refuses to overwrite a hand-written expert folder', async () => {
     const { mkdir } = await import('node:fs/promises')
     await mkdir(join(expertsRoot, first), { recursive: true })
     await writeFile(join(expertsRoot, first, 'role.md'), 'hand-written')
-    const service = createInstallService({ adapter: createBundledSourceAdapter(catalog), expertsRoot, pluginVersion: '0.1.0' })
+    const service = createInstallService({ adapter: createBundledSourceAdapter(catalog), expertsRoot, pluginVersion: '0.1.1' })
     await assert.rejects(() => service.install(first), /(exists|owned|refus|manifest)/i)
     assert.equal(await readFile(join(expertsRoot, first, 'role.md'), 'utf8'), 'hand-written')
   } finally {
@@ -55,7 +55,7 @@ test('install refuses to overwrite a hand-written expert folder', async () => {
 test('installed expert is visible to the existing DSH registry', async () => {
   const expertsRoot = await mkdtemp(join(tmpdir(), 'wb-install-registry-'))
   try {
-    const service = createInstallService({ adapter: createBundledSourceAdapter(catalog), expertsRoot, pluginVersion: '0.1.0' })
+    const service = createInstallService({ adapter: createBundledSourceAdapter(catalog), expertsRoot, pluginVersion: '0.1.1' })
     const first = await catalog.firstId()
     const result = await service.install(first)
     const scan = await scanDiscoveryRoots([{ path: expertsRoot, trust: 'user', rank: 200, label: 'user' }])
@@ -76,7 +76,7 @@ test('a JPEG bundled avatar is installed as avatar.jpg and served as image/jpeg'
     const expert = {
       id: 'jpeg-expert', displayName: 'JPEG', profession: 'Test', description: '',
       avatarFile: 'jpeg-expert/avatar.jpg', files: [{ path: 'role.md', sha256: 'a'.repeat(64) }],
-      sourcePackage: 'p', sourceAgent: 'a', sourceRevision: 'r', bundleVersion: 'b', pluginVersion: '0.1.0',
+      sourcePackage: 'p', sourceAgent: 'a', sourceRevision: 'r', bundleVersion: 'b', pluginVersion: '0.1.1',
       license: { status: 'approved', kind: 'test', evidence: 'test' },
     }
     const adapter = {
@@ -85,12 +85,12 @@ test('a JPEG bundled avatar is installed as avatar.jpg and served as image/jpeg'
       async listSkillFiles() { return [] },
       async readAsset(_id, path) { return path === 'avatar.jpg' ? jpeg : Buffer.from('') },
       async fingerprint() { return 'f'.repeat(64) },
-      async sourceRecord() { return { sourcePackage: 'p', sourceAgent: 'a', sourceRevision: 'r', bundleVersion: 'b', pluginVersion: '0.1.0' } },
+      async sourceRecord() { return { sourcePackage: 'p', sourceAgent: 'a', sourceRevision: 'r', bundleVersion: 'b', pluginVersion: '0.1.1' } },
     }
     // Prompt-hash check uses the manifest role hash; make it match this fixture.
     const crypto = await import('node:crypto')
     expert.files[0].sha256 = crypto.createHash('sha256').update('complete prompt').digest('hex')
-    const service = createInstallService({ adapter, expertsRoot, pluginVersion: '0.1.0' })
+    const service = createInstallService({ adapter, expertsRoot, pluginVersion: '0.1.1' })
     const result = await service.install('jpeg-expert')
     assert.equal(await readFile(join(result.dir, 'avatar.jpg')).then((b) => b[1]), 0xd8)
     assert.equal(await readFile(join(result.dir, 'avatar.png')).catch(() => undefined), undefined)
@@ -111,7 +111,7 @@ test('a legacy .expert-source.json is recognised as owned, not corrupt', async (
     await writeFile(join(dir, '.expert-source.json'), JSON.stringify({
       sourcePath: '~/.workbuddy/plugins', pluginDir: 'p', agentFile: 'a.md', fingerprint: 'f'.repeat(64), importedAt: '2026-01-01T00:00:00Z',
     }))
-    const service = createInstallService({ adapter: createBundledSourceAdapter(catalog), expertsRoot, pluginVersion: '0.1.0' })
+    const service = createInstallService({ adapter: createBundledSourceAdapter(catalog), expertsRoot, pluginVersion: '0.1.1' })
     const overlay = await service.overlay()
     assert.ok(overlay.installed.some((entry) => entry.id === first) || overlay.orphans.some((entry) => entry.id === first))
     assert.equal(overlay.broken.some((entry) => entry.id === first), false)

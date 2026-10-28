@@ -17,8 +17,10 @@
  * object (test doubles, standalone tooling) — never a load failure.
  */
 
+import { readFileSync } from 'node:fs'
 import { homedir } from 'node:os'
-import { join, resolve } from 'node:path'
+import { dirname, join, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import { registerExpertCommand } from './command.js'
 import { mountImporter } from './importer/index.js'
@@ -31,6 +33,22 @@ import { watchRoots } from './watch.js'
 
 /** Cordis plugin name used by loader diagnostics. */
 export const name = 'dsh-workbuddy-expert-plus'
+
+const MODULE_DIR = dirname(fileURLToPath(import.meta.url))
+
+/**
+ * The package version, read from THIS package's package.json (module-relative,
+ * never cwd). A release bump therefore needs one edit, not a synchronized
+ * literal in the host, importer and docs.
+ */
+export function pluginVersionOf() {
+  try {
+    const parsed = JSON.parse(readFileSync(resolve(MODULE_DIR, '..', 'package.json'), 'utf8'))
+    return typeof parsed.version === 'string' ? parsed.version : ''
+  } catch {
+    return ''
+  }
+}
 
 /** The plugin's Config schema (see the module header); undefined when no tier resolves schemastery. */
 let Config
@@ -184,7 +202,7 @@ export function apply(ctx, config = {}) {
         config,
         expertsRoot: join(dshHome, 'experts'),
         dshHome,
-        pluginVersion: '0.1.0',
+        pluginVersion: pluginVersionOf(),
         ownerCtx: ctx,
       })
         .then((off) => {

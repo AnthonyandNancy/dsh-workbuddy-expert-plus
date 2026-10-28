@@ -26,7 +26,7 @@ resources/experts/<expert-id>/role.md
 resources/experts/<expert-id>/avatar.*         # when present
 resources/experts/<expert-id>/skills/...       # license-cleared, inert
 build/reports/*.json
-build/dsh-workbuddy-expert-plus-0.1.0.tgz
+build/dsh-workbuddy-expert-plus-0.1.1.tgz
 ```
 
 ## Packaging guarantees checked automatically

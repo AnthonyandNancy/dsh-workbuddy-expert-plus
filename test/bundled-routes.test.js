@@ -12,7 +12,7 @@ const { createInstallService } = await import('../src/services/install-expert.js
 const { createBotService } = await import('../src/services/create-bot.js')
 const { mountBundledMarketRoutes } = await import('../src/importer/bundled-routes.js')
 
-const catalog = createBundledCatalog({ root: fileURLToPath(new URL('../resources/experts/', import.meta.url)), pluginVersion: '0.1.0' })
+const catalog = createBundledCatalog({ root: fileURLToPath(new URL('../resources/experts/', import.meta.url)), pluginVersion: '0.1.1' })
 
 function fakeServer() {
   const routes = new Map()
@@ -41,7 +41,7 @@ test('bundled state renders without WorkBuddy and carries both independent statu
   const dir = await mkdtemp(join(tmpdir(), 'wb-routes-'))
   try {
     const adapter = createBundledSourceAdapter(catalog)
-    const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.0' })
+    const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.1' })
     const botService = createBotService({ adapter, bindingsPath: join(dir, 'bindings.json') })
     const server = fakeServer()
     const off = mountBundledMarketRoutes(server, { catalog, installer, botService, probe: async () => ({ status: 'absent' }) })
@@ -167,7 +167,7 @@ test('install action returns the complete overlay so the card keeps its installe
   const dir = await mkdtemp(join(tmpdir(), 'wb-routes-overlay-'))
   try {
     const adapter = createBundledSourceAdapter(catalog)
-    const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.0' })
+    const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.1' })
     const server = fakeServer()
     mountBundledMarketRoutes(server, { catalog, installer, botEnabled: false })
     const id = await catalog.firstId()

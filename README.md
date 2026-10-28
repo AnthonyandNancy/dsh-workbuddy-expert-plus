@@ -24,7 +24,7 @@
 
 ```bash
 # DSH Desktop / Web：从生成的 tarball 安装（示例）
-dsh plugin --profile web add /absolute/path/to/dsh-workbuddy-expert-plus-0.1.0.tgz
+dsh plugin --profile web add /absolute/path/to/dsh-workbuddy-expert-plus-0.1.1.tgz
 ```
 
 DS-Bot 独立桌面应用需在其自身的 DSH 插件管理/配置中安装**同一个** `.tgz`；

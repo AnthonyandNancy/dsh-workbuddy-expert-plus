@@ -9,7 +9,7 @@ const { createBundledCatalog } = await import('../src/catalog/builtin.js')
 const { createBundledSourceAdapter } = await import('../src/adapters/source.js')
 const { createBotService } = await import('../src/services/create-bot.js')
 
-const catalog = createBundledCatalog({ root: fileURLToPath(new URL('../resources/experts/', import.meta.url)), pluginVersion: '0.1.0' })
+const catalog = createBundledCatalog({ root: fileURLToPath(new URL('../resources/experts/', import.meta.url)), pluginVersion: '0.1.1' })
 
 function fakeApi({ readOnly = null, bots = [], failOnCreate = null } = {}) {
   const calls = []

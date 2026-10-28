@@ -1,6 +1,6 @@
 {
   "name": "dsh-workbuddy-expert-plus",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Offline WorkBuddy expert marketplace for DeepSeek Harness and DS-Bot — bundled experts, DSH Agent install, and native Bot creation. · 离线内置专家市场，双宿主双模式。",
   "type": "module",
   "main": "src/index.js",
