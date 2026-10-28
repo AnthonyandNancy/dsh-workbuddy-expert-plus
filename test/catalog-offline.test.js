@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url'
 
 const { createBundledCatalog } = await import('../src/catalog/builtin.js')
 const resourceRoot = fileURLToPath(new URL('../resources/experts/', import.meta.url))
-const catalog = createBundledCatalog({ root: resourceRoot, pluginVersion: '0.1.1' })
+const catalog = createBundledCatalog({ root: resourceRoot, pluginVersion: '0.1.6' })
 
 test('bundled catalog renders without WorkBuddy and reads complete prompts', async () => {
   const state = await catalog.stateOf()
@@ -47,7 +47,7 @@ test('manifest tampering is detected per expert without hiding the rest', async 
         await writeFile(target, await readFile(join(sourceRoot, expert.id, file.path)))
       }
     }
-    const tampered = createBundledCatalog({ root: tmp, pluginVersion: '0.1.1' })
+    const tampered = createBundledCatalog({ root: tmp, pluginVersion: '0.1.6' })
     const state = await tampered.stateOf()
     // Both entries declare their real role.md paths here; the second has a
     // deliberately wrong content hash. It must be excluded from the card table
@@ -66,7 +66,7 @@ test('a manifest edited without re-signing catalog.sha256 is rejected as a packa
     const text = JSON.stringify({ ...manifest, experts: manifest.experts.slice(0, 1) })
     await writeFile(join(tmp, 'manifest.json'), text)
     await writeFile(join(tmp, 'catalog.sha256'), '0'.repeat(64) + String.fromCharCode(10))
-    const tampered = createBundledCatalog({ root: tmp, pluginVersion: '0.1.1' })
+    const tampered = createBundledCatalog({ root: tmp, pluginVersion: '0.1.6' })
     await assert.rejects(() => tampered.stateOf(), /catalog\.sha256|manifest/i)
   } finally {
     await rm(tmp, { recursive: true, force: true })

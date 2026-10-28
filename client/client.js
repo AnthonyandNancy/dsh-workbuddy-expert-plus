@@ -197,6 +197,8 @@ var MARKET_CSS = `
 .wbx-head-main { min-width: 0; }
 .wbx-head h2 { margin: 0 0 4px; font-size: 15px; font-weight: 600; color: var(--dsw-alias-label-primary, inherit); }
 .wbx-subtitle { margin: 0; font-size: 12px; line-height: 1.6; color: var(--dsw-alias-label-secondary, inherit); }
+.wbx-source-hint { margin: 6px 0 0; font-size: 12px; line-height: 17px;
+  color: var(--dsw-alias-label-tertiary, inherit); }
 .wbx-census { display: inline-flex; gap: 12px; flex: none; padding-bottom: 2px;
   font-family: ${MONO}; font-size: 11px; line-height: 1.5; font-variant-numeric: tabular-nums;
   color: var(--dsw-alias-label-tertiary, inherit); white-space: nowrap; }
@@ -551,6 +553,10 @@ var DICTS = {
     censusExperts: '专家 {n}',
     censusPlugins: '来源插件 {n}',
     censusCategories: '分类 {n}',
+    censusBundled: '内置 {n}',
+    censusLocal: '本机 {n}',
+    sourceBundledHint: '内置专家随包离线可用，已通过许可审核。',
+    sourceLocalHint: '本机专家来自 WorkBuddy 源目录，仅本机可用；路径不存在时请在上方设置。',
     search: '搜索名称、描述或 id —— 中英文都行',
     filterAll: '全部',
     filterInstalled: '已装',
@@ -674,6 +680,10 @@ var DICTS = {
     censusExperts: '{n} experts',
     censusPlugins: '{n} plugins',
     censusCategories: '{n} categories',
+    censusBundled: 'bundled {n}',
+    censusLocal: 'local {n}',
+    sourceBundledHint: 'Bundled experts ship offline with the package and passed the license review.',
+    sourceLocalHint: 'Local experts come from the WorkBuddy source folder and exist only on this machine; set the path above when it is missing.',
     search: 'Search names, descriptions, or ids — both languages',
     filterAll: 'All',
     filterInstalled: 'Installed',
@@ -1198,6 +1208,27 @@ function hasSkills (expert) {
 // on every card; the raw string is the filter key, only the DISPLAY label is
 // derived here, so an unknown category from a future source directory still
 // filters perfectly (prefix-stripped raw name).
+
+/**
+ * Split the market table into the two sources the user can tell apart.
+ * The server census is authoritative because it also counts a source that
+ * is enabled but currently empty; the card table is the fallback for a
+ * host that answers without `counts`.
+ *
+ * @param {object|null|undefined} body - the /market/state payload
+ * @param {Array<object>} cards - the normalized card table
+ * @returns {{bundled: number, local: number, total: number}}
+ */
+function marketCounts (body, cards) {
+  var counts = body !== null && body !== undefined && body.counts !== null && typeof body.counts === 'object' ? body.counts : null
+  var bundled = counts !== null && typeof counts.bundled === 'number'
+    ? counts.bundled
+    : cards.filter(function (card) { return card !== null && card !== undefined && card.sourceKind === 'bundled' }).length
+  var local = counts !== null && typeof counts.local === 'number'
+    ? counts.local
+    : cards.filter(function (card) { return card !== null && card !== undefined && card.sourceKind !== 'bundled' }).length
+  return { bundled: bundled, local: local, total: cards.length }
+}
 
 /** Chip id for experts whose plugin.json carried no categoryId. */
 var NO_CATEGORY = '·uncategorized·'
@@ -2077,7 +2108,17 @@ function MarketPage (props) {
   // category values.
   var stats = null
   if (experts !== null) {
-    stats = { total: cards.length, plugins: 0, categories: 0 }
+    var sourceCounts = marketCounts(body, cards)
+    stats = {
+      total: cards.length,
+      plugins: 0,
+      categories: 0,
+      // The market table can mix the immutable bundled catalog with an
+      // optional local WorkBuddy source. Report each count so "39" is never
+      // mistaken for everything the machine can install.
+      bundled: sourceCounts.bundled,
+      local: sourceCounts.local
+    }
     var pluginDirs = {}
     var categoryValues = {}
     for (var f = 1; f < FILTERS.length; f++) stats[FILTERS[f].stat] = 0
@@ -2164,10 +2205,13 @@ function MarketPage (props) {
     el('header', { className: 'wbx-head' },
       el('div', { className: 'wbx-head-main' },
         el('h2', null, t('marketTitle')),
-        el('p', { className: 'wbx-subtitle' }, t('marketSubtitle'))),
+        el('p', { className: 'wbx-subtitle' }, t('marketSubtitle')),
+        el('p', { className: 'wbx-source-hint' }, t('sourceBundledHint') + ' ' + (missingPath ? t('bannerMissingPath') + draftPath : t('sourceLocalHint')))),
       stats !== null
         ? el('span', { className: 'wbx-census' },
             el('span', { className: 'wbx-census-item' }, t('censusExperts', { n: stats.total })),
+            el('span', { className: 'wbx-census-item', title: t('sourceBundledHint') }, t('censusBundled', { n: stats.bundled })),
+            el('span', { className: 'wbx-census-item', title: t('sourceLocalHint') }, t('censusLocal', { n: stats.local })),
             el('span', { className: 'wbx-census-item' }, t('censusPlugins', { n: stats.plugins })),
             el('span', { className: 'wbx-census-item' }, t('censusCategories', { n: stats.categories })))
         : null),
@@ -2356,17 +2400,30 @@ function botSurfaceHint (storage) {
 
 /** DS-Bot's Bot-only footer registration; `bot-return` exists in both modes. */
 var BOT_SURFACE_ENTRY = 'bot-account'
+/**
+ * DS-Bot's Bot-only composer registration. It lives in the `conversation`
+ * slot group, which `surfaceGroups.reconcile()` withdraws separately from
+ * the `shell` group; observing both cells distinguishes a real Agent
+ * surface from the brief empty ledger between the two withdrawals.
+ */
+var BOT_COMPOSER_ENTRY = 'bot-plus'
 
 /**
- * DS-Bot's slot registrants. A dynamic package's fiber is named
- * `dyn/<pluginId>` by the client runner; a statically loaded copy uses the
- * module id directly. Older hosts may omit `registrant` entirely, which is
- * the only case where the id alone is accepted.
+ * DS-Bot's cells, recognized by their IDS alone.
+ *
+ * The registrant string is NOT usable here: the live runner labels DS-Bot's
+ * entries with an opaque per-build tag (observed `"Kb"` on DS-Bot 0.2.10),
+ * so a name allowlist silently classified a real Bot surface as `unknown`
+ * and hid the market launcher. These three ids are DS-Bot's private cell
+ * names and the surface value only routes UI — it never grants access or
+ * changes the capability probe — so an id match is the honest signal.
+ *
+ * A foreign plugin reusing one of these ids can only make this plugin show
+ * its own launcher earlier; every install/create action still goes through
+ * the same authenticated routes and the live capability probe.
  */
-function isDsBotRegistrant (entry) {
-  var registrant = entry !== null && entry !== undefined ? entry.registrant : undefined
-  if (registrant === undefined || registrant === null || registrant === '') return true
-  return registrant === 'ds-bot' || registrant === 'dyn/ds-bot'
+function isDsBotCell (entry) {
+  return entry !== null && entry !== undefined
 }
 
 /**
@@ -2392,13 +2449,15 @@ function createSurfaceStore (options) {
   var listeners = []
   var value = 'unknown'
 
-  function hasBotFooter () {
+  /** Does one cell carry the given DS-Bot-owned id? */
+  function hasOwnedEntry (name, id) {
     try {
-      var entries = readEntries('sidebar.footer.action')
+      var entries = readEntries(name)
       if (!Array.isArray(entries)) return false
       for (var i = 0; i < entries.length; i++) {
         var entry = entries[i]
-        if (entry !== null && entry !== undefined && entry.options !== null && entry.options !== undefined && entry.options.id === BOT_SURFACE_ENTRY && isDsBotRegistrant(entry)) return true
+        if (entry !== null && entry !== undefined && entry.options !== null && entry.options !== undefined &&
+            entry.options.id === id && isDsBotCell(entry)) return true
       }
       return false
     } catch (error) {
@@ -2406,36 +2465,58 @@ function createSurfaceStore (options) {
     }
   }
 
-  function anyDsBotFooter () {
+  /** Any entry at all in one cell — DS-Bot's group is at least partly mounted. */
+  function cellOccupied (name) {
     try {
-      var entries = readEntries('sidebar.footer.action')
-      if (!Array.isArray(entries)) return false
-      for (var i = 0; i < entries.length; i++) {
-        var entry = entries[i]
-        var id = entry && entry.options ? entry.options.id : ''
-        if (typeof id === 'string' && (id === 'bot-account' || id === 'bot-return') && isDsBotRegistrant(entry)) return true
-      }
-      return false
+      var entries = readEntries(name)
+      return Array.isArray(entries) && entries.length > 0
     } catch (error) {
       return false
     }
   }
+
+  // The last surface a POSITIVE DS-Bot signal proved. `surfaceGroups`
+  // withdraws a group before it installs the next one, so every switch has
+  // a microtask window where both cells are empty; falling back to storage
+  // (or `unknown`) in that window is what made the sidebar entry flicker
+  // and the picker reappear. Holding the last settled value across the
+  // window is correct because the storage write accompanies the switch and
+  // the next positive signal corrects it if the user changed modes.
+  var settled = null
 
   function compute () {
-    if (hasBotFooter()) return 'bot'
     var hint = botSurfaceHint(storage)
-    // DS-Bot always leaves `bot-return` in the footer, so its presence
-    // without `bot-account` is a positive Agent signal. With no DS-Bot
-    // footer at all, a stored 'bot' is residual and must not create a Bot
-    // surface; an explicit 'agent' remains a safe read-only hint.
-    //
-    // The one remaining Bot doubt: storage says 'bot' and the footer is
-    // present but lacks `bot-account`. That is either the instant between
-    // Bot-group withdrawal and Agent-group install, or an upstream rename
-    // of the Bot-only id. Report `bot-pending` so both our launcher and the
-    // composer picker stay withdrawn while the skin settles; an explicit
-    // storage 'agent' still proves Agent.
-    if (anyDsBotFooter()) return hint === 'bot' ? 'bot-pending' : 'agent'
+    var botFooter = hasOwnedEntry('sidebar.footer.action', BOT_SURFACE_ENTRY)
+    var botComposer = hasOwnedEntry('conversation.input.left', BOT_COMPOSER_ENTRY)
+    var footerOccupied = cellOccupied('sidebar.footer.action')
+    var composerOccupied = cellOccupied('conversation.input.left')
+
+    if (botFooter || botComposer) {
+      settled = 'bot'
+      return 'bot'
+    }
+
+    // DS-Bot is mounted in some form. A stored 'agent' is a positive Agent
+    // signal; a stored 'bot' with no Bot-only cell is ambiguous (group swap
+    // in flight, or an upstream id rename) and stays pending so both our
+    // launcher and the picker stay withdrawn.
+    if (footerOccupied || composerOccupied) {
+      if (hint === 'agent') {
+        settled = 'agent'
+        return 'agent'
+      }
+      // A resident DS-Bot with no Bot-only cell and a Bot storage hint is
+      // the swap itself (either direction); keep both our surfaces closed
+      // rather than guessing, even when the previous state was Agent.
+      return 'bot-pending'
+    }
+
+    // Both cells are empty: either DS-Bot is not in this composition at
+    // all, or a group swap is mid-flight. Only a cold start (nothing was
+    // ever settled) may consult storage here; after a positive observation
+    // the last settled surface is the truthful answer and prevents the
+    // focus-dependent flicker.
+    if (settled !== null) return settled
     return hint === 'agent' ? 'agent' : 'unknown'
   }
 
@@ -2448,6 +2529,10 @@ function createSurfaceStore (options) {
 
   value = compute()
   var offSlots = subscribeSlots('sidebar.footer.action', notify)
+  // The conversation group is withdrawn/installed independently of the
+  // shell group; observing it keeps the transition window from looking
+  // like a plain DSH host.
+  var offComposer = subscribeSlots('conversation.input.left', notify)
   function onStorage (event) {
     if (event && event.key !== null && event.key !== undefined && event.key !== 'ds-bot:surface') return
     notify()
@@ -2476,6 +2561,7 @@ function createSurfaceStore (options) {
     refresh: notify,
     dispose: function () {
       if (typeof offSlots === 'function') offSlots()
+      if (typeof offComposer === 'function') offComposer()
       if (win && typeof win.removeEventListener === 'function') {
         win.removeEventListener('storage', onStorage)
         win.removeEventListener('focus', onVisible)
@@ -3056,6 +3142,33 @@ function apply (ctx) {
     win: typeof window === 'undefined' ? undefined : window
   })
   collect(function () { surfaceStore.dispose() })
+  // Read-only diagnostics: which client build this window runs and what
+  // surface the store settled on. Never writes storage and never gates
+  // behavior; it exists so a stale/cached client can be told apart from a
+  // wrong surface decision in one look.
+  try {
+    window.__WORKBUDDY_PLUS__ = {
+      version: '0.1.6',
+      surface: function () { return surfaceStore.get() },
+      slots: function () {
+        var out = {}
+        var keys = ['sidebar.footer.action', 'conversation.input.left']
+        for (var k = 0; k < keys.length; k++) {
+          try {
+            var list = slots.entries(keys[k]) || []
+            out[keys[k]] = list.map(function (entry) {
+              return {
+                id: entry && entry.options ? entry.options.id : '',
+                order: entry && entry.options ? entry.options.order : undefined,
+                registrant: entry ? entry.registrant : undefined,
+              }
+            })
+          } catch (error) { out[keys[k]] = 'ERR:' + String(error) }
+        }
+        return out
+      },
+    }
+  } catch (error) { /* diagnostics are best-effort */ }
 
   // The one seat (design §11 #5): conversation.input.left, the composer
   // tool row's left side. NOTE (verified in the harness source): the
@@ -3064,24 +3177,51 @@ function apply (ctx) {
   // handshake activates the moment the seat gains a session id (see the
   // header's VERIFIED DEVIATION note). conversation.hero.agentPreset is
   // single and occupied; no '@' trigger source exists — neither is touched.
-  collect(slots.inject('conversation.input.left', function () {
-    return slots.register({
-      name: 'conversation.input.left',
-      id: 'workbuddy-expert',
-      order: 2,
-      locale: NS
-    }, function (props) {
-      props = props || {}
-      return el(ComposerExpertSeat, {
-        t: t,
-        getLocale: getLocale,
-        surfaceStore: surfaceStore,
-        session: props.session,
-        sessionId: props.sessionId,
-        initialData: props.initialData
+  //
+  // Bot mode REMOVES the registration instead of rendering null. The cell
+  // is a list slot: a null component still leaves our entry in the ledger,
+  // and hosts that wrap every list entry can keep an empty cell (the
+  // reported 「专家」 pill in Bot mode). Conditional registration makes the
+  // entry genuinely absent, then re-adds it on the way back to Agent.
+  var composerRegistration = null
+  function ownsComposer () {
+    var surface = surfaceStore.get()
+    return surface === 'bot' || surface === 'bot-pending'
+  }
+  function syncComposerRegistration () {
+    if (ownsComposer()) {
+      if (typeof composerRegistration === 'function') {
+        composerRegistration()
+        composerRegistration = null
+      }
+      return
+    }
+    if (composerRegistration !== null) return
+    composerRegistration = slots.inject('conversation.input.left', function () {
+      return slots.register({
+        name: 'conversation.input.left',
+        id: 'workbuddy-expert',
+        order: 2,
+        locale: NS
+      }, function (props) {
+        props = props || {}
+        return el(ComposerExpertSeat, {
+          t: t,
+          getLocale: getLocale,
+          surfaceStore: surfaceStore,
+          session: props.session,
+          sessionId: props.sessionId,
+          initialData: props.initialData
+        })
       })
     })
-  }))
+  }
+  collect(function () {
+    if (typeof composerRegistration === 'function') composerRegistration()
+    composerRegistration = null
+  })
+  collect(surfaceStore.subscribe(syncComposerRegistration))
+  syncComposerRegistration()
 
   // The market page (ticket 08): settings.section「WorkBuddy 专家」. The
   // seat is owned by dsh-client-ui-settings; slots.inject keeps the
@@ -3204,6 +3344,7 @@ module.exports.NO_CATEGORY = NO_CATEGORY
 module.exports.KNOWN_CATEGORY_LABELS = KNOWN_CATEGORY_LABELS
 module.exports.MARKET_CSS = MARKET_CSS
 module.exports.ensureMarketStyle = ensureMarketStyle
+module.exports.marketCounts = marketCounts
 module.exports.categoryOf = categoryOf
 module.exports.categoryKeyOf = categoryKeyOf
 module.exports.categoryLabelOf = categoryLabelOf

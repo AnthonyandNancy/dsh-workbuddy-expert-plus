@@ -104,8 +104,15 @@ function renderComponent(Component, props) {
   }
 }
 
-function surfaceHarness(initialEntries, initialStorage) {
+/**
+ * Two-cell harness: DS-Bot owns both `sidebar.footer.action` (shell group)
+ * and `conversation.input.left` (conversation group), and a group swap
+ * withdraws before it installs. The third argument seeds the conversation
+ * cell so a test can observe the intermediate empty ledger.
+ */
+function surfaceHarness(initialEntries, initialStorage, initialConversation = []) {
   let entries = initialEntries
+  let conversation = initialConversation
   let stored = initialStorage
   const listeners = new Set()
   const pending = []
@@ -117,29 +124,41 @@ function surfaceHarness(initialEntries, initialStorage) {
     // Mirror DSH's microtask-batched notification: the mutation queues its
     // listeners; `flush()` delivers the batch once, like SlotCore.flush().
     subscribe: (name, listener) => {
-      assert.equal(name, 'sidebar.footer.action')
+      assert.ok(name === 'sidebar.footer.action' || name === 'conversation.input.left',
+        `unexpected slot subscription: ${name}`)
       listeners.add(listener)
       return () => listeners.delete(listener)
     },
-    entries: () => entries,
+    entries: (name) => (name === 'conversation.input.left' ? conversation : entries),
   })
   async function flush() {
     await Promise.resolve()
     const batch = pending.splice(0)
     for (const listener of batch) listener()
   }
+  function notify() {
+    for (const listener of [...listeners]) pending.push(listener)
+  }
   return {
     store,
     setEntries(next) {
       entries = next
-      for (const listener of [...listeners]) pending.push(listener)
+      notify()
+    },
+    setConversation(next) {
+      conversation = next
+      notify()
     },
     setStorage(next) {
       stored = next
-      for (const listener of [...listeners]) pending.push(listener)
+      notify()
     },
     async transition(next) {
       this.setEntries(next)
+      await flush()
+    },
+    async conversationTransition(next) {
+      this.setConversation(next)
       await flush()
     },
     async storageTransition(next) {
@@ -153,26 +172,19 @@ function surfaceHarness(initialEntries, initialStorage) {
 const botOnly = [{ options: { id: 'bot-account' } }, { options: { id: 'bot-return' } }]
 const agentOnly = [{ options: { id: 'bot-return' } }]
 
-test('DS-Bot footer ids owned by another plugin never switch the surface', () => {
-  const foreignBot = [
-    { registrant: 'some-other-plugin', options: { id: 'bot-account' } },
-    { registrant: 'some-other-plugin', options: { id: 'bot-return' } },
+test('DS-Bot cell ids decide the surface regardless of its opaque registrant tag', () => {
+  // The live DS-Bot 0.2.10 runner labels its entries with an opaque build
+  // tag (observed "Kb"), not "ds-bot". The ids are what identify the cells.
+  const opaqueBot = [
+    { registrant: 'Kb', options: { id: 'bot-account' } },
+    { registrant: 'Kb', options: { id: 'bot-return' } },
   ]
-  assert.equal(surfaceHarness(foreignBot, 'agent').store.get(), 'agent',
-    'a foreign footer must not impersonate DS-Bot Bot mode; the stored Agent hint is respected')
+  assert.equal(surfaceHarness(opaqueBot, 'agent').store.get(), 'bot',
+    'an opaque registrant still proves DS-Bot Bot mode')
 
-  const ownBot = [
-    { registrant: 'dyn/ds-bot', options: { id: 'bot-account' } },
-    { registrant: 'dyn/ds-bot', options: { id: 'bot-return' } },
-  ]
-  assert.equal(surfaceHarness(ownBot, 'agent').store.get(), 'bot',
-    'the dynamic DS-Bot registrant is accepted')
-
-  const ownAgent = [
-    { registrant: 'dyn/ds-bot', options: { id: 'bot-return' } },
-  ]
-  assert.equal(surfaceHarness(ownAgent, 'agent').store.get(), 'agent',
-    'the DS-Bot Agent footer is accepted')
+  const opaqueAgent = [{ registrant: 'Kb', options: { id: 'bot-return' } }]
+  assert.equal(surfaceHarness(opaqueAgent, 'agent').store.get(), 'agent',
+    'the DS-Bot Agent footer is accepted with the same tag')
 })
 
 test('surface store reads Bot/Agent from the DS-Bot footer registrations in this window', () => {
@@ -354,4 +366,43 @@ test('leaving Bot mode closes an open market overlay and does not reopen it', as
   assert.equal(view.tree()?.type, module.BotMarketOverlay,
     'the launcher can open it again deliberately')
   module.closeBotMarket()
+})
+
+test('a DS-Bot group swap keeps the last settled surface through the empty window', async () => {
+  const app = surfaceHarness(botOnly, 'bot', [{ options: { id: 'bot-plus' } }])
+  assert.equal(app.store.get(), 'bot')
+
+  // Bot -> Agent: reconcile() withdraws the shell and conversation groups
+  // before it installs the Agent ones, so both cells are momentarily empty.
+  await app.transition([])
+  await app.conversationTransition([])
+  assert.equal(app.store.get(), 'bot', 'the empty window must not flip the surface')
+
+  await app.transition(agentOnly)
+  await app.storageTransition('agent')
+  assert.equal(app.store.get(), 'agent')
+
+  // Agent -> Bot: the same window in the other direction.
+  await app.transition([])
+  await app.conversationTransition([])
+  assert.equal(app.store.get(), 'agent', 'Agent stays through its own swap window')
+
+  await app.transition(botOnly)
+  await app.conversationTransition([{ options: { id: 'bot-plus' } }])
+  assert.equal(app.store.get(), 'bot')
+})
+
+test('conversation.input.left bot-plus is a Bot signal on its own', () => {
+  const app = surfaceHarness([], 'agent', [{ options: { id: 'bot-plus' } }])
+  assert.equal(app.store.get(), 'bot',
+    'the DS-Bot conversation group proves Bot mode even before the shell group settles')
+})
+
+test('bot-plus alone proves Bot mode even when bot-account never renders', () => {
+  // DS-Bot 0.2.10 keeps `bot-connect` in the footer and does not mount
+  // `bot-account` in this composition, so the footer alone cannot classify
+  // the surface. Its Bot-only composer entry still does.
+  const app = surfaceHarness([{ options: { id: 'bot-connect' } }], 'bot', [{ options: { id: 'bot-plus' } }])
+  assert.equal(app.store.get(), 'bot',
+    'the Bot-only composer entry is enough to show the Bot market launcher')
 })

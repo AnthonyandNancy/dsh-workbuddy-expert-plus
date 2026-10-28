@@ -12,7 +12,7 @@ const { createInstallService } = await import('../src/services/install-expert.js
 const { createBotService } = await import('../src/services/create-bot.js')
 const { mountBundledMarketRoutes } = await import('../src/importer/bundled-routes.js')
 
-const catalog = createBundledCatalog({ root: fileURLToPath(new URL('../resources/experts/', import.meta.url)), pluginVersion: '0.1.1' })
+const catalog = createBundledCatalog({ root: fileURLToPath(new URL('../resources/experts/', import.meta.url)), pluginVersion: '0.1.6' })
 
 function fakeServer() {
   const routes = new Map()
@@ -41,7 +41,7 @@ test('bundled state renders without WorkBuddy and carries both independent statu
   const dir = await mkdtemp(join(tmpdir(), 'wb-routes-'))
   try {
     const adapter = createBundledSourceAdapter(catalog)
-    const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.1' })
+    const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.6' })
     const botService = createBotService({ adapter, bindingsPath: join(dir, 'bindings.json') })
     const server = fakeServer()
     const off = mountBundledMarketRoutes(server, { catalog, installer, botService, probe: async () => ({ status: 'absent' }) })
@@ -167,7 +167,7 @@ test('install action returns the complete overlay so the card keeps its installe
   const dir = await mkdtemp(join(tmpdir(), 'wb-routes-overlay-'))
   try {
     const adapter = createBundledSourceAdapter(catalog)
-    const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.1' })
+    const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.6' })
     const server = fakeServer()
     mountBundledMarketRoutes(server, { catalog, installer, botEnabled: false })
     const id = await catalog.firstId()
@@ -184,4 +184,38 @@ test('install action returns the complete overlay so the card keeps its installe
   } finally {
     await rm(dir, { recursive: true, force: true })
   }
+})
+
+test('bot create with the untouched bundled prompt reads it through the production route', async () => {
+  const unified = createUnifiedCatalog({ bundled: catalog, local: undefined, localEnabled: false })
+  const adapter = createBundledSourceAdapter(catalog)
+  const calls = []
+  const api = {
+    async call(endpoint, payload) {
+      calls.push({ endpoint, payload })
+      if (endpoint === 'state') return { bots: [], models: [], readOnly: false }
+      if (endpoint === 'create-bot') return { id: 'bot-default', name: payload.name, role: payload.role, instructions: payload.instructions }
+      throw new Error(`unexpected endpoint ${endpoint}`)
+    },
+  }
+  const service = createBotService({ adapter, api })
+  const server = fakeServer()
+  mountBundledMarketRoutes(server, { catalog: unified, botService: service })
+  const id = await catalog.firstId()
+  const response = res()
+  // The dialog sends the prompt it read from /market/prompt. It never omits
+  // `instructions`, so this exercises the compare-not-edit fast path.
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/bot/create').handler(
+    req({
+      method: 'POST',
+      headers: { host: '127.0.0.1:3000' },
+      body: { expertId: id, name: 'Default Bot', role: 'R', instructions: await catalog.readPrompt(id) },
+    }),
+    response,
+  )
+  assert.equal(response.status, 200, JSON.stringify(response.body))
+  const created = calls.find((call) => call.endpoint === 'create-bot')
+  assert.ok(created !== undefined, 'create-bot reached DS-Bot')
+  assert.equal(created.payload.instructions, await catalog.readPrompt(id))
+  assert.equal(response.body.promptSha256, (await import('node:crypto')).createHash('sha256').update(await catalog.readPrompt(id), 'utf8').digest('hex'))
 })
