@@ -91,17 +91,28 @@ function renderComponent(Component, props) {
     reactStub._bind(null)
   }
   rerender()
-  return { tree: () => instance.tree, rerender, instance }
+  return {
+    tree: () => instance.tree,
+    rerender,
+    instance,
+    async flush() {
+      for (let i = 0; i < 4; i++) await Promise.resolve()
+      rerender()
+    },
+  }
 }
 
 function surfaceHarness(initialEntries, initialStorage) {
   let entries = initialEntries
   const listeners = new Set()
+  const pending = []
   const storage = {
     getItem: (key) => (key === 'ds-bot:surface' ? initialStorage : null),
   }
   const store = module.createSurfaceStore({
     storage,
+    // Mirror DSH's microtask-batched notification: the mutation queues its
+    // listeners; `flush()` delivers the batch once, like SlotCore.flush().
     subscribe: (name, listener) => {
       assert.equal(name, 'sidebar.footer.action')
       listeners.add(listener)
@@ -109,12 +120,22 @@ function surfaceHarness(initialEntries, initialStorage) {
     },
     entries: () => entries,
   })
+  async function flush() {
+    await Promise.resolve()
+    const batch = pending.splice(0)
+    for (const listener of batch) listener()
+  }
   return {
     store,
     setEntries(next) {
       entries = next
-      for (const listener of [...listeners]) listener()
+      for (const listener of [...listeners]) pending.push(listener)
     },
+    async transition(next) {
+      this.setEntries(next)
+      await flush()
+    },
+    flush,
   }
 }
 
@@ -134,23 +155,47 @@ test('surface store reads Bot/Agent from the DS-Bot footer registrations in this
     'a residual bot storage value without DS-Bot slots never proves Bot mode')
 })
 
-test('surface store notifies immediately when DS-Bot withdraws or installs its Bot skin', () => {
+test('surface store notifies through the host microtask batch when DS-Bot switches skins', async () => {
   const app = surfaceHarness(agentOnly, 'bot')
   const seen = []
   const off = app.store.subscribe((mode) => seen.push(mode))
 
   app.setEntries(botOnly)
+  assert.equal(app.store.get(), 'agent', 'the store does not observe an unflushed mutation')
+  await app.flush()
   assert.equal(app.store.get(), 'bot')
-  app.setEntries(agentOnly)
+  assert.deepEqual(seen, ['bot'])
+
+  await app.transition(agentOnly)
   assert.equal(app.store.get(), 'agent')
-  assert.deepEqual(seen, ['bot', 'agent'], 'each slot mutation reaches subscribers in the same event loop')
+  assert.deepEqual(seen, ['bot', 'agent'])
 
   off()
-  app.setEntries(botOnly)
+  await app.transition(botOnly)
   assert.deepEqual(seen, ['bot', 'agent'], 'unsubscribed listeners are released')
 })
 
-test('the sidebar launcher follows the live surface store without focus events', () => {
+test('a cold start before the Bot footer mounts later becomes Bot without a focus event', async () => {
+  const app = surfaceHarness([], 'bot')
+  assert.equal(app.store.get(), 'unknown',
+    'stored bot is not trusted before a DS-Bot footer exists')
+
+  const view = renderComponent(module.ComposerExpertSeat, {
+    t: (key) => key,
+    surfaceStore: app.store,
+    session: { id: 's' },
+  })
+  assert.equal(view.tree()?.type, module.ExpertSelector,
+    'unknown initially renders the Agent selector')
+
+  await app.transition(botOnly)
+  await view.flush()
+
+  assert.equal(view.tree(), null,
+    'the later bot-account registration hides the picker without focus/reopen')
+})
+
+test('the sidebar launcher follows the live surface store without focus events', async () => {
   const app = surfaceHarness(agentOnly, 'bot')
   const view = renderComponent(module.BotMarketLauncher, {
     t: (key) => key,
@@ -159,17 +204,17 @@ test('the sidebar launcher follows the live surface store without focus events',
   })
   assert.equal(view.tree(), null, 'Agent mode hides the Bot market launcher')
 
-  app.setEntries(botOnly)
-  view.rerender()
-  assert.equal(view.tree()?.type, 'button', 'Bot mode shows the launcher immediately')
+  await app.transition(botOnly)
+  await view.flush()
+  assert.equal(view.tree()?.type, 'button', 'Bot mode shows the launcher after the host batch')
   assert.equal(view.tree()?.props.className, 'wbx-launcher')
 
-  app.setEntries(agentOnly)
-  view.rerender()
-  assert.equal(view.tree(), null, 'switching back to Agent hides it immediately')
+  await app.transition(agentOnly)
+  await view.flush()
+  assert.equal(view.tree(), null, 'switching back to Agent hides it after the host batch')
 })
 
-test('the composer expert seat is hidden only in Bot mode', () => {
+test('the composer expert seat is hidden only in Bot mode', async () => {
   const agent = surfaceHarness(agentOnly, 'bot')
   const agentView = renderComponent(module.ComposerExpertSeat, {
     t: (key) => key,
@@ -187,8 +232,8 @@ test('the composer expert seat is hidden only in Bot mode', () => {
   })
   assert.equal(botView.tree(), null, 'Bot mode removes the composer expert picker')
 
-  bot.setEntries(agentOnly)
-  botView.rerender()
+  await bot.transition(agentOnly)
+  await botView.flush()
   assert.equal(botView.tree()?.type, module.ExpertSelector,
     'switching to Agent restores the picker without remounting the plugin')
 })
