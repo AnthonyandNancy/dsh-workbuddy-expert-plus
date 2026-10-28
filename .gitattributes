@@ -1,5 +1,5 @@
-# The bundled catalog checksum is over the exact manifest bytes. Git's
-# autocrlf must never rewrite them between checkouts, or a valid package is
-# rejected as MANIFEST_HASH_MISMATCH on Windows.
-resources/experts/manifest.json -text
-resources/experts/catalog.sha256 -text
+# The bundled catalog is content-addressed: catalog.sha256 covers the exact
+# manifest bytes, and each expert entry covers the exact role.md/skill bytes.
+# Windows autocrlf must never rewrite these files between checkouts, or a valid
+# package is rejected as MANIFEST_HASH_MISMATCH / ASSET_HASH_MISMATCH.
+resources/experts/** -text
