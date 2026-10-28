@@ -1,0 +1,4 @@
+{
+  "policy": "Symlinks, path escapes, executable binaries, private keys and tokens are rejected; skills are inert.",
+  "findings": []
+}

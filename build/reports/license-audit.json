@@ -1,0 +1,4729 @@
+{
+  "policy": "Prompt-level explicit evidence only; license/ dependency texts do not license the agent prompt.",
+  "counts": {
+    "approved": 39,
+    "restricted": 390,
+    "invalid": 0
+  },
+  "entries": [
+    {
+      "indexId": "ContentCreator",
+      "sourcePackage": "content-creator",
+      "id": "content-creator-content-creator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DataAnalyticsReporter",
+      "sourcePackage": "data-analytics-reporter",
+      "id": "data-analytics-reporter-data-analytics-reporter",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ChinaEcommerceOperationsExpert",
+      "sourcePackage": "china-ecommerce-operations-expert",
+      "id": "china-ecommerce-operations-expert-china-ecommerce-operations-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DouyinStrategist",
+      "sourcePackage": "douyin-strategist",
+      "id": "douyin-strategist-douyin-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UiDesigner",
+      "sourcePackage": "ui-designer",
+      "id": "ui-designer-ui-designer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SalesCoach",
+      "sourcePackage": "sales-coach",
+      "id": "sales-coach-sales-coach",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BrandGuardian",
+      "sourcePackage": "brand-guardian",
+      "id": "brand-guardian-brand-guardian",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "XiaohongshuOperationsExpert",
+      "sourcePackage": "xiaohongshu-operations-expert",
+      "id": "xiaohongshu-operations-expert-xiaohongshu-operations-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "RecruitmentExpert",
+      "sourcePackage": "recruitment-expert",
+      "id": "recruitment-expert-recruitment-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "GrowthHacker",
+      "sourcePackage": "growth-hacker",
+      "id": "growth-hacker-growth-hacker",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AdCreativeStrategist",
+      "sourcePackage": "ad-creative-strategist",
+      "id": "ad-creative-strategist-ad-creative-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "LivestreamEcommerceCoach",
+      "sourcePackage": "livestream-ecommerce-coach",
+      "id": "livestream-ecommerce-coach-livestream-ecommerce-coach",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ExecutiveSummaryGenerator",
+      "sourcePackage": "executive-summary-generator",
+      "id": "executive-summary-generator-executive-summary-generator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SocialMediaStrategist",
+      "sourcePackage": "social-media-strategist",
+      "id": "social-media-strategist-social-media-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ShortVideoEditingCoach",
+      "sourcePackage": "short-video-editing-coach",
+      "id": "short-video-editing-coach-short-video-editing-coach",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SeniorProjectManager",
+      "sourcePackage": "senior-project-manager",
+      "id": "senior-project-manager-senior-project-manager",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AiImagePromptEngineer",
+      "sourcePackage": "ai-image-prompt-engineer",
+      "id": "ai-image-prompt-engineer-ai-image-prompt-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DocumentGenerationExpert",
+      "sourcePackage": "document-generation-expert",
+      "id": "document-generation-expert-document-generation-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SeoExpert",
+      "sourcePackage": "seo-expert",
+      "id": "seo-expert-seo-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "WechatOfficialAccountExpert",
+      "sourcePackage": "wechat-official-account-expert",
+      "id": "wechat-official-account-expert-wechat-official-account-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CrossBorderEcommerceExpert",
+      "sourcePackage": "cross-border-ecommerce-expert",
+      "id": "cross-border-ecommerce-expert-cross-border-ecommerce-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PrivateDomainOperationsExpert",
+      "sourcePackage": "private-domain-operations-expert",
+      "id": "private-domain-operations-expert-private-domain-operations-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CustomerSupportExpert",
+      "sourcePackage": "customer-support-expert",
+      "id": "customer-support-expert-customer-support-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FinancialTracker",
+      "sourcePackage": "financial-tracker",
+      "id": "financial-tracker-financial-tracker",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ProposalStrategist",
+      "sourcePackage": "proposal-strategist",
+      "id": "proposal-strategist-proposal-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UserExperienceArchitect",
+      "sourcePackage": "user-experience-architect",
+      "id": "user-experience-architect-user-experience-architect",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TrendResearcher",
+      "sourcePackage": "trend-researcher",
+      "id": "trend-researcher-trend-researcher",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CorporateTrainingDesigner",
+      "sourcePackage": "corporate-training-designer",
+      "id": "corporate-training-designer-corporate-training-designer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BilibiliContentStrategist",
+      "sourcePackage": "bilibili-content-strategist",
+      "id": "bilibili-content-strategist-bilibili-content-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "VisualStorytellingExpert",
+      "sourcePackage": "visual-storytelling-expert",
+      "id": "visual-storytelling-expert-visual-storytelling-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "WorkflowOptimizationExpert",
+      "sourcePackage": "workflow-optimization-expert",
+      "id": "workflow-optimization-expert-workflow-optimization-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UserExperienceResearcher",
+      "sourcePackage": "user-experience-researcher",
+      "id": "user-experience-researcher-user-experience-researcher",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BaiduSeoExpert",
+      "sourcePackage": "baidu-seo-expert",
+      "id": "baidu-seo-expert-baidu-seo-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PpcBiddingStrategist",
+      "sourcePackage": "ppc-bidding-strategist",
+      "id": "ppc-bidding-strategist-ppc-bidding-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TikTokStrategist",
+      "sourcePackage": "tik-tok-strategist",
+      "id": "tik-tok-strategist-tik-tok-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "LegalComplianceReviewer",
+      "sourcePackage": "legal-compliance-reviewer",
+      "id": "legal-compliance-reviewer-legal-compliance-reviewer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TencentCharityExpert",
+      "sourcePackage": "tencent-charity-expert",
+      "id": "tencent-charity-expert-tencent-charity-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "StudyAbroadConsultant",
+      "sourcePackage": "study-abroad-consultant",
+      "id": "study-abroad-consultant-study-abroad-consultant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MultiCloudManagementExpert",
+      "sourcePackage": "multi-cloud-management-expert",
+      "id": "multi-cloud-management-expert-multi-cloud-management-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CloudOpsTeam",
+      "sourcePackage": "cloud-ops-team",
+      "id": "cloud-ops-team-cloud-ops-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AndonQExpert",
+      "sourcePackage": "andon-q-expert",
+      "id": "andon-q-expert-andon-q-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TencentSecurityExpert",
+      "sourcePackage": "tencent-security-expert",
+      "id": "tencent-security-expert-tencent-security-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AiEngineer",
+      "sourcePackage": "ai-engineer",
+      "id": "ai-engineer-ai-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SeniorDeveloper",
+      "sourcePackage": "senior-developer",
+      "id": "senior-developer-senior-developer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FrontendDeveloper",
+      "sourcePackage": "frontend-developer",
+      "id": "frontend-developer-frontend-developer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BackendArchitect",
+      "sourcePackage": "backend-architect",
+      "id": "backend-architect-backend-architect",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SoftwareArchitect",
+      "sourcePackage": "software-architect",
+      "id": "software-architect-software-architect",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MobileApplicationDeveloper",
+      "sourcePackage": "mobile-application-developer",
+      "id": "mobile-application-developer-mobile-application-developer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "WeChatMiniProgramDeveloper",
+      "sourcePackage": "we-chat-mini-program-developer",
+      "id": "we-chat-mini-program-developer-we-chat-mini-program-developer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CodeReviewExpert",
+      "sourcePackage": "code-review-expert",
+      "id": "code-review-expert-code-review-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SecurityEngineer",
+      "sourcePackage": "security-engineer",
+      "id": "security-engineer-security-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DevOpsAutomationEngineer",
+      "sourcePackage": "dev-ops-automation-engineer",
+      "id": "dev-ops-automation-engineer-dev-ops-automation-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TechnicalDocumentationEngineer",
+      "sourcePackage": "technical-documentation-engineer",
+      "id": "technical-documentation-engineer-technical-documentation-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DatabaseOptimizationExpert",
+      "sourcePackage": "database-optimization-expert",
+      "id": "database-optimization-expert-database-optimization-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DataEngineer",
+      "sourcePackage": "data-engineer",
+      "id": "data-engineer-data-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "RapidPrototypingEngineer",
+      "sourcePackage": "rapid-prototyping-engineer",
+      "id": "rapid-prototyping-engineer-rapid-prototyping-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "GitWorkflowExpert",
+      "sourcePackage": "git-workflow-expert",
+      "id": "git-workflow-expert-git-workflow-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "LinkedInContentCreator",
+      "sourcePackage": "linked-in-content-creator",
+      "id": "linked-in-content-creator-linked-in-content-creator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "WeiboStrategist",
+      "sourcePackage": "weibo-strategist",
+      "id": "weibo-strategist-weibo-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "InstagramOperationsExpert",
+      "sourcePackage": "instagram-operations-expert",
+      "id": "instagram-operations-expert-instagram-operations-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TwitterOperationsExpert",
+      "sourcePackage": "twitter-operations-expert",
+      "id": "twitter-operations-expert-twitter-operations-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SocialAdStrategist",
+      "sourcePackage": "social-ad-strategist",
+      "id": "social-ad-strategist-social-ad-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CarouselContentGrowthExpert",
+      "sourcePackage": "carousel-content-growth-expert",
+      "id": "carousel-content-growth-expert-carousel-content-growth-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AppStoreOptimizationExpert",
+      "sourcePackage": "app-store-optimization-expert",
+      "id": "app-store-optimization-expert-app-store-optimization-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BookCoCreator",
+      "sourcePackage": "book-co-creator",
+      "id": "book-co-creator-book-co-creator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AgentOrchestrator",
+      "sourcePackage": "agent-orchestrator",
+      "id": "agent-orchestrator-agent-orchestrator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EnterpriseAccountStrategist",
+      "sourcePackage": "enterprise-account-strategist",
+      "id": "enterprise-account-strategist-enterprise-account-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DealStrategist",
+      "sourcePackage": "deal-strategist",
+      "id": "deal-strategist-deal-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PresalesTechnicalConsultant",
+      "sourcePackage": "presales-technical-consultant",
+      "id": "presales-technical-consultant-presales-technical-consultant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SalesPipelineAnalyst",
+      "sourcePackage": "sales-pipeline-analyst",
+      "id": "sales-pipeline-analyst-sales-pipeline-analyst",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DiscoveryCoach",
+      "sourcePackage": "discovery-coach",
+      "id": "discovery-coach-discovery-coach",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OutboundStrategist",
+      "sourcePackage": "outbound-strategist",
+      "id": "outbound-strategist-outbound-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SprintPriorityManager",
+      "sourcePackage": "sprint-priority-manager",
+      "id": "sprint-priority-manager-sprint-priority-manager",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FeedbackSynthesisAnalyst",
+      "sourcePackage": "feedback-synthesis-analyst",
+      "id": "feedback-synthesis-analyst-feedback-synthesis-analyst",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PodcastStrategist",
+      "sourcePackage": "podcast-strategist",
+      "id": "podcast-strategist-podcast-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ZhihuStrategist",
+      "sourcePackage": "zhihu-strategist",
+      "id": "zhihu-strategist-zhihu-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "KuaishouStrategist",
+      "sourcePackage": "kuaishou-strategist",
+      "id": "kuaishou-strategist-kuaishou-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "RedditCommunityBuilder",
+      "sourcePackage": "reddit-community-builder",
+      "id": "reddit-community-builder-reddit-community-builder",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PaidMediaAuditor",
+      "sourcePackage": "paid-media-auditor",
+      "id": "paid-media-auditor-paid-media-auditor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AdTrackingExpert",
+      "sourcePackage": "ad-tracking-expert",
+      "id": "ad-tracking-expert-ad-tracking-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SearchTermAnalyst",
+      "sourcePackage": "search-term-analyst",
+      "id": "search-term-analyst-search-term-analyst",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ProgrammaticAdBuyer",
+      "sourcePackage": "programmatic-ad-buyer",
+      "id": "programmatic-ad-buyer-programmatic-ad-buyer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SiteReliabilityEngineer",
+      "sourcePackage": "site-reliability-engineer",
+      "id": "site-reliability-engineer-site-reliability-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PerformanceTestingExpert",
+      "sourcePackage": "performance-testing-expert",
+      "id": "performance-testing-expert-performance-testing-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ApiTestingExpert",
+      "sourcePackage": "api-testing-expert",
+      "id": "api-testing-expert-api-testing-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IncidentResponseCommander",
+      "sourcePackage": "incident-response-commander",
+      "id": "incident-response-commander-incident-response-commander",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "InfrastructureOperationsExpert",
+      "sourcePackage": "infrastructure-operations-expert",
+      "id": "infrastructure-operations-expert-infrastructure-operations-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "JiraWorkflowAdmin",
+      "sourcePackage": "jira-workflow-admin",
+      "id": "jira-workflow-admin-jira-workflow-admin",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ProjectShepherd",
+      "sourcePackage": "project-shepherd",
+      "id": "project-shepherd-project-shepherd",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "StudioOperationsManager",
+      "sourcePackage": "studio-operations-manager",
+      "id": "studio-operations-manager-studio-operations-manager",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "StudioProducer",
+      "sourcePackage": "studio-producer",
+      "id": "studio-producer-studio-producer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ComplianceAuditor",
+      "sourcePackage": "compliance-auditor",
+      "id": "compliance-auditor-compliance-auditor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ToolEvaluationExpert",
+      "sourcePackage": "tool-evaluation-expert",
+      "id": "tool-evaluation-expert-tool-evaluation-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TestResultsAnalyst",
+      "sourcePackage": "test-results-analyst",
+      "id": "test-results-analyst-test-results-analyst",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DeveloperEvangelist",
+      "sourcePackage": "developer-evangelist",
+      "id": "developer-evangelist-developer-evangelist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "McpBuildExpert",
+      "sourcePackage": "mcp-build-expert",
+      "id": "mcp-build-expert-mcp-build-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SupplyChainStrategist",
+      "sourcePackage": "supply-chain-strategist",
+      "id": "supply-chain-strategist-supply-chain-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "GameDesigner",
+      "sourcePackage": "game-designer",
+      "id": "game-designer-game-designer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ExperimentTrackingManager",
+      "sourcePackage": "experiment-tracking-manager",
+      "id": "experiment-tracking-manager-experiment-tracking-manager",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DelightfulExperienceDesigner",
+      "sourcePackage": "delightful-experience-designer",
+      "id": "delightful-experience-designer-delightful-experience-designer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BehavioralNudgeEngine",
+      "sourcePackage": "behavioral-nudge-engine",
+      "id": "behavioral-nudge-engine-behavioral-nudge-engine",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DataIntegrationAgent",
+      "sourcePackage": "data-integration-agent",
+      "id": "data-integration-agent-data-integration-agent",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AccountsPayableAgent",
+      "sourcePackage": "accounts-payable-agent",
+      "id": "accounts-payable-agent-accounts-payable-agent",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SalesDataExtractionAgent",
+      "sourcePackage": "sales-data-extraction-agent",
+      "id": "sales-data-extraction-agent-sales-data-extraction-agent",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CulturalIntelligenceStrategist",
+      "sourcePackage": "cultural-intelligence-strategist",
+      "id": "cultural-intelligence-strategist-cultural-intelligence-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "GovernmentDigitalPresalesConsultant",
+      "sourcePackage": "government-digital-presales-consultant",
+      "id": "government-digital-presales-consultant-government-digital-presales-consultant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "HealthcareMarketingComplianceExpert",
+      "sourcePackage": "healthcare-marketing-compliance-expert",
+      "id": "healthcare-marketing-compliance-expert-healthcare-marketing-compliance-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AutonomousOptimizationArchitect",
+      "sourcePackage": "autonomous-optimization-architect",
+      "id": "autonomous-optimization-architect-autonomous-optimization-architect",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IdentityGraphOperator",
+      "sourcePackage": "identity-graph-operator",
+      "id": "identity-graph-operator-identity-graph-operator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ModelQualityAssuranceExpert",
+      "sourcePackage": "model-quality-assurance-expert",
+      "id": "model-quality-assurance-expert-model-quality-assurance-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ThreatDetectionEngineer",
+      "sourcePackage": "threat-detection-engineer",
+      "id": "threat-detection-engineer-threat-detection-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EmbeddedFirmwareEngineer",
+      "sourcePackage": "embedded-firmware-engineer",
+      "id": "embedded-firmware-engineer-embedded-firmware-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "LspIndexEngineer",
+      "sourcePackage": "lsp-index-engineer",
+      "id": "lsp-index-engineer-lsp-index-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SoliditySmartContractEngineer",
+      "sourcePackage": "solidity-smart-contract-engineer",
+      "id": "solidity-smart-contract-engineer-solidity-smart-contract-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BlockchainSecurityAuditor",
+      "sourcePackage": "blockchain-security-auditor",
+      "id": "blockchain-security-auditor-blockchain-security-auditor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AgentIdentityTrustExpert",
+      "sourcePackage": "agent-identity-trust-expert",
+      "id": "agent-identity-trust-expert-agent-identity-trust-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ZeroKnowledgeProofAdmin",
+      "sourcePackage": "zero-knowledge-proof-admin",
+      "id": "zero-knowledge-proof-admin-zero-knowledge-proof-admin",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DiversityVisualExpert",
+      "sourcePackage": "diversity-visual-expert",
+      "id": "diversity-visual-expert-diversity-visual-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AdortDesignExpert",
+      "sourcePackage": "adort-design-expert",
+      "id": "adort-design-expert-adort-design-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TechnicalArtist",
+      "sourcePackage": "technical-artist",
+      "id": "technical-artist-technical-artist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "NarrativeDesigner",
+      "sourcePackage": "narrative-designer",
+      "id": "narrative-designer-narrative-designer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "LevelDesigner",
+      "sourcePackage": "level-designer",
+      "id": "level-designer-level-designer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "GameAudioEngineer",
+      "sourcePackage": "game-audio-engineer",
+      "id": "game-audio-engineer-game-audio-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AccessibilityAuditor",
+      "sourcePackage": "accessibility-auditor",
+      "id": "accessibility-auditor-accessibility-auditor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EvidenceCollector",
+      "sourcePackage": "evidence-collector",
+      "id": "evidence-collector-evidence-collector",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UnityArchitect",
+      "sourcePackage": "unity-architect",
+      "id": "unity-architect-unity-architect",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UnrealSystemEngineer",
+      "sourcePackage": "unreal-system-engineer",
+      "id": "unreal-system-engineer-unreal-system-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UnrealWorldBuilder",
+      "sourcePackage": "unreal-world-builder",
+      "id": "unreal-world-builder-unreal-world-builder",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UnrealMultiplayerArchitect",
+      "sourcePackage": "unreal-multiplayer-architect",
+      "id": "unreal-multiplayer-architect-unreal-multiplayer-architect",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UnrealTechnicalArtist",
+      "sourcePackage": "unreal-technical-artist",
+      "id": "unreal-technical-artist-unreal-technical-artist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UnityMultiplayerEngineer",
+      "sourcePackage": "unity-multiplayer-engineer",
+      "id": "unity-multiplayer-engineer-unity-multiplayer-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UnityShaderGraphArtist",
+      "sourcePackage": "unity-shader-graph-artist",
+      "id": "unity-shader-graph-artist-unity-shader-graph-artist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UnityEditorToolDeveloper",
+      "sourcePackage": "unity-editor-tool-developer",
+      "id": "unity-editor-tool-developer-unity-editor-tool-developer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "GodotGameScriptEngineer",
+      "sourcePackage": "godot-game-script-engineer",
+      "id": "godot-game-script-engineer-godot-game-script-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "GodotMultiplayerEngineer",
+      "sourcePackage": "godot-multiplayer-engineer",
+      "id": "godot-multiplayer-engineer-godot-multiplayer-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "GodotShaderDeveloper",
+      "sourcePackage": "godot-shader-developer",
+      "id": "godot-shader-developer-godot-shader-developer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "RobloxExperienceDesigner",
+      "sourcePackage": "roblox-experience-designer",
+      "id": "roblox-experience-designer-roblox-experience-designer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "RobloxSystemScriptEngineer",
+      "sourcePackage": "roblox-system-script-engineer",
+      "id": "roblox-system-script-engineer-roblox-system-script-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "RobloxAvatarCreator",
+      "sourcePackage": "roblox-avatar-creator",
+      "id": "roblox-avatar-creator-roblox-avatar-creator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "VisionOsSpatialEngineer",
+      "sourcePackage": "vision-os-spatial-engineer",
+      "id": "vision-os-spatial-engineer-vision-os-spatial-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MacOsSpatialMetalEngineer",
+      "sourcePackage": "mac-os-spatial-metal-engineer",
+      "id": "mac-os-spatial-metal-engineer-mac-os-spatial-metal-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "XrImmersiveDeveloper",
+      "sourcePackage": "xr-immersive-developer",
+      "id": "xr-immersive-developer-xr-immersive-developer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "XrInterfaceArchitect",
+      "sourcePackage": "xr-interface-architect",
+      "id": "xr-interface-architect-xr-interface-architect",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "XrCockpitInteractionExpert",
+      "sourcePackage": "xr-cockpit-interaction-expert",
+      "id": "xr-cockpit-interaction-expert-xr-cockpit-interaction-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TerminalIntegrationExpert",
+      "sourcePackage": "terminal-integration-expert",
+      "id": "terminal-integration-expert-terminal-integration-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "RealityChecker",
+      "sourcePackage": "reality-checker",
+      "id": "reality-checker-reality-checker",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "LlmWiki",
+      "sourcePackage": "llm-wiki",
+      "id": "llm-wiki-llm-wiki",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SoftwareCompany",
+      "sourcePackage": "software-company",
+      "id": "software-company-software-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DesignMdArchitect",
+      "sourcePackage": "design-md-architect",
+      "id": "design-md-architect-design-md-architect",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TradingAgentTeam",
+      "sourcePackage": "trading-agent",
+      "id": "trading-agent-trading-team-lead",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "DeepResearchExpert",
+      "sourcePackage": "deep-research",
+      "id": "deep-research-deep-research-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "CATNetworkQualityAnalyst",
+      "sourcePackage": "cat-network-quality-analyst",
+      "id": "cat-network-quality-analyst-cat-network-quality-analyst",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "PrivateDomainMarketingExpert",
+      "sourcePackage": "private-domain-marketing-expert",
+      "id": "private-domain-marketing-expert-private-domain-marketing-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "APMPerformanceExpert",
+      "sourcePackage": "apm-performance-expert",
+      "id": "apm-performance-expert-apm-performance-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "MarketingCampaignExpert",
+      "sourcePackage": "executing-marketing-campaigns",
+      "id": "executing-marketing-campaigns-marketing-campaign-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "ProductManagementExpert",
+      "sourcePackage": "product-management",
+      "id": "product-management-product-management-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "DesignToCodeExpert",
+      "sourcePackage": "design-to-code",
+      "id": "design-to-code-design-to-code-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "DataAnalysisExpert",
+      "sourcePackage": "data-analysis",
+      "id": "data-analysis-data-analysis-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DataExplorationExpert",
+      "sourcePackage": "data",
+      "id": "data-data-exploration-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FinanceAccountingExpert",
+      "sourcePackage": "finance",
+      "id": "finance-finance-accounting-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "FinancialModelingExpert",
+      "sourcePackage": "financial-analysis",
+      "id": "financial-analysis-financial-modeling-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EquityResearchExpert",
+      "sourcePackage": "equity-research",
+      "id": "equity-research-equity-research-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "InvestmentBankingExpert",
+      "sourcePackage": "investment-banking",
+      "id": "investment-banking-investment-banking-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PrivateEquityExpert",
+      "sourcePackage": "private-equity",
+      "id": "private-equity-private-equity-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "WealthManagementExpert",
+      "sourcePackage": "wealth-management",
+      "id": "wealth-management-wealth-management-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DocumentProcessingExpert",
+      "sourcePackage": "document-skills",
+      "id": "document-skills-document-processing-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PptCreationExpert",
+      "sourcePackage": "ppt-creation-expert",
+      "id": "ppt-creation-expert-ppt-creator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ModernWebappExpert",
+      "sourcePackage": "modern-webapp",
+      "id": "modern-webapp-modern-webapp-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FinanceDataExpert",
+      "sourcePackage": "finance-data",
+      "id": "finance-data-finance-data-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DockerfileGenExpert",
+      "sourcePackage": "dockerfile-gen",
+      "id": "dockerfile-gen-dockerfile-gen-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "WebappTestingExpert",
+      "sourcePackage": "webapp-testing",
+      "id": "webapp-testing-webapp-testing-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "InternalCommsExpert",
+      "sourcePackage": "internal-comms",
+      "id": "internal-comms-internal-comms-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "RemotionVideoExpert",
+      "sourcePackage": "remotion-video-generator",
+      "id": "remotion-video-generator-remotion-video-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OpenSpecDocTeam",
+      "sourcePackage": "openspec-doc-team",
+      "id": "openspec-doc-team-doc-team-lead",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "GPTResearcherTeam",
+      "sourcePackage": "gpt-researcher-team",
+      "id": "gpt-researcher-team-research-chief-editor",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "StockPartnerTeam",
+      "sourcePackage": "stock-partner-team",
+      "id": "stock-partner-team-stock-partner-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "InvestmentMastersTeam",
+      "sourcePackage": "investment-masters-team",
+      "id": "investment-masters-team-hedge-fund-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EngineeringAssuranceTeam",
+      "sourcePackage": "engineering-assurance-team",
+      "id": "engineering-assurance-team-engineering-director",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "HrOperationsTeam",
+      "sourcePackage": "hr-operations-team",
+      "id": "hr-operations-team-hr-director",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MarketingCampaignTeam",
+      "sourcePackage": "marketing-campaign-team",
+      "id": "marketing-campaign-team-marketing-director",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ProductStrategyTeam",
+      "sourcePackage": "product-strategy-team",
+      "id": "product-strategy-team-product-director",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SalesBattleTeam",
+      "sourcePackage": "sales-battle-team",
+      "id": "sales-battle-team-sales-director",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ChatLawTeam",
+      "sourcePackage": "chatlaw-team",
+      "id": "chatlaw-team-chatlaw-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EntrepreneurshipCoach",
+      "sourcePackage": "chuangye-manor",
+      "id": "chuangye-manor-chuangye-manor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SoftwareWorkshop",
+      "sourcePackage": "gstack",
+      "id": "gstack-gstack-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AShareAnalysis",
+      "sourcePackage": "a-share-analysis",
+      "id": "a-share-analysis-a-share-advisor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TripStarAgent",
+      "sourcePackage": "tripstar-agent",
+      "id": "tripstar-agent-trip-planner",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "KdocsDataTable",
+      "sourcePackage": "kdocs-data-table",
+      "id": "kdocs-data-table-kdocs-data-table",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "KdocsDocButler",
+      "sourcePackage": "kdocs-doc-butler",
+      "id": "kdocs-doc-butler-kdocs-doc-butler",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "KdocsKnowledgeCollector",
+      "sourcePackage": "kdocs-knowledge-collector",
+      "id": "kdocs-knowledge-collector-kdocs-knowledge-collector",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "KdocsPdfToolbox",
+      "sourcePackage": "kdocs-pdf-toolbox",
+      "id": "kdocs-pdf-toolbox-kdocs-pdf-toolbox",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "KdocsPptCreator",
+      "sourcePackage": "kdocs-ppt-creator",
+      "id": "kdocs-ppt-creator-kdocs-ppt-creator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AIShifuExpert",
+      "sourcePackage": "ai-shifu-expert",
+      "id": "ai-shifu-expert-ai-shifu",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "RumFullstackTeam",
+      "sourcePackage": "rum-fullstack-team",
+      "id": "rum-fullstack-team-rum-team-lead",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "DesignEngineTeam",
+      "sourcePackage": "design-engine",
+      "id": "design-engine-design-engine-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AiDataCopilot",
+      "sourcePackage": "ai-data-copilot",
+      "id": "ai-data-copilot-copilot-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AiContentCreatorTeam",
+      "sourcePackage": "ai-content-creator-team",
+      "id": "ai-content-creator-team-ai-content-creator-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ContentMonetizationTeam",
+      "sourcePackage": "content-monetization-team",
+      "id": "content-monetization-team-content-monetization-team-lead",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "ContentDistributionTeam",
+      "sourcePackage": "content-distribution-team",
+      "id": "content-distribution-team-content-distribution-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SocialEngagementTeam",
+      "sourcePackage": "social-engagement-team",
+      "id": "social-engagement-team-social-engagement-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SeoContentTeam",
+      "sourcePackage": "seo-content-team",
+      "id": "seo-content-team-seo-content-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TaxComplianceTeam",
+      "sourcePackage": "tax-compliance-team",
+      "id": "tax-compliance-team-tax-compliance-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "VocabCraftExpert",
+      "sourcePackage": "vocab-craft-expert",
+      "id": "vocab-craft-expert-vocab-coach",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IndieFounderCoach",
+      "sourcePackage": "indie-founder-coach",
+      "id": "indie-founder-coach-indie-founder-coach",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EngineeringWorkflowSkills",
+      "sourcePackage": "engineering-workflow-skills",
+      "id": "engineering-workflow-skills-engineering-workflow-coach",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "MermaidDiagramExpert",
+      "sourcePackage": "mermaid-diagram-expert",
+      "id": "mermaid-diagram-expert-mermaid-diagram-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EarningsReviewer",
+      "sourcePackage": "earnings-reviewer",
+      "id": "earnings-reviewer-earnings-reviewer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "GlReconciler",
+      "sourcePackage": "gl-reconciler",
+      "id": "gl-reconciler-gl-reconciler",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "KycScreener",
+      "sourcePackage": "kyc-screener",
+      "id": "kyc-screener-kyc-screener",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FsiMarketResearcher",
+      "sourcePackage": "market-researcher",
+      "id": "market-researcher-market-researcher",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MeetingPrepAgent",
+      "sourcePackage": "meeting-prep-agent",
+      "id": "meeting-prep-agent-meeting-prep-agent",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ModelBuilder",
+      "sourcePackage": "model-builder",
+      "id": "model-builder-model-builder",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MonthEndCloser",
+      "sourcePackage": "month-end-closer",
+      "id": "month-end-closer-month-end-closer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PitchAgent",
+      "sourcePackage": "pitch-agent",
+      "id": "pitch-agent-pitch-agent",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "StatementAuditor",
+      "sourcePackage": "statement-auditor",
+      "id": "statement-auditor-statement-auditor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ValuationReviewer",
+      "sourcePackage": "valuation-reviewer",
+      "id": "valuation-reviewer-valuation-reviewer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CharityDocFinanceExpert",
+      "sourcePackage": "charity-doc-finance-expert",
+      "id": "charity-doc-finance-expert-charity-doc-finance-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AskLiuxiaopai",
+      "sourcePackage": "ask-liuxiaopai",
+      "id": "ask-liuxiaopai-ask-liuxiaopai",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FortuneConsultant",
+      "sourcePackage": "fortune-consultant",
+      "id": "fortune-consultant-fortune-consultant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OpcTeam",
+      "sourcePackage": "opc-team",
+      "id": "opc-team-opc-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AiHot",
+      "sourcePackage": "aihot",
+      "id": "aihot-aihot",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "HuashuDocReviewer",
+      "sourcePackage": "huashu-doc-reviewer",
+      "id": "huashu-doc-reviewer-doc-reviewer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "HuashuDataPro",
+      "sourcePackage": "huashu-data-pro",
+      "id": "huashu-data-pro-huashu-data-pro-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "VideoGenTeam",
+      "sourcePackage": "video-gen-team",
+      "id": "video-gen-team-video-gen-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "VideoDissection",
+      "sourcePackage": "video-dissection",
+      "id": "video-dissection-video-dissection-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PromoCreatorTeam",
+      "sourcePackage": "promo-creator-team",
+      "id": "promo-creator-team-promo-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EnterpriseLegalTeam",
+      "sourcePackage": "enterprise-legal-team",
+      "id": "enterprise-legal-team-enterprise-legal-lead",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "LitigationLegalExpert",
+      "sourcePackage": "litigation-legal",
+      "id": "litigation-legal-litigation-legal-strategist",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "LawStudentCoach",
+      "sourcePackage": "law-student-coach",
+      "id": "law-student-coach-law-student-coach",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "LegalClinicSupervisor",
+      "sourcePackage": "legal-clinic-supervisor",
+      "id": "legal-clinic-supervisor-legal-clinic-supervisor",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "LegalBuilderHubExpert",
+      "sourcePackage": "legal-builder-hub",
+      "id": "legal-builder-hub-legal-builder-hub",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "HumanizePptTeam",
+      "sourcePackage": "humanize-ppt-team",
+      "id": "humanize-ppt-team-humanize-ppt-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "YunzhiQaAssistant",
+      "sourcePackage": "yunzhi-qa-assistant",
+      "id": "yunzhi-qa-assistant-yunzhi-qa-assistant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CapacityExpert",
+      "sourcePackage": "capacity-expert",
+      "id": "capacity-expert-capacity-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ChaosExpert",
+      "sourcePackage": "chaos-expert",
+      "id": "chaos-expert-chaos-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FinopsExpert",
+      "sourcePackage": "finops-expert",
+      "id": "finops-expert-finops-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "InspectionExpert",
+      "sourcePackage": "inspection-expert",
+      "id": "inspection-expert-inspection-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SreExpert",
+      "sourcePackage": "sre-expert",
+      "id": "sre-expert-sre-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "WellArchExpert",
+      "sourcePackage": "well-arch-expert",
+      "id": "well-arch-expert-well-arch-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "StrategyBacktestExpert",
+      "sourcePackage": "strategy-backtest-expert",
+      "id": "strategy-backtest-expert-strategy-backtest-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IndustrySreTeam",
+      "sourcePackage": "industry-sre-team",
+      "id": "industry-sre-team-industry-sre-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TencentRtcExpert",
+      "sourcePackage": "tencent-rtc-expert",
+      "id": "tencent-rtc-expert-tencent-rtc-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SmbFinance",
+      "sourcePackage": "smb-finance",
+      "id": "smb-finance-smb-finance",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "SmbRevenue",
+      "sourcePackage": "smb-revenue",
+      "id": "smb-revenue-smb-revenue",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "SmbCompliance",
+      "sourcePackage": "smb-compliance",
+      "id": "smb-compliance-smb-compliance",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "SmbOperations",
+      "sourcePackage": "smb-operations",
+      "id": "smb-operations-smb-operations",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "SmbTeam",
+      "sourcePackage": "smb-team",
+      "id": "smb-team-smb-team-lead",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "ViralTopicMaster",
+      "sourcePackage": "viral-topic-master",
+      "id": "viral-topic-master-viral-topic-master",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "Citongshuopro",
+      "sourcePackage": "citongshuopro",
+      "id": "citongshuopro-citongshuopro-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "InvoiceVerifyWorkbuddy",
+      "sourcePackage": "invoice-verify-workbuddy",
+      "id": "invoice-verify-workbuddy-invoice-verify-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "JiayiAdsAnalyticsExpert",
+      "sourcePackage": "jiayi-ads-analytics-expert",
+      "id": "jiayi-ads-analytics-expert-jiayi-ads-analytics-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "KiddContentExpert",
+      "sourcePackage": "kidd-content-expert",
+      "id": "kidd-content-expert-kidd-content-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ChaogeekKongming",
+      "sourcePackage": "chaogeek-kongming",
+      "id": "chaogeek-kongming-chaogeek-kongming",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "NcreExpert",
+      "sourcePackage": "ncre-expert",
+      "id": "ncre-expert-ncre-expert-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MvpDevExpertTeam",
+      "sourcePackage": "mvp-dev-expert-team",
+      "id": "mvp-dev-expert-team-mvp-dev-expert-team-team-lead",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "FbsirIndustrySceneResearcher",
+      "sourcePackage": "fbsir-industry-scene-researcher",
+      "id": "fbsir-industry-scene-researcher-fbsir-industry-scene-researcher",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "FbsirBoardSecretaryAssistant",
+      "sourcePackage": "fbsir-board-secretary-assistant",
+      "id": "fbsir-board-secretary-assistant-fbsir-board-secretary-assistant",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "GaokaoAdvisor",
+      "sourcePackage": "gaokao-advisor",
+      "id": "gaokao-advisor-gaokao-advisor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AcademicJournalSelector",
+      "sourcePackage": "academic-journal-selector",
+      "id": "academic-journal-selector-academic-journal-selector-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "KetPrepTeam",
+      "sourcePackage": "ket-prep-team",
+      "id": "ket-prep-team-ket-prep-team-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TdxStockDiagnostician",
+      "sourcePackage": "tdx-stock-diagnostician",
+      "id": "tdx-stock-diagnostician-tdx-stock-diagnostician",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TdxStockHunter",
+      "sourcePackage": "tdx-stock-hunter",
+      "id": "tdx-stock-hunter-tdx-stock-hunter",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TdxValueAssessor",
+      "sourcePackage": "tdx-value-assessor",
+      "id": "tdx-value-assessor-tdx-value-assessor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AntiScamAgent",
+      "sourcePackage": "anti-scam-agent",
+      "id": "anti-scam-agent-anti-scam-agent",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MeituanLivingAssistant",
+      "sourcePackage": "meituan-living-assistant",
+      "id": "meituan-living-assistant-meituan-living-assistant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TopicEvaluator",
+      "sourcePackage": "topic-evaluator",
+      "id": "topic-evaluator-topic-evaluator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TencentcloudApi",
+      "sourcePackage": "tencentcloud-api",
+      "id": "tencentcloud-api-tencentcloud-api",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "LongManuscriptExpert",
+      "sourcePackage": "long-manuscript-expert",
+      "id": "long-manuscript-expert-long-manuscript-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "GeoDiagnosisExpert",
+      "sourcePackage": "geo-diagnosis-expert",
+      "id": "geo-diagnosis-expert-geo-diagnosis-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "XiaofaLitigationAssistant",
+      "sourcePackage": "xiaofa-litigation-assistant",
+      "id": "xiaofa-litigation-assistant-xiaofa-litigation-assistant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ContractLegalExpert",
+      "sourcePackage": "contract-legal-expert",
+      "id": "contract-legal-expert-contract-legal-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TianyuMarketingGuardian",
+      "sourcePackage": "tianyu-marketing-guardian",
+      "id": "tianyu-marketing-guardian-tianyu-marketing-guardian",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TianyuAccountGuardian",
+      "sourcePackage": "tianyu-account-guardian",
+      "id": "tianyu-account-guardian-tianyu-account-guardian",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IhrConference",
+      "sourcePackage": "ihr-conference",
+      "id": "ihr-conference-ihr-conference",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FamilyEducationMa",
+      "sourcePackage": "family-education-ma",
+      "id": "family-education-ma-family-education-ma",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EdgeoneMakersExperts",
+      "sourcePackage": "edgeone-makers-experts",
+      "id": "edgeone-makers-experts-edgeone-makers-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TcSec",
+      "sourcePackage": "tc-sec",
+      "id": "tc-sec-tc-sec",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AutoConsultant",
+      "sourcePackage": "auto-consultant",
+      "id": "auto-consultant-auto-consultant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MetamorphosisPractitioner",
+      "sourcePackage": "metamorphosis-practitioner",
+      "id": "metamorphosis-practitioner-metamorphosis-practitioner",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "LegalSearchPro",
+      "sourcePackage": "legal-search-pro",
+      "id": "legal-search-pro-legal-search-pro",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "NewsBuddy",
+      "sourcePackage": "news-buddy",
+      "id": "news-buddy-news-buddy",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "LiuxueYanxueExpert",
+      "sourcePackage": "liuxue-yanxue-expert",
+      "id": "liuxue-yanxue-expert-liuxue-yanxue-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ContractExpert",
+      "sourcePackage": "contract-expert",
+      "id": "contract-expert-contract-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MarketingReviewer",
+      "sourcePackage": "marketing-reviewer",
+      "id": "marketing-reviewer-marketing-reviewer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MigraqTeam",
+      "sourcePackage": "migraq-team",
+      "id": "migraq-team-migraq-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SmartStockAnalyst",
+      "sourcePackage": "smart-stock-analyst",
+      "id": "smart-stock-analyst-smart-stock-analyst",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EgyptMarketing",
+      "sourcePackage": "egypt-marketing",
+      "id": "egypt-marketing-egypt-marketing",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ContentCreationExpertProd",
+      "sourcePackage": "content-creation-expert-prod",
+      "id": "content-creation-expert-prod-content-creation-expert-prod-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SgFinanceTax",
+      "sourcePackage": "sg-finance-tax",
+      "id": "sg-finance-tax-sg-finance-tax",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BrazilCompanyQuery",
+      "sourcePackage": "brazil-company-query",
+      "id": "brazil-company-query-brazil-company-query",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MalaysiaHrAdmin",
+      "sourcePackage": "malaysia-hr-admin",
+      "id": "malaysia-hr-admin-malaysia-hr-admin",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "VibeknowHanddraw",
+      "sourcePackage": "vibeknow-handdraw",
+      "id": "vibeknow-handdraw-handdraw-artist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "YahooFinanceCli",
+      "sourcePackage": "yahoo-finance-cli",
+      "id": "yahoo-finance-cli-yahoo-finance-cli",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SgBizDev",
+      "sourcePackage": "sg-biz-dev",
+      "id": "sg-biz-dev-sg-biz-dev",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ResumeAssistant",
+      "sourcePackage": "resume-assistant",
+      "id": "resume-assistant-resume-assistant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ApiDev",
+      "sourcePackage": "api-dev",
+      "id": "api-dev-api-dev",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PromptEngineeringExpert",
+      "sourcePackage": "prompt-engineering-expert",
+      "id": "prompt-engineering-expert-prompt-engineering-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "InterviewSimulator",
+      "sourcePackage": "interview-simulator",
+      "id": "interview-simulator-interview-simulator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DevPipelineOrchestrator",
+      "sourcePackage": "dev-pipeline-orchestrator",
+      "id": "dev-pipeline-orchestrator-dev-pipeline-orchestrator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "GameDevelopmentStudio",
+      "sourcePackage": "game-development-studio",
+      "id": "game-development-studio-game-development-studio-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "Eno",
+      "sourcePackage": "eno",
+      "id": "eno-eno",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SuperpowersZh",
+      "sourcePackage": "superpowers-zh",
+      "id": "superpowers-zh-superpowers-zh",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AiHumanizer",
+      "sourcePackage": "ai-humanizer",
+      "id": "ai-humanizer-ai-humanizer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AiShifu",
+      "sourcePackage": "ai-shifu",
+      "id": "ai-shifu-ai-shifu",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MaiDealAdvisor",
+      "sourcePackage": "mai-deal-advisor",
+      "id": "mai-deal-advisor-mai-deal-advisor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "HskDevopsExpert",
+      "sourcePackage": "hsk-devops-expert",
+      "id": "hsk-devops-expert-hsk-devops-architect",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TerminalVeteran",
+      "sourcePackage": "terminal-veteran",
+      "id": "terminal-veteran-terminal-veteran",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CordysCrm",
+      "sourcePackage": "cordys-crm",
+      "id": "cordys-crm-cordys-crm",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SgHrAdminExpert",
+      "sourcePackage": "sg-hr-admin-expert",
+      "id": "sg-hr-admin-expert-sg-hr-admin-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FinResearchExpert",
+      "sourcePackage": "fin-research-expert",
+      "id": "fin-research-expert-fin-research-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BrazilRfbExpert",
+      "sourcePackage": "brazil-rfb-expert",
+      "id": "brazil-rfb-expert-brazil-rfb-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UaePublicAffairs",
+      "sourcePackage": "uae-public-affairs",
+      "id": "uae-public-affairs-uae-public-affairs",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EgyptPublicAffairs",
+      "sourcePackage": "egypt-public-affairs",
+      "id": "egypt-public-affairs-egypt-public-affairs",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BrazilLegal",
+      "sourcePackage": "brazil-legal",
+      "id": "brazil-legal-brazil-legal",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UaeMarketingAdvisor",
+      "sourcePackage": "uae-marketing-advisor",
+      "id": "uae-marketing-advisor-uae-marketing-advisor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IndonesiaDigitalLawExpert",
+      "sourcePackage": "indonesia-digital-law-expert",
+      "id": "indonesia-digital-law-expert-indonesia-digital-law-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ThaiMarketingCreative",
+      "sourcePackage": "thai-marketing-creative",
+      "id": "thai-marketing-creative-thai-marketing-creative",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MalaysiaMarketing",
+      "sourcePackage": "malaysia-marketing",
+      "id": "malaysia-marketing-malaysia-marketing",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MalaysiaLegal",
+      "sourcePackage": "malaysia-legal",
+      "id": "malaysia-legal-malaysia-legal",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IpExpert",
+      "sourcePackage": "ip-expert",
+      "id": "ip-expert-ip-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IndonesiaBdExpert",
+      "sourcePackage": "indonesia-bd-expert",
+      "id": "indonesia-bd-expert-indonesia-bd-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DatabrainAgentV2",
+      "sourcePackage": "databrain-agent-v2",
+      "id": "databrain-agent-v2-databrain-agent-v2",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IndonesiaPaExpert",
+      "sourcePackage": "indonesia-pa-expert",
+      "id": "indonesia-pa-expert-indonesia-pa-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ThailandHrAdmin",
+      "sourcePackage": "thailand-hr-admin",
+      "id": "thailand-hr-admin-thailand-hr-admin",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UaeStrategicAdvisor",
+      "sourcePackage": "uae-strategic-advisor",
+      "id": "uae-strategic-advisor-uae-strategic-advisor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MalaysiaFinanceTax",
+      "sourcePackage": "malaysia-finance-tax",
+      "id": "malaysia-finance-tax-malaysia-finance-tax",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EgyptStrategicAdvisory",
+      "sourcePackage": "egypt-strategic-advisory",
+      "id": "egypt-strategic-advisory-egypt-strategic-advisory",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "NgesHealthcareMarketingTeam",
+      "sourcePackage": "nges-healthcare-marketing-team",
+      "id": "nges-healthcare-marketing-team-nges-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MultiCloudExpert",
+      "sourcePackage": "multi-cloud-expert",
+      "id": "multi-cloud-expert-multi-cloud-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DesignPrototypeExpert",
+      "sourcePackage": "design-prototype-expert",
+      "id": "design-prototype-expert-design-prototype-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "Code",
+      "sourcePackage": "code",
+      "id": "code-code",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "Soe",
+      "sourcePackage": "soe",
+      "id": "soe-soe",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FbsirSuperPartner",
+      "sourcePackage": "fbsir-super-partner",
+      "id": "fbsir-super-partner-fbsir-super-partner",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "Frontend",
+      "sourcePackage": "frontend",
+      "id": "frontend-frontend",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AiMeetingNotes",
+      "sourcePackage": "ai-meeting-notes",
+      "id": "ai-meeting-notes-ai-meeting-notes",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MarketAnalysisCn",
+      "sourcePackage": "market-analysis-cn",
+      "id": "market-analysis-cn-market-analysis-cn",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DatabaseOperations",
+      "sourcePackage": "database-operations",
+      "id": "database-operations-database-operations",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ChatcutVideoEditor",
+      "sourcePackage": "chatcut-video-editor",
+      "id": "chatcut-video-editor-chatcut-video-editor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "NovelGenerator",
+      "sourcePackage": "novel-generator",
+      "id": "novel-generator-novel-generator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FundusDiseaseAnalysis",
+      "sourcePackage": "fundus-disease-analysis",
+      "id": "fundus-disease-analysis",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ContentWriter",
+      "sourcePackage": "content-writer",
+      "id": "content-writer-content-writer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "AiVideoScript",
+      "sourcePackage": "ai-video-script",
+      "id": "ai-video-script-ai-video-script",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ArxivWatcher",
+      "sourcePackage": "arxiv-watcher",
+      "id": "arxiv-watcher-arxiv-watcher",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FrontendSlides",
+      "sourcePackage": "frontend-slides",
+      "id": "frontend-slides-frontend-slides",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PaperTopicSelection",
+      "sourcePackage": "paper-topic-selection",
+      "id": "paper-topic-selection-zhuge-consultant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PatientEducationContentReviewWordAssistant",
+      "sourcePackage": "patient-education-content-review-word-assistant",
+      "id": "patient-education-content-review-word-assistant-patient-education-content-review-word-assistant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FbsirEightSeatBoard",
+      "sourcePackage": "fbsir-eight-seat-board",
+      "id": "fbsir-eight-seat-board-board-convener",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "UuptDelivery",
+      "sourcePackage": "uupt-delivery",
+      "id": "uupt-delivery-uupt-delivery",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "JinshujuExpert",
+      "sourcePackage": "jinshuju-expert",
+      "id": "jinshuju-expert-jinshuju-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SkillhubCharityExpertTeam",
+      "sourcePackage": "skillhub-charity-expert-team",
+      "id": "skillhub-charity-expert-team-skillhub-manager",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SdkLogExpert",
+      "sourcePackage": "sdk-log-expert",
+      "id": "sdk-log-expert-sdk-log-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DatabrainOpinionExpert",
+      "sourcePackage": "databrain-opinion-expert",
+      "id": "databrain-opinion-expert-databrain-opinion-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "VibeknowPptExplain",
+      "sourcePackage": "vibeknow-ppt-explain",
+      "id": "vibeknow-ppt-explain-ppt-explainer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "VibeknowDesignVideo",
+      "sourcePackage": "vibeknow-design-video",
+      "id": "vibeknow-design-video-design-artist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IhrAiInterviewer",
+      "sourcePackage": "ihr-ai-interviewer",
+      "id": "ihr-ai-interviewer-ihr-ai-interviewer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OmicsBioinfoExpert",
+      "sourcePackage": "omics-bioinfo-expert",
+      "id": "omics-bioinfo-expert-omics-bioinfo-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OmicsCdgptExpert",
+      "sourcePackage": "omics-cdgpt-expert",
+      "id": "omics-cdgpt-expert-omics-cdgpt-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OmicsDiagnosisExpert",
+      "sourcePackage": "omics-diagnosis-expert",
+      "id": "omics-diagnosis-expert-omics-diagnosis-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OmicsHpcExpert",
+      "sourcePackage": "omics-hpc-expert",
+      "id": "omics-hpc-expert-omics-hpc-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OmicsIggmExpert",
+      "sourcePackage": "omics-iggm-expert",
+      "id": "omics-iggm-expert-omics-iggm-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OmicsOriExpert",
+      "sourcePackage": "omics-ori-expert",
+      "id": "omics-ori-expert-omics-ori-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OmicsScbertExpert",
+      "sourcePackage": "omics-scbert-expert",
+      "id": "omics-scbert-expert-omics-scbert-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OmicsScproteinExpert",
+      "sourcePackage": "omics-scprotein-expert",
+      "id": "omics-scprotein-expert-omics-scprotein-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "OmicsTfoldExpert",
+      "sourcePackage": "omics-tfold-expert",
+      "id": "omics-tfold-expert-omics-tfold-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "Nuwa",
+      "sourcePackage": "nuwa",
+      "id": "nuwa-nuwa",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "BiddingStrategist",
+      "sourcePackage": "bidding-strategist",
+      "id": "bidding-strategist-bidding-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FortuneMaster",
+      "sourcePackage": "fortune-master",
+      "id": "fortune-master-fortune-master",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "LazyTravelPlanner",
+      "sourcePackage": "lazy-travel-planner",
+      "id": "lazy-travel-planner-travel-planner",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "NewsBriefingExpert",
+      "sourcePackage": "news-briefing-expert",
+      "id": "news-briefing-expert-news-briefing-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "NovelCreator",
+      "sourcePackage": "novel-creator",
+      "id": "novel-creator-novel-creator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PersonalFitnessCoach",
+      "sourcePackage": "personal-fitness-coach",
+      "id": "personal-fitness-coach-fitness-coach",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PersonalKnowledgeArchitect",
+      "sourcePackage": "personal-knowledge-architect",
+      "id": "personal-knowledge-architect-personal-knowledge-architect",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "PromptEngineer",
+      "sourcePackage": "prompt-engineer",
+      "id": "prompt-engineer-prompt-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "StudyPlanner",
+      "sourcePackage": "study-planner",
+      "id": "study-planner-study-planner",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "WorldcupBuddy",
+      "sourcePackage": "worldcup-buddy",
+      "id": "worldcup-buddy-worldcup-buddy",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FundResearchAnalyst",
+      "sourcePackage": "fund-research-analyst",
+      "id": "fund-research-analyst-fund-research-analyst",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PythonFullstackEngineer",
+      "sourcePackage": "python-fullstack-engineer",
+      "id": "python-fullstack-engineer-python-fullstack-engineer",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TrendHunter",
+      "sourcePackage": "trend-hunter",
+      "id": "trend-hunter-trend-hunter",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "WechatChannelsStrategist",
+      "sourcePackage": "wechat-channels-strategist",
+      "id": "wechat-channels-strategist-wechat-channels-strategist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TanyuanCulturalHeritageExpert",
+      "sourcePackage": "tanyuan-cultural-heritage-expert",
+      "id": "tanyuan-cultural-heritage-expert-tanyuan-cultural-heritage-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "BelieveInLight",
+      "sourcePackage": "believe-in-light",
+      "id": "believe-in-light-believe-in-light-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ConsultingPartners",
+      "sourcePackage": "consulting-partners",
+      "id": "consulting-partners-consulting-partner",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CareerBroker",
+      "sourcePackage": "career-broker",
+      "id": "career-broker-career-broker",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "JinshujuFormExpert",
+      "sourcePackage": "jinshuju-form-expert",
+      "id": "jinshuju-form-expert-jinshuju-form-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "JinshujuTableExpert",
+      "sourcePackage": "jinshuju-table-expert",
+      "id": "jinshuju-table-expert-jinshuju-table-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PneumoniaAiAnalyst",
+      "sourcePackage": "pneumonia-ai-analyst",
+      "id": "pneumonia-ai-analyst-pneumonia-ai-analyst",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "NgoChallengeAdvisor",
+      "sourcePackage": "ngo-challenge-advisor",
+      "id": "ngo-challenge-advisor-ngo-challenge-advisor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "NewShareExpert",
+      "sourcePackage": "new-share-expert",
+      "id": "new-share-expert-new-share-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "InvoiceVerifyExpert",
+      "sourcePackage": "invoice-verify-expert",
+      "id": "invoice-verify-expert-invoice-verify",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "RoadshowResearchTeam",
+      "sourcePackage": "roadshow-research-team",
+      "id": "roadshow-research-team-roadshow-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TideriderSentiment",
+      "sourcePackage": "tiderider-sentiment",
+      "id": "tiderider-sentiment-tiderider-analyst",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "IndustrialParkInvestmentAttractionExpert",
+      "sourcePackage": "industrial-park-investment-attraction-expert",
+      "id": "industrial-park-investment-attraction-expert-industrial-park-investment-attraction-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      }
+    },
+    {
+      "indexId": "JobCompanionTeam",
+      "sourcePackage": "job-companion-team",
+      "id": "job-companion-team-job-companion-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CorpCreditDueDiligence",
+      "sourcePackage": "corp-credit-due-diligence",
+      "id": "corp-credit-due-diligence-corp-credit-due-diligence",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "QingflowHrExpert",
+      "sourcePackage": "qingflow-hr-expert",
+      "id": "qingflow-hr-expert-qingflow-hr-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MentougouBusinessGuide",
+      "sourcePackage": "mentougou-business-guide",
+      "id": "mentougou-business-guide-mentougou-business-guide",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "PanshiCustomerVisitAgent",
+      "sourcePackage": "panshi-customer-visit-agent",
+      "id": "panshi-customer-visit-agent-panshi-customer-visit-agent",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EmpiricalResearchTeam",
+      "sourcePackage": "empirical-research-team",
+      "id": "empirical-research-team-empirical-research-team-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "WorkspaceBuilder",
+      "sourcePackage": "workspace-builder",
+      "id": "workspace-builder-workspace-builder",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SouthAfricaStrategyAdvisor",
+      "sourcePackage": "south-africa-strategy-advisor",
+      "id": "south-africa-strategy-advisor-south-africa-strategy-advisor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SouthAfricaHrAdmin",
+      "sourcePackage": "south-africa-hr-admin",
+      "id": "south-africa-hr-admin-south-africa-hr-admin",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "VietnamFinanceTaxExpert",
+      "sourcePackage": "vietnam-finance-tax-expert",
+      "id": "vietnam-finance-tax-expert-vietnam-finance-tax-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "VietnamPublicAffairs",
+      "sourcePackage": "vietnam-public-affairs",
+      "id": "vietnam-public-affairs-vietnam-public-affairs",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SaLegalCompliance",
+      "sourcePackage": "sa-legal-compliance",
+      "id": "sa-legal-compliance-sa-legal-compliance",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "MarketingGrowthTeam",
+      "sourcePackage": "marketing-growth-team",
+      "id": "marketing-growth-team-marketing-growth-team-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "SkillSmith",
+      "sourcePackage": "skill-smith",
+      "id": "skill-smith-skill-smith",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TencentCloudQuoteAssistant",
+      "sourcePackage": "tencent-cloud-quote-assistant",
+      "id": "tencent-cloud-quote-assistant-price-inquiry-assistant",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "InnovationStartupMentor",
+      "sourcePackage": "innovation-startup-mentor",
+      "id": "innovation-startup-mentor-innovation-startup-mentor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "HrDigitalExpert",
+      "sourcePackage": "hr-digital-expert",
+      "id": "hr-digital-expert-hr-digital-expert",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FbsirAigcComplianceRedTeam",
+      "sourcePackage": "fbsir-aigc-compliance-red-team",
+      "id": "fbsir-aigc-compliance-red-team-fbsir-aigc-compliance-red-team",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CampusConversationCoach",
+      "sourcePackage": "campus-conversation-coach",
+      "id": "campus-conversation-coach-campus-conversation-coach",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CampusEventNavigator",
+      "sourcePackage": "campus-event-navigator",
+      "id": "campus-event-navigator-campus-event-navigator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CampusJobSearchCoach",
+      "sourcePackage": "campus-job-search-coach",
+      "id": "campus-job-search-coach-campus-job-search-coach",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "CareerNavigator",
+      "sourcePackage": "career-navigator",
+      "id": "career-navigator-career-navigator",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ComputerOperationsAdvisor",
+      "sourcePackage": "computer-operations-advisor",
+      "id": "computer-operations-advisor-computer-operations-advisor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "EnglishWritingCoach",
+      "sourcePackage": "english-writing-coach",
+      "id": "english-writing-coach-english-writing-coach",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ExamPreparationPlanner",
+      "sourcePackage": "exam-preparation-planner",
+      "id": "exam-preparation-planner-exam-preparation-planner",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "NoteClassRepresentative",
+      "sourcePackage": "note-class-representative",
+      "id": "note-class-representative-note-class-representative",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "StudyFortuneCompass",
+      "sourcePackage": "study-fortune-compass",
+      "id": "study-fortune-compass-study-fortune-compass",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "ThesisWritingMentor",
+      "sourcePackage": "thesis-writing-mentor",
+      "id": "thesis-writing-mentor-thesis-writing-mentor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FbsirSuperIndependentBoard",
+      "sourcePackage": "fbsir-super-independent-board",
+      "id": "fbsir-super-independent-board-fbsir-super-independent-board",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "WorkbuddyUniversalMentor",
+      "sourcePackage": "workbuddy-universal-mentor",
+      "id": "workbuddy-universal-mentor-workbuddy-universal-mentor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FbsirMomDialogueExpert",
+      "sourcePackage": "fbsir-mom-dialogue-expert",
+      "id": "fbsir-mom-dialogue-expert-fbsir-mom-dialogue-expert",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "MibaoMediaArchivist",
+      "sourcePackage": "mibao-media-archivist",
+      "id": "mibao-media-archivist-mibao-media-archivist",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "TietuToutiao",
+      "sourcePackage": "tietu-toutiao",
+      "id": "tietu-toutiao-tietu-toutiao",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "FbsirBeikeYi",
+      "sourcePackage": "fbsir-beike-yi",
+      "id": "fbsir-beike-yi-fbsir-beike-yi",
+      "status": "ready",
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      }
+    },
+    {
+      "indexId": "LinkfoxExpertAmazonListingSpecialist",
+      "sourcePackage": "linkfox-expert-amazon-listing-specialist",
+      "id": "linkfox-expert-amazon-listing-specialist-linkfox-expert-amazon-listing-specialist",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "DdDueDiligenceTeam",
+      "sourcePackage": "dd-due-diligence-team",
+      "id": "dd-due-diligence-team-dd-due-diligence-lead",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    },
+    {
+      "indexId": "TcChengxinTravelExpert",
+      "sourcePackage": "tc-chengxin-travel-expert",
+      "id": "tc-chengxin-travel-expert-tongcheng-travel-advisor",
+      "status": "invalid",
+      "license": {
+        "status": "restricted",
+        "kind": "no-prompt-license",
+        "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2932 @@
+{
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "indexEntries": 429,
+  "categories": 15,
+  "pluginDirectories": 429,
+  "topLevelAgentFiles": 729,
+  "allFiles": 20829,
+  "indexedAgentsFound": 429,
+  "indexedAgentsMissing": 0,
+  "unindexedAgents": 300,
+  "skillsDirectories": 870,
+  "avatarFiles": 748,
+  "indexedPlugins": 429,
+  "discoveredAgents": [
+    {
+      "sourcePackage": "a-share-analysis",
+      "sourceAgent": "agents/a-share-advisor.md"
+    },
+    {
+      "sourcePackage": "a-share-analysis",
+      "sourceAgent": "agents/industry-mapper.md"
+    },
+    {
+      "sourcePackage": "a-share-analysis",
+      "sourceAgent": "agents/macro-strategist.md"
+    },
+    {
+      "sourcePackage": "a-share-analysis",
+      "sourceAgent": "agents/market-reader.md"
+    },
+    {
+      "sourcePackage": "a-share-analysis",
+      "sourceAgent": "agents/money-tracker.md"
+    },
+    {
+      "sourcePackage": "a-share-analysis",
+      "sourceAgent": "agents/risk-doctor.md"
+    },
+    {
+      "sourcePackage": "a-share-analysis",
+      "sourceAgent": "agents/stock-researcher.md"
+    },
+    {
+      "sourcePackage": "a-share-analysis",
+      "sourceAgent": "agents/valuation-pricer.md"
+    },
+    {
+      "sourcePackage": "academic-journal-selector",
+      "sourceAgent": "agents/academic-journal-selector-team-lead.md"
+    },
+    {
+      "sourcePackage": "academic-journal-selector",
+      "sourceAgent": "agents/cn-pipeline-matcher.md"
+    },
+    {
+      "sourcePackage": "academic-journal-selector",
+      "sourceAgent": "agents/cn-pipeline-scout.md"
+    },
+    {
+      "sourcePackage": "academic-journal-selector",
+      "sourceAgent": "agents/en-pipeline-matcher.md"
+    },
+    {
+      "sourcePackage": "academic-journal-selector",
+      "sourceAgent": "agents/en-pipeline-scout.md"
+    },
+    {
+      "sourcePackage": "academic-journal-selector",
+      "sourceAgent": "agents/paper-reviewer.md"
+    },
+    {
+      "sourcePackage": "accessibility-auditor",
+      "sourceAgent": "agents/accessibility-auditor.md"
+    },
+    {
+      "sourcePackage": "accounts-payable-agent",
+      "sourceAgent": "agents/accounts-payable-agent.md"
+    },
+    {
+      "sourcePackage": "ad-creative-strategist",
+      "sourceAgent": "agents/ad-creative-strategist.md"
+    },
+    {
+      "sourcePackage": "ad-tracking-expert",
+      "sourceAgent": "agents/ad-tracking-expert.md"
+    },
+    {
+      "sourcePackage": "adort-design-expert",
+      "sourceAgent": "agents/adort-design-expert.md"
+    },
+    {
+      "sourcePackage": "agent-identity-trust-expert",
+      "sourceAgent": "agents/agent-identity-trust-expert.md"
+    },
+    {
+      "sourcePackage": "agent-orchestrator",
+      "sourceAgent": "agents/agent-orchestrator.md"
+    },
+    {
+      "sourcePackage": "ai-content-creator-team",
+      "sourceAgent": "agents/ai-content-creator-team-lead.md"
+    },
+    {
+      "sourcePackage": "ai-content-creator-team",
+      "sourceAgent": "agents/content-adapter.md"
+    },
+    {
+      "sourcePackage": "ai-content-creator-team",
+      "sourceAgent": "agents/copywriter.md"
+    },
+    {
+      "sourcePackage": "ai-content-creator-team",
+      "sourceAgent": "agents/creative-strategist.md"
+    },
+    {
+      "sourcePackage": "ai-content-creator-team",
+      "sourceAgent": "agents/image-creator.md"
+    },
+    {
+      "sourcePackage": "ai-content-creator-team",
+      "sourceAgent": "agents/video-editor.md"
+    },
+    {
+      "sourcePackage": "ai-content-creator-team",
+      "sourceAgent": "agents/video-generator.md"
+    },
+    {
+      "sourcePackage": "ai-data-copilot",
+      "sourceAgent": "agents/copilot-team-lead.md"
+    },
+    {
+      "sourcePackage": "ai-data-copilot",
+      "sourceAgent": "agents/dashboard-designer.md"
+    },
+    {
+      "sourcePackage": "ai-data-copilot",
+      "sourceAgent": "agents/data-scientist.md"
+    },
+    {
+      "sourcePackage": "ai-data-copilot",
+      "sourceAgent": "agents/knowledge-researcher.md"
+    },
+    {
+      "sourcePackage": "ai-data-copilot",
+      "sourceAgent": "agents/report-composer.md"
+    },
+    {
+      "sourcePackage": "ai-data-copilot",
+      "sourceAgent": "agents/sql-analyst.md"
+    },
+    {
+      "sourcePackage": "ai-engineer",
+      "sourceAgent": "agents/ai-engineer.md"
+    },
+    {
+      "sourcePackage": "ai-humanizer",
+      "sourceAgent": "agents/ai-humanizer.md"
+    },
+    {
+      "sourcePackage": "ai-image-prompt-engineer",
+      "sourceAgent": "agents/ai-image-prompt-engineer.md"
+    },
+    {
+      "sourcePackage": "ai-meeting-notes",
+      "sourceAgent": "agents/ai-meeting-notes.md"
+    },
+    {
+      "sourcePackage": "ai-shifu",
+      "sourceAgent": "agents/ai-shifu.md"
+    },
+    {
+      "sourcePackage": "ai-shifu-expert",
+      "sourceAgent": "agents/ai-shifu.md"
+    },
+    {
+      "sourcePackage": "ai-video-script",
+      "sourceAgent": "agents/ai-video-script.md"
+    },
+    {
+      "sourcePackage": "aihot",
+      "sourceAgent": "agents/aihot.md"
+    },
+    {
+      "sourcePackage": "andon-q-expert",
+      "sourceAgent": "agents/andon-q-expert.md"
+    },
+    {
+      "sourcePackage": "anti-scam-agent",
+      "sourceAgent": "agents/anti-scam-agent.md"
+    },
+    {
+      "sourcePackage": "api-dev",
+      "sourceAgent": "agents/api-dev.md"
+    },
+    {
+      "sourcePackage": "api-testing-expert",
+      "sourceAgent": "agents/api-testing-expert.md"
+    },
+    {
+      "sourcePackage": "apm-performance-expert",
+      "sourceAgent": "agents/apm-performance-expert.md"
+    },
+    {
+      "sourcePackage": "app-store-optimization-expert",
+      "sourceAgent": "agents/app-store-optimization-expert.md"
+    },
+    {
+      "sourcePackage": "arxiv-watcher",
+      "sourceAgent": "agents/arxiv-watcher.md"
+    },
+    {
+      "sourcePackage": "ask-liuxiaopai",
+      "sourceAgent": "agents/ask-liuxiaopai.md"
+    },
+    {
+      "sourcePackage": "auto-consultant",
+      "sourceAgent": "agents/auto-consultant.md"
+    },
+    {
+      "sourcePackage": "autonomous-optimization-architect",
+      "sourceAgent": "agents/autonomous-optimization-architect.md"
+    },
+    {
+      "sourcePackage": "backend-architect",
+      "sourceAgent": "agents/backend-architect.md"
+    },
+    {
+      "sourcePackage": "baidu-seo-expert",
+      "sourceAgent": "agents/baidu-seo-expert.md"
+    },
+    {
+      "sourcePackage": "behavioral-nudge-engine",
+      "sourceAgent": "agents/behavioral-nudge-engine.md"
+    },
+    {
+      "sourcePackage": "believe-in-light",
+      "sourceAgent": "agents/believe-in-light-team-lead.md"
+    },
+    {
+      "sourcePackage": "believe-in-light",
+      "sourceAgent": "agents/causal-verifier.md"
+    },
+    {
+      "sourcePackage": "believe-in-light",
+      "sourceAgent": "agents/gongji-scanner.md"
+    },
+    {
+      "sourcePackage": "believe-in-light",
+      "sourceAgent": "agents/jishu-scanner.md"
+    },
+    {
+      "sourcePackage": "believe-in-light",
+      "sourceAgent": "agents/rater.md"
+    },
+    {
+      "sourcePackage": "believe-in-light",
+      "sourceAgent": "agents/weight-calibrator.md"
+    },
+    {
+      "sourcePackage": "believe-in-light",
+      "sourceAgent": "agents/xuqiu-scanner.md"
+    },
+    {
+      "sourcePackage": "bidding-strategist",
+      "sourceAgent": "agents/bidding-strategist.md"
+    },
+    {
+      "sourcePackage": "bilibili-content-strategist",
+      "sourceAgent": "agents/bilibili-content-strategist.md"
+    },
+    {
+      "sourcePackage": "blockchain-security-auditor",
+      "sourceAgent": "agents/blockchain-security-auditor.md"
+    },
+    {
+      "sourcePackage": "book-co-creator",
+      "sourceAgent": "agents/book-co-creator.md"
+    },
+    {
+      "sourcePackage": "brand-guardian",
+      "sourceAgent": "agents/brand-guardian.md"
+    },
+    {
+      "sourcePackage": "brazil-company-query",
+      "sourceAgent": "agents/brazil-company-query.md"
+    },
+    {
+      "sourcePackage": "brazil-legal",
+      "sourceAgent": "agents/brazil-legal.md"
+    },
+    {
+      "sourcePackage": "brazil-rfb-expert",
+      "sourceAgent": "agents/brazil-rfb-expert.md"
+    },
+    {
+      "sourcePackage": "campus-conversation-coach",
+      "sourceAgent": "agents/campus-conversation-coach.md"
+    },
+    {
+      "sourcePackage": "campus-event-navigator",
+      "sourceAgent": "agents/campus-event-navigator.md"
+    },
+    {
+      "sourcePackage": "campus-job-search-coach",
+      "sourceAgent": "agents/campus-job-search-coach.md"
+    },
+    {
+      "sourcePackage": "capacity-expert",
+      "sourceAgent": "agents/capacity-expert.md"
+    },
+    {
+      "sourcePackage": "career-broker",
+      "sourceAgent": "agents/career-broker.md"
+    },
+    {
+      "sourcePackage": "career-navigator",
+      "sourceAgent": "agents/career-navigator.md"
+    },
+    {
+      "sourcePackage": "carousel-content-growth-expert",
+      "sourceAgent": "agents/carousel-content-growth-expert.md"
+    },
+    {
+      "sourcePackage": "cat-network-quality-analyst",
+      "sourceAgent": "agents/cat-network-quality-analyst.md"
+    },
+    {
+      "sourcePackage": "chaogeek-kongming",
+      "sourceAgent": "agents/chaogeek-kongming.md"
+    },
+    {
+      "sourcePackage": "chaos-expert",
+      "sourceAgent": "agents/chaos-expert.md"
+    },
+    {
+      "sourcePackage": "charity-doc-finance-expert",
+      "sourceAgent": "agents/charity-doc-finance-expert.md"
+    },
+    {
+      "sourcePackage": "chatcut-video-editor",
+      "sourceAgent": "agents/chatcut-video-editor.md"
+    },
+    {
+      "sourcePackage": "chatlaw-team",
+      "sourceAgent": "agents/advice-writer.md"
+    },
+    {
+      "sourcePackage": "chatlaw-team",
+      "sourceAgent": "agents/case-precedent.md"
+    },
+    {
+      "sourcePackage": "chatlaw-team",
+      "sourceAgent": "agents/chatlaw-team-lead.md"
+    },
+    {
+      "sourcePackage": "chatlaw-team",
+      "sourceAgent": "agents/info-intake.md"
+    },
+    {
+      "sourcePackage": "chatlaw-team",
+      "sourceAgent": "agents/legal-research.md"
+    },
+    {
+      "sourcePackage": "chatlaw-team",
+      "sourceAgent": "agents/report-finalizer.md"
+    },
+    {
+      "sourcePackage": "china-ecommerce-operations-expert",
+      "sourceAgent": "agents/china-ecommerce-operations-expert.md"
+    },
+    {
+      "sourcePackage": "chuangye-manor",
+      "sourceAgent": "agents/chuangye-manor.md"
+    },
+    {
+      "sourcePackage": "citongshuopro",
+      "sourceAgent": "agents/citongshuopro-team-lead.md"
+    },
+    {
+      "sourcePackage": "citongshuopro",
+      "sourceAgent": "agents/gy.md"
+    },
+    {
+      "sourcePackage": "citongshuopro",
+      "sourceAgent": "agents/jiazong.md"
+    },
+    {
+      "sourcePackage": "citongshuopro",
+      "sourceAgent": "agents/littlestar.md"
+    },
+    {
+      "sourcePackage": "citongshuopro",
+      "sourceAgent": "agents/zhanglaoshi.md"
+    },
+    {
+      "sourcePackage": "cloud-ops-team",
+      "sourceAgent": "agents/andon-q.md"
+    },
+    {
+      "sourcePackage": "cloud-ops-team",
+      "sourceAgent": "agents/cloud-ops-team-lead.md"
+    },
+    {
+      "sourcePackage": "cloud-ops-team",
+      "sourceAgent": "agents/cloud-q.md"
+    },
+    {
+      "sourcePackage": "cloud-ops-team",
+      "sourceAgent": "agents/migra-q.md"
+    },
+    {
+      "sourcePackage": "code",
+      "sourceAgent": "agents/code.md"
+    },
+    {
+      "sourcePackage": "code-review-expert",
+      "sourceAgent": "agents/code-review-expert.md"
+    },
+    {
+      "sourcePackage": "compliance-auditor",
+      "sourceAgent": "agents/compliance-auditor.md"
+    },
+    {
+      "sourcePackage": "computer-operations-advisor",
+      "sourceAgent": "agents/computer-operations-advisor.md"
+    },
+    {
+      "sourcePackage": "consulting-partners",
+      "sourceAgent": "agents/consulting-partner.md"
+    },
+    {
+      "sourcePackage": "content-creation-expert-prod",
+      "sourceAgent": "agents/auto-writer.md"
+    },
+    {
+      "sourcePackage": "content-creation-expert-prod",
+      "sourceAgent": "agents/brief-researcher.md"
+    },
+    {
+      "sourcePackage": "content-creation-expert-prod",
+      "sourceAgent": "agents/content-creation-expert-prod-team-lead.md"
+    },
+    {
+      "sourcePackage": "content-creation-expert-prod",
+      "sourceAgent": "agents/quality-editor.md"
+    },
+    {
+      "sourcePackage": "content-creation-expert-prod",
+      "sourceAgent": "agents/visual-director.md"
+    },
+    {
+      "sourcePackage": "content-creator",
+      "sourceAgent": "agents/content-creator.md"
+    },
+    {
+      "sourcePackage": "content-distribution-team",
+      "sourceAgent": "agents/content-distribution-team-lead.md"
+    },
+    {
+      "sourcePackage": "content-distribution-team",
+      "sourceAgent": "agents/distribution-analyst.md"
+    },
+    {
+      "sourcePackage": "content-distribution-team",
+      "sourceAgent": "agents/domestic-platform-expert.md"
+    },
+    {
+      "sourcePackage": "content-distribution-team",
+      "sourceAgent": "agents/international-platform-expert.md"
+    },
+    {
+      "sourcePackage": "content-distribution-team",
+      "sourceAgent": "agents/scheduling-specialist.md"
+    },
+    {
+      "sourcePackage": "content-monetization-team",
+      "sourceAgent": "agents/content-monetization-team-lead.md"
+    },
+    {
+      "sourcePackage": "content-monetization-team",
+      "sourceAgent": "agents/cpe-cpm-expert.md"
+    },
+    {
+      "sourcePackage": "content-monetization-team",
+      "sourceAgent": "agents/cps-specialist.md"
+    },
+    {
+      "sourcePackage": "content-monetization-team",
+      "sourceAgent": "agents/marketplace-operator.md"
+    },
+    {
+      "sourcePackage": "content-monetization-team",
+      "sourceAgent": "agents/revenue-analyst.md"
+    },
+    {
+      "sourcePackage": "content-writer",
+      "sourceAgent": "agents/content-writer.md"
+    },
+    {
+      "sourcePackage": "contract-expert",
+      "sourceAgent": "agents/contract-expert.md"
+    },
+    {
+      "sourcePackage": "contract-legal-expert",
+      "sourceAgent": "agents/contract-legal-expert.md"
+    },
+    {
+      "sourcePackage": "cordys-crm",
+      "sourceAgent": "agents/cordys-crm.md"
+    },
+    {
+      "sourcePackage": "corp-credit-due-diligence",
+      "sourceAgent": "agents/corp-credit-due-diligence.md"
+    },
+    {
+      "sourcePackage": "corporate-training-designer",
+      "sourceAgent": "agents/corporate-training-designer.md"
+    },
+    {
+      "sourcePackage": "cross-border-ecommerce-expert",
+      "sourceAgent": "agents/cross-border-ecommerce-expert.md"
+    },
+    {
+      "sourcePackage": "cultural-intelligence-strategist",
+      "sourceAgent": "agents/cultural-intelligence-strategist.md"
+    },
+    {
+      "sourcePackage": "customer-support-expert",
+      "sourceAgent": "agents/customer-support-expert.md"
+    },
+    {
+      "sourcePackage": "data",
+      "sourceAgent": "agents/data-exploration-expert.md"
+    },
+    {
+      "sourcePackage": "data-analysis",
+      "sourceAgent": "agents/data-analysis-expert.md"
+    },
+    {
+      "sourcePackage": "data-analytics-reporter",
+      "sourceAgent": "agents/data-analytics-reporter.md"
+    },
+    {
+      "sourcePackage": "data-engineer",
+      "sourceAgent": "agents/data-engineer.md"
+    },
+    {
+      "sourcePackage": "data-integration-agent",
+      "sourceAgent": "agents/data-integration-agent.md"
+    },
+    {
+      "sourcePackage": "database-operations",
+      "sourceAgent": "agents/database-operations.md"
+    },
+    {
+      "sourcePackage": "database-optimization-expert",
+      "sourceAgent": "agents/database-optimization-expert.md"
+    },
+    {
+      "sourcePackage": "databrain-agent-v2",
+      "sourceAgent": "agents/databrain-agent-v2.md"
+    },
+    {
+      "sourcePackage": "databrain-opinion-expert",
+      "sourceAgent": "agents/databrain-opinion-expert.md"
+    },
+    {
+      "sourcePackage": "dd-due-diligence-team",
+      "sourceAgent": "agents/business-analysis-expert.md"
+    },
+    {
+      "sourcePackage": "dd-due-diligence-team",
+      "sourceAgent": "agents/dd-due-diligence-lead.md"
+    },
+    {
+      "sourcePackage": "dd-due-diligence-team",
+      "sourceAgent": "agents/enterprise-profiling-expert.md"
+    },
+    {
+      "sourcePackage": "dd-due-diligence-team",
+      "sourceAgent": "agents/finance-verify-specialist.md"
+    },
+    {
+      "sourcePackage": "dd-due-diligence-team",
+      "sourceAgent": "agents/financial-analysis-specialist.md"
+    },
+    {
+      "sourcePackage": "dd-due-diligence-team",
+      "sourceAgent": "agents/industry-analysis-expert.md"
+    },
+    {
+      "sourcePackage": "dd-due-diligence-team",
+      "sourceAgent": "agents/intake-material-custodian.md"
+    },
+    {
+      "sourcePackage": "dd-due-diligence-team",
+      "sourceAgent": "agents/report-writer.md"
+    },
+    {
+      "sourcePackage": "dd-due-diligence-team",
+      "sourceAgent": "agents/risk-compliance-expert.md"
+    },
+    {
+      "sourcePackage": "deal-strategist",
+      "sourceAgent": "agents/deal-strategist.md"
+    },
+    {
+      "sourcePackage": "deep-research",
+      "sourceAgent": "agents/deep-research-expert.md"
+    },
+    {
+      "sourcePackage": "delightful-experience-designer",
+      "sourceAgent": "agents/delightful-experience-designer.md"
+    },
+    {
+      "sourcePackage": "design-engine",
+      "sourceAgent": "agents/critique-reviewer.md"
+    },
+    {
+      "sourcePackage": "design-engine",
+      "sourceAgent": "agents/design-engine-team-lead.md"
+    },
+    {
+      "sourcePackage": "design-engine",
+      "sourceAgent": "agents/design-system-expert.md"
+    },
+    {
+      "sourcePackage": "design-engine",
+      "sourceAgent": "agents/discovery-analyst.md"
+    },
+    {
+      "sourcePackage": "design-engine",
+      "sourceAgent": "agents/export-specialist.md"
+    },
+    {
+      "sourcePackage": "design-engine",
+      "sourceAgent": "agents/prototype-builder.md"
+    },
+    {
+      "sourcePackage": "design-md-architect",
+      "sourceAgent": "agents/design-md-architect.md"
+    },
+    {
+      "sourcePackage": "design-prototype-expert",
+      "sourceAgent": "agents/design-prototype-expert.md"
+    },
+    {
+      "sourcePackage": "design-to-code",
+      "sourceAgent": "agents/design-to-code-expert.md"
+    },
+    {
+      "sourcePackage": "dev-ops-automation-engineer",
+      "sourceAgent": "agents/dev-ops-automation-engineer.md"
+    },
+    {
+      "sourcePackage": "dev-pipeline-orchestrator",
+      "sourceAgent": "agents/dev-pipeline-orchestrator.md"
+    },
+    {
+      "sourcePackage": "developer-evangelist",
+      "sourceAgent": "agents/developer-evangelist.md"
+    },
+    {
+      "sourcePackage": "discovery-coach",
+      "sourceAgent": "agents/discovery-coach.md"
+    },
+    {
+      "sourcePackage": "diversity-visual-expert",
+      "sourceAgent": "agents/diversity-visual-expert.md"
+    },
+    {
+      "sourcePackage": "dockerfile-gen",
+      "sourceAgent": "agents/dockerfile-gen-expert.md"
+    },
+    {
+      "sourcePackage": "document-generation-expert",
+      "sourceAgent": "agents/document-generation-expert.md"
+    },
+    {
+      "sourcePackage": "document-skills",
+      "sourceAgent": "agents/document-processing-expert.md"
+    },
+    {
+      "sourcePackage": "douyin-strategist",
+      "sourceAgent": "agents/douyin-strategist.md"
+    },
+    {
+      "sourcePackage": "earnings-reviewer",
+      "sourceAgent": "agents/earnings-reviewer.md"
+    },
+    {
+      "sourcePackage": "edgeone-makers-experts",
+      "sourceAgent": "agents/agent-specialist.md"
+    },
+    {
+      "sourcePackage": "edgeone-makers-experts",
+      "sourceAgent": "agents/backend-specialist.md"
+    },
+    {
+      "sourcePackage": "edgeone-makers-experts",
+      "sourceAgent": "agents/edgeone-makers-team-lead.md"
+    },
+    {
+      "sourcePackage": "edgeone-makers-experts",
+      "sourceAgent": "agents/frontend-specialist.md"
+    },
+    {
+      "sourcePackage": "egypt-marketing",
+      "sourceAgent": "agents/egypt-marketing.md"
+    },
+    {
+      "sourcePackage": "egypt-public-affairs",
+      "sourceAgent": "agents/egypt-public-affairs.md"
+    },
+    {
+      "sourcePackage": "egypt-strategic-advisory",
+      "sourceAgent": "agents/egypt-strategic-advisory.md"
+    },
+    {
+      "sourcePackage": "embedded-firmware-engineer",
+      "sourceAgent": "agents/embedded-firmware-engineer.md"
+    },
+    {
+      "sourcePackage": "empirical-research-team",
+      "sourceAgent": "agents/academic-writer.md"
+    },
+    {
+      "sourcePackage": "empirical-research-team",
+      "sourceAgent": "agents/causal-analyst.md"
+    },
+    {
+      "sourcePackage": "empirical-research-team",
+      "sourceAgent": "agents/data-engineer.md"
+    },
+    {
+      "sourcePackage": "empirical-research-team",
+      "sourceAgent": "agents/deaigc-reviewer.md"
+    },
+    {
+      "sourcePackage": "empirical-research-team",
+      "sourceAgent": "agents/empirical-research-team-team-lead.md"
+    },
+    {
+      "sourcePackage": "empirical-research-team",
+      "sourceAgent": "agents/lit-reviewer.md"
+    },
+    {
+      "sourcePackage": "empirical-research-team",
+      "sourceAgent": "agents/robustness-auditor.md"
+    },
+    {
+      "sourcePackage": "empirical-research-team",
+      "sourceAgent": "agents/topic-refiner.md"
+    },
+    {
+      "sourcePackage": "engineering-assurance-team",
+      "sourceAgent": "agents/architect.md"
+    },
+    {
+      "sourcePackage": "engineering-assurance-team",
+      "sourceAgent": "agents/code-reviewer.md"
+    },
+    {
+      "sourcePackage": "engineering-assurance-team",
+      "sourceAgent": "agents/engineering-director.md"
+    },
+    {
+      "sourcePackage": "engineering-assurance-team",
+      "sourceAgent": "agents/sre-engineer.md"
+    },
+    {
+      "sourcePackage": "engineering-assurance-team",
+      "sourceAgent": "agents/tech-writer.md"
+    },
+    {
+      "sourcePackage": "engineering-assurance-team",
+      "sourceAgent": "agents/testing-expert.md"
+    },
+    {
+      "sourcePackage": "engineering-workflow-skills",
+      "sourceAgent": "agents/engineering-workflow-coach.md"
+    },
+    {
+      "sourcePackage": "english-writing-coach",
+      "sourceAgent": "agents/english-writing-coach.md"
+    },
+    {
+      "sourcePackage": "eno",
+      "sourceAgent": "agents/eno.md"
+    },
+    {
+      "sourcePackage": "enterprise-account-strategist",
+      "sourceAgent": "agents/enterprise-account-strategist.md"
+    },
+    {
+      "sourcePackage": "enterprise-legal-team",
+      "sourceAgent": "agents/ai-governance-counsel.md"
+    },
+    {
+      "sourcePackage": "enterprise-legal-team",
+      "sourceAgent": "agents/commercial-contracts-counsel.md"
+    },
+    {
+      "sourcePackage": "enterprise-legal-team",
+      "sourceAgent": "agents/corporate-ma-counsel.md"
+    },
+    {
+      "sourcePackage": "enterprise-legal-team",
+      "sourceAgent": "agents/employment-law-counsel.md"
+    },
+    {
+      "sourcePackage": "enterprise-legal-team",
+      "sourceAgent": "agents/enterprise-legal-lead.md"
+    },
+    {
+      "sourcePackage": "enterprise-legal-team",
+      "sourceAgent": "agents/ip-portfolio-counsel.md"
+    },
+    {
+      "sourcePackage": "enterprise-legal-team",
+      "sourceAgent": "agents/privacy-data-counsel.md"
+    },
+    {
+      "sourcePackage": "enterprise-legal-team",
+      "sourceAgent": "agents/product-legal-counsel.md"
+    },
+    {
+      "sourcePackage": "enterprise-legal-team",
+      "sourceAgent": "agents/regulatory-compliance-counsel.md"
+    },
+    {
+      "sourcePackage": "equity-research",
+      "sourceAgent": "agents/equity-research-expert.md"
+    },
+    {
+      "sourcePackage": "evidence-collector",
+      "sourceAgent": "agents/evidence-collector.md"
+    },
+    {
+      "sourcePackage": "exam-preparation-planner",
+      "sourceAgent": "agents/exam-preparation-planner.md"
+    },
+    {
+      "sourcePackage": "executing-marketing-campaigns",
+      "sourceAgent": "agents/marketing-campaign-expert.md"
+    },
+    {
+      "sourcePackage": "executive-summary-generator",
+      "sourceAgent": "agents/executive-summary-generator.md"
+    },
+    {
+      "sourcePackage": "experiment-tracking-manager",
+      "sourceAgent": "agents/experiment-tracking-manager.md"
+    },
+    {
+      "sourcePackage": "family-education-ma",
+      "sourceAgent": "agents/family-education-ma.md"
+    },
+    {
+      "sourcePackage": "fbsir-aigc-compliance-red-team",
+      "sourceAgent": "agents/fbsir-aigc-compliance-red-team.md"
+    },
+    {
+      "sourcePackage": "fbsir-beike-yi",
+      "sourceAgent": "agents/fbsir-beike-yi.md"
+    },
+    {
+      "sourcePackage": "fbsir-board-secretary-assistant",
+      "sourceAgent": "agents/fbsir-board-secretary-assistant.md"
+    },
+    {
+      "sourcePackage": "fbsir-eight-seat-board",
+      "sourceAgent": "agents/board-convener.md"
+    },
+    {
+      "sourcePackage": "fbsir-eight-seat-board",
+      "sourceAgent": "agents/board-secretary.md"
+    },
+    {
+      "sourcePackage": "fbsir-eight-seat-board",
+      "sourceAgent": "agents/capital-partner.md"
+    },
+    {
+      "sourcePackage": "fbsir-eight-seat-board",
+      "sourceAgent": "agents/digital-partner.md"
+    },
+    {
+      "sourcePackage": "fbsir-eight-seat-board",
+      "sourceAgent": "agents/growth-partner.md"
+    },
+    {
+      "sourcePackage": "fbsir-eight-seat-board",
+      "sourceAgent": "agents/legal-partner.md"
+    },
+    {
+      "sourcePackage": "fbsir-eight-seat-board",
+      "sourceAgent": "agents/operations-partner.md"
+    },
+    {
+      "sourcePackage": "fbsir-eight-seat-board",
+      "sourceAgent": "agents/org-partner.md"
+    },
+    {
+      "sourcePackage": "fbsir-eight-seat-board",
+      "sourceAgent": "agents/strategy-partner.md"
+    },
+    {
+      "sourcePackage": "fbsir-industry-scene-researcher",
+      "sourceAgent": "agents/fbsir-industry-scene-researcher.md"
+    },
+    {
+      "sourcePackage": "fbsir-mom-dialogue-expert",
+      "sourceAgent": "agents/fbsir-mom-dialogue-expert.md"
+    },
+    {
+      "sourcePackage": "fbsir-super-independent-board",
+      "sourceAgent": "agents/fbsir-super-independent-board.md"
+    },
+    {
+      "sourcePackage": "fbsir-super-partner",
+      "sourceAgent": "agents/fbsir-super-partner.md"
+    },
+    {
+      "sourcePackage": "feedback-synthesis-analyst",
+      "sourceAgent": "agents/feedback-synthesis-analyst.md"
+    },
+    {
+      "sourcePackage": "fin-research-expert",
+      "sourceAgent": "agents/fin-research-expert.md"
+    },
+    {
+      "sourcePackage": "finance",
+      "sourceAgent": "agents/finance-accounting-expert.md"
+    },
+    {
+      "sourcePackage": "finance-data",
+      "sourceAgent": "agents/finance-data-expert.md"
+    },
+    {
+      "sourcePackage": "financial-analysis",
+      "sourceAgent": "agents/financial-modeling-expert.md"
+    },
+    {
+      "sourcePackage": "financial-tracker",
+      "sourceAgent": "agents/financial-tracker.md"
+    },
+    {
+      "sourcePackage": "finops-expert",
+      "sourceAgent": "agents/finops-expert.md"
+    },
+    {
+      "sourcePackage": "fortune-consultant",
+      "sourceAgent": "agents/fortune-consultant.md"
+    },
+    {
+      "sourcePackage": "fortune-master",
+      "sourceAgent": "agents/fortune-master.md"
+    },
+    {
+      "sourcePackage": "frontend",
+      "sourceAgent": "agents/frontend.md"
+    },
+    {
+      "sourcePackage": "frontend-developer",
+      "sourceAgent": "agents/frontend-developer.md"
+    },
+    {
+      "sourcePackage": "frontend-slides",
+      "sourceAgent": "agents/frontend-slides.md"
+    },
+    {
+      "sourcePackage": "fund-research-analyst",
+      "sourceAgent": "agents/fund-research-analyst.md"
+    },
+    {
+      "sourcePackage": "fundus-disease-analysis",
+      "sourceAgent": "agents/腾讯健康-觅影-眼底彩照疾病分析专家.md"
+    },
+    {
+      "sourcePackage": "game-audio-engineer",
+      "sourceAgent": "agents/game-audio-engineer.md"
+    },
+    {
+      "sourcePackage": "game-designer",
+      "sourceAgent": "agents/game-designer.md"
+    },
+    {
+      "sourcePackage": "game-development-studio",
+      "sourceAgent": "agents/art-director.md"
+    },
+    {
+      "sourcePackage": "game-development-studio",
+      "sourceAgent": "agents/audio-director.md"
+    },
+    {
+      "sourcePackage": "game-development-studio",
+      "sourceAgent": "agents/design-strategist.md"
+    },
+    {
+      "sourcePackage": "game-development-studio",
+      "sourceAgent": "agents/engineering-lead.md"
+    },
+    {
+      "sourcePackage": "game-development-studio",
+      "sourceAgent": "agents/game-development-studio-team-lead.md"
+    },
+    {
+      "sourcePackage": "game-development-studio",
+      "sourceAgent": "agents/quality-lead.md"
+    },
+    {
+      "sourcePackage": "game-development-studio",
+      "sourceAgent": "agents/release-ops-lead.md"
+    },
+    {
+      "sourcePackage": "gaokao-advisor",
+      "sourceAgent": "agents/gaokao-advisor.md"
+    },
+    {
+      "sourcePackage": "geo-diagnosis-expert",
+      "sourceAgent": "agents/geo-diagnosis-expert.md"
+    },
+    {
+      "sourcePackage": "git-workflow-expert",
+      "sourceAgent": "agents/git-workflow-expert.md"
+    },
+    {
+      "sourcePackage": "gl-reconciler",
+      "sourceAgent": "agents/gl-reconciler.md"
+    },
+    {
+      "sourcePackage": "godot-game-script-engineer",
+      "sourceAgent": "agents/godot-game-script-engineer.md"
+    },
+    {
+      "sourcePackage": "godot-multiplayer-engineer",
+      "sourceAgent": "agents/godot-multiplayer-engineer.md"
+    },
+    {
+      "sourcePackage": "godot-shader-developer",
+      "sourceAgent": "agents/godot-shader-developer.md"
+    },
+    {
+      "sourcePackage": "government-digital-presales-consultant",
+      "sourceAgent": "agents/government-digital-presales-consultant.md"
+    },
+    {
+      "sourcePackage": "gpt-researcher-team",
+      "sourceAgent": "agents/draft-reviewer.md"
+    },
+    {
+      "sourcePackage": "gpt-researcher-team",
+      "sourceAgent": "agents/draft-reviser.md"
+    },
+    {
+      "sourcePackage": "gpt-researcher-team",
+      "sourceAgent": "agents/report-publisher.md"
+    },
+    {
+      "sourcePackage": "gpt-researcher-team",
+      "sourceAgent": "agents/report-writer.md"
+    },
+    {
+      "sourcePackage": "gpt-researcher-team",
+      "sourceAgent": "agents/research-chief-editor.md"
+    },
+    {
+      "sourcePackage": "gpt-researcher-team",
+      "sourceAgent": "agents/research-planner.md"
+    },
+    {
+      "sourcePackage": "gpt-researcher-team",
+      "sourceAgent": "agents/topic-researcher.md"
+    },
+    {
+      "sourcePackage": "growth-hacker",
+      "sourceAgent": "agents/growth-hacker.md"
+    },
+    {
+      "sourcePackage": "gstack",
+      "sourceAgent": "agents/gstack-designer.md"
+    },
+    {
+      "sourcePackage": "gstack",
+      "sourceAgent": "agents/gstack-investigator.md"
+    },
+    {
+      "sourcePackage": "gstack",
+      "sourceAgent": "agents/gstack-lead.md"
+    },
+    {
+      "sourcePackage": "gstack",
+      "sourceAgent": "agents/gstack-product-reviewer.md"
+    },
+    {
+      "sourcePackage": "gstack",
+      "sourceAgent": "agents/gstack-qa-lead.md"
+    },
+    {
+      "sourcePackage": "gstack",
+      "sourceAgent": "agents/gstack-security-officer.md"
+    },
+    {
+      "sourcePackage": "healthcare-marketing-compliance-expert",
+      "sourceAgent": "agents/healthcare-marketing-compliance-expert.md"
+    },
+    {
+      "sourcePackage": "hr-digital-expert",
+      "sourceAgent": "agents/hr-digital-expert.md"
+    },
+    {
+      "sourcePackage": "hr-operations-team",
+      "sourceAgent": "agents/comp-analyst.md"
+    },
+    {
+      "sourcePackage": "hr-operations-team",
+      "sourceAgent": "agents/hr-director.md"
+    },
+    {
+      "sourcePackage": "hr-operations-team",
+      "sourceAgent": "agents/hr-ops.md"
+    },
+    {
+      "sourcePackage": "hr-operations-team",
+      "sourceAgent": "agents/org-developer.md"
+    },
+    {
+      "sourcePackage": "hr-operations-team",
+      "sourceAgent": "agents/recruiter.md"
+    },
+    {
+      "sourcePackage": "hsk-devops-expert",
+      "sourceAgent": "agents/hsk-devops-architect.md"
+    },
+    {
+      "sourcePackage": "huashu-data-pro",
+      "sourceAgent": "agents/anomaly-analyst.md"
+    },
+    {
+      "sourcePackage": "huashu-data-pro",
+      "sourceAgent": "agents/huashu-data-pro-team-lead.md"
+    },
+    {
+      "sourcePackage": "huashu-data-pro",
+      "sourceAgent": "agents/structure-analyst.md"
+    },
+    {
+      "sourcePackage": "huashu-data-pro",
+      "sourceAgent": "agents/trend-analyst.md"
+    },
+    {
+      "sourcePackage": "huashu-doc-reviewer",
+      "sourceAgent": "agents/doc-reviewer.md"
+    },
+    {
+      "sourcePackage": "humanize-ppt-team",
+      "sourceAgent": "agents/frontend-slides-renderer.md"
+    },
+    {
+      "sourcePackage": "humanize-ppt-team",
+      "sourceAgent": "agents/guizang-renderer.md"
+    },
+    {
+      "sourcePackage": "humanize-ppt-team",
+      "sourceAgent": "agents/html-ppt-presenter.md"
+    },
+    {
+      "sourcePackage": "humanize-ppt-team",
+      "sourceAgent": "agents/humanize-ppt-team-lead.md"
+    },
+    {
+      "sourcePackage": "humanize-ppt-team",
+      "sourceAgent": "agents/outline-director.md"
+    },
+    {
+      "sourcePackage": "humanize-ppt-team",
+      "sourceAgent": "agents/qa.md"
+    },
+    {
+      "sourcePackage": "humanize-ppt-team",
+      "sourceAgent": "agents/video-motion-agent.md"
+    },
+    {
+      "sourcePackage": "identity-graph-operator",
+      "sourceAgent": "agents/identity-graph-operator.md"
+    },
+    {
+      "sourcePackage": "ihr-ai-interviewer",
+      "sourceAgent": "agents/ihr-ai-interviewer.md"
+    },
+    {
+      "sourcePackage": "ihr-conference",
+      "sourceAgent": "agents/ihr-conference.md"
+    },
+    {
+      "sourcePackage": "incident-response-commander",
+      "sourceAgent": "agents/incident-response-commander.md"
+    },
+    {
+      "sourcePackage": "indie-founder-coach",
+      "sourceAgent": "agents/indie-founder-coach.md"
+    },
+    {
+      "sourcePackage": "indonesia-bd-expert",
+      "sourceAgent": "agents/indonesia-bd-expert.md"
+    },
+    {
+      "sourcePackage": "indonesia-digital-law-expert",
+      "sourceAgent": "agents/indonesia-digital-law-expert.md"
+    },
+    {
+      "sourcePackage": "indonesia-pa-expert",
+      "sourceAgent": "agents/indonesia-pa-expert.md"
+    },
+    {
+      "sourcePackage": "industrial-park-investment-attraction-expert",
+      "sourceAgent": "agents/industrial-park-investment-attraction-expert.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/ecommerce-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/education-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/finance-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/game-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/healthcare-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/industry-sre-team-lead.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/internet-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/live-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/manufacturing-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/mobility-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/retail-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/saas-sre.md"
+    },
+    {
+      "sourcePackage": "industry-sre-team",
+      "sourceAgent": "agents/social-im-sre.md"
+    },
+    {
+      "sourcePackage": "infrastructure-operations-expert",
+      "sourceAgent": "agents/infrastructure-operations-expert.md"
+    },
+    {
+      "sourcePackage": "innovation-startup-mentor",
+      "sourceAgent": "agents/innovation-startup-mentor.md"
+    },
+    {
+      "sourcePackage": "inspection-expert",
+      "sourceAgent": "agents/inspection-expert.md"
+    },
+    {
+      "sourcePackage": "instagram-operations-expert",
+      "sourceAgent": "agents/instagram-operations-expert.md"
+    },
+    {
+      "sourcePackage": "internal-comms",
+      "sourceAgent": "agents/internal-comms-expert.md"
+    },
+    {
+      "sourcePackage": "interview-simulator",
+      "sourceAgent": "agents/interview-simulator.md"
+    },
+    {
+      "sourcePackage": "investment-banking",
+      "sourceAgent": "agents/investment-banking-expert.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/ben-graham.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/black-swan-prophet.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/charlie-munger.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/dean-of-valuation.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/dhandho-master.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/fundamentals-analyst.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/growth-analyst.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/hedge-fund-lead.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/macro-king.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/magellan-captain.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/mama-wood.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/news-sentiment-analyst.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/oracle-of-omaha.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/phil-fisher.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/portfolio-manager.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/rakesh-jhunjhunwala.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/risk-manager.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/sentiment-analyst.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/technicals-analyst.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/the-big-short.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/valuation-analyst.md"
+    },
+    {
+      "sourcePackage": "investment-masters-team",
+      "sourceAgent": "agents/wall-street-activist.md"
+    },
+    {
+      "sourcePackage": "invoice-verify-expert",
+      "sourceAgent": "agents/invoice-verify.md"
+    },
+    {
+      "sourcePackage": "invoice-verify-workbuddy",
+      "sourceAgent": "agents/archivist.md"
+    },
+    {
+      "sourcePackage": "invoice-verify-workbuddy",
+      "sourceAgent": "agents/counterparty-risk-analyst.md"
+    },
+    {
+      "sourcePackage": "invoice-verify-workbuddy",
+      "sourceAgent": "agents/invoice-sorter.md"
+    },
+    {
+      "sourcePackage": "invoice-verify-workbuddy",
+      "sourceAgent": "agents/invoice-verifier.md"
+    },
+    {
+      "sourcePackage": "invoice-verify-workbuddy",
+      "sourceAgent": "agents/invoice-verify-team-lead.md"
+    },
+    {
+      "sourcePackage": "ip-expert",
+      "sourceAgent": "agents/ip-expert.md"
+    },
+    {
+      "sourcePackage": "jiayi-ads-analytics-expert",
+      "sourceAgent": "agents/jiayi-ads-analytics-expert.md"
+    },
+    {
+      "sourcePackage": "jinshuju-expert",
+      "sourceAgent": "agents/jinshuju-expert.md"
+    },
+    {
+      "sourcePackage": "jinshuju-form-expert",
+      "sourceAgent": "agents/jinshuju-form-expert.md"
+    },
+    {
+      "sourcePackage": "jinshuju-table-expert",
+      "sourceAgent": "agents/jinshuju-table-expert.md"
+    },
+    {
+      "sourcePackage": "jira-workflow-admin",
+      "sourceAgent": "agents/jira-workflow-admin.md"
+    },
+    {
+      "sourcePackage": "job-companion-team",
+      "sourceAgent": "agents/job-companion-interview.md"
+    },
+    {
+      "sourcePackage": "job-companion-team",
+      "sourceAgent": "agents/job-companion-negotiation.md"
+    },
+    {
+      "sourcePackage": "job-companion-team",
+      "sourceAgent": "agents/job-companion-reflection.md"
+    },
+    {
+      "sourcePackage": "job-companion-team",
+      "sourceAgent": "agents/job-companion-resume.md"
+    },
+    {
+      "sourcePackage": "job-companion-team",
+      "sourceAgent": "agents/job-companion-team-lead.md"
+    },
+    {
+      "sourcePackage": "kdocs-data-table",
+      "sourceAgent": "agents/kdocs-data-table.md"
+    },
+    {
+      "sourcePackage": "kdocs-doc-butler",
+      "sourceAgent": "agents/kdocs-doc-butler.md"
+    },
+    {
+      "sourcePackage": "kdocs-knowledge-collector",
+      "sourceAgent": "agents/kdocs-knowledge-collector.md"
+    },
+    {
+      "sourcePackage": "kdocs-pdf-toolbox",
+      "sourceAgent": "agents/kdocs-pdf-toolbox.md"
+    },
+    {
+      "sourcePackage": "kdocs-ppt-creator",
+      "sourceAgent": "agents/kdocs-ppt-creator.md"
+    },
+    {
+      "sourcePackage": "ket-prep-team",
+      "sourceAgent": "agents/ket-foundation-builder.md"
+    },
+    {
+      "sourcePackage": "ket-prep-team",
+      "sourceAgent": "agents/ket-input-master.md"
+    },
+    {
+      "sourcePackage": "ket-prep-team",
+      "sourceAgent": "agents/ket-output-coach.md"
+    },
+    {
+      "sourcePackage": "ket-prep-team",
+      "sourceAgent": "agents/ket-prep-team-team-lead.md"
+    },
+    {
+      "sourcePackage": "ket-prep-team",
+      "sourceAgent": "agents/ket-strategist.md"
+    },
+    {
+      "sourcePackage": "ket-prep-team",
+      "sourceAgent": "agents/ket-tactician.md"
+    },
+    {
+      "sourcePackage": "kidd-content-expert",
+      "sourceAgent": "agents/kidd-content-expert.md"
+    },
+    {
+      "sourcePackage": "kuaishou-strategist",
+      "sourceAgent": "agents/kuaishou-strategist.md"
+    },
+    {
+      "sourcePackage": "kyc-screener",
+      "sourceAgent": "agents/kyc-screener.md"
+    },
+    {
+      "sourcePackage": "law-student-coach",
+      "sourceAgent": "agents/law-student-coach.md"
+    },
+    {
+      "sourcePackage": "lazy-travel-planner",
+      "sourceAgent": "agents/travel-planner.md"
+    },
+    {
+      "sourcePackage": "legal-builder-hub",
+      "sourceAgent": "agents/legal-builder-hub.md"
+    },
+    {
+      "sourcePackage": "legal-clinic-supervisor",
+      "sourceAgent": "agents/legal-clinic-supervisor.md"
+    },
+    {
+      "sourcePackage": "legal-compliance-reviewer",
+      "sourceAgent": "agents/legal-compliance-reviewer.md"
+    },
+    {
+      "sourcePackage": "legal-search-pro",
+      "sourceAgent": "agents/legal-search-pro.md"
+    },
+    {
+      "sourcePackage": "level-designer",
+      "sourceAgent": "agents/level-designer.md"
+    },
+    {
+      "sourcePackage": "linked-in-content-creator",
+      "sourceAgent": "agents/linked-in-content-creator.md"
+    },
+    {
+      "sourcePackage": "linkfox-expert-amazon-listing-specialist",
+      "sourceAgent": "agents/linkfox-expert-amazon-listing-specialist.md"
+    },
+    {
+      "sourcePackage": "litigation-legal",
+      "sourceAgent": "agents/litigation-legal-strategist.md"
+    },
+    {
+      "sourcePackage": "liuxue-yanxue-expert",
+      "sourceAgent": "agents/liuxue-yanxue-expert.md"
+    },
+    {
+      "sourcePackage": "livestream-ecommerce-coach",
+      "sourceAgent": "agents/livestream-ecommerce-coach.md"
+    },
+    {
+      "sourcePackage": "llm-wiki",
+      "sourceAgent": "agents/llm-wiki.md"
+    },
+    {
+      "sourcePackage": "long-manuscript-expert",
+      "sourceAgent": "agents/long-manuscript-expert.md"
+    },
+    {
+      "sourcePackage": "lsp-index-engineer",
+      "sourceAgent": "agents/lsp-index-engineer.md"
+    },
+    {
+      "sourcePackage": "mac-os-spatial-metal-engineer",
+      "sourceAgent": "agents/mac-os-spatial-metal-engineer.md"
+    },
+    {
+      "sourcePackage": "mai-deal-advisor",
+      "sourceAgent": "agents/mai-deal-advisor.md"
+    },
+    {
+      "sourcePackage": "malaysia-finance-tax",
+      "sourceAgent": "agents/malaysia-finance-tax.md"
+    },
+    {
+      "sourcePackage": "malaysia-hr-admin",
+      "sourceAgent": "agents/malaysia-hr-admin.md"
+    },
+    {
+      "sourcePackage": "malaysia-legal",
+      "sourceAgent": "agents/malaysia-legal.md"
+    },
+    {
+      "sourcePackage": "malaysia-marketing",
+      "sourceAgent": "agents/malaysia-marketing.md"
+    },
+    {
+      "sourcePackage": "market-analysis-cn",
+      "sourceAgent": "agents/market-analysis-cn.md"
+    },
+    {
+      "sourcePackage": "market-researcher",
+      "sourceAgent": "agents/market-researcher.md"
+    },
+    {
+      "sourcePackage": "marketing-campaign-team",
+      "sourceAgent": "agents/brand-analyst.md"
+    },
+    {
+      "sourcePackage": "marketing-campaign-team",
+      "sourceAgent": "agents/campaign-planner.md"
+    },
+    {
+      "sourcePackage": "marketing-campaign-team",
+      "sourceAgent": "agents/content-creator.md"
+    },
+    {
+      "sourcePackage": "marketing-campaign-team",
+      "sourceAgent": "agents/marketing-director.md"
+    },
+    {
+      "sourcePackage": "marketing-campaign-team",
+      "sourceAgent": "agents/seo-expert.md"
+    },
+    {
+      "sourcePackage": "marketing-growth-team",
+      "sourceAgent": "agents/analytics-revops-lead.md"
+    },
+    {
+      "sourcePackage": "marketing-growth-team",
+      "sourceAgent": "agents/cro-specialist.md"
+    },
+    {
+      "sourcePackage": "marketing-growth-team",
+      "sourceAgent": "agents/growth-engineer.md"
+    },
+    {
+      "sourcePackage": "marketing-growth-team",
+      "sourceAgent": "agents/marketing-growth-team-lead.md"
+    },
+    {
+      "sourcePackage": "marketing-growth-team",
+      "sourceAgent": "agents/seo-content-strategist.md"
+    },
+    {
+      "sourcePackage": "marketing-reviewer",
+      "sourceAgent": "agents/marketing-reviewer.md"
+    },
+    {
+      "sourcePackage": "mcp-build-expert",
+      "sourceAgent": "agents/mcp-build-expert.md"
+    },
+    {
+      "sourcePackage": "meeting-prep-agent",
+      "sourceAgent": "agents/meeting-prep-agent.md"
+    },
+    {
+      "sourcePackage": "meituan-living-assistant",
+      "sourceAgent": "agents/meituan-living-assistant.md"
+    },
+    {
+      "sourcePackage": "mentougou-business-guide",
+      "sourceAgent": "agents/mentougou-business-guide.md"
+    },
+    {
+      "sourcePackage": "mermaid-diagram-expert",
+      "sourceAgent": "agents/mermaid-diagram-expert.md"
+    },
+    {
+      "sourcePackage": "metamorphosis-practitioner",
+      "sourceAgent": "agents/metamorphosis-practitioner.md"
+    },
+    {
+      "sourcePackage": "mibao-media-archivist",
+      "sourceAgent": "agents/mibao-media-archivist.md"
+    },
+    {
+      "sourcePackage": "migraq-team",
+      "sourceAgent": "agents/cloud-architect.md"
+    },
+    {
+      "sourcePackage": "migraq-team",
+      "sourceAgent": "agents/delivery-engineer.md"
+    },
+    {
+      "sourcePackage": "migraq-team",
+      "sourceAgent": "agents/fde-engineer.md"
+    },
+    {
+      "sourcePackage": "migraq-team",
+      "sourceAgent": "agents/landing-zone-expert.md"
+    },
+    {
+      "sourcePackage": "migraq-team",
+      "sourceAgent": "agents/migraq-team-lead.md"
+    },
+    {
+      "sourcePackage": "migraq-team",
+      "sourceAgent": "agents/ops-engineer.md"
+    },
+    {
+      "sourcePackage": "migraq-team",
+      "sourceAgent": "agents/product-expert.md"
+    },
+    {
+      "sourcePackage": "mobile-application-developer",
+      "sourceAgent": "agents/mobile-application-developer.md"
+    },
+    {
+      "sourcePackage": "model-builder",
+      "sourceAgent": "agents/model-builder.md"
+    },
+    {
+      "sourcePackage": "model-quality-assurance-expert",
+      "sourceAgent": "agents/model-quality-assurance-expert.md"
+    },
+    {
+      "sourcePackage": "modern-webapp",
+      "sourceAgent": "agents/modern-webapp-expert.md"
+    },
+    {
+      "sourcePackage": "month-end-closer",
+      "sourceAgent": "agents/month-end-closer.md"
+    },
+    {
+      "sourcePackage": "multi-cloud-expert",
+      "sourceAgent": "agents/multi-cloud-expert.md"
+    },
+    {
+      "sourcePackage": "multi-cloud-management-expert",
+      "sourceAgent": "agents/multi-cloud-management-expert.md"
+    },
+    {
+      "sourcePackage": "mvp-dev-expert-team",
+      "sourceAgent": "agents/mvp-dev-expert-team-architect.md"
+    },
+    {
+      "sourcePackage": "mvp-dev-expert-team",
+      "sourceAgent": "agents/mvp-dev-expert-team-backend.md"
+    },
+    {
+      "sourcePackage": "mvp-dev-expert-team",
+      "sourceAgent": "agents/mvp-dev-expert-team-designer.md"
+    },
+    {
+      "sourcePackage": "mvp-dev-expert-team",
+      "sourceAgent": "agents/mvp-dev-expert-team-devops.md"
+    },
+    {
+      "sourcePackage": "mvp-dev-expert-team",
+      "sourceAgent": "agents/mvp-dev-expert-team-frontend.md"
+    },
+    {
+      "sourcePackage": "mvp-dev-expert-team",
+      "sourceAgent": "agents/mvp-dev-expert-team-pm.md"
+    },
+    {
+      "sourcePackage": "mvp-dev-expert-team",
+      "sourceAgent": "agents/mvp-dev-expert-team-qa.md"
+    },
+    {
+      "sourcePackage": "mvp-dev-expert-team",
+      "sourceAgent": "agents/mvp-dev-expert-team-team-lead.md"
+    },
+    {
+      "sourcePackage": "narrative-designer",
+      "sourceAgent": "agents/narrative-designer.md"
+    },
+    {
+      "sourcePackage": "ncre-expert",
+      "sourceAgent": "agents/ncre-expert-team-lead.md"
+    },
+    {
+      "sourcePackage": "ncre-expert",
+      "sourceAgent": "agents/ncre-level1.md"
+    },
+    {
+      "sourcePackage": "ncre-expert",
+      "sourceAgent": "agents/ncre-level2.md"
+    },
+    {
+      "sourcePackage": "ncre-expert",
+      "sourceAgent": "agents/ncre-level3.md"
+    },
+    {
+      "sourcePackage": "ncre-expert",
+      "sourceAgent": "agents/ncre-level4.md"
+    },
+    {
+      "sourcePackage": "new-share-expert",
+      "sourceAgent": "agents/new-share-expert.md"
+    },
+    {
+      "sourcePackage": "news-briefing-expert",
+      "sourceAgent": "agents/news-briefing-expert.md"
+    },
+    {
+      "sourcePackage": "news-buddy",
+      "sourceAgent": "agents/news-buddy.md"
+    },
+    {
+      "sourcePackage": "nges-healthcare-marketing-team",
+      "sourceAgent": "agents/hcp-insight-expert.md"
+    },
+    {
+      "sourcePackage": "nges-healthcare-marketing-team",
+      "sourceAgent": "agents/interactive-medical-case-expert.md"
+    },
+    {
+      "sourcePackage": "nges-healthcare-marketing-team",
+      "sourceAgent": "agents/med-content-recreator.md"
+    },
+    {
+      "sourcePackage": "nges-healthcare-marketing-team",
+      "sourceAgent": "agents/med-rep-material-studio.md"
+    },
+    {
+      "sourcePackage": "nges-healthcare-marketing-team",
+      "sourceAgent": "agents/nges-healthcare-compliance-lite.md"
+    },
+    {
+      "sourcePackage": "nges-healthcare-marketing-team",
+      "sourceAgent": "agents/nges-team-lead.md"
+    },
+    {
+      "sourcePackage": "ngo-challenge-advisor",
+      "sourceAgent": "agents/ngo-challenge-advisor.md"
+    },
+    {
+      "sourcePackage": "note-class-representative",
+      "sourceAgent": "agents/note-class-representative.md"
+    },
+    {
+      "sourcePackage": "novel-creator",
+      "sourceAgent": "agents/novel-creator.md"
+    },
+    {
+      "sourcePackage": "novel-generator",
+      "sourceAgent": "agents/novel-generator.md"
+    },
+    {
+      "sourcePackage": "nuwa",
+      "sourceAgent": "agents/nuwa.md"
+    },
+    {
+      "sourcePackage": "omics-bioinfo-expert",
+      "sourceAgent": "agents/omics-bioinfo-expert.md"
+    },
+    {
+      "sourcePackage": "omics-cdgpt-expert",
+      "sourceAgent": "agents/omics-cdgpt-expert.md"
+    },
+    {
+      "sourcePackage": "omics-diagnosis-expert",
+      "sourceAgent": "agents/omics-diagnosis-expert.md"
+    },
+    {
+      "sourcePackage": "omics-hpc-expert",
+      "sourceAgent": "agents/omics-hpc-expert.md"
+    },
+    {
+      "sourcePackage": "omics-iggm-expert",
+      "sourceAgent": "agents/omics-iggm-expert.md"
+    },
+    {
+      "sourcePackage": "omics-ori-expert",
+      "sourceAgent": "agents/omics-ori-expert.md"
+    },
+    {
+      "sourcePackage": "omics-scbert-expert",
+      "sourceAgent": "agents/omics-scbert-expert.md"
+    },
+    {
+      "sourcePackage": "omics-scprotein-expert",
+      "sourceAgent": "agents/omics-scprotein-expert.md"
+    },
+    {
+      "sourcePackage": "omics-tfold-expert",
+      "sourceAgent": "agents/omics-tfold-expert.md"
+    },
+    {
+      "sourcePackage": "opc-team",
+      "sourceAgent": "agents/opc-asset-strategist.md"
+    },
+    {
+      "sourcePackage": "opc-team",
+      "sourceAgent": "agents/opc-conversion-designer.md"
+    },
+    {
+      "sourcePackage": "opc-team",
+      "sourceAgent": "agents/opc-dashboard-reviewer.md"
+    },
+    {
+      "sourcePackage": "opc-team",
+      "sourceAgent": "agents/opc-model-architect.md"
+    },
+    {
+      "sourcePackage": "opc-team",
+      "sourceAgent": "agents/opc-mvp-designer.md"
+    },
+    {
+      "sourcePackage": "opc-team",
+      "sourceAgent": "agents/opc-niche-strategist.md"
+    },
+    {
+      "sourcePackage": "opc-team",
+      "sourceAgent": "agents/opc-resource-auditor.md"
+    },
+    {
+      "sourcePackage": "opc-team",
+      "sourceAgent": "agents/opc-team-lead.md"
+    },
+    {
+      "sourcePackage": "opc-team",
+      "sourceAgent": "agents/opc-value-designer.md"
+    },
+    {
+      "sourcePackage": "openspec-doc-team",
+      "sourceAgent": "agents/doc-auditor.md"
+    },
+    {
+      "sourcePackage": "openspec-doc-team",
+      "sourceAgent": "agents/doc-generator.md"
+    },
+    {
+      "sourcePackage": "openspec-doc-team",
+      "sourceAgent": "agents/doc-researcher.md"
+    },
+    {
+      "sourcePackage": "openspec-doc-team",
+      "sourceAgent": "agents/doc-team-lead.md"
+    },
+    {
+      "sourcePackage": "outbound-strategist",
+      "sourceAgent": "agents/outbound-strategist.md"
+    },
+    {
+      "sourcePackage": "paid-media-auditor",
+      "sourceAgent": "agents/paid-media-auditor.md"
+    },
+    {
+      "sourcePackage": "panshi-customer-visit-agent",
+      "sourceAgent": "agents/panshi-customer-visit-agent.md"
+    },
+    {
+      "sourcePackage": "paper-topic-selection",
+      "sourceAgent": "agents/huangfu-evaluation.md"
+    },
+    {
+      "sourcePackage": "paper-topic-selection",
+      "sourceAgent": "agents/ouyang-literature.md"
+    },
+    {
+      "sourcePackage": "paper-topic-selection",
+      "sourceAgent": "agents/shangguan-topic.md"
+    },
+    {
+      "sourcePackage": "paper-topic-selection",
+      "sourceAgent": "agents/situ-inspiration.md"
+    },
+    {
+      "sourcePackage": "paper-topic-selection",
+      "sourceAgent": "agents/taishi-report.md"
+    },
+    {
+      "sourcePackage": "paper-topic-selection",
+      "sourceAgent": "agents/xiahou-title.md"
+    },
+    {
+      "sourcePackage": "paper-topic-selection",
+      "sourceAgent": "agents/zhuge-consultant.md"
+    },
+    {
+      "sourcePackage": "patient-education-content-review-word-assistant",
+      "sourceAgent": "agents/patient-education-content-review-word-assistant.md"
+    },
+    {
+      "sourcePackage": "performance-testing-expert",
+      "sourceAgent": "agents/performance-testing-expert.md"
+    },
+    {
+      "sourcePackage": "personal-fitness-coach",
+      "sourceAgent": "agents/fitness-coach.md"
+    },
+    {
+      "sourcePackage": "personal-knowledge-architect",
+      "sourceAgent": "agents/personal-knowledge-architect.md"
+    },
+    {
+      "sourcePackage": "pitch-agent",
+      "sourceAgent": "agents/pitch-agent.md"
+    },
+    {
+      "sourcePackage": "pneumonia-ai-analyst",
+      "sourceAgent": "agents/pneumonia-ai-analyst.md"
+    },
+    {
+      "sourcePackage": "podcast-strategist",
+      "sourceAgent": "agents/podcast-strategist.md"
+    },
+    {
+      "sourcePackage": "ppc-bidding-strategist",
+      "sourceAgent": "agents/ppc-bidding-strategist.md"
+    },
+    {
+      "sourcePackage": "ppt-creation-expert",
+      "sourceAgent": "agents/ppt-creator.md"
+    },
+    {
+      "sourcePackage": "presales-technical-consultant",
+      "sourceAgent": "agents/presales-technical-consultant.md"
+    },
+    {
+      "sourcePackage": "private-domain-marketing-expert",
+      "sourceAgent": "agents/private-domain-marketing-expert.md"
+    },
+    {
+      "sourcePackage": "private-domain-operations-expert",
+      "sourceAgent": "agents/private-domain-operations-expert.md"
+    },
+    {
+      "sourcePackage": "private-equity",
+      "sourceAgent": "agents/private-equity-expert.md"
+    },
+    {
+      "sourcePackage": "product-management",
+      "sourceAgent": "agents/product-management-expert.md"
+    },
+    {
+      "sourcePackage": "product-strategy-team",
+      "sourceAgent": "agents/competitive-analyst.md"
+    },
+    {
+      "sourcePackage": "product-strategy-team",
+      "sourceAgent": "agents/data-analyst.md"
+    },
+    {
+      "sourcePackage": "product-strategy-team",
+      "sourceAgent": "agents/product-director.md"
+    },
+    {
+      "sourcePackage": "product-strategy-team",
+      "sourceAgent": "agents/requirement-analyst.md"
+    },
+    {
+      "sourcePackage": "product-strategy-team",
+      "sourceAgent": "agents/roadmap-planner.md"
+    },
+    {
+      "sourcePackage": "product-strategy-team",
+      "sourceAgent": "agents/user-researcher.md"
+    },
+    {
+      "sourcePackage": "programmatic-ad-buyer",
+      "sourceAgent": "agents/programmatic-ad-buyer.md"
+    },
+    {
+      "sourcePackage": "project-shepherd",
+      "sourceAgent": "agents/project-shepherd.md"
+    },
+    {
+      "sourcePackage": "promo-creator-team",
+      "sourceAgent": "agents/asset-producer.md"
+    },
+    {
+      "sourcePackage": "promo-creator-team",
+      "sourceAgent": "agents/brief-strategist.md"
+    },
+    {
+      "sourcePackage": "promo-creator-team",
+      "sourceAgent": "agents/music-director.md"
+    },
+    {
+      "sourcePackage": "promo-creator-team",
+      "sourceAgent": "agents/promo-team-lead.md"
+    },
+    {
+      "sourcePackage": "promo-creator-team",
+      "sourceAgent": "agents/storyboard-artist.md"
+    },
+    {
+      "sourcePackage": "promo-creator-team",
+      "sourceAgent": "agents/video-editor.md"
+    },
+    {
+      "sourcePackage": "prompt-engineer",
+      "sourceAgent": "agents/prompt-engineer.md"
+    },
+    {
+      "sourcePackage": "prompt-engineering-expert",
+      "sourceAgent": "agents/prompt-engineering-expert.md"
+    },
+    {
+      "sourcePackage": "proposal-strategist",
+      "sourceAgent": "agents/proposal-strategist.md"
+    },
+    {
+      "sourcePackage": "python-fullstack-engineer",
+      "sourceAgent": "agents/python-fullstack-engineer.md"
+    },
+    {
+      "sourcePackage": "qingflow-hr-expert",
+      "sourceAgent": "agents/qingflow-hr-expert.md"
+    },
+    {
+      "sourcePackage": "rapid-prototyping-engineer",
+      "sourceAgent": "agents/rapid-prototyping-engineer.md"
+    },
+    {
+      "sourcePackage": "reality-checker",
+      "sourceAgent": "agents/reality-checker.md"
+    },
+    {
+      "sourcePackage": "recruitment-expert",
+      "sourceAgent": "agents/recruitment-expert.md"
+    },
+    {
+      "sourcePackage": "reddit-community-builder",
+      "sourceAgent": "agents/reddit-community-builder.md"
+    },
+    {
+      "sourcePackage": "remotion-video-generator",
+      "sourceAgent": "agents/remotion-video-expert.md"
+    },
+    {
+      "sourcePackage": "resume-assistant",
+      "sourceAgent": "agents/resume-assistant.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/analyst-rating-tracker.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/capital-action-analyst.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/company-profiler.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/event-correlator.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/financials-analyst.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/industry-analyst.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/material-parser.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/price-action-analyst.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/report-composer.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/roadshow-curator.md"
+    },
+    {
+      "sourcePackage": "roadshow-research-team",
+      "sourceAgent": "agents/roadshow-team-lead.md"
+    },
+    {
+      "sourcePackage": "roblox-avatar-creator",
+      "sourceAgent": "agents/roblox-avatar-creator.md"
+    },
+    {
+      "sourcePackage": "roblox-experience-designer",
+      "sourceAgent": "agents/roblox-experience-designer.md"
+    },
+    {
+      "sourcePackage": "roblox-system-script-engineer",
+      "sourceAgent": "agents/roblox-system-script-engineer.md"
+    },
+    {
+      "sourcePackage": "rum-fullstack-team",
+      "sourceAgent": "agents/rum-integration-specialist.md"
+    },
+    {
+      "sourcePackage": "rum-fullstack-team",
+      "sourceAgent": "agents/rum-performance-analyst.md"
+    },
+    {
+      "sourcePackage": "rum-fullstack-team",
+      "sourceAgent": "agents/rum-team-lead.md"
+    },
+    {
+      "sourcePackage": "sa-legal-compliance",
+      "sourceAgent": "agents/sa-legal-compliance.md"
+    },
+    {
+      "sourcePackage": "sales-battle-team",
+      "sourceAgent": "agents/account-researcher.md"
+    },
+    {
+      "sourcePackage": "sales-battle-team",
+      "sourceAgent": "agents/competitive-intel.md"
+    },
+    {
+      "sourcePackage": "sales-battle-team",
+      "sourceAgent": "agents/outreach-strategist.md"
+    },
+    {
+      "sourcePackage": "sales-battle-team",
+      "sourceAgent": "agents/sales-director.md"
+    },
+    {
+      "sourcePackage": "sales-battle-team",
+      "sourceAgent": "agents/sales-forecaster.md"
+    },
+    {
+      "sourcePackage": "sales-coach",
+      "sourceAgent": "agents/sales-coach.md"
+    },
+    {
+      "sourcePackage": "sales-data-extraction-agent",
+      "sourceAgent": "agents/sales-data-extraction-agent.md"
+    },
+    {
+      "sourcePackage": "sales-pipeline-analyst",
+      "sourceAgent": "agents/sales-pipeline-analyst.md"
+    },
+    {
+      "sourcePackage": "sdk-log-expert",
+      "sourceAgent": "agents/sdk-log-expert.md"
+    },
+    {
+      "sourcePackage": "search-term-analyst",
+      "sourceAgent": "agents/search-term-analyst.md"
+    },
+    {
+      "sourcePackage": "security-engineer",
+      "sourceAgent": "agents/security-engineer.md"
+    },
+    {
+      "sourcePackage": "senior-developer",
+      "sourceAgent": "agents/senior-developer.md"
+    },
+    {
+      "sourcePackage": "senior-project-manager",
+      "sourceAgent": "agents/senior-project-manager.md"
+    },
+    {
+      "sourcePackage": "seo-content-team",
+      "sourceAgent": "agents/content-editor.md"
+    },
+    {
+      "sourcePackage": "seo-content-team",
+      "sourceAgent": "agents/content-writer.md"
+    },
+    {
+      "sourcePackage": "seo-content-team",
+      "sourceAgent": "agents/cro-analyst.md"
+    },
+    {
+      "sourcePackage": "seo-content-team",
+      "sourceAgent": "agents/keyword-researcher.md"
+    },
+    {
+      "sourcePackage": "seo-content-team",
+      "sourceAgent": "agents/link-strategist.md"
+    },
+    {
+      "sourcePackage": "seo-content-team",
+      "sourceAgent": "agents/seo-content-team-lead.md"
+    },
+    {
+      "sourcePackage": "seo-content-team",
+      "sourceAgent": "agents/seo-optimizer.md"
+    },
+    {
+      "sourcePackage": "seo-expert",
+      "sourceAgent": "agents/seo-expert.md"
+    },
+    {
+      "sourcePackage": "sg-biz-dev",
+      "sourceAgent": "agents/sg-biz-dev.md"
+    },
+    {
+      "sourcePackage": "sg-finance-tax",
+      "sourceAgent": "agents/sg-finance-tax.md"
+    },
+    {
+      "sourcePackage": "sg-hr-admin-expert",
+      "sourceAgent": "agents/sg-hr-admin-expert.md"
+    },
+    {
+      "sourcePackage": "short-video-editing-coach",
+      "sourceAgent": "agents/short-video-editing-coach.md"
+    },
+    {
+      "sourcePackage": "site-reliability-engineer",
+      "sourceAgent": "agents/site-reliability-engineer.md"
+    },
+    {
+      "sourcePackage": "skill-smith",
+      "sourceAgent": "agents/skill-smith.md"
+    },
+    {
+      "sourcePackage": "skillhub-charity-expert-team",
+      "sourceAgent": "agents/skillhub-icon-designer.md"
+    },
+    {
+      "sourcePackage": "skillhub-charity-expert-team",
+      "sourceAgent": "agents/skillhub-manager.md"
+    },
+    {
+      "sourcePackage": "skillhub-charity-expert-team",
+      "sourceAgent": "agents/skillhub-operation-expert.md"
+    },
+    {
+      "sourcePackage": "skillhub-charity-expert-team",
+      "sourceAgent": "agents/skillhub-ops-expert.md"
+    },
+    {
+      "sourcePackage": "skillhub-charity-expert-team",
+      "sourceAgent": "agents/skillhub-security-tester.md"
+    },
+    {
+      "sourcePackage": "skillhub-charity-expert-team",
+      "sourceAgent": "agents/skillhub-social-value-evaluator.md"
+    },
+    {
+      "sourcePackage": "skillhub-charity-expert-team",
+      "sourceAgent": "agents/skillhub-solution-architect.md"
+    },
+    {
+      "sourcePackage": "smart-stock-analyst",
+      "sourceAgent": "agents/smart-stock-analyst.md"
+    },
+    {
+      "sourcePackage": "smb-compliance",
+      "sourceAgent": "agents/smb-compliance.md"
+    },
+    {
+      "sourcePackage": "smb-finance",
+      "sourceAgent": "agents/smb-finance.md"
+    },
+    {
+      "sourcePackage": "smb-operations",
+      "sourceAgent": "agents/smb-operations.md"
+    },
+    {
+      "sourcePackage": "smb-revenue",
+      "sourceAgent": "agents/smb-revenue.md"
+    },
+    {
+      "sourcePackage": "smb-team",
+      "sourceAgent": "agents/smb-compliance-member.md"
+    },
+    {
+      "sourcePackage": "smb-team",
+      "sourceAgent": "agents/smb-finance-member.md"
+    },
+    {
+      "sourcePackage": "smb-team",
+      "sourceAgent": "agents/smb-ops-member.md"
+    },
+    {
+      "sourcePackage": "smb-team",
+      "sourceAgent": "agents/smb-revenue-member.md"
+    },
+    {
+      "sourcePackage": "smb-team",
+      "sourceAgent": "agents/smb-team-lead.md"
+    },
+    {
+      "sourcePackage": "social-ad-strategist",
+      "sourceAgent": "agents/social-ad-strategist.md"
+    },
+    {
+      "sourcePackage": "social-engagement-team",
+      "sourceAgent": "agents/ai-comment-specialist.md"
+    },
+    {
+      "sourcePackage": "social-engagement-team",
+      "sourceAgent": "agents/brand-monitor.md"
+    },
+    {
+      "sourcePackage": "social-engagement-team",
+      "sourceAgent": "agents/interaction-automator.md"
+    },
+    {
+      "sourcePackage": "social-engagement-team",
+      "sourceAgent": "agents/signal-miner.md"
+    },
+    {
+      "sourcePackage": "social-engagement-team",
+      "sourceAgent": "agents/social-engagement-team-lead.md"
+    },
+    {
+      "sourcePackage": "social-media-strategist",
+      "sourceAgent": "agents/social-media-strategist.md"
+    },
+    {
+      "sourcePackage": "soe",
+      "sourceAgent": "agents/soe.md"
+    },
+    {
+      "sourcePackage": "software-architect",
+      "sourceAgent": "agents/software-architect.md"
+    },
+    {
+      "sourcePackage": "software-company",
+      "sourceAgent": "agents/software-architect.md"
+    },
+    {
+      "sourcePackage": "software-company",
+      "sourceAgent": "agents/software-engineer.md"
+    },
+    {
+      "sourcePackage": "software-company",
+      "sourceAgent": "agents/software-product-manager.md"
+    },
+    {
+      "sourcePackage": "software-company",
+      "sourceAgent": "agents/software-qa-engineer.md"
+    },
+    {
+      "sourcePackage": "software-company",
+      "sourceAgent": "agents/software-team-lead.md"
+    },
+    {
+      "sourcePackage": "solidity-smart-contract-engineer",
+      "sourceAgent": "agents/solidity-smart-contract-engineer.md"
+    },
+    {
+      "sourcePackage": "south-africa-hr-admin",
+      "sourceAgent": "agents/south-africa-hr-admin.md"
+    },
+    {
+      "sourcePackage": "south-africa-strategy-advisor",
+      "sourceAgent": "agents/south-africa-strategy-advisor.md"
+    },
+    {
+      "sourcePackage": "sprint-priority-manager",
+      "sourceAgent": "agents/sprint-priority-manager.md"
+    },
+    {
+      "sourcePackage": "sre-expert",
+      "sourceAgent": "agents/sre-expert.md"
+    },
+    {
+      "sourcePackage": "statement-auditor",
+      "sourceAgent": "agents/statement-auditor.md"
+    },
+    {
+      "sourcePackage": "stock-partner-team",
+      "sourceAgent": "agents/contrarian-investor.md"
+    },
+    {
+      "sourcePackage": "stock-partner-team",
+      "sourceAgent": "agents/fundamental-researcher.md"
+    },
+    {
+      "sourcePackage": "stock-partner-team",
+      "sourceAgent": "agents/industry-strategist.md"
+    },
+    {
+      "sourcePackage": "stock-partner-team",
+      "sourceAgent": "agents/shortterm-surfer.md"
+    },
+    {
+      "sourcePackage": "stock-partner-team",
+      "sourceAgent": "agents/signal-chief.md"
+    },
+    {
+      "sourcePackage": "stock-partner-team",
+      "sourceAgent": "agents/stock-partner-lead.md"
+    },
+    {
+      "sourcePackage": "stock-partner-team",
+      "sourceAgent": "agents/valuation-analyst.md"
+    },
+    {
+      "sourcePackage": "strategy-backtest-expert",
+      "sourceAgent": "agents/strategy-backtest-expert.md"
+    },
+    {
+      "sourcePackage": "studio-operations-manager",
+      "sourceAgent": "agents/studio-operations-manager.md"
+    },
+    {
+      "sourcePackage": "studio-producer",
+      "sourceAgent": "agents/studio-producer.md"
+    },
+    {
+      "sourcePackage": "study-abroad-consultant",
+      "sourceAgent": "agents/study-abroad-consultant.md"
+    },
+    {
+      "sourcePackage": "study-fortune-compass",
+      "sourceAgent": "agents/study-fortune-compass.md"
+    },
+    {
+      "sourcePackage": "study-planner",
+      "sourceAgent": "agents/study-planner.md"
+    },
+    {
+      "sourcePackage": "superpowers-zh",
+      "sourceAgent": "agents/superpowers-zh.md"
+    },
+    {
+      "sourcePackage": "supply-chain-strategist",
+      "sourceAgent": "agents/supply-chain-strategist.md"
+    },
+    {
+      "sourcePackage": "tanyuan-cultural-heritage-expert",
+      "sourceAgent": "agents/tanyuan-cultural-heritage-expert.md"
+    },
+    {
+      "sourcePackage": "tax-compliance-team",
+      "sourceAgent": "agents/compliance-auditor.md"
+    },
+    {
+      "sourcePackage": "tax-compliance-team",
+      "sourceAgent": "agents/financial-reporter.md"
+    },
+    {
+      "sourcePackage": "tax-compliance-team",
+      "sourceAgent": "agents/invoice-processor.md"
+    },
+    {
+      "sourcePackage": "tax-compliance-team",
+      "sourceAgent": "agents/tax-compliance-team-lead.md"
+    },
+    {
+      "sourcePackage": "tax-compliance-team",
+      "sourceAgent": "agents/tax-filing-specialist.md"
+    },
+    {
+      "sourcePackage": "tax-compliance-team",
+      "sourceAgent": "agents/voucher-accountant.md"
+    },
+    {
+      "sourcePackage": "tc-chengxin-travel-expert",
+      "sourceAgent": "agents/tongcheng-travel-advisor.md"
+    },
+    {
+      "sourcePackage": "tc-sec",
+      "sourceAgent": "agents/tc-sec.md"
+    },
+    {
+      "sourcePackage": "tdx-stock-diagnostician",
+      "sourceAgent": "agents/tdx-stock-diagnostician.md"
+    },
+    {
+      "sourcePackage": "tdx-stock-hunter",
+      "sourceAgent": "agents/tdx-stock-hunter.md"
+    },
+    {
+      "sourcePackage": "tdx-value-assessor",
+      "sourceAgent": "agents/tdx-value-assessor.md"
+    },
+    {
+      "sourcePackage": "technical-artist",
+      "sourceAgent": "agents/technical-artist.md"
+    },
+    {
+      "sourcePackage": "technical-documentation-engineer",
+      "sourceAgent": "agents/technical-documentation-engineer.md"
+    },
+    {
+      "sourcePackage": "tencent-charity-expert",
+      "sourceAgent": "agents/TencentCharityExpert_zh.md"
+    },
+    {
+      "sourcePackage": "tencent-charity-expert",
+      "sourceAgent": "agents/tencent-charity-expert.md"
+    },
+    {
+      "sourcePackage": "tencent-cloud-quote-assistant",
+      "sourceAgent": "agents/price-inquiry-assistant.md"
+    },
+    {
+      "sourcePackage": "tencent-rtc-expert",
+      "sourceAgent": "agents/tencent-rtc-expert.md"
+    },
+    {
+      "sourcePackage": "tencent-security-expert",
+      "sourceAgent": "agents/TencentSecurityExpert_zh.md"
+    },
+    {
+      "sourcePackage": "tencent-security-expert",
+      "sourceAgent": "agents/tencent-security-expert.md"
+    },
+    {
+      "sourcePackage": "tencentcloud-api",
+      "sourceAgent": "agents/tencentcloud-api.md"
+    },
+    {
+      "sourcePackage": "terminal-integration-expert",
+      "sourceAgent": "agents/terminal-integration-expert.md"
+    },
+    {
+      "sourcePackage": "terminal-veteran",
+      "sourceAgent": "agents/terminal-veteran.md"
+    },
+    {
+      "sourcePackage": "test-results-analyst",
+      "sourceAgent": "agents/test-results-analyst.md"
+    },
+    {
+      "sourcePackage": "thai-marketing-creative",
+      "sourceAgent": "agents/thai-marketing-creative.md"
+    },
+    {
+      "sourcePackage": "thailand-hr-admin",
+      "sourceAgent": "agents/thailand-hr-admin.md"
+    },
+    {
+      "sourcePackage": "thesis-writing-mentor",
+      "sourceAgent": "agents/thesis-writing-mentor.md"
+    },
+    {
+      "sourcePackage": "threat-detection-engineer",
+      "sourceAgent": "agents/threat-detection-engineer.md"
+    },
+    {
+      "sourcePackage": "tianyu-account-guardian",
+      "sourceAgent": "agents/tianyu-account-guardian.md"
+    },
+    {
+      "sourcePackage": "tianyu-marketing-guardian",
+      "sourceAgent": "agents/tianyu-marketing-guardian.md"
+    },
+    {
+      "sourcePackage": "tiderider-sentiment",
+      "sourceAgent": "agents/tiderider-analyst.md"
+    },
+    {
+      "sourcePackage": "tietu-toutiao",
+      "sourceAgent": "agents/tietu-toutiao.md"
+    },
+    {
+      "sourcePackage": "tik-tok-strategist",
+      "sourceAgent": "agents/tik-tok-strategist.md"
+    },
+    {
+      "sourcePackage": "tool-evaluation-expert",
+      "sourceAgent": "agents/tool-evaluation-expert.md"
+    },
+    {
+      "sourcePackage": "topic-evaluator",
+      "sourceAgent": "agents/topic-evaluator.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/aggressive-risk-analyst.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/bear-researcher.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/bull-researcher.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/conservative-risk-analyst.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/fundamentals-analyst.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/market-analyst.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/neutral-risk-analyst.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/news-analyst.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/research-manager.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/risk-manager.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/sentiment-analyst.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/trader.md"
+    },
+    {
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/trading-team-lead.md"
+    },
+    {
+      "sourcePackage": "trend-hunter",
+      "sourceAgent": "agents/trend-hunter.md"
+    },
+    {
+      "sourcePackage": "trend-researcher",
+      "sourceAgent": "agents/trend-researcher.md"
+    },
+    {
+      "sourcePackage": "tripstar-agent",
+      "sourceAgent": "agents/trip-planner.md"
+    },
+    {
+      "sourcePackage": "twitter-operations-expert",
+      "sourceAgent": "agents/twitter-operations-expert.md"
+    },
+    {
+      "sourcePackage": "uae-marketing-advisor",
+      "sourceAgent": "agents/uae-marketing-advisor.md"
+    },
+    {
+      "sourcePackage": "uae-public-affairs",
+      "sourceAgent": "agents/uae-public-affairs.md"
+    },
+    {
+      "sourcePackage": "uae-strategic-advisor",
+      "sourceAgent": "agents/uae-strategic-advisor.md"
+    },
+    {
+      "sourcePackage": "ui-designer",
+      "sourceAgent": "agents/ui-designer.md"
+    },
+    {
+      "sourcePackage": "unity-architect",
+      "sourceAgent": "agents/unity-architect.md"
+    },
+    {
+      "sourcePackage": "unity-editor-tool-developer",
+      "sourceAgent": "agents/unity-editor-tool-developer.md"
+    },
+    {
+      "sourcePackage": "unity-multiplayer-engineer",
+      "sourceAgent": "agents/unity-multiplayer-engineer.md"
+    },
+    {
+      "sourcePackage": "unity-shader-graph-artist",
+      "sourceAgent": "agents/unity-shader-graph-artist.md"
+    },
+    {
+      "sourcePackage": "unreal-multiplayer-architect",
+      "sourceAgent": "agents/unreal-multiplayer-architect.md"
+    },
+    {
+      "sourcePackage": "unreal-system-engineer",
+      "sourceAgent": "agents/unreal-system-engineer.md"
+    },
+    {
+      "sourcePackage": "unreal-technical-artist",
+      "sourceAgent": "agents/unreal-technical-artist.md"
+    },
+    {
+      "sourcePackage": "unreal-world-builder",
+      "sourceAgent": "agents/unreal-world-builder.md"
+    },
+    {
+      "sourcePackage": "user-experience-architect",
+      "sourceAgent": "agents/user-experience-architect.md"
+    },
+    {
+      "sourcePackage": "user-experience-researcher",
+      "sourceAgent": "agents/user-experience-researcher.md"
+    },
+    {
+      "sourcePackage": "uupt-delivery",
+      "sourceAgent": "agents/uupt-delivery.md"
+    },
+    {
+      "sourcePackage": "valuation-reviewer",
+      "sourceAgent": "agents/valuation-reviewer.md"
+    },
+    {
+      "sourcePackage": "vibeknow-design-video",
+      "sourceAgent": "agents/design-artist.md"
+    },
+    {
+      "sourcePackage": "vibeknow-handdraw",
+      "sourceAgent": "agents/handdraw-artist.md"
+    },
+    {
+      "sourcePackage": "vibeknow-ppt-explain",
+      "sourceAgent": "agents/ppt-explainer.md"
+    },
+    {
+      "sourcePackage": "video-dissection",
+      "sourceAgent": "agents/script-analyst.md"
+    },
+    {
+      "sourcePackage": "video-dissection",
+      "sourceAgent": "agents/video-dissection-team-lead.md"
+    },
+    {
+      "sourcePackage": "video-dissection",
+      "sourceAgent": "agents/video-extractor.md"
+    },
+    {
+      "sourcePackage": "video-gen-team",
+      "sourceAgent": "agents/ling-planner.md"
+    },
+    {
+      "sourcePackage": "video-gen-team",
+      "sourceAgent": "agents/ling-producer.md"
+    },
+    {
+      "sourcePackage": "video-gen-team",
+      "sourceAgent": "agents/ling-reader.md"
+    },
+    {
+      "sourcePackage": "video-gen-team",
+      "sourceAgent": "agents/video-gen-team-lead.md"
+    },
+    {
+      "sourcePackage": "vietnam-finance-tax-expert",
+      "sourceAgent": "agents/vietnam-finance-tax-expert.md"
+    },
+    {
+      "sourcePackage": "vietnam-public-affairs",
+      "sourceAgent": "agents/vietnam-public-affairs.md"
+    },
+    {
+      "sourcePackage": "viral-topic-master",
+      "sourceAgent": "agents/viral-topic-master.md"
+    },
+    {
+      "sourcePackage": "vision-os-spatial-engineer",
+      "sourceAgent": "agents/vision-os-spatial-engineer.md"
+    },
+    {
+      "sourcePackage": "visual-storytelling-expert",
+      "sourceAgent": "agents/visual-storytelling-expert.md"
+    },
+    {
+      "sourcePackage": "vocab-craft-expert",
+      "sourceAgent": "agents/vocab-coach.md"
+    },
+    {
+      "sourcePackage": "we-chat-mini-program-developer",
+      "sourceAgent": "agents/we-chat-mini-program-developer.md"
+    },
+    {
+      "sourcePackage": "wealth-management",
+      "sourceAgent": "agents/wealth-management-expert.md"
+    },
+    {
+      "sourcePackage": "webapp-testing",
+      "sourceAgent": "agents/webapp-testing-expert.md"
+    },
+    {
+      "sourcePackage": "wechat-channels-strategist",
+      "sourceAgent": "agents/wechat-channels-strategist.md"
+    },
+    {
+      "sourcePackage": "wechat-official-account-expert",
+      "sourceAgent": "agents/wechat-official-account-expert.md"
+    },
+    {
+      "sourcePackage": "weibo-strategist",
+      "sourceAgent": "agents/weibo-strategist.md"
+    },
+    {
+      "sourcePackage": "well-arch-expert",
+      "sourceAgent": "agents/well-arch-expert.md"
+    },
+    {
+      "sourcePackage": "workbuddy-universal-mentor",
+      "sourceAgent": "agents/workbuddy-universal-mentor.md"
+    },
+    {
+      "sourcePackage": "workflow-optimization-expert",
+      "sourceAgent": "agents/workflow-optimization-expert.md"
+    },
+    {
+      "sourcePackage": "workspace-builder",
+      "sourceAgent": "agents/workspace-builder.md"
+    },
+    {
+      "sourcePackage": "worldcup-buddy",
+      "sourceAgent": "agents/worldcup-buddy.md"
+    },
+    {
+      "sourcePackage": "xiaofa-litigation-assistant",
+      "sourceAgent": "agents/xiaofa-litigation-assistant.md"
+    },
+    {
+      "sourcePackage": "xiaohongshu-operations-expert",
+      "sourceAgent": "agents/xiaohongshu-operations-expert.md"
+    },
+    {
+      "sourcePackage": "xr-cockpit-interaction-expert",
+      "sourceAgent": "agents/xr-cockpit-interaction-expert.md"
+    },
+    {
+      "sourcePackage": "xr-immersive-developer",
+      "sourceAgent": "agents/xr-immersive-developer.md"
+    },
+    {
+      "sourcePackage": "xr-interface-architect",
+      "sourceAgent": "agents/xr-interface-architect.md"
+    },
+    {
+      "sourcePackage": "yahoo-finance-cli",
+      "sourceAgent": "agents/yahoo-finance-cli.md"
+    },
+    {
+      "sourcePackage": "yunzhi-qa-assistant",
+      "sourceAgent": "agents/yunzhi-qa-assistant.md"
+    },
+    {
+      "sourcePackage": "zero-knowledge-proof-admin",
+      "sourceAgent": "agents/zero-knowledge-proof-admin.md"
+    },
+    {
+      "sourcePackage": "zhihu-strategist",
+      "sourceAgent": "agents/zhihu-strategist.md"
+    }
+  ]
+}
