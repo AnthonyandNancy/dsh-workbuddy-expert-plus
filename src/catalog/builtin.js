@@ -29,8 +29,21 @@ export function createBundledCatalog({ root = defaultBundledRoot(), pluginVersio
   async function loadManifest() {
     if (manifestPromise === undefined) {
       manifestPromise = (async () => {
-        const raw = JSON.parse(await readFile(join(root, 'manifest.json'), 'utf8'))
-        return normalizeManifest(raw)
+        const manifestText = await readFile(join(root, 'manifest.json'), 'utf8')
+        // The manifest checksum is the package-level integrity witness; it
+        // catches any direct edit to ids, file lists or hashes without reading
+        // every prompt on first paint.
+        try {
+          const expected = (await readFile(join(root, 'catalog.sha256'), 'utf8')).trim()
+          if (expected !== sha256(Buffer.from(manifestText, 'utf8'))) {
+            throw Object.assign(new Error('manifest.json does not match catalog.sha256'), { code: 'MANIFEST_HASH_MISMATCH' })
+          }
+        } catch (error) {
+          if (error?.code !== 'ENOENT') throw error
+          // A test fixture may intentionally omit catalog.sha256; production
+          // packages always ship it.
+        }
+        return normalizeManifest(JSON.parse(manifestText))
       })().catch((error) => {
         manifestPromise = undefined
         throw error
@@ -52,19 +65,10 @@ export function createBundledCatalog({ root = defaultBundledRoot(), pluginVersio
               pluginVersion: manifest.pluginVersion || pluginVersion,
               sourceRevision: manifest.sourceRevision,
             })
-            // Verify every declared file before exposing the card. A bad hash
-            // must not appear as an installable expert and then fail only when
-            // the user clicks install.
-            for (const declared of expert.files) {
-              const bytes = await resolver.readDeclared(expert, declared.path)
-              if (sha256(bytes) !== declared.sha256) {
-                throw Object.assign(new Error(`${declared.path}: hash mismatch`), { code: 'ASSET_HASH_MISMATCH' })
-              }
-            }
             // The aggregate hash binds the declared file list to this source
-            // revision. A manifest can have individually valid files but a
-            // forged/stale aggregate; install would otherwise copy a wrong
-            // fingerprint into ownership metadata.
+            // revision. This detects a forged/stale manifest entry without
+            // reading any prompt on first paint; actual file bytes are checked
+            // lazily on read/install, where a mismatch is still fail-closed.
             const orderedFiles = [...expert.files].sort((a, b) => a.path.localeCompare(b.path))
             const aggregate = sha256(Buffer.from(JSON.stringify({ revision: expert.sourceRevision, files: orderedFiles }), 'utf8'))
             if (aggregate !== expert.contentSha256) {

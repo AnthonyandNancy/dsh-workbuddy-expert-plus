@@ -10,8 +10,8 @@ const source = readFileSync(join(root, 'client', 'client.js'), 'utf8')
 
 function bootClient() {
   const seats = new Map()
+  const rendered = new Map()
   const tags = []
-  const listeners = new Map()
   const document = {
     createElement: () => ({
       dataset: {}, textContent: '',
@@ -19,8 +19,6 @@ function bootClient() {
     }),
     querySelector: () => null,
     head: { appendChild: (tag) => tags.push(tag) },
-    addEventListener(name, fn) { listeners.set(name, fn) },
-    removeEventListener(name) { listeners.delete(name) },
   }
   const sandbox = {
     window: {
@@ -55,20 +53,30 @@ function bootClient() {
         const off = setup()
         return () => { seats.delete(name); if (typeof off === 'function') off() }
       },
-      register() { return () => {} },
+      register(definition, component) {
+        rendered.set(definition.name, component)
+        return () => rendered.delete(definition.name)
+      },
     },
   }
-  return { module, ctx, seats, tags, listeners, sandbox }
+  return { module, ctx, seats, rendered, tags, sandbox }
 }
 
 test('repeated apply/dispose leaves no slot registrations or style tags', () => {
   const app = bootClient()
   const first = app.module.apply(app.ctx)
-  assert.ok(app.seats.has('settings.section'))
-  assert.ok(app.seats.has('sidebar.footer.action'))
-  assert.ok(app.seats.has('shell.overlay'))
+  for (const seat of ['settings.section', 'sidebar.footer.action', 'shell.overlay']) {
+    assert.ok(app.seats.has(seat), `${seat} setup ran`)
+    assert.ok(app.rendered.has(seat), `${seat} component registered`)
+  }
+  // Render every registered seat and the market page: no throw, real tree.
+  for (const [seat, component] of app.rendered) {
+    const tree = component({ t: (key) => key, view: 'page', form: undefined })
+    assert.ok(tree !== undefined && typeof tree === 'object', `${seat} renders a tree`)
+  }
   first()
   assert.equal(app.seats.size, 0)
+  assert.equal(app.rendered.size, 0)
   assert.equal(app.tags.length, 0)
 
   const second = app.module.apply(app.ctx)
