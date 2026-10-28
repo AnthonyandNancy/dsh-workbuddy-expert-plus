@@ -324,3 +324,34 @@ test('the composer expert seat is hidden only in Bot mode', async () => {
   assert.equal(botView.tree()?.type, module.ExpertSelector,
     'switching to Agent restores the picker without remounting the plugin')
 })
+
+test('leaving Bot mode closes an open market overlay and does not reopen it', async () => {
+  const app = surfaceHarness(botOnly, 'agent')
+  const view = renderComponent(module.BotMarketOverlayHost, {
+    t: (key) => key,
+    localeId: 'zh',
+    surfaceStore: app.store,
+  })
+  assert.equal(view.tree(), null, 'the dialog starts closed')
+
+  module.openBotMarket()
+  await view.flush()
+  assert.equal(view.tree()?.type, module.BotMarketOverlay,
+    'opening in Bot mode mounts the dialog')
+
+  await app.transition(agentOnly)
+  await app.storageTransition('agent')
+  await view.flush()
+  assert.equal(view.tree(), null, 'leaving Bot mode unmounts the dialog immediately')
+
+  await app.transition(botOnly)
+  await view.flush()
+  assert.equal(view.tree(), null,
+    'returning to Bot mode does not resurrect a dialog the user did not reopen')
+
+  module.openBotMarket()
+  await view.flush()
+  assert.equal(view.tree()?.type, module.BotMarketOverlay,
+    'the launcher can open it again deliberately')
+  module.closeBotMarket()
+})

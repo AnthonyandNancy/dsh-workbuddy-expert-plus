@@ -2789,10 +2789,24 @@ function useBotMarketOpen () {
   return state[0]
 }
 
-/** Overlay cell: render the dialog only while the shared store is open. */
+/** Overlay cell: the dialog exists only while Bot mode is current and open. */
 function BotMarketOverlayHost (props) {
   var open = useBotMarketOpen()
-  if (!open) return null
+  var store = props.surfaceStore
+  var surfaceState = React.useState(store !== undefined && store !== null ? store.get() : 'unknown')
+  var surface = surfaceState[0]
+  var setSurface = surfaceState[1]
+  React.useEffect(function () {
+    if (store === undefined || store === null || typeof store.subscribe !== 'function') return undefined
+    setSurface(store.get())
+    return store.subscribe(function (next) {
+      setSurface(next)
+      // Leaving Bot mode must also close the module-scope flag: otherwise a
+      // later Bot visit would remount a dialog the user never reopened.
+      if (next !== 'bot') closeBotMarket()
+    })
+  }, [store])
+  if (!open || surface !== 'bot') return null
   return el(BotMarketOverlay, {
     t: props.t,
     localeId: props.localeId,
@@ -3145,7 +3159,8 @@ function apply (ctx) {
     }, function () {
       return el(BotMarketOverlayHost, {
         t: t,
-        localeId: getLocale()
+        localeId: getLocale(),
+        surfaceStore: surfaceStore
       })
     })
   }))
