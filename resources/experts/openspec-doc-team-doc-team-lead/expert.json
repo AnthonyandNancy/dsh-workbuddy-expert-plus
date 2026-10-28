@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "openspec-doc-team-doc-team-lead",
+  "source": "bundled",
+  "sourcePackage": "openspec-doc-team",
+  "sourceAgent": "agents/doc-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "专业文档生成团队",
+  "profession": "专业文档生成团队",
+  "categoryId": "10-ProjectQuality",
+  "description": "企业级长文档生成，4角色协作完成深度调研、大纲规划、内容撰写与合规审核全流程",
+  "tags": [
+    "文档团队",
+    "规格文档",
+    "文档审计"
+  ],
+  "quickPrompts": [
+    "帮我生成一份建筑施工图设计说明",
+    "将需求转化为完整的规格说明文档",
+    "搭建文档团队协作和质量审核流程"
+  ],
+  "roleFile": "openspec-doc-team-doc-team-lead/role.md",
+  "avatarFile": "openspec-doc-team-doc-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "247276919c8e47d1f968a0ce1db33028b029a9f6b04b7bbfe42598daf015fe07",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "11dacc50a8d4c0c57fe52acbc00ce1ae784b387557e4c86a0cf7b8de783dfb33"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f445267d7fa5ab237cb502cc3896e5ac077d11c93203dea6196a6cab098f0ec3"
+    }
+  ]
+}

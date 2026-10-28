@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "product-management-product-management-expert",
+  "source": "bundled",
+  "sourcePackage": "product-management",
+  "sourceAgent": "agents/product-management-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "产品通",
+  "profession": "产品管理专家",
+  "categoryId": "01-ProductDesign",
+  "description": "产品管理工具集：功能规格编写、路线图规划、利益相关者沟通、用户研究综合、竞品分析和指标追踪",
+  "tags": [
+    "产品管理",
+    "需求规划",
+    "迭代管理"
+  ],
+  "quickPrompts": [
+    "帮我写一份新功能的产品规格文档",
+    "制定产品路线图和迭代规划",
+    "进行竞品分析和用户研究综合"
+  ],
+  "roleFile": "product-management-product-management-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9288e31b81ce63b90da69eec78d898295922ed641c3a03fe4860b9debc8f3803",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "6be3bd79c8912840e118f99357d49fd28af649b9ff6b748031c1e7dfc369207f"
+    }
+  ]
+}

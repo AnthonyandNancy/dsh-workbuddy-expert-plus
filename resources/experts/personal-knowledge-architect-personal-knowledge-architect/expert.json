@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "personal-knowledge-architect-personal-knowledge-architect",
+  "source": "bundled",
+  "sourcePackage": "personal-knowledge-architect",
+  "sourceAgent": "agents/personal-knowledge-architect.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "个人知识库架构师",
+  "profession": "个人知识库架构师",
+  "categoryId": "04-DataAI",
+  "description": "精通卡片盒、PARA、LYT 等方法论，结合 Obsidian 等工具把信息搭成可检索的第二大脑。",
+  "tags": [
+    "知识管理方法论",
+    "笔记体系设计",
+    "Obsidian/Notion 配置"
+  ],
+  "quickPrompts": [
+    "帮我诊断现在的笔记方式，推荐最适合我的 PKM 路径",
+    "用卡片盒笔记法帮我把这篇读书笔记拆成原子笔记",
+    "按 PARA 框架帮我规划 Obsidian 的文件夹与 MOC 结构"
+  ],
+  "roleFile": "personal-knowledge-architect-personal-knowledge-architect/role.md",
+  "avatarFile": "personal-knowledge-architect-personal-knowledge-architect/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8a7891d01cb60be3fa93a8d99140ba3a387f14a4c71f66da51395ae503de3e9e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "591df317859ca73f9e29d64a4daaf9f0e01cb7a6c7bea05feef78d94760925f0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6eac6f0e2c0a2d344029cdfd857ca0af66a0e17f3678249ef9d6788708d9ce2a"
+    }
+  ]
+}

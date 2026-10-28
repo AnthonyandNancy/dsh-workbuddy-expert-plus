@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fbsir-super-independent-board-fbsir-super-independent-board",
+  "source": "bundled",
+  "sourcePackage": "fbsir-super-independent-board",
+  "sourceAgent": "agents/fbsir-super-independent-board.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "福帮手",
+  "profession": "超级独董会",
+  "categoryId": "12-IndustryConsultant",
+  "description": "单一AI独立决策审议官，非法定董事会；挑战偏见、核验证据，交付可执行、可复审的决策产物。",
+  "tags": [
+    "独立审议",
+    "重大决策",
+    "决策交付"
+  ],
+  "quickPrompts": [
+    "我正在面对一个重要决定。请直接给我独立判断、最强反方、证据缺口、成立与失效条件，以及一个可逆的下一步；不要先给长问卷。",
+    "请审查这份材料，分开事实、推断和未知，指出什么证据会推翻当前建议，并做成一页决策图。",
+    "我在方案A与B之间犹豫。请选择最合适的决策方式，比较不可逆风险、可验证实验和停止条件，再给我一个行动包。"
+  ],
+  "roleFile": "fbsir-super-independent-board-fbsir-super-independent-board/role.md",
+  "avatarFile": "fbsir-super-independent-board-fbsir-super-independent-board/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ceace6124020c9f1c5a5766d5e595a474efeea4f63c6023e6bcb355e1fc771df",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "1e11ba2ee25f8d9a64d7465fc23f7015ac635832f114cee8f3e6038e3fbabcc1"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c15e24fb8544d8ffdfb4751c010962a776ad4b9690d4ba780be38a756b986feb"
+    }
+  ]
+}

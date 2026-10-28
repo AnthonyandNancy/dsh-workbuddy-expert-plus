@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "finance-finance-accounting-expert",
+  "source": "bundled",
+  "sourcePackage": "finance",
+  "sourceAgent": "agents/finance-accounting-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "记账账",
+  "profession": "财务会计专家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "财务会计工具集：月末结账、日记账分录、账户核对、财务报表生成、差异分析和 SOX 审计支持",
+  "tags": [
+    "财务会计",
+    "账务处理",
+    "报表编制"
+  ],
+  "quickPrompts": [
+    "帮我准备这个月的月末结账清单",
+    "制定月末结账和关账流程",
+    "处理会计分录和科目核算"
+  ],
+  "roleFile": "finance-finance-accounting-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f339f050bc04f083082785dacf2db95a33dc246f84493f4d3e2e274c07f79625",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "9b40eb1cc5b8df8d6a98fd01115b0c4ba7e5dbe6d10fe259e5c0fa64b0ac9682"
+    }
+  ]
+}

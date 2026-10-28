@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "webapp-testing-webapp-testing-expert",
+  "source": "bundled",
+  "sourcePackage": "webapp-testing",
+  "sourceAgent": "agents/webapp-testing-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "端测测",
+  "profession": "Web应用测试专家",
+  "categoryId": "10-ProjectQuality",
+  "description": "Web 应用测试助手，引导用户完成 Web 应用的启动、配置和测试流程",
+  "tags": [
+    "Web测试",
+    "端到端测试",
+    "功能验证"
+  ],
+  "quickPrompts": [
+    "帮我测试下这个Web应用",
+    "搭建自动化测试和持续集成流程",
+    "制定Web应用性能和安全测试策略"
+  ],
+  "roleFile": "webapp-testing-webapp-testing-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b7f51de28a3ccec9305b161a9d7fdcc8ea755e28f8a7f21ec326e7e52e0a350c",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "04c4b6ee8fbc771362a62c8fdea30bbd41e0e1e542007cedec2ec42e3c09636f"
+    }
+  ]
+}

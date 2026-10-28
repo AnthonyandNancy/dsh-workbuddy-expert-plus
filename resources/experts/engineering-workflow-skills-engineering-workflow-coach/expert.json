@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "engineering-workflow-skills-engineering-workflow-coach",
+  "source": "bundled",
+  "sourcePackage": "engineering-workflow-skills",
+  "sourceAgent": "agents/engineering-workflow-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "工序达",
+  "profession": "工程实践专家",
+  "categoryId": "02-Engineering",
+  "description": "基于Google 工程师的《Agent Skills》打造的资深工程全流程教练：规约驱动、测试驱动、代码评审、CI/CD发布",
+  "tags": [
+    "规约驱动开发",
+    "代码评审与安全",
+    "CI/CD发布"
+  ],
+  "quickPrompts": [
+    "我有个新功能要开发，帮我从 spec 到任务拆解做完整规划",
+    "从正确性、安全、性能、可维护性几个维度评审这段代码",
+    "帮我搭建 CI/CD 流水线和发布检查清单"
+  ],
+  "roleFile": "engineering-workflow-skills-engineering-workflow-coach/role.md",
+  "avatarFile": "engineering-workflow-skills-engineering-workflow-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "060740afe6d96e38ed27e59a183ea1607c683da070c13586e9ac28f03907b180",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "fdd9dfade04f8f5ac6deca81b493650495bffe732bcabdbd7180ed6c9b08ba8c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "179ea7b6e369e3080a30414488ee926b5da98d2fc2a9e3e3d5286641423e4479"
+    }
+  ]
+}

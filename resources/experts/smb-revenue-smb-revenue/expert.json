@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "smb-revenue-smb-revenue",
+  "source": "bundled",
+  "sourcePackage": "smb-revenue",
+  "sourceAgent": "agents/smb-revenue.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "甄客来",
+  "profession": "营收增长师",
+  "categoryId": "07-SalesCommerce",
+  "description": "小企业营收增长师，从线索打分到内容策略再到营销活动，一条龙驱动营收增长",
+  "tags": [
+    "线索管理",
+    "内容策略",
+    "营销活动"
+  ],
+  "quickPrompts": [
+    "今天进来的线索打个分排个序，生成电话清单。",
+    "根据销售数据，做下个月的内容策略和发布日历。",
+    "策划并执行一轮新客获取的营销活动。"
+  ],
+  "roleFile": "smb-revenue-smb-revenue/role.md",
+  "avatarFile": "smb-revenue-smb-revenue/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "4c88723fb7af29593c44b72cb0906ed206a9fde94da909e064fd5c52041ad2fd",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "16b48a3672fab2c25a7c4dd11765b47f089141431406d9aa78312f8c7d3a498c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ed948ec9e4e642bac1fa74663ea23781ac3036aa8a939f98db05bd4a51742c64"
+    }
+  ]
+}

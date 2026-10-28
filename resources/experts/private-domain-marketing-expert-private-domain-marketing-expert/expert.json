@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "private-domain-marketing-expert-private-domain-marketing-expert",
+  "source": "bundled",
+  "sourcePackage": "private-domain-marketing-expert",
+  "sourceAgent": "agents/private-domain-marketing-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "司玉琦",
+  "profession": "私域营销专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "深谙私域运营增长，盘活现有数据资源、洞察营销机会、实现业绩增长",
+  "tags": [
+    "私域运营",
+    "营销自动化",
+    "会员体系"
+  ],
+  "quickPrompts": [
+    "帮我诊断一下现有的私域存量用户盘子",
+    "为我的会员体系设计分层运营方案",
+    "设计一条沉默用户唤醒的营销自动化旅程"
+  ],
+  "roleFile": "private-domain-marketing-expert-private-domain-marketing-expert/role.md",
+  "avatarFile": "private-domain-marketing-expert-private-domain-marketing-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "afbfa47b77a16c91246ffec231e3ca142ed907a23e28aaf9d157daa1a2d8ca9b",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "3b6fe31ffcd4fe3f6b4c5a967867eac92fd725d63ea8b550e82dfe2405d5ca73"
+    },
+    {
+      "path": "role.md",
+      "sha256": "95905048804c28532c482c4156a3851be7e4e597c9b0552cfa63485cb8d2137a"
+    }
+  ]
+}

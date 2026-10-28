@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "mvp-dev-expert-team-mvp-dev-expert-team-team-lead",
+  "source": "bundled",
+  "sourcePackage": "mvp-dev-expert-team",
+  "sourceAgent": "agents/mvp-dev-expert-team-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "MVP开发专家团",
+  "profession": "MVP开发专家团",
+  "categoryId": "02-Engineering",
+  "description": "说出你的想法，8位专家从调研、设计、编码、测试到部署全流程协作，帮你快速开发MVP产品",
+  "tags": [
+    "MVP开发",
+    "全栈开发",
+    "快速原型"
+  ],
+  "quickPrompts": [
+    "我想从零做一个团队协作工具",
+    "帮我开发一个电商小程序",
+    "我有个产品想法，帮我做成MVP"
+  ],
+  "roleFile": "mvp-dev-expert-team-mvp-dev-expert-team-team-lead/role.md",
+  "avatarFile": "mvp-dev-expert-team-mvp-dev-expert-team-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "31aee2d3be33118dccab5afa3ee8728a0f026e086f6367af7027e18a8244b39f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b54f9ba3215f51b74228d50b86197a0f913c5ff15b1d1e24ec6ba986168b6000"
+    },
+    {
+      "path": "role.md",
+      "sha256": "49eb3115136434cac65c8138a220b033014e5a173811e709686703cca9252297"
+    }
+  ]
+}

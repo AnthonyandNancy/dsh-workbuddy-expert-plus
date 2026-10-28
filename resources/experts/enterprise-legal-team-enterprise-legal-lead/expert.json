@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "id": "enterprise-legal-team-enterprise-legal-lead",
+  "source": "bundled",
+  "sourcePackage": "enterprise-legal-team",
+  "sourceAgent": "agents/enterprise-legal-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "企业法务专家团",
+  "profession": "企业法务专家团",
+  "categoryId": "11-SecurityCompliance",
+  "description": "面向企业法务的多角色专家团，覆盖合同、交易、隐私、产品、监管、AI 治理、雇佣与知识产权分诊。",
+  "tags": [
+    "企业法务",
+    "合同与交易",
+    "合规分诊"
+  ],
+  "quickPrompts": [
+    "帮我分诊这个跨职能法律问题，并交给合适的法务专家分析",
+    "从合同、隐私、AI 治理和知识产权角度审查这个 AI 供应商交易",
+    "评估这个产品发布的法务、隐私、监管和营销声明风险"
+  ],
+  "roleFile": "enterprise-legal-team-enterprise-legal-lead/role.md",
+  "avatarFile": "enterprise-legal-team-enterprise-legal-lead/avatar.png",
+  "skills": [
+    "china-compliance-toolkit",
+    "china-legal-research"
+  ],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2c6d7d9df0101522f3feea74f894f45f14e926c4a5063e18a6ed6a3e7af560fc",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "fd102fabc7249b5ca108089b3602c4aa32eba72cad41ad41c983010021e5dbd0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "bda8f35a4bfe9a43b0bb97da316e19700da9fd293d16993c7f24ffd94d21d3c1"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/calculation-formulas.md",
+      "sha256": "8a4797e737f2acc4be9f329f790374d1e58753c3c27a6e63161c4eab333a0525"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/clause-redraft-playbook.md",
+      "sha256": "19e2aec4739d1a70e60347f278eb713e2fc2407ef3a55e773e5d85c74b809482"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/contract-type-guides.md",
+      "sha256": "a8f05fc99d798fe5462dfb37699598a2476e84ca0e23beaf5ad8a9bdc5434abe"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/document-skeletons.md",
+      "sha256": "6fa3ccd0db156c55ce20f267ae703765ce24fd12bee6016abe4bb1491596c4a9"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/labor-compensation-output-template.md",
+      "sha256": "10e8c82433f7afeaa02a4bade51bdc3cb4c83078b514d2f751a54faa187bfc53"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/labor-dispute-scenarios.md",
+      "sha256": "53abc693c50d71fc7c62dc30a8358244e904b38915bea43feed73f4d551377a5"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/litigation-worth-it-template.md",
+      "sha256": "585db88e7b434ea9823c6cdd43d12abea1132ef987e5747c066f54accb90e89b"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/output-acceptance-criteria.md",
+      "sha256": "6516d6d395c00e80da65e53953d2c762840b245f7224ebb5f9406afa09d55ba4"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/pre-litigation-decision-pack.md",
+      "sha256": "7f349acc3092203753fdd3f3c5470aed59ea07f9158329d61f5a091de927afc6"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/privacy-and-trust.md",
+      "sha256": "05f77129138c2dba6e3d6219a45161ade06ab636651c69ba355a45681080a710"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/risk-patterns.md",
+      "sha256": "6ca6610d40b486ac2c3d47daab806a82369974065105bd811eb77d8f739e7c9d"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/risk-scan-examples.md",
+      "sha256": "747d52a9659d4c9e6f2677c7522410a3196a836ce7097ea3319ccf727f2c94c2"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/test-cases.md",
+      "sha256": "be6b72d5a1d75eddd0aa74203b10537988146913841eaf82aa28608395770f83"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/test-run-round1.md",
+      "sha256": "c1ad4c8af4094777331e485aa1facbed958b180af9780a094ad0723f67ef1f70"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/test-run-round2.md",
+      "sha256": "b60ae0d43c0f9a0bd1a179012dcc5c3d1dc400910d766caebfa7db347d5a805e"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/test-run-round3.md",
+      "sha256": "39cac3211f8b56226ede31714d3b7e64dd18b201533b0335c06ddc2c6e868ae2"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/SKILL.md",
+      "sha256": "6cef30196f68e3d700302cbc7075f9974a21272e9a3766d9e2690b0f8e111399"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/china-contract-review/LICENSE.txt",
+      "sha256": "e17c2ebfc6fd181e3a81514592e597ac7c753c3494ea40482ae7e21c3c3322df"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/china-contract-review/SKILL.md",
+      "sha256": "f46d5f73fc7c6270d47341f4bcc0020460788b33802d7ab07a00139f646bdb52"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/china-tax-law/references/compliance-checklist.md",
+      "sha256": "9aae0796e1c0b4a3a19a8a149480dfb3d563fc57500b2f23d4af681b7e977546"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/china-tax-law/references/tax-rates.md",
+      "sha256": "ed4d4b26981dfcbf86e0061fce6dcd7e3a323a1a5a221c08d31fa1b263839059"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/china-tax-law/SKILL.md",
+      "sha256": "263277a0e4a3c5ee6d20b71113a0e3bd7953d5b7bf2f54971db6cd46586d3d6c"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/legal-doc-writer/references/doc-templates.md",
+      "sha256": "82c82f463ce6596dba4088599eff2009483378527ec529df1c3c4c0accc736ee"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/legal-doc-writer/SKILL.md",
+      "sha256": "1812034664e065eb1e11b6fe6e92e49ad84fe8b83a369153a91b53ee05910e19"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/pipl-compliance/references/cn-checklist.md",
+      "sha256": "27aa2073c377c8ec0f5396703b3b096134a8479db4beb87597ed90762ed55b4d"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/pipl-compliance/references/enforcement-cases.md",
+      "sha256": "b0fb4913d278e52c10ef6ac13ee7e0e8e33d383e9cb2885fa5ebf0d967bf811f"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/pipl-compliance/references/pipl-checklist.md",
+      "sha256": "64b3352520ca2cec9744eed16bb27b530698d43c7193610450f6ad8d96f44179"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/pipl-compliance/references/pipl-law.md",
+      "sha256": "d2d55b6a541e2538bb0d42c98662117b722645bc9dec3d7d3e0a3b59c59de7b9"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/references/pipl-compliance/references/risk-assessment-guide.md",
+      "sha256": "bdb199461f0d020da6ab015ebfe62f14b0e3a3e9560e606b484ca9fdb62d3cb1"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/scripts/ai-legal-assistant/calculate_lawsuit_fee.py",
+      "sha256": "54b18d97f302b585b54c438940178887b27ffa24fc50c210ad340f1c7699aac0"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/scripts/legal-compliance-selected/compliance_risk_matrix.py",
+      "sha256": "388f1be3cc5f67977dd94c5efc98dd026b8de3f765d1a76d3bf80103f690a3fa"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/scripts/legal-compliance-selected/contract_review.py",
+      "sha256": "9c15b77523c0a853aebe4f958b93240f6bae1d1812a00ee7739ffcf1b4f67a99"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/scripts/legal-compliance-selected/labor_contract_check.py",
+      "sha256": "d7586583192e46cfdbc4c06525261cbfad94242dd70d79e43c953e4caf33cbf1"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/scripts/legal-compliance-selected/pipl_compliance_check.py",
+      "sha256": "dd592059a7ef30004506126b5c0cbeef1a89c4a7b04c6ec1860b0f09e3032a90"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/scripts/pipl/pipl-check.py",
+      "sha256": "97c36002663735817e7b5a398f6c9e56b4ed626f80fa8c7a3e88473a2a25104e"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/scripts/pipl/risk-assessment.py",
+      "sha256": "79fdbf8dc2e282987c53e2f68a14b146a11b80d6d3421cb3a17bdeb0d0fa1c25"
+    },
+    {
+      "path": "skills/china-compliance-toolkit/SKILL.md",
+      "sha256": "b9df1f34a3d975d12b65bbb41040af282505112fa2a23e34bc35627b23326d50"
+    },
+    {
+      "path": "skills/china-legal-research/LICENSE.txt",
+      "sha256": "57ad1bbc5b2e13df3c781b193df47ee50759bf377cdce4be4fce149e73a99e88"
+    },
+    {
+      "path": "skills/china-legal-research/references/01-law-vector-search.md",
+      "sha256": "6330741d6987687bdab7dc0580c80c91317258b788b24d3a8f2e165b1082bf31"
+    },
+    {
+      "path": "skills/china-legal-research/references/02-law-keyword-search.md",
+      "sha256": "c91fd3f65b211af133eb46bd695f0287316f60808fbb83c23e5bd3272210aa9c"
+    },
+    {
+      "path": "skills/china-legal-research/references/03-law-detail.md",
+      "sha256": "aa0f6b2eea27f6d087ac2e8189a75f58b5e5827b6c09acf9bb337588385bdbb3"
+    },
+    {
+      "path": "skills/china-legal-research/references/04-case-semantic-search.md",
+      "sha256": "22da719e87e5bfba7620e8524856b4b2e18e82512acdc07085a460236cedb19d"
+    },
+    {
+      "path": "skills/china-legal-research/references/05-case-keyword-search.md",
+      "sha256": "036e3d9b513ea7c07e0b01f23acba373c083dafc38ec4f4a1f26618bc8f2e35a"
+    },
+    {
+      "path": "skills/china-legal-research/references/06-case-keyword-search-authority.md",
+      "sha256": "7245e7c634c4375aae90e0f85442f91ae3eeb4fa3a11a64932be36d5a9f28912"
+    },
+    {
+      "path": "skills/china-legal-research/references/07-case-detail.md",
+      "sha256": "95a03b9d51882722f5eeb6813c5fe62ee8573fabb8625cc4505ea8324ff7d2f6"
+    },
+    {
+      "path": "skills/china-legal-research/references/08-regulation-search.md",
+      "sha256": "4fd7e63b1877100edb4072bb7b6ad0c73679aed08f0b8001ffca3aa95ffafe65"
+    },
+    {
+      "path": "skills/china-legal-research/references/09-regulation-detail.md",
+      "sha256": "82faf7eef19c75d9170ab88ed5930a9894d6c7b122eb3e5f85e13c8d0ca3b8b2"
+    },
+    {
+      "path": "skills/china-legal-research/references/10-enterprise-search.md",
+      "sha256": "5cd3e5bbea300c7a852b3c00c6b8335c591a26948df9ce17fddc8550178d83cc"
+    },
+    {
+      "path": "skills/china-legal-research/references/11-enterprise-detail.md",
+      "sha256": "50ad3f0fab8b0ceeaf7d34be82f4bfb4a2086ed0f9f7f5318b7ca543735c7edf"
+    },
+    {
+      "path": "skills/china-legal-research/references/12-hall-detect.md",
+      "sha256": "0865bb0a7e724262e7005cb11216e4cf7e402dff5ccec57408b93067f6cf8a85"
+    },
+    {
+      "path": "skills/china-legal-research/references/13-enterprise-search-lightweight.md",
+      "sha256": "c217d6fc55a82a2bc3c9b5f3bde8563b43d4e8253d2db1253f75c7783e254253"
+    },
+    {
+      "path": "skills/china-legal-research/references/14-enterprise-base-info.md",
+      "sha256": "aa103acfcf20a40d0efb38e9c3ee9b29eddb7fd20a5420450f295f7a90aec998"
+    },
+    {
+      "path": "skills/china-legal-research/references/15-enterprise-aggregation-summary.md",
+      "sha256": "91e1cf5b3c1cd75d18211d51a4aafff21129f43f29d47925b835a0e72461fd1f"
+    },
+    {
+      "path": "skills/china-legal-research/references/16-enterprise-out-invest.md",
+      "sha256": "66820c61829e70c78dc045a2b419a81a535c9d880f60d5bc15a74f6a458025a1"
+    },
+    {
+      "path": "skills/china-legal-research/references/17-enterprise-brand.md",
+      "sha256": "0e6d5508ba33181d841caaa3526a5353d9af6e0888f301c56a203ab096e0157a"
+    },
+    {
+      "path": "skills/china-legal-research/references/18-enterprise-patent.md",
+      "sha256": "b370cc36c94244255370a4e089a8f330a2a7f3ac814d088f50c5d7d3bddbf639"
+    },
+    {
+      "path": "skills/china-legal-research/references/19-enterprise-soft-right.md",
+      "sha256": "01284da8337bc31ff0801973cd775f0d76f6e207b30a07053d1d55d10c3a3c6c"
+    },
+    {
+      "path": "skills/china-legal-research/references/20-enterprise-works-right.md",
+      "sha256": "2586652430205764f8adc6a4ed5901313994faa669672039ff74eeab06e2c9b0"
+    },
+    {
+      "path": "skills/china-legal-research/references/21-enterprise-icp.md",
+      "sha256": "ae571d6ef7d250589be8837c1edabe23ec7bd138eedee4daa0ada9e09289d4c2"
+    },
+    {
+      "path": "skills/china-legal-research/references/22-enterprise-change-info.md",
+      "sha256": "7e3a2e5e5edbbc39b92685f385465f9525ba503a443686ba11a514ed6212a4c7"
+    },
+    {
+      "path": "skills/china-legal-research/references/23-enterprise-writ-agg.md",
+      "sha256": "1ec7c428a41c6c21a184705f0e2237f32d6bedbf5a83c338e17768dfa3d71f06"
+    },
+    {
+      "path": "skills/china-legal-research/references/24-enterprise-writ-list.md",
+      "sha256": "cac26960f0b0c62b2f8021025de854692cbf64ba6f2f06aa0bbaccabb8bf6987"
+    },
+    {
+      "path": "skills/china-legal-research/references/25-enterprise-court-session-notice.md",
+      "sha256": "391b9006a4b0f1bcd3e36fc11d4177e535747fff6aae26e48128250b25d102f8"
+    },
+    {
+      "path": "skills/china-legal-research/references/26-enterprise-court-notice.md",
+      "sha256": "3d74b4cc851bbf8265c4a0e35d2484135b626c8bf08dbcc7321fa1f9ae5531f3"
+    },
+    {
+      "path": "skills/china-legal-research/references/27-enterprise-executions.md",
+      "sha256": "e326185c03d65f7f6b948cef39ec387936d08a41b43ad6255aade19eba3fe1e2"
+    },
+    {
+      "path": "skills/china-legal-research/references/28-enterprise-executed-person.md",
+      "sha256": "5d6089d4feac2c74c176b16b06cbc7af11ead4df9c9e067cab9e4e7f1846279d"
+    },
+    {
+      "path": "skills/china-legal-research/references/29-enterprise-frozen-equity.md",
+      "sha256": "c11e19de608fd0f5b45ad1e1147171cadbe338fdee5bb69369072bdeebf1a254"
+    },
+    {
+      "path": "skills/china-legal-research/references/30-enterprise-punishment.md",
+      "sha256": "c5dae10490ab12af4e1c9bcbdec3f360f45337df84484a3b6bc56401bd890ba1"
+    },
+    {
+      "path": "skills/china-legal-research/references/31-enterprise-pledge.md",
+      "sha256": "1053f2ea756264eeea97a331eb07ae48432341f97ddb87cecf62cc6da52ced78"
+    },
+    {
+      "path": "skills/china-legal-research/references/32-enterprise-guaranty.md",
+      "sha256": "4f0866fdac0792e7fd1e195c6a672f3421b1e2630dabf64bb72ac0510f913803"
+    },
+    {
+      "path": "skills/china-legal-research/references/33-enterprise-abnormal-operation.md",
+      "sha256": "ccfd2183d1d6c72ab5b240c1a284e43aa4fc035194cafce903dde1bc3048df09"
+    },
+    {
+      "path": "skills/china-legal-research/references/34-enterprise-corporate-tax.md",
+      "sha256": "bd77409f8db15a6861d20314610ba759d10259b215b38600f471dbe500c77026"
+    },
+    {
+      "path": "skills/china-legal-research/references/35-enterprise-serious-illegal.md",
+      "sha256": "4ee220c8d1eba0b28a9354f53a9075946880db51cf18c001f7004d5d29286892"
+    },
+    {
+      "path": "skills/china-legal-research/references/MANIFEST.json",
+      "sha256": "7b1d94d73fce3d05c9505eb9261176c0b78eddc4177171d083aaf0ca3d3d63a0"
+    },
+    {
+      "path": "skills/china-legal-research/scripts/MANIFEST.json",
+      "sha256": "794cf08e2e42f11c618d3593dded5255492f6d6a455a39dde34142ffb87c9dc0"
+    },
+    {
+      "path": "skills/china-legal-research/scripts/updater.py",
+      "sha256": "a0e5fa72faa597f997822362272cd441f43adcc01542e555a3be3d71709a694d"
+    },
+    {
+      "path": "skills/china-legal-research/scripts/yd_search.py",
+      "sha256": "be3282b5139b493e77a4190844ea160d43c25407a2a4d5be2f6e81b1d83b4067"
+    },
+    {
+      "path": "skills/china-legal-research/SKILL.md",
+      "sha256": "d03952ae63ecc8dee174453ef2b504f8b85aa43e1ca261b6f55f30d1ffa07235"
+    }
+  ]
+}

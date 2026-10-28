@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "nuwa-nuwa",
+  "source": "bundled",
+  "sourcePackage": "nuwa",
+  "sourceAgent": "agents/nuwa.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "女娲",
+  "profession": "思维蒸馏师",
+  "categoryId": "04-DataAI",
+  "description": "女娲蒸馏知名人物的思维方式为可运行视角。给定名字（如乔布斯、芒格、纳瓦尔、马斯克），运行多路调研→三重验证提炼→技能构建→质量验证四阶段流水线，用其认知框架分析你的问题",
+  "tags": [
+    "思维蒸馏",
+    "认知框架",
+    "心智模型"
+  ],
+  "quickPrompts": [
+    "蒸馏乔布斯的思维方式",
+    "马斯克会怎么看这个决策？",
+    "蒸馏一个产品设计视角"
+  ],
+  "roleFile": "nuwa-nuwa/role.md",
+  "avatarFile": "nuwa-nuwa/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1ffa99ec208dfbc3b0781b365570ed57b4c294b2098546d232d682b08282fb72",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2964e3a7000be20b7c0c38f8e358029162f3b1b1321bc49870f01bd404a6e2cf"
+    },
+    {
+      "path": "role.md",
+      "sha256": "21e3141e2d97b5091a7fd283c92a4f998196f1b1bc6ea84fea2776e3c106a946"
+    }
+  ]
+}

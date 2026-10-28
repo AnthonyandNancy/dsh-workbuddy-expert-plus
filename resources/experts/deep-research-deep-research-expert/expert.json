@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "deep-research-deep-research-expert",
+  "source": "bundled",
+  "sourcePackage": "deep-research",
+  "sourceAgent": "agents/deep-research-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "深研研",
+  "profession": "深度研究专家",
+  "categoryId": "04-DataAI",
+  "description": "综合性深度研究专家，支持多源信息检索、事实验证、知识发现和结构化报告生成，含微信公众号文章搜索能力",
+  "tags": [
+    "深度调研",
+    "行业分析",
+    "学术报告"
+  ],
+  "quickPrompts": [
+    "帮我深度研究一下AI Agent的发展趋势",
+    "快速调研行业或技术发展趋势",
+    "撰写带引用的学术级研究报告"
+  ],
+  "roleFile": "deep-research-deep-research-expert/role.md",
+  "avatarFile": "deep-research-deep-research-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7b8cec746d49b1ae7a663488cbcb77b83afbdb3f130815bd04d36a063be9c6c3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e1f230c7100c2e6a589c0227baae95ac0316447f7c4076d67b05da1451017699"
+    },
+    {
+      "path": "role.md",
+      "sha256": "90b16bd16492f6d2a1ce481ab760401e4e6cb43ae9a5fcb9951383972791035c"
+    }
+  ]
+}

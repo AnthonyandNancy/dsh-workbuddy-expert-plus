@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "litigation-legal-litigation-legal-strategist",
+  "source": "bundled",
+  "sourcePackage": "litigation-legal",
+  "sourceAgent": "agents/litigation-legal-strategist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "诉讼法务专家",
+  "profession": "诉讼支持顾问",
+  "categoryId": "11-SecurityCompliance",
+  "description": "面向诉讼律师的案件支持专家，梳理案件、证据、时间线、质证准备、索赔图表和文书草稿。",
+  "tags": [
+    "诉讼支持",
+    "证据时间线",
+    "文书准备"
+  ],
+  "quickPrompts": [
+    "帮我受理这个诉讼事项，识别期限、证据缺口和律师审阅点",
+    "根据这些诉讼材料整理时间线和问题清单",
+    "准备质证提纲，并标出关联文件和缺失事实"
+  ],
+  "roleFile": "litigation-legal-litigation-legal-strategist/role.md",
+  "avatarFile": "litigation-legal-litigation-legal-strategist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2c9255b1f528097d29797f045be46642c554ff13909c3d66572c7e6b2f461e3e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e1f230c7100c2e6a589c0227baae95ac0316447f7c4076d67b05da1451017699"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6483f75b84f3655f7514cb8d8ae4e9f235e0dad4a3f0d2a77ae901f1843fbe06"
+    }
+  ]
+}

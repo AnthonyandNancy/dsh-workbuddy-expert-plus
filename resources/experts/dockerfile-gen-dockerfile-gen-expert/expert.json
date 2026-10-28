@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "dockerfile-gen-dockerfile-gen-expert",
+  "source": "bundled",
+  "sourcePackage": "dockerfile-gen",
+  "sourceAgent": "agents/dockerfile-gen-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "容器器",
+  "profession": "Dockerfile生成专家",
+  "categoryId": "02-Engineering",
+  "description": "Dockerfile 自动生成专家，遵循容器化最佳实践",
+  "tags": [
+    "容器构建",
+    "镜像优化",
+    "部署配置"
+  ],
+  "quickPrompts": [
+    "帮我为这个项目生成一个Dockerfile",
+    "优化Docker镜像体积和构建速度",
+    "设计多阶段构建和容器安全加固方案"
+  ],
+  "roleFile": "dockerfile-gen-dockerfile-gen-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "cdcb4833bcd99558a70dd7a1e96de969b0aba0d57b8de7f36484f23c4e317a67",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "04f91dad6ea3995b65a06020669d58a9bba0178bdd81cd1cef07a61f0d4b8e53"
+    }
+  ]
+}

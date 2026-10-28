@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "smb-finance-smb-finance",
+  "source": "bundled",
+  "sourcePackage": "smb-finance",
+  "sourceAgent": "agents/smb-finance.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "钱守通",
+  "profession": "财务管家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "小企业财务管家，一站式搞定现金流预测、逾期追款、毛利分析、月结对账和税务准备",
+  "tags": [
+    "现金流",
+    "财务分析",
+    "税务准备"
+  ],
+  "quickPrompts": [
+    "未来 8 周的现金流预测，看看工资能不能发出来。",
+    "分析各产品线毛利率，看哪些该涨价、哪些该砍掉。",
+    "整理税务材料，准备交接给会计师。"
+  ],
+  "roleFile": "smb-finance-smb-finance/role.md",
+  "avatarFile": "smb-finance-smb-finance/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "13dcae6a0b967b19e71aeb01309b0d86b689c632eca000913c45343c473c5d76",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "80ce976f3b89b293242e555afbd513407995aa848fdaadf155e6d308242f0cc0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "cd8c0ffbb76b35ec116d5451caa4fb54afd36d700a4d284d3c889fcb2ec6f73b"
+    }
+  ]
+}

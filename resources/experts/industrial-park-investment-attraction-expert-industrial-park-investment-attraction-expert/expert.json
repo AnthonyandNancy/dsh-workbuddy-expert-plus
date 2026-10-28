@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "industrial-park-investment-attraction-expert-industrial-park-investment-attraction-expert",
+  "source": "bundled",
+  "sourcePackage": "industrial-park-investment-attraction-expert",
+  "sourceAgent": "agents/industrial-park-investment-attraction-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "福帮手",
+  "profession": "产业园招商专家",
+  "categoryId": "07-SalesCommerce",
+  "description": "仅用公开资料，按园区目标找对企业，逐家核验来源、适配理由、反证与未知，快速形成可行动名单。",
+  "tags": [
+    "目标企业发现",
+    "园企适配决策",
+    "公开证据核验"
+  ],
+  "quickPrompts": [
+    "我想为园区找目标企业。请先用通俗语言确认园区与载体情况、产业方向和本轮任务，只询问会改变企业池、硬约束或任务目标的最小阻断信息；不要为了限制问题数量而猜测。数量由我明确指定；未指定时，用可核验的链节、角色、区域或其他覆盖要求定义目标，不自行生成宽区间。“先给N家”只是说明：当用户给出某个数并明确是首批时，该数只控制首批；“约N家”只是说明可调整参考。N是语义占位符，不是默认值，两者均不自动成为完成条件。不要展示内部术语。收到后仅用公开资料，先交付一批关键事实已有可回看公开依据且满足本轮资格条件的企业；有我明确或确认的优先标准时才按业务优先，否则只用稳定展示顺序并单列核验顺序。逐家说明并去重企业注册主体，给出适配理由、不利或相反信息、待确认项和公开来源；只有确有必要且有这些依据时，才给出一个或多个核验动作，否则明确没有剩余动作。",
+    "围绕我指定的产业链环节、目标区域、载体条件和本次目标，仅用公开资料寻找企业。请先交付一批关键事实已有可回看公开依据且满足本轮资格条件的企业；有我明确或确认的优先标准时才按业务优先，否则只用稳定展示顺序并单列核验顺序。逐家确认并去重企业注册主体，标明关键依据、不利或相反信息、未知和园企适配理由；只有确有必要且有这些依据时，才给出一个或多个核验动作，否则明确没有剩余动作。",
+    "请审计我现有的企业清单：确认并去重企业注册主体，复核公开依据是否仍有效和园企适配，并让每个输入项都有合格、观察、排除，或“未解析但已给依据和原因”的结论。有我明确或确认的优先标准时才按业务优先，否则只用稳定展示顺序并单列核验顺序；说明排除理由、未解析项、未覆盖范围和补证建议。"
+  ],
+  "roleFile": "industrial-park-investment-attraction-expert-industrial-park-investment-attraction-expert/role.md",
+  "avatarFile": "industrial-park-investment-attraction-expert-industrial-park-investment-attraction-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9669a25d32fe58abc4e9cc7c875547cf8675a33602b05f7bd5163c4aad84f3de",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "5a1e2dcad062700d28d1390105c797f8793c40a25576e34880647b4bec126ed9"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6677d7615684440b301917dad9b002a8f2a84e5f35b9f3ad4b0cc9369c06c026"
+    }
+  ]
+}

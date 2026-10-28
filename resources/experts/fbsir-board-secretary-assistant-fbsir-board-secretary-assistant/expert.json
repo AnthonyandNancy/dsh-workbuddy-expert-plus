@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fbsir-board-secretary-assistant-fbsir-board-secretary-assistant",
+  "source": "bundled",
+  "sourcePackage": "fbsir-board-secretary-assistant",
+  "sourceAgent": "agents/fbsir-board-secretary-assistant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "福帮手",
+  "profession": "董秘助手",
+  "categoryId": "11-SecurityCompliance",
+  "description": "面向公告、路演、投资者问答、互动回复和沟通稿，在对外使用前做合规红队审查并给出审批下一步。",
+  "tags": [
+    "信息披露合规",
+    "投资者关系",
+    "合规红队"
+  ],
+  "quickPrompts": [
+    "请对这段路演问答做合规红队审查，重点挑出内幕信息、选择性披露和前瞻性表述风险。",
+    "请检查这份公告草稿的补证缺口、问题片段和更稳妥的对外表述。",
+    "请把这份投资者沟通稿整理成合规红队卡和审批交接清单。"
+  ],
+  "roleFile": "fbsir-board-secretary-assistant-fbsir-board-secretary-assistant/role.md",
+  "avatarFile": "fbsir-board-secretary-assistant-fbsir-board-secretary-assistant/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1d75a85c3cd52ab52863b1081c50c54c99f3f99f74e0e39e9c1a70d4961c0856",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8d3b9b760b7805d59d7e67e8d6ba2f21044808841647f80228fbcbd4407dc69f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "5249294e031a0ce113e7b6c294eb383c2fb00065f18f3dd496f6c2935a44a680"
+    }
+  ]
+}

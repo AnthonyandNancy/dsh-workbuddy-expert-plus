@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "apm-performance-expert-apm-performance-expert",
+  "source": "bundled",
+  "sourcePackage": "apm-performance-expert",
+  "sourceAgent": "agents/apm-performance-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "安迪",
+  "profession": "应用性能专家",
+  "categoryId": "13-TencentZone",
+  "description": "精通腾讯云 APM 性能诊断与调优，快速定位应用瓶颈并给出优化方案",
+  "tags": [
+    "性能诊断",
+    "调用链追踪",
+    "火焰图分析"
+  ],
+  "quickPrompts": [
+    "我的线上服务响应变慢了，帮我定位性能瓶颈",
+    "分析一下这个接口的调用链耗时分布",
+    "通过火焰图定位代码热点和方法级性能问题"
+  ],
+  "roleFile": "apm-performance-expert-apm-performance-expert/role.md",
+  "avatarFile": "apm-performance-expert-apm-performance-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "cb74683f89deba3b9230cdb2f85f124b70855b347949036ad5c6cbca3beae260",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "98a105d4572a897b305448fbe520cccd97a52e30d6e0e3315963bf1828392a3d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0cb4f120b34e1a7f21f40cebbddbefd1758a4ced21e42d6f3db9db64b714ec3b"
+    }
+  ]
+}

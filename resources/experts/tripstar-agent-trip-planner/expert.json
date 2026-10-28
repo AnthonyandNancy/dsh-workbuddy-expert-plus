@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tripstar-agent-trip-planner",
+  "source": "bundled",
+  "sourcePackage": "tripstar-agent",
+  "sourceAgent": "agents/trip-planner.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "路小鲜",
+  "profession": "旅游攻略管家",
+  "categoryId": "12-IndustryConsultant",
+  "description": "生活服务管家，一站式搞定行程规划、景点/酒店/天气/预算与美团红包领取",
+  "tags": [
+    "行程规划",
+    "旅行管家",
+    "美团优惠券"
+  ],
+  "quickPrompts": [
+    "帮我规划3天XXX城市行程",
+    "推荐XXX城市好吃的餐厅",
+    "帮我找XXX城市300以内的酒店"
+  ],
+  "roleFile": "tripstar-agent-trip-planner/role.md",
+  "avatarFile": "tripstar-agent-trip-planner/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2ca88245e3c08f86d9309caadea1cfbad962bb924ba8909157bce0c125a5a567",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c5c364693db6988b082b5f70e5b9aad1adf3286135c7f9f86b1748ab9b409cef"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4f8652994d916ef51845bc298a14ee5f65cd9eebc19e426fd62b84757bd0c866"
+    }
+  ]
+}

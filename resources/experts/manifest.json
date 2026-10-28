@@ -1,0 +1,2091 @@
+{
+  "schemaVersion": 1,
+  "bundleVersion": "7ea565af29f6-0.1.0",
+  "pluginVersion": "0.1.0",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "sourceUrl": "https://github.com/infometa/workbuddyskills",
+  "generatedAt": "2026-10-28T00:00:00.000Z",
+  "counts": {
+    "indexed": 429,
+    "discoveredAgents": 729,
+    "ready": 39,
+    "blocked": 390,
+    "unindexedAgents": 300
+  },
+  "experts": [
+    {
+      "schemaVersion": 1,
+      "id": "apm-performance-expert-apm-performance-expert",
+      "source": "bundled",
+      "sourcePackage": "apm-performance-expert",
+      "sourceAgent": "agents/apm-performance-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "安迪",
+      "profession": "应用性能专家",
+      "categoryId": "13-TencentZone",
+      "description": "精通腾讯云 APM 性能诊断与调优，快速定位应用瓶颈并给出优化方案",
+      "tags": [
+        "性能诊断",
+        "调用链追踪",
+        "火焰图分析"
+      ],
+      "quickPrompts": [
+        "我的线上服务响应变慢了，帮我定位性能瓶颈",
+        "分析一下这个接口的调用链耗时分布",
+        "通过火焰图定位代码热点和方法级性能问题"
+      ],
+      "roleFile": "apm-performance-expert-apm-performance-expert/role.md",
+      "avatarFile": "apm-performance-expert-apm-performance-expert/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "cb74683f89deba3b9230cdb2f85f124b70855b347949036ad5c6cbca3beae260",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "98a105d4572a897b305448fbe520cccd97a52e30d6e0e3315963bf1828392a3d"
+        },
+        {
+          "path": "role.md",
+          "sha256": "0cb4f120b34e1a7f21f40cebbddbefd1758a4ced21e42d6f3db9db64b714ec3b"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "cat-network-quality-analyst-cat-network-quality-analyst",
+      "source": "bundled",
+      "sourcePackage": "cat-network-quality-analyst",
+      "sourceAgent": "agents/cat-network-quality-analyst.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "亚伦",
+      "profession": "网络质量分析专家",
+      "categoryId": "02-Engineering",
+      "description": "精通错误分析、性能分析、整体分析、抓包分析、多任务对比分析，自动生成专业分析报告",
+      "tags": [
+        "网络诊断",
+        "云拨测",
+        "性能分析"
+      ],
+      "quickPrompts": [
+        "帮分析一下云拨测任务task-xxxxxxxx最近24小时的错误情况",
+        "帮分析一下task-xxxxxxxx从2026年8月1日到2026年8月7日的性能情况",
+        "帮对任务task-xxxxxxxx北京移动进行抓包分析"
+      ],
+      "roleFile": "cat-network-quality-analyst-cat-network-quality-analyst/role.md",
+      "avatarFile": "cat-network-quality-analyst-cat-network-quality-analyst/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "31aa56204dee77d0d3e7e8ff825f9b1ed972710bf69103944eff4a80af92d6c0",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "c5a574a255d3e613dcfea60339b4cdd41f285cc4362a6b23b4004899f5c3aae3"
+        },
+        {
+          "path": "role.md",
+          "sha256": "63e2700aa9d3e86fe3b0d4b21f0e2d6c2da8e69005e9789ee20f07fdb4c3ef09"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "content-monetization-team-content-monetization-team-lead",
+      "source": "bundled",
+      "sourcePackage": "content-monetization-team",
+      "sourceAgent": "agents/content-monetization-team-lead.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "内容变现商业化专家团",
+      "profession": "内容变现商业化专家团",
+      "categoryId": "05-MarketingGrowth",
+      "description": "5人专家团覆盖CPS带货分佣、CPE/CPM效果广告、创作者-品牌交易撮合与收益分析，助力内容创作者和品牌方实现商业化闭环",
+      "tags": [
+        "内容变现",
+        "CPS/CPE/CPM",
+        "创作者商业化"
+      ],
+      "quickPrompts": [
+        "帮我设计一套适合我账号的内容变现方案",
+        "分析哪种结算模式（CPS/CPE/CPM）最适合我当前的粉丝体量",
+        "帮我评估这个品牌推广任务的收益是否合理"
+      ],
+      "roleFile": "content-monetization-team-content-monetization-team-lead/role.md",
+      "avatarFile": "content-monetization-team-content-monetization-team-lead/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "9ec6ebd25fe3bd34980ab649858baeee77652e8ab853f7de0286bc2295aff615",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "0e1bc9a0438889c90ff6458222ebd923f91a597573dba373f4f336e5868a23b4"
+        },
+        {
+          "path": "role.md",
+          "sha256": "685fb0170119ee7d1673047239f290c145d992c82f0d44fc282c845a0f325393"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "deep-research-deep-research-expert",
+      "source": "bundled",
+      "sourcePackage": "deep-research",
+      "sourceAgent": "agents/deep-research-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "深研研",
+      "profession": "深度研究专家",
+      "categoryId": "04-DataAI",
+      "description": "综合性深度研究专家，支持多源信息检索、事实验证、知识发现和结构化报告生成，含微信公众号文章搜索能力",
+      "tags": [
+        "深度调研",
+        "行业分析",
+        "学术报告"
+      ],
+      "quickPrompts": [
+        "帮我深度研究一下AI Agent的发展趋势",
+        "快速调研行业或技术发展趋势",
+        "撰写带引用的学术级研究报告"
+      ],
+      "roleFile": "deep-research-deep-research-expert/role.md",
+      "avatarFile": "deep-research-deep-research-expert/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "7b8cec746d49b1ae7a663488cbcb77b83afbdb3f130815bd04d36a063be9c6c3",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "e1f230c7100c2e6a589c0227baae95ac0316447f7c4076d67b05da1451017699"
+        },
+        {
+          "path": "role.md",
+          "sha256": "90b16bd16492f6d2a1ce481ab760401e4e6cb43ae9a5fcb9951383972791035c"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "design-to-code-design-to-code-expert",
+      "source": "bundled",
+      "sourcePackage": "design-to-code",
+      "sourceAgent": "agents/design-to-code-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "图变码",
+      "profession": "设计转代码专家",
+      "categoryId": "01-ProductDesign",
+      "description": "将 Figma 设计稿和截图转换为可直接使用的代码组件，内置无障碍性支持",
+      "tags": [
+        "设计转代码",
+        "UI还原",
+        "前端生成"
+      ],
+      "quickPrompts": [
+        "帮我把这个设计稿转成前端代码",
+        "将截图还原为响应式网页代码",
+        "生成带无障碍支持的UI组件代码"
+      ],
+      "roleFile": "design-to-code-design-to-code-expert/role.md",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "2deb6a05deabf5b0dfa7c96ba1e305a64bfd93536a0aa98f42ea59f91716cd44",
+      "files": [
+        {
+          "path": "role.md",
+          "sha256": "6868b925dc01c33954a4caed8e64eb4bed248784709fa27ebe4ccefd7a2679d3"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "dockerfile-gen-dockerfile-gen-expert",
+      "source": "bundled",
+      "sourcePackage": "dockerfile-gen",
+      "sourceAgent": "agents/dockerfile-gen-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "容器器",
+      "profession": "Dockerfile生成专家",
+      "categoryId": "02-Engineering",
+      "description": "Dockerfile 自动生成专家，遵循容器化最佳实践",
+      "tags": [
+        "容器构建",
+        "镜像优化",
+        "部署配置"
+      ],
+      "quickPrompts": [
+        "帮我为这个项目生成一个Dockerfile",
+        "优化Docker镜像体积和构建速度",
+        "设计多阶段构建和容器安全加固方案"
+      ],
+      "roleFile": "dockerfile-gen-dockerfile-gen-expert/role.md",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "cdcb4833bcd99558a70dd7a1e96de969b0aba0d57b8de7f36484f23c4e317a67",
+      "files": [
+        {
+          "path": "role.md",
+          "sha256": "04f91dad6ea3995b65a06020669d58a9bba0178bdd81cd1cef07a61f0d4b8e53"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "engineering-workflow-skills-engineering-workflow-coach",
+      "source": "bundled",
+      "sourcePackage": "engineering-workflow-skills",
+      "sourceAgent": "agents/engineering-workflow-coach.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "工序达",
+      "profession": "工程实践专家",
+      "categoryId": "02-Engineering",
+      "description": "基于Google 工程师的《Agent Skills》打造的资深工程全流程教练：规约驱动、测试驱动、代码评审、CI/CD发布",
+      "tags": [
+        "规约驱动开发",
+        "代码评审与安全",
+        "CI/CD发布"
+      ],
+      "quickPrompts": [
+        "我有个新功能要开发，帮我从 spec 到任务拆解做完整规划",
+        "从正确性、安全、性能、可维护性几个维度评审这段代码",
+        "帮我搭建 CI/CD 流水线和发布检查清单"
+      ],
+      "roleFile": "engineering-workflow-skills-engineering-workflow-coach/role.md",
+      "avatarFile": "engineering-workflow-skills-engineering-workflow-coach/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "060740afe6d96e38ed27e59a183ea1607c683da070c13586e9ac28f03907b180",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "fdd9dfade04f8f5ac6deca81b493650495bffe732bcabdbd7180ed6c9b08ba8c"
+        },
+        {
+          "path": "role.md",
+          "sha256": "179ea7b6e369e3080a30414488ee926b5da98d2fc2a9e3e3d5286641423e4479"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "enterprise-legal-team-enterprise-legal-lead",
+      "source": "bundled",
+      "sourcePackage": "enterprise-legal-team",
+      "sourceAgent": "agents/enterprise-legal-lead.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "企业法务专家团",
+      "profession": "企业法务专家团",
+      "categoryId": "11-SecurityCompliance",
+      "description": "面向企业法务的多角色专家团，覆盖合同、交易、隐私、产品、监管、AI 治理、雇佣与知识产权分诊。",
+      "tags": [
+        "企业法务",
+        "合同与交易",
+        "合规分诊"
+      ],
+      "quickPrompts": [
+        "帮我分诊这个跨职能法律问题，并交给合适的法务专家分析",
+        "从合同、隐私、AI 治理和知识产权角度审查这个 AI 供应商交易",
+        "评估这个产品发布的法务、隐私、监管和营销声明风险"
+      ],
+      "roleFile": "enterprise-legal-team-enterprise-legal-lead/role.md",
+      "avatarFile": "enterprise-legal-team-enterprise-legal-lead/avatar.png",
+      "skills": [
+        "china-compliance-toolkit",
+        "china-legal-research"
+      ],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "2c6d7d9df0101522f3feea74f894f45f14e926c4a5063e18a6ed6a3e7af560fc",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "fd102fabc7249b5ca108089b3602c4aa32eba72cad41ad41c983010021e5dbd0"
+        },
+        {
+          "path": "role.md",
+          "sha256": "bda8f35a4bfe9a43b0bb97da316e19700da9fd293d16993c7f24ffd94d21d3c1"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/calculation-formulas.md",
+          "sha256": "8a4797e737f2acc4be9f329f790374d1e58753c3c27a6e63161c4eab333a0525"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/clause-redraft-playbook.md",
+          "sha256": "19e2aec4739d1a70e60347f278eb713e2fc2407ef3a55e773e5d85c74b809482"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/contract-type-guides.md",
+          "sha256": "a8f05fc99d798fe5462dfb37699598a2476e84ca0e23beaf5ad8a9bdc5434abe"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/document-skeletons.md",
+          "sha256": "6fa3ccd0db156c55ce20f267ae703765ce24fd12bee6016abe4bb1491596c4a9"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/labor-compensation-output-template.md",
+          "sha256": "10e8c82433f7afeaa02a4bade51bdc3cb4c83078b514d2f751a54faa187bfc53"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/labor-dispute-scenarios.md",
+          "sha256": "53abc693c50d71fc7c62dc30a8358244e904b38915bea43feed73f4d551377a5"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/litigation-worth-it-template.md",
+          "sha256": "585db88e7b434ea9823c6cdd43d12abea1132ef987e5747c066f54accb90e89b"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/output-acceptance-criteria.md",
+          "sha256": "6516d6d395c00e80da65e53953d2c762840b245f7224ebb5f9406afa09d55ba4"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/pre-litigation-decision-pack.md",
+          "sha256": "7f349acc3092203753fdd3f3c5470aed59ea07f9158329d61f5a091de927afc6"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/privacy-and-trust.md",
+          "sha256": "05f77129138c2dba6e3d6219a45161ade06ab636651c69ba355a45681080a710"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/risk-patterns.md",
+          "sha256": "6ca6610d40b486ac2c3d47daab806a82369974065105bd811eb77d8f739e7c9d"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/risk-scan-examples.md",
+          "sha256": "747d52a9659d4c9e6f2677c7522410a3196a836ce7097ea3319ccf727f2c94c2"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/test-cases.md",
+          "sha256": "be6b72d5a1d75eddd0aa74203b10537988146913841eaf82aa28608395770f83"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/test-run-round1.md",
+          "sha256": "c1ad4c8af4094777331e485aa1facbed958b180af9780a094ad0723f67ef1f70"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/test-run-round2.md",
+          "sha256": "b60ae0d43c0f9a0bd1a179012dcc5c3d1dc400910d766caebfa7db347d5a805e"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/references/test-run-round3.md",
+          "sha256": "39cac3211f8b56226ede31714d3b7e64dd18b201533b0335c06ddc2c6e868ae2"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/ai-legal-assistant-pro/SKILL.md",
+          "sha256": "6cef30196f68e3d700302cbc7075f9974a21272e9a3766d9e2690b0f8e111399"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/china-contract-review/LICENSE.txt",
+          "sha256": "e17c2ebfc6fd181e3a81514592e597ac7c753c3494ea40482ae7e21c3c3322df"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/china-contract-review/SKILL.md",
+          "sha256": "f46d5f73fc7c6270d47341f4bcc0020460788b33802d7ab07a00139f646bdb52"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/china-tax-law/references/compliance-checklist.md",
+          "sha256": "9aae0796e1c0b4a3a19a8a149480dfb3d563fc57500b2f23d4af681b7e977546"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/china-tax-law/references/tax-rates.md",
+          "sha256": "ed4d4b26981dfcbf86e0061fce6dcd7e3a323a1a5a221c08d31fa1b263839059"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/china-tax-law/SKILL.md",
+          "sha256": "263277a0e4a3c5ee6d20b71113a0e3bd7953d5b7bf2f54971db6cd46586d3d6c"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/legal-doc-writer/references/doc-templates.md",
+          "sha256": "82c82f463ce6596dba4088599eff2009483378527ec529df1c3c4c0accc736ee"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/legal-doc-writer/SKILL.md",
+          "sha256": "1812034664e065eb1e11b6fe6e92e49ad84fe8b83a369153a91b53ee05910e19"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/pipl-compliance/references/cn-checklist.md",
+          "sha256": "27aa2073c377c8ec0f5396703b3b096134a8479db4beb87597ed90762ed55b4d"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/pipl-compliance/references/enforcement-cases.md",
+          "sha256": "b0fb4913d278e52c10ef6ac13ee7e0e8e33d383e9cb2885fa5ebf0d967bf811f"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/pipl-compliance/references/pipl-checklist.md",
+          "sha256": "64b3352520ca2cec9744eed16bb27b530698d43c7193610450f6ad8d96f44179"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/pipl-compliance/references/pipl-law.md",
+          "sha256": "d2d55b6a541e2538bb0d42c98662117b722645bc9dec3d7d3e0a3b59c59de7b9"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/references/pipl-compliance/references/risk-assessment-guide.md",
+          "sha256": "bdb199461f0d020da6ab015ebfe62f14b0e3a3e9560e606b484ca9fdb62d3cb1"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/scripts/ai-legal-assistant/calculate_lawsuit_fee.py",
+          "sha256": "54b18d97f302b585b54c438940178887b27ffa24fc50c210ad340f1c7699aac0"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/scripts/legal-compliance-selected/compliance_risk_matrix.py",
+          "sha256": "388f1be3cc5f67977dd94c5efc98dd026b8de3f765d1a76d3bf80103f690a3fa"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/scripts/legal-compliance-selected/contract_review.py",
+          "sha256": "9c15b77523c0a853aebe4f958b93240f6bae1d1812a00ee7739ffcf1b4f67a99"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/scripts/legal-compliance-selected/labor_contract_check.py",
+          "sha256": "d7586583192e46cfdbc4c06525261cbfad94242dd70d79e43c953e4caf33cbf1"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/scripts/legal-compliance-selected/pipl_compliance_check.py",
+          "sha256": "dd592059a7ef30004506126b5c0cbeef1a89c4a7b04c6ec1860b0f09e3032a90"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/scripts/pipl/pipl-check.py",
+          "sha256": "97c36002663735817e7b5a398f6c9e56b4ed626f80fa8c7a3e88473a2a25104e"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/scripts/pipl/risk-assessment.py",
+          "sha256": "79fdbf8dc2e282987c53e2f68a14b146a11b80d6d3421cb3a17bdeb0d0fa1c25"
+        },
+        {
+          "path": "skills/china-compliance-toolkit/SKILL.md",
+          "sha256": "b9df1f34a3d975d12b65bbb41040af282505112fa2a23e34bc35627b23326d50"
+        },
+        {
+          "path": "skills/china-legal-research/LICENSE.txt",
+          "sha256": "57ad1bbc5b2e13df3c781b193df47ee50759bf377cdce4be4fce149e73a99e88"
+        },
+        {
+          "path": "skills/china-legal-research/references/01-law-vector-search.md",
+          "sha256": "6330741d6987687bdab7dc0580c80c91317258b788b24d3a8f2e165b1082bf31"
+        },
+        {
+          "path": "skills/china-legal-research/references/02-law-keyword-search.md",
+          "sha256": "c91fd3f65b211af133eb46bd695f0287316f60808fbb83c23e5bd3272210aa9c"
+        },
+        {
+          "path": "skills/china-legal-research/references/03-law-detail.md",
+          "sha256": "aa0f6b2eea27f6d087ac2e8189a75f58b5e5827b6c09acf9bb337588385bdbb3"
+        },
+        {
+          "path": "skills/china-legal-research/references/04-case-semantic-search.md",
+          "sha256": "22da719e87e5bfba7620e8524856b4b2e18e82512acdc07085a460236cedb19d"
+        },
+        {
+          "path": "skills/china-legal-research/references/05-case-keyword-search.md",
+          "sha256": "036e3d9b513ea7c07e0b01f23acba373c083dafc38ec4f4a1f26618bc8f2e35a"
+        },
+        {
+          "path": "skills/china-legal-research/references/06-case-keyword-search-authority.md",
+          "sha256": "7245e7c634c4375aae90e0f85442f91ae3eeb4fa3a11a64932be36d5a9f28912"
+        },
+        {
+          "path": "skills/china-legal-research/references/07-case-detail.md",
+          "sha256": "95a03b9d51882722f5eeb6813c5fe62ee8573fabb8625cc4505ea8324ff7d2f6"
+        },
+        {
+          "path": "skills/china-legal-research/references/08-regulation-search.md",
+          "sha256": "4fd7e63b1877100edb4072bb7b6ad0c73679aed08f0b8001ffca3aa95ffafe65"
+        },
+        {
+          "path": "skills/china-legal-research/references/09-regulation-detail.md",
+          "sha256": "82faf7eef19c75d9170ab88ed5930a9894d6c7b122eb3e5f85e13c8d0ca3b8b2"
+        },
+        {
+          "path": "skills/china-legal-research/references/10-enterprise-search.md",
+          "sha256": "5cd3e5bbea300c7a852b3c00c6b8335c591a26948df9ce17fddc8550178d83cc"
+        },
+        {
+          "path": "skills/china-legal-research/references/11-enterprise-detail.md",
+          "sha256": "50ad3f0fab8b0ceeaf7d34be82f4bfb4a2086ed0f9f7f5318b7ca543735c7edf"
+        },
+        {
+          "path": "skills/china-legal-research/references/12-hall-detect.md",
+          "sha256": "0865bb0a7e724262e7005cb11216e4cf7e402dff5ccec57408b93067f6cf8a85"
+        },
+        {
+          "path": "skills/china-legal-research/references/13-enterprise-search-lightweight.md",
+          "sha256": "c217d6fc55a82a2bc3c9b5f3bde8563b43d4e8253d2db1253f75c7783e254253"
+        },
+        {
+          "path": "skills/china-legal-research/references/14-enterprise-base-info.md",
+          "sha256": "aa103acfcf20a40d0efb38e9c3ee9b29eddb7fd20a5420450f295f7a90aec998"
+        },
+        {
+          "path": "skills/china-legal-research/references/15-enterprise-aggregation-summary.md",
+          "sha256": "91e1cf5b3c1cd75d18211d51a4aafff21129f43f29d47925b835a0e72461fd1f"
+        },
+        {
+          "path": "skills/china-legal-research/references/16-enterprise-out-invest.md",
+          "sha256": "66820c61829e70c78dc045a2b419a81a535c9d880f60d5bc15a74f6a458025a1"
+        },
+        {
+          "path": "skills/china-legal-research/references/17-enterprise-brand.md",
+          "sha256": "0e6d5508ba33181d841caaa3526a5353d9af6e0888f301c56a203ab096e0157a"
+        },
+        {
+          "path": "skills/china-legal-research/references/18-enterprise-patent.md",
+          "sha256": "b370cc36c94244255370a4e089a8f330a2a7f3ac814d088f50c5d7d3bddbf639"
+        },
+        {
+          "path": "skills/china-legal-research/references/19-enterprise-soft-right.md",
+          "sha256": "01284da8337bc31ff0801973cd775f0d76f6e207b30a07053d1d55d10c3a3c6c"
+        },
+        {
+          "path": "skills/china-legal-research/references/20-enterprise-works-right.md",
+          "sha256": "2586652430205764f8adc6a4ed5901313994faa669672039ff74eeab06e2c9b0"
+        },
+        {
+          "path": "skills/china-legal-research/references/21-enterprise-icp.md",
+          "sha256": "ae571d6ef7d250589be8837c1edabe23ec7bd138eedee4daa0ada9e09289d4c2"
+        },
+        {
+          "path": "skills/china-legal-research/references/22-enterprise-change-info.md",
+          "sha256": "7e3a2e5e5edbbc39b92685f385465f9525ba503a443686ba11a514ed6212a4c7"
+        },
+        {
+          "path": "skills/china-legal-research/references/23-enterprise-writ-agg.md",
+          "sha256": "1ec7c428a41c6c21a184705f0e2237f32d6bedbf5a83c338e17768dfa3d71f06"
+        },
+        {
+          "path": "skills/china-legal-research/references/24-enterprise-writ-list.md",
+          "sha256": "cac26960f0b0c62b2f8021025de854692cbf64ba6f2f06aa0bbaccabb8bf6987"
+        },
+        {
+          "path": "skills/china-legal-research/references/25-enterprise-court-session-notice.md",
+          "sha256": "391b9006a4b0f1bcd3e36fc11d4177e535747fff6aae26e48128250b25d102f8"
+        },
+        {
+          "path": "skills/china-legal-research/references/26-enterprise-court-notice.md",
+          "sha256": "3d74b4cc851bbf8265c4a0e35d2484135b626c8bf08dbcc7321fa1f9ae5531f3"
+        },
+        {
+          "path": "skills/china-legal-research/references/27-enterprise-executions.md",
+          "sha256": "e326185c03d65f7f6b948cef39ec387936d08a41b43ad6255aade19eba3fe1e2"
+        },
+        {
+          "path": "skills/china-legal-research/references/28-enterprise-executed-person.md",
+          "sha256": "5d6089d4feac2c74c176b16b06cbc7af11ead4df9c9e067cab9e4e7f1846279d"
+        },
+        {
+          "path": "skills/china-legal-research/references/29-enterprise-frozen-equity.md",
+          "sha256": "c11e19de608fd0f5b45ad1e1147171cadbe338fdee5bb69369072bdeebf1a254"
+        },
+        {
+          "path": "skills/china-legal-research/references/30-enterprise-punishment.md",
+          "sha256": "c5dae10490ab12af4e1c9bcbdec3f360f45337df84484a3b6bc56401bd890ba1"
+        },
+        {
+          "path": "skills/china-legal-research/references/31-enterprise-pledge.md",
+          "sha256": "1053f2ea756264eeea97a331eb07ae48432341f97ddb87cecf62cc6da52ced78"
+        },
+        {
+          "path": "skills/china-legal-research/references/32-enterprise-guaranty.md",
+          "sha256": "4f0866fdac0792e7fd1e195c6a672f3421b1e2630dabf64bb72ac0510f913803"
+        },
+        {
+          "path": "skills/china-legal-research/references/33-enterprise-abnormal-operation.md",
+          "sha256": "ccfd2183d1d6c72ab5b240c1a284e43aa4fc035194cafce903dde1bc3048df09"
+        },
+        {
+          "path": "skills/china-legal-research/references/34-enterprise-corporate-tax.md",
+          "sha256": "bd77409f8db15a6861d20314610ba759d10259b215b38600f471dbe500c77026"
+        },
+        {
+          "path": "skills/china-legal-research/references/35-enterprise-serious-illegal.md",
+          "sha256": "4ee220c8d1eba0b28a9354f53a9075946880db51cf18c001f7004d5d29286892"
+        },
+        {
+          "path": "skills/china-legal-research/references/MANIFEST.json",
+          "sha256": "7b1d94d73fce3d05c9505eb9261176c0b78eddc4177171d083aaf0ca3d3d63a0"
+        },
+        {
+          "path": "skills/china-legal-research/scripts/MANIFEST.json",
+          "sha256": "794cf08e2e42f11c618d3593dded5255492f6d6a455a39dde34142ffb87c9dc0"
+        },
+        {
+          "path": "skills/china-legal-research/scripts/updater.py",
+          "sha256": "a0e5fa72faa597f997822362272cd441f43adcc01542e555a3be3d71709a694d"
+        },
+        {
+          "path": "skills/china-legal-research/scripts/yd_search.py",
+          "sha256": "be3282b5139b493e77a4190844ea160d43c25407a2a4d5be2f6e81b1d83b4067"
+        },
+        {
+          "path": "skills/china-legal-research/SKILL.md",
+          "sha256": "d03952ae63ecc8dee174453ef2b504f8b85aa43e1ca261b6f55f30d1ffa07235"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "executing-marketing-campaigns-marketing-campaign-expert",
+      "source": "bundled",
+      "sourcePackage": "executing-marketing-campaigns",
+      "sourceAgent": "agents/marketing-campaign-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "策动动",
+      "profession": "营销活动策划专家",
+      "categoryId": "05-MarketingGrowth",
+      "description": "策划、创建和优化全渠道营销活动，包括内容策略、社交媒体、邮件营销和广告投放",
+      "tags": [
+        "营销战役",
+        "活动执行",
+        "效果评估"
+      ],
+      "quickPrompts": [
+        "帮我策划一个新产品上市的营销活动方案",
+        "制定营销活动执行方案和预算分配",
+        "设计营销活动效果评估和复盘方案"
+      ],
+      "roleFile": "executing-marketing-campaigns-marketing-campaign-expert/role.md",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "cd7c247754269bdf21a4ded0120dcaee0e6f9c19ea1b67d518df461834a13904",
+      "files": [
+        {
+          "path": "role.md",
+          "sha256": "86a948cc4b15cbfa5c3ae84bcef8fec36133656a8657b73fa961957264259405"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fbsir-beike-yi-fbsir-beike-yi",
+      "source": "bundled",
+      "sourcePackage": "fbsir-beike-yi",
+      "sourceAgent": "agents/fbsir-beike-yi.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "福帮手",
+      "profession": "备课易",
+      "categoryId": "09-OperationsHR",
+      "description": "在本地备课工作区读懂教材与旧稿，比较教学方案，写回可编辑成果并保留复核与复用线索。",
+      "tags": [
+        "教学设计决策",
+        "本地材料理解",
+        "可复核成果交付"
+      ],
+      "quickPrompts": [
+        "我在本地备课工作区里有教材或旧教案。请先读取我指定的材料，告诉我你理解的教学问题，再给出不超过三个可比较的教学方案。",
+        "请根据我指定的教材页和旧教案，先做一张材料理解卡，再只改教学目标、课堂活动和评价不一致的一个关键环节，保留其他内容不动。",
+        "我已经选定教学方案，请生成一个可编辑的教案草稿、教师复核清单和唯一下一步，并写回本地工作区的新版本，不要覆盖原文件。"
+      ],
+      "roleFile": "fbsir-beike-yi-fbsir-beike-yi/role.md",
+      "avatarFile": "fbsir-beike-yi-fbsir-beike-yi/avatar.jpg",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "9d0b6c49955676ce987d63f79cd26e5c0be32dacd670598bc4385d299b90f073",
+      "files": [
+        {
+          "path": "avatar.jpg",
+          "sha256": "9bd60660e65e961829362c0a7636794a3c183844134977dad7057c82331dde24"
+        },
+        {
+          "path": "role.md",
+          "sha256": "e1ccfcdc641bcb92a41bd7d530b37103fdc480a77c669dffa9bd6bcfcaffc3f2"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fbsir-board-secretary-assistant-fbsir-board-secretary-assistant",
+      "source": "bundled",
+      "sourcePackage": "fbsir-board-secretary-assistant",
+      "sourceAgent": "agents/fbsir-board-secretary-assistant.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "福帮手",
+      "profession": "董秘助手",
+      "categoryId": "11-SecurityCompliance",
+      "description": "面向公告、路演、投资者问答、互动回复和沟通稿，在对外使用前做合规红队审查并给出审批下一步。",
+      "tags": [
+        "信息披露合规",
+        "投资者关系",
+        "合规红队"
+      ],
+      "quickPrompts": [
+        "请对这段路演问答做合规红队审查，重点挑出内幕信息、选择性披露和前瞻性表述风险。",
+        "请检查这份公告草稿的补证缺口、问题片段和更稳妥的对外表述。",
+        "请把这份投资者沟通稿整理成合规红队卡和审批交接清单。"
+      ],
+      "roleFile": "fbsir-board-secretary-assistant-fbsir-board-secretary-assistant/role.md",
+      "avatarFile": "fbsir-board-secretary-assistant-fbsir-board-secretary-assistant/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "1d75a85c3cd52ab52863b1081c50c54c99f3f99f74e0e39e9c1a70d4961c0856",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "8d3b9b760b7805d59d7e67e8d6ba2f21044808841647f80228fbcbd4407dc69f"
+        },
+        {
+          "path": "role.md",
+          "sha256": "5249294e031a0ce113e7b6c294eb383c2fb00065f18f3dd496f6c2935a44a680"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fbsir-industry-scene-researcher-fbsir-industry-scene-researcher",
+      "source": "bundled",
+      "sourcePackage": "fbsir-industry-scene-researcher",
+      "sourceAgent": "agents/fbsir-industry-scene-researcher.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "行业场景研究员",
+      "profession": "行业场景研究员",
+      "categoryId": "12-IndustryConsultant",
+      "description": "围绕一个行业场景定位关键工作流缺口，并交付补位卡、3天行动计划、项目动作执行包和下一步建议。",
+      "tags": [
+        "行业调研",
+        "流程补位",
+        "行动包"
+      ],
+      "quickPrompts": [
+        "我在【行业】做【角色】，当前目标是【目标】。请先找出 3 个最值得 AI 补位的工作流缺口，选出最高价值的 1 个，并给我一张场景补位卡和唯一下一步。",
+        "下面是我的行业/客户/竞品/政策/项目材料：【粘贴材料】。请先做候选缺口评分，标清证据与置信度，再把最高价值场景整理成 3 天试点行动包。",
+        "请基于上一轮行业场景判断继续推进，把已选缺口拆成团队今天能执行的 Day 1 行动清单，写清负责人、输入、输出、验收和唯一 CTA。"
+      ],
+      "roleFile": "fbsir-industry-scene-researcher-fbsir-industry-scene-researcher/role.md",
+      "avatarFile": "fbsir-industry-scene-researcher-fbsir-industry-scene-researcher/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "f7678c2f44391ebc41c8d6b2416ad81fc2f4adefe3c517287e5a84cd7e08055e",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "6892561c0ed7ee4caebdc00f341f54332f578c5d25e00d2257d397ce1b3f212d"
+        },
+        {
+          "path": "role.md",
+          "sha256": "253301dacc69add7ac29cd10f91fc800773f638896e7e25ed10e6ede1b83e87a"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fbsir-mom-dialogue-expert-fbsir-mom-dialogue-expert",
+      "source": "bundled",
+      "sourcePackage": "fbsir-mom-dialogue-expert",
+      "sourceAgent": "agents/fbsir-mom-dialogue-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "福帮手",
+      "profession": "妈妈问答",
+      "categoryId": "06-ContentCreative",
+      "description": "整理与妈妈有关的照片、视频、录音、手稿和家庭资料，生成可追溯的故事卡、生活轨迹、追问与书稿。",
+      "tags": [
+        "家庭资料整理",
+        "妈妈故事",
+        "故事编纂"
+      ],
+      "quickPrompts": [
+        "整理当前工作区中与妈妈有关的生活资料，先盘点素材、识别人物关系和生活轨迹，再生成首批故事卡、待确认事项和下一步追问。",
+        "分析这些照片、视频或录音，按来源整理人物、对话、事件、时间码、待确认事项和家人追问。",
+        "把已确认资料编成妈妈主轴的生活轨迹、大纲和一章可编辑样稿，保留家人补充与来源索引。"
+      ],
+      "roleFile": "fbsir-mom-dialogue-expert-fbsir-mom-dialogue-expert/role.md",
+      "avatarFile": "fbsir-mom-dialogue-expert-fbsir-mom-dialogue-expert/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "a3134b29a623afedac62c0cb3bbe795d68aa44b02ef18979e2248c84c6087e65",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "cefae0bfb260e48d2183ca9e0b7490fc625efe76ddbfca7b208b0f6bed18ed33"
+        },
+        {
+          "path": "role.md",
+          "sha256": "abacd8058eea5213e7edd3148221ca88bdd2a76593145ff8491f1e16eb39ab73"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fbsir-super-independent-board-fbsir-super-independent-board",
+      "source": "bundled",
+      "sourcePackage": "fbsir-super-independent-board",
+      "sourceAgent": "agents/fbsir-super-independent-board.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "福帮手",
+      "profession": "超级独董会",
+      "categoryId": "12-IndustryConsultant",
+      "description": "单一AI独立决策审议官，非法定董事会；挑战偏见、核验证据，交付可执行、可复审的决策产物。",
+      "tags": [
+        "独立审议",
+        "重大决策",
+        "决策交付"
+      ],
+      "quickPrompts": [
+        "我正在面对一个重要决定。请直接给我独立判断、最强反方、证据缺口、成立与失效条件，以及一个可逆的下一步；不要先给长问卷。",
+        "请审查这份材料，分开事实、推断和未知，指出什么证据会推翻当前建议，并做成一页决策图。",
+        "我在方案A与B之间犹豫。请选择最合适的决策方式，比较不可逆风险、可验证实验和停止条件，再给我一个行动包。"
+      ],
+      "roleFile": "fbsir-super-independent-board-fbsir-super-independent-board/role.md",
+      "avatarFile": "fbsir-super-independent-board-fbsir-super-independent-board/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "ceace6124020c9f1c5a5766d5e595a474efeea4f63c6023e6bcb355e1fc771df",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "1e11ba2ee25f8d9a64d7465fc23f7015ac635832f114cee8f3e6038e3fbabcc1"
+        },
+        {
+          "path": "role.md",
+          "sha256": "c15e24fb8544d8ffdfb4751c010962a776ad4b9690d4ba780be38a756b986feb"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fbsir-super-partner-fbsir-super-partner",
+      "source": "bundled",
+      "sourcePackage": "fbsir-super-partner",
+      "sourceAgent": "agents/fbsir-super-partner.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "超级合伙人|魔镜行动",
+      "profession": "超级合伙人|魔镜行动",
+      "categoryId": "12-IndustryConsultant",
+      "description": "带上目标或真实材料，立即得到可使用成品；宿主能力可用且获授权时执行并回执，再做72小时裁决。",
+      "tags": [
+        "近期执行",
+        "决策",
+        "真实材料"
+      ],
+      "quickPrompts": [
+        "如果这是没有目标、没有材料的首次启动，不搜索、不写文件；先交付一张可填写的\"魔镜行动启动卡\"，包含目标、期限、已有材料、对象/渠道和成功信号，最后只问我现在最想在72小时内推进什么。否则立即完成第一份可直接使用的成品；只有已授权且安全的宿主动作才执行并验证。只保留一个动作和一个72小时裁决，未明确选择时默认使用脑暴狂。魔镜是思考模式。",
+        "用材料红队审视我的附件，现在直接返回已改好的段落或替换稿，并分开事实、推断、未知和验证依据。",
+        "用祖传变现大师，现在直接返回可发送的报价或邀约文案，再给出一个经授权的最小动作和72小时付费价值裁决。"
+      ],
+      "roleFile": "fbsir-super-partner-fbsir-super-partner/role.md",
+      "avatarFile": "fbsir-super-partner-fbsir-super-partner/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "8e1d1ebeb45f201542d3ef6b5c924e9a304bac53e2a87d29af3f93a60e255ca8",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "1386fd1cde7dff9607120bf14d308170b46ac188d50e071cbe1078dd7cc26fa4"
+        },
+        {
+          "path": "role.md",
+          "sha256": "46fa3a68e09e115cf9607b76a7c78e5ed25949b8c99e47014fd345b9e5b56d46"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "finance-finance-accounting-expert",
+      "source": "bundled",
+      "sourcePackage": "finance",
+      "sourceAgent": "agents/finance-accounting-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "记账账",
+      "profession": "财务会计专家",
+      "categoryId": "08-FinanceInvestment",
+      "description": "财务会计工具集：月末结账、日记账分录、账户核对、财务报表生成、差异分析和 SOX 审计支持",
+      "tags": [
+        "财务会计",
+        "账务处理",
+        "报表编制"
+      ],
+      "quickPrompts": [
+        "帮我准备这个月的月末结账清单",
+        "制定月末结账和关账流程",
+        "处理会计分录和科目核算"
+      ],
+      "roleFile": "finance-finance-accounting-expert/role.md",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "f339f050bc04f083082785dacf2db95a33dc246f84493f4d3e2e274c07f79625",
+      "files": [
+        {
+          "path": "role.md",
+          "sha256": "9b40eb1cc5b8df8d6a98fd01115b0c4ba7e5dbe6d10fe259e5c0fa64b0ac9682"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gpt-researcher-team-research-chief-editor",
+      "source": "bundled",
+      "sourcePackage": "gpt-researcher-team",
+      "sourceAgent": "agents/research-chief-editor.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "深度研究团队",
+      "profession": "深度研究团队",
+      "categoryId": "04-DataAI",
+      "description": "深度研究报告输出，7角色5阶段聚合多源信息，经审稿修订循环输出带引用的专业报告",
+      "tags": [
+        "深度调研",
+        "报告撰写",
+        "多源研究"
+      ],
+      "quickPrompts": [
+        "帮我深度调研下AI Agent在企业级应用中的发展趋势",
+        "快速调研一个行业或技术方向",
+        "生成带引用来源的专业研究报告"
+      ],
+      "roleFile": "gpt-researcher-team-research-chief-editor/role.md",
+      "avatarFile": "gpt-researcher-team-research-chief-editor/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "5849561aa81e883e1a369d124b04b4415fe2ed41614171aef678d737b762954e",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "0775636d692aac575d6279a2211acfa79162913d1de9a78d8c21d6ea76a013e4"
+        },
+        {
+          "path": "role.md",
+          "sha256": "06dd0eb33a145e5109f90054ab85047f2a3b26698effcf8bafbbe492bbf8b48d"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "industrial-park-investment-attraction-expert-industrial-park-investment-attraction-expert",
+      "source": "bundled",
+      "sourcePackage": "industrial-park-investment-attraction-expert",
+      "sourceAgent": "agents/industrial-park-investment-attraction-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "福帮手",
+      "profession": "产业园招商专家",
+      "categoryId": "07-SalesCommerce",
+      "description": "仅用公开资料，按园区目标找对企业，逐家核验来源、适配理由、反证与未知，快速形成可行动名单。",
+      "tags": [
+        "目标企业发现",
+        "园企适配决策",
+        "公开证据核验"
+      ],
+      "quickPrompts": [
+        "我想为园区找目标企业。请先用通俗语言确认园区与载体情况、产业方向和本轮任务，只询问会改变企业池、硬约束或任务目标的最小阻断信息；不要为了限制问题数量而猜测。数量由我明确指定；未指定时，用可核验的链节、角色、区域或其他覆盖要求定义目标，不自行生成宽区间。“先给N家”只是说明：当用户给出某个数并明确是首批时，该数只控制首批；“约N家”只是说明可调整参考。N是语义占位符，不是默认值，两者均不自动成为完成条件。不要展示内部术语。收到后仅用公开资料，先交付一批关键事实已有可回看公开依据且满足本轮资格条件的企业；有我明确或确认的优先标准时才按业务优先，否则只用稳定展示顺序并单列核验顺序。逐家说明并去重企业注册主体，给出适配理由、不利或相反信息、待确认项和公开来源；只有确有必要且有这些依据时，才给出一个或多个核验动作，否则明确没有剩余动作。",
+        "围绕我指定的产业链环节、目标区域、载体条件和本次目标，仅用公开资料寻找企业。请先交付一批关键事实已有可回看公开依据且满足本轮资格条件的企业；有我明确或确认的优先标准时才按业务优先，否则只用稳定展示顺序并单列核验顺序。逐家确认并去重企业注册主体，标明关键依据、不利或相反信息、未知和园企适配理由；只有确有必要且有这些依据时，才给出一个或多个核验动作，否则明确没有剩余动作。",
+        "请审计我现有的企业清单：确认并去重企业注册主体，复核公开依据是否仍有效和园企适配，并让每个输入项都有合格、观察、排除，或“未解析但已给依据和原因”的结论。有我明确或确认的优先标准时才按业务优先，否则只用稳定展示顺序并单列核验顺序；说明排除理由、未解析项、未覆盖范围和补证建议。"
+      ],
+      "roleFile": "industrial-park-investment-attraction-expert-industrial-park-investment-attraction-expert/role.md",
+      "avatarFile": "industrial-park-investment-attraction-expert-industrial-park-investment-attraction-expert/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "9669a25d32fe58abc4e9cc7c875547cf8675a33602b05f7bd5163c4aad84f3de",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "5a1e2dcad062700d28d1390105c797f8793c40a25576e34880647b4bec126ed9"
+        },
+        {
+          "path": "role.md",
+          "sha256": "6677d7615684440b301917dad9b002a8f2a84e5f35b9f3ad4b0cc9369c06c026"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "law-student-coach-law-student-coach",
+      "source": "bundled",
+      "sourcePackage": "law-student-coach",
+      "sourceAgent": "agents/law-student-coach.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "法学生陪练",
+      "profession": "法学学习教练",
+      "categoryId": "11-SecurityCompliance",
+      "description": "面向法学生的学习陪练，训练苏格拉底问答、案例摘要、IRAC、课程大纲和律考复习。",
+      "tags": [
+        "苏格拉底训练",
+        "IRAC练习",
+        "考试备考"
+      ],
+      "quickPrompts": [
+        "用苏格拉底方式考我这个案例，不要直接给答案",
+        "帮我根据课堂笔记搭建课程大纲",
+        "批改我的 IRAC 答案并告诉我怎么改进"
+      ],
+      "roleFile": "law-student-coach-law-student-coach/role.md",
+      "avatarFile": "law-student-coach-law-student-coach/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "316bf450cf6e83a9ea8be33c6a96f7f39164ec3de665be8e518af1bb52d3f26d",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "55aff8d87943f53ca635a17bb95c6e4a8c26a2956ef217db7b28f1bf138ec93e"
+        },
+        {
+          "path": "role.md",
+          "sha256": "0113f9213acd259ed1d30c44b3d0bea88fdd8cfc9e49f55329820c68aa499a8b"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "legal-builder-hub-legal-builder-hub",
+      "source": "bundled",
+      "sourcePackage": "legal-builder-hub",
+      "sourceAgent": "agents/legal-builder-hub.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "法律技能运营官",
+      "profession": "法律技能治理专家",
+      "categoryId": "11-SecurityCompliance",
+      "description": "面向法律运营和技能开发者的治理助手，评估技能来源、工具权限、新鲜度、许可证和信任边界。",
+      "tags": [
+        "技能治理",
+        "信任层",
+        "法律运营"
+      ],
+      "quickPrompts": [
+        "帮我评估这个法律技能是否安全、可靠，是否适合我们的环境",
+        "设计法律技能采用前的审查清单",
+        "审计这些法律技能的新鲜度、许可证和隐藏风险"
+      ],
+      "roleFile": "legal-builder-hub-legal-builder-hub/role.md",
+      "avatarFile": "legal-builder-hub-legal-builder-hub/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "7e84a90b8ddca0ee12aefc2a153d038102c138005c6198f78c43b8691447ad68",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "fd102fabc7249b5ca108089b3602c4aa32eba72cad41ad41c983010021e5dbd0"
+        },
+        {
+          "path": "role.md",
+          "sha256": "7a23974a468664d8e602d07569f36e50f2243d4ca8c21698ae16b59f04de3a4e"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "legal-clinic-supervisor-legal-clinic-supervisor",
+      "source": "bundled",
+      "sourcePackage": "legal-clinic-supervisor",
+      "sourceAgent": "agents/legal-clinic-supervisor.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "法律诊所督导",
+      "profession": "法律诊所督导顾问",
+      "categoryId": "11-SecurityCompliance",
+      "description": "面向法学院诊所导师的监督助手，支持客户接待、研究启动、期限追踪、学生入职和学期交接。",
+      "tags": [
+        "诊所接待",
+        "学生监督",
+        "案件交接"
+      ],
+      "quickPrompts": [
+        "帮我为一个新的诊所案件搭建有监督的客户接待流程",
+        "为这个学期的法律诊所准备学生入职流程",
+        "为在办诊所案件生成学期交接清单"
+      ],
+      "roleFile": "legal-clinic-supervisor-legal-clinic-supervisor/role.md",
+      "avatarFile": "legal-clinic-supervisor-legal-clinic-supervisor/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "555ee2dc628da3ba0bc7d3c199010ac0c358ee5f0fa12dfacc5e7d9286ffb499",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "51e01a1571744fdbe0b8df5715ec466f099e554a2d06810f9b1a308cda3c9fcc"
+        },
+        {
+          "path": "role.md",
+          "sha256": "bdeaba84be9b899fd456999e28c0d0919f2a2d8fa67d344a631024fa82652590"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "litigation-legal-litigation-legal-strategist",
+      "source": "bundled",
+      "sourcePackage": "litigation-legal",
+      "sourceAgent": "agents/litigation-legal-strategist.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "诉讼法务专家",
+      "profession": "诉讼支持顾问",
+      "categoryId": "11-SecurityCompliance",
+      "description": "面向诉讼律师的案件支持专家，梳理案件、证据、时间线、质证准备、索赔图表和文书草稿。",
+      "tags": [
+        "诉讼支持",
+        "证据时间线",
+        "文书准备"
+      ],
+      "quickPrompts": [
+        "帮我受理这个诉讼事项，识别期限、证据缺口和律师审阅点",
+        "根据这些诉讼材料整理时间线和问题清单",
+        "准备质证提纲，并标出关联文件和缺失事实"
+      ],
+      "roleFile": "litigation-legal-litigation-legal-strategist/role.md",
+      "avatarFile": "litigation-legal-litigation-legal-strategist/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "2c9255b1f528097d29797f045be46642c554ff13909c3d66572c7e6b2f461e3e",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "e1f230c7100c2e6a589c0227baae95ac0316447f7c4076d67b05da1451017699"
+        },
+        {
+          "path": "role.md",
+          "sha256": "6483f75b84f3655f7514cb8d8ae4e9f235e0dad4a3f0d2a77ae901f1843fbe06"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "long-manuscript-expert-long-manuscript-expert",
+      "source": "bundled",
+      "sourcePackage": "long-manuscript-expert",
+      "sourceAgent": "agents/long-manuscript-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "福帮手",
+      "profession": "长文档写作与改稿专家",
+      "categoryId": "06-ContentCreative",
+      "description": "把提纲、访谈、旧稿和零散素材整理成结构清晰的长文档，支持章节续写、限定范围改稿与成稿交付前检查。",
+      "tags": [
+        "长文档工程",
+        "多场景创作",
+        "证据与审校"
+      ],
+      "quickPrompts": [
+        "请用这些材料启动一份长文档：先判断最合适的文档类型，再给出手稿启动卡，包含建议目录、章节任务、实质性开篇、主要风险、一个推荐的下一步和可复制的续写口令。",
+        "请只续写或修改我指定的章节或段落，保留未选范围的原文，给出修改后的正文、实质变更说明和一个下一步。",
+        "请检查这份成稿的结构、连续性、可读性和交付准备；没有真实机器回执时，请将质量结论明确标为建议性意见。"
+      ],
+      "roleFile": "long-manuscript-expert-long-manuscript-expert/role.md",
+      "avatarFile": "long-manuscript-expert-long-manuscript-expert/avatar.jpg",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "da735f32c2bb8c18d4c9eb89e762a825f58393a8ec01ea6a090fc6d71727f426",
+      "files": [
+        {
+          "path": "avatar.jpg",
+          "sha256": "9bd60660e65e961829362c0a7636794a3c183844134977dad7057c82331dde24"
+        },
+        {
+          "path": "role.md",
+          "sha256": "91bf5757c96503485d247d1766f3732211a69ad13710dc4353fd9aa906bd659f"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "mibao-media-archivist-mibao-media-archivist",
+      "source": "bundled",
+      "sourcePackage": "mibao-media-archivist",
+      "sourceAgent": "agents/mibao-media-archivist.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "秘宝",
+      "profession": "AI影像资产整理专家",
+      "categoryId": "04-DataAI",
+      "description": "在不改动原件的前提下，完成影像盘点、严格SHA-256、精确重复识别、本地索引检索与可验收报告",
+      "tags": [
+        "影像盘点",
+        "精确重复识别",
+        "本地索引检索"
+      ],
+      "quickPrompts": [
+        "扫描我授权的影像文件夹，执行严格 SHA-256，生成精确重复项清单、本地检索索引和可打开的盘点报告",
+        "在已有秘宝项目中检索我指定的关键词。返回相对路径、稳定资产ID、证据引用和命中摘要",
+        "继续盘点我已有的秘宝项目，更新新增或变化文件的严格哈希、重复项、索引和报告，原件不动"
+      ],
+      "roleFile": "mibao-media-archivist-mibao-media-archivist/role.md",
+      "avatarFile": "mibao-media-archivist-mibao-media-archivist/avatar.jpg",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "e75a5f80cd75d071aad84a69c291b944125287bfa48df5f90fad2cbaf5b362fb",
+      "files": [
+        {
+          "path": "avatar.jpg",
+          "sha256": "c3187534e1086f6bad8114259964cfbb81069f66f4b32e91daa662e006d64455"
+        },
+        {
+          "path": "role.md",
+          "sha256": "4f92bf52dda9e36c7bbe13013379b956ec60741796eb08f36d186999d874f403"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "mvp-dev-expert-team-mvp-dev-expert-team-team-lead",
+      "source": "bundled",
+      "sourcePackage": "mvp-dev-expert-team",
+      "sourceAgent": "agents/mvp-dev-expert-team-team-lead.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "MVP开发专家团",
+      "profession": "MVP开发专家团",
+      "categoryId": "02-Engineering",
+      "description": "说出你的想法，8位专家从调研、设计、编码、测试到部署全流程协作，帮你快速开发MVP产品",
+      "tags": [
+        "MVP开发",
+        "全栈开发",
+        "快速原型"
+      ],
+      "quickPrompts": [
+        "我想从零做一个团队协作工具",
+        "帮我开发一个电商小程序",
+        "我有个产品想法，帮我做成MVP"
+      ],
+      "roleFile": "mvp-dev-expert-team-mvp-dev-expert-team-team-lead/role.md",
+      "avatarFile": "mvp-dev-expert-team-mvp-dev-expert-team-team-lead/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "31aee2d3be33118dccab5afa3ee8728a0f026e086f6367af7027e18a8244b39f",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "b54f9ba3215f51b74228d50b86197a0f913c5ff15b1d1e24ec6ba986168b6000"
+        },
+        {
+          "path": "role.md",
+          "sha256": "49eb3115136434cac65c8138a220b033014e5a173811e709686703cca9252297"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "nuwa-nuwa",
+      "source": "bundled",
+      "sourcePackage": "nuwa",
+      "sourceAgent": "agents/nuwa.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "女娲",
+      "profession": "思维蒸馏师",
+      "categoryId": "04-DataAI",
+      "description": "女娲蒸馏知名人物的思维方式为可运行视角。给定名字（如乔布斯、芒格、纳瓦尔、马斯克），运行多路调研→三重验证提炼→技能构建→质量验证四阶段流水线，用其认知框架分析你的问题",
+      "tags": [
+        "思维蒸馏",
+        "认知框架",
+        "心智模型"
+      ],
+      "quickPrompts": [
+        "蒸馏乔布斯的思维方式",
+        "马斯克会怎么看这个决策？",
+        "蒸馏一个产品设计视角"
+      ],
+      "roleFile": "nuwa-nuwa/role.md",
+      "avatarFile": "nuwa-nuwa/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "1ffa99ec208dfbc3b0781b365570ed57b4c294b2098546d232d682b08282fb72",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "2964e3a7000be20b7c0c38f8e358029162f3b1b1321bc49870f01bd404a6e2cf"
+        },
+        {
+          "path": "role.md",
+          "sha256": "21e3141e2d97b5091a7fd283c92a4f998196f1b1bc6ea84fea2776e3c106a946"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "openspec-doc-team-doc-team-lead",
+      "source": "bundled",
+      "sourcePackage": "openspec-doc-team",
+      "sourceAgent": "agents/doc-team-lead.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "专业文档生成团队",
+      "profession": "专业文档生成团队",
+      "categoryId": "10-ProjectQuality",
+      "description": "企业级长文档生成，4角色协作完成深度调研、大纲规划、内容撰写与合规审核全流程",
+      "tags": [
+        "文档团队",
+        "规格文档",
+        "文档审计"
+      ],
+      "quickPrompts": [
+        "帮我生成一份建筑施工图设计说明",
+        "将需求转化为完整的规格说明文档",
+        "搭建文档团队协作和质量审核流程"
+      ],
+      "roleFile": "openspec-doc-team-doc-team-lead/role.md",
+      "avatarFile": "openspec-doc-team-doc-team-lead/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "247276919c8e47d1f968a0ce1db33028b029a9f6b04b7bbfe42598daf015fe07",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "11dacc50a8d4c0c57fe52acbc00ce1ae784b387557e4c86a0cf7b8de783dfb33"
+        },
+        {
+          "path": "role.md",
+          "sha256": "f445267d7fa5ab237cb502cc3896e5ac077d11c93203dea6196a6cab098f0ec3"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "personal-knowledge-architect-personal-knowledge-architect",
+      "source": "bundled",
+      "sourcePackage": "personal-knowledge-architect",
+      "sourceAgent": "agents/personal-knowledge-architect.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "个人知识库架构师",
+      "profession": "个人知识库架构师",
+      "categoryId": "04-DataAI",
+      "description": "精通卡片盒、PARA、LYT 等方法论，结合 Obsidian 等工具把信息搭成可检索的第二大脑。",
+      "tags": [
+        "知识管理方法论",
+        "笔记体系设计",
+        "Obsidian/Notion 配置"
+      ],
+      "quickPrompts": [
+        "帮我诊断现在的笔记方式，推荐最适合我的 PKM 路径",
+        "用卡片盒笔记法帮我把这篇读书笔记拆成原子笔记",
+        "按 PARA 框架帮我规划 Obsidian 的文件夹与 MOC 结构"
+      ],
+      "roleFile": "personal-knowledge-architect-personal-knowledge-architect/role.md",
+      "avatarFile": "personal-knowledge-architect-personal-knowledge-architect/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "8a7891d01cb60be3fa93a8d99140ba3a387f14a4c71f66da51395ae503de3e9e",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "591df317859ca73f9e29d64a4daaf9f0e01cb7a6c7bea05feef78d94760925f0"
+        },
+        {
+          "path": "role.md",
+          "sha256": "6eac6f0e2c0a2d344029cdfd857ca0af66a0e17f3678249ef9d6788708d9ce2a"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "private-domain-marketing-expert-private-domain-marketing-expert",
+      "source": "bundled",
+      "sourcePackage": "private-domain-marketing-expert",
+      "sourceAgent": "agents/private-domain-marketing-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "司玉琦",
+      "profession": "私域营销专家",
+      "categoryId": "05-MarketingGrowth",
+      "description": "深谙私域运营增长，盘活现有数据资源、洞察营销机会、实现业绩增长",
+      "tags": [
+        "私域运营",
+        "营销自动化",
+        "会员体系"
+      ],
+      "quickPrompts": [
+        "帮我诊断一下现有的私域存量用户盘子",
+        "为我的会员体系设计分层运营方案",
+        "设计一条沉默用户唤醒的营销自动化旅程"
+      ],
+      "roleFile": "private-domain-marketing-expert-private-domain-marketing-expert/role.md",
+      "avatarFile": "private-domain-marketing-expert-private-domain-marketing-expert/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "afbfa47b77a16c91246ffec231e3ca142ed907a23e28aaf9d157daa1a2d8ca9b",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "3b6fe31ffcd4fe3f6b4c5a967867eac92fd725d63ea8b550e82dfe2405d5ca73"
+        },
+        {
+          "path": "role.md",
+          "sha256": "95905048804c28532c482c4156a3851be7e4e597c9b0552cfa63485cb8d2137a"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "product-management-product-management-expert",
+      "source": "bundled",
+      "sourcePackage": "product-management",
+      "sourceAgent": "agents/product-management-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "产品通",
+      "profession": "产品管理专家",
+      "categoryId": "01-ProductDesign",
+      "description": "产品管理工具集：功能规格编写、路线图规划、利益相关者沟通、用户研究综合、竞品分析和指标追踪",
+      "tags": [
+        "产品管理",
+        "需求规划",
+        "迭代管理"
+      ],
+      "quickPrompts": [
+        "帮我写一份新功能的产品规格文档",
+        "制定产品路线图和迭代规划",
+        "进行竞品分析和用户研究综合"
+      ],
+      "roleFile": "product-management-product-management-expert/role.md",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "root-license-file",
+        "evidence": "LICENSE"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "9288e31b81ce63b90da69eec78d898295922ed641c3a03fe4860b9debc8f3803",
+      "files": [
+        {
+          "path": "role.md",
+          "sha256": "6be3bd79c8912840e118f99357d49fd28af649b9ff6b748031c1e7dfc369207f"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "rum-fullstack-team-rum-team-lead",
+      "source": "bundled",
+      "sourcePackage": "rum-fullstack-team",
+      "sourceAgent": "agents/rum-team-lead.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "腾讯云 RUM 全链路专家团",
+      "profession": "腾讯云 RUM 全链路专家团",
+      "categoryId": "02-Engineering",
+      "description": "腾讯云 RUM 全链路服务：10 大平台 aegis SDK 接入 + WebVitals/异常/接口/资源分析，支持 RUM-APM 联动",
+      "tags": [
+        "前端监控",
+        "RUM 接入",
+        "性能分析"
+      ],
+      "quickPrompts": [
+        "帮我在这个 Vue 3 项目里接入腾讯云 RUM",
+        "分析我 RUM 应用过去 7 天 LCP 最差的 5 个页面",
+        "先把小程序接入 RUM，再分析上报后的 JS 错误趋势"
+      ],
+      "roleFile": "rum-fullstack-team-rum-team-lead/role.md",
+      "avatarFile": "rum-fullstack-team-rum-team-lead/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "16dfa1a5f38d3300d27817868bd91bc5bf1bef1370a466c6c24f468b2ebfe7b1",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "7e50d7405099bd80541fb9b7b196ecf30c44508b67d70881d6109f267bb99092"
+        },
+        {
+          "path": "role.md",
+          "sha256": "b81d0d6b43fe7f7f18b72f266ea84ed90ef89523ed2554a16ccac793421f6fa6"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "smb-compliance-smb-compliance",
+      "source": "bundled",
+      "sourcePackage": "smb-compliance",
+      "sourceAgent": "agents/smb-compliance.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "严守约",
+      "profession": "客户与合规官",
+      "categoryId": "11-SecurityCompliance",
+      "description": "小企业客户与合规官，处理客户反馈、客诉工单、CRM清理和合同风险审查",
+      "tags": [
+        "客户洞察",
+        "合同审查",
+        "合规管理"
+      ],
+      "quickPrompts": [
+        "汇总最近的客户反馈，看看有哪些共性问题。",
+        "审查这份供应商合同，标出风险条款。",
+        "CRM 里一堆重复联系人，清理一下。"
+      ],
+      "roleFile": "smb-compliance-smb-compliance/role.md",
+      "avatarFile": "smb-compliance-smb-compliance/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "333187c664dd2c79488bc80d842ce4772c887427c5ae218f0e7e75a062a06b46",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "7fe8d4c5ee2e8d98d5b3e4a240edce12b5a38a7405925ea7886596edb5159e8f"
+        },
+        {
+          "path": "role.md",
+          "sha256": "e4ae8a7e49c389a0b28b751f3252f4eeac0169ad3cf8fa36b990435376b2b01b"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "smb-finance-smb-finance",
+      "source": "bundled",
+      "sourcePackage": "smb-finance",
+      "sourceAgent": "agents/smb-finance.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "钱守通",
+      "profession": "财务管家",
+      "categoryId": "08-FinanceInvestment",
+      "description": "小企业财务管家，一站式搞定现金流预测、逾期追款、毛利分析、月结对账和税务准备",
+      "tags": [
+        "现金流",
+        "财务分析",
+        "税务准备"
+      ],
+      "quickPrompts": [
+        "未来 8 周的现金流预测，看看工资能不能发出来。",
+        "分析各产品线毛利率，看哪些该涨价、哪些该砍掉。",
+        "整理税务材料，准备交接给会计师。"
+      ],
+      "roleFile": "smb-finance-smb-finance/role.md",
+      "avatarFile": "smb-finance-smb-finance/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "13dcae6a0b967b19e71aeb01309b0d86b689c632eca000913c45343c473c5d76",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "80ce976f3b89b293242e555afbd513407995aa848fdaadf155e6d308242f0cc0"
+        },
+        {
+          "path": "role.md",
+          "sha256": "cd8c0ffbb76b35ec116d5451caa4fb54afd36d700a4d284d3c889fcb2ec6f73b"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "smb-operations-smb-operations",
+      "source": "bundled",
+      "sourcePackage": "smb-operations",
+      "sourceAgent": "agents/smb-operations.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "毕运营",
+      "profession": "组织运营师",
+      "categoryId": "09-OperationsHR",
+      "description": "小企业组织运营师，负责招聘入职、工具初始化和业务快照，让运营不掉链子",
+      "tags": [
+        "招聘入职",
+        "业务快照",
+        "运营管理"
+      ],
+      "quickPrompts": [
+        "看一眼业务快照：现金、销售、待办。",
+        "写一个产品经理的 JD 和面试题。",
+        "周一了，来一份本周重点简报。"
+      ],
+      "roleFile": "smb-operations-smb-operations/role.md",
+      "avatarFile": "smb-operations-smb-operations/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "62ea30583d15671216273b012eb297754feec1f34554575747336a93487f140d",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "bcd7d835843ec08bfd440969bc0029043600326a6afcd872e1cdad859f4b4a69"
+        },
+        {
+          "path": "role.md",
+          "sha256": "5e978f37f6f6cbe0f45e07d7297b85d22086a39f8d84cd996f49e869bff57bad"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "smb-revenue-smb-revenue",
+      "source": "bundled",
+      "sourcePackage": "smb-revenue",
+      "sourceAgent": "agents/smb-revenue.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "甄客来",
+      "profession": "营收增长师",
+      "categoryId": "07-SalesCommerce",
+      "description": "小企业营收增长师，从线索打分到内容策略再到营销活动，一条龙驱动营收增长",
+      "tags": [
+        "线索管理",
+        "内容策略",
+        "营销活动"
+      ],
+      "quickPrompts": [
+        "今天进来的线索打个分排个序，生成电话清单。",
+        "根据销售数据，做下个月的内容策略和发布日历。",
+        "策划并执行一轮新客获取的营销活动。"
+      ],
+      "roleFile": "smb-revenue-smb-revenue/role.md",
+      "avatarFile": "smb-revenue-smb-revenue/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "4c88723fb7af29593c44b72cb0906ed206a9fde94da909e064fd5c52041ad2fd",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "16b48a3672fab2c25a7c4dd11765b47f089141431406d9aa78312f8c7d3a498c"
+        },
+        {
+          "path": "role.md",
+          "sha256": "ed948ec9e4e642bac1fa74663ea23781ac3036aa8a939f98db05bd4a51742c64"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "smb-team-smb-team-lead",
+      "source": "bundled",
+      "sourcePackage": "smb-team",
+      "sourceAgent": "agents/smb-team-lead.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "小企业经营团队",
+      "profession": "经营总管",
+      "categoryId": "12-IndustryConsultant",
+      "description": "经营总管调度四位领域专家，覆盖财务、营收、客户合规和运营，小企业管理一站搞定",
+      "tags": [
+        "小企业管理",
+        "经营管理",
+        "多角色协作"
+      ],
+      "quickPrompts": [
+        "本月经营复盘：现金流、销售进展、客户满意度、团队状态。",
+        "工资快发了但现金可能不够，评估一下缺口和对策。",
+        "看下全盘业务健康：哪些该重点投入、哪些该收缩。"
+      ],
+      "roleFile": "smb-team-smb-team-lead/role.md",
+      "avatarFile": "smb-team-smb-team-lead/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "ed1f822d82ee48f0872d5da4b95d25bb9aeb84e7c1f0f0146db76118d09353c4",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "7c4650f29c23749b633661da2d46667863bf780efe93b9a293a180f30bb9fa11"
+        },
+        {
+          "path": "role.md",
+          "sha256": "708b42db62405495aacb52af87f0541a22f67860c5fcfe2daa5c05e41b76e658"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "trading-agent-trading-team-lead",
+      "source": "bundled",
+      "sourcePackage": "trading-agent",
+      "sourceAgent": "agents/trading-team-lead.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "交易分析团队",
+      "profession": "交易分析团队",
+      "categoryId": "08-FinanceInvestment",
+      "description": "13位专业角色分5阶段协作完成投资分析：技术面、基本面、新闻面、情绪面数据采集 → 多空辩论 → 交易决策 → 三方风险评估 → 最终报告，输出 BUY/SELL/HOLD 建议及完整操作方案",
+      "tags": [
+        "交易策略",
+        "风险管理",
+        "市场分析"
+      ],
+      "quickPrompts": [
+        "帮我分析下茅台基本面和估值",
+        "进行多维度市场技术分析",
+        "评估投资组合风险和收益"
+      ],
+      "roleFile": "trading-agent-trading-team-lead/role.md",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "eb520c6528f2a09bfef96c9375041a071899447d211be797f7c6aa58c66146ea",
+      "files": [
+        {
+          "path": "role.md",
+          "sha256": "d6ed89ea3e898a3c540c7f948540baf3b43ef30f65363b35f77dead6862a66e0"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "tripstar-agent-trip-planner",
+      "source": "bundled",
+      "sourcePackage": "tripstar-agent",
+      "sourceAgent": "agents/trip-planner.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "路小鲜",
+      "profession": "旅游攻略管家",
+      "categoryId": "12-IndustryConsultant",
+      "description": "生活服务管家，一站式搞定行程规划、景点/酒店/天气/预算与美团红包领取",
+      "tags": [
+        "行程规划",
+        "旅行管家",
+        "美团优惠券"
+      ],
+      "quickPrompts": [
+        "帮我规划3天XXX城市行程",
+        "推荐XXX城市好吃的餐厅",
+        "帮我找XXX城市300以内的酒店"
+      ],
+      "roleFile": "tripstar-agent-trip-planner/role.md",
+      "avatarFile": "tripstar-agent-trip-planner/avatar.png",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "2ca88245e3c08f86d9309caadea1cfbad962bb924ba8909157bce0c125a5a567",
+      "files": [
+        {
+          "path": "avatar.png",
+          "sha256": "c5c364693db6988b082b5f70e5b9aad1adf3286135c7f9f86b1748ab9b409cef"
+        },
+        {
+          "path": "role.md",
+          "sha256": "4f8652994d916ef51845bc298a14ee5f65cd9eebc19e426fd62b84757bd0c866"
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "webapp-testing-webapp-testing-expert",
+      "source": "bundled",
+      "sourcePackage": "webapp-testing",
+      "sourceAgent": "agents/webapp-testing-expert.md",
+      "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "displayName": "端测测",
+      "profession": "Web应用测试专家",
+      "categoryId": "10-ProjectQuality",
+      "description": "Web 应用测试助手，引导用户完成 Web 应用的启动、配置和测试流程",
+      "tags": [
+        "Web测试",
+        "端到端测试",
+        "功能验证"
+      ],
+      "quickPrompts": [
+        "帮我测试下这个Web应用",
+        "搭建自动化测试和持续集成流程",
+        "制定Web应用性能和安全测试策略"
+      ],
+      "roleFile": "webapp-testing-webapp-testing-expert/role.md",
+      "skills": [],
+      "requiredCapabilities": [],
+      "license": {
+        "status": "approved",
+        "kind": "plugin-json-license",
+        "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+      },
+      "compatibility": {
+        "agent": "export-ready",
+        "bot": "prompt-only"
+      },
+      "contentSha256": "b7f51de28a3ccec9305b161a9d7fdcc8ea755e28f8a7f21ec326e7e52e0a350c",
+      "files": [
+        {
+          "path": "role.md",
+          "sha256": "04c4b6ee8fbc771362a62c8fdea30bbd41e0e1e542007cedec2ec42e3c09636f"
+        }
+      ]
+    }
+  ]
+}

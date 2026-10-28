@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "cat-network-quality-analyst-cat-network-quality-analyst",
+  "source": "bundled",
+  "sourcePackage": "cat-network-quality-analyst",
+  "sourceAgent": "agents/cat-network-quality-analyst.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "亚伦",
+  "profession": "网络质量分析专家",
+  "categoryId": "02-Engineering",
+  "description": "精通错误分析、性能分析、整体分析、抓包分析、多任务对比分析，自动生成专业分析报告",
+  "tags": [
+    "网络诊断",
+    "云拨测",
+    "性能分析"
+  ],
+  "quickPrompts": [
+    "帮分析一下云拨测任务task-xxxxxxxx最近24小时的错误情况",
+    "帮分析一下task-xxxxxxxx从2026年8月1日到2026年8月7日的性能情况",
+    "帮对任务task-xxxxxxxx北京移动进行抓包分析"
+  ],
+  "roleFile": "cat-network-quality-analyst-cat-network-quality-analyst/role.md",
+  "avatarFile": "cat-network-quality-analyst-cat-network-quality-analyst/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "31aa56204dee77d0d3e7e8ff825f9b1ed972710bf69103944eff4a80af92d6c0",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c5a574a255d3e613dcfea60339b4cdd41f285cc4362a6b23b4004899f5c3aae3"
+    },
+    {
+      "path": "role.md",
+      "sha256": "63e2700aa9d3e86fe3b0d4b21f0e2d6c2da8e69005e9789ee20f07fdb4c3ef09"
+    }
+  ]
+}

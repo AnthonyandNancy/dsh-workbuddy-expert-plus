@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fbsir-industry-scene-researcher-fbsir-industry-scene-researcher",
+  "source": "bundled",
+  "sourcePackage": "fbsir-industry-scene-researcher",
+  "sourceAgent": "agents/fbsir-industry-scene-researcher.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "行业场景研究员",
+  "profession": "行业场景研究员",
+  "categoryId": "12-IndustryConsultant",
+  "description": "围绕一个行业场景定位关键工作流缺口，并交付补位卡、3天行动计划、项目动作执行包和下一步建议。",
+  "tags": [
+    "行业调研",
+    "流程补位",
+    "行动包"
+  ],
+  "quickPrompts": [
+    "我在【行业】做【角色】，当前目标是【目标】。请先找出 3 个最值得 AI 补位的工作流缺口，选出最高价值的 1 个，并给我一张场景补位卡和唯一下一步。",
+    "下面是我的行业/客户/竞品/政策/项目材料：【粘贴材料】。请先做候选缺口评分，标清证据与置信度，再把最高价值场景整理成 3 天试点行动包。",
+    "请基于上一轮行业场景判断继续推进，把已选缺口拆成团队今天能执行的 Day 1 行动清单，写清负责人、输入、输出、验收和唯一 CTA。"
+  ],
+  "roleFile": "fbsir-industry-scene-researcher-fbsir-industry-scene-researcher/role.md",
+  "avatarFile": "fbsir-industry-scene-researcher-fbsir-industry-scene-researcher/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f7678c2f44391ebc41c8d6b2416ad81fc2f4adefe3c517287e5a84cd7e08055e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6892561c0ed7ee4caebdc00f341f54332f578c5d25e00d2257d397ce1b3f212d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "253301dacc69add7ac29cd10f91fc800773f638896e7e25ed10e6ede1b83e87a"
+    }
+  ]
+}

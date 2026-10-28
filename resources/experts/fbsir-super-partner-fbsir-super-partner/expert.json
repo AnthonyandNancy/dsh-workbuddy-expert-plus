@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fbsir-super-partner-fbsir-super-partner",
+  "source": "bundled",
+  "sourcePackage": "fbsir-super-partner",
+  "sourceAgent": "agents/fbsir-super-partner.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "超级合伙人|魔镜行动",
+  "profession": "超级合伙人|魔镜行动",
+  "categoryId": "12-IndustryConsultant",
+  "description": "带上目标或真实材料，立即得到可使用成品；宿主能力可用且获授权时执行并回执，再做72小时裁决。",
+  "tags": [
+    "近期执行",
+    "决策",
+    "真实材料"
+  ],
+  "quickPrompts": [
+    "如果这是没有目标、没有材料的首次启动，不搜索、不写文件；先交付一张可填写的\"魔镜行动启动卡\"，包含目标、期限、已有材料、对象/渠道和成功信号，最后只问我现在最想在72小时内推进什么。否则立即完成第一份可直接使用的成品；只有已授权且安全的宿主动作才执行并验证。只保留一个动作和一个72小时裁决，未明确选择时默认使用脑暴狂。魔镜是思考模式。",
+    "用材料红队审视我的附件，现在直接返回已改好的段落或替换稿，并分开事实、推断、未知和验证依据。",
+    "用祖传变现大师，现在直接返回可发送的报价或邀约文案，再给出一个经授权的最小动作和72小时付费价值裁决。"
+  ],
+  "roleFile": "fbsir-super-partner-fbsir-super-partner/role.md",
+  "avatarFile": "fbsir-super-partner-fbsir-super-partner/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8e1d1ebeb45f201542d3ef6b5c924e9a304bac53e2a87d29af3f93a60e255ca8",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "1386fd1cde7dff9607120bf14d308170b46ac188d50e071cbe1078dd7cc26fa4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "46fa3a68e09e115cf9607b76a7c78e5ed25949b8c99e47014fd345b9e5b56d46"
+    }
+  ]
+}

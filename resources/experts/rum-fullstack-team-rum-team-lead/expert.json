@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "rum-fullstack-team-rum-team-lead",
+  "source": "bundled",
+  "sourcePackage": "rum-fullstack-team",
+  "sourceAgent": "agents/rum-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯云 RUM 全链路专家团",
+  "profession": "腾讯云 RUM 全链路专家团",
+  "categoryId": "02-Engineering",
+  "description": "腾讯云 RUM 全链路服务：10 大平台 aegis SDK 接入 + WebVitals/异常/接口/资源分析，支持 RUM-APM 联动",
+  "tags": [
+    "前端监控",
+    "RUM 接入",
+    "性能分析"
+  ],
+  "quickPrompts": [
+    "帮我在这个 Vue 3 项目里接入腾讯云 RUM",
+    "分析我 RUM 应用过去 7 天 LCP 最差的 5 个页面",
+    "先把小程序接入 RUM，再分析上报后的 JS 错误趋势"
+  ],
+  "roleFile": "rum-fullstack-team-rum-team-lead/role.md",
+  "avatarFile": "rum-fullstack-team-rum-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "16dfa1a5f38d3300d27817868bd91bc5bf1bef1370a466c6c24f468b2ebfe7b1",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7e50d7405099bd80541fb9b7b196ecf30c44508b67d70881d6109f267bb99092"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b81d0d6b43fe7f7f18b72f266ea84ed90ef89523ed2554a16ccac793421f6fa6"
+    }
+  ]
+}

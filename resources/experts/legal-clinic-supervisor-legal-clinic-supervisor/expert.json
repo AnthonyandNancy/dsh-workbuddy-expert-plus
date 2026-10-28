@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "legal-clinic-supervisor-legal-clinic-supervisor",
+  "source": "bundled",
+  "sourcePackage": "legal-clinic-supervisor",
+  "sourceAgent": "agents/legal-clinic-supervisor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "法律诊所督导",
+  "profession": "法律诊所督导顾问",
+  "categoryId": "11-SecurityCompliance",
+  "description": "面向法学院诊所导师的监督助手，支持客户接待、研究启动、期限追踪、学生入职和学期交接。",
+  "tags": [
+    "诊所接待",
+    "学生监督",
+    "案件交接"
+  ],
+  "quickPrompts": [
+    "帮我为一个新的诊所案件搭建有监督的客户接待流程",
+    "为这个学期的法律诊所准备学生入职流程",
+    "为在办诊所案件生成学期交接清单"
+  ],
+  "roleFile": "legal-clinic-supervisor-legal-clinic-supervisor/role.md",
+  "avatarFile": "legal-clinic-supervisor-legal-clinic-supervisor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "555ee2dc628da3ba0bc7d3c199010ac0c358ee5f0fa12dfacc5e7d9286ffb499",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "51e01a1571744fdbe0b8df5715ec466f099e554a2d06810f9b1a308cda3c9fcc"
+    },
+    {
+      "path": "role.md",
+      "sha256": "bdeaba84be9b899fd456999e28c0d0919f2a2d8fa67d344a631024fa82652590"
+    }
+  ]
+}

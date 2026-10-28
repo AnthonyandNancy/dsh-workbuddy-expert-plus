@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "legal-builder-hub-legal-builder-hub",
+  "source": "bundled",
+  "sourcePackage": "legal-builder-hub",
+  "sourceAgent": "agents/legal-builder-hub.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "法律技能运营官",
+  "profession": "法律技能治理专家",
+  "categoryId": "11-SecurityCompliance",
+  "description": "面向法律运营和技能开发者的治理助手，评估技能来源、工具权限、新鲜度、许可证和信任边界。",
+  "tags": [
+    "技能治理",
+    "信任层",
+    "法律运营"
+  ],
+  "quickPrompts": [
+    "帮我评估这个法律技能是否安全、可靠，是否适合我们的环境",
+    "设计法律技能采用前的审查清单",
+    "审计这些法律技能的新鲜度、许可证和隐藏风险"
+  ],
+  "roleFile": "legal-builder-hub-legal-builder-hub/role.md",
+  "avatarFile": "legal-builder-hub-legal-builder-hub/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7e84a90b8ddca0ee12aefc2a153d038102c138005c6198f78c43b8691447ad68",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "fd102fabc7249b5ca108089b3602c4aa32eba72cad41ad41c983010021e5dbd0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7a23974a468664d8e602d07569f36e50f2243d4ca8c21698ae16b59f04de3a4e"
+    }
+  ]
+}

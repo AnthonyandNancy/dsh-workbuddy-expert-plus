@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fbsir-beike-yi-fbsir-beike-yi",
+  "source": "bundled",
+  "sourcePackage": "fbsir-beike-yi",
+  "sourceAgent": "agents/fbsir-beike-yi.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "福帮手",
+  "profession": "备课易",
+  "categoryId": "09-OperationsHR",
+  "description": "在本地备课工作区读懂教材与旧稿，比较教学方案，写回可编辑成果并保留复核与复用线索。",
+  "tags": [
+    "教学设计决策",
+    "本地材料理解",
+    "可复核成果交付"
+  ],
+  "quickPrompts": [
+    "我在本地备课工作区里有教材或旧教案。请先读取我指定的材料，告诉我你理解的教学问题，再给出不超过三个可比较的教学方案。",
+    "请根据我指定的教材页和旧教案，先做一张材料理解卡，再只改教学目标、课堂活动和评价不一致的一个关键环节，保留其他内容不动。",
+    "我已经选定教学方案，请生成一个可编辑的教案草稿、教师复核清单和唯一下一步，并写回本地工作区的新版本，不要覆盖原文件。"
+  ],
+  "roleFile": "fbsir-beike-yi-fbsir-beike-yi/role.md",
+  "avatarFile": "fbsir-beike-yi-fbsir-beike-yi/avatar.jpg",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9d0b6c49955676ce987d63f79cd26e5c0be32dacd670598bc4385d299b90f073",
+  "files": [
+    {
+      "path": "avatar.jpg",
+      "sha256": "9bd60660e65e961829362c0a7636794a3c183844134977dad7057c82331dde24"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e1ccfcdc641bcb92a41bd7d530b37103fdc480a77c669dffa9bd6bcfcaffc3f2"
+    }
+  ]
+}

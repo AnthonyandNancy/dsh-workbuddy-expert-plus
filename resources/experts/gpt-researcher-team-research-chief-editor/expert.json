@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "gpt-researcher-team-research-chief-editor",
+  "source": "bundled",
+  "sourcePackage": "gpt-researcher-team",
+  "sourceAgent": "agents/research-chief-editor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "深度研究团队",
+  "profession": "深度研究团队",
+  "categoryId": "04-DataAI",
+  "description": "深度研究报告输出，7角色5阶段聚合多源信息，经审稿修订循环输出带引用的专业报告",
+  "tags": [
+    "深度调研",
+    "报告撰写",
+    "多源研究"
+  ],
+  "quickPrompts": [
+    "帮我深度调研下AI Agent在企业级应用中的发展趋势",
+    "快速调研一个行业或技术方向",
+    "生成带引用来源的专业研究报告"
+  ],
+  "roleFile": "gpt-researcher-team-research-chief-editor/role.md",
+  "avatarFile": "gpt-researcher-team-research-chief-editor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5849561aa81e883e1a369d124b04b4415fe2ed41614171aef678d737b762954e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0775636d692aac575d6279a2211acfa79162913d1de9a78d8c21d6ea76a013e4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "06dd0eb33a145e5109f90054ab85047f2a3b26698effcf8bafbbe492bbf8b48d"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "long-manuscript-expert-long-manuscript-expert",
+  "source": "bundled",
+  "sourcePackage": "long-manuscript-expert",
+  "sourceAgent": "agents/long-manuscript-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "福帮手",
+  "profession": "长文档写作与改稿专家",
+  "categoryId": "06-ContentCreative",
+  "description": "把提纲、访谈、旧稿和零散素材整理成结构清晰的长文档，支持章节续写、限定范围改稿与成稿交付前检查。",
+  "tags": [
+    "长文档工程",
+    "多场景创作",
+    "证据与审校"
+  ],
+  "quickPrompts": [
+    "请用这些材料启动一份长文档：先判断最合适的文档类型，再给出手稿启动卡，包含建议目录、章节任务、实质性开篇、主要风险、一个推荐的下一步和可复制的续写口令。",
+    "请只续写或修改我指定的章节或段落，保留未选范围的原文，给出修改后的正文、实质变更说明和一个下一步。",
+    "请检查这份成稿的结构、连续性、可读性和交付准备；没有真实机器回执时，请将质量结论明确标为建议性意见。"
+  ],
+  "roleFile": "long-manuscript-expert-long-manuscript-expert/role.md",
+  "avatarFile": "long-manuscript-expert-long-manuscript-expert/avatar.jpg",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "da735f32c2bb8c18d4c9eb89e762a825f58393a8ec01ea6a090fc6d71727f426",
+  "files": [
+    {
+      "path": "avatar.jpg",
+      "sha256": "9bd60660e65e961829362c0a7636794a3c183844134977dad7057c82331dde24"
+    },
+    {
+      "path": "role.md",
+      "sha256": "91bf5757c96503485d247d1766f3732211a69ad13710dc4353fd9aa906bd659f"
+    }
+  ]
+}

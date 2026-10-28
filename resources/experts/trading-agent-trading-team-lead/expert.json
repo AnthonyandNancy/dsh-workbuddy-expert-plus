@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "trading-agent-trading-team-lead",
+  "source": "bundled",
+  "sourcePackage": "trading-agent",
+  "sourceAgent": "agents/trading-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "交易分析团队",
+  "profession": "交易分析团队",
+  "categoryId": "08-FinanceInvestment",
+  "description": "13位专业角色分5阶段协作完成投资分析：技术面、基本面、新闻面、情绪面数据采集 → 多空辩论 → 交易决策 → 三方风险评估 → 最终报告，输出 BUY/SELL/HOLD 建议及完整操作方案",
+  "tags": [
+    "交易策略",
+    "风险管理",
+    "市场分析"
+  ],
+  "quickPrompts": [
+    "帮我分析下茅台基本面和估值",
+    "进行多维度市场技术分析",
+    "评估投资组合风险和收益"
+  ],
+  "roleFile": "trading-agent-trading-team-lead/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "eb520c6528f2a09bfef96c9375041a071899447d211be797f7c6aa58c66146ea",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "d6ed89ea3e898a3c540c7f948540baf3b43ef30f65363b35f77dead6862a66e0"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "mibao-media-archivist-mibao-media-archivist",
+  "source": "bundled",
+  "sourcePackage": "mibao-media-archivist",
+  "sourceAgent": "agents/mibao-media-archivist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "秘宝",
+  "profession": "AI影像资产整理专家",
+  "categoryId": "04-DataAI",
+  "description": "在不改动原件的前提下，完成影像盘点、严格SHA-256、精确重复识别、本地索引检索与可验收报告",
+  "tags": [
+    "影像盘点",
+    "精确重复识别",
+    "本地索引检索"
+  ],
+  "quickPrompts": [
+    "扫描我授权的影像文件夹，执行严格 SHA-256，生成精确重复项清单、本地检索索引和可打开的盘点报告",
+    "在已有秘宝项目中检索我指定的关键词。返回相对路径、稳定资产ID、证据引用和命中摘要",
+    "继续盘点我已有的秘宝项目，更新新增或变化文件的严格哈希、重复项、索引和报告，原件不动"
+  ],
+  "roleFile": "mibao-media-archivist-mibao-media-archivist/role.md",
+  "avatarFile": "mibao-media-archivist-mibao-media-archivist/avatar.jpg",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "e75a5f80cd75d071aad84a69c291b944125287bfa48df5f90fad2cbaf5b362fb",
+  "files": [
+    {
+      "path": "avatar.jpg",
+      "sha256": "c3187534e1086f6bad8114259964cfbb81069f66f4b32e91daa662e006d64455"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4f92bf52dda9e36c7bbe13013379b956ec60741796eb08f36d186999d874f403"
+    }
+  ]
+}

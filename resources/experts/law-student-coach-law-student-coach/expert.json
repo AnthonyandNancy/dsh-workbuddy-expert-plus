@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "law-student-coach-law-student-coach",
+  "source": "bundled",
+  "sourcePackage": "law-student-coach",
+  "sourceAgent": "agents/law-student-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "法学生陪练",
+  "profession": "法学学习教练",
+  "categoryId": "11-SecurityCompliance",
+  "description": "面向法学生的学习陪练，训练苏格拉底问答、案例摘要、IRAC、课程大纲和律考复习。",
+  "tags": [
+    "苏格拉底训练",
+    "IRAC练习",
+    "考试备考"
+  ],
+  "quickPrompts": [
+    "用苏格拉底方式考我这个案例，不要直接给答案",
+    "帮我根据课堂笔记搭建课程大纲",
+    "批改我的 IRAC 答案并告诉我怎么改进"
+  ],
+  "roleFile": "law-student-coach-law-student-coach/role.md",
+  "avatarFile": "law-student-coach-law-student-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "316bf450cf6e83a9ea8be33c6a96f7f39164ec3de665be8e518af1bb52d3f26d",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "55aff8d87943f53ca635a17bb95c6e4a8c26a2956ef217db7b28f1bf138ec93e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0113f9213acd259ed1d30c44b3d0bea88fdd8cfc9e49f55329820c68aa499a8b"
+    }
+  ]
+}

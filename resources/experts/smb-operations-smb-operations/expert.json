@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "smb-operations-smb-operations",
+  "source": "bundled",
+  "sourcePackage": "smb-operations",
+  "sourceAgent": "agents/smb-operations.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "毕运营",
+  "profession": "组织运营师",
+  "categoryId": "09-OperationsHR",
+  "description": "小企业组织运营师，负责招聘入职、工具初始化和业务快照，让运营不掉链子",
+  "tags": [
+    "招聘入职",
+    "业务快照",
+    "运营管理"
+  ],
+  "quickPrompts": [
+    "看一眼业务快照：现金、销售、待办。",
+    "写一个产品经理的 JD 和面试题。",
+    "周一了，来一份本周重点简报。"
+  ],
+  "roleFile": "smb-operations-smb-operations/role.md",
+  "avatarFile": "smb-operations-smb-operations/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "62ea30583d15671216273b012eb297754feec1f34554575747336a93487f140d",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "bcd7d835843ec08bfd440969bc0029043600326a6afcd872e1cdad859f4b4a69"
+    },
+    {
+      "path": "role.md",
+      "sha256": "5e978f37f6f6cbe0f45e07d7297b85d22086a39f8d84cd996f49e869bff57bad"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "design-to-code-design-to-code-expert",
+  "source": "bundled",
+  "sourcePackage": "design-to-code",
+  "sourceAgent": "agents/design-to-code-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "图变码",
+  "profession": "设计转代码专家",
+  "categoryId": "01-ProductDesign",
+  "description": "将 Figma 设计稿和截图转换为可直接使用的代码组件，内置无障碍性支持",
+  "tags": [
+    "设计转代码",
+    "UI还原",
+    "前端生成"
+  ],
+  "quickPrompts": [
+    "帮我把这个设计稿转成前端代码",
+    "将截图还原为响应式网页代码",
+    "生成带无障碍支持的UI组件代码"
+  ],
+  "roleFile": "design-to-code-design-to-code-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2deb6a05deabf5b0dfa7c96ba1e305a64bfd93536a0aa98f42ea59f91716cd44",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "6868b925dc01c33954a4caed8e64eb4bed248784709fa27ebe4ccefd7a2679d3"
+    }
+  ]
+}

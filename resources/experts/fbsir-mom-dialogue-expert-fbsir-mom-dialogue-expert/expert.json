@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fbsir-mom-dialogue-expert-fbsir-mom-dialogue-expert",
+  "source": "bundled",
+  "sourcePackage": "fbsir-mom-dialogue-expert",
+  "sourceAgent": "agents/fbsir-mom-dialogue-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "福帮手",
+  "profession": "妈妈问答",
+  "categoryId": "06-ContentCreative",
+  "description": "整理与妈妈有关的照片、视频、录音、手稿和家庭资料，生成可追溯的故事卡、生活轨迹、追问与书稿。",
+  "tags": [
+    "家庭资料整理",
+    "妈妈故事",
+    "故事编纂"
+  ],
+  "quickPrompts": [
+    "整理当前工作区中与妈妈有关的生活资料，先盘点素材、识别人物关系和生活轨迹，再生成首批故事卡、待确认事项和下一步追问。",
+    "分析这些照片、视频或录音，按来源整理人物、对话、事件、时间码、待确认事项和家人追问。",
+    "把已确认资料编成妈妈主轴的生活轨迹、大纲和一章可编辑样稿，保留家人补充与来源索引。"
+  ],
+  "roleFile": "fbsir-mom-dialogue-expert-fbsir-mom-dialogue-expert/role.md",
+  "avatarFile": "fbsir-mom-dialogue-expert-fbsir-mom-dialogue-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "root-license-file",
+    "evidence": "LICENSE"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a3134b29a623afedac62c0cb3bbe795d68aa44b02ef18979e2248c84c6087e65",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "cefae0bfb260e48d2183ca9e0b7490fc625efe76ddbfca7b208b0f6bed18ed33"
+    },
+    {
+      "path": "role.md",
+      "sha256": "abacd8058eea5213e7edd3148221ca88bdd2a76593145ff8491f1e16eb39ab73"
+    }
+  ]
+}

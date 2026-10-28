@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "executing-marketing-campaigns-marketing-campaign-expert",
+  "source": "bundled",
+  "sourcePackage": "executing-marketing-campaigns",
+  "sourceAgent": "agents/marketing-campaign-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "策动动",
+  "profession": "营销活动策划专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "策划、创建和优化全渠道营销活动，包括内容策略、社交媒体、邮件营销和广告投放",
+  "tags": [
+    "营销战役",
+    "活动执行",
+    "效果评估"
+  ],
+  "quickPrompts": [
+    "帮我策划一个新产品上市的营销活动方案",
+    "制定营销活动执行方案和预算分配",
+    "设计营销活动效果评估和复盘方案"
+  ],
+  "roleFile": "executing-marketing-campaigns-marketing-campaign-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "cd7c247754269bdf21a4ded0120dcaee0e6f9c19ea1b67d518df461834a13904",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "86a948cc4b15cbfa5c3ae84bcef8fec36133656a8657b73fa961957264259405"
+    }
+  ]
+}

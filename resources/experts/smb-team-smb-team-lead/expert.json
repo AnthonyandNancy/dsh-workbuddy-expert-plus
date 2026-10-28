@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "smb-team-smb-team-lead",
+  "source": "bundled",
+  "sourcePackage": "smb-team",
+  "sourceAgent": "agents/smb-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小企业经营团队",
+  "profession": "经营总管",
+  "categoryId": "12-IndustryConsultant",
+  "description": "经营总管调度四位领域专家，覆盖财务、营收、客户合规和运营，小企业管理一站搞定",
+  "tags": [
+    "小企业管理",
+    "经营管理",
+    "多角色协作"
+  ],
+  "quickPrompts": [
+    "本月经营复盘：现金流、销售进展、客户满意度、团队状态。",
+    "工资快发了但现金可能不够，评估一下缺口和对策。",
+    "看下全盘业务健康：哪些该重点投入、哪些该收缩。"
+  ],
+  "roleFile": "smb-team-smb-team-lead/role.md",
+  "avatarFile": "smb-team-smb-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ed1f822d82ee48f0872d5da4b95d25bb9aeb84e7c1f0f0146db76118d09353c4",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7c4650f29c23749b633661da2d46667863bf780efe93b9a293a180f30bb9fa11"
+    },
+    {
+      "path": "role.md",
+      "sha256": "708b42db62405495aacb52af87f0541a22f67860c5fcfe2daa5c05e41b76e658"
+    }
+  ]
+}

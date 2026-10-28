@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "smb-compliance-smb-compliance",
+  "source": "bundled",
+  "sourcePackage": "smb-compliance",
+  "sourceAgent": "agents/smb-compliance.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "严守约",
+  "profession": "客户与合规官",
+  "categoryId": "11-SecurityCompliance",
+  "description": "小企业客户与合规官，处理客户反馈、客诉工单、CRM清理和合同风险审查",
+  "tags": [
+    "客户洞察",
+    "合同审查",
+    "合规管理"
+  ],
+  "quickPrompts": [
+    "汇总最近的客户反馈，看看有哪些共性问题。",
+    "审查这份供应商合同，标出风险条款。",
+    "CRM 里一堆重复联系人，清理一下。"
+  ],
+  "roleFile": "smb-compliance-smb-compliance/role.md",
+  "avatarFile": "smb-compliance-smb-compliance/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "333187c664dd2c79488bc80d842ce4772c887427c5ae218f0e7e75a062a06b46",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7fe8d4c5ee2e8d98d5b3e4a240edce12b5a38a7405925ea7886596edb5159e8f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e4ae8a7e49c389a0b28b751f3252f4eeac0169ad3cf8fa36b990435376b2b01b"
+    }
+  ]
+}

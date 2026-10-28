@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "content-monetization-team-content-monetization-team-lead",
+  "source": "bundled",
+  "sourcePackage": "content-monetization-team",
+  "sourceAgent": "agents/content-monetization-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "内容变现商业化专家团",
+  "profession": "内容变现商业化专家团",
+  "categoryId": "05-MarketingGrowth",
+  "description": "5人专家团覆盖CPS带货分佣、CPE/CPM效果广告、创作者-品牌交易撮合与收益分析，助力内容创作者和品牌方实现商业化闭环",
+  "tags": [
+    "内容变现",
+    "CPS/CPE/CPM",
+    "创作者商业化"
+  ],
+  "quickPrompts": [
+    "帮我设计一套适合我账号的内容变现方案",
+    "分析哪种结算模式（CPS/CPE/CPM）最适合我当前的粉丝体量",
+    "帮我评估这个品牌推广任务的收益是否合理"
+  ],
+  "roleFile": "content-monetization-team-content-monetization-team-lead/role.md",
+  "avatarFile": "content-monetization-team-content-monetization-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "approved",
+    "kind": "plugin-json-license",
+    "evidence": "MIT in .codebuddy-plugin/plugin.json; author=unknown"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9ec6ebd25fe3bd34980ab649858baeee77652e8ab853f7de0286bc2295aff615",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0e1bc9a0438889c90ff6458222ebd923f91a597573dba373f4f336e5868a23b4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "685fb0170119ee7d1673047239f290c145d992c82f0d44fc282c845a0f325393"
+    }
+  ]
+}
