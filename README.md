@@ -1,181 +1,79 @@
-<div align="center">
+# DSH WorkBuddy Expert Plus
 
-# DSH WorkBuddy Expert
+**一个插件，两套宿主动作：DSH Agent 专家安装 + DS-Bot 原生 Bot 创建；专家模板全部离线内置。**
 
-**把 WorkBuddy 专家装进 DSH：专家市场一键导入 · 会话选择器随时切换**
-
-[English](README.en.md) · [功能](#功能) · [安装](#安装插件) · [设计文档](docs/design.md) · [MIT](LICENSE)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![DSH Web Plugin](https://img.shields.io/badge/DSH%20Web-Plugin-0f766e.svg)](#安装插件)
-[![零构建](https://img.shields.io/badge/构建-零构建-0f766e.svg)](#开发)
-
-</div>
-
-> DSH WorkBuddy Expert 是社区维护的 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）插件，并非 DeepSeek AI 官方产品。
-
-<!-- 演示动图（占位）：召唤 → 安装 → 选择 → 生效，拍摄后同名覆盖 docs/images/hero-demo.gif -->
-<img src="docs/images/hero-demo.gif" width="70%" alt="演示：召唤 → 安装 → 选择 → 生效" />
-
-## 它是什么
-
-一个 DSH Web 插件，让你把 [WorkBuddy](https://www.workbuddy.cn/) 专家中心的专家带进 DSH 工作流：
-
-- **专家市场**（设置 → WorkBuddy 专家）——只读扫描本地 WorkBuddy 专家目录，卡片浏览/搜索/分类，一键**安装 / 更新 / 卸载**，导出成标准专家文件夹；
-- **会话选择器**——输入框旁的专家胶囊，随时切换当前会话的专家：整组替换角色描述与 skills，**保留全部会话历史**，在下一个模型请求边界生效，不打断进行中的轮次；
-- **完整专家体验**——安装的专家自带角色描述、专属 skills 与头像，选择器列表即选即用。
-
-## 专家来源
-
-插件**不联网下载专家**——市场页读取的是 WorkBuddy 桌面端落盘的**本地**专家目录（默认 `~/.workbuddy/plugins/marketplaces/experts/plugins`）。专家必须先在 WorkBuddy 的**专家中心**点击**召唤**，WorkBuddy 才会把该专家下载落盘，之后本插件才能扫描到它：
-
-<!-- WorkBuddy「召唤」按钮截图（占位）：真图拍摄后同名覆盖 docs/images/workbuddy-summon.jpg -->
-<img src="docs/images/workbuddy-summon.jpg" width="40%" alt="WorkBuddy 专家中心「召唤」按钮（占位图）" />
-
-一个都没召唤过，市场页就是空列表——回专家中心召唤几个，卡片会自动出现。下文提到的"默认源目录"均指此路径。
+本包基于 MIT 的 `pbwheel/dsh-workbuddy-expert`，保留原有 `/expert` 命令、
+会话专家选择器、专家目录导出与卸载能力，并新增 DS-Bot 双模式适配。
 
 ## 功能
 
-### 1. WorkBuddy 专家市场（设置 → WorkBuddy 专家）
+- **离线内置专家市场**：读包内 `resources/experts`，目标机器无需安装
+  WorkBuddy、无需联网，也不会回源 GitHub/WorkBuddy CDN。
+- **Agent 模式**：安装/更新/卸载专家到当前 DSH profile 的 `experts/`；
+  安装后 `/expert` 与会话选择器可见。
+- **Bot 模式**：DS-Bot `sidebar.footer.action` 入口打开插件自有弹层；
+  选择专家后读取**完整 role.md**，确认后调用 `POST api/bot create-bot`。
+- **模式隔离**：Agent 与 Bot 状态字段分离；切换模式不自动安装、创建、
+  删除或迁移对象。
+- **保守能力探测**：`absent` / `ready` / `readOnly` / `unknown` /
+  `incompatible` 分开处理；只读或未知时禁用 Bot 创建，不静默降级为安装。
+- **原能力保留**：`/expert`、输入框专家选择器、`settings.section` 市场页、
+  导出 ownership manifest、防覆盖与 uninstall 校验。
 
-<img src="docs/images/market.jpg" width="50%" alt="专家市场（占位图）" />
+## 安装
 
-- **只读扫描**本地 WorkBuddy 专家目录（默认路径见「专家来源」），绝不写它，零数据外发；
-- 卡片浏览/搜索/分类；操作按钮收在卡片右上角（未装 → 安装，已装 → 卸载/更新）；
-- **安装 = 导出**成标准专家文件夹到 `~/.dsh/experts/<id>/`（expert.yml、清洗后 role.md、skills 整树，源卡有 PNG 时含头像），指纹清单落 `.expert-source.json`；
-- **更新**：源有变时卡片亮 updatable，更新 = 就地重导；**卸载** = 删整个专家文件夹；
-
-### 2. 会话选择器
-
-<img src="docs/images/picker.jpg" width="50%" alt="会话选择器（占位图）" />
-
-- 输入框旁的专家胶囊展开带头像的专家列表，选中即切换；
-- **切换保留全部会话历史**：角色描述与 skills 整组替换，在下一个模型请求边界生效；轮次进行中则排队到边界后应用，不打断流式输出；
-- 切换事务串行化：同一会话同时只允许一次切换；
-- 一切注册落在 agent scope 层：只影响当前会话，会话结束自动清理；
-- 创建新会话时也可先选专家，创建即生效——冷会话不存在"已选未生效"状态；
-- 新增/删除专家无需重启——发现根有 watcher，选择器（输入框区域 + 创建会话入口）自动刷新。
-
-### 3. 专家能力随会话生效
-
-<img src="docs/images/switch-trace.jpg" width="50%" alt="切换后会话轨迹（占位图）" />
-
-选中专家后，其能力即挂载到当前会话：
-
-- **角色描述**（role.md）作为 system prompt 角色段注入；
-- **专属 skills**（skills/ 整树）随专家注册/注销；
-- **工具白名单**（expert.yml `tools.allow`，可选）挂载作用域工具限制，切换时自动解除；
-- 清单损坏的专家在选择器中列为 **broken 并给出原因**，不静默隐藏。
-
-## 快速开始
-
-前置条件：
-
-- 宿主二选一：**DeepSeek Harness 桌面端**（Electron App）或终端 `dsh web`。两者使用**不同的 profile**（桌面端 `desktop`、CLI `web`），安装入口也不同——见下节，别装错边；
-- 本机已安装 [WorkBuddy](https://www.workbuddy.cn/) 桌面端，且至少**召唤**过一个专家——机制与默认路径见[「专家来源」](#专家来源)；
-
-### 安装插件
-
-两种宿主用**不同的 profile**（桌面端 `~/.dsh/profiles/desktop`，CLI `~/.dsh/profiles/web`），互不相通，装错宿主读不到。桌面端的 `desktop` profile 由 Electron 独占——终端执行 `dsh --profile desktop ...` 会报 `managed exclusively by the Electron application`——所以桌面端用户**不要**照抄下面的 `--profile web` 命令。
-
-**桌面端（DeepSeek Harness App）**——用应用内插件面板安装：
-
-1. 打开侧栏**插件（Plugins）**面板，点**添加插件（Add plugin）**；
-2. 输入插件 npm 包名 `dsh-workbuddy-expert`（即官方插件下载说明中"`dsh plugin add` 之后的部分"；也接受 Git 地址 `github:pbwheel/dsh-workbuddy-expert`、tarball 或本地 clone 的绝对路径）；
-3. 安装完成后**重启桌面 App**（bundles 列表只在启动时读）。
-
-**终端（`dsh web`）**——一行安装，npm 包名与 Git 地址均可（始终取最新版，无需手动 clone）：
-
-```sh
-dsh plugin --profile web add dsh-workbuddy-expert
-# 或从 GitHub 安装：
-dsh plugin --profile web add github:pbwheel/dsh-workbuddy-expert
+```bash
+# DSH Desktop / Web：从生成的 tarball 安装（示例）
+dsh plugin --profile web add /absolute/path/to/dsh-workbuddy-expert-plus-0.1.0.tgz
 ```
 
-或手动 clone 后从目录安装：
+DS-Bot 独立桌面应用需在其自身的 DSH 插件管理/配置中安装**同一个** `.tgz`；
+其 profile 与外部 DSH 不共享。若该版本不允许第三方插件安装，应以兼容性
+阻塞记录，而不是修改 DS-Bot 安装包。
 
-```sh
-git clone --depth 1 https://github.com/pbwheel/dsh-workbuddy-expert.git
-cd dsh-workbuddy-expert
-dsh plugin --profile web add .
-dsh --profile web --dump-config
+## Agent 使用
+
+1. 打开设置中的「WorkBuddy 专家市场」。
+2. 浏览内置专家、查看完整 Prompt。
+3. 点击「安装」。专家会导出到当前 DSH profile 的 `experts/`。
+4. 在 `/expert` 或会话专家选择器中使用已安装专家。
+
+## Bot 使用
+
+1. 在 DS-Bot Bot 界面点击侧边栏「专家市场」。
+2. 选择专家并点击「创建 Bot」。
+3. 检查/编辑名称、角色，查看完整 Prompt。
+4. 再次确认后创建；成功后显示 Bot ID，原模板保留，可再次创建不同名称的 Bot。
+
+Skills/MCP/连接器**不会自动映射**到 Bot；本期只导入完整角色 Prompt。
+
+## 资源与授权状态
+
+构建输入固定为 `infometa/workbuddyskills@7ea565af29f6bede2acc0d7b55daa300db5de3f8`。
+
+- 429 个索引专家 + 729 个顶层 Agent 已盘点；
+- **39 个**具有 Prompt 级明确许可证据并已打包完整资源；
+- **390 个**因缺少可再分发授权被阻断；
+- 300 个未索引 Agent 记录在报告中，没有静默丢弃或伪造。
+
+因此本包**不声称**已内置全部 429 个专家；全量目标被授权条件阻塞。
+详见 `docs/resource-audit.md` 和 `build/reports/license-audit.json`。
+
+## 开发与验证
+
+```bash
+npm run build:experts   # 重建资源与审计报告
+npm test                # 单元/集成测试 + 原插件 smoke
+npm run check:package   # npm pack、解包、逐文件 hash、离线 catalog 校验
 ```
 
-两种方式都装主分支最新版；配置输出应出现 `dsh-workbuddy-expert`。然后**重启 `dsh web`**（bundles 列表只在启动时读）并**强刷浏览器**。零构建；运行时仅依赖宿主自己的 schema 工厂 @deepseek-ai/schemastery（精确固定）。
+环境组合与实机验证状态见 `docs/compatibility-matrix.md` 和
+`docs/verification-report.md`。没有实机证据的组合明确标记为未验证，而不是
+用单元测试替代。
 
-### 让 Agent 帮你安装
+## 许可
 
-桌面端里，把这段话发给任意 Agent（它会走当前 profile 的应用内插件管理，无需终端）：
+插件代码沿用原项目 MIT 许可，见 `LICENSE`。打包的专家内容仅纳入有明确
+Prompt 级许可证据的条目；`license/` 下的依赖许可证不被当作专家 Prompt 的授权。
 
-```text
-请把 DSH 插件 dsh-workbuddy-expert（来源 github:pbwheel/dsh-workbuddy-expert）安装到当前 profile，完成后告诉我如何重启生效并开始使用。
-```
-
-终端用户把这段发给能执行本机终端命令的 Agent：
-
-```text
-请将 DSH 插件 dsh-workbuddy-expert 从本仓库安装到 web profile：git clone --depth 1 https://github.com/pbwheel/dsh-workbuddy-expert.git 后执行 dsh plugin --profile web add <目录>。安装后执行 dsh --profile web --dump-config，确认配置包含 dsh-workbuddy-expert，并告诉我如何重启 dsh web 和开始使用。
-```
-
-### 三步用上 WorkBuddy 专家
-
-1. 打开**设置 → WorkBuddy 专家**（默认源路径见「专家来源」，可在顶栏修改）。**列表为空？** 说明还没召唤过专家——见[「专家来源」](#专家来源)；
-2. 在卡片上点**安装**——专家即导出到 `~/.dsh/experts/`；
-3. 回到会话，点输入框旁的专家胶囊，选择刚安装的专家，开始对话。
-
-命令行也可以：`/expert` 列出全部专家，`/expert <name>` 切换。
-
-## 配置
-
-| 配置项 | 默认值 | 作用 |
-|---|---|---|
-| `sourcePath` | `~/.workbuddy/plugins/marketplaces/experts/plugins` | WorkBuddy 源目录；`~` 使用时展开；允许保存暂不存在的路径（页面提示，路径就绪自动恢复） |
-| `roots` | — | 可选追加发现根，必须显式 `trust: user` |
-| `dshHome` | `$DSH_HOME` 或 `~/.dsh` | 覆盖 DSH home 解析 |
-
-配置走 DSH 0.2 的 **Config 表单模型**：`sourcePath` 保存后经宿主 volatile 链路热生效（不重挂插件）；`roots`/`dshHome` 修改后按 Loader 语义重挂。表单投影与保存链路细节见[设计文档](docs/design.md)。
-
-`sourcePath` 有两个编辑入口，同一份数据，经宿主 volatile 链路自动同步：
-
-- **设置 → WorkBuddy 专家**（市场页顶栏）；
-- **插件 → dsh-workbuddy-expert → 配置**（Plugins 页的原生行配置页，含 revision 冲突保护与恢复默认）。
-
-追加根示例：
-
-```yaml
-- name: 'dsh-workbuddy-expert'
-  config:
-    roots:
-      - path: ~/company-experts
-        trust: user
-```
-
-平时靠逐文件指纹自动重扫，「刷新」按钮强制重扫。
-
-## 开发
-
-```sh
-node scripts/smoke.mjs                 # 契约/清洗/注册表/切换冒烟
-node scripts/smoke-client.mjs          # client 侧
-node scripts/smoke-importer.mjs        # importer/市场路由
-node scripts/smoke-install.mjs         # 安装=导出链路
-node scripts/verify-host-contract.mjs  # 对照真实宿主包验证 Config/volatile 契约
-```
-
-依赖仅 `@deepseek-ai/schemastery`（精确固定 `3.18.4`，宿主自己的 schema 工厂）。兼容 DSH `>=0.2.0-rc.2 <0.3.0`（`engines.dsh` 与 `peerDependencies` 同此范围），安装期与启动期均做版本校验；插件清单含本地化文案与图标（`locale/`、`icon.svg`）。
-
-改完 host（`src/`）或 `package.json` 需重启宿主（桌面端重启 App，CLI 重启 `dsh web`）；只改 `client/client.js` 刷新页面即可。
-
-| 模块 | 职责 |
-|---|---|
-| `src/registry.js` | 专家文件夹扫描、校验、清洗、watcher |
-| `src/compose.js` | 会话组装：角色段 + skills + 工具白名单 |
-| `src/switch.js` | 切换事务 |
-| `src/importer/` | WorkBuddy scanner/指纹/导出/市场路由 |
-| `client/client.js` | 选择器 + 市场页 UI |
-
-设计与决策记录见 [docs/design.md](docs/design.md)。
-
-## 许可证
-
-[MIT](LICENSE) © 2026 dsh-workbuddy-expert contributors
+本项目为社区插件，并非 DeepSeek 官方产品。
