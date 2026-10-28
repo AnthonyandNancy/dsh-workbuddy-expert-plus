@@ -173,7 +173,13 @@ export function apply(ctx, config = {}) {
     ctx.effect(() => {
       let disposed = false
       let offImporter
-      mountImporter(importerCtx, { config, expertsRoot: join(dshHome, 'experts'), ownerCtx: ctx })
+      mountImporter(importerCtx, {
+        config,
+        expertsRoot: join(dshHome, 'experts'),
+        dshHome,
+        pluginVersion: '0.1.0',
+        ownerCtx: ctx,
+      })
         .then((off) => {
           if (disposed) off()
           else offImporter = off

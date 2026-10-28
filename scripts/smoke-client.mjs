@@ -688,14 +688,14 @@ function makeDocumentStub() {
   const renderedBySeat = new Map()
   const slots = {
     inject(seat, setup) {
-      assert.ok(['conversation.input.left', 'settings.section', 'plugins.row.config'].includes(seat),
+      assert.ok(['conversation.input.left', 'settings.section', 'plugins.row.config', 'sidebar.footer.action', 'shell.overlay'].includes(seat),
         `known seat: ${seat}`)
       seatSetups.set(seat, setup)
       const off = setup() // the runtime runs the setup at inject time
       return () => { seatSetups.delete(seat); if (typeof off === 'function') off() }
     },
     register(definition, render) {
-      assert.ok(['conversation.input.left', 'settings.section', 'plugins.row.config'].includes(definition.name),
+      assert.ok(['conversation.input.left', 'settings.section', 'plugins.row.config', 'sidebar.footer.action', 'shell.overlay'].includes(definition.name),
         `known slot name: ${definition.name}`)
       if (definition.name === 'plugins.row.config') {
         assert.equal(definition.key, 'dsh-workbuddy-expert-plus#dsh-workbuddy-expert-plus',
@@ -730,6 +730,13 @@ function makeDocumentStub() {
 
   const page = renderedBySeat.get('settings.section')()
   assert.equal(page.type, mod.MarketPage, 'the settings seat renders the market page')
+
+  assert.equal(typeof seatSetups.get('sidebar.footer.action') === 'function' &&
+    typeof renderedBySeat.get('sidebar.footer.action') === 'function', true,
+    'the DS-Bot sidebar action seat registered')
+  assert.equal(typeof seatSetups.get('shell.overlay') === 'function' &&
+    typeof renderedBySeat.get('shell.overlay') === 'function', true,
+    'the DS-Bot overlay seat registered')
 
   const rowSummary = renderedBySeat.get('plugins.row.config')({ view: 'summary' })
   assert.equal(rowSummary.type, mod.RowConfigPage, 'the keyed seat renders the row-config component')

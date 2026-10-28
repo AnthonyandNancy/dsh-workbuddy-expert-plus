@@ -402,6 +402,37 @@ var MARKET_CSS = `
   .wbx-spin { animation: none; }
   .wbx-corner { transition: none; }
 }
+
+/* ── Bot mode: sidebar launcher + own overlay (never a host DOM injection) ── */
+.wbx-launcher { display: inline-flex; align-items: center; gap: 6px; width: 100%; padding: 7px 10px;
+  border: 0; border-radius: 8px; background: transparent; cursor: pointer;
+  color: var(--dsw-alias-label-secondary, inherit); font-size: 13px; line-height: 20px; text-align: left; }
+.wbx-launcher:hover:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
+  color: var(--dsw-alias-label-primary, inherit); }
+.wbx-launcher:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
+.wbx-overlay { position: fixed; inset: 0; z-index: 10020; display: flex; align-items: center; justify-content: center;
+  padding: 16px; background: rgba(0,0,0,.42); }
+.wbx-modal { display: flex; flex-direction: column; gap: 10px; box-sizing: border-box; width: min(720px, 100%);
+  max-height: min(88vh, 900px); overflow: auto; padding: 16px; border-radius: 14px;
+  background: var(--dsw-alias-bg-layer-2, #fff); color: var(--dsw-alias-label-primary, inherit);
+  border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.35));
+  box-shadow: var(--dsw-shadow-lv3, 0 12px 36px rgba(0,0,0,.28)); }
+.wbx-modal:focus { outline: none; }
+.wbx-modal-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.wbx-modal-head h2 { margin: 0 0 4px; font-size: 16px; line-height: 1.4; }
+.wbx-modal-body { display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+.wbx-field { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 500;
+  color: var(--dsw-alias-label-secondary, inherit); }
+.wbx-prompt { width: 100%; box-sizing: border-box; resize: vertical; min-height: 180px; padding: 10px 12px;
+  border-radius: 8px; border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.35));
+  background: var(--dsw-alias-bg-layer-1, transparent); color: var(--dsw-alias-label-primary, inherit);
+  font-family: var(--dsw-font-mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  font-size: 12px; line-height: 1.55; }
+.wbx-prompt:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 1px; }
+@media (max-width: 560px) {
+  .wbx-overlay { padding: 0; }
+  .wbx-modal { width: 100%; max-height: 100vh; border-radius: 0; }
+}
 `
 
 /**
@@ -540,6 +571,22 @@ var DICTS = {
     marketLoadFailed: '市场数据加载失败',
     busy: '加载中…',
     installedStamp: '已装',
+    marketModeAgent: 'Agent · 安装到 DSH',
+    marketModeBot: 'Bot · 创建 DS-Bot',
+    botCreateBtn: '创建 Bot',
+    botAgainBtn: '再次创建',
+    botCreatedStamp: '已创建',
+    botPromptLabel: '完整 Prompt（可查看，创建时原样提交）',
+    botNameLabel: 'Bot 名称',
+    botRoleLabel: '角色',
+    botModelLabel: '模型',
+    botReadOnly: 'DS-Bot 当前只读，无法创建 Bot',
+    botUnavailable: 'DS-Bot 不可用或版本不兼容，无法创建 Bot',
+    botLoadingPrompt: '正在读取完整 Prompt…',
+    botCreateConfirm: '确认创建',
+    botCreateDone: 'Bot 创建成功：{id}',
+    botCreateFailed: '创建 Bot 失败',
+    botSkillsNote: '仅导入角色 Prompt；Skills/MCP 不会自动生效。',
     updatableStamp: '可更新',
     exportBrokenStamp: '导出损坏',
     skillsBadge: '技能 {n}',
@@ -646,6 +693,22 @@ var DICTS = {
     marketLoadFailed: 'Failed to load market data',
     busy: 'Loading…',
     installedStamp: 'installed',
+    marketModeAgent: 'Agent · install into DSH',
+    marketModeBot: 'Bot · create in DS-Bot',
+    botCreateBtn: 'Create Bot',
+    botAgainBtn: 'Create another',
+    botCreatedStamp: 'created',
+    botPromptLabel: 'Complete prompt (view-only; submitted verbatim on create)',
+    botNameLabel: 'Bot name',
+    botRoleLabel: 'Role',
+    botModelLabel: 'Model',
+    botReadOnly: 'DS-Bot is read-only; Bot creation is disabled',
+    botUnavailable: 'DS-Bot is unavailable or incompatible; Bot creation is disabled',
+    botLoadingPrompt: 'Loading the complete prompt…',
+    botCreateConfirm: 'Create Bot',
+    botCreateDone: 'Bot created: {id}',
+    botCreateFailed: 'Bot creation failed',
+    botSkillsNote: 'Only the role prompt is imported; Skills/MCP do not activate automatically.',
     updatableStamp: 'updatable',
     exportBrokenStamp: 'export broken',
     skillsBadge: '{n} skills',
@@ -2263,6 +2326,264 @@ function MarketPage (props) {
       : null)
 }
 
+
+// ── the Bot half: DS-Bot sidebar launcher + overlay market ──────────────────
+
+/**
+ * The DS-Bot operation hint. The only localStorage read is a non-authoritative
+ * hint; the server-side market/environment probe owns the actual capability
+ * decision. Unknown storage degrades to 'unknown', never to 'bot' by default.
+ */
+function botSurfaceHint () {
+  try {
+    var value = window.localStorage.getItem('ds-bot:surface')
+    return value === 'agent' || value === 'bot' ? value : 'unknown'
+  } catch (error) {
+    return 'unknown'
+  }
+}
+
+/**
+ * The Bot-mode market overlay.
+ *
+ * It reuses the same catalog endpoint as the Agent market, but its action is
+ * a confirmed create: read the COMPLETE role prompt from the server, fill the
+ * form, then POST the exact prompt back. Creation is available only when the
+ * environment probe says ready; read-only/unknown/incompatible stay disabled.
+ */
+function BotMarketOverlay (props) {
+  var t = props.t
+  var localeId = props.localeId || 'zh'
+  var close = typeof props.onClose === 'function' ? props.onClose : function () {}
+  var stateState = React.useState(null)
+  var setBody = stateState[1]
+  var body = stateState[0]
+  var envState = React.useState({ status: 'unknown', reason: '' })
+  var setEnv = envState[1]
+  var env = envState[0]
+  var queryState = React.useState('')
+  var setQuery = queryState[1]
+  var query = queryState[0]
+  var selectedState = React.useState(null)
+  var setSelected = selectedState[1]
+  var selected = selectedState[0]
+  var promptState = React.useState('')
+  var setPrompt = promptState[1]
+  var prompt = promptState[0]
+  var nameState = React.useState('')
+  var setName = nameState[1]
+  var name = nameState[0]
+  var roleState = React.useState('')
+  var setRole = roleState[1]
+  var role = roleState[0]
+  var modelState = React.useState('')
+  var setModel = modelState[1]
+  var model = modelState[0]
+  var noticeState = React.useState(null)
+  var setNotice = noticeState[1]
+  var notice = noticeState[0]
+  var busyState = React.useState(false)
+  var setBusy = busyState[1]
+  var busy = busyState[0]
+  var confirmState = React.useState(false)
+  var setConfirm = confirmState[1]
+  var confirming = confirmState[0]
+  var modalRef = React.useRef(null)
+
+  React.useEffect(function () {
+    var cancelled = false
+    api(API_BASE + '/market/state').then(function (payload) {
+      if (!cancelled) setBody(payload)
+    }, function (error) {
+      if (!cancelled) setNotice({ kind: 'error', text: errorOf(error) })
+    })
+    api(API_BASE + '/market/environment').then(function (snapshot) {
+      if (!cancelled) setEnv(snapshot !== null && typeof snapshot === 'object' ? snapshot : { status: 'unknown', reason: '' })
+    }, function (error) {
+      if (!cancelled) setEnv({ status: 'unknown', reason: errorOf(error) })
+    })
+    return function () { cancelled = true }
+  }, [])
+
+  // Esc closes; focus moves into the dialog on open.
+  React.useEffect(function () {
+    var onKey = function (event) { if (event.key === 'Escape') close() }
+    if (typeof document !== 'undefined') document.addEventListener('keydown', onKey)
+    if (modalRef.current !== null && typeof modalRef.current.focus === 'function') modalRef.current.focus()
+    return function () {
+      if (typeof document !== 'undefined') document.removeEventListener('keydown', onKey)
+    }
+  }, [])
+
+  var ready = env.status === 'ready'
+  var experts = body !== null && Array.isArray(body.experts) ? body.experts : []
+  var q = query.trim().toLowerCase()
+  var filtered = q === '' ? experts : experts.filter(function (expert) {
+    return (strOf(expert.displayName) + ' ' + strOf(expert.profession) + ' ' + strOf(expert.description)).toLowerCase().indexOf(q) !== -1
+  })
+
+  function choose (expert) {
+    setSelected(expert)
+    setName(strOf(expert.displayName).slice(0, 40))
+    setRole(strOf(expert.profession).slice(0, 24))
+    setPrompt('')
+    setNotice(null)
+    api(API_BASE + '/market/prompt?id=' + encodeURIComponent(strOf(expert.id))).then(function (payload) {
+      setPrompt(strOf(payload.prompt))
+    }, function (error) {
+      setNotice({ kind: 'error', text: errorOf(error) })
+    })
+  }
+
+  function create () {
+    if (busy || !ready || selected === null || prompt === '') return
+    if (!confirming) { setConfirm(true); return }
+    setBusy(true)
+    setNotice(null)
+    postJson(API_BASE + '/market/bot/create', {
+      expertId: strOf(selected.id),
+      name: name,
+      role: role,
+      instructions: prompt,
+      ...(model === '' ? {} : { model: model })
+    }).then(function (result) {
+      setNotice({ kind: 'ok', text: t('botCreateDone', { id: strOf(result.botId) }) })
+      setConfirm(false)
+      setSelected(null)
+      return api(API_BASE + '/market/state').then(function (payload) { setBody(payload) }, function () {})
+    }, function (error) {
+      setNotice({ kind: 'error', text: t('botCreateFailed') + '：' + errorOf(error) })
+      setConfirm(false)
+    }).then(function () { setBusy(false) })
+  }
+
+  var createDisabled = busy || !ready || selected === null || prompt === '' || name.trim() === ''
+  var statusText = ready ? '' : env.status === 'readOnly' ? t('botReadOnly') : t('botUnavailable')
+
+  return el('div', {
+    className: 'wbx-overlay',
+    role: 'presentation',
+    onClick: function (event) { if (event.target === event.currentTarget) close() }
+  },
+    el('section', {
+      className: 'wbx-modal',
+      role: 'dialog',
+      'aria-modal': 'true',
+      'aria-label': t('marketTitle'),
+      tabIndex: -1,
+      ref: modalRef
+    },
+      el('header', { className: 'wbx-modal-head' },
+        el('div', null,
+          el('h2', null, t('marketTitle')),
+          el('p', { className: 'wbx-subtitle' }, t('marketModeBot'))),
+        el('button', {
+          className: 'wbx-btn', type: 'button', onClick: close, 'aria-label': t('cancel')
+        }, '✕')),
+      statusText !== '' ? el('div', { className: 'wbx-banner', role: 'status' }, statusText) : null,
+      notice !== null ? el('div', { className: 'wbx-notice', 'data-kind': notice.kind, role: 'status' }, notice.text) : null,
+      selected === null
+        ? el('div', { className: 'wbx-modal-body' },
+            el('input', {
+              className: 'wbx-search', type: 'search', value: query,
+              placeholder: t('search'),
+              onChange: function (event) { setQuery(event.target.value) }
+            }),
+            el('ul', { className: 'wbx-grid' },
+              filtered.map(function (expert) {
+                return el('li', { className: 'wbx-card', key: strOf(expert.id) },
+                  el('div', { className: 'wbx-card-top' },
+                    el('div', { className: 'wbx-card-title' },
+                      el('span', { className: 'wbx-name' }, strOf(expert.displayName)),
+                      el('span', { className: 'wbx-id' }, strOf(expert.id))),
+                    expert.botCreated === true
+                      ? el('span', { className: 'wbx-mark', 'data-kind': 'ok' }, '✓ ', t('botCreatedStamp'))
+                      : null),
+                  el('p', { className: 'wbx-desc' }, strOf(expert.description)),
+                  el('div', { className: 'wbx-actions' },
+                    el('button', {
+                      className: 'wbx-btn', type: 'button',
+                      'data-variant': 'primary',
+                      disabled: !ready,
+                      title: ready ? undefined : statusText,
+                      onClick: function () { choose(expert) }
+                    }, expert.botCreated === true ? t('botAgainBtn') : t('botCreateBtn'))))
+              })))
+        : el('div', { className: 'wbx-modal-body' },
+            el('label', { className: 'wbx-field' }, t('botNameLabel'),
+              el('input', {
+                className: 'wbx-path-input', type: 'text', value: name, maxLength: 40,
+                onChange: function (event) { setName(event.target.value) }
+              })),
+            el('label', { className: 'wbx-field' }, t('botRoleLabel'),
+              el('input', {
+                className: 'wbx-path-input', type: 'text', value: role, maxLength: 24,
+                onChange: function (event) { setRole(event.target.value) }
+              })),
+            el('p', { className: 'wbx-subtitle' }, t('botSkillsNote')),
+            el('label', { className: 'wbx-field' }, t('botPromptLabel'),
+              prompt === ''
+                ? el('p', { className: 'wbx-subtitle', role: 'status' }, t('botLoadingPrompt'))
+                : el('textarea', {
+                    className: 'wbx-prompt', readOnly: true, value: prompt,
+                    rows: 12, 'aria-label': t('botPromptLabel')
+                  })),
+            el('div', { className: 'wbx-actions' },
+              el('button', {
+                className: 'wbx-btn', type: 'button', disabled: createDisabled,
+                'data-variant': confirming ? 'danger' : 'primary',
+                onClick: create
+              }, confirming ? t('botCreateConfirm') : t('botCreateBtn')),
+              el('button', {
+                className: 'wbx-btn', type: 'button',
+                onClick: function () { if (confirming) setConfirm(false); else setSelected(null) }
+              }, t('cancel'))))))
+}
+
+/** The sidebar launcher; hidden outside a Bot surface so Agent stays untouched. */
+function BotMarketLauncher (props) {
+  var t = props.t
+  var surfaceState = React.useState(botSurfaceHint())
+  var surface = surfaceState[0]
+  React.useEffect(function () {
+    var sync = function () { surfaceState[1](botSurfaceHint()) }
+    if (typeof window !== 'undefined' && window.addEventListener) {
+      window.addEventListener('storage', sync)
+      window.addEventListener('focus', sync)
+      return function () {
+        window.removeEventListener('storage', sync)
+        window.removeEventListener('focus', sync)
+      }
+    }
+    return undefined
+  }, [])
+  if (surface !== 'bot') return null
+  return el('button', {
+    className: 'wbx-launcher', type: 'button',
+    onClick: function () { if (typeof props.onOpen === 'function') props.onOpen() }
+  }, t('nav'))
+}
+
+/** The overlay host state: one launcher and at most one overlay registration. */
+function BotMarketHost (props) {
+  var openState = React.useState(false)
+  var open = openState[0]
+  var setOpen = openState[1]
+  return el('div', null,
+    el(BotMarketLauncher, {
+      t: props.t,
+      onOpen: function () { setOpen(true) }
+    }),
+    open
+      ? el(BotMarketOverlay, {
+          t: props.t,
+          localeId: props.localeId,
+          onClose: function () { setOpen(false) }
+        })
+      : null)
+}
+
+
 // ── the row configuration component (plugins.row.config dispatch) ───────────
 
 /**
@@ -2552,6 +2873,48 @@ function apply (ctx) {
     })
   }))
 
+  // Bot mode: one sidebar action + one overlay, both owned by this plugin.
+  // A registration is opportunistically pending when DS-Bot (or another
+  // composition) does not declare the seat; Agent mode never depends on it.
+  collect(slots.inject('sidebar.footer.action', function () {
+    return slots.register({
+      name: 'sidebar.footer.action',
+      id: 'workbuddy-expert-plus-market',
+      order: -150,
+      locale: NS,
+      inject: function () { return { t: t } }
+    }, function () {
+      return el(BotMarketLauncher, {
+        t: t,
+        onOpen: function () {
+          if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
+            window.dispatchEvent(new CustomEvent('workbuddy-expert-plus:open-bot-market'))
+          }
+        }
+      })
+    })
+  }))
+
+  collect(slots.inject('shell.overlay', function () {
+    return slots.register({
+      name: 'shell.overlay',
+      id: 'workbuddy-expert-plus-market-overlay',
+      order: 70,
+      locale: NS,
+      inject: function () { return { t: t } }
+    }, function () {
+      return el(BotMarketOverlay, {
+        t: t,
+        localeId: getLocale(),
+        onClose: function () {
+          if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
+            window.dispatchEvent(new CustomEvent('workbuddy-expert-plus:close-bot-market'))
+          }
+        }
+      })
+    })
+  }))
+
   // The scoped style tags are injected only after every registration
   // succeeded (a failed apply must not leak them), and their removal joins
   // the disposers — one namespace per feature, either can ship alone.
@@ -2608,6 +2971,10 @@ module.exports.TeamGroup = TeamGroup
 module.exports.OrphanRow = OrphanRow
 module.exports.BrokenRow = BrokenRow
 module.exports.MarketPage = MarketPage
+module.exports.BotMarketOverlay = BotMarketOverlay
+module.exports.BotMarketLauncher = BotMarketLauncher
+module.exports.BotMarketHost = BotMarketHost
+module.exports.botSurfaceHint = botSurfaceHint
 // The row configuration (plugins.row.config), same loader-tolerant pattern.
 module.exports.ROW_CONFIG_KEY = ROW_CONFIG_KEY
 module.exports.ROW_CONFIG_CSS = ROW_CONFIG_CSS
