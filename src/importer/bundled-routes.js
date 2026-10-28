@@ -13,6 +13,9 @@ import { createBotRequestFetch } from '../adapters/request-fetch.js'
 
 export const ROUTE_BASE = '/dsh-workbuddy-expert-plus/api/market'
 const MAX_BODY_BYTES = 64 * 1024
+// Creating a Bot submits the full, user-editable prompt; the bundled catalog
+// holds prompts far above 64 KiB, so this prompt-carrying route gets its own cap.
+const MAX_PROMPT_BODY_BYTES = 2 * 1024 * 1024
 const MAX_AVATAR_BYTES = 160_000
 
 function sendJson(response, status, payload) {
@@ -32,13 +35,13 @@ function sameOrigin(request) {
   try { return new URL(origin).host === host } catch { return false }
 }
 
-async function readJsonBody(request) {
+async function readJsonBody(request, maxBytes = MAX_BODY_BYTES) {
   const chunks = []
   let size = 0
   for await (const chunk of request) {
     const buffer = Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk)
     size += buffer.length
-    if (size > MAX_BODY_BYTES) throw Object.assign(new Error('request body too large'), { code: 'BODY_TOO_LARGE' })
+    if (size > maxBytes) throw Object.assign(new Error('request body too large'), { code: 'BODY_TOO_LARGE' })
     chunks.push(buffer)
   }
   try { return JSON.parse(Buffer.concat(chunks).toString('utf8')) } catch { throw Object.assign(new Error('invalid JSON body'), { code: 'BODY_INVALID' }) }
@@ -244,7 +247,7 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
       handler: async (request, response) => {
         if (!guard(request, response)) return
         try {
-          const body = await readJsonBody(request)
+          const body = await readJsonBody(request, MAX_PROMPT_BODY_BYTES)
           if (body === null || typeof body !== 'object' || typeof body.expertId !== 'string') {
             throw Object.assign(new Error('expertId is required'), { code: 'INVALID_FIELDS' })
           }

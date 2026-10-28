@@ -219,3 +219,44 @@ test('bot create with the untouched bundled prompt reads it through the producti
   assert.equal(created.payload.instructions, await catalog.readPrompt(id))
   assert.equal(response.body.promptSha256, (await import('node:crypto')).createHash('sha256').update(await catalog.readPrompt(id), 'utf8').digest('hex'))
 })
+
+test('bot create accepts the largest bundled prompt, not just a small one', async () => {
+  const unified = createUnifiedCatalog({ bundled: catalog, local: undefined, localEnabled: false })
+  const adapter = createBundledSourceAdapter(catalog)
+  // Pick the expert with the longest prompt: the 64 KiB body cap used to reject
+  // the real long entries with "request body too large" while every test that
+  // happened to use firstId() kept passing.
+  const state = await catalog.stateOf()
+  let biggest = null
+  for (const expert of state.experts) {
+    const prompt = await catalog.readPrompt(expert.id)
+    if (biggest === null || prompt.length > biggest.prompt.length) biggest = { id: expert.id, prompt }
+  }
+  assert.ok(biggest.prompt.length > 64 * 1024, 'fixture must exceed the old 64 KiB cap')
+
+  const calls = []
+  const api = {
+    async call(endpoint, payload) {
+      calls.push({ endpoint, payload })
+      if (endpoint === 'state') return { bots: [], models: [], readOnly: false }
+      if (endpoint === 'create-bot') return { id: 'bot-big', name: payload.name, role: payload.role, instructions: payload.instructions }
+      throw new Error(`unexpected endpoint ${endpoint}`)
+    },
+  }
+  const service = createBotService({ adapter, api })
+  const server = fakeServer()
+  mountBundledMarketRoutes(server, { catalog: unified, botService: service })
+  const response = res()
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/bot/create').handler(
+    req({
+      method: 'POST',
+      headers: { host: '127.0.0.1:3000' },
+      body: { expertId: biggest.id, name: 'Big Bot', role: 'R', instructions: biggest.prompt },
+    }),
+    response,
+  )
+  assert.equal(response.status, 200, JSON.stringify(response.body))
+  const created = calls.find((call) => call.endpoint === 'create-bot')
+  assert.ok(created !== undefined, 'create-bot reached DS-Bot')
+  assert.equal(created.payload.instructions, biggest.prompt, 'the full prompt reaches DS-Bot unmodified')
+})
