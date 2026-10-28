@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "sre-expert-sre-expert",
+  "source": "bundled",
+  "sourcePackage": "sre-expert",
+  "sourceAgent": "agents/sre-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "CloudQ",
+  "profession": "腾讯云SRE专家",
+  "categoryId": "13-TencentZone",
+  "description": "站点可靠性专家。擅长故障根因推理、告警关联分析、业务进程诊断与 SLO 治理，通过系统化诊断方法论保障服务持续稳定运行。",
+  "tags": [
+    "SRE",
+    "故障诊断",
+    "告警分析",
+    "可靠性"
+  ],
+  "quickPrompts": [
+    "业务响应变慢，帮我排查根因",
+    "最近1小时的告警日志有哪些？",
+    "服务端5xx错误率突增怎么处理？"
+  ],
+  "roleFile": "sre-expert-sre-expert/role.md",
+  "avatarFile": "sre-expert-sre-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a535cb675c1a407125d7f84a5ece40403d47fb89d981ce7b91af76a2fe6a4139",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2ee2ada158331d7cd3536ce941edbf71461113072a85420d4ab5ebbbc522dd6d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c42ae0fbfa183e5e10c512020808ce8fd83c761e1e62775144597c0a1654d79e"
+    }
+  ]
+}

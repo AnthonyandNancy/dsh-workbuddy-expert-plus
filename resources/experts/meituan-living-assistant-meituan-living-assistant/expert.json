@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "meituan-living-assistant-meituan-living-assistant",
+  "source": "bundled",
+  "sourcePackage": "meituan-living-assistant",
+  "sourceAgent": "agents/meituan-living-assistant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "40-20 外卖券",
+  "profession": "美团生活助手",
+  "categoryId": "07-SalesCommerce",
+  "description": "帮您一键领取美团优惠券，搜索附近团购美食并下单，探索今日活动，覆盖餐饮饮品等生活服务，省钱省心。",
+  "tags": [
+    "美团优惠",
+    "团购下单",
+    "生活服务"
+  ],
+  "quickPrompts": [
+    "帮我领美团优惠券",
+    "附近有什么好吃的？",
+    "今天有什么优惠活动？"
+  ],
+  "roleFile": "meituan-living-assistant-meituan-living-assistant/role.md",
+  "avatarFile": "meituan-living-assistant-meituan-living-assistant/avatar.jpg",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "94ff3cb365254e875a281e1bdc9c7d5a8a0e95f936fddc666cf0be37b87bee0b",
+  "files": [
+    {
+      "path": "avatar.jpg",
+      "sha256": "db694991cc501266c53303451a50f3a0b0701a41395b3996c3c3fd15ffdc9e8a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "94df5d51fb0b96df2b6ae95ecf2621ecb73826b06aabaab134623dc7f07d2331"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "smart-stock-analyst-smart-stock-analyst",
+  "source": "bundled",
+  "sourcePackage": "smart-stock-analyst",
+  "sourceAgent": "agents/smart-stock-analyst.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "星辰",
+  "profession": "多市场智能股票分析师",
+  "categoryId": "08-FinanceInvestment",
+  "description": "AI驱动多市场股票分析专家，内置缠论、波浪等15+策略，默认输出精美交互式HTML决策仪表盘报告",
+  "tags": [
+    "多市场分析",
+    "交易策略",
+    "决策仪表盘"
+  ],
+  "quickPrompts": [
+    "帮我分析一下贵州茅台(600519)的当前走势和买卖点",
+    "帮我做一下今天的A股大盘复盘",
+    "用缠论帮我分析一下平安银行(000001)"
+  ],
+  "roleFile": "smart-stock-analyst-smart-stock-analyst/role.md",
+  "avatarFile": "smart-stock-analyst-smart-stock-analyst/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "80978069195407593f68b80c72abc30c017fe60ab112f7307af59390538b2eca",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "638770cfb44b151925d4308cbeee366655e6f2ca9e2244e4854d251f4e927b1e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "bf1697ed484ba369048b1df0af8d80d76fed9bdeb7c2dce3eb06389834e6e34d"
+    }
+  ]
+}

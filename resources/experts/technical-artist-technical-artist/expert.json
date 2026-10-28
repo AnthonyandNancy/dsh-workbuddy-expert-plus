@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "technical-artist-technical-artist",
+  "source": "bundled",
+  "sourcePackage": "technical-artist",
+  "sourceAgent": "agents/technical-artist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "技美美",
+  "profession": "技术美术",
+  "categoryId": "03-GameSpatial",
+  "description": "在美术愿景与引擎实现之间架起桥梁，精通着色器和VFX",
+  "tags": [
+    "技术美术",
+    "美术管线",
+    "着色器编写"
+  ],
+  "quickPrompts": [
+    "我们的游戏需要技术美术支持,连接美术和开发的桥梁,请技术美术帮我们优化游戏美术效果。",
+    "优化美术资源性能和质量平衡",
+    "设计美术工具和自动化脚本"
+  ],
+  "roleFile": "technical-artist-technical-artist/role.md",
+  "avatarFile": "technical-artist-technical-artist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "bc9a1f29f24eb9527e4b3052ddfe48a751bdf1bb1a7fda8ecabf4984b443be48",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "94a4aaf147066955b384f116f95af9e1abcf755017d6d46f949a4db3081048b5"
+    },
+    {
+      "path": "role.md",
+      "sha256": "769c0525a1c371dfb156bd4bb13fcc5bfe5254dc447d3018848e7c0a587c435c"
+    }
+  ]
+}

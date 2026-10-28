@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "vibeknow-design-video-design-artist",
+  "source": "bundled",
+  "sourcePackage": "vibeknow-design-video",
+  "sourceAgent": "agents/design-artist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "一份文档，排成一条成片",
+  "profession": "VibeKnow 视频专家",
+  "categoryId": "06-ContentCreative",
+  "description": "老师讲考点、销售讲方法、企业讲卖点，给个文件或说个主题，自动排版配图配音，成一条设计感横版视频。",
+  "tags": [
+    "图文视频",
+    "动效编排",
+    "知识科普"
+  ],
+  "quickPrompts": [
+    "把这章语法考点做成一条图文视频，排好版式，配图和旁白一起生成",
+    "把这套跟单方法做成图文视频，每屏配张背景图，给销售新人看",
+    "用严肃深色风做一条产品要点视频，版式和配图都你来定"
+  ],
+  "roleFile": "vibeknow-design-video-design-artist/role.md",
+  "avatarFile": "vibeknow-design-video-design-artist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1e7a4f00cbb44bd83f795d36807bf58e3d7ba1cd7000fc6965eb349286657b1b",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "075221c122e711410c6715f66362722e2220ceeebc6e5b6f0d752c37a518e27b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e980e04ee35e9b2a5d772df880a790210f8c0a2f7fcf531a43963dae3c1dc088"
+    }
+  ]
+}

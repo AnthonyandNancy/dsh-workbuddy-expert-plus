@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tik-tok-strategist-tik-tok-strategist",
+  "source": "bundled",
+  "sourcePackage": "tik-tok-strategist",
+  "sourceAgent": "agents/tik-tok-strategist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "拓刻刻",
+  "profession": "TikTok策略师",
+  "categoryId": "06-ContentCreative",
+  "description": "精通TikTok算法和海外短视频生态，帮助品牌在全球平台爆发",
+  "tags": [
+    "TikTok策略",
+    "海外短视频",
+    "全球营销"
+  ],
+  "quickPrompts": [
+    "我们想在TikTok上实现病毒式传播,需要专业的TikTok内容策略,请TikTok战略家帮我们制定爆款内容计划。",
+    "策划TikTok爆款短视频和挑战赛",
+    "优化TikTok算法推荐和商业变现"
+  ],
+  "roleFile": "tik-tok-strategist-tik-tok-strategist/role.md",
+  "avatarFile": "tik-tok-strategist-tik-tok-strategist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b70a4e24149394b453d98590e35a15b221c3582a04f531a3c2823efec4ee7c01",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "093c0922f5b63ebdef1c3d4156b1ed1b20868024787ce9a67a0950220cbb6204"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3bb1924e3d9bab4054eb5f539155d95a01a0a0644d633a40519ab2dd586e4556"
+    }
+  ]
+}

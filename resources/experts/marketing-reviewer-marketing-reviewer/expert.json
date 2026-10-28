@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "marketing-reviewer-marketing-reviewer",
+  "source": "bundled",
+  "sourcePackage": "marketing-reviewer",
+  "sourceAgent": "agents/marketing-reviewer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "营文稳",
+  "profession": "营销文案审查官",
+  "categoryId": "11-SecurityCompliance",
+  "description": "9维度34条规则扫描营销文案，定位广告法与隐私合规风险，输出分级Excel与HTML审查报告。",
+  "tags": [
+    "营销合规",
+    "文案审查",
+    "广告法"
+  ],
+  "quickPrompts": [
+    "请帮我审查这份营销文案的合规性，识别法律风险并提供修改建议。",
+    "审查这份活动文案是否有奖品设置和概率公示方面的合规问题",
+    "检查这份打折促销文案的价格标示是否合规"
+  ],
+  "roleFile": "marketing-reviewer-marketing-reviewer/role.md",
+  "avatarFile": "marketing-reviewer-marketing-reviewer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ffdabc1bf3d540b114e9b4d80dcde439b4c1937d047786878b88f20cdcfabe55",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "84681629144ee2271aa1e963655d435e07ffe6bd56094473716c8390fa4fa005"
+    },
+    {
+      "path": "role.md",
+      "sha256": "efd8383611fbb2b3780d7755569e9f7da13e0cd8f63a972e7e161c91ac4a3371"
+    }
+  ]
+}

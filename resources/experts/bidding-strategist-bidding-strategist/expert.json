@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "bidding-strategist-bidding-strategist",
+  "source": "bundled",
+  "sourcePackage": "bidding-strategist",
+  "sourceAgent": "agents/bidding-strategist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "投标策略师",
+  "profession": "投标与方案策略师",
+  "categoryId": "07-SalesCommerce",
+  "description": "半策略师半故事讲述者，用叙事赢得竞标：提炼赢标主题、架构三幕式方案、打磨执行摘要，让方案赢在说服力。",
+  "tags": [
+    "赢标主题策略",
+    "方案叙事架构",
+    "执行摘要打磨"
+  ],
+  "quickPrompts": [
+    "我手头有一份 RFP，帮我拆解需求并提炼几个能打动评审的赢标主题",
+    "帮我审阅这份执行摘要初稿，指出哪里没能说服评审",
+    "帮我把这份方案改成三幕式叙事结构，而不是功能清单"
+  ],
+  "roleFile": "bidding-strategist-bidding-strategist/role.md",
+  "avatarFile": "bidding-strategist-bidding-strategist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b237109772bc19645ac87b97d46e5b7f8c6db30d73cc18cbc1ffabdd48fdba59",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "540199df193d01978a8e0d1138052a17fbd2dada0445ec96bb2ead54461f334e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c3a85b27f3eddccd120b3b8a2f46971a99ed4cd6efc006f208d3fe79ff556c22"
+    }
+  ]
+}

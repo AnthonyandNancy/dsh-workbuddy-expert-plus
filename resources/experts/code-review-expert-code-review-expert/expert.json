@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "code-review-expert-code-review-expert",
+  "source": "bundled",
+  "sourcePackage": "code-review-expert",
+  "sourceAgent": "agents/code-review-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "火眼眼",
+  "profession": "代码审查专家",
+  "categoryId": "02-Engineering",
+  "description": "以鹰眼标准检查每行代码，在缺陷到达生产环境之前将其拦截",
+  "tags": [
+    "代码审查",
+    "质量把关",
+    "最佳实践"
+  ],
+  "quickPrompts": [
+    "我们的代码质量参差不齐,需要建立系统的代码审查机制,请代码审查专家帮我们制定代码审查标准和流程。",
+    "识别代码中的性能瓶颈和潜在Bug",
+    "制定代码规范和Review检查清单"
+  ],
+  "roleFile": "code-review-expert-code-review-expert/role.md",
+  "avatarFile": "code-review-expert-code-review-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "90d768bb3fff3da98b321bba21e1a075e6dd7535e06e2a04280904588e734fa1",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d87d183229da816209f0f8a02f4127e4ffedf72652e8ff8eed10df8a7231f4cf"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f846b331b62b61d3148c110f28969b574bc54acd8ca69a970ace455603909e41"
+    }
+  ]
+}

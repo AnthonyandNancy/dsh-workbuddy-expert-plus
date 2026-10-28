@@ -1,16 +1,17 @@
 {
-  "policy": "Prompt-level explicit evidence only; license/ dependency texts do not license the agent prompt.",
+  "policy": "Internal-only build: the full index ships. Licence verdicts are recorded as provenance (approved | restricted) and never filter entries.",
   "counts": {
     "approved": 39,
     "restricted": 390,
-    "invalid": 0
+    "invalid": 0,
+    "shipped": 429
   },
   "entries": [
     {
       "indexId": "ContentCreator",
       "sourcePackage": "content-creator",
       "id": "content-creator-content-creator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -21,7 +22,7 @@
       "indexId": "DataAnalyticsReporter",
       "sourcePackage": "data-analytics-reporter",
       "id": "data-analytics-reporter-data-analytics-reporter",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -32,7 +33,7 @@
       "indexId": "ChinaEcommerceOperationsExpert",
       "sourcePackage": "china-ecommerce-operations-expert",
       "id": "china-ecommerce-operations-expert-china-ecommerce-operations-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -43,7 +44,7 @@
       "indexId": "DouyinStrategist",
       "sourcePackage": "douyin-strategist",
       "id": "douyin-strategist-douyin-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -54,7 +55,7 @@
       "indexId": "UiDesigner",
       "sourcePackage": "ui-designer",
       "id": "ui-designer-ui-designer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -65,7 +66,7 @@
       "indexId": "SalesCoach",
       "sourcePackage": "sales-coach",
       "id": "sales-coach-sales-coach",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -76,7 +77,7 @@
       "indexId": "BrandGuardian",
       "sourcePackage": "brand-guardian",
       "id": "brand-guardian-brand-guardian",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -87,7 +88,7 @@
       "indexId": "XiaohongshuOperationsExpert",
       "sourcePackage": "xiaohongshu-operations-expert",
       "id": "xiaohongshu-operations-expert-xiaohongshu-operations-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -98,7 +99,7 @@
       "indexId": "RecruitmentExpert",
       "sourcePackage": "recruitment-expert",
       "id": "recruitment-expert-recruitment-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -109,7 +110,7 @@
       "indexId": "GrowthHacker",
       "sourcePackage": "growth-hacker",
       "id": "growth-hacker-growth-hacker",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -120,7 +121,7 @@
       "indexId": "AdCreativeStrategist",
       "sourcePackage": "ad-creative-strategist",
       "id": "ad-creative-strategist-ad-creative-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -131,7 +132,7 @@
       "indexId": "LivestreamEcommerceCoach",
       "sourcePackage": "livestream-ecommerce-coach",
       "id": "livestream-ecommerce-coach-livestream-ecommerce-coach",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -142,7 +143,7 @@
       "indexId": "ExecutiveSummaryGenerator",
       "sourcePackage": "executive-summary-generator",
       "id": "executive-summary-generator-executive-summary-generator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -153,7 +154,7 @@
       "indexId": "SocialMediaStrategist",
       "sourcePackage": "social-media-strategist",
       "id": "social-media-strategist-social-media-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -164,7 +165,7 @@
       "indexId": "ShortVideoEditingCoach",
       "sourcePackage": "short-video-editing-coach",
       "id": "short-video-editing-coach-short-video-editing-coach",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -175,7 +176,7 @@
       "indexId": "SeniorProjectManager",
       "sourcePackage": "senior-project-manager",
       "id": "senior-project-manager-senior-project-manager",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -186,7 +187,7 @@
       "indexId": "AiImagePromptEngineer",
       "sourcePackage": "ai-image-prompt-engineer",
       "id": "ai-image-prompt-engineer-ai-image-prompt-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -197,7 +198,7 @@
       "indexId": "DocumentGenerationExpert",
       "sourcePackage": "document-generation-expert",
       "id": "document-generation-expert-document-generation-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -208,7 +209,7 @@
       "indexId": "SeoExpert",
       "sourcePackage": "seo-expert",
       "id": "seo-expert-seo-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -219,7 +220,7 @@
       "indexId": "WechatOfficialAccountExpert",
       "sourcePackage": "wechat-official-account-expert",
       "id": "wechat-official-account-expert-wechat-official-account-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -230,7 +231,7 @@
       "indexId": "CrossBorderEcommerceExpert",
       "sourcePackage": "cross-border-ecommerce-expert",
       "id": "cross-border-ecommerce-expert-cross-border-ecommerce-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -241,7 +242,7 @@
       "indexId": "PrivateDomainOperationsExpert",
       "sourcePackage": "private-domain-operations-expert",
       "id": "private-domain-operations-expert-private-domain-operations-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -252,7 +253,7 @@
       "indexId": "CustomerSupportExpert",
       "sourcePackage": "customer-support-expert",
       "id": "customer-support-expert-customer-support-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -263,7 +264,7 @@
       "indexId": "FinancialTracker",
       "sourcePackage": "financial-tracker",
       "id": "financial-tracker-financial-tracker",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -274,7 +275,7 @@
       "indexId": "ProposalStrategist",
       "sourcePackage": "proposal-strategist",
       "id": "proposal-strategist-proposal-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -285,7 +286,7 @@
       "indexId": "UserExperienceArchitect",
       "sourcePackage": "user-experience-architect",
       "id": "user-experience-architect-user-experience-architect",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -296,7 +297,7 @@
       "indexId": "TrendResearcher",
       "sourcePackage": "trend-researcher",
       "id": "trend-researcher-trend-researcher",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -307,7 +308,7 @@
       "indexId": "CorporateTrainingDesigner",
       "sourcePackage": "corporate-training-designer",
       "id": "corporate-training-designer-corporate-training-designer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -318,7 +319,7 @@
       "indexId": "BilibiliContentStrategist",
       "sourcePackage": "bilibili-content-strategist",
       "id": "bilibili-content-strategist-bilibili-content-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -329,7 +330,7 @@
       "indexId": "VisualStorytellingExpert",
       "sourcePackage": "visual-storytelling-expert",
       "id": "visual-storytelling-expert-visual-storytelling-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -340,7 +341,7 @@
       "indexId": "WorkflowOptimizationExpert",
       "sourcePackage": "workflow-optimization-expert",
       "id": "workflow-optimization-expert-workflow-optimization-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -351,7 +352,7 @@
       "indexId": "UserExperienceResearcher",
       "sourcePackage": "user-experience-researcher",
       "id": "user-experience-researcher-user-experience-researcher",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -362,7 +363,7 @@
       "indexId": "BaiduSeoExpert",
       "sourcePackage": "baidu-seo-expert",
       "id": "baidu-seo-expert-baidu-seo-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -373,7 +374,7 @@
       "indexId": "PpcBiddingStrategist",
       "sourcePackage": "ppc-bidding-strategist",
       "id": "ppc-bidding-strategist-ppc-bidding-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -384,7 +385,7 @@
       "indexId": "TikTokStrategist",
       "sourcePackage": "tik-tok-strategist",
       "id": "tik-tok-strategist-tik-tok-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -395,7 +396,7 @@
       "indexId": "LegalComplianceReviewer",
       "sourcePackage": "legal-compliance-reviewer",
       "id": "legal-compliance-reviewer-legal-compliance-reviewer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -406,7 +407,7 @@
       "indexId": "TencentCharityExpert",
       "sourcePackage": "tencent-charity-expert",
       "id": "tencent-charity-expert-tencent-charity-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -417,7 +418,7 @@
       "indexId": "StudyAbroadConsultant",
       "sourcePackage": "study-abroad-consultant",
       "id": "study-abroad-consultant-study-abroad-consultant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -428,7 +429,7 @@
       "indexId": "MultiCloudManagementExpert",
       "sourcePackage": "multi-cloud-management-expert",
       "id": "multi-cloud-management-expert-multi-cloud-management-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -439,7 +440,7 @@
       "indexId": "CloudOpsTeam",
       "sourcePackage": "cloud-ops-team",
       "id": "cloud-ops-team-cloud-ops-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -450,7 +451,7 @@
       "indexId": "AndonQExpert",
       "sourcePackage": "andon-q-expert",
       "id": "andon-q-expert-andon-q-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -461,7 +462,7 @@
       "indexId": "TencentSecurityExpert",
       "sourcePackage": "tencent-security-expert",
       "id": "tencent-security-expert-tencent-security-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -472,7 +473,7 @@
       "indexId": "AiEngineer",
       "sourcePackage": "ai-engineer",
       "id": "ai-engineer-ai-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -483,7 +484,7 @@
       "indexId": "SeniorDeveloper",
       "sourcePackage": "senior-developer",
       "id": "senior-developer-senior-developer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -494,7 +495,7 @@
       "indexId": "FrontendDeveloper",
       "sourcePackage": "frontend-developer",
       "id": "frontend-developer-frontend-developer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -505,7 +506,7 @@
       "indexId": "BackendArchitect",
       "sourcePackage": "backend-architect",
       "id": "backend-architect-backend-architect",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -516,7 +517,7 @@
       "indexId": "SoftwareArchitect",
       "sourcePackage": "software-architect",
       "id": "software-architect-software-architect",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -527,7 +528,7 @@
       "indexId": "MobileApplicationDeveloper",
       "sourcePackage": "mobile-application-developer",
       "id": "mobile-application-developer-mobile-application-developer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -538,7 +539,7 @@
       "indexId": "WeChatMiniProgramDeveloper",
       "sourcePackage": "we-chat-mini-program-developer",
       "id": "we-chat-mini-program-developer-we-chat-mini-program-developer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -549,7 +550,7 @@
       "indexId": "CodeReviewExpert",
       "sourcePackage": "code-review-expert",
       "id": "code-review-expert-code-review-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -560,7 +561,7 @@
       "indexId": "SecurityEngineer",
       "sourcePackage": "security-engineer",
       "id": "security-engineer-security-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -571,7 +572,7 @@
       "indexId": "DevOpsAutomationEngineer",
       "sourcePackage": "dev-ops-automation-engineer",
       "id": "dev-ops-automation-engineer-dev-ops-automation-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -582,7 +583,7 @@
       "indexId": "TechnicalDocumentationEngineer",
       "sourcePackage": "technical-documentation-engineer",
       "id": "technical-documentation-engineer-technical-documentation-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -593,7 +594,7 @@
       "indexId": "DatabaseOptimizationExpert",
       "sourcePackage": "database-optimization-expert",
       "id": "database-optimization-expert-database-optimization-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -604,7 +605,7 @@
       "indexId": "DataEngineer",
       "sourcePackage": "data-engineer",
       "id": "data-engineer-data-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -615,7 +616,7 @@
       "indexId": "RapidPrototypingEngineer",
       "sourcePackage": "rapid-prototyping-engineer",
       "id": "rapid-prototyping-engineer-rapid-prototyping-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -626,7 +627,7 @@
       "indexId": "GitWorkflowExpert",
       "sourcePackage": "git-workflow-expert",
       "id": "git-workflow-expert-git-workflow-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -637,7 +638,7 @@
       "indexId": "LinkedInContentCreator",
       "sourcePackage": "linked-in-content-creator",
       "id": "linked-in-content-creator-linked-in-content-creator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -648,7 +649,7 @@
       "indexId": "WeiboStrategist",
       "sourcePackage": "weibo-strategist",
       "id": "weibo-strategist-weibo-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -659,7 +660,7 @@
       "indexId": "InstagramOperationsExpert",
       "sourcePackage": "instagram-operations-expert",
       "id": "instagram-operations-expert-instagram-operations-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -670,7 +671,7 @@
       "indexId": "TwitterOperationsExpert",
       "sourcePackage": "twitter-operations-expert",
       "id": "twitter-operations-expert-twitter-operations-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -681,7 +682,7 @@
       "indexId": "SocialAdStrategist",
       "sourcePackage": "social-ad-strategist",
       "id": "social-ad-strategist-social-ad-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -692,7 +693,7 @@
       "indexId": "CarouselContentGrowthExpert",
       "sourcePackage": "carousel-content-growth-expert",
       "id": "carousel-content-growth-expert-carousel-content-growth-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -703,7 +704,7 @@
       "indexId": "AppStoreOptimizationExpert",
       "sourcePackage": "app-store-optimization-expert",
       "id": "app-store-optimization-expert-app-store-optimization-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -714,7 +715,7 @@
       "indexId": "BookCoCreator",
       "sourcePackage": "book-co-creator",
       "id": "book-co-creator-book-co-creator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -725,7 +726,7 @@
       "indexId": "AgentOrchestrator",
       "sourcePackage": "agent-orchestrator",
       "id": "agent-orchestrator-agent-orchestrator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -736,7 +737,7 @@
       "indexId": "EnterpriseAccountStrategist",
       "sourcePackage": "enterprise-account-strategist",
       "id": "enterprise-account-strategist-enterprise-account-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -747,7 +748,7 @@
       "indexId": "DealStrategist",
       "sourcePackage": "deal-strategist",
       "id": "deal-strategist-deal-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -758,7 +759,7 @@
       "indexId": "PresalesTechnicalConsultant",
       "sourcePackage": "presales-technical-consultant",
       "id": "presales-technical-consultant-presales-technical-consultant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -769,7 +770,7 @@
       "indexId": "SalesPipelineAnalyst",
       "sourcePackage": "sales-pipeline-analyst",
       "id": "sales-pipeline-analyst-sales-pipeline-analyst",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -780,7 +781,7 @@
       "indexId": "DiscoveryCoach",
       "sourcePackage": "discovery-coach",
       "id": "discovery-coach-discovery-coach",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -791,7 +792,7 @@
       "indexId": "OutboundStrategist",
       "sourcePackage": "outbound-strategist",
       "id": "outbound-strategist-outbound-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -802,7 +803,7 @@
       "indexId": "SprintPriorityManager",
       "sourcePackage": "sprint-priority-manager",
       "id": "sprint-priority-manager-sprint-priority-manager",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -813,7 +814,7 @@
       "indexId": "FeedbackSynthesisAnalyst",
       "sourcePackage": "feedback-synthesis-analyst",
       "id": "feedback-synthesis-analyst-feedback-synthesis-analyst",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -824,7 +825,7 @@
       "indexId": "PodcastStrategist",
       "sourcePackage": "podcast-strategist",
       "id": "podcast-strategist-podcast-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -835,7 +836,7 @@
       "indexId": "ZhihuStrategist",
       "sourcePackage": "zhihu-strategist",
       "id": "zhihu-strategist-zhihu-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -846,7 +847,7 @@
       "indexId": "KuaishouStrategist",
       "sourcePackage": "kuaishou-strategist",
       "id": "kuaishou-strategist-kuaishou-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -857,7 +858,7 @@
       "indexId": "RedditCommunityBuilder",
       "sourcePackage": "reddit-community-builder",
       "id": "reddit-community-builder-reddit-community-builder",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -868,7 +869,7 @@
       "indexId": "PaidMediaAuditor",
       "sourcePackage": "paid-media-auditor",
       "id": "paid-media-auditor-paid-media-auditor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -879,7 +880,7 @@
       "indexId": "AdTrackingExpert",
       "sourcePackage": "ad-tracking-expert",
       "id": "ad-tracking-expert-ad-tracking-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -890,7 +891,7 @@
       "indexId": "SearchTermAnalyst",
       "sourcePackage": "search-term-analyst",
       "id": "search-term-analyst-search-term-analyst",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -901,7 +902,7 @@
       "indexId": "ProgrammaticAdBuyer",
       "sourcePackage": "programmatic-ad-buyer",
       "id": "programmatic-ad-buyer-programmatic-ad-buyer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -912,7 +913,7 @@
       "indexId": "SiteReliabilityEngineer",
       "sourcePackage": "site-reliability-engineer",
       "id": "site-reliability-engineer-site-reliability-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -923,7 +924,7 @@
       "indexId": "PerformanceTestingExpert",
       "sourcePackage": "performance-testing-expert",
       "id": "performance-testing-expert-performance-testing-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -934,7 +935,7 @@
       "indexId": "ApiTestingExpert",
       "sourcePackage": "api-testing-expert",
       "id": "api-testing-expert-api-testing-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -945,7 +946,7 @@
       "indexId": "IncidentResponseCommander",
       "sourcePackage": "incident-response-commander",
       "id": "incident-response-commander-incident-response-commander",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -956,7 +957,7 @@
       "indexId": "InfrastructureOperationsExpert",
       "sourcePackage": "infrastructure-operations-expert",
       "id": "infrastructure-operations-expert-infrastructure-operations-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -967,7 +968,7 @@
       "indexId": "JiraWorkflowAdmin",
       "sourcePackage": "jira-workflow-admin",
       "id": "jira-workflow-admin-jira-workflow-admin",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -978,7 +979,7 @@
       "indexId": "ProjectShepherd",
       "sourcePackage": "project-shepherd",
       "id": "project-shepherd-project-shepherd",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -989,7 +990,7 @@
       "indexId": "StudioOperationsManager",
       "sourcePackage": "studio-operations-manager",
       "id": "studio-operations-manager-studio-operations-manager",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1000,7 +1001,7 @@
       "indexId": "StudioProducer",
       "sourcePackage": "studio-producer",
       "id": "studio-producer-studio-producer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1011,7 +1012,7 @@
       "indexId": "ComplianceAuditor",
       "sourcePackage": "compliance-auditor",
       "id": "compliance-auditor-compliance-auditor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1022,7 +1023,7 @@
       "indexId": "ToolEvaluationExpert",
       "sourcePackage": "tool-evaluation-expert",
       "id": "tool-evaluation-expert-tool-evaluation-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1033,7 +1034,7 @@
       "indexId": "TestResultsAnalyst",
       "sourcePackage": "test-results-analyst",
       "id": "test-results-analyst-test-results-analyst",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1044,7 +1045,7 @@
       "indexId": "DeveloperEvangelist",
       "sourcePackage": "developer-evangelist",
       "id": "developer-evangelist-developer-evangelist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1055,7 +1056,7 @@
       "indexId": "McpBuildExpert",
       "sourcePackage": "mcp-build-expert",
       "id": "mcp-build-expert-mcp-build-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1066,7 +1067,7 @@
       "indexId": "SupplyChainStrategist",
       "sourcePackage": "supply-chain-strategist",
       "id": "supply-chain-strategist-supply-chain-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1077,7 +1078,7 @@
       "indexId": "GameDesigner",
       "sourcePackage": "game-designer",
       "id": "game-designer-game-designer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1088,7 +1089,7 @@
       "indexId": "ExperimentTrackingManager",
       "sourcePackage": "experiment-tracking-manager",
       "id": "experiment-tracking-manager-experiment-tracking-manager",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1099,7 +1100,7 @@
       "indexId": "DelightfulExperienceDesigner",
       "sourcePackage": "delightful-experience-designer",
       "id": "delightful-experience-designer-delightful-experience-designer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1110,7 +1111,7 @@
       "indexId": "BehavioralNudgeEngine",
       "sourcePackage": "behavioral-nudge-engine",
       "id": "behavioral-nudge-engine-behavioral-nudge-engine",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1121,7 +1122,7 @@
       "indexId": "DataIntegrationAgent",
       "sourcePackage": "data-integration-agent",
       "id": "data-integration-agent-data-integration-agent",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1132,7 +1133,7 @@
       "indexId": "AccountsPayableAgent",
       "sourcePackage": "accounts-payable-agent",
       "id": "accounts-payable-agent-accounts-payable-agent",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1143,7 +1144,7 @@
       "indexId": "SalesDataExtractionAgent",
       "sourcePackage": "sales-data-extraction-agent",
       "id": "sales-data-extraction-agent-sales-data-extraction-agent",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1154,7 +1155,7 @@
       "indexId": "CulturalIntelligenceStrategist",
       "sourcePackage": "cultural-intelligence-strategist",
       "id": "cultural-intelligence-strategist-cultural-intelligence-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1165,7 +1166,7 @@
       "indexId": "GovernmentDigitalPresalesConsultant",
       "sourcePackage": "government-digital-presales-consultant",
       "id": "government-digital-presales-consultant-government-digital-presales-consultant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1176,7 +1177,7 @@
       "indexId": "HealthcareMarketingComplianceExpert",
       "sourcePackage": "healthcare-marketing-compliance-expert",
       "id": "healthcare-marketing-compliance-expert-healthcare-marketing-compliance-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1187,7 +1188,7 @@
       "indexId": "AutonomousOptimizationArchitect",
       "sourcePackage": "autonomous-optimization-architect",
       "id": "autonomous-optimization-architect-autonomous-optimization-architect",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1198,7 +1199,7 @@
       "indexId": "IdentityGraphOperator",
       "sourcePackage": "identity-graph-operator",
       "id": "identity-graph-operator-identity-graph-operator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1209,7 +1210,7 @@
       "indexId": "ModelQualityAssuranceExpert",
       "sourcePackage": "model-quality-assurance-expert",
       "id": "model-quality-assurance-expert-model-quality-assurance-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1220,7 +1221,7 @@
       "indexId": "ThreatDetectionEngineer",
       "sourcePackage": "threat-detection-engineer",
       "id": "threat-detection-engineer-threat-detection-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1231,7 +1232,7 @@
       "indexId": "EmbeddedFirmwareEngineer",
       "sourcePackage": "embedded-firmware-engineer",
       "id": "embedded-firmware-engineer-embedded-firmware-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1242,7 +1243,7 @@
       "indexId": "LspIndexEngineer",
       "sourcePackage": "lsp-index-engineer",
       "id": "lsp-index-engineer-lsp-index-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1253,7 +1254,7 @@
       "indexId": "SoliditySmartContractEngineer",
       "sourcePackage": "solidity-smart-contract-engineer",
       "id": "solidity-smart-contract-engineer-solidity-smart-contract-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1264,7 +1265,7 @@
       "indexId": "BlockchainSecurityAuditor",
       "sourcePackage": "blockchain-security-auditor",
       "id": "blockchain-security-auditor-blockchain-security-auditor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1275,7 +1276,7 @@
       "indexId": "AgentIdentityTrustExpert",
       "sourcePackage": "agent-identity-trust-expert",
       "id": "agent-identity-trust-expert-agent-identity-trust-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1286,7 +1287,7 @@
       "indexId": "ZeroKnowledgeProofAdmin",
       "sourcePackage": "zero-knowledge-proof-admin",
       "id": "zero-knowledge-proof-admin-zero-knowledge-proof-admin",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1297,7 +1298,7 @@
       "indexId": "DiversityVisualExpert",
       "sourcePackage": "diversity-visual-expert",
       "id": "diversity-visual-expert-diversity-visual-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1308,7 +1309,7 @@
       "indexId": "AdortDesignExpert",
       "sourcePackage": "adort-design-expert",
       "id": "adort-design-expert-adort-design-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1319,7 +1320,7 @@
       "indexId": "TechnicalArtist",
       "sourcePackage": "technical-artist",
       "id": "technical-artist-technical-artist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1330,7 +1331,7 @@
       "indexId": "NarrativeDesigner",
       "sourcePackage": "narrative-designer",
       "id": "narrative-designer-narrative-designer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1341,7 +1342,7 @@
       "indexId": "LevelDesigner",
       "sourcePackage": "level-designer",
       "id": "level-designer-level-designer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1352,7 +1353,7 @@
       "indexId": "GameAudioEngineer",
       "sourcePackage": "game-audio-engineer",
       "id": "game-audio-engineer-game-audio-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1363,7 +1364,7 @@
       "indexId": "AccessibilityAuditor",
       "sourcePackage": "accessibility-auditor",
       "id": "accessibility-auditor-accessibility-auditor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1374,7 +1375,7 @@
       "indexId": "EvidenceCollector",
       "sourcePackage": "evidence-collector",
       "id": "evidence-collector-evidence-collector",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1385,7 +1386,7 @@
       "indexId": "UnityArchitect",
       "sourcePackage": "unity-architect",
       "id": "unity-architect-unity-architect",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1396,7 +1397,7 @@
       "indexId": "UnrealSystemEngineer",
       "sourcePackage": "unreal-system-engineer",
       "id": "unreal-system-engineer-unreal-system-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1407,7 +1408,7 @@
       "indexId": "UnrealWorldBuilder",
       "sourcePackage": "unreal-world-builder",
       "id": "unreal-world-builder-unreal-world-builder",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1418,7 +1419,7 @@
       "indexId": "UnrealMultiplayerArchitect",
       "sourcePackage": "unreal-multiplayer-architect",
       "id": "unreal-multiplayer-architect-unreal-multiplayer-architect",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1429,7 +1430,7 @@
       "indexId": "UnrealTechnicalArtist",
       "sourcePackage": "unreal-technical-artist",
       "id": "unreal-technical-artist-unreal-technical-artist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1440,7 +1441,7 @@
       "indexId": "UnityMultiplayerEngineer",
       "sourcePackage": "unity-multiplayer-engineer",
       "id": "unity-multiplayer-engineer-unity-multiplayer-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1451,7 +1452,7 @@
       "indexId": "UnityShaderGraphArtist",
       "sourcePackage": "unity-shader-graph-artist",
       "id": "unity-shader-graph-artist-unity-shader-graph-artist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1462,7 +1463,7 @@
       "indexId": "UnityEditorToolDeveloper",
       "sourcePackage": "unity-editor-tool-developer",
       "id": "unity-editor-tool-developer-unity-editor-tool-developer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1473,7 +1474,7 @@
       "indexId": "GodotGameScriptEngineer",
       "sourcePackage": "godot-game-script-engineer",
       "id": "godot-game-script-engineer-godot-game-script-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1484,7 +1485,7 @@
       "indexId": "GodotMultiplayerEngineer",
       "sourcePackage": "godot-multiplayer-engineer",
       "id": "godot-multiplayer-engineer-godot-multiplayer-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1495,7 +1496,7 @@
       "indexId": "GodotShaderDeveloper",
       "sourcePackage": "godot-shader-developer",
       "id": "godot-shader-developer-godot-shader-developer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1506,7 +1507,7 @@
       "indexId": "RobloxExperienceDesigner",
       "sourcePackage": "roblox-experience-designer",
       "id": "roblox-experience-designer-roblox-experience-designer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1517,7 +1518,7 @@
       "indexId": "RobloxSystemScriptEngineer",
       "sourcePackage": "roblox-system-script-engineer",
       "id": "roblox-system-script-engineer-roblox-system-script-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1528,7 +1529,7 @@
       "indexId": "RobloxAvatarCreator",
       "sourcePackage": "roblox-avatar-creator",
       "id": "roblox-avatar-creator-roblox-avatar-creator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1539,7 +1540,7 @@
       "indexId": "VisionOsSpatialEngineer",
       "sourcePackage": "vision-os-spatial-engineer",
       "id": "vision-os-spatial-engineer-vision-os-spatial-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1550,7 +1551,7 @@
       "indexId": "MacOsSpatialMetalEngineer",
       "sourcePackage": "mac-os-spatial-metal-engineer",
       "id": "mac-os-spatial-metal-engineer-mac-os-spatial-metal-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1561,7 +1562,7 @@
       "indexId": "XrImmersiveDeveloper",
       "sourcePackage": "xr-immersive-developer",
       "id": "xr-immersive-developer-xr-immersive-developer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1572,7 +1573,7 @@
       "indexId": "XrInterfaceArchitect",
       "sourcePackage": "xr-interface-architect",
       "id": "xr-interface-architect-xr-interface-architect",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1583,7 +1584,7 @@
       "indexId": "XrCockpitInteractionExpert",
       "sourcePackage": "xr-cockpit-interaction-expert",
       "id": "xr-cockpit-interaction-expert-xr-cockpit-interaction-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1594,7 +1595,7 @@
       "indexId": "TerminalIntegrationExpert",
       "sourcePackage": "terminal-integration-expert",
       "id": "terminal-integration-expert-terminal-integration-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1605,7 +1606,7 @@
       "indexId": "RealityChecker",
       "sourcePackage": "reality-checker",
       "id": "reality-checker-reality-checker",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1616,7 +1617,7 @@
       "indexId": "LlmWiki",
       "sourcePackage": "llm-wiki",
       "id": "llm-wiki-llm-wiki",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1627,7 +1628,7 @@
       "indexId": "SoftwareCompany",
       "sourcePackage": "software-company",
       "id": "software-company-software-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1638,7 +1639,7 @@
       "indexId": "DesignMdArchitect",
       "sourcePackage": "design-md-architect",
       "id": "design-md-architect-design-md-architect",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1737,7 +1738,7 @@
       "indexId": "DataAnalysisExpert",
       "sourcePackage": "data-analysis",
       "id": "data-analysis-data-analysis-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1748,7 +1749,7 @@
       "indexId": "DataExplorationExpert",
       "sourcePackage": "data",
       "id": "data-data-exploration-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1770,7 +1771,7 @@
       "indexId": "FinancialModelingExpert",
       "sourcePackage": "financial-analysis",
       "id": "financial-analysis-financial-modeling-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1781,7 +1782,7 @@
       "indexId": "EquityResearchExpert",
       "sourcePackage": "equity-research",
       "id": "equity-research-equity-research-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1792,7 +1793,7 @@
       "indexId": "InvestmentBankingExpert",
       "sourcePackage": "investment-banking",
       "id": "investment-banking-investment-banking-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1803,7 +1804,7 @@
       "indexId": "PrivateEquityExpert",
       "sourcePackage": "private-equity",
       "id": "private-equity-private-equity-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1814,7 +1815,7 @@
       "indexId": "WealthManagementExpert",
       "sourcePackage": "wealth-management",
       "id": "wealth-management-wealth-management-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1825,7 +1826,7 @@
       "indexId": "DocumentProcessingExpert",
       "sourcePackage": "document-skills",
       "id": "document-skills-document-processing-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1836,7 +1837,7 @@
       "indexId": "PptCreationExpert",
       "sourcePackage": "ppt-creation-expert",
       "id": "ppt-creation-expert-ppt-creator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1847,7 +1848,7 @@
       "indexId": "ModernWebappExpert",
       "sourcePackage": "modern-webapp",
       "id": "modern-webapp-modern-webapp-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1858,7 +1859,7 @@
       "indexId": "FinanceDataExpert",
       "sourcePackage": "finance-data",
       "id": "finance-data-finance-data-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1891,7 +1892,7 @@
       "indexId": "InternalCommsExpert",
       "sourcePackage": "internal-comms",
       "id": "internal-comms-internal-comms-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1902,7 +1903,7 @@
       "indexId": "RemotionVideoExpert",
       "sourcePackage": "remotion-video-generator",
       "id": "remotion-video-generator-remotion-video-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1935,7 +1936,7 @@
       "indexId": "StockPartnerTeam",
       "sourcePackage": "stock-partner-team",
       "id": "stock-partner-team-stock-partner-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1946,7 +1947,7 @@
       "indexId": "InvestmentMastersTeam",
       "sourcePackage": "investment-masters-team",
       "id": "investment-masters-team-hedge-fund-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1957,7 +1958,7 @@
       "indexId": "EngineeringAssuranceTeam",
       "sourcePackage": "engineering-assurance-team",
       "id": "engineering-assurance-team-engineering-director",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1968,7 +1969,7 @@
       "indexId": "HrOperationsTeam",
       "sourcePackage": "hr-operations-team",
       "id": "hr-operations-team-hr-director",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1979,7 +1980,7 @@
       "indexId": "MarketingCampaignTeam",
       "sourcePackage": "marketing-campaign-team",
       "id": "marketing-campaign-team-marketing-director",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -1990,7 +1991,7 @@
       "indexId": "ProductStrategyTeam",
       "sourcePackage": "product-strategy-team",
       "id": "product-strategy-team-product-director",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2001,7 +2002,7 @@
       "indexId": "SalesBattleTeam",
       "sourcePackage": "sales-battle-team",
       "id": "sales-battle-team-sales-director",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2012,7 +2013,7 @@
       "indexId": "ChatLawTeam",
       "sourcePackage": "chatlaw-team",
       "id": "chatlaw-team-chatlaw-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2023,7 +2024,7 @@
       "indexId": "EntrepreneurshipCoach",
       "sourcePackage": "chuangye-manor",
       "id": "chuangye-manor-chuangye-manor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2034,7 +2035,7 @@
       "indexId": "SoftwareWorkshop",
       "sourcePackage": "gstack",
       "id": "gstack-gstack-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2045,7 +2046,7 @@
       "indexId": "AShareAnalysis",
       "sourcePackage": "a-share-analysis",
       "id": "a-share-analysis-a-share-advisor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2067,7 +2068,7 @@
       "indexId": "KdocsDataTable",
       "sourcePackage": "kdocs-data-table",
       "id": "kdocs-data-table-kdocs-data-table",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2078,7 +2079,7 @@
       "indexId": "KdocsDocButler",
       "sourcePackage": "kdocs-doc-butler",
       "id": "kdocs-doc-butler-kdocs-doc-butler",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2089,7 +2090,7 @@
       "indexId": "KdocsKnowledgeCollector",
       "sourcePackage": "kdocs-knowledge-collector",
       "id": "kdocs-knowledge-collector-kdocs-knowledge-collector",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2100,7 +2101,7 @@
       "indexId": "KdocsPdfToolbox",
       "sourcePackage": "kdocs-pdf-toolbox",
       "id": "kdocs-pdf-toolbox-kdocs-pdf-toolbox",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2111,7 +2112,7 @@
       "indexId": "KdocsPptCreator",
       "sourcePackage": "kdocs-ppt-creator",
       "id": "kdocs-ppt-creator-kdocs-ppt-creator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2122,7 +2123,7 @@
       "indexId": "AIShifuExpert",
       "sourcePackage": "ai-shifu-expert",
       "id": "ai-shifu-expert-ai-shifu",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2144,7 +2145,7 @@
       "indexId": "DesignEngineTeam",
       "sourcePackage": "design-engine",
       "id": "design-engine-design-engine-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2155,7 +2156,7 @@
       "indexId": "AiDataCopilot",
       "sourcePackage": "ai-data-copilot",
       "id": "ai-data-copilot-copilot-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2166,7 +2167,7 @@
       "indexId": "AiContentCreatorTeam",
       "sourcePackage": "ai-content-creator-team",
       "id": "ai-content-creator-team-ai-content-creator-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2188,7 +2189,7 @@
       "indexId": "ContentDistributionTeam",
       "sourcePackage": "content-distribution-team",
       "id": "content-distribution-team-content-distribution-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2199,7 +2200,7 @@
       "indexId": "SocialEngagementTeam",
       "sourcePackage": "social-engagement-team",
       "id": "social-engagement-team-social-engagement-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2210,7 +2211,7 @@
       "indexId": "SeoContentTeam",
       "sourcePackage": "seo-content-team",
       "id": "seo-content-team-seo-content-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2221,7 +2222,7 @@
       "indexId": "TaxComplianceTeam",
       "sourcePackage": "tax-compliance-team",
       "id": "tax-compliance-team-tax-compliance-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2232,7 +2233,7 @@
       "indexId": "VocabCraftExpert",
       "sourcePackage": "vocab-craft-expert",
       "id": "vocab-craft-expert-vocab-coach",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2243,7 +2244,7 @@
       "indexId": "IndieFounderCoach",
       "sourcePackage": "indie-founder-coach",
       "id": "indie-founder-coach-indie-founder-coach",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2265,7 +2266,7 @@
       "indexId": "MermaidDiagramExpert",
       "sourcePackage": "mermaid-diagram-expert",
       "id": "mermaid-diagram-expert-mermaid-diagram-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2276,7 +2277,7 @@
       "indexId": "EarningsReviewer",
       "sourcePackage": "earnings-reviewer",
       "id": "earnings-reviewer-earnings-reviewer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2287,7 +2288,7 @@
       "indexId": "GlReconciler",
       "sourcePackage": "gl-reconciler",
       "id": "gl-reconciler-gl-reconciler",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2298,7 +2299,7 @@
       "indexId": "KycScreener",
       "sourcePackage": "kyc-screener",
       "id": "kyc-screener-kyc-screener",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2309,7 +2310,7 @@
       "indexId": "FsiMarketResearcher",
       "sourcePackage": "market-researcher",
       "id": "market-researcher-market-researcher",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2320,7 +2321,7 @@
       "indexId": "MeetingPrepAgent",
       "sourcePackage": "meeting-prep-agent",
       "id": "meeting-prep-agent-meeting-prep-agent",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2331,7 +2332,7 @@
       "indexId": "ModelBuilder",
       "sourcePackage": "model-builder",
       "id": "model-builder-model-builder",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2342,7 +2343,7 @@
       "indexId": "MonthEndCloser",
       "sourcePackage": "month-end-closer",
       "id": "month-end-closer-month-end-closer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2353,7 +2354,7 @@
       "indexId": "PitchAgent",
       "sourcePackage": "pitch-agent",
       "id": "pitch-agent-pitch-agent",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2364,7 +2365,7 @@
       "indexId": "StatementAuditor",
       "sourcePackage": "statement-auditor",
       "id": "statement-auditor-statement-auditor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2375,7 +2376,7 @@
       "indexId": "ValuationReviewer",
       "sourcePackage": "valuation-reviewer",
       "id": "valuation-reviewer-valuation-reviewer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2386,7 +2387,7 @@
       "indexId": "CharityDocFinanceExpert",
       "sourcePackage": "charity-doc-finance-expert",
       "id": "charity-doc-finance-expert-charity-doc-finance-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2397,7 +2398,7 @@
       "indexId": "AskLiuxiaopai",
       "sourcePackage": "ask-liuxiaopai",
       "id": "ask-liuxiaopai-ask-liuxiaopai",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2408,7 +2409,7 @@
       "indexId": "FortuneConsultant",
       "sourcePackage": "fortune-consultant",
       "id": "fortune-consultant-fortune-consultant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2419,7 +2420,7 @@
       "indexId": "OpcTeam",
       "sourcePackage": "opc-team",
       "id": "opc-team-opc-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2430,7 +2431,7 @@
       "indexId": "AiHot",
       "sourcePackage": "aihot",
       "id": "aihot-aihot",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2441,7 +2442,7 @@
       "indexId": "HuashuDocReviewer",
       "sourcePackage": "huashu-doc-reviewer",
       "id": "huashu-doc-reviewer-doc-reviewer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2452,7 +2453,7 @@
       "indexId": "HuashuDataPro",
       "sourcePackage": "huashu-data-pro",
       "id": "huashu-data-pro-huashu-data-pro-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2463,7 +2464,7 @@
       "indexId": "VideoGenTeam",
       "sourcePackage": "video-gen-team",
       "id": "video-gen-team-video-gen-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2474,7 +2475,7 @@
       "indexId": "VideoDissection",
       "sourcePackage": "video-dissection",
       "id": "video-dissection-video-dissection-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2485,7 +2486,7 @@
       "indexId": "PromoCreatorTeam",
       "sourcePackage": "promo-creator-team",
       "id": "promo-creator-team-promo-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2551,7 +2552,7 @@
       "indexId": "HumanizePptTeam",
       "sourcePackage": "humanize-ppt-team",
       "id": "humanize-ppt-team-humanize-ppt-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2562,7 +2563,7 @@
       "indexId": "YunzhiQaAssistant",
       "sourcePackage": "yunzhi-qa-assistant",
       "id": "yunzhi-qa-assistant-yunzhi-qa-assistant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2573,7 +2574,7 @@
       "indexId": "CapacityExpert",
       "sourcePackage": "capacity-expert",
       "id": "capacity-expert-capacity-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2584,7 +2585,7 @@
       "indexId": "ChaosExpert",
       "sourcePackage": "chaos-expert",
       "id": "chaos-expert-chaos-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2595,7 +2596,7 @@
       "indexId": "FinopsExpert",
       "sourcePackage": "finops-expert",
       "id": "finops-expert-finops-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2606,7 +2607,7 @@
       "indexId": "InspectionExpert",
       "sourcePackage": "inspection-expert",
       "id": "inspection-expert-inspection-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2617,7 +2618,7 @@
       "indexId": "SreExpert",
       "sourcePackage": "sre-expert",
       "id": "sre-expert-sre-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2628,7 +2629,7 @@
       "indexId": "WellArchExpert",
       "sourcePackage": "well-arch-expert",
       "id": "well-arch-expert-well-arch-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2639,7 +2640,7 @@
       "indexId": "StrategyBacktestExpert",
       "sourcePackage": "strategy-backtest-expert",
       "id": "strategy-backtest-expert-strategy-backtest-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2650,7 +2651,7 @@
       "indexId": "IndustrySreTeam",
       "sourcePackage": "industry-sre-team",
       "id": "industry-sre-team-industry-sre-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2661,7 +2662,7 @@
       "indexId": "TencentRtcExpert",
       "sourcePackage": "tencent-rtc-expert",
       "id": "tencent-rtc-expert-tencent-rtc-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2727,7 +2728,7 @@
       "indexId": "ViralTopicMaster",
       "sourcePackage": "viral-topic-master",
       "id": "viral-topic-master-viral-topic-master",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2738,7 +2739,7 @@
       "indexId": "Citongshuopro",
       "sourcePackage": "citongshuopro",
       "id": "citongshuopro-citongshuopro-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2749,7 +2750,7 @@
       "indexId": "InvoiceVerifyWorkbuddy",
       "sourcePackage": "invoice-verify-workbuddy",
       "id": "invoice-verify-workbuddy-invoice-verify-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2760,7 +2761,7 @@
       "indexId": "JiayiAdsAnalyticsExpert",
       "sourcePackage": "jiayi-ads-analytics-expert",
       "id": "jiayi-ads-analytics-expert-jiayi-ads-analytics-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2771,7 +2772,7 @@
       "indexId": "KiddContentExpert",
       "sourcePackage": "kidd-content-expert",
       "id": "kidd-content-expert-kidd-content-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2782,7 +2783,7 @@
       "indexId": "ChaogeekKongming",
       "sourcePackage": "chaogeek-kongming",
       "id": "chaogeek-kongming-chaogeek-kongming",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2793,7 +2794,7 @@
       "indexId": "NcreExpert",
       "sourcePackage": "ncre-expert",
       "id": "ncre-expert-ncre-expert-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2837,7 +2838,7 @@
       "indexId": "GaokaoAdvisor",
       "sourcePackage": "gaokao-advisor",
       "id": "gaokao-advisor-gaokao-advisor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2848,7 +2849,7 @@
       "indexId": "AcademicJournalSelector",
       "sourcePackage": "academic-journal-selector",
       "id": "academic-journal-selector-academic-journal-selector-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2859,7 +2860,7 @@
       "indexId": "KetPrepTeam",
       "sourcePackage": "ket-prep-team",
       "id": "ket-prep-team-ket-prep-team-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2870,7 +2871,7 @@
       "indexId": "TdxStockDiagnostician",
       "sourcePackage": "tdx-stock-diagnostician",
       "id": "tdx-stock-diagnostician-tdx-stock-diagnostician",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2881,7 +2882,7 @@
       "indexId": "TdxStockHunter",
       "sourcePackage": "tdx-stock-hunter",
       "id": "tdx-stock-hunter-tdx-stock-hunter",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2892,7 +2893,7 @@
       "indexId": "TdxValueAssessor",
       "sourcePackage": "tdx-value-assessor",
       "id": "tdx-value-assessor-tdx-value-assessor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2903,7 +2904,7 @@
       "indexId": "AntiScamAgent",
       "sourcePackage": "anti-scam-agent",
       "id": "anti-scam-agent-anti-scam-agent",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2914,7 +2915,7 @@
       "indexId": "MeituanLivingAssistant",
       "sourcePackage": "meituan-living-assistant",
       "id": "meituan-living-assistant-meituan-living-assistant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2925,7 +2926,7 @@
       "indexId": "TopicEvaluator",
       "sourcePackage": "topic-evaluator",
       "id": "topic-evaluator-topic-evaluator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2936,7 +2937,7 @@
       "indexId": "TencentcloudApi",
       "sourcePackage": "tencentcloud-api",
       "id": "tencentcloud-api-tencentcloud-api",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2958,7 +2959,7 @@
       "indexId": "GeoDiagnosisExpert",
       "sourcePackage": "geo-diagnosis-expert",
       "id": "geo-diagnosis-expert-geo-diagnosis-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2969,7 +2970,7 @@
       "indexId": "XiaofaLitigationAssistant",
       "sourcePackage": "xiaofa-litigation-assistant",
       "id": "xiaofa-litigation-assistant-xiaofa-litigation-assistant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2980,7 +2981,7 @@
       "indexId": "ContractLegalExpert",
       "sourcePackage": "contract-legal-expert",
       "id": "contract-legal-expert-contract-legal-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -2991,7 +2992,7 @@
       "indexId": "TianyuMarketingGuardian",
       "sourcePackage": "tianyu-marketing-guardian",
       "id": "tianyu-marketing-guardian-tianyu-marketing-guardian",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3002,7 +3003,7 @@
       "indexId": "TianyuAccountGuardian",
       "sourcePackage": "tianyu-account-guardian",
       "id": "tianyu-account-guardian-tianyu-account-guardian",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3013,7 +3014,7 @@
       "indexId": "IhrConference",
       "sourcePackage": "ihr-conference",
       "id": "ihr-conference-ihr-conference",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3024,7 +3025,7 @@
       "indexId": "FamilyEducationMa",
       "sourcePackage": "family-education-ma",
       "id": "family-education-ma-family-education-ma",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3035,7 +3036,7 @@
       "indexId": "EdgeoneMakersExperts",
       "sourcePackage": "edgeone-makers-experts",
       "id": "edgeone-makers-experts-edgeone-makers-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3046,7 +3047,7 @@
       "indexId": "TcSec",
       "sourcePackage": "tc-sec",
       "id": "tc-sec-tc-sec",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3057,7 +3058,7 @@
       "indexId": "AutoConsultant",
       "sourcePackage": "auto-consultant",
       "id": "auto-consultant-auto-consultant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3068,7 +3069,7 @@
       "indexId": "MetamorphosisPractitioner",
       "sourcePackage": "metamorphosis-practitioner",
       "id": "metamorphosis-practitioner-metamorphosis-practitioner",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3079,7 +3080,7 @@
       "indexId": "LegalSearchPro",
       "sourcePackage": "legal-search-pro",
       "id": "legal-search-pro-legal-search-pro",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3090,7 +3091,7 @@
       "indexId": "NewsBuddy",
       "sourcePackage": "news-buddy",
       "id": "news-buddy-news-buddy",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3101,7 +3102,7 @@
       "indexId": "LiuxueYanxueExpert",
       "sourcePackage": "liuxue-yanxue-expert",
       "id": "liuxue-yanxue-expert-liuxue-yanxue-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3112,7 +3113,7 @@
       "indexId": "ContractExpert",
       "sourcePackage": "contract-expert",
       "id": "contract-expert-contract-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3123,7 +3124,7 @@
       "indexId": "MarketingReviewer",
       "sourcePackage": "marketing-reviewer",
       "id": "marketing-reviewer-marketing-reviewer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3134,7 +3135,7 @@
       "indexId": "MigraqTeam",
       "sourcePackage": "migraq-team",
       "id": "migraq-team-migraq-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3145,7 +3146,7 @@
       "indexId": "SmartStockAnalyst",
       "sourcePackage": "smart-stock-analyst",
       "id": "smart-stock-analyst-smart-stock-analyst",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3156,7 +3157,7 @@
       "indexId": "EgyptMarketing",
       "sourcePackage": "egypt-marketing",
       "id": "egypt-marketing-egypt-marketing",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3167,7 +3168,7 @@
       "indexId": "ContentCreationExpertProd",
       "sourcePackage": "content-creation-expert-prod",
       "id": "content-creation-expert-prod-content-creation-expert-prod-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3178,7 +3179,7 @@
       "indexId": "SgFinanceTax",
       "sourcePackage": "sg-finance-tax",
       "id": "sg-finance-tax-sg-finance-tax",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3189,7 +3190,7 @@
       "indexId": "BrazilCompanyQuery",
       "sourcePackage": "brazil-company-query",
       "id": "brazil-company-query-brazil-company-query",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3200,7 +3201,7 @@
       "indexId": "MalaysiaHrAdmin",
       "sourcePackage": "malaysia-hr-admin",
       "id": "malaysia-hr-admin-malaysia-hr-admin",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3211,7 +3212,7 @@
       "indexId": "VibeknowHanddraw",
       "sourcePackage": "vibeknow-handdraw",
       "id": "vibeknow-handdraw-handdraw-artist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3222,7 +3223,7 @@
       "indexId": "YahooFinanceCli",
       "sourcePackage": "yahoo-finance-cli",
       "id": "yahoo-finance-cli-yahoo-finance-cli",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3233,7 +3234,7 @@
       "indexId": "SgBizDev",
       "sourcePackage": "sg-biz-dev",
       "id": "sg-biz-dev-sg-biz-dev",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3244,7 +3245,7 @@
       "indexId": "ResumeAssistant",
       "sourcePackage": "resume-assistant",
       "id": "resume-assistant-resume-assistant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3255,7 +3256,7 @@
       "indexId": "ApiDev",
       "sourcePackage": "api-dev",
       "id": "api-dev-api-dev",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3266,7 +3267,7 @@
       "indexId": "PromptEngineeringExpert",
       "sourcePackage": "prompt-engineering-expert",
       "id": "prompt-engineering-expert-prompt-engineering-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3277,7 +3278,7 @@
       "indexId": "InterviewSimulator",
       "sourcePackage": "interview-simulator",
       "id": "interview-simulator-interview-simulator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3288,7 +3289,7 @@
       "indexId": "DevPipelineOrchestrator",
       "sourcePackage": "dev-pipeline-orchestrator",
       "id": "dev-pipeline-orchestrator-dev-pipeline-orchestrator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3299,7 +3300,7 @@
       "indexId": "GameDevelopmentStudio",
       "sourcePackage": "game-development-studio",
       "id": "game-development-studio-game-development-studio-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3310,7 +3311,7 @@
       "indexId": "Eno",
       "sourcePackage": "eno",
       "id": "eno-eno",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3321,7 +3322,7 @@
       "indexId": "SuperpowersZh",
       "sourcePackage": "superpowers-zh",
       "id": "superpowers-zh-superpowers-zh",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3332,7 +3333,7 @@
       "indexId": "AiHumanizer",
       "sourcePackage": "ai-humanizer",
       "id": "ai-humanizer-ai-humanizer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3343,7 +3344,7 @@
       "indexId": "AiShifu",
       "sourcePackage": "ai-shifu",
       "id": "ai-shifu-ai-shifu",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3354,7 +3355,7 @@
       "indexId": "MaiDealAdvisor",
       "sourcePackage": "mai-deal-advisor",
       "id": "mai-deal-advisor-mai-deal-advisor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3365,7 +3366,7 @@
       "indexId": "HskDevopsExpert",
       "sourcePackage": "hsk-devops-expert",
       "id": "hsk-devops-expert-hsk-devops-architect",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3376,7 +3377,7 @@
       "indexId": "TerminalVeteran",
       "sourcePackage": "terminal-veteran",
       "id": "terminal-veteran-terminal-veteran",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3387,7 +3388,7 @@
       "indexId": "CordysCrm",
       "sourcePackage": "cordys-crm",
       "id": "cordys-crm-cordys-crm",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3398,7 +3399,7 @@
       "indexId": "SgHrAdminExpert",
       "sourcePackage": "sg-hr-admin-expert",
       "id": "sg-hr-admin-expert-sg-hr-admin-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3409,7 +3410,7 @@
       "indexId": "FinResearchExpert",
       "sourcePackage": "fin-research-expert",
       "id": "fin-research-expert-fin-research-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3420,7 +3421,7 @@
       "indexId": "BrazilRfbExpert",
       "sourcePackage": "brazil-rfb-expert",
       "id": "brazil-rfb-expert-brazil-rfb-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3431,7 +3432,7 @@
       "indexId": "UaePublicAffairs",
       "sourcePackage": "uae-public-affairs",
       "id": "uae-public-affairs-uae-public-affairs",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3442,7 +3443,7 @@
       "indexId": "EgyptPublicAffairs",
       "sourcePackage": "egypt-public-affairs",
       "id": "egypt-public-affairs-egypt-public-affairs",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3453,7 +3454,7 @@
       "indexId": "BrazilLegal",
       "sourcePackage": "brazil-legal",
       "id": "brazil-legal-brazil-legal",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3464,7 +3465,7 @@
       "indexId": "UaeMarketingAdvisor",
       "sourcePackage": "uae-marketing-advisor",
       "id": "uae-marketing-advisor-uae-marketing-advisor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3475,7 +3476,7 @@
       "indexId": "IndonesiaDigitalLawExpert",
       "sourcePackage": "indonesia-digital-law-expert",
       "id": "indonesia-digital-law-expert-indonesia-digital-law-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3486,7 +3487,7 @@
       "indexId": "ThaiMarketingCreative",
       "sourcePackage": "thai-marketing-creative",
       "id": "thai-marketing-creative-thai-marketing-creative",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3497,7 +3498,7 @@
       "indexId": "MalaysiaMarketing",
       "sourcePackage": "malaysia-marketing",
       "id": "malaysia-marketing-malaysia-marketing",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3508,7 +3509,7 @@
       "indexId": "MalaysiaLegal",
       "sourcePackage": "malaysia-legal",
       "id": "malaysia-legal-malaysia-legal",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3519,7 +3520,7 @@
       "indexId": "IpExpert",
       "sourcePackage": "ip-expert",
       "id": "ip-expert-ip-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3530,7 +3531,7 @@
       "indexId": "IndonesiaBdExpert",
       "sourcePackage": "indonesia-bd-expert",
       "id": "indonesia-bd-expert-indonesia-bd-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3541,7 +3542,7 @@
       "indexId": "DatabrainAgentV2",
       "sourcePackage": "databrain-agent-v2",
       "id": "databrain-agent-v2-databrain-agent-v2",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3552,7 +3553,7 @@
       "indexId": "IndonesiaPaExpert",
       "sourcePackage": "indonesia-pa-expert",
       "id": "indonesia-pa-expert-indonesia-pa-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3563,7 +3564,7 @@
       "indexId": "ThailandHrAdmin",
       "sourcePackage": "thailand-hr-admin",
       "id": "thailand-hr-admin-thailand-hr-admin",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3574,7 +3575,7 @@
       "indexId": "UaeStrategicAdvisor",
       "sourcePackage": "uae-strategic-advisor",
       "id": "uae-strategic-advisor-uae-strategic-advisor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3585,7 +3586,7 @@
       "indexId": "MalaysiaFinanceTax",
       "sourcePackage": "malaysia-finance-tax",
       "id": "malaysia-finance-tax-malaysia-finance-tax",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3596,7 +3597,7 @@
       "indexId": "EgyptStrategicAdvisory",
       "sourcePackage": "egypt-strategic-advisory",
       "id": "egypt-strategic-advisory-egypt-strategic-advisory",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3607,7 +3608,7 @@
       "indexId": "NgesHealthcareMarketingTeam",
       "sourcePackage": "nges-healthcare-marketing-team",
       "id": "nges-healthcare-marketing-team-nges-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3618,7 +3619,7 @@
       "indexId": "MultiCloudExpert",
       "sourcePackage": "multi-cloud-expert",
       "id": "multi-cloud-expert-multi-cloud-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3629,7 +3630,7 @@
       "indexId": "DesignPrototypeExpert",
       "sourcePackage": "design-prototype-expert",
       "id": "design-prototype-expert-design-prototype-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3640,7 +3641,7 @@
       "indexId": "Code",
       "sourcePackage": "code",
       "id": "code-code",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3651,7 +3652,7 @@
       "indexId": "Soe",
       "sourcePackage": "soe",
       "id": "soe-soe",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3673,7 +3674,7 @@
       "indexId": "Frontend",
       "sourcePackage": "frontend",
       "id": "frontend-frontend",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3684,7 +3685,7 @@
       "indexId": "AiMeetingNotes",
       "sourcePackage": "ai-meeting-notes",
       "id": "ai-meeting-notes-ai-meeting-notes",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3695,7 +3696,7 @@
       "indexId": "MarketAnalysisCn",
       "sourcePackage": "market-analysis-cn",
       "id": "market-analysis-cn-market-analysis-cn",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3706,7 +3707,7 @@
       "indexId": "DatabaseOperations",
       "sourcePackage": "database-operations",
       "id": "database-operations-database-operations",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3717,7 +3718,7 @@
       "indexId": "ChatcutVideoEditor",
       "sourcePackage": "chatcut-video-editor",
       "id": "chatcut-video-editor-chatcut-video-editor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3728,7 +3729,7 @@
       "indexId": "NovelGenerator",
       "sourcePackage": "novel-generator",
       "id": "novel-generator-novel-generator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3739,7 +3740,7 @@
       "indexId": "FundusDiseaseAnalysis",
       "sourcePackage": "fundus-disease-analysis",
       "id": "fundus-disease-analysis",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3750,7 +3751,7 @@
       "indexId": "ContentWriter",
       "sourcePackage": "content-writer",
       "id": "content-writer-content-writer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3761,7 +3762,7 @@
       "indexId": "AiVideoScript",
       "sourcePackage": "ai-video-script",
       "id": "ai-video-script-ai-video-script",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3772,7 +3773,7 @@
       "indexId": "ArxivWatcher",
       "sourcePackage": "arxiv-watcher",
       "id": "arxiv-watcher-arxiv-watcher",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3783,7 +3784,7 @@
       "indexId": "FrontendSlides",
       "sourcePackage": "frontend-slides",
       "id": "frontend-slides-frontend-slides",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3794,7 +3795,7 @@
       "indexId": "PaperTopicSelection",
       "sourcePackage": "paper-topic-selection",
       "id": "paper-topic-selection-zhuge-consultant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3805,7 +3806,7 @@
       "indexId": "PatientEducationContentReviewWordAssistant",
       "sourcePackage": "patient-education-content-review-word-assistant",
       "id": "patient-education-content-review-word-assistant-patient-education-content-review-word-assistant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3816,7 +3817,7 @@
       "indexId": "FbsirEightSeatBoard",
       "sourcePackage": "fbsir-eight-seat-board",
       "id": "fbsir-eight-seat-board-board-convener",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3827,7 +3828,7 @@
       "indexId": "UuptDelivery",
       "sourcePackage": "uupt-delivery",
       "id": "uupt-delivery-uupt-delivery",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3838,7 +3839,7 @@
       "indexId": "JinshujuExpert",
       "sourcePackage": "jinshuju-expert",
       "id": "jinshuju-expert-jinshuju-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3849,7 +3850,7 @@
       "indexId": "SkillhubCharityExpertTeam",
       "sourcePackage": "skillhub-charity-expert-team",
       "id": "skillhub-charity-expert-team-skillhub-manager",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3860,7 +3861,7 @@
       "indexId": "SdkLogExpert",
       "sourcePackage": "sdk-log-expert",
       "id": "sdk-log-expert-sdk-log-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3871,7 +3872,7 @@
       "indexId": "DatabrainOpinionExpert",
       "sourcePackage": "databrain-opinion-expert",
       "id": "databrain-opinion-expert-databrain-opinion-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3882,7 +3883,7 @@
       "indexId": "VibeknowPptExplain",
       "sourcePackage": "vibeknow-ppt-explain",
       "id": "vibeknow-ppt-explain-ppt-explainer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3893,7 +3894,7 @@
       "indexId": "VibeknowDesignVideo",
       "sourcePackage": "vibeknow-design-video",
       "id": "vibeknow-design-video-design-artist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3904,7 +3905,7 @@
       "indexId": "IhrAiInterviewer",
       "sourcePackage": "ihr-ai-interviewer",
       "id": "ihr-ai-interviewer-ihr-ai-interviewer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3915,7 +3916,7 @@
       "indexId": "OmicsBioinfoExpert",
       "sourcePackage": "omics-bioinfo-expert",
       "id": "omics-bioinfo-expert-omics-bioinfo-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3926,7 +3927,7 @@
       "indexId": "OmicsCdgptExpert",
       "sourcePackage": "omics-cdgpt-expert",
       "id": "omics-cdgpt-expert-omics-cdgpt-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3937,7 +3938,7 @@
       "indexId": "OmicsDiagnosisExpert",
       "sourcePackage": "omics-diagnosis-expert",
       "id": "omics-diagnosis-expert-omics-diagnosis-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3948,7 +3949,7 @@
       "indexId": "OmicsHpcExpert",
       "sourcePackage": "omics-hpc-expert",
       "id": "omics-hpc-expert-omics-hpc-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3959,7 +3960,7 @@
       "indexId": "OmicsIggmExpert",
       "sourcePackage": "omics-iggm-expert",
       "id": "omics-iggm-expert-omics-iggm-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3970,7 +3971,7 @@
       "indexId": "OmicsOriExpert",
       "sourcePackage": "omics-ori-expert",
       "id": "omics-ori-expert-omics-ori-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3981,7 +3982,7 @@
       "indexId": "OmicsScbertExpert",
       "sourcePackage": "omics-scbert-expert",
       "id": "omics-scbert-expert-omics-scbert-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -3992,7 +3993,7 @@
       "indexId": "OmicsScproteinExpert",
       "sourcePackage": "omics-scprotein-expert",
       "id": "omics-scprotein-expert-omics-scprotein-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4003,7 +4004,7 @@
       "indexId": "OmicsTfoldExpert",
       "sourcePackage": "omics-tfold-expert",
       "id": "omics-tfold-expert-omics-tfold-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4025,7 +4026,7 @@
       "indexId": "BiddingStrategist",
       "sourcePackage": "bidding-strategist",
       "id": "bidding-strategist-bidding-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4036,7 +4037,7 @@
       "indexId": "FortuneMaster",
       "sourcePackage": "fortune-master",
       "id": "fortune-master-fortune-master",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4047,7 +4048,7 @@
       "indexId": "LazyTravelPlanner",
       "sourcePackage": "lazy-travel-planner",
       "id": "lazy-travel-planner-travel-planner",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4058,7 +4059,7 @@
       "indexId": "NewsBriefingExpert",
       "sourcePackage": "news-briefing-expert",
       "id": "news-briefing-expert-news-briefing-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4069,7 +4070,7 @@
       "indexId": "NovelCreator",
       "sourcePackage": "novel-creator",
       "id": "novel-creator-novel-creator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4080,7 +4081,7 @@
       "indexId": "PersonalFitnessCoach",
       "sourcePackage": "personal-fitness-coach",
       "id": "personal-fitness-coach-fitness-coach",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4102,7 +4103,7 @@
       "indexId": "PromptEngineer",
       "sourcePackage": "prompt-engineer",
       "id": "prompt-engineer-prompt-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4113,7 +4114,7 @@
       "indexId": "StudyPlanner",
       "sourcePackage": "study-planner",
       "id": "study-planner-study-planner",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4124,7 +4125,7 @@
       "indexId": "WorldcupBuddy",
       "sourcePackage": "worldcup-buddy",
       "id": "worldcup-buddy-worldcup-buddy",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4135,7 +4136,7 @@
       "indexId": "FundResearchAnalyst",
       "sourcePackage": "fund-research-analyst",
       "id": "fund-research-analyst-fund-research-analyst",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4146,7 +4147,7 @@
       "indexId": "PythonFullstackEngineer",
       "sourcePackage": "python-fullstack-engineer",
       "id": "python-fullstack-engineer-python-fullstack-engineer",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4157,7 +4158,7 @@
       "indexId": "TrendHunter",
       "sourcePackage": "trend-hunter",
       "id": "trend-hunter-trend-hunter",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4168,7 +4169,7 @@
       "indexId": "WechatChannelsStrategist",
       "sourcePackage": "wechat-channels-strategist",
       "id": "wechat-channels-strategist-wechat-channels-strategist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4179,7 +4180,7 @@
       "indexId": "TanyuanCulturalHeritageExpert",
       "sourcePackage": "tanyuan-cultural-heritage-expert",
       "id": "tanyuan-cultural-heritage-expert-tanyuan-cultural-heritage-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4190,7 +4191,7 @@
       "indexId": "BelieveInLight",
       "sourcePackage": "believe-in-light",
       "id": "believe-in-light-believe-in-light-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4201,7 +4202,7 @@
       "indexId": "ConsultingPartners",
       "sourcePackage": "consulting-partners",
       "id": "consulting-partners-consulting-partner",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4212,7 +4213,7 @@
       "indexId": "CareerBroker",
       "sourcePackage": "career-broker",
       "id": "career-broker-career-broker",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4223,7 +4224,7 @@
       "indexId": "JinshujuFormExpert",
       "sourcePackage": "jinshuju-form-expert",
       "id": "jinshuju-form-expert-jinshuju-form-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4234,7 +4235,7 @@
       "indexId": "JinshujuTableExpert",
       "sourcePackage": "jinshuju-table-expert",
       "id": "jinshuju-table-expert-jinshuju-table-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4245,7 +4246,7 @@
       "indexId": "PneumoniaAiAnalyst",
       "sourcePackage": "pneumonia-ai-analyst",
       "id": "pneumonia-ai-analyst-pneumonia-ai-analyst",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4256,7 +4257,7 @@
       "indexId": "NgoChallengeAdvisor",
       "sourcePackage": "ngo-challenge-advisor",
       "id": "ngo-challenge-advisor-ngo-challenge-advisor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4267,7 +4268,7 @@
       "indexId": "NewShareExpert",
       "sourcePackage": "new-share-expert",
       "id": "new-share-expert-new-share-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4278,7 +4279,7 @@
       "indexId": "InvoiceVerifyExpert",
       "sourcePackage": "invoice-verify-expert",
       "id": "invoice-verify-expert-invoice-verify",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4289,7 +4290,7 @@
       "indexId": "RoadshowResearchTeam",
       "sourcePackage": "roadshow-research-team",
       "id": "roadshow-research-team-roadshow-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4300,7 +4301,7 @@
       "indexId": "TideriderSentiment",
       "sourcePackage": "tiderider-sentiment",
       "id": "tiderider-sentiment-tiderider-analyst",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4322,7 +4323,7 @@
       "indexId": "JobCompanionTeam",
       "sourcePackage": "job-companion-team",
       "id": "job-companion-team-job-companion-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4333,7 +4334,7 @@
       "indexId": "CorpCreditDueDiligence",
       "sourcePackage": "corp-credit-due-diligence",
       "id": "corp-credit-due-diligence-corp-credit-due-diligence",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4344,7 +4345,7 @@
       "indexId": "QingflowHrExpert",
       "sourcePackage": "qingflow-hr-expert",
       "id": "qingflow-hr-expert-qingflow-hr-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4355,7 +4356,7 @@
       "indexId": "MentougouBusinessGuide",
       "sourcePackage": "mentougou-business-guide",
       "id": "mentougou-business-guide-mentougou-business-guide",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4366,7 +4367,7 @@
       "indexId": "PanshiCustomerVisitAgent",
       "sourcePackage": "panshi-customer-visit-agent",
       "id": "panshi-customer-visit-agent-panshi-customer-visit-agent",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4377,7 +4378,7 @@
       "indexId": "EmpiricalResearchTeam",
       "sourcePackage": "empirical-research-team",
       "id": "empirical-research-team-empirical-research-team-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4388,7 +4389,7 @@
       "indexId": "WorkspaceBuilder",
       "sourcePackage": "workspace-builder",
       "id": "workspace-builder-workspace-builder",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4399,7 +4400,7 @@
       "indexId": "SouthAfricaStrategyAdvisor",
       "sourcePackage": "south-africa-strategy-advisor",
       "id": "south-africa-strategy-advisor-south-africa-strategy-advisor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4410,7 +4411,7 @@
       "indexId": "SouthAfricaHrAdmin",
       "sourcePackage": "south-africa-hr-admin",
       "id": "south-africa-hr-admin-south-africa-hr-admin",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4421,7 +4422,7 @@
       "indexId": "VietnamFinanceTaxExpert",
       "sourcePackage": "vietnam-finance-tax-expert",
       "id": "vietnam-finance-tax-expert-vietnam-finance-tax-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4432,7 +4433,7 @@
       "indexId": "VietnamPublicAffairs",
       "sourcePackage": "vietnam-public-affairs",
       "id": "vietnam-public-affairs-vietnam-public-affairs",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4443,7 +4444,7 @@
       "indexId": "SaLegalCompliance",
       "sourcePackage": "sa-legal-compliance",
       "id": "sa-legal-compliance-sa-legal-compliance",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4454,7 +4455,7 @@
       "indexId": "MarketingGrowthTeam",
       "sourcePackage": "marketing-growth-team",
       "id": "marketing-growth-team-marketing-growth-team-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4465,7 +4466,7 @@
       "indexId": "SkillSmith",
       "sourcePackage": "skill-smith",
       "id": "skill-smith-skill-smith",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4476,7 +4477,7 @@
       "indexId": "TencentCloudQuoteAssistant",
       "sourcePackage": "tencent-cloud-quote-assistant",
       "id": "tencent-cloud-quote-assistant-price-inquiry-assistant",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4487,7 +4488,7 @@
       "indexId": "InnovationStartupMentor",
       "sourcePackage": "innovation-startup-mentor",
       "id": "innovation-startup-mentor-innovation-startup-mentor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4498,7 +4499,7 @@
       "indexId": "HrDigitalExpert",
       "sourcePackage": "hr-digital-expert",
       "id": "hr-digital-expert-hr-digital-expert",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4509,7 +4510,7 @@
       "indexId": "FbsirAigcComplianceRedTeam",
       "sourcePackage": "fbsir-aigc-compliance-red-team",
       "id": "fbsir-aigc-compliance-red-team-fbsir-aigc-compliance-red-team",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4520,7 +4521,7 @@
       "indexId": "CampusConversationCoach",
       "sourcePackage": "campus-conversation-coach",
       "id": "campus-conversation-coach-campus-conversation-coach",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4531,7 +4532,7 @@
       "indexId": "CampusEventNavigator",
       "sourcePackage": "campus-event-navigator",
       "id": "campus-event-navigator-campus-event-navigator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4542,7 +4543,7 @@
       "indexId": "CampusJobSearchCoach",
       "sourcePackage": "campus-job-search-coach",
       "id": "campus-job-search-coach-campus-job-search-coach",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4553,7 +4554,7 @@
       "indexId": "CareerNavigator",
       "sourcePackage": "career-navigator",
       "id": "career-navigator-career-navigator",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4564,7 +4565,7 @@
       "indexId": "ComputerOperationsAdvisor",
       "sourcePackage": "computer-operations-advisor",
       "id": "computer-operations-advisor-computer-operations-advisor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4575,7 +4576,7 @@
       "indexId": "EnglishWritingCoach",
       "sourcePackage": "english-writing-coach",
       "id": "english-writing-coach-english-writing-coach",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4586,7 +4587,7 @@
       "indexId": "ExamPreparationPlanner",
       "sourcePackage": "exam-preparation-planner",
       "id": "exam-preparation-planner-exam-preparation-planner",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4597,7 +4598,7 @@
       "indexId": "NoteClassRepresentative",
       "sourcePackage": "note-class-representative",
       "id": "note-class-representative-note-class-representative",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4608,7 +4609,7 @@
       "indexId": "StudyFortuneCompass",
       "sourcePackage": "study-fortune-compass",
       "id": "study-fortune-compass-study-fortune-compass",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4619,7 +4620,7 @@
       "indexId": "ThesisWritingMentor",
       "sourcePackage": "thesis-writing-mentor",
       "id": "thesis-writing-mentor-thesis-writing-mentor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4641,7 +4642,7 @@
       "indexId": "WorkbuddyUniversalMentor",
       "sourcePackage": "workbuddy-universal-mentor",
       "id": "workbuddy-universal-mentor-workbuddy-universal-mentor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4674,7 +4675,7 @@
       "indexId": "TietuToutiao",
       "sourcePackage": "tietu-toutiao",
       "id": "tietu-toutiao-tietu-toutiao",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4696,7 +4697,7 @@
       "indexId": "LinkfoxExpertAmazonListingSpecialist",
       "sourcePackage": "linkfox-expert-amazon-listing-specialist",
       "id": "linkfox-expert-amazon-listing-specialist-linkfox-expert-amazon-listing-specialist",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4707,7 +4708,7 @@
       "indexId": "DdDueDiligenceTeam",
       "sourcePackage": "dd-due-diligence-team",
       "id": "dd-due-diligence-team-dd-due-diligence-lead",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",
@@ -4718,7 +4719,7 @@
       "indexId": "TcChengxinTravelExpert",
       "sourcePackage": "tc-chengxin-travel-expert",
       "id": "tc-chengxin-travel-expert-tongcheng-travel-advisor",
-      "status": "invalid",
+      "status": "ready",
       "license": {
         "status": "restricted",
         "kind": "no-prompt-license",

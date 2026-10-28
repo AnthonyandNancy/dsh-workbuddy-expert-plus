@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tianyu-account-guardian-tianyu-account-guardian",
+  "source": "bundled",
+  "sourcePackage": "tianyu-account-guardian",
+  "sourceAgent": "agents/tianyu-account-guardian.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "天御账号保护",
+  "profession": "腾讯云天御账号保护专家",
+  "categoryId": "13-TencentZone",
+  "description": "替您盯住注册、登录、裂变全链路账号异常，实时调优策略拦截恶意账号，并生成客诉原因分析报告。",
+  "tags": [
+    "账号安全",
+    "实时策略",
+    "客诉归因"
+  ],
+  "quickPrompts": [
+    "帮我盘一下今天注册/登录场景的账号风险态势",
+    "ReqId=Req-2026060512345678，看下这个账号被拦截的原因",
+    "针对这 20 个疑似误伤账号，生成一份客诉原因分析报告"
+  ],
+  "roleFile": "tianyu-account-guardian-tianyu-account-guardian/role.md",
+  "avatarFile": "tianyu-account-guardian-tianyu-account-guardian/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "14f31989132e97e0425660f95abc311c6f872a30db746ac6d30fe9292b129c70",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2210dbdadfb5e392f496addb0857d8bc2061d0878b8b9c029af009ac23bc5ee1"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d474c1da25b792f7f6183f224d4357c2c8d2c5d6d0335644d197747675620da1"
+    }
+  ]
+}

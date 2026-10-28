@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "roblox-experience-designer-roblox-experience-designer",
+  "source": "bundled",
+  "sourcePackage": "roblox-experience-designer",
+  "sourceAgent": "agents/roblox-experience-designer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "乐体验",
+  "profession": "Roblox体验设计师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通Roblox平台UX和商业化设计",
+  "tags": [
+    "体验设计",
+    "交互玩法",
+    "世界构建"
+  ],
+  "quickPrompts": [
+    "我们想在Roblox上设计体验和玩法,请Roblox体验设计师帮我们设计Roblox游戏。",
+    "规划Roblox虚拟场景和交互设计",
+    "制定Roblox商业化变现策略"
+  ],
+  "roleFile": "roblox-experience-designer-roblox-experience-designer/role.md",
+  "avatarFile": "roblox-experience-designer-roblox-experience-designer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ddfca1b35696ee320326ce9253b395a884408187dbbea412bdbcfc75385c74b5",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6d2faa33964f9114fc2f933480773e5bb6c5e52b8f67db6a50b08f73c611ce8d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "704321453d6ffb28cda0b68e7c268d43cb8dd705d800706babebcb9a63fe059f"
+    }
+  ]
+}

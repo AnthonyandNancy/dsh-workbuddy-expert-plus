@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "healthcare-marketing-compliance-expert-healthcare-marketing-compliance-expert",
+  "source": "bundled",
+  "sourcePackage": "healthcare-marketing-compliance-expert",
+  "sourceAgent": "agents/healthcare-marketing-compliance-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "医合合",
+  "profession": "医疗营销合规专家",
+  "categoryId": "11-SecurityCompliance",
+  "description": "确保医疗营销内容符合法规要求，守护信息准确性",
+  "tags": [
+    "医疗合规",
+    "医疗营销",
+    "法规审核"
+  ],
+  "quickPrompts": [
+    "我们的医疗营销需要符合严格的合规要求,请医疗营销合规专家帮我们进行合规审查。",
+    "审查医疗营销内容的法律合规性",
+    "搭建医疗行业营销合规监控体系"
+  ],
+  "roleFile": "healthcare-marketing-compliance-expert-healthcare-marketing-compliance-expert/role.md",
+  "avatarFile": "healthcare-marketing-compliance-expert-healthcare-marketing-compliance-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0de18b914e77b57400f3717498a4566e57b417d52b81fa409f42f7c94d1a7f56",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f16d51185ccac5741054dcd55ad056a9f4192a10d6e2132484f40b6512e526d1"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e73e2912324f775e6a4766154225402bdaac29f4eb4340e14110132bebb08c4e"
+    }
+  ]
+}

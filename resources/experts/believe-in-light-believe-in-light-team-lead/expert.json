@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "believe-in-light-believe-in-light-team-lead",
+  "source": "bundled",
+  "sourcePackage": "believe-in-light",
+  "sourceAgent": "agents/believe-in-light-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "相信光么",
+  "profession": "相信光么",
+  "categoryId": "08-FinanceInvestment",
+  "description": "光模块产业链信号监控专家团。主理人 + 6位成员Agent 三端采集信号，因果验证+权重校准，三层嵌套输出景气度评级。",
+  "tags": [
+    "光模块",
+    "产业链分析",
+    "信号监控"
+  ],
+  "quickPrompts": [
+    "你好，我是相信光么主理人何光候。我们7人专职监控光模块产业链信号，从供给/需求/技术三端扫描，经过因果验证和权重校准，最终输出景气度评级。跑一下？",
+    "光模块行业当前评级是什么？",
+    "检查光模块的产业链信号"
+  ],
+  "roleFile": "believe-in-light-believe-in-light-team-lead/role.md",
+  "avatarFile": "believe-in-light-believe-in-light-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "db54d98cc5aaf342e975ad3513d4ad3b169b75789a017e9478f4cb587ab5d847",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "dd210547f77eadd32dc1502bc6693d54ea2acadc8ca4801f206d3188a60edfc8"
+    },
+    {
+      "path": "role.md",
+      "sha256": "50bd5b65ba9fa87853591eff30cb9465a7a0c09dc561d4336ef1b8430acb46e5"
+    }
+  ]
+}

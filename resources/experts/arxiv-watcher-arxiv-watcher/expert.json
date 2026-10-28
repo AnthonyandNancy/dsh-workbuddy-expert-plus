@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "arxiv-watcher-arxiv-watcher",
+  "source": "bundled",
+  "sourcePackage": "arxiv-watcher",
+  "sourceAgent": "agents/arxiv-watcher.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "ArXiv论文追踪专家",
+  "categoryId": "04-DataAI",
+  "description": "检索ArXiv最新论文，支持按关键词、作者、学科精准搜索，自动提炼摘要要点并归档至研究日志，助您持续追踪前沿学术动态。",
+  "tags": [
+    "论文检索",
+    "研究追踪",
+    "文献摘要"
+  ],
+  "quickPrompts": [
+    "帮我搜索最新的LLM推理论文",
+    "总结今天ArXiv上关于AI Agent的论文",
+    "解读论文 2512.08769 的核心内容"
+  ],
+  "roleFile": "arxiv-watcher-arxiv-watcher/role.md",
+  "avatarFile": "arxiv-watcher-arxiv-watcher/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "519a711ea7134fa73c53bba4b5e98288f5e0807e1a012e26c8fc6db77d113456",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b5e2f030eb5b16bd5f055c659a12dab25586ef79d0a1827529998aa4485c850a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "1b14edf998be7663757b97d672fb333f210a9e3f4bde051a59d53a24d0f1d57b"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "chaos-expert-chaos-expert",
+  "source": "bundled",
+  "sourcePackage": "chaos-expert",
+  "sourceAgent": "agents/chaos-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "CloudQ",
+  "profession": "腾讯云混沌演练专家",
+  "categoryId": "13-TencentZone",
+  "description": "混沌演练专家。擅长故障注入演练、韧性验证与熔断策略评估，提升系统抗脆弱能力。",
+  "tags": [
+    "混沌工程",
+    "故障注入",
+    "韧性验证",
+    "熔断策略"
+  ],
+  "quickPrompts": [
+    "查询最近一次混沌演练的结果",
+    "帮我设计一份针对数据库节点的故障注入演练方案",
+    "我的系统适合做哪些故障注入演练？"
+  ],
+  "roleFile": "chaos-expert-chaos-expert/role.md",
+  "avatarFile": "chaos-expert-chaos-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "637a250e7c522cade70f30503b2326f7b038df2d0ccef924ea915ac680a0624d",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "da3ed2b6e0e5c45cc27984ee35013e0ad5670553afcdd60838a4847f8d8585d7"
+    },
+    {
+      "path": "role.md",
+      "sha256": "737126d203bf2030a791e476c30b5b2b0c507c8547209dcba5813f91f88c755f"
+    }
+  ]
+}

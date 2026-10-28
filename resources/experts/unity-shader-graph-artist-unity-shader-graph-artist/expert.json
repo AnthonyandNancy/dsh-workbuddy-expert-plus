@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "unity-shader-graph-artist-unity-shader-graph-artist",
+  "source": "bundled",
+  "sourcePackage": "unity-shader-graph-artist",
+  "sourceAgent": "agents/unity-shader-graph-artist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "着色师",
+  "profession": "Unity着色器图表艺术家",
+  "categoryId": "03-GameSpatial",
+  "description": "精通Unity Shader Graph和HLSL",
+  "tags": [
+    "着色器图表",
+    "材质效果",
+    "渲染管线"
+  ],
+  "quickPrompts": [
+    "我们需要为Unity创建着色器效果,请Unity着色器图艺术家帮我们设计Shader效果。",
+    "编写HLSL自定义渲染Pass",
+    "优化URP/HDRP渲染管线效果"
+  ],
+  "roleFile": "unity-shader-graph-artist-unity-shader-graph-artist/role.md",
+  "avatarFile": "unity-shader-graph-artist-unity-shader-graph-artist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d0445843e69366ad1250e10d3c1212d2df09ed252cd80e8ffafddd4c266dced3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "34d1be41be239e99044e5c6294f18d2998b016530edee81213e75b1a0f9ed199"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b5773fdf76df511f4c0ed30c194f1216f93e9befe6a0df7f30dcf3fe9624117a"
+    }
+  ]
+}

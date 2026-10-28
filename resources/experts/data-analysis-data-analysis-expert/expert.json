@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "data-analysis-data-analysis-expert",
+  "source": "bundled",
+  "sourcePackage": "data-analysis",
+  "sourceAgent": "agents/data-analysis-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "析数数",
+  "profession": "数据分析专家",
+  "categoryId": "04-DataAI",
+  "description": "数据分析专家，支持 Excel 电子表格的创建、编辑、分析、公式计算、格式化和数据可视化",
+  "tags": [
+    "数据分析",
+    "统计建模",
+    "业务洞察"
+  ],
+  "quickPrompts": [
+    "帮我分析这份销售数据并生成报表",
+    "创建数据透视表和可视化图表",
+    "从微信公众号搜索行业数据"
+  ],
+  "roleFile": "data-analysis-data-analysis-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "cfffe03a8207739ccd96bd11865062d470d3f7319a1cd4f3f222bf59c9a3b71d",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "35310e40cc0d5ee967d32acf58f3dd70605929736cc95a9764d1be8aec80f260"
+    }
+  ]
+}

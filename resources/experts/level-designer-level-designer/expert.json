@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "level-designer-level-designer",
+  "source": "bundled",
+  "sourcePackage": "level-designer",
+  "sourceAgent": "agents/level-designer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "关卡卡",
+  "profession": "关卡设计师",
+  "categoryId": "03-GameSpatial",
+  "description": "将每个关卡视为精心编排的体验，用空间讲述故事",
+  "tags": [
+    "关卡设计",
+    "场景布局",
+    "难度曲线"
+  ],
+  "quickPrompts": [
+    "我们的游戏关卡设计需要优化,提升玩家体验,请关卡设计师帮我们设计游戏关卡。",
+    "规划关卡难度曲线和玩家引导",
+    "优化关卡节奏和探索体验"
+  ],
+  "roleFile": "level-designer-level-designer/role.md",
+  "avatarFile": "level-designer-level-designer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9b82986538c3276a8a7ff278fdc6445c813120ace8812d8c225c5089cca0e65c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "df21b50c69e2feea0e5a3c0c5340cd854fcc582c29e1c3d69af77442fe5ccc84"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f3aa455828f8a1afa4465363428bf20b2022876bf9196ffdf5cc934cc85c2f50"
+    }
+  ]
+}

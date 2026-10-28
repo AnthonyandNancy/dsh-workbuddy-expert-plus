@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "game-audio-engineer-game-audio-engineer",
+  "source": "bundled",
+  "sourcePackage": "game-audio-engineer",
+  "sourceAgent": "agents/game-audio-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "音效效",
+  "profession": "游戏音频工程师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通FMOD/Wwise集成和空间音频，让游戏声音栩栩如生",
+  "tags": [
+    "游戏音频",
+    "音效设计",
+    "空间音频"
+  ],
+  "quickPrompts": [
+    "我们的游戏需要专业的音频设计和音效制作,请游戏音频工程师帮我们设计游戏音频系统。",
+    "设计自适应音乐和空间音效系统",
+    "优化音频性能预算和内存管理"
+  ],
+  "roleFile": "game-audio-engineer-game-audio-engineer/role.md",
+  "avatarFile": "game-audio-engineer-game-audio-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2aa57b799545ef627bd9bd71f1e2b269a16b2d0df4b4c4f59ddd684f86777d17",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d0b05a6b46bea3bc3f99f70712d89b54d861ee7a2acb72a0cc335365cdd0e66b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f929e17f1e1c19923e11ca59498b7f09f52b6f1cf1d48760d9526a7b46d92dcb"
+    }
+  ]
+}

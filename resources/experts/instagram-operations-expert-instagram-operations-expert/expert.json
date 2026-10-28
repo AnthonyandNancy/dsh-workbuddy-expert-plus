@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "instagram-operations-expert-instagram-operations-expert",
+  "source": "bundled",
+  "sourcePackage": "instagram-operations-expert",
+  "sourceAgent": "agents/instagram-operations-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "晒图图",
+  "profession": "Instagram运营专家",
+  "categoryId": "06-ContentCreative",
+  "description": "精通Instagram视觉美学和内容策略，打造令人向往的品牌形象",
+  "tags": [
+    "图片社媒",
+    "内容策略",
+    "品牌视觉"
+  ],
+  "quickPrompts": [
+    "我们的Instagram账号互动率低,需要提升品牌在Instagram上的影响力,请Instagram运营专家帮我们制定增长策略。",
+    "策划Instagram Reels和Stories内容",
+    "优化Instagram互动率和粉丝增长"
+  ],
+  "roleFile": "instagram-operations-expert-instagram-operations-expert/role.md",
+  "avatarFile": "instagram-operations-expert-instagram-operations-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6c113f7e8723c35492704b97487ecb373d72d437e48f695d6e4e4b7dc5e5fb56",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e3ade9b2c484f9be97ac5f370dc95fda82f62a142731a33a6137ef4bf021981e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "1f02939f9b2e2be06797a21cc28a18a139cf6fba161d8ff2eed8ca6520705650"
+    }
+  ]
+}

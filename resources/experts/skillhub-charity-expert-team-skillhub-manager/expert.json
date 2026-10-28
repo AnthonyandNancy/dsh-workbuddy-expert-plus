@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "skillhub-charity-expert-team-skillhub-manager",
+  "source": "bundled",
+  "sourcePackage": "skillhub-charity-expert-team",
+  "sourceAgent": "agents/skillhub-manager.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "技术公益专家团",
+  "profession": "技术公益专家团",
+  "categoryId": "12-IndustryConsultant",
+  "description": "星星带领六位专家，覆盖公益技能或Agent专家的需求分析、编写、测试评审、版权确认与打包交付全流程。",
+  "tags": [
+    "社会价值评估",
+    "技能创作",
+    "公益支持"
+  ],
+  "quickPrompts": [
+    "帮我创建一个公益项目管理的技能",
+    "帮我把这个技能包装成一个专家",
+    "腾讯技术公益现在有哪些技能任务可以领取？"
+  ],
+  "roleFile": "skillhub-charity-expert-team-skillhub-manager/role.md",
+  "avatarFile": "skillhub-charity-expert-team-skillhub-manager/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "aca85772f00c619d664554b1470310e3ab058b802d03704cf3d71bc38e045d01",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "5b52c08d8f4dd3aa7f5bbcdd8299b4b4258901b7f58323ad8cd8474fe0138572"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b02c85801ae586af236e8622f66f86b198169d91728c9b61c11beca25951d127"
+    }
+  ]
+}

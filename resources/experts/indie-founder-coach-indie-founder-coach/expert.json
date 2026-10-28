@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "indie-founder-coach-indie-founder-coach",
+  "source": "bundled",
+  "sourcePackage": "indie-founder-coach",
+  "sourceAgent": "agents/indie-founder-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "创迪",
+  "profession": "独立创业教练",
+  "categoryId": "12-IndustryConsultant",
+  "description": "信奉精益创业与自力更生理念，帮助独立创业者用最少资源从0到1构建可持续盈利事业，覆盖创业全旅程关键决策",
+  "tags": [
+    "精益创业",
+    "自力更生创业",
+    "想法验证"
+  ],
+  "quickPrompts": [
+    "我有一个创业想法，帮我评估下是否值得做",
+    "帮我找到适合创业的目标社区",
+    "帮我制定前100个客户的获取计划"
+  ],
+  "roleFile": "indie-founder-coach-indie-founder-coach/role.md",
+  "avatarFile": "indie-founder-coach-indie-founder-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8b43119b65144378e8c7bcf4909b09ac6decdde87d905521f6aae6cdf3ac5b71",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8f4fff4dbe720b0eb99a2d0c2ece0b769f548f40de2a021cfad582765297b35e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "24bb3c9ba00e08f3c67d695d43d27cf7a4dd58ff0edd4a0b00902cfdb6fb4e3c"
+    }
+  ]
+}

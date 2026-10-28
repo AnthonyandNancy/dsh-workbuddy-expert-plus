@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "product-strategy-team-product-director",
+  "source": "bundled",
+  "sourcePackage": "product-strategy-team",
+  "sourceAgent": "agents/product-director.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "产品战略团队",
+  "profession": "产品战略团队",
+  "categoryId": "01-ProductDesign",
+  "description": "由产品总监领导的 5 人产品专家团队：需求分析师（PRD/功能规格书）、用户研究员（调研综合分析）、竞品分析师（竞争情报）、数据分析师（指标追踪）和路线图规划师（路线图管理/迭代规划）。覆盖从构思到上线的完整产品生命周期。",
+  "tags": [
+    "产品战略",
+    "竞品分析",
+    "路线图规划"
+  ],
+  "quickPrompts": [
+    "帮我写一份功能规格书 / 做一次竞品分析 / 规划产品路线图",
+    "进行市场研究和竞品分析制定产品路线图",
+    "制定产品需求优先级和迭代规划"
+  ],
+  "roleFile": "product-strategy-team-product-director/role.md",
+  "avatarFile": "product-strategy-team-product-director/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "914eb63493b01489d751afe11582789d78cbd1e85ffb9c9e7d815e1d29e40770",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "71636a38d10db649a4bf33d08df1521e9d4dbfe008227fb33b301de94f4309f2"
+    },
+    {
+      "path": "role.md",
+      "sha256": "96c5a0a5f5fb6be7eabfa5e873af89202fc4368c4daa4ad73f0db64ccb167156"
+    }
+  ]
+}

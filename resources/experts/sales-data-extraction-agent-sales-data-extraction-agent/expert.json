@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "sales-data-extraction-agent-sales-data-extraction-agent",
+  "source": "bundled",
+  "sourcePackage": "sales-data-extraction-agent",
+  "sourceAgent": "agents/sales-data-extraction-agent.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "拉数数",
+  "profession": "销售数据提取代理",
+  "categoryId": "04-DataAI",
+  "description": "从各类数据源中自动提取整理销售数据",
+  "tags": [
+    "销售数据",
+    "数据提取",
+    "CRM分析"
+  ],
+  "quickPrompts": [
+    "我们需要从各种渠道提取销售数据,进行统一分析,请销售数据提取代理帮我们设计数据提取方案。",
+    "搭建销售数据自动化报表和看板",
+    "设计销售数据清洗和标准化方案"
+  ],
+  "roleFile": "sales-data-extraction-agent-sales-data-extraction-agent/role.md",
+  "avatarFile": "sales-data-extraction-agent-sales-data-extraction-agent/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "537c5edfd9cb2f50fc3ad37cda7f69460f3709e60084f167f1854bb989e60023",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7ac27a3c83238f1c4bbfa61fa587006bd16b841c6dbd6d9e83e96d63536de8c6"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3462d45c789ea629db759419952f7e434b26c11d1e9b8c6e13dc21edbfdcdda0"
+    }
+  ]
+}

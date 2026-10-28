@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "experiment-tracking-manager-experiment-tracking-manager",
+  "source": "bundled",
+  "sourcePackage": "experiment-tracking-manager",
+  "sourceAgent": "agents/experiment-tracking-manager.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "实验通",
+  "profession": "实验追踪管理者",
+  "categoryId": "10-ProjectQuality",
+  "description": "系统化管理实验全生命周期，确保每个实验有假设有执行有结论",
+  "tags": [
+    "实验追踪",
+    "A/B管理",
+    "效果度量"
+  ],
+  "quickPrompts": [
+    "我们做了很多A/B测试但缺乏系统管理,难以积累经验,请实验跟踪管理者帮我们建立实验管理流程。",
+    "设计实验规范和元数据管理方案",
+    "优化实验复现和知识沉淀流程"
+  ],
+  "roleFile": "experiment-tracking-manager-experiment-tracking-manager/role.md",
+  "avatarFile": "experiment-tracking-manager-experiment-tracking-manager/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7d33230425c976bba77a7f207301aeb8221e22a0d444fd9ebd8947dbb1144446",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "61def3fab79d720551d01c7d77fb702bccdbbddd328f3f22d66a954dba5cf2a1"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4503d1a4eac797cec0cc59f211433fdf725243caf92c16060724cd8e30aa5097"
+    }
+  ]
+}

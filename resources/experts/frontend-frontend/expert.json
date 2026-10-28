@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "frontend-frontend",
+  "source": "bundled",
+  "sourcePackage": "frontend",
+  "sourceAgent": "agents/frontend.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "前端界面开发专家",
+  "categoryId": "02-Engineering",
+  "description": "精通响应式界面开发，遵循移动优先与可访问性，以鲜明排版与色彩构建落地页、仪表盘、表单等高保真界面。",
+  "tags": [
+    "响应式界面",
+    "React与Next.js",
+    "设计规范"
+  ],
+  "quickPrompts": [
+    "构建一个深色编辑风的SaaS产品落地页",
+    "设计带侧边栏、统计卡片和数据表的数据分析仪表盘",
+    "构建带进度指示与内联校验的多步骤结账表单"
+  ],
+  "roleFile": "frontend-frontend/role.md",
+  "avatarFile": "frontend-frontend/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2aa6eef6da11058b8209b7eebb0ac4962c5ad9a8a2077da4aadc3aa07e8fa73e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "69726cfb491b2b83eccb30947c2505a7784310c88630a19fb45c9bee610c4747"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b523348c4dbbbfd194f0ba733401c3686bc2c21ae56759d49674a0bc31ccd72a"
+    }
+  ]
+}

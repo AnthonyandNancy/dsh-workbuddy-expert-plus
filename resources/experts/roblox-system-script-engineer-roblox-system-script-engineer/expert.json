@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "roblox-system-script-engineer-roblox-system-script-engineer",
+  "source": "bundled",
+  "sourcePackage": "roblox-system-script-engineer",
+  "sourceAgent": "agents/roblox-system-script-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "脚本通",
+  "profession": "Roblox系统脚本工程师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通Luau和Roblox客户端-服务器安全模型",
+  "tags": [
+    "系统脚本",
+    "Lua开发",
+    "游戏服务端"
+  ],
+  "quickPrompts": [
+    "我们的Roblox游戏需要复杂的系统逻辑,请Roblox系统脚本工程师帮我们实现游戏系统。",
+    "搭建Roblox数据存储和网络通信架构",
+    "优化Roblox脚本性能和服务端逻辑"
+  ],
+  "roleFile": "roblox-system-script-engineer-roblox-system-script-engineer/role.md",
+  "avatarFile": "roblox-system-script-engineer-roblox-system-script-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f6858d942d57d03e1cbec56e448928e0763e121a849dbf361047c020adb77183",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6c7e3d0ff87152b37f1916d7ebbbc36e1ca22559bbf4e0dcd58baddf4a41ebdb"
+    },
+    {
+      "path": "role.md",
+      "sha256": "fcf4e7dd45425c92abc15a3752dbbea3311eba80f42510a572e9d06572980c4c"
+    }
+  ]
+}

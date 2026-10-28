@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "unity-architect-unity-architect",
+  "source": "bundled",
+  "sourcePackage": "unity-architect",
+  "sourceAgent": "agents/unity-architect.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "解耦达",
+  "profession": "Unity架构师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通ScriptableObjects和解耦系统设计",
+  "tags": [
+    "Unity架构",
+    "模块化设计",
+    "组件解耦"
+  ],
+  "quickPrompts": [
+    "我们的Unity项目需要重构,避免代码耦合和维护困难,请Unity架构师帮我们设计解耦的架构方案。",
+    "搭建ScriptableObject数据驱动系统",
+    "制定Unity项目规范和组件设计模式"
+  ],
+  "roleFile": "unity-architect-unity-architect/role.md",
+  "avatarFile": "unity-architect-unity-architect/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b7540148fa886741ece308f811c75fe2463c9ad8779f3cfb05b8bedb424bf342",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "1719a66510499f6022f6f3084115bcdb86b22213fd42a7d4e92139d58aa329bd"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0d53d3762652c7718548720eb6ae2f6347f0a135c4dba3e85c1b3dde17a83be0"
+    }
+  ]
+}

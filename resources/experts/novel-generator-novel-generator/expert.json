@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "novel-generator-novel-generator",
+  "source": "bundled",
+  "sourcePackage": "novel-generator",
+  "sourceAgent": "agents/novel-generator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "爽文小说生成专家",
+  "categoryId": "06-ContentCreative",
+  "description": "把一句话灵感扩写成完整提示词与大纲，逐章生成连贯爽文，维护角色、地点、情节一致，支持修仙、重生、都市等题材。",
+  "tags": [
+    "爽文创作",
+    "长篇连载",
+    "提示词扩展"
+  ],
+  "quickPrompts": [
+    "帮我写一个废柴少年获得系统后逆袭的修仙爽文",
+    "把这句话扩展成完整的小说创作提示词和章节大纲",
+    "继续写下一章，保持角色和前文情节一致"
+  ],
+  "roleFile": "novel-generator-novel-generator/role.md",
+  "avatarFile": "novel-generator-novel-generator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9896919427972a09526e8013ced281e201e50fdfe5f8155cc1fbfda25ef77a68",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b5752428ed005816264df6d37c06ab710058439ef827156cdd76d77e7fa5e29c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9bc2d9d28231b7fa161d8e41ebfcc7461816fd1026d441ad2a252746e2d0d0e3"
+    }
+  ]
+}

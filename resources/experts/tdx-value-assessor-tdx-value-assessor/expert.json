@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tdx-value-assessor-tdx-value-assessor",
+  "source": "bundled",
+  "sourcePackage": "tdx-value-assessor",
+  "sourceAgent": "agents/tdx-value-assessor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "通达信评估师",
+  "profession": "价值评估师",
+  "categoryId": "08-FinanceInvestment",
+  "description": "秉承格雷厄姆-巴菲特价值体系，运用15+估值模型，通过护城河评估与多维估值分析，评估企业内在价值与安全边际水平。",
+  "tags": [
+    "价值投资",
+    "内在价值",
+    "安全边际"
+  ],
+  "quickPrompts": [
+    "帮我用价值投资方法评估贵州茅台的内在价值和安全边际",
+    "哪些大盘蓝筹股目前被低估？",
+    "帮我用巴菲特模型分析一下招商银行"
+  ],
+  "roleFile": "tdx-value-assessor-tdx-value-assessor/role.md",
+  "avatarFile": "tdx-value-assessor-tdx-value-assessor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b9e4c49edcd42c6904d0d52aff1884ab8c1b0529fdef06e14670d26c076ba718",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "66b5e6a7a35d0345abdf7e4acf92b6276b6e2409c298f20ca65ffaf00e5158d3"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b0e1f899c38724c7b3dd24fdd966640cb3ad128998ba4e29c6984b7e9ab24bea"
+    }
+  ]
+}

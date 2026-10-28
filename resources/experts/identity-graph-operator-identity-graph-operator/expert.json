@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "identity-graph-operator-identity-graph-operator",
+  "source": "bundled",
+  "sourcePackage": "identity-graph-operator",
+  "sourceAgent": "agents/identity-graph-operator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "识图图",
+  "profession": "身份图谱运营师",
+  "categoryId": "05-MarketingGrowth",
+  "description": "构建维护用户身份图谱系统，实现跨平台身份识别",
+  "tags": [
+    "身份图谱",
+    "实体解析",
+    "数据关联"
+  ],
+  "quickPrompts": [
+    "我们想构建用户身份图谱,实现精准的用户识别,请身份图谱运营者帮我们设计身份图谱系统。",
+    "设计跨设备跨渠道身份关联方案",
+    "优化身份解析精度和隐私合规"
+  ],
+  "roleFile": "identity-graph-operator-identity-graph-operator/role.md",
+  "avatarFile": "identity-graph-operator-identity-graph-operator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8ef721b72a994265835f935f0091ee66ab245bb72c7425202abb228fabf0ff85",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "9150cd13612c43213f6b45a482d04545a0815fe69177858fdf1c9466e8747426"
+    },
+    {
+      "path": "role.md",
+      "sha256": "081b88dd514d77e9fcc56e81e4083e7d9055d6490054f8141a262034eb417c39"
+    }
+  ]
+}

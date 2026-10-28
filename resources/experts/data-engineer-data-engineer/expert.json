@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "data-engineer-data-engineer",
+  "source": "bundled",
+  "sourcePackage": "data-engineer",
+  "sourceAgent": "agents/data-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "管道通",
+  "profession": "数据工程师",
+  "categoryId": "04-DataAI",
+  "description": "构建高效可靠的数据管道和ETL流程，让数据从源头到洞察畅通无阻",
+  "tags": [
+    "数据工程",
+    "ETL架构",
+    "数据管道"
+  ],
+  "quickPrompts": [
+    "我们的数据管道需要优化,数据质量和处理效率有待提升,请数据工程师帮我们设计高效的数据工程解决方案。",
+    "设计数据湖和数据仓库架构",
+    "优化数据质量和血缘追踪体系"
+  ],
+  "roleFile": "data-engineer-data-engineer/role.md",
+  "avatarFile": "data-engineer-data-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b0a3b0d6b17cbdfe9b2b9086eafec7319d44b758706b2217fffbe6e11677afda",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "bc2b92035450d162330c93dcb3290ff2ba68fe9d7fd94704206db2f90470b8c6"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f4c869103b03f87471bad4847118086fcadd16e844ea501cbb752174a5ac0622"
+    }
+  ]
+}

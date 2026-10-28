@@ -1,0 +1,2304 @@
+{
+  "schemaVersion": 1,
+  "id": "soe-soe",
+  "source": "bundled",
+  "sourcePackage": "soe",
+  "sourceAgent": "agents/soe.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯云安全运营专家",
+  "profession": "腾讯云安全运营专家",
+  "categoryId": "13-TencentZone",
+  "description": "分析WAF、主机安全、云防火墙、SOC、御界、天幕告警事件，覆盖漏洞、攻击、入侵溯源与iOA排障。",
+  "tags": [
+    "安全运营",
+    "漏洞分析",
+    "威胁检测"
+  ],
+  "quickPrompts": [
+    "解析这份漏洞扫描报告",
+    "排查这台主机是否存在入侵痕迹",
+    "iOA客户端登录成功了，但访问不了内网业务系统，帮我排查一下。"
+  ],
+  "roleFile": "soe-soe/role.md",
+  "avatarFile": "soe-soe/avatar.png",
+  "skills": [
+    "soe"
+  ],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0a063427950006988d11facb91f56258cea0d76eaad7358e299b07559fa0f5f3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "1a96af1ed5b6391dacd2db5088d7160aa821c60f539c0f48e28f79b3cdb25ed5"
+    },
+    {
+      "path": "role.md",
+      "sha256": "01a4c39cc914c8a1cf195292459324fa24137a186f13467a9d4fae827fc6c911"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cfw-analyzer/scripts/l1_cfw_analyze.py",
+      "sha256": "c523aeeb1ba3b28699ff1c2912e01faaa5a6a948de5684d02fa5914d9b665ce0"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cfw-analyzer/SKILL.md",
+      "sha256": "31bbc2e19730a085181fc129f4aada65a2726c1e389666175d118b663dbcd0e2"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/references/case_template.md",
+      "sha256": "13521c2e4932abb7fbcd317ff7b51038b5a86e68fafe4aea3d34b418be5247c0"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/references/field-mapping.md",
+      "sha256": "bda79a9b67c3248d1b9e8c6e057b7c1b6d92d9bab20b1c9c4409168a415c610d"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/references/mitre-attack-mapping.md",
+      "sha256": "268143238fbf53d766aa47922e69ecbb1b9deea2cac44ac399d8c8c8156294b0"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/references/threat-catalog.md",
+      "sha256": "ed0e659055655fa50fa6310f9258200981c309230a4270367622d91fa204529c"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/scripts/__init__.py",
+      "sha256": "d45bbfc502cfbef1a7488fa23360d012606f4b9963700b39512d545dab76136c"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/scripts/l1_cwp_analyze.py",
+      "sha256": "deb19a36f10fce8724562069842e5158486586ba8bc9580ff0bab3dafc4d89c7"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/scripts/ttp_detectors/__init__.py",
+      "sha256": "f9caea267ab0c05b7fc7527324855dd99a652d47983f2812b2e9f5193e2e0ca9"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/scripts/ttp_detectors/brute_force.py",
+      "sha256": "2de9fb102114d12d5357e3c19bee519fe2b591905587f403ee51a76d5c4e28fa"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/scripts/ttp_detectors/lateral_movement.py",
+      "sha256": "46e7b0f2fab6322cd386bc9f0a3e64d2cca919419a9a8a971d514dc201e3440c"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/scripts/ttp_detectors/persistence.py",
+      "sha256": "386a4f57f610d41852aa91a51f5f276e956cf49a84b58c5bd907de9f719a5199"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/scripts/ttp_detectors/reverse_shell.py",
+      "sha256": "2cfedc433e00f006ec8707dd29a4676c0be53664598241fd2d3979c5da7ac54a"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/cwp-analyzer/SKILL.md",
+      "sha256": "7d0f0c06909151ec8ca8f19d4a3445e4fae02ce9b0393df387d47f65df2cc82d"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/references/event-schema.md",
+      "sha256": "0e38d6f3d622754d40bda1075291f1cdcd25f650eded5b140b16ec479f58a83c"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/references/l0-parser-contract.md",
+      "sha256": "64441d25ef9df3f6417c72f70b1717eb213aa1a4aede81d5805617bf1028bad4"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/references/raw_cwp_sample.txt",
+      "sha256": "4b06b1d14e70e2bb8d61897852a8b4b1811816ff32b6d53a4369c35c41230b0b"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/references/raw_yujie_sample.json",
+      "sha256": "73b560e3dbd154ffd55ada575905f888b177c77b9dda90ead2579a6e105e820c"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/references/soc-export-format.md",
+      "sha256": "b117a38b9a110ce22bb7845d229776f8709876a8e774168349909e1604e19676"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/references/tencent-product-naming.md",
+      "sha256": "091aba7022bf9b70f4513e9afe9b92ea252eaedc4f4660f1656eb115a9ed8634"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/__init__.py",
+      "sha256": "67cd5b1af89687e7a8194cb2968d7b2b1a6b65863c1525e1630bf3739f11c385"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/gen_report.py",
+      "sha256": "f8550f998aec5045e7dadae3301981f4b385495ac54b3aec0fcef87958b018a6"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/l0_parse.py",
+      "sha256": "9d4eeaf88cc2358305ba38ce917f11b48baf81ef90e811c5aa8d227b9f81a35b"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/l2_correlate.py",
+      "sha256": "75647ac9148591c401f7ca4efdcd6f818a1bd9913b23a17cd47e27b61ea7895e"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/packet_decode.py",
+      "sha256": "e10f0884ff5ebaa7cb2d8a4fd57a180e21c526d8071147faea47bf9af472bb02"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/parsers/__init__.py",
+      "sha256": "e21b76ce47a2f4cf6f2b9e8713328977ae5791479fa793fb37f158d4dd28d12a"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/parsers/_base.py",
+      "sha256": "e993bc79fac7b195b7326504abed0d8ff6a2ba703aef077b7ab371d506ad9973"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/parsers/cwp_parser.py",
+      "sha256": "4c50794b545e2c23c72652c72a4b1103592c2d25597eecd08be4610012fd8e2c"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/parsers/registry.py",
+      "sha256": "beeb2ea1f8207ecf08d711b8a5d9234d0dbf3e09c27bcf8e8b3afb911e1106bb"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/parsers/tianmu_parser.py",
+      "sha256": "6a39e1a53013d5fe4504ba449a1251f312028d4407d7b3d13484484a4318581d"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/parsers/waf_parser.py",
+      "sha256": "9af6b671a315427938ec82884bb0c3966484ad441b361e23f02d9bd5992a336c"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/parsers/yujie_flat_parser.py",
+      "sha256": "cd7e60a40621fdbd3f0c6894f8a5599c4b95d8207adb3a4d2181572f6466c3e8"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/parsers/yujie_parser.py",
+      "sha256": "a2df93a5da6023da6c944675386075ec7799d03530b6348dd39af6af4a3a0f3c"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/xlsx_reader.py",
+      "sha256": "4209f1899fa4ce7e0224be2565d3309fdceff60eedb4695a31c79d56aa5ab99f"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/scripts/xlsx_summary.py",
+      "sha256": "b42128bf1ca8bd6a401e9992e4516a2f7324e7b8b95b700842e5d959a0f57cbb"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/soc-alert-pipeline/SKILL.md",
+      "sha256": "b73e39f01df001bd4f1f43495eb94334abb9ad7bd267beffd364f70b48349103"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/tianmu-analyzer/references/tianmu-rules.md",
+      "sha256": "de2661794ed56ebc122439f52ca31a16d3416a4c64126fb3e2905c082c179bb9"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/tianmu-analyzer/scripts/l1_tianmu_analyze.py",
+      "sha256": "d267ecc1efc6d7ece0d5bd09f930100e6432346e06360fb631f0285a69af8b71"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/tianmu-analyzer/SKILL.md",
+      "sha256": "d975b9fd0fc94b377f922b41eb61a40afe9b3a0053afd35d62eee12f523b51dd"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/waf-log-analyzer/references/report.html",
+      "sha256": "789fbffb15ea17d37ab1884af52650d9b2dd4a68f8e351740d9ea599e5c35e97"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/waf-log-analyzer/references/report.md",
+      "sha256": "b84bcf9ff4161b10fb4aadcb97fd1d1f5704db4a6f4c42a15734d271fa0b5f32"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/waf-log-analyzer/scripts/analyzer.py",
+      "sha256": "2de990ec044be0283bdb8cf69fb605ac357729bab051274d0b1e5a186b8fd2e1"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/waf-log-analyzer/scripts/l1_waf_analyze.py",
+      "sha256": "ddcbb141ff97580236f3cb57e61cf46f9b00b1a4ba9b059223974d257563ca3d"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/waf-log-analyzer/SKILL.md",
+      "sha256": "e6ed5eee5d749fdc7ae056f8c1fb327c25d4ed0f64dc32bd9f4e9d80549bf528"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/references/case_template.md",
+      "sha256": "ea11aaf85d5e96d6cf73b911610f8f5a57ddfde732f55b17c8fad5aef81324e1"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/references/mitre-attack-mapping.md",
+      "sha256": "653431918c671311c4d2fefd552da28b4fe16e11eac2e3d71a70f4019715bd77"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/references/nat-encapsulation.md",
+      "sha256": "97c4cf5ebe6578b9ced45fb7f086caba6c92e1854f9d6b727a0d1dd4351ffc90"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/references/sample_wireguard_event.json",
+      "sha256": "8781155b62c850eb6b4a6c6a11d91d901e30ac75c43cfd01fd0ae1b6e335315b"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/references/threat-catalog.md",
+      "sha256": "365777711801a86a79b197f9af0de2da50e4b962492997725cc122352259f444"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/scripts/__init__.py",
+      "sha256": "390382cf60414d9b71d29b4eaa89409d4fcfbcaf74350cde6856835c2a9dcf9d"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/scripts/l1_yujie_analyze.py",
+      "sha256": "94714cf6f199cebc5fb4f47fc42a872aea3ee6388d14474b8f37e3706323c234"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/scripts/nat_resolve.py",
+      "sha256": "f0e97626a64b26920bd4635472059196603b309268142bf06b8ff1117a0e1c5f"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/scripts/ttp_detectors/__init__.py",
+      "sha256": "a50906872c3a1a80097e7ba0ab49269f69d0fde94a5e93e43e7fdcea4dbba549"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/scripts/ttp_detectors/c2_beacon.py",
+      "sha256": "531659a7aca350fbca49a9735b7c6f51815a4f5fb5056d1759e53e7709bb4c1d"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/scripts/ttp_detectors/exfiltration.py",
+      "sha256": "6f0c25675dd8a4a43cd3c79563e3014e40031da1b069e5347cc991d1092ee1df"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/scripts/ttp_detectors/lateral_movement.py",
+      "sha256": "c3080e80088264ee1cebf176c09c663a74196d43291325fe877526a79a6000cf"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/scripts/ttp_detectors/tunnel_detection.py",
+      "sha256": "a1b7249fbc15ed93e735590feb9a79939038f2773f060513b6c562f7ed76fb09"
+    },
+    {
+      "path": "skills/soe/references/alert-analysis/yujie-analyzer/SKILL.md",
+      "sha256": "edebe0f78abcce83db7dfd1e1c3dc127b8ee29526336f8c9e18a2bcda0e66437"
+    },
+    {
+      "path": "skills/soe/references/asset-management/asset-manager/scripts/asset_resolver.py",
+      "sha256": "f450e6ab02e71bf2106e9b8c752f29014712b4d8450c051ec7a3b87dcb3cf63e"
+    },
+    {
+      "path": "skills/soe/references/asset-management/asset-manager/scripts/import_assets_flexible.py",
+      "sha256": "cad71d235f701d24df444e8742cfaf19da2e9332b3ce9413c65d37fba5d4a09a"
+    },
+    {
+      "path": "skills/soe/references/asset-management/asset-manager/SKILL.md",
+      "sha256": "fe945a520f0921231f25638fc725cfad93c9da89cef59f5e36536fd3fe9f7052"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/resources/README.md",
+      "sha256": "c50f2de2f081b047f27072f1e91c332d10ba9eaa17fae4d73273ab390377b7c4"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/resources/report_template.md",
+      "sha256": "2506307cc2d87922bcdf8c59fb742469b0873518f0c4177306f77f0290711b3e"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/ddos_attack_analysis.py",
+      "sha256": "1f85fc7c2e3e02b53263e5c61af183f73ab22d04bf9a0907346bee8d3d54f6a6"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/ddos_detector.py",
+      "sha256": "6f36fb2d7c7c579fe59b243c1d212635d3ad4ae7d11cd64ac96dc2fc634a6e5b"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/geo/__init__.py",
+      "sha256": "38170a8ee5942e0050e9f99a864a7e9b56e20d18240c42e5030f1919eb1bd2fc"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/geo/api_lookup.py",
+      "sha256": "542951d045b49de6e4d18f99f39059eafacab924d1c8c24eeb7f53cf93fa53bb"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/geo/ip_data_embedded.py",
+      "sha256": "acf119cb4206d29417bf53af04de63233f27219dbd1d82c157f42ca89ec51de4"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/geo/iplib.py",
+      "sha256": "17fad0dd5f57b811881823866a1dad49517b48d53199198add68892c6ea5f1c6"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/README.md",
+      "sha256": "911ba008ab5cf83602bd37a86c1b5d16cd67a40dbab8041362dc129ccd9e7134"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/requirements.txt",
+      "sha256": "3c029ac181cdc24423458df3425a7c4bf37d5f9669977180d165e0fa5dd5f723"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/utils/__init__.py",
+      "sha256": "90c4fdb8037594147fb6a5c97dc57921f26865087d678984dda44451d5696d29"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/utils/attack_detector.py",
+      "sha256": "940172ad7ec8c2d113cfffaa7217356856628c01f463e39506be57ac0dd88274"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/utils/packet_analyzer.py",
+      "sha256": "6d8c2fd672ca76a1ed92a9db0197c4aca7f2706853f9123b269b1de9a7824465"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/utils/packet_statistics.py",
+      "sha256": "86037fd4ad3a56c75c5d7adb73baa469e2ff96b847943a388b3136aa5df9348d"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/utils/pcap_url.py",
+      "sha256": "c0469af055fb1d7061365d2d57cec461063e9bc2346eb18105464fbc858acaa7"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/utils/tools.py",
+      "sha256": "26b0cb9dcdae42a6eadcfc4e4d3a22edd981475429ebc642234457af3d28c181"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/scripts/utils/traffic_analyzer.py",
+      "sha256": "ff68c4796ef52957767f94c3ec1ed711ed4c2ae3f5e0285ba7c948df2ddd33e3"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/SKILL.md",
+      "sha256": "3abb08618b3890e4b496ab5be5777eae17d0671934902ef14ef3e35d74273d6e"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ddos-analysis/tools/analyze.tool.yaml",
+      "sha256": "c3b7f3c028c033ead5b3dd3a8166ff4b99de8f7ed1561af134123c7667553f74"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ransomware-analysis/assets/decryptors.yaml",
+      "sha256": "164fc78d2d571870a63aaee6337309104e380c0837c0ff4a8d9667189a14900a"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ransomware-analysis/assets/intrusion_vectors.yaml",
+      "sha256": "396366f06afac2e77ecaf1c5776e521ebdb4c9ca49347ddac0cc4b8636a0726e"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ransomware-analysis/assets/ransomware_families.yaml",
+      "sha256": "92f751f55e579e1a3e2803fdd51f9f2698128bb6db063f6d923fa30e5408c895"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ransomware-analysis/assets/report_template.md",
+      "sha256": "a5ac5220bc4ec771c84d32ee8d49e00afeb4a3afd17b6ede39ffab549c57d919"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ransomware-analysis/references/family_profiles.md",
+      "sha256": "3f6d9cd91ac5378cb5259f6f5e5262474b92d0078c2b6fb533ffb8317575cbd1"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ransomware-analysis/scripts/__init__.py",
+      "sha256": "c9c8aad147d8d7b994d1be0abc343cb683630c64258383956ac4d1b946451432"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ransomware-analysis/scripts/ioc_extractor.py",
+      "sha256": "76fd78834f2b4c577541001d3ad8404a5be2963f0a7ba0d3f544bd5bee34d449"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ransomware-analysis/scripts/online_query.py",
+      "sha256": "3136091222c1c90b8f7390e1b1956bafdeeb3786b939f5389c7001c63a8f2033"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ransomware-analysis/scripts/ransomware_analyzer.py",
+      "sha256": "9f3501986a944abb6a12b7892636c969fab52b63076e6e847719d13852aadb9a"
+    },
+    {
+      "path": "skills/soe/references/attack-analysis/ransomware-analysis/SKILL.md",
+      "sha256": "90c0968b773593940f61a94c73487476d9cdb4beb7f31fc402564b2930b7d5b7"
+    },
+    {
+      "path": "skills/soe/references/general/log-analysis-troubleshooting/README.md",
+      "sha256": "08d338cd6dbf5940185126547b932a34459cd782b47e164f75d0672b1e3d9498"
+    },
+    {
+      "path": "skills/soe/references/general/log-analysis-troubleshooting/SKILL.md",
+      "sha256": "06220c29d2feb6ebc019579ae39804aa81839735fa0f36695b30333bc497857a"
+    },
+    {
+      "path": "skills/soe/references/general/log-analysis-troubleshooting/tools/smart_log.py",
+      "sha256": "c8e16ebe9f23c1e21b8f8533a98ac12724a4b3d1d3ceaa0c9575bb3f58d48aac"
+    },
+    {
+      "path": "skills/soe/references/general/log-analysis-troubleshooting/tools/smart_log.tool.yaml",
+      "sha256": "f696f38a3246b3f208b9011115bb896a62559380a23d589ed51fd7e26acc6794"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/config/cloud_vendor_processes.json",
+      "sha256": "a5137a18b4eb0c7f1a13b732f94309b7e2fa1ad18cd031a417d078b042e76dbc"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/config/README.md",
+      "sha256": "c2af575c591548e8d8ecb5421adb0cef5aa7a0c7b3e92c692950620f5b1df083"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/README.md",
+      "sha256": "bda0501752527e9ecacfe82c114226913df3123a84d6dc9397c3535bc7c94b59"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/_common/__init__.py",
+      "sha256": "47c993e8b1f73fc7ec2a8aa860f92856aa939d3ad7e9e086d8d7ef78c2ee5e61"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/_common/cloud_vendor.py",
+      "sha256": "ea4fa2f9e6c3678fb04a51d6948a62e9886d6285900dfc0eb00b9ff0d60d7f0c"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/_common/constants.py",
+      "sha256": "b04b9ad46884a9f87021896c5d9f05ac0c25eb05bba41f84a597b5f418bd9f7b"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/_common/models.py",
+      "sha256": "77b0a836d971d0137e9b2e627355e65b2c34a183cf18eb706e1f412958c53a55"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/_common/parsers.py",
+      "sha256": "4c6f0826df5a02cdd9c1deec9fdcb95ead29b0026230ca414376cd44216547ba"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux_check/__init__.py",
+      "sha256": "dce42a54d6a98ab043b6e11144c317673ddcba794035df7078b19c6525696224"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux_check/_pa_linuxcheck/__init__.py",
+      "sha256": "4b1d41514ba4662d0e22c8b878c69d8993a62d5eed5c472052c8e4d56a0eddab"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux_check/_pa_linuxcheck/cleaners.py",
+      "sha256": "1c225018fb44639b5231764b0587a86fb7784ec5b623b3daeef565d9926ba924"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux_check/_pa_linuxcheck/constants.py",
+      "sha256": "19dd14ce1be2d169cb4ef44ea9dec9adf9739af49413b6bc9d626ca17b603b27"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux_check/preanalyze_linuxcheck.py",
+      "sha256": "9ba1540584cda32ace9eb3623d78d7e4b549fe5d5f56b180cadfb4f610822c92"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux_log_folder/__init__.py",
+      "sha256": "eb566d531fed552bb93ff6215d8f5e89593a68b5ba03053c38af873b04e294e3"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux_log_folder/preanalyze_linux_log_folder.py",
+      "sha256": "34ed4582da36f62669b99e61196ed6920679bafde74dee23688a44d68b4c8934"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux_zip/__init__.py",
+      "sha256": "f79e3128cf0d16adf751198f32324243146ad08315748e3d0d03f466957b9296"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux_zip/preanalyze_linux_zip.py",
+      "sha256": "427ca44b0b731dbb24d0e89687e66c21df2b82f5dfbb69914d9b36d77dc31bbb"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux/__init__.py",
+      "sha256": "eb9bd38551b3219d1a9204ace083aaad2c614e0f141e2d333cbbf509b95ef6f8"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux/_pa_linux/__init__.py",
+      "sha256": "978189af2571e03753cf2cc15c4e10c41956ca361ec77ca5556d4566ebf1580e"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux/_pa_linux/condenser.py",
+      "sha256": "31a01439f6d8779c033b3d4407c1c2cc243e60b5a33b0a81c97a19b9e01f35f1"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux/_pa_linux/constants.py",
+      "sha256": "0454362763590ac49aa194a0a66699a37e0a0457d55c18684f346b52a3ee568a"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux/_pa_linux/handlers.py",
+      "sha256": "11863e74b64f74cdcabf4b6a85f458c380cd4f87407bd550c0f640a4a4248a8f"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux/_pa_linux/ssh_analysis.py",
+      "sha256": "24c352c6abefe1653eb28d3deba06d57a9e93c4bc895f7e258f6fb466829ac27"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux/_pa_linux/threat_score.py",
+      "sha256": "ea42da1d442eb3534c8c95b02be432f6f7bc276881f2f7965ba85a90fb12b832"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/linux/preanalyze_linux.py",
+      "sha256": "dbd0fdf8522acab99556aaa3e37ed9ee5f6cf9b6767ccc34141fe498f889105f"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/preanalyze.py",
+      "sha256": "fd0521f730bbfff97e88157b36ce800d1e2c035a1e7b5e9fab636ccd7d5441ad"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/windows/__init__.py",
+      "sha256": "1775b6567cfeb876f932b53048f6952e15a3155091fc94c8771eeaa8a6361987"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/windows/_pa_windows/__init__.py",
+      "sha256": "715f77559953d1312ed546df96e02c156b50b4cc913d97c3378f23adfa6f7fb8"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/windows/_pa_windows/analyzers.py",
+      "sha256": "614679501e0947f2666f87ac181ee9e4640e516abac51653adbc73cdd81bd7d1"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/windows/_pa_windows/constants.py",
+      "sha256": "ba66c9d696b3a1e143189df818a156bd6b7379395d58f3780a406b017e3e5aa9"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/windows/_pa_windows/extractors.py",
+      "sha256": "6570d5d12b697e9704642044986bca480bb274383eb23f7989dd06902fc944cd"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/windows/_pa_windows/models.py",
+      "sha256": "b2709fc0d77645628ca8980cd69d1ffe1e6c7fabcf44e9b0e2c96bfeb534b8cf"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/windows/_pa_windows/parsers.py",
+      "sha256": "8cf4d69115682dfb26476c455f9ba17a68423d5d241f95f6cad04009c89b32a7"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/windows/_pa_windows/renderer.py",
+      "sha256": "6c2a02acf616c73d01c7037f84a1892de925229ff01bdb237b75d17eca31c8df"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/analysis/windows/preanalyze_windows.py",
+      "sha256": "64fadbfca1d4aae04c722932ca4cb3d7b9c01c1e678046581535132350c668e0"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/linux/get_log_all_in_one.sh",
+      "sha256": "136ba3a5bce8b5242d92c2674dbdd43b377ee0baab5ba2c896a11ba75d7bddcc"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/linux/README.md",
+      "sha256": "7f6e00ee93cd329c8565896bf88a2fd0c6637ef4b0758867dfc8c8b728f50e95"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/windows/get_log_all_in_one.ps1",
+      "sha256": "8d03a7a1affca188a36db0becccc3b991f55e0ec76f78f435e8813e84e1d3884"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/scripts/windows/README.md",
+      "sha256": "ca40361d56cac67a29dae82178491a71df3bbdabd5dabcc1a4b15b116909325f"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/SKILL.md",
+      "sha256": "d5c809dd5c65e34ba58a8c67ea5985648d4d7be6cabc1fcffe982848dbb762d6"
+    },
+    {
+      "path": "skills/soe/references/intrusion-analysis/host-intrusion-analysis/templates/analysis_report_template.md",
+      "sha256": "a62faef7d970d5c363d0b68c2ec1da352ef3f01428b8f827863dfa819aae9340"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/common/response-and-security-rules.md",
+      "sha256": "cbbe44a7f991e17be3c97184fb2531fb92053aeb997a5917fa37e893bb84267d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/consulting/consult-advisor/SKILL.md",
+      "sha256": "ce1846db68b48c228f72f187c205bf136635eb396926a272be7fbcaeb492075c"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/软件运维/software-import.md",
+      "sha256": "d9aa6990be6ec28ba6d80091531db6b47a9705778c67172738e35569fbde1418"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/软件运维/software-open-api.md",
+      "sha256": "c1a626d2f37f8924646c35c55e770e4fbcf8b368177d5d084b6edd436a2c6bd4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/软件运维/software.md",
+      "sha256": "f062291cacdf28d7ed869c0fe862f4be7be3c9905c131736d071a6ceae3336c9"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/device-client-api.md",
+      "sha256": "9fd6bc65dcc1cc3d5e528cdbbdafd2d3e96baca10609bad19f3a9179fee82328"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/device-group.md",
+      "sha256": "d1741cf40190c0d11bdaadd8ce849f8a352bd40c0757cb3cb5597314600cd420"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/device-info.md",
+      "sha256": "0da3d1dd03cd6ae05c642536911d566d089345b9e957b280baca489a24d19543"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/device-location.md",
+      "sha256": "d982f3d7efd637f464e525b270b6c7fd680c7833a3cf40a0ba7a619ec8c989de"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/device-module-status.md",
+      "sha256": "2f25a596ca23c50952c5e8cdb5d3f24fbcdaac0d0406c4721c79fb77bbbec65d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/device-open-api.md",
+      "sha256": "23e3fb6f4abf04afdb6c2462474a56a75e2f86ef688aac3970d05e3beb01f4fa"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/device-profile.md",
+      "sha256": "4435c887671a4ec21469b01eff3db3d493b0ad9bf217f898127d4615e344462c"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/device-query.md",
+      "sha256": "99f40bfdf3264f31433b0663445bf543e2420685ee265dd4cd24784260d7aa22"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/device-register.md",
+      "sha256": "e0fe12e31a129eafcad1b63cfa42d042fe510206d2ab2d79d5c24bed32f14fa6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/devices.md",
+      "sha256": "92b80e49b12647aa2449f095d1287ee628b6178255448b9a347ea51ccdccb8f7"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/host-lookup.md",
+      "sha256": "2b0ae9aa6836c82cd87471d73e53344f71fc96d8b9d2579d5e2578deca5a6df9"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/ioa-pause.md",
+      "sha256": "4238c3e13bb69491f4d437a0e68898fa2929f27ba6e8b045ac71f7c50ce1a884"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/ioagent.md",
+      "sha256": "6a00b341dd3f68ac5d2d52639d14666ee9ddcb066f3d06f3fc7f40212ed93399"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/mdm-svr.md",
+      "sha256": "1dd195e16b9590670d5ad7aa13c404b36c914a92097b96f70109550364a56aa2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/remote-ctrl-srv.md",
+      "sha256": "9630f3b08ef27faa48f6961fa8a2039b97d1d92564fe1497c6043dacbfb803b5"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/remote-desktop.md",
+      "sha256": "5b31b5b65f22d9f317b8e966ab8f6fb151301917f093e90139c07ff822ec5ae6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/references/终端管理/remote-turn-srv.md",
+      "sha256": "f74f363f35df5f3a293f2a79faea7b7d5e2a920ec46233ecc0070ed5f9db1da2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/endpoint-management/endpoint-asset/SKILL.md",
+      "sha256": "c9cb533102dcccfaf48ea7313ffa0fb2d9eee096bb71b6c2c53790a19ed35fb2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/configs/sample.json",
+      "sha256": "3492860c66c427fae55be7deed902e2b805f19a5f7cf931f0c0866081e3e58a0"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/README.md",
+      "sha256": "30b502630b97c9dac481c6daec6ae2c1d3780b8fabd1f69067daeba6765d8d7a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/接口调用速查.md",
+      "sha256": "3310f515d0889d6ca5cb4bf810982f183c2207bca469147708f4e72b724f95a5"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/_sidebar.md",
+      "sha256": "e67324b00c97954f52c14762f0cefea0d1870514949429c262bf816fe76cad28"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/非云规范接口/_sidebar.md",
+      "sha256": "9511c940ccfcfa4768389957392d8afa830b07ad26579e1bd9c5fd415e0481d4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/非云规范接口/6.x对外非CAPI规范：更新用户权限状态.md",
+      "sha256": "c0a530f825aa344291593f9b85bbcd4f34100c1d5e7a0d6f5645a1951dda762b"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/非云规范接口/6.x对外非CAPI规范：批量应用进程白名单策略--支持追加.md",
+      "sha256": "5e6fe14d3abd0acc7ba67f961cecc77d1103d9609ece4202f81abc3811d55b96"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/非云规范接口/6.x对外非CAPI规范：批量应用软件许可.md",
+      "sha256": "fdbd849d8edff1af14f42ed8ccf865d08fb05df1f0c656c6b15bd706ac87a3e2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/非云规范接口/6.x对外非CAPI规范：组、设备与用户关联关系.md",
+      "sha256": "87fe2e900b5a7abe37f9a666dd6f42f2029ee8306eefb973f93f84801395c37d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/非云规范接口/6.x对外CAPI规范.md",
+      "sha256": "06cbcdb3584f0d37787d5780922cbe450edc9152bd82c97e918b4e694eab4213"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/非云规范接口/README.md",
+      "sha256": "9511c940ccfcfa4768389957392d8afa830b07ad26579e1bd9c5fd415e0481d4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/接口调用说明.md",
+      "sha256": "757a9f64456659fc1880404b27866f4ab2690791ab2227fb1e91d2d4ee872b14"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/_sidebar.md",
+      "sha256": "7a9a3be8c84cedca691da52185a6801b7b86df06799cbadd96f03343266e0231"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/_sidebar.md",
+      "sha256": "2781ee398e2f9f660b428502b25a6126e0c42c34dc7fb3cbbb986443cf64a090"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/错误码.md",
+      "sha256": "e27e792e819b0d7f9f8d92a71efc736c34be63e66a789ded7f1c25d698cc8fea"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/公共模块相关接口/_sidebar.md",
+      "sha256": "6dab9cfa2103d336807c1d44712c13b854ac87fa77571016169c3d1b854c927d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/公共模块相关接口/获取加密公钥.md",
+      "sha256": "d83f9efe3f571b9be1152397b4e4bd6c66bf03ca8161a9068c19d4d14876ce4a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/公共模块相关接口/README.md",
+      "sha256": "6dab9cfa2103d336807c1d44712c13b854ac87fa77571016169c3d1b854c927d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/简介.md",
+      "sha256": "e9da6124ca9d8b006897c8c26b7c8945997172fd06503ce1e7808aea7fcdb299"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/接入设备管理相关接口/_sidebar.md",
+      "sha256": "80721c8a0f74075c43109197d4c609504941e00bc9746e5faae92681de2c25d9"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/接入设备管理相关接口/给接入设备批量加黑加白.md",
+      "sha256": "1ace40168d551c2d54335617909b8a2b2e2b7d3130a4ddbdfa51d0ffc310c377"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/接入设备管理相关接口/README.md",
+      "sha256": "80721c8a0f74075c43109197d4c609504941e00bc9746e5faae92681de2c25d9"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/_sidebar.md",
+      "sha256": "20e8be05f70b71c99c82179ac11f1f231c961e2ab9cc9a0bbc2f0778e19a4a88"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/绑定业务资源网关.md",
+      "sha256": "b1be0ed974153252a5c8da3e195faf75f6eabf6db0a0935850d700e84912fb42"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/保存账户虚拟组资源.md",
+      "sha256": "c5234b536a38c74b5b70d1cda9216786ba7f2bd29b8a0540b3d1a58bdf20d247"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/保存账户组资源.md",
+      "sha256": "0b8caebee3a471a78dd9b0dc49c75d4e6ad9d3939b5427c8d32ce23157af516f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/查询账号关联的自定义分组的授权资源.md",
+      "sha256": "96fd9c417517bb541d0c3696fdc50243dfffc697f281b7eaa66aa4cca3cfdf53"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/创建本地账号.md",
+      "sha256": "b67ec564f2e7d0da1ab4ac213eb5e9fbe7dbec54e12581860ffdf8acd902c144"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/创建业务资源.md",
+      "sha256": "bc64afe77b2f080d1343aa6fdcc40b1dad04529b0126d50ef54efd42af3054c0"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/创建资源模块.md",
+      "sha256": "bbc1694fada4f7ae165acbd7427ae7cb03e6dcc0a1250371020b8d2df84ea9dd"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/根据userid、menuid获取uid.md",
+      "sha256": "ff97c8fd5f0a457a4815df925d7de678b5bccdd161106303fa8a3ff84fc7719e"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/关联服务器.md",
+      "sha256": "bc82b50b1dcd338e085864de0f9e5503e8a3fd79be456b049ecede240ae7647e"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/获取关联服务器列表.md",
+      "sha256": "6fdd0b039a8647ae95a07137bde0f2ae3826a7cbad73c6b640c30c449ae906b5"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/获取零信任网关列表.md",
+      "sha256": "080979fa0e7179486d595d57565b84a2049ae0b2aca3433724a15cccbc9244ea"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/获取业务资源列表.md",
+      "sha256": "1471b3d1601d8f41099c609c307a69751ef576c19c5c8b3090ab5cd107d26989"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/获取账号分组信息.md",
+      "sha256": "da0970fde2957ff48bd2d53d7fb15ce7fd0084a9c114a083fb3a53564dd9cbcd"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/获取账号列表.md",
+      "sha256": "abe7afcb8f3f3b17f2c346d28dff58a89eb20e1124c0d66cad54d151672a273f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/获取资源模块列表.md",
+      "sha256": "99d581d7a91edea43b34904e86a8a64878300d982b787625b7dbe49d53797fb7"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/列表用户组资源(包括继承).md",
+      "sha256": "344cd4001ff243efb81614346b08c939f47b3bff9c6837fcfdbd7a083da69134"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/列表账户继承的资源.md",
+      "sha256": "f50b2d76ec3fb66d5a5e8d3d3749c5323fd33c02e2a2a86d600272ff9c48e81c"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/列表账户虚拟组直接关联的资源.md",
+      "sha256": "40393e1773d417bbd1db6237ec5699930419d99c5929c33789cf4dbf9342c5ba"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/列表账户直接关联的资源.md",
+      "sha256": "2a4bf909f3c79a01cd962ffb4c06ad25ad4f0c4c5249ba4ddc3a198c874f9a76"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/列表账户组直接关联的资源.md",
+      "sha256": "a991f12139c94f671704584343736c3745d136e1d8945d2155a386f62cdd6aab"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/启用禁用账号.md",
+      "sha256": "f15115531006cd093e544c514a9210a48c59e38d36a616a6975382b1d0d37503"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/删除零信任网关.md",
+      "sha256": "a619d993d2cdbd48c0ba924c001d504fece28da46ae0fe50110f0edeb1e43585"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/删除业务资源.md",
+      "sha256": "d294b4461c516f30f56c84d53ef756197027ec8bd8d8ed6a1f4968a6331306ad"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/删除账户虚拟组资源.md",
+      "sha256": "3428079c5bc5037fc8b6163ee695e03cf0900576dd1bc9daa22d43d4052aa29d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/删除账户资源.md",
+      "sha256": "79d240e34615e63b856c32b0f165999591e252f9047b09984b3130445f709406"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/删除账户组资源.md",
+      "sha256": "2bfd3b760cede2172fb714489740bfdea41799884b2dd16c2fde016d8243b987"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/删除资源模块.md",
+      "sha256": "133ba35d97c821b0d746214c7a3525dbe7886b5b2d45539d47d5127ae898ac6c"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/授予指定账号业务资源权限.md",
+      "sha256": "59cfb7154d766040943a7f86270f74748375287b253976a29dcc24a51e66ef64"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/添加零信任网关.md",
+      "sha256": "916d1d4541c1b5a417ec83830cb62aaa8579a673cbf7e01d37b28d1f89ceb738"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/校验相同业务资源.md",
+      "sha256": "6e3ae63815d80f3a6aee0e98e863d95422c1ea92988f8dd7e33b000b911a42d2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/修改本地账号.md",
+      "sha256": "c816a065da8fe3360209a70bdf001a7e1778f0d01540db5875667e938d6e1de8"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/修改零信任网关.md",
+      "sha256": "c25ba9ffd35c2ac09837955fe89eebd9edb9698fc53df38c6d8d42bd3fd34047"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/修改业务资源.md",
+      "sha256": "d2af03bf5756e3daf9f55e6b08c7953d449c85cf78c64f7bd7eb3af5c83795cb"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/修改业务资源模块.md",
+      "sha256": "7632919fd922ce50ad1b8d74f6b5813bd10acb1545a713cbbcbb58daefa6261c"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/修改业务资源优先级.md",
+      "sha256": "1f541074d4ea7654e87727dacbb7679f5d74a0c04315470d67b16f722dd172e5"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/修改账户继承状态.md",
+      "sha256": "38393941aae7a6a13bf5e66374812d11dc67a08743c75ed0e28e544808307d8c"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/修改账户虚拟组继承状态.md",
+      "sha256": "7426780c9e946317cb891fedab00f4279585e3d03ea43d7e47db91b852cfa8c1"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/修改账户组继承状态.md",
+      "sha256": "bc9dbfb0995ea22abdae299e3fea823cbfbcd9ee4879e741df02b5b2fddc97b9"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/移动复制业务资源.md",
+      "sha256": "c5aebfb2c2f045b52449f8d1ab91c2076dc63643ff17ad7bd3af0218b24d82c0"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/重置本地账号密码.md",
+      "sha256": "23257b86096d981980016a6c1ef7968246cd0755c141d52d49e9ed5ba39cac9e"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/身份与权限管理相关接口/README.md",
+      "sha256": "20e8be05f70b71c99c82179ac11f1f231c961e2ab9cc9a0bbc2f0778e19a4a88"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/_sidebar.md",
+      "sha256": "68c279c29962fa79315a113eca0c5de8d83e738f85b1289e836e150f24b34a9f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/查询规则信息.md",
+      "sha256": "823b97bde09a12756f466e14be4c22a977c60657581f4c76b5d8cc1bc2187d23"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/查询数据地图策略.md",
+      "sha256": "fd0ca8a9543e627db789f7020a0cf439bcecece7192cc4e3a84af971f463d3b2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/查询数据地图策略模板.md",
+      "sha256": "7caae5b4ccdf13274f305bfdf4e8d0752c2396584b240f3c3a0f662d8eda841b"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/查询数据地图策略适用范围.md",
+      "sha256": "79bb7af58538337d6132bea1aafd30388281372d2e6b2888b61ba687ef968e18"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/查询数据地图扫描策略列表.md",
+      "sha256": "1a3ab4e0b72716d7ca61c6b154e396f6000633bf01202e4325a3dea9ef7b49b6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/查询数据地图扫描结果.md",
+      "sha256": "c1eb864b92caeea7357464ec7b25d736922a77359e4f552676768405e678c684"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/查询数据分级列表.md",
+      "sha256": "c0be1da48d1212819ad0d5303867c4e5016c852a5c454b52feebe13a21fcd536"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/查询文件类型词库.md",
+      "sha256": "08e7d0423148c13d823115101bdc11c41b21142a22235db3fc36bff549345c46"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/查询文件下载链接.md",
+      "sha256": "0a3ba84763ddcd5fd8b540fddac0af90d215bccfe25a19497b05e68f933bc484"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/创建数据安全策略.md",
+      "sha256": "af02e64c41b08d79d6abaadb04ad92993eee8d37cf07b1f8cb7a1f575593c303"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/创建数据地图策略.md",
+      "sha256": "af02e64c41b08d79d6abaadb04ad92993eee8d37cf07b1f8cb7a1f575593c303"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/删除数据地图策略.md",
+      "sha256": "79eee5694780de1215d0198fe6a696c08aae35dab67bfa1cdf4bccb9c0b6677f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/修改数据安全策略.md",
+      "sha256": "c569e2ef51b41466cba2734cb834737bf5621eb3764b972ac8aeb66515ecdfdb"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/修改数据安全策略内容.md",
+      "sha256": "fcea5fe1ebf4dcd247438aa33a0712e860b182e81d280e69c37fb43a40b18f84"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/修改数据安全策略适用范围.md",
+      "sha256": "04e934039a4107fd2b0d20af056bf8b95fe626a6df1d94e0088d8d7317ce7c34"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/修改数据地图策略.md",
+      "sha256": "c569e2ef51b41466cba2734cb834737bf5621eb3764b972ac8aeb66515ecdfdb"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/修改数据地图策略适用范围.md",
+      "sha256": "04e934039a4107fd2b0d20af056bf8b95fe626a6df1d94e0088d8d7317ce7c34"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/修改数据地图策略状态.md",
+      "sha256": "dbe34b121e5fdf367ebdb433d5b138ab78297ace2bef1b1c999c2e09f83a7b03"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据安全中心相关接口/README.md",
+      "sha256": "68c279c29962fa79315a113eca0c5de8d83e738f85b1289e836e150f24b34a9f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据结构-私有化.md",
+      "sha256": "65201720d2b956b9fb7d13ec652578fb31feec0875f8eaf38d56657c523cd1df"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/数据结构.md",
+      "sha256": "db62add968f006cd06034d426070633fac8e786ae017697483627dbebfddf5d2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/账户管理/_sidebar.md",
+      "sha256": "f9a6a4f6783fa1e89d28d25e1d0f9466834041c654614538fa4fe7e732831a7d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/账户管理/绑定账户虚拟组.md",
+      "sha256": "a7d0ec0dc184553d5811073c449442c51f2588ff9b1327bb84be7673f6a20b8d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/账户管理/创建账户虚拟组.md",
+      "sha256": "91c932e84b0ffbe70b4b03dab75b14262308e4441da1481881bffbd284dd3cfb"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/账户管理/解绑账户虚拟组.md",
+      "sha256": "f6ae73bf873f6af85b2475630564cd1b2eed79ba6d7eab7bd504c18730d5f9d1"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/账户管理/列表虚拟组的账户.md",
+      "sha256": "c62d9508f791b52ec9b63bfb4f6e96fad4a86190bc8f800a1b615da22afadbbe"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/账户管理/列表账户虚拟组.md",
+      "sha256": "e86017d801b0189cbc19b7dc399dfc6dbb1f9482e8129ebf99e40609a4ed23e4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/账户管理/删除账户虚拟组.md",
+      "sha256": "1aef6f0ec5baa6a34c422bef6f393bc1be498e9cc45582f870cf9521ca01d0fd"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/账户管理/修改账户虚拟组.md",
+      "sha256": "fb74c2466c4ec1279d50f31acc514426f882d4d36df17ad20c5739a251ad1df5"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/账户管理/README.md",
+      "sha256": "f9a6a4f6783fa1e89d28d25e1d0f9466834041c654614538fa4fe7e732831a7d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/证书管理相关接口/_sidebar.md",
+      "sha256": "046d2ad8485d21d6de558a0f5f956066993435ccdc68d091fbd2da89a8502eb3"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/证书管理相关接口/查询导入到控制台的HTTPS证书信息.md",
+      "sha256": "454c38f1b0b42e6833f67b7478ed457810e06bf9aea2445e212cd78672a8e9f8"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/证书管理相关接口/README.md",
+      "sha256": "046d2ad8485d21d6de558a0f5f956066993435ccdc68d091fbd2da89a8502eb3"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端安全策略相关接口/_sidebar.md",
+      "sha256": "876e7dc75811dca47b502651e5b45262e0f9fa0e0cb6ec5fc64cedf9da297713"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端安全策略相关接口/查询策略列表.md",
+      "sha256": "c77728094b3b8395487dad7ce94bad99193b8ac48a49fee0b4b567d20182203e"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端安全策略相关接口/查询策略项内容.md",
+      "sha256": "252fe16454a561ee4cd76d61c691e07b1fda49bd0a334921e96e37cad770ae7e"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端安全策略相关接口/创建策略.md",
+      "sha256": "a37554d4d7e282cbfc53c4cbe85842a766df9a0f968e6c7cbad09d8c8227398c"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端安全策略相关接口/修改策略适用范围.md",
+      "sha256": "26642f61150ecdf4f50dc90ae9c375490b2842005dd3ec637dd20cb68a7d1c44"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端安全策略相关接口/修改具体策略项.md",
+      "sha256": "05f8b0e093c1e7c27ed4bd9b4ff3bf9174c501695935c6afbf2151509dc71b31"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端安全策略相关接口/README.md",
+      "sha256": "876e7dc75811dca47b502651e5b45262e0f9fa0e0cb6ec5fc64cedf9da297713"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/_sidebar.md",
+      "sha256": "790f2f02c166f3aa41b4b8ca7285df30ac11e40f9f3ec569c17d377f58bf6171"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/查看软件详情列表.md",
+      "sha256": "d5387e1894f161f52e10de131096209d9afa0e5bd6723b5e711b95c9faabb7f6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/查询顶级终端分组id.md",
+      "sha256": "66b3b23cbc2927066b08e0b9ddaa81e843b3ead3c68d21cba14d4057f50c1228"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/查询设备列表详情.md",
+      "sha256": "a4632cbed3544debe683be310054ed2ad6fddb203488b75ae77242ccdaf7b51a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/查询设备详情.md",
+      "sha256": "743414cf56004fc77f26ebe532416e4cd5551594b5ed2e0fe5492e63140ee180"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/查询设备组子分组.md",
+      "sha256": "5941661b973e12618cfefae8481c140f636925c8e2289c3287584c51367343ae"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/查询终端分组列表.md",
+      "sha256": "1a82f81a83ffa58e1f2c9dcf6c911be9aa06196f72db41d51d18b5766213efe3"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/查询终端自定义分组列表.md",
+      "sha256": "d7adce455bbe8309cd8d6ee829998085f38c4ad0b1bf61d8aa2117c8fb4f9370"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/查询自动划分规则.md",
+      "sha256": "a713f7d71256d484b85a6ffda46d631c7cb0b5e1126c42d6b74d673ce3ecfb39"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/创建特权码.md",
+      "sha256": "b03ff99d4d08fd1b3a294ca390ad98587c3830c6718e00b393415817de28833b"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/创建终端自定义分组.md",
+      "sha256": "536fdc1f9c8b86c97b0b6e6fb3043bbf560211bb135197d813f0ca7a84775e26"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/获取账号绑定设备列表.md",
+      "sha256": "952f98f8113f76b5f6b12ced392feaa57568b7fd8ed665ce27f921569e3d1ed2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/获取支持自动划分规则的字段.md",
+      "sha256": "8b8ffa0f5b206acdd93284baa0caca6f96c73559e4654b54b3f0d8305ebb663f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/解除账号绑定设备.md",
+      "sha256": "623cc96407b23c63b067d4b972225012ceed2862ae5521321163df73afaed845"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/内置分组统计数据的查询接口.md",
+      "sha256": "cf3d2d46bb5e513e50cf84e79a8e1b4290c0343e685a3c5861746bc0c4514d14"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/批量处理终端自定义分组增减终端.md",
+      "sha256": "28b94adf2d0382846530cd1ec158a8eecaaefb6d69f1449c4449fad8c887e8c3"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/删除终端自定义分组.md",
+      "sha256": "e7ea4b78efb7ab23cea6e7579df4edf478e74ba38a6c031794de0da27082bc7b"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/删除自动划分规则.md",
+      "sha256": "96c0807ac08872f10feaa071039b6c85635390afdbdeef855b336d8b6d94bc82"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/手动标记内置分组接口.md",
+      "sha256": "995247728eed6f91932afb003663d7f2016581103d60854ab9f93d35a669ef89"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/修改终端自定义分组.md",
+      "sha256": "7e4f47e0313a6893dc635e845e1d7609bad9b5c01ee0baea767612c6489abb33"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/用户自定义字段数据推送接口.md",
+      "sha256": "8b7ab92305cd06276d470a9c6810b1391c442a026a780699530b3ff979a2bf27"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/展示自定义分组终端列表.md",
+      "sha256": "2c1e4b843005617bf84f7c7aaf21510db813329d7a0ce5418161dea5dd86f032"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/终端手动自定义分组增减终端.md",
+      "sha256": "9675a553187afc0651c59aae6f558261cebeed04a912b868cf9887f8b8430bb4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/自定义分组（内置分组）终端列表导出接口.md",
+      "sha256": "2fd761dacfde67a271d24cc3f000367e92d95bfba350537f65447fa54f617a52"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/终端资产管理相关接口/README.md",
+      "sha256": "790f2f02c166f3aa41b4b8ca7285df30ac11e40f9f3ec569c17d377f58bf6171"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/准入相关接口/_sidebar.md",
+      "sha256": "bec937ae396244b108ea7371e3617caf4894e6b36a2acdb68b42238aa477c8d4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/准入相关接口/查询交换机分组信息.md",
+      "sha256": "3bb3bdf0a1c5bef78689b649b7f9f4b73005c83d89a7655f4c71218922d54697"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/准入相关接口/批量添加交换机.md",
+      "sha256": "a258e949118478ca20529b6984cb8853d23fd3cfd51c8201b475640c5d1382cf"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/准入相关接口/批量添加MAC白名单.md",
+      "sha256": "12ae5508d19c9818b50ebc283db6bf470388bc783fcb531adf5cedf98143ae9e"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/准入相关接口/README.md",
+      "sha256": "bec937ae396244b108ea7371e3617caf4894e6b36a2acdb68b42238aa477c8d4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/API 概览.md",
+      "sha256": "8821b61155ab956a0e9b22a17879b04564e7d80ad2d60bad58b7bd62e98c7f66"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/category_i18n.json",
+      "sha256": "eb89278f23bdd371848cf9955b9d4ea0831f5bad590df9b10d8c03a45a597875"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/_sidebar.md",
+      "sha256": "284e82914fabb79be2ed791feb0a432d4a214b169682440b3c9739434f43bb75"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/查询攻击链图谱节点详情.md",
+      "sha256": "e013853d0d5af1167ea8a37ddf9deac1a706c318c006c61b7472431cc8f1ecb5"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/查询EDR告警列表.md",
+      "sha256": "e82477b369d5fe22fa50c6b88a5d85357ba1b9af928005d3f25ad951a5b29ea2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/查询EDR告警详情.md",
+      "sha256": "0e4e756876a259a56158918e77bc23d143caeefecfb1e0df0f1d560665701650"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/查询EDR事件终端节点信息.md",
+      "sha256": "b7e8f59a396fac89780823df260589883c66a2b80bc33f4b9b652a0813111f0e"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/查询EDR受威胁终端列表.md",
+      "sha256": "6bec83cbbcf75f75af874398cca248b3d5f72d2f219137e510f91f8a4937b55d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR获取证据列表.md",
+      "sha256": "846d506bd2bb00ef4686c279bf04bb5756518f2f6b05804b3950c36bcafee971"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR事件聚合列表查询.md",
+      "sha256": "fc944c9cd8ca26408780e955ca64549526e629b676a613852f1c151533b7edde"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR事件聚合详情查询.md",
+      "sha256": "628177bd99e8436eac20fb6eb9a8f289cf4d4fb6ca2c038d9c75f453c9a1f2db"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR响应中心查询任务动作统计.md",
+      "sha256": "507fe55326bbe44ea771dc4d3012cac3d1bdeef25db2a75ea3d0387b31de8353"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR响应中心查询任务列表.md",
+      "sha256": "5d9acb68e2cfea5af5d8e28eba439c2c36fef1672c275e266c5faa82efafc8f6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR响应中心查询任务趋势统计.md",
+      "sha256": "de1e3b02e9424154e3dfbdbb4b585dc4f04323883ffd11ea052aa153421b91c8"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR响应中心查询任务详情.md",
+      "sha256": "b76be11aced7f832c6eb9662bbd218a0a2c5f3625b4e57f82c25f3d8499887c2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR响应中心查询任务执行记录.md",
+      "sha256": "e71c36a96a118ff4c06d6ceb3d867cd093f127a8c1e8ab7abbc79fb15893d9d6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR响应中心查询任务执行记录状态统计.md",
+      "sha256": "569df77b553b25cbbef8f5fe95b87a30f1557a488e7823910881a55df59f8f2d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR响应中心查询任务状态统计.md",
+      "sha256": "fc9fbb1ee673627d9f5c751d19e913ef377319ef17a999f841f41235070a2de1"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR响应中心创建手动任务.md",
+      "sha256": "4320347172b8f8fa53e7c3d82fb3618054439d910d060b731902e5c6def84889"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/EDR响应中心取消手动任务.md",
+      "sha256": "9fe5fbd265e02e34c6e2abe5c9ab8b66faa624f272d167acfcc727ac3e095f18"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/EDR相关接口/README.md",
+      "sha256": "284e82914fabb79be2ed791feb0a432d4a214b169682440b3c9739434f43bb75"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/版本：2022-06-01/README.md",
+      "sha256": "93b52b7afcbf30f99bfe760e355cbdbedd80706723c424dbf0961ddfb12a44ba"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/云规范接口/README.md",
+      "sha256": "7a9a3be8c84cedca691da52185a6801b7b86df06799cbadd96f03343266e0231"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/references/api-docs/README.md",
+      "sha256": "348409f89fbdecc58566411b8bf012610dea63843396937428dbbd50ef158e61"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/requirements.txt",
+      "sha256": "8345856b2eac23bc9be68e1fa5f0b57904d53ca90751bf45e9775e524247ac6d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/scripts/__init__.py",
+      "sha256": "fe315e1781afe071444f4235924c60be18056935814bbb531cfa7b8669f6c67a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/scripts/config.py",
+      "sha256": "c70401a8897f9e0870be25ad380d3fe36ce3bd885c993f75464924e1039c3a86"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/scripts/crypto_utils.py",
+      "sha256": "2b303a1322d104b2fdefd47eea23528b8f5ff8786aac2a399fb79833fe66d5a8"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/scripts/fetch_devices_with_groups.py",
+      "sha256": "504f4d8cd3148f89b1c479a5b3bb849318dfd9469f82748bfa5bb0b215cb4706"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/scripts/ioa_cli.py",
+      "sha256": "f0e5869eec7ea1a1bc37b7204bdc24475b241ed074e41a9a92add1d55819672a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/scripts/ioa_client.py",
+      "sha256": "43fb991cb8265ae5b96ad8d9455a796e9b3c92507be5ed18bb2a43d860681007"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/scripts/signer.py",
+      "sha256": "b561a97c867433ece192dc059ce60914f5d8a049d772c6824891a696f3c44e86"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-openapi-invoke/SKILL.md",
+      "sha256": "943ecc73f92dfd6ab04a542e82158a79134029f991ef80f63c24f0a7103a42b6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-sql-query-generator/references/01-account-resource.md",
+      "sha256": "4d405f16411520921ce709a02f8f7b1ea9d412a713ad3a2f8affe09cb5b83fee"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-sql-query-generator/references/02-device-group.md",
+      "sha256": "aa23ac2fabc19a9a49148a61487245ac86bc3ca68ce89fffb7be37c859566600"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-sql-query-generator/references/03-software-asset.md",
+      "sha256": "ab93355a4b50146a9e4115a3b68ce3800c25c0b3ac36982fac52c8fcf2524894"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-sql-query-generator/references/04-other-domains.md",
+      "sha256": "5203e78cee32db37c2af3ee3beb244d6fdb4daf516979f4eb776d692e2c6c58d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/ioa-sql-query-generator/SKILL.md",
+      "sha256": "71872c9137139ec965830103e4e3d132b2a3cb6cc40a6c4e3272f889f3db7c7c"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/基础平台/api-access-svr.md",
+      "sha256": "fc3c8eff0be0c8e80b91b20f6cbcbc8d9be994e7cd48c5236ef3ed121a82cc28"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/基础平台/api-plugin.md",
+      "sha256": "087a9973b5650c4d2071d153d8a18e34135fb8062049595bc9048afd87d17d29"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/基础平台/cascade-open-api.md",
+      "sha256": "9656980c769d8f01a190abf9935e7370ae97a50592454686a87c23a2c58a8154"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/基础平台/cascade-SrvMgr.md",
+      "sha256": "c3dd2cd2e75228e37b14687323b6c1d9d290c32abf03881cfada40fb2319989a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/基础平台/client-api.md",
+      "sha256": "4a539a84426082387c31963070c3856c0374ca30269283e62aad19a61cf0e5b3"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/基础平台/data-domain.md",
+      "sha256": "8a9b1ef2a823fdd68b5369bc8689a7db6607daa189d7e8f7f36e17033a4f5cc9"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/基础平台/web-api.md",
+      "sha256": "0441cc1a72deaae32cc0eca18bc2cfb1b5af85eaca2fa368266f4ff5bb723972"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/基础平台/web-open-api.md",
+      "sha256": "cf62da305a179b7bfbb2e13bcc009a8ec66e564ec08a904549d2186461ac6984"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/网络准入/access_svr.md",
+      "sha256": "d1dd4a832c9e89bfac61a095aa80f05b7967a4ccd5ff8575504a625a194ae0be"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/网络准入/inac_auth_log.md",
+      "sha256": "a05ce3569f89fc0972f709aaab924f125481a6aa34ed30f18c75c29969bfa439"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/网络准入/inac_macs.md",
+      "sha256": "4fa84de4d4f456ad99ea63d113c3b1f48ba1cabb3e0d0cd3cb9032fc834a04c9"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/网络准入/inac-accounting.md",
+      "sha256": "09e26fd58c411afbe4d53f1e10a9999c2361ad0e391c99c00c1996ccdfc6b241"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/网络准入/portal_svr.md",
+      "sha256": "49b4d5e28bb59a5c97cb1430b72eea420da6ec574485bd717b581dca7b1ef063"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/网络准入/radius_ctrl_svr.md",
+      "sha256": "50049aa48af691026e9d6852e46ef685be0df26dea489f30b2c68c15f6df503f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/alarm-producer.md",
+      "sha256": "16a81bddf701221b1b4ecb0b5a9b417cfb12ccc66532d14195c52276628be5e5"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/alarm-sender.md",
+      "sha256": "dbfe218ed5d6a59927206423e6aa2b1efb570727cf5909e9a076679bc357e5bd"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/alarm-server.md",
+      "sha256": "ca26bf151876e9bc04185643f07e4ff70efd070655a6e634c2391aa3396bfb72"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/alert-open-api.md",
+      "sha256": "5aafcc715c24130bcb0c20313a0e27032fc705c035b168c1dac31a37142a5429"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/chart-stat.md",
+      "sha256": "96efb3fdc5bdb349fead0eabd7302612cc3d4d283c4e8fefdb98c834aed2e405"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/client-quality.md",
+      "sha256": "8f8408224f926ce248f7f86ba9ac7bd4503b4881aba441bd21b8bcdeed4812ac"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/data-report.md",
+      "sha256": "dca6a99e93053d4bd85de8a4708148a6079c9648bf08a62cf40f05d5586360a7"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/data-route.md",
+      "sha256": "fa8e34c79a9f58259fc5a4d769f026c5939fd3c569798fc75bd62425df0623af"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/event-deliver.md",
+      "sha256": "cb6640e3b217a070ea7aaf3d41f53f2a2702d8ac8fa047adf27aac58be841980"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/flow-collect.md",
+      "sha256": "8257c41b493f619cd991607e1684dcf31a6035faf684c70b23cab9fbfa8982f8"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/license-open-api.md",
+      "sha256": "74ee5109117b1cc0ad843f7aa2bbda4821ca46322a8815b69ccfde2151a26257"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/license-process.md",
+      "sha256": "922cb0ea1e1125bdafa265feaff7a688bc4a4140a8612981e65be676a4ccc2dc"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/license.md",
+      "sha256": "6789ff050d3116e504a9bd7e842619fa60c449e0361d971bf2354676d9d27e67"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/log-center.md",
+      "sha256": "569af83f78101cff002211da3d72f5a44f20cfdfdc497da5b252bc1274420fc4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/log-report.md",
+      "sha256": "ee9dd02c55fcacb57cbab696723f6fa8d85006fea47f709f9ab1cc8d848768a1"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/metric-query.md",
+      "sha256": "6065f8cbc1b52894c260b8ff08e79f7d0232de88820daec330c44b9ffeb4b39d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/monitor-alarm.md",
+      "sha256": "49fc2e7dbebafff8a59796bc71160e058163f9305cd1b7ab162a35d2e2e7bdc2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/syncto-es.md",
+      "sha256": "5af863427b339dfb3d0474c5e6d8e3719e116224ba5dc2e1ec326887b466e034"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/task-engine.md",
+      "sha256": "f7da648e3e93f27dc00c5077ec31ddc40dc3b5212a4302d3c91d0c0cf157153f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/task-open-api.md",
+      "sha256": "881429863ad259cf382a77feedb1d522f5fcdf4e7c6dcde6bcfb18a2b4bb26ff"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/task-server.md",
+      "sha256": "0b0396e937036ccacab21bf1e08e90da9664fd76ac1043652afd221d363bb7ca"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/thirdparty-provider.md",
+      "sha256": "e671e97ede0db1ef59adb984fa015ed1f785aae87fd2055ac24b1d903640cf24"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/references/运营类/thirdparty-set.md",
+      "sha256": "6a4ded958d62061dfaab7fde499a0526130e59def7bd6db70a99f0c84aad4528"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/platform-operations/platform-ops/SKILL.md",
+      "sha256": "ef8a96468e8b299d8ddd10ca2df3ad40d36e38e58954b554b1b73feace484b28"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/软件管控/client-extra.md",
+      "sha256": "5479bc5c93e72397828bac44afa93b60ca9b576c4e20ca10a22affea3c933bbb"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/软件管控/download-proxy-server.md",
+      "sha256": "80b86a2d72c210ada769bfc0a8cad892e671c5c5155c057fbf07ef3092529ebb"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/acl-info.md",
+      "sha256": "4ac44a4464b56db7dc7329d0ab2a54155fa77851225a17043105cffa776669e9"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/acl-open-api.md",
+      "sha256": "1a0fe4355edd098999277f0236a33fa75327453605fda09f597d29409cee5d21"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/acl-report.md",
+      "sha256": "bf4114abf6aa94bfa1f2cc7884d2d0d589e7b32573f2fbc8da89cd28823d33a0"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/acl-strategy.md",
+      "sha256": "1c166583091369c6545e34653d134481241d03f162f8e36d7e3208465e7036ff"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/config-query.md",
+      "sha256": "1031b65daaf8fca8e455c4eaaf227f36d8526652f625efb355dd996269388310"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/location.md",
+      "sha256": "8b21a415cff9d674a8cd94cd4bec0456ce478cc70f305bedd025f6403013bec5"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/policy-adapter.md",
+      "sha256": "e9314c46c57a3559c7447b2fb6fdeba96e9a450b98201c8a5b65b678ca2f5c84"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/policy-calculate.md",
+      "sha256": "9f8b6a9768238d4ae0b298cc3a37f2d1c2282f95b6aefaa6a659f66ed0c5de79"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/policy-open-api.md",
+      "sha256": "e956a5e7dfa140dbeaabedecae69fefe336e99b4fb510a455d133d8f58cde556"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/policy-report.md",
+      "sha256": "a6f60105090e3e1a8e743827b5f532c7c730c2b8fce05a72207e7ab70944e069"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/references/终端管控/process-acl.md",
+      "sha256": "74329f062d0738016ee47150b825fb053aa96ba57afeb85710a99527e054ed2a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/policy-management/policy-control/SKILL.md",
+      "sha256": "86c5bd1229591625e5ae70c68151f75a71718228a09be4260ba0b61b514b41d1"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/dlp-alarm.md",
+      "sha256": "58096aee8af40d4617cabee391402e89e1d7b5c8f95e475d48295ea95c606c58"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/dlp-approval-api.md",
+      "sha256": "556149d6eb28707b1a3dad0fc9a478562024ce5ca326b102c02611388a8cc5f4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/dlp-conn.md",
+      "sha256": "652a388e218d713885a2b0a8b2897365101ecde2eddd02396c09a48d420058a6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/dlp-dispatch.md",
+      "sha256": "7ae4102521055a5d7637d15ca4e91fb2f153757ebf502310437403bf24e6f0e2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/dlp-open-api.md",
+      "sha256": "8f5a11951162bd177a64b985cff44d489a7b1f7d3dec6df8790b53a3623f6149"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/dlp-security-engine.md",
+      "sha256": "b6f00fd552b4ba90046e8d02557688ad6d0b6977bc0da5a32b2a8ffb25cd552a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/dlp-server.md",
+      "sha256": "58357be4b0ffdc5d98a94c278bd214dbe1ddc96842ae817f94cb96c841f2cf62"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/dlp-sign.md",
+      "sha256": "372d5224030418c99cac1b03e0d489b9a4117be2e40dc34af6620645e9e2d384"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/dlp-tool.md",
+      "sha256": "f2e3617cbf4e726f8e967e295dcaee176edfe4b11a4e2530ec4fe8ea357c15dd"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/file-open-api.md",
+      "sha256": "d738a7be82dab1b6b9c69365e51412154d138d38e7402c034245bbcdfedd18f4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/file-server.md",
+      "sha256": "36183f5db538612306b38f304f88701dfee9c5f114236ff8e9899de53034f805"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/object-server.md",
+      "sha256": "9c3e8711407b0eab9bc4a10519807077cabf9b07e41072ea2cbd51acae9aeae7"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/数据安全/sync-file.md",
+      "sha256": "b423911055f57a1e3bb330e84102a8985cb93678277b476fd624f810d875787f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/data-edr-scan.md",
+      "sha256": "6744261ba85b1d1cd1f5f325336e6a01314fefed617783be5803f563d9d2e7c0"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/dataUpdate.md",
+      "sha256": "df1424c6ca24bf3165a475a4c29614f52973784b3effb88a72d4afc5f856553f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/device-phish.md",
+      "sha256": "58f1b10982a4fc196b6afcdfd89907778c96ce3d18ace22c52b2977b05780fce"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/edr-log-proxy.md",
+      "sha256": "d5ae4fc8114f4769d27e3084e76b7a00838e8e3a4b06808d630a9720db27701e"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/edr-object-server.md",
+      "sha256": "f297631f5bc0604e4dcb22a385b2e3c8d14e0600d14dbcd8e9618b4a815e8c68"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/edr-open-api.md",
+      "sha256": "6510437c936252a796bd16fd188f7d850aa69dcc16e7020a74e2e98a2fce5e78"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/edr-tix-server.md",
+      "sha256": "accda5861026ff42d0658cb5e19c67e875250b3f1b81e9c3fa4c527a212b6bea"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/importDataPkg.md",
+      "sha256": "62784120c2bdba5daefba0b77b2f12b0aedd1c9776205806c993a40bfbe1f6cf"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/nvd-server.md",
+      "sha256": "65e42a2ed49aa619460143395d06c3c347f6ac966cab0aa84f27575bdc4c17d4"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/offline-update.md",
+      "sha256": "f99125f722b1363779b1ba858798265b484fb6c3e74e142258a98ffcdd5b284a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/queryServer.md",
+      "sha256": "6958704ffb3c768d29b1be0bd3b77aa04b37ce8a702d57f9ddd12b8495c3d68c"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/security-open-api.md",
+      "sha256": "5ec3bbf7c26f742686762893fc59290f6bf393e45104e532168c70344a4e663d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/tavUpdate.md",
+      "sha256": "552f98c55a8d2cff627c55f6d1dceec050db2d0c07e12ea9c3293cfa428c90b6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/ueba-etl.md",
+      "sha256": "754d00435c40dbd8f2c385487645018ebe6b5f7b33a1e7714daa5849e968b95d"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/ueba-open-api.md",
+      "sha256": "4f08786ee34c6e200605d29937e9f6b665adcb1ff3a72225738ead49020fe4b9"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/version-server.md",
+      "sha256": "1de8af454586eb3b56f1d6e6aa6f87b34b154916ac1b1f0d6d83fb99efc27d4c"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/references/终端安全/vulUpdate.md",
+      "sha256": "c90cb85bdba3cfe39b4b028cf40cdfef478ccf072d3deccd0d31c9cbada4c5bc"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/security-protection/security-detect/SKILL.md",
+      "sha256": "72ef0d9f2e6095403fa227558e19d9d1a47673efb73d17f8f49cd95f50f84573"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/SKILL.md",
+      "sha256": "27e43354bca3b4ba0cb3375ef0b613867ce6d15e25404c9c3cec291e7b16d0c2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/account-info.md",
+      "sha256": "c79301077bdbd92852aacf61c066a0e84da900672651d204a96fc34637dc80be"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/account-open-api.md",
+      "sha256": "5be1dc136c009be25e35acb90c33a37ffa810c829448916a9d448ea917538910"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/account-sync.md",
+      "sha256": "1d15e7488c6320d7c05f1c6780b70a57bd18e16926c9f95f5f1b461749e90c59"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/auth-policy.md",
+      "sha256": "715fd9a83777e019694397c490a638f3df701b2a34caaa7e783507442f9773a1"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/authkeeper.md",
+      "sha256": "b7cc8bbec4c52984136acfd31d053c17746358497bab8bcdc65a147884d52da5"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/client-login.md",
+      "sha256": "b0270a1036105b6a1fd001fcbfb998110b47c8bfdae4423645ecdde122582897"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/client-ticket.md",
+      "sha256": "efe625edaa2cdfd38afb93c03be6d0b30826d87bf5072ef527ffa4c885ff66b0"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/cluster-route.md",
+      "sha256": "1c9ec6b681fb235bea869bb14e99525952b991f948c4702ddf0e6ff35dbf7235"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/conn-lc.md",
+      "sha256": "5b57d52d4765e222a66cb2ac3a8b07e01eea264457e19e399fa4592404ebdad1"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/conn-mgr.md",
+      "sha256": "992adea5722f98ec88391260e768edda70e6ebcc2e5a5e2def1a7921e1f97623"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/conn-sc.md",
+      "sha256": "74d267bb1e3f6878883c1d9adad34d987b956ccf698f63dad52377e02db3e451"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/datasync.md",
+      "sha256": "c085af8139c8a8f70ffa2415ad6d1d65c6547273027c86ad9e1e6d5c67678f32"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/gw-groupcache.md",
+      "sha256": "aa63f5c0eaa72bcef6e951add7c624acf67808ee6a02600e636dec2463360f24"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/gw-monitor.md",
+      "sha256": "58ced81c4db627a6b60b35cdaec8a7dc258db1ac20d11973c577e9053f46cd94"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/gw-msg-channel.md",
+      "sha256": "18a069f7d2322f475d5aaa12051a4a81f512d3b8d750dcf4710881de9665eb47"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/ngn-governance-job.md",
+      "sha256": "b7d4a8f439b0504dce50be5074cfbc46395a4bc73634febe6ca1b43e17fecb31"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/ngn-merge.md",
+      "sha256": "55a89711ea9ac6ea2c5d1fd6eadc41de86df9076acb8ee6155ef984e64b85bf0"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/ngn-query.md",
+      "sha256": "488f2c7498df3639ea21f75a62c582c036a21a65a2cc5801aa8a559f7ea83bb6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/ngn-rule.md",
+      "sha256": "708dc0478f3ba1ce787370d03e95d487305defee75e9f2fa6f6599d0e70c4bd1"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/ngn-spa-misc.md",
+      "sha256": "7a753242023a15bf8a14df30a08ea6416140fa8c05e41b1170bed44ec2c44767"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/ngn-spa.md",
+      "sha256": "fb0873ddf71d17a0e82be303cf14be775d58b261247eaefbc7ca3bb1eca40f55"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/ngn-ticket.md",
+      "sha256": "e62ffc50dc97e6480225e7656bbe3ab89575b484982642c75e50584b0637f353"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/ou-query.md",
+      "sha256": "cfbdb00069b18a796f81b2348d1b5be047437f75042b9b4171243915f66f7891"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/server-configs.md",
+      "sha256": "310aa51c231d1386c582672b0f76dfa2ab0149353d72d0d2379b0e42bcf98db6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/server-flow-control.md",
+      "sha256": "31e75d5683da87312b943e2765bcc919720ff3cee50ff4e92fe33a2546a54d04"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/ud-server.md",
+      "sha256": "3d073db9aa589d210607435c0df4006c647dad4d3478a3d311e9003ec706ebf2"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/webgw-helper.md",
+      "sha256": "3c9af2f926d5ba0245c98ccc437b753e0dec7c05e52014f029d391024055067f"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/webgw-ngn-helper.md",
+      "sha256": "d4b744cc928064deda046778b816d98d4372aa5ef812457d7b0aacabdcbd6687"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/webgw-server.md",
+      "sha256": "f81409e99f1478e366525a94c7999719ba94afeb75d124d593b42ffb43f69f20"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/webgw-sync.md",
+      "sha256": "c47ffe342ff7086fb480e01a948b23b08ce14f38548d90e264aff2c301504e4a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/wg-route-client.md",
+      "sha256": "c53f8d4eff0fa23fa8402c0e8cbf3cb101f03c4a8ff8d84a0277f93c79f2488a"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/wg-route-server.md",
+      "sha256": "e242400d34a3e724e6bcb90229367869e41870c50234cce3d735c82bcaa37f52"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/references/可信接入/wireguard-channel.md",
+      "sha256": "3f8dc7373a9899c4026a2c2a18cb82fa7f7dc5d2cfcce69a9367ab3ef2e738d6"
+    },
+    {
+      "path": "skills/soe/references/ioa-troubleshooting/trusted-access/access-login/SKILL.md",
+      "sha256": "2bbda28d07fea6bd030be0d5ab7d5198fe18e0a39f92c59dd62f3722bfe12f6d"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/LICENSE",
+      "sha256": "e302834555af281ec33143d28bd48ada44ce73d2a5ddcefbfe4bb02accaf8749"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/README.md",
+      "sha256": "12370d90830ceb884196b02f7f1e46b1d71c06de272782034019b148741af658"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/references/config-guide.md",
+      "sha256": "848fe73714c63f81e9848bf6def23172f65f5212519904d8e865871b312e08cc"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/references/output-schema.json",
+      "sha256": "d6415b44ce795236f3a95faa86e2742138892488e966836cab4d20ea659c1d10"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/references/ovalfeeds-guide.md",
+      "sha256": "6f27deff4938390238093219b00f91d2176530a91ac27b11bab6bae277ced10c"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/references/pipeline-detail.md",
+      "sha256": "7e981f7c12f8d4b8f51e9eb715a2ec3942d1f6935a27a3a923868639a02a313c"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/references/report-template.md",
+      "sha256": "f62e16fb39250375ddad0a07c26dec3923391c80f588205694e6d573d10bff02"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/requirements.txt",
+      "sha256": "61c7113934c59fd5a4e26a7e44c88a34bb40a05c94d80fa516ab11d0b91966fb"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/analyze_cve.py",
+      "sha256": "d18609a16c1dcc7b0220e3871886cdc2b80eb3cafa7818e8cc4e4066ebb0a479"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/apply_fix.py",
+      "sha256": "83fe6307464f34b5de58e4c52c27b148c46a8e4d4ab8759d2a1058f6e1a68bf6"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/assess_target_version.py",
+      "sha256": "033d1872b6cad0cc2ee4ec74db9958b253a094fd2dec2807f31c57fc025415ef"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/data_dir.py",
+      "sha256": "fd1be472bbd03850d6d7c8c731b5a89110a181b40e5d5888a11ca7b92ebe3ee0"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/feeds/__init__.py",
+      "sha256": "14fe1456707b7794ab21dabb99f08a4c62ae10335a6deda73da32a4a3c8091b4"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/feeds/feed_manager.py",
+      "sha256": "c77e49601248ce4f04848584237091f07d16565e87b356f3725c45dcfec56b03"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/feeds/manifest.json",
+      "sha256": "582ee89230bf76d0559693b43d95d3f653e6cfef298bde54a65909b22682bebb"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/feeds/oval_db.py",
+      "sha256": "1bb4c971d9229a7badae95bcd7caacd10beed65399d6dbd1142771e37ce38a15"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/feeds/oval_parser.py",
+      "sha256": "0af09619f74b660eea4b0f5bfa2cf79d1a69173630992d5e88145655ae122cf3"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/generate_dockerfile.py",
+      "sha256": "e40205710a7fe01b3074d13270f8927a7e6f9d3392cc9fa61fa4920e943264c0"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/generate_word_report.py",
+      "sha256": "a4ee2c97f04b023e496c693c9aff76f30389f31f75f37e86f53a37e5775b3bd5"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/kb_query.py",
+      "sha256": "8823f05a9fe8ec7313a153b3fa0d203220efb6eb3901b03712ba0d35caa42fa2"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/kb_save.py",
+      "sha256": "385eacf5a44c9b3a7519d2a0884e99e71450261e4b3b68142c961d144837002a"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/knowledge_base.py",
+      "sha256": "db129db8e3af3ca2375bffdff05d99a326f06c34b062b07aef1b34cf2923af2b"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/oval_query.py",
+      "sha256": "5973ac995d0a48439e4c07808ba188299232874f6f02c18ef1c42cd526a06251"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/package_and_upload.py",
+      "sha256": "508ce3508bfdfa6c9ced9caf39037ddfd14951b1814552500742a42708c53136"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/parse_container_report.py",
+      "sha256": "4df97eadc8972657babb71a8a6c44d0289e7bc0e7695f8cbb55eaa3386fc9403"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/plan_manager.py",
+      "sha256": "6c67f7cbd3b019240d434b8bb812805c810674f7a82c4e7584d681b9d4904f5f"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/run_pipeline.py",
+      "sha256": "6ffa1d6caecdede1ee8368aa17f8b7c9229199b24da47bc02dc01ff0a243d66d"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/ssh_deploy.py",
+      "sha256": "a0d00efb4f0b7a7b693eb96beedad0d9408a2f92bf8ce792097a5de96d5caaaa"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/scripts/state_manager.py",
+      "sha256": "aa698ae7de5391add49a4ed20da0d313882833e32370ef80f5d44d496a65c982"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/container-cve-fix-validator/SKILL.md",
+      "sha256": "ca02ef6bad3d8b5d077515e1d2b48e719d3c3220971ddf6da8426779c316c510"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/assets/PLAN.template.md",
+      "sha256": "7f5548257730b3d866a04ee9655a7a5290b3f3b74a808c3553cfe59e9628ffc6"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/LICENSE",
+      "sha256": "48e7175bdf9795e97464cb755cdb51fb3fb17baf840f43556e2a6548186d7f6f"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/README.md",
+      "sha256": "5edc793bcad09902c17afccce2167298b88e3016c05c264367161c7a7c7497c1"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/references/demo-mode.md",
+      "sha256": "84fc93230734095267f39be3567e3c5898bd1f408278f12e9a333aee4ad61c08"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/references/hallucination-guards.md",
+      "sha256": "8343fa22527569cd0c7dfcae32f5fb47460e9dfe918dea7db7c0611656ae59e8"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/references/pipeline.md",
+      "sha256": "503a8f4cc33c714e972a930f832a0cecdccd41df050fa9663f1a25ef12668d32"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/references/report-constraints.md",
+      "sha256": "ab120e2943bd938aad5c531fe3064068f8351dad61105ae0c2d50c332f65c28b"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/references/run-dir-isolation.md",
+      "sha256": "801507b17f4fc7901b26c444fc8edf40790daea947ae744fed1cb75e4a0bfa89"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/references/runtime-contract.md",
+      "sha256": "f53effdb1c8dd4559e822c05c78f5647321dfb9a0045dc14a4e1d4f69631541b"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/references/usage-examples.md",
+      "sha256": "2922dc42a4519a6e15cdecf7a50fbbee8c7978d5661595a88aaf828c5283f717"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/requirements.txt",
+      "sha256": "028c7284534dd7ffdc5957fb6cf143fa036df76d1d37166bc72dd0568953b4b4"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/adopt_proposal.py",
+      "sha256": "f002e1c8838c105e1a54bca3471121750d78d00807ebdd52a43241080ca3f33b"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/analyze_cve.py",
+      "sha256": "425dd958fb2f63842566b1419e5dc0d0bd3228a65394766077db3aa4bdbd61c2"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/apply_fix.py",
+      "sha256": "ad0972b34f6718cc832d73799431a54e8075595c0b3b07695d9eb60c4672f529"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/assess_target_version.py",
+      "sha256": "c5b30795c66211f68cb30fa4612d72053d6a9006815dab32992b146a0aefb0a1"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/classify_component.py",
+      "sha256": "e03b9255707e885f7e9a5ff8db205d30bed5d84ddbf5c577420b006a8c67b51d"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/default_intel.py",
+      "sha256": "f2ba93af80df1063eac832408f2b7e5c23905d38db1c9db13da867d6f7a25d3a"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/feeds/feed_manager.py",
+      "sha256": "1b71911ea65a72130f3e18b718f4427da4b2a946ae8a52f5abb052081fc1d5c4"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/feeds/oval_db.py",
+      "sha256": "f649adcbe0e3696f844cda00e1c31f0e12ae9fe6e0cb5336d65de32164ec8f06"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/feeds/oval_parser.py",
+      "sha256": "de844ef31a92f7d164125bc35da84b7a63d5fcc78079e382ff8799417b62573e"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/generate_fix_script.py",
+      "sha256": "74939ff395cdd9c13ce5ab9df8be10fb9af935430c500c46c7b062831627fddc"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/generate_word_report.py",
+      "sha256": "f4c4ac23c999546b9958d68e3f6616eff956c4effe332b1528307d6b3dd550f1"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/host_inventory_cache.py",
+      "sha256": "5cf9e2f3ac67537b7b527bdc359fdffb9ebb30f190361506e31f43e27c8d24f6"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/kb_query.py",
+      "sha256": "88a9058098de765c179995491e27155182ca0ef01ada438fefe2904c772fe1f4"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/kb_save.py",
+      "sha256": "567fbd4875390ec361c8a2bbcc4b6915f9326951ced409fef6924bc5255aa7f1"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/knowledge_base.py",
+      "sha256": "24d93622dbc865e3cf45951c405a8c93c1b02b46384566ccd463cfbbddcdbd85"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/linux_fix_resolver.py",
+      "sha256": "a57b2eb65d5dea777c22047277367ca5605b7c0c71d928651f66b6fdd7775897"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/merge_extracted.py",
+      "sha256": "3622f643f6d8db01b22849f60d9aad615d41f9f7fd5e8ed3254d6eb40602940d"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/msrc_cvrf_client.py",
+      "sha256": "4f5110147eb80765cd8d974e99eefe801d941d3f59f3bb89c586d76c4b3a5071"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/oval_resolver.py",
+      "sha256": "15593450fec05ce2546cfb1280a6038bf938a6c4eb30a3c0cde373913675efd7"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/parse_host_report.py",
+      "sha256": "649f8eeb4b93a163910cc70e5ac28c64aaa42978f389b8aafb5d92474b872661"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/patch_unresolved.py",
+      "sha256": "01a190947cd9a6dfa2cdb9f64cdfb332c44fab6a6f3f435ab890164d5d9ab1f2"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/paths.py",
+      "sha256": "b836212df3d4af9edc355cbbff78e408dae44f9cfdd3e21695acc6d6f3a8a9e6"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/pipeline/__init__.py",
+      "sha256": "1a7761b0e13d53f28571b4dd02609d79cc1cc85f9b82cb6e54090603d769ec9b"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/pipeline/diagnostics.py",
+      "sha256": "14d61ebab819c412b7c9c7d28b7d8fc2727cd4dd7c3844fab653d626b372a163"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/pipeline/handlers.py",
+      "sha256": "7287d5be91970c01eaae422f6f73ae06e2bf0bae0cd5853732c30ecddb87a34c"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/pipeline/routing.py",
+      "sha256": "98c8a01a5aa2e3444401cf907fc99e13d1a46e5dad6d9cd00802ee7e733e9dad"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/pipeline/status.py",
+      "sha256": "ad80978991e0539fc046333f11e3619ce9745fd97e42b3e6f6affbe8952f26aa"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/plan_gate.py",
+      "sha256": "75473450794e678ad12d876c95009015c4618698f8b2e62458484dd7ae3af2a8"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/plan_manager.py",
+      "sha256": "4a657fc5ef55e5dcdb354a594f7ef3f202c95046ff97c3911d4b765768453110"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/propose_extracted.py",
+      "sha256": "9151fb6ac7a514ca92e652d813679bf0257f6a74a2aded3880bd5d14db552227"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/recover_failed.py",
+      "sha256": "c23a1e7fe8aa02f757e5cd24598644a5e7c4a152ef244aa782915701dc0e1abe"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/run_pipeline.py",
+      "sha256": "2bf6128bcf33066f6df6950b6a6de9d7ef19166f0bf9964885925c5b4f7cfc7a"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/ssh_exec_commands.py",
+      "sha256": "748fb9fd5ad8f67dfe7b2029f7ef9bc3b6a5f0e4047f121763ec11710ac916bf"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/ssh_host_verify.py",
+      "sha256": "3abbc7071617c85a69696ff2ee1b38f2ee5216ee230781423f08163c5da04753"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/state_manager.py",
+      "sha256": "6bef54cdb4430a758e4884fefc6d1da303623cf5ec1630d4ac2e58aee1aeb665"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/tools/import_excel_to_kb.py",
+      "sha256": "56e6f4499f519a5e7e69bb0a849fa13ee16f9a7b1302e4f030678d05ffb43e52"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/tools/kb_relabel.py",
+      "sha256": "da01ca837984d47164049412720b7a8ba92450d9c0bef33e8597895ec130137e"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/tools/merge_cwe_to_kb.py",
+      "sha256": "29e50b4f4f0b530a946390523ebbaeced7e61885f25477261a82207b337c4292"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/tools/merge_nvd_to_kb.py",
+      "sha256": "328ae23ef3bfff2e44ea52bb446bede12131ed6540d6d5154abc683ca258c51e"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/tools/query_cwe_from_nvd.py",
+      "sha256": "08f5872daa8d4d8aa2283ef6df33313c7a253054ffdad8954567a0aaaae0194f"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/tools/query_nvd_github.py",
+      "sha256": "2f0fb2cca545fdee5fb157a23d09c6e4288c23bab368ff16d4c86386a660d9d0"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/tools/README.md",
+      "sha256": "b1c607b33b5eac4a95845956d9b70aa2395b9fdf1a24895ebdee898a22305a0a"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/tools/sanitize_kb_for_release.py",
+      "sha256": "2d19b8ce88f7f802aec26585eca1bbd97b60e20b061dc116402901c987498b83"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/scripts/verify_scripts.py",
+      "sha256": "d7eb0c5cbe8e3f0a67192bd539191edcb6de2fe4b5db73785c520f7769331e89"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/host-cve-validator/SKILL.md",
+      "sha256": "bad128276e09932f44de542c5882d3c614183c9d02e36a7af37e913fd7c57796"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/assets/PLAN.template.md",
+      "sha256": "9bb68e20acfdbe9c2cdcbc816b7f0d796bd48f81f561e818e47fd62baaa8c262"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/assets/report_template.md",
+      "sha256": "690bb71869c1fb8ce6d1d11a64afe7a11bb39efcd0f2ead0ecf148e91f938426"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/CHANGELOG.md",
+      "sha256": "7180104c053abdb89e27fd2f3707d757506bf40e82cd87fd3bfa6c5321688fe9"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/providers.yaml",
+      "sha256": "42e59c284823888381099411e8e5f77c029d43c92b2e2a9a41ef0eeee99c1fe5"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/providers.yaml.example",
+      "sha256": "bb1ccd98472a9f448217454d79275e9cba0a823972ea08f91585ccba8b8a07e9"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/references/env-config.md",
+      "sha256": "d607cc6aa6c1e636b52e50a298c7c51741542337d25e015892de3bddcd7f7d4b"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/references/mcp_guide.md",
+      "sha256": "be2b565a3c335ab1dda78408e753e3747eaf9f26f8a7377fb58a496f50330138"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/references/parser-development.md",
+      "sha256": "696cadfb8d1f61e7ef1a1c9f6d4a97b68e65204efcbae656370120ae6ff39251"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/references/pipeline.md",
+      "sha256": "5dbe1a4b7be16222c68ee9fa712e0ddcace20c2fbfde26163586d6bae0826402"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/references/runtime-contract.md",
+      "sha256": "858b214b3d48a957cedfcf41110d79e1cd7bee15ae62ffbe242d5e7c8b50b672"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/references/scanner-formats.md",
+      "sha256": "a337ebc2372ae5b809470ac99a174377fd220205b32e855061fec9f3bab94be8"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/references/standard_fields.md",
+      "sha256": "e2146b8a07ddaa5e95d62d53ffe402374d46a1987fa1adf00b988ef0ce56cde9"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/cfg.yaml",
+      "sha256": "2a64c708edb97d95b1497d52ba90f92d11e5b60286108a22fcb72ba40072d45e"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/dedupe_cves.py",
+      "sha256": "f76dff37beab335727f8e03a11609f9dc6e2b67d9575672089fdfb46df94c1b8"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/default_intel.py",
+      "sha256": "2f6069340c1f0e4c2aa31777206b016a546edc8fb56d3a327b63927b3a751d64"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/extract_vulns.py",
+      "sha256": "10549a21de821258231e951df32d56f584327644541b10bea9f0af7c3dda63b1"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/parser_registry.py",
+      "sha256": "a7b49f0b9f01139ef306467e2716590c333f92ff92f12c9c6d1b3df72a870db1"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/parsers/__init__.py",
+      "sha256": "f668c93d291f28657f0110dd791b3d1efc69ec3418077df1048f09821de183fb"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/parsers/_common.py",
+      "sha256": "1dafe5c9e434d3bdfd4e35de0e92797fd91e37570e3e43dfad13545457755db1"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/parsers/grype.py",
+      "sha256": "d6df73d9653f842858bcb5fffda0698bc643bf599eba552f9298a339a8b4ceca"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/parsers/nessus.py",
+      "sha256": "d8ebbe2bb01cf997e01ab56a288012e5857f791a4251ec9dfcb000c752e6df03"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/parsers/openvas.py",
+      "sha256": "1ae956bdcad8368b9542d2a9607bec27c69449130d224cb0a6eb376355e434ee"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/parsers/snyk.py",
+      "sha256": "755100b74c3928a586ebcc4b0eb98f66adf7bb8f893e6505f9d0514564a34324"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/parsers/trivy.py",
+      "sha256": "8b18e9e948905175e14b6ad9a4a15b6bab680ec988b5fb2f4a4e8ffcdbfe36e6"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/plan_gate.py",
+      "sha256": "ce4098396a1504813ef162cf89f0dfe23ef710d2269c95ceb5ab22e657317897"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/provider_proxy.py",
+      "sha256": "89bdfa4a3928ed7743df7fe215e75040995e9b82581a947493412ed18e1ed570"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/scripts/render_report.py",
+      "sha256": "18eb6f9cf26e618a98271f98814c27b7ea47fba890b3baba669137c213d8cf66"
+    },
+    {
+      "path": "skills/soe/references/vulnerability-analysis/vul-analyse/SKILL.md",
+      "sha256": "16c6292f648549bfa251a0930f86033957255a6844569424d90c72d0ce511992"
+    },
+    {
+      "path": "skills/soe/SKILL.md",
+      "sha256": "218501dcbb64a24b407c44045b691708d514d221612c79b5458530db1798e071"
+    }
+  ]
+}

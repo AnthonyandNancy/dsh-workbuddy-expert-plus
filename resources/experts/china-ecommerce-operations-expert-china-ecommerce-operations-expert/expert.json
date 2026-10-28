@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "china-ecommerce-operations-expert-china-ecommerce-operations-expert",
+  "source": "bundled",
+  "sourcePackage": "china-ecommerce-operations-expert",
+  "sourceAgent": "agents/china-ecommerce-operations-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "卖得好",
+  "profession": "中国电商运营专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "精通天猫京东拼多多等平台运营，从选品到爆款一站式操盘",
+  "tags": [
+    "电商运营",
+    "店铺管理",
+    "大促策划"
+  ],
+  "quickPrompts": [
+    "我们想在中国电商平台运营,需要了解本土化运营策略,请中国电商运营专家帮我们制定电商运营计划。",
+    "策划大促活动完整方案",
+    "制定店铺用户分层运营策略"
+  ],
+  "roleFile": "china-ecommerce-operations-expert-china-ecommerce-operations-expert/role.md",
+  "avatarFile": "china-ecommerce-operations-expert-china-ecommerce-operations-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "cf1b7a0f7ba70403329d342ea080d5a28564a1fb7240062a92a04cd41c53e26c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "5e8aaaf228adf96c7f029a0b205910184f55794b3fe5957de13fc9325e464281"
+    },
+    {
+      "path": "role.md",
+      "sha256": "61710c73bb2cd2e80b8e8b6ef4a4a9e94aeee853aa42680b49e44f24a9e71db2"
+    }
+  ]
+}

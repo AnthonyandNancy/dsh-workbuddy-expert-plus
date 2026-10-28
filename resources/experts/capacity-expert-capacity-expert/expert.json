@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "capacity-expert-capacity-expert",
+  "source": "bundled",
+  "sourcePackage": "capacity-expert",
+  "sourceAgent": "agents/capacity-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "CloudQ",
+  "profession": "腾讯云容量规划专家",
+  "categoryId": "13-TencentZone",
+  "description": "容量规划专家。擅长水位监控、容量预测与弹性伸缩策略制定，防止资源瓶颈与浪费。",
+  "tags": [
+    "容量规划",
+    "弹性伸缩",
+    "水位监控",
+    "资源优化"
+  ],
+  "quickPrompts": [
+    "当前各集群资源水位是否正常？",
+    "即将到来的大促需要准备多少容量？",
+    "哪些资源长期低负载可以缩容？"
+  ],
+  "roleFile": "capacity-expert-capacity-expert/role.md",
+  "avatarFile": "capacity-expert-capacity-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d31ad918b6951e98adeb18b90e28ff33d977ce7a6ab72370edfd57ef608b761c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d2b3d5636812bdf550e2e9d7ffc4d7337367560920176672fa979fbef6c8ea5f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4aa4807f4ff85c24afa0b11e6ea88ce2dcd15092e04d0eee0abde0d5a5b36085"
+    }
+  ]
+}

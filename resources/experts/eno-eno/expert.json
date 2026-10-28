@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "eno-eno",
+  "source": "bundled",
+  "sourcePackage": "eno",
+  "sourceAgent": "agents/eno.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "前端架构分析专家",
+  "categoryId": "02-Engineering",
+  "description": "深度分析前端项目架构、技术栈选型、组件设计与构建配置，输出含评分等级、优势短板和重构优先级的结构化评审报告。",
+  "tags": [
+    "前端架构",
+    "技术栈评估",
+    "工程化诊断"
+  ],
+  "quickPrompts": [
+    "分析当前项目的前端架构并给出评分报告",
+    "评审我的技术栈选型与组件设计",
+    "审计构建配置并给出优化建议"
+  ],
+  "roleFile": "eno-eno/role.md",
+  "avatarFile": "eno-eno/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0aa8d83e82270e1a42734f3b2a5cf437ad318a26f414eeb238a3d57327558cec",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "a1086d92ed792c05309e54f4ef65af1bff8fdeb6a1370f41e1a29a28f738041d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "33f8fd228f114167a904f716c8169ab4823a507a2d04c101bff4a02a12fc0a34"
+    }
+  ]
+}

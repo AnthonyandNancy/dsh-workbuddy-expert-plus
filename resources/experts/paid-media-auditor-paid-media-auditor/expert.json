@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "paid-media-auditor-paid-media-auditor",
+  "source": "bundled",
+  "sourcePackage": "paid-media-auditor",
+  "sourceAgent": "agents/paid-media-auditor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "查账账",
+  "profession": "付费媒体审计师",
+  "categoryId": "05-MarketingGrowth",
+  "description": "深度审计广告投放数据和预算分配，找出被浪费的广告费",
+  "tags": [
+    "投放审计",
+    "费用核查",
+    "效果审计"
+  ],
+  "quickPrompts": [
+    "我们的广告投放预算使用效率不高,需要审计现有投放策略,请付费媒体审计师帮我们分析投放效果。",
+    "分析广告浪费和优化空间",
+    "输出广告投放审计报告和改进建议"
+  ],
+  "roleFile": "paid-media-auditor-paid-media-auditor/role.md",
+  "avatarFile": "paid-media-auditor-paid-media-auditor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1bc0791228a61001796d86ea7ff1aea3fe70246e853397b0d22195177a216057",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8c81b3b822ae41ad9e64046404b99c1cfe98b43d10d93ea80c99c8ccbafb745e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "cde471b14d907aaf85238499840c524de7cc2c5ceae600ec1473bf94c8748dbc"
+    }
+  ]
+}

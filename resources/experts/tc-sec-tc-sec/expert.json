@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tc-sec-tc-sec",
+  "source": "bundled",
+  "sourcePackage": "tc-sec",
+  "sourceAgent": "agents/tc-sec.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯云安全专家",
+  "profession": "腾讯云安全专家",
+  "categoryId": "11-SecurityCompliance",
+  "description": "调用云API对容器/主机安全、WAF、云防、云安全中心、堡垒机、密钥管理、数据安全告警/资产进行分析",
+  "tags": [
+    "腾讯云安全",
+    "安全产品",
+    "安全运营"
+  ],
+  "quickPrompts": [
+    "我今天重点需要关注的告警事件",
+    "生成今日安全报告",
+    "生成WAF的安全防护周报"
+  ],
+  "roleFile": "tc-sec-tc-sec/role.md",
+  "avatarFile": "tc-sec-tc-sec/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5f2a8092850004231ce785db8d8c8edc467d9b6fd9a0774a6c980185a750079f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c31a0b914accff753a83b0511d0f12f84261230aef7c4fc4c1656809aa01cc53"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b273628fd5c0ccfe64b6a664c73d116721d6fa8d994549a3f2503a997c67bc25"
+    }
+  ]
+}

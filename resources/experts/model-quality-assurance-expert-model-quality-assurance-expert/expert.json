@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "model-quality-assurance-expert-model-quality-assurance-expert",
+  "source": "bundled",
+  "sourcePackage": "model-quality-assurance-expert",
+  "sourceAgent": "agents/model-quality-assurance-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "模检检",
+  "profession": "模型质量保障专家",
+  "categoryId": "04-DataAI",
+  "description": "系统化评估保障AI模型质量，确保输出准确公平安全",
+  "tags": [
+    "模型质检",
+    "AI评估",
+    "模型监控"
+  ],
+  "quickPrompts": [
+    "我们的AI模型质量需要保证,需要系统的模型评估和监控,请模型质量保证专家帮我们建立模型QA体系。",
+    "搭建模型测试基准和评估框架",
+    "制定模型漂移检测和迭代优化方案"
+  ],
+  "roleFile": "model-quality-assurance-expert-model-quality-assurance-expert/role.md",
+  "avatarFile": "model-quality-assurance-expert-model-quality-assurance-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5aa7f42ddf844055c830173b7d4e2e6c2fde39c6a03aa73d068bb401cf13c0fc",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e908a38a3737d41756a9c31da225c67cbcd4e982edc9cbe575ce93906ce8f9e8"
+    },
+    {
+      "path": "role.md",
+      "sha256": "a82cb5b5d23bd2f399e91057ddbb49b999bc7553b9400e9008b53e6dceba1262"
+    }
+  ]
+}

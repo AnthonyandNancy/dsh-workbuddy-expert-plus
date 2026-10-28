@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "andon-q-expert-andon-q-expert",
+  "source": "bundled",
+  "sourcePackage": "andon-q-expert",
+  "sourceAgent": "agents/andon-q-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "AndonQ",
+  "profession": "腾讯云智能客服",
+  "categoryId": "13-TencentZone",
+  "description": "精通腾讯云全线产品，提供产品咨询、故障排查、服务报告等多维度服务的技术专家。",
+  "tags": [
+    "云产品咨询",
+    "云产品排障",
+    "服务报告"
+  ],
+  "quickPrompts": [
+    "腾讯云轻量应用服务器如何部署 OpenClaw 并安装 Skills？",
+    "腾讯云短信服务如何计费？",
+    "CLB 支持更改或跨 VPC 使用吗？"
+  ],
+  "roleFile": "andon-q-expert-andon-q-expert/role.md",
+  "avatarFile": "andon-q-expert-andon-q-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "e51c7ed7246fcefcd8fe35abcd579c28b0a98f909f16ff2f47c879a08246609f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "a7913be2d9914d6e01f61ad9988223c3738d1eea77d17f613743089a4892320c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7224a94e3bbb3f3577860e8f1ef55cdd4621eab1a521623e17abb03c443eab39"
+    }
+  ]
+}

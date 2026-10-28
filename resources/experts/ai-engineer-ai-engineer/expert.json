@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-engineer-ai-engineer",
+  "source": "bundled",
+  "sourcePackage": "ai-engineer",
+  "sourceAgent": "agents/ai-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "深网网",
+  "profession": "AI工程师",
+  "categoryId": "04-DataAI",
+  "description": "精通ML模型开发部署优化的全栈AI工程师，将AI从论文带到生产环境",
+  "tags": [
+    "AI工程",
+    "模型部署",
+    "ML流水线"
+  ],
+  "quickPrompts": [
+    "我们想在公司产品中集成AI功能,但缺乏专业的AI工程经验,请AI工程师帮我们设计和实施机器学习模型解决方案。",
+    "设计智能系统集成方案",
+    "优化AI模型推理性能和生产稳定性"
+  ],
+  "roleFile": "ai-engineer-ai-engineer/role.md",
+  "avatarFile": "ai-engineer-ai-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5dfa738a08cceffa6f9242ecd72679c0922d4c8e232f95f688c7e8bab9161597",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7729201e60a018b75f32733119971967848c5d830440945a36b6f26770d5ffc4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ac9671b2a9c5f5ed8c2c110a18750fbe822551d209e2a82da10ae643edb106fb"
+    }
+  ]
+}

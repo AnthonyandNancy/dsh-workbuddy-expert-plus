@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "internal-comms-internal-comms-expert",
+  "source": "bundled",
+  "sourcePackage": "internal-comms",
+  "sourceAgent": "agents/internal-comms-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "传令令",
+  "profession": "内部沟通专家",
+  "categoryId": "10-ProjectQuality",
+  "description": "内部沟通模板专家：状态报告、领导汇报、公司简报、FAQ、事故报告和项目更新",
+  "tags": [
+    "内部沟通",
+    "企业传播",
+    "员工沟通"
+  ],
+  "quickPrompts": [
+    "帮我写一份本周的项目状态报告",
+    "制定内部沟通模板和传播方案",
+    "起草管理层会议纪要和决策备忘"
+  ],
+  "roleFile": "internal-comms-internal-comms-expert/role.md",
+  "skills": [
+    "internal-comms"
+  ],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "72f20c442bfd54d93a9eb882a9bb11c0af9198412f0fa7ceb762a75b2459b108",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "ff9b070f53b21f43d02cdbb9a3947b19c1031aab5c853d3e425d70e9333fce06"
+    },
+    {
+      "path": "skills/internal-comms/examples/3p-updates.md",
+      "sha256": "087e4363c0f3513728a7e695eeb9ead5c3ecd12a4681b59340691180e65b68fc"
+    },
+    {
+      "path": "skills/internal-comms/examples/company-newsletter.md",
+      "sha256": "30f81cfbdb03858a006169c72169024089c7c5d3d32611d337782da4f38c86b5"
+    },
+    {
+      "path": "skills/internal-comms/examples/faq-answers.md",
+      "sha256": "5ecd3356cd6666937f2ebefa753253edfdbdca15e368d07baf398bfcced72484"
+    },
+    {
+      "path": "skills/internal-comms/examples/general-comms.md",
+      "sha256": "4d3a4bb198a77626bcf018e96b2b45a2dbabed172d4ade0fcd70d23ae8a47a47"
+    },
+    {
+      "path": "skills/internal-comms/LICENSE.txt",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "skills/internal-comms/SKILL.md",
+      "sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475"
+    }
+  ]
+}

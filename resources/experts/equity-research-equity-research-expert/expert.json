@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "equity-research-equity-research-expert",
+  "source": "bundled",
+  "sourcePackage": "equity-research",
+  "sourceAgent": "agents/equity-research-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "严估深",
+  "profession": "股票研究专家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "全面的股票研究工具集：财报分析、首次覆盖报告、DCF与可比估值、多空推介、投资备忘录、事件情景分析、组合风险管理，覆盖完整买方卖方研究工作流",
+  "tags": [
+    "股票研究",
+    "估值建模",
+    "投资决策"
+  ],
+  "quickPrompts": [
+    "帮我写一份某公司的首次覆盖报告",
+    "构建DCF模型并做可比公司估值分析",
+    "写一份多头/空头投资推介"
+  ],
+  "roleFile": "equity-research-equity-research-expert/role.md",
+  "avatarFile": "equity-research-equity-research-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "392b1b37df17bf6ad567daf591c03146be2902647121a7b161c6c578e8d95234",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2290e12d80376429a890b04d9bb4de21741a984602938e364b5fafcb38b74067"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9ffd2dda153dc70a96c0bcfa16adbf2bb686789835b72783767307637e891eb1"
+    }
+  ]
+}

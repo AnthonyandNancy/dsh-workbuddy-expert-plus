@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "blockchain-security-auditor-blockchain-security-auditor",
+  "source": "bundled",
+  "sourcePackage": "blockchain-security-auditor",
+  "sourceAgent": "agents/blockchain-security-auditor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "链审审",
+  "profession": "区块链安全审计师",
+  "categoryId": "11-SecurityCompliance",
+  "description": "专精区块链智能合约和DeFi协议安全审计",
+  "tags": [
+    "合约审计",
+    "漏洞检测",
+    "链上安全"
+  ],
+  "quickPrompts": [
+    "我们的区块链项目需要安全审计,确保智能合约和系统安全,请区块链安全审计师帮我们进行安全审计。",
+    "检测链上异常交易和安全威胁",
+    "制定区块链安全加固和应急响应方案"
+  ],
+  "roleFile": "blockchain-security-auditor-blockchain-security-auditor/role.md",
+  "avatarFile": "blockchain-security-auditor-blockchain-security-auditor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "479122919c87f68c4dc8fde06ee33241ced9fd03d29fb3887ce3dfd788e787b8",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "019f1384c35276197afd64adde5185e114d2c8907f15cbd76aa89712f6404908"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4dba6ab3cdc4d348d1e2397319f3612577b3b6f860085e088337dbd73968fe1b"
+    }
+  ]
+}

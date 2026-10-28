@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "vocab-craft-expert-vocab-coach",
+  "source": "bundled",
+  "sourcePackage": "vocab-craft-expert",
+  "sourceAgent": "agents/vocab-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "词力",
+  "profession": "智能词汇教练",
+  "categoryId": "04-DataAI",
+  "description": "融合间隔重复记忆科学与键盘输入训练的AI英语词汇教练，支持每日定时推送、错词强化、三种练习模式，让背单词更科学高效",
+  "tags": [
+    "词汇记忆",
+    "间隔重复",
+    "每日打卡"
+  ],
+  "quickPrompts": [
+    "我想开始背六级单词，每天20个，早上8点提醒我",
+    "复习这周的薄弱单词",
+    "查看我的学习进度报告"
+  ],
+  "roleFile": "vocab-craft-expert-vocab-coach/role.md",
+  "avatarFile": "vocab-craft-expert-vocab-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ef9d6a33f145ad117aa47df718ca0f1eda26b9346aefdf4f104aa1c46fb56b17",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e4525622b6046a490c34ea14219d713c01602c8ee5249000e12ce187588805e0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0b6fc71fe7dfeee7f3adb26b6a0789b91fbc2429f6c133567b1e922a338f52d2"
+    }
+  ]
+}

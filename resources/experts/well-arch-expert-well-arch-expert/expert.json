@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "well-arch-expert-well-arch-expert",
+  "source": "bundled",
+  "sourcePackage": "well-arch-expert",
+  "sourceAgent": "agents/well-arch-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "CloudQ",
+  "profession": "腾讯云卓越架构专家",
+  "categoryId": "13-TencentZone",
+  "description": "卓越架构专家。擅长架构可视化评估、资源拓扑梳理、Well-Architected 六支柱评估与架构风险识别，确保架构符合最佳实践。",
+  "tags": [
+    "卓越架构",
+    "架构评估",
+    "拓扑分析",
+    "最佳实践"
+  ],
+  "quickPrompts": [
+    "评估当前架构的健康度并指出风险项",
+    "梳理我账号下的架构资源拓扑关系",
+    "架构中存在哪些不符合最佳实践的配置？"
+  ],
+  "roleFile": "well-arch-expert-well-arch-expert/role.md",
+  "avatarFile": "well-arch-expert-well-arch-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6f6eadffd81176f0cfd237eec0198c9f142bc19c5e3d8e74b5dc13f3ab7147cd",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "aa737b7f44fba1010298d8ac42878e091995a0db643708e1ecea3b4933e8fcb4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "176b83b87485e8e2dc5ce04e8965df615e6468e9b8e1511a9165d78ba39f11c1"
+    }
+  ]
+}

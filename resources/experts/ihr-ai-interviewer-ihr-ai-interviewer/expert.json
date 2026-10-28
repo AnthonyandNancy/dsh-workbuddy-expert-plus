@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ihr-ai-interviewer-ihr-ai-interviewer",
+  "source": "bundled",
+  "sourcePackage": "ihr-ai-interviewer",
+  "sourceAgent": "agents/ihr-ai-interviewer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "AI面试官",
+  "profession": "i人事-利唐智语AI面试官",
+  "categoryId": "09-OperationsHR",
+  "description": "围绕岗位画像设计面试维度与题库，管理数字人面试模板，校验候选人信息并发起面试，回查面试记录与纪要。",
+  "tags": [
+    "数字人面试",
+    "招聘甄选",
+    "面试设计"
+  ],
+  "quickPrompts": [
+    "给 [候选人姓名]（[邮箱/手机号]）发起一场 [岗位名称] 的数字人面试，要求在 2 天内完成。",
+    "请帮我给 [候选人姓名]（[邮箱/手机号]）配置一场 [岗位名称] 的数字人面试，重点考察 [如：项目管理/沟通能力]，要求24小时内完成，并生成面试邀请",
+    "请帮我给候选人 [姓名]（[邮箱/手机号]）配置一场 [岗位名称] 的数字人面试。6道题左右，重点考察 [如：项目管理/沟通能力]，通知候选人在 [如：24小时内] 完成，并自动生成面试邀请通知短信。"
+  ],
+  "roleFile": "ihr-ai-interviewer-ihr-ai-interviewer/role.md",
+  "avatarFile": "ihr-ai-interviewer-ihr-ai-interviewer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6f002e6af47ea67a7fd506df2ec44e73fe6595cea303edcee410bfbf34085e4c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "a56b4e7f4e3e38c8226d4bd6f74599dde180f69a80a7a82e08e8460ed8f4f2e0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "2cfab8b8fd835599eddeeeb6bdfdcd66e0d518352cb3436b6c81abe7cedfefe6"
+    }
+  ]
+}

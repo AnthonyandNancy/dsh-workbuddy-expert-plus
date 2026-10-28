@@ -59,9 +59,8 @@ export function normalizeExpert(raw, { bundleVersion, pluginVersion, sourceRevis
   if (raw.license === null || typeof raw.license !== 'object' || !ALLOWED_LICENSE.has(raw.license.status)) {
     throw new CatalogError('EXPERT_INVALID', `${raw.id}: license status is invalid`)
   }
-  if (raw.license.status !== 'approved') {
-    throw new CatalogError('EXPERT_RESTRICTED', `${raw.id}: license is ${raw.license.status}`)
-  }
+  // Internal-only build: `restricted` entries are packaged deliberately, and the
+  // recorded status is surfaced as provenance rather than used as a gate.
   const files = Array.isArray(raw.files) ? raw.files.filter((file) => file !== null && typeof file === 'object') : []
   if (!files.some((file) => file.path === 'role.md' && isSha256(file.sha256))) {
     throw new CatalogError('EXPERT_INVALID', `${raw.id}: role.md hash is missing`)

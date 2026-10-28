@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "anti-scam-agent-anti-scam-agent",
+  "source": "bundled",
+  "sourcePackage": "anti-scam-agent",
+  "sourceAgent": "agents/anti-scam-agent.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "天御金融反诈",
+  "profession": "腾讯云天御反诈专家",
+  "categoryId": "13-TencentZone",
+  "description": "金融黑灰产情报驱动的反诈智能体，覆盖电诈、职业背债、贷款包装、反催收，能分析、能查证、能出研判报告。",
+  "tags": [
+    "金融风控",
+    "反电信网络诈骗",
+    "黑灰产情报分析"
+  ],
+  "quickPrompts": [
+    "近一个月全国电信诈骗有哪些新型手法？",
+    "近一个月诈骗洗钱有哪些新模式？",
+    "近半年贷款黑中介常用的资质包装手法有哪些？"
+  ],
+  "roleFile": "anti-scam-agent-anti-scam-agent/role.md",
+  "avatarFile": "anti-scam-agent-anti-scam-agent/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "194735d13cbd13875eeff864919bc41ab70bbed81fd0b9053d35765a86397c35",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "930600fd43b88a1e75982188ca910b293b3e18bc9d439e87aa87858adfa94b7a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "46abddf12323fc97fbd8c68cbe7eb510c7ccbf008c4e61adc3e9cded2361c9ee"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "accounts-payable-agent-accounts-payable-agent",
+  "source": "bundled",
+  "sourcePackage": "accounts-payable-agent",
+  "sourceAgent": "agents/accounts-payable-agent.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "付清清",
+  "profession": "应付账款代理",
+  "categoryId": "08-FinanceInvestment",
+  "description": "自动化处理应付账款流程，确保付款准确及时",
+  "tags": [
+    "应付账款",
+    "供应商付款",
+    "发票处理"
+  ],
+  "quickPrompts": [
+    "我们的应付账款管理效率低,需要自动化处理流程,请应付账款代理帮我们设计自动化应付账款方案。",
+    "优化付款审批和对账流程",
+    "搭建应付账款监控和异常预警体系"
+  ],
+  "roleFile": "accounts-payable-agent-accounts-payable-agent/role.md",
+  "avatarFile": "accounts-payable-agent-accounts-payable-agent/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "37d8f4ad8d41c6efb34ad7150d9b0f34a1dd45709c2df5c5c6399938128e64e1",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f8af45f91c3f3aab8e687a247b7780ee6e0a8a4b36b9bff002f41ca97a1b1959"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f79c9cb9b62ede245755c3d819d8d942363cf6d1ec46e1917a2f14d0c77a225b"
+    }
+  ]
+}

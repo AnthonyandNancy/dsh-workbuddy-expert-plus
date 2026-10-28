@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "content-distribution-team-content-distribution-team-lead",
+  "source": "bundled",
+  "sourcePackage": "content-distribution-team",
+  "sourceAgent": "agents/content-distribution-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "全域内容分发专家团",
+  "profession": "全域内容分发专家团",
+  "categoryId": "06-ContentCreative",
+  "description": "一站式多平台内容分发方案，覆盖13+全球社交媒体平台（含微信视频号），提供发布规则适配、排期管理、批量发布编排、跨平台数据分析和小红书自动化发布能力",
+  "tags": [
+    "多平台分发",
+    "排期管理",
+    "跨平台数据分析"
+  ],
+  "quickPrompts": [
+    "帮我制定一个多平台内容分发方案",
+    "为我制定一周的内容发布排期计划",
+    "分析我各平台的发布数据表现"
+  ],
+  "roleFile": "content-distribution-team-content-distribution-team-lead/role.md",
+  "avatarFile": "content-distribution-team-content-distribution-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "085478b0ba1132606e329f20e2c6deeeae88d6de4057f44a1cb6a92e6960c717",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "73260f8131aaf561ab961186a20139fce853050c8e4cf1e903fa1ee26b2da9a9"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f6de39398d1b67f984d937652952d01df19e812ecfeda433f22a53d21a23c6e4"
+    }
+  ]
+}

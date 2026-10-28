@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "data-data-exploration-expert",
+  "source": "bundled",
+  "sourcePackage": "data",
+  "sourceAgent": "agents/data-exploration-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "探数数",
+  "profession": "数据探索专家",
+  "categoryId": "04-DataAI",
+  "description": "数据探索专家，支持 SQL 查询、数据探索、可视化、仪表板构建、数据验证和洞察生成",
+  "tags": [
+    "数据探索",
+    "数据清洗",
+    "特征工程"
+  ],
+  "quickPrompts": [
+    "帮我用SQL探索下这个数据库，生成分析报告",
+    "搭建交互式数据分析仪表板",
+    "进行统计分析和数据验证"
+  ],
+  "roleFile": "data-data-exploration-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0dd3f39ccba139641f5e060a852ff7a3ee71ac8a649da5a30781a485bc9445d2",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "26603d239d3ef778de91ff84cc15478cfd160d6b065ab7c5dd57e00bc27e9391"
+    }
+  ]
+}

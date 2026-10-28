@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "kdocs-doc-butler-kdocs-doc-butler",
+  "source": "bundled",
+  "sourcePackage": "kdocs-doc-butler",
+  "sourceAgent": "agents/kdocs-doc-butler.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "金山文档文档管家助手",
+  "profession": "文档管家",
+  "categoryId": "06-ContentCreative",
+  "description": "金山文档出品，覆盖新建搜索、分类整理与分享权限管理，助力文档全生命周期一站搞定。",
+  "tags": [
+    "文档创建",
+    "智能整理",
+    "文档搜索"
+  ],
+  "quickPrompts": [
+    "帮我搜一下金山文档里有没有「合同」相关的文件",
+    "帮我整理一下「工作」文件夹，里面文件太乱了，按内容自动分类归档一下",
+    "把「周报」文件夹下的所有文件移到「2026年归档」文件夹"
+  ],
+  "roleFile": "kdocs-doc-butler-kdocs-doc-butler/role.md",
+  "avatarFile": "kdocs-doc-butler-kdocs-doc-butler/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "921740dec24e26a27147ff706662c950803a8a28d205a8dfb6158e5047a53037",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d2a943cee42ca8f577ec2840ae233912c30b6b07be65b3e0734e3623e6ce6eb0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "2327605994efc79ddeedd8597dc7cdb9edfceda308478aea12485796e4b714e6"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "uae-public-affairs-uae-public-affairs",
+  "source": "bundled",
+  "sourcePackage": "uae-public-affairs",
+  "sourceAgent": "agents/uae-public-affairs.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "阿联酋公共事务专家",
+  "profession": "公共事务顾问",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "专注阿联酋政府关系、政策解读与监管沟通，为中企及投资机构提供专业公共事务咨询与风险评估服务。",
+  "tags": [
+    "政策解读",
+    "政府关系",
+    "政企沟通"
+  ],
+  "quickPrompts": [
+    "分析阿联酋近期出台的XX政策对中资企业的影响",
+    "帮我梳理在阿联酋设立自贸区公司的政府关系策略",
+    "评估阿联酋当前对XX行业的监管趋势与合规要求"
+  ],
+  "roleFile": "uae-public-affairs-uae-public-affairs/role.md",
+  "avatarFile": "uae-public-affairs-uae-public-affairs/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "312d2003b0ee51b2ae6da78db6703e785fdaf504cd43fd4a2bc95428ba3d4ff1",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c8aebe463e6dc13a63e5ee16899947020cec0f5a3ec78289399ea307827d61bb"
+    },
+    {
+      "path": "role.md",
+      "sha256": "dae33b612bab848af4c73f9fe213d84ccd69210c97848b60bda41509c24df9c9"
+    }
+  ]
+}

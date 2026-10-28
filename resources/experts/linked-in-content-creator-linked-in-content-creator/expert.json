@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-in-content-creator-linked-in-content-creator",
+  "source": "bundled",
+  "sourcePackage": "linked-in-content-creator",
+  "sourceAgent": "agents/linked-in-content-creator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "领英达",
+  "profession": "LinkedIn内容创作者",
+  "categoryId": "05-MarketingGrowth",
+  "description": "精通LinkedIn专业社交平台内容策略，帮助建立思想领袖地位",
+  "tags": [
+    "职场内容",
+    "领英创作",
+    "个人品牌"
+  ],
+  "quickPrompts": [
+    "我们想在LinkedIn建立专业品牌形象,吸引B端客户和人才,请LinkedIn内容创作者帮我们制定职场内容策略。",
+    "撰写LinkedIn行业洞察长文",
+    "优化LinkedIn内容触达和互动率"
+  ],
+  "roleFile": "linked-in-content-creator-linked-in-content-creator/role.md",
+  "avatarFile": "linked-in-content-creator-linked-in-content-creator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "c4f97ea82c3753f1f22401870e4f7bfa309b44843ac7d34b35ed9c2d538b113c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f33902a55dd12b9781ebf8ecabb5c6b4d21166e44472d083989c99e3eef4e556"
+    },
+    {
+      "path": "role.md",
+      "sha256": "20598d7f932799865e4102d7000218f427e30a0867aeacfb094aec0f62edda59"
+    }
+  ]
+}

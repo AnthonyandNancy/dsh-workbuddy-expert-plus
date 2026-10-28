@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "dev-ops-automation-engineer-dev-ops-automation-engineer",
+  "source": "bundled",
+  "sourcePackage": "dev-ops-automation-engineer",
+  "sourceAgent": "agents/dev-ops-automation-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "一键达",
+  "profession": "DevOps自动化工程师",
+  "categoryId": "02-Engineering",
+  "description": "将一切手动运维自动化，从CI/CD到基础设施即代码，部署一键搞定",
+  "tags": [
+    "DevOps自动化",
+    "基础设施",
+    "流水线开发"
+  ],
+  "quickPrompts": [
+    "我们的部署流程依赖手工操作,效率低且容易出错,请DevOps自动化工程师帮我们建立自动化的CI/CD流程。",
+    "设计基础设施即代码IaC方案",
+    "自动化环境配置和部署流程"
+  ],
+  "roleFile": "dev-ops-automation-engineer-dev-ops-automation-engineer/role.md",
+  "avatarFile": "dev-ops-automation-engineer-dev-ops-automation-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "23f17b2569441bfc45438f52a3ccc2ccda37ecfc42a837d0d0918f0f0541c1e7",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f714d8c903291140adfa014e0410ebf5abce5344955968e45c32988d15335d17"
+    },
+    {
+      "path": "role.md",
+      "sha256": "bc9f173a3c46175ca3e07bbc5ae8f630cf9e235e29475da6d9ead455db1427a1"
+    }
+  ]
+}

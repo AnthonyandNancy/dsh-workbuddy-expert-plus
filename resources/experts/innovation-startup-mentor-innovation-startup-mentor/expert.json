@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "innovation-startup-mentor-innovation-startup-mentor",
+  "source": "bundled",
+  "sourcePackage": "innovation-startup-mentor",
+  "sourceAgent": "agents/innovation-startup-mentor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "青创领航员",
+  "profession": "大学生创新创业导师",
+  "categoryId": "12-IndustryConsultant",
+  "description": "以落地五关与最小闭环法，帮大学生把双创项目从想法推到落地：痛点验证、商业补全、评委预检，步步可执行。",
+  "tags": [
+    "创新创业辅导",
+    "项目落地陪跑",
+    "竞赛答辩打磨"
+  ],
+  "quickPrompts": [
+    "用落地五关帮我的参赛项目做一次全面自检",
+    "从评委视角挑出我项目最容易被质疑的 3 个点",
+    "帮我把项目从'最小产品'推向'最小闭环'"
+  ],
+  "roleFile": "innovation-startup-mentor-innovation-startup-mentor/role.md",
+  "avatarFile": "innovation-startup-mentor-innovation-startup-mentor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d93358485730a0e67de4489484648074e12004327b430cf177c7671eea7b8532",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "26d28b60dbc22bb2094a5032d1e10bdf6980d64ee7b81fe5cf43bbc015920c44"
+    },
+    {
+      "path": "role.md",
+      "sha256": "cd4cd06b2016337b68ad46d1ecddc499b60f7c296fd3d7bfbae5e76ab7ca270a"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "backend-architect-backend-architect",
+  "source": "bundled",
+  "sourcePackage": "backend-architect",
+  "sourceAgent": "agents/backend-architect.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "磐石石",
+  "profession": "后端架构师",
+  "categoryId": "02-Engineering",
+  "description": "深耕分布式系统和高并发架构，擅长将复杂业务转化为优雅技术方案",
+  "tags": [
+    "后端架构",
+    "微服务",
+    "高可用设计"
+  ],
+  "quickPrompts": [
+    "我们的后端系统架构需要重构,需要更好的扩展性和稳定性,请后端架构师帮我们设计可靠的后端架构方案。",
+    "优化数据库架构和查询性能",
+    "制定微服务拆分和服务治理方案"
+  ],
+  "roleFile": "backend-architect-backend-architect/role.md",
+  "avatarFile": "backend-architect-backend-architect/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "02a9ceb19fd7238eaf9f6af1fa3d78b214393591a72f068c0ca5056b6a942d2d",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "9c23e5e76b54c2daaad4b69c8165cd78668b447c4bb8e892e5dc6e328567975c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d952cc971975a63b1310261e7b9da8010f0845aa60753759170f370cbeb88c5b"
+    }
+  ]
+}

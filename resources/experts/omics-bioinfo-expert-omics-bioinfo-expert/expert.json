@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "omics-bioinfo-expert-omics-bioinfo-expert",
+  "source": "bundled",
+  "sourcePackage": "omics-bioinfo-expert",
+  "sourceAgent": "agents/omics-bioinfo-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "组小学",
+  "profession": "腾讯组学生信分析专家",
+  "categoryId": "04-DataAI",
+  "description": "专攻生信分析，支持任务投递、进度追踪、日志解析、智能排错。内置自研模型库，加速生信研发与生产分析",
+  "tags": [
+    "生科分析",
+    "任务管理",
+    "AI智能排错"
+  ],
+  "quickPrompts": [
+    "帮我在组学平台运行 WGS 质控公共应用，全程跟踪任务状态，生成一份专业级 HTML 任务运行报告",
+    "编写一个最小化 FastQC 单端质控 WDL 流程，生成模拟测序数据并上传运行，跟踪到出结果并输出专业级 HTML 分析报告",
+    "查询我失败的组学任务并诊断根因，生成一份批量失败任务的专业级 HTML 诊断报告"
+  ],
+  "roleFile": "omics-bioinfo-expert-omics-bioinfo-expert/role.md",
+  "avatarFile": "omics-bioinfo-expert-omics-bioinfo-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "c15679675b34a16bf601c5ee950e25671702780194ad41bf3ed97b1848fb66fb",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "157c4b6d518893360369c04005c659cb2eb0723b8c3c67067b4c0bfd0699f53c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "61de4f4c81a558a44ab5b68fc2dba441277cc04e1607906ab578baa84a396196"
+    }
+  ]
+}

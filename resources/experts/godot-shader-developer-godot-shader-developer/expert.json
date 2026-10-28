@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "godot-shader-developer-godot-shader-developer",
+  "source": "bundled",
+  "sourcePackage": "godot-shader-developer",
+  "sourceAgent": "agents/godot-shader-developer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "渲染达",
+  "profession": "Godot着色器开发者",
+  "categoryId": "03-GameSpatial",
+  "description": "精通Godot着色语言和VisualShader",
+  "tags": [
+    "着色器开发",
+    "视觉效果",
+    "材质系统"
+  ],
+  "quickPrompts": [
+    "我们需要为Godot游戏开发着色器效果,请Godot着色器开发者帮我们实现视觉特效。",
+    "优化Shader渲染性能和跨平台兼容",
+    "设计参数化Shader方便美术调整"
+  ],
+  "roleFile": "godot-shader-developer-godot-shader-developer/role.md",
+  "avatarFile": "godot-shader-developer-godot-shader-developer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "963c253699149f28ecbae5dd1abf505a73b2dc4cb9f2f92ae9c4586dd70eb90c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f81e8487c3e2b63eedb57428ac7a5048f72c0b86832908b91a308ec70f253bf4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c3400bdb41b98dfe5a62e2823b8332f088e97b2279b461ded91568bb100384e9"
+    }
+  ]
+}

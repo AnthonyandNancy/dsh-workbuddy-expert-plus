@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "qingflow-hr-expert-qingflow-hr-expert",
+  "source": "bundled",
+  "sourcePackage": "qingflow-hr-expert",
+  "sourceAgent": "agents/qingflow-hr-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小Q",
+  "profession": "人力资源数字化专家",
+  "categoryId": "09-OperationsHR",
+  "description": "轻流MCP直连搭建，覆盖招聘、培训、绩效、入职与人力分析，AI驱动HR数字化转型。",
+  "tags": [
+    "人力资源",
+    "招聘",
+    "轻流"
+  ],
+  "quickPrompts": [
+    "帮我解析这份简历，匹配产品经理岗位 JD，并生成结构化面试题。",
+    "帮我搭建一个员工入职审批应用，包含材料收集、审批、任务清单和试用期跟踪。",
+    "帮我在轻流搭建人力分析看板，包含人员结构、流失率、招聘漏斗和培训完成率。"
+  ],
+  "roleFile": "qingflow-hr-expert-qingflow-hr-expert/role.md",
+  "avatarFile": "qingflow-hr-expert-qingflow-hr-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "da1ec1da653a995f393ec1b2cfa31449111bc07da1f7075687cfb8a953392a0f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "56c9c682c41b8effefed7cbf64de89f0d218206a235861a044b09713a2455808"
+    },
+    {
+      "path": "role.md",
+      "sha256": "100d6acec44444d5962c42a70784041f802bb54b2a60c4117fe0c8b923b5bc1a"
+    }
+  ]
+}

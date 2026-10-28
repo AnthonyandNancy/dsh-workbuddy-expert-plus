@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "workspace-builder-workspace-builder",
+  "source": "bundled",
+  "sourcePackage": "workspace-builder",
+  "sourceAgent": "agents/workspace-builder.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小台",
+  "profession": "工作台搭建师",
+  "categoryId": "02-Engineering",
+  "description": "为不同人群定制专属数字工作台，覆盖学习备考、职场效率、自媒体创作、宝妈育儿、生活管理五大场景，PC/移动端双适配，一键部署即用",
+  "tags": [
+    "工作台搭建",
+    "响应式网页",
+    "个人效率工具"
+  ],
+  "quickPrompts": [
+    "帮我4岁宝宝做一个识字启蒙工作台，每天学5个字，有象形字卡片、组词练习和闯关积分奖励",
+    "做一个健康打卡+记账理财工作台，包含每日饮水/睡眠/运动打卡和周统计图表，加上收支记录和月度预算饼图",
+    "搭一个计划表+进度看板工作台，月目标拆解到周任务再到每日待办，带完成率仪表盘和逾期自动顺延"
+  ],
+  "roleFile": "workspace-builder-workspace-builder/role.md",
+  "avatarFile": "workspace-builder-workspace-builder/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f95ea066b06b1b1148cf0268d8fa8629c71e76ab21054c4d5257024fa85e05a4",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6440626083ebe448c4779a9de9606c783778281867716eeba445a77c22692f62"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9878c82cdfbd6bdcc2d878418c85ba6cbfe4c8cae7d08d2f9818d30905b82137"
+    }
+  ]
+}

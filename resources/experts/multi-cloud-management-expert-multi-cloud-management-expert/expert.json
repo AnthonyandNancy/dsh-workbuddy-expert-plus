@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "multi-cloud-management-expert-multi-cloud-management-expert",
+  "source": "bundled",
+  "sourcePackage": "multi-cloud-management-expert",
+  "sourceAgent": "agents/multi-cloud-management-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "CloudQ",
+  "profession": "腾讯云DevOps专家",
+  "categoryId": "13-TencentZone",
+  "description": "精通腾讯云、阿里云、AWS等多云架构治理、可视化、智能巡检与成本优化，一个专家管理所有云。",
+  "tags": [
+    "多云治理",
+    "AI 智能巡检",
+    "架构可视化"
+  ],
+  "quickPrompts": [
+    "我们的云资源有哪些风险",
+    "对我的云架构进行深度巡检，并提供架构优化与主动治理方案",
+    "盘点我账号下的闲置云资源并给出 FinOps 优化建议"
+  ],
+  "roleFile": "multi-cloud-management-expert-multi-cloud-management-expert/role.md",
+  "avatarFile": "multi-cloud-management-expert-multi-cloud-management-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1a06fdc639e88788505275b4af5cd82b39f0aae31ab11ae196ef8dae44de50b7",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "ee9480623599fac31c31eac5e81af2bf4caf0129bb1b49a9025206bf0f384b7b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "2ec5bafd14949acb939c966dde9e80f5991312bdb638be544137912f9778bee6"
+    }
+  ]
+}

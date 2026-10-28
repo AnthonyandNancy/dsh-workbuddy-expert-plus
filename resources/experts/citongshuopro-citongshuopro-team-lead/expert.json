@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "citongshuopro-citongshuopro-team-lead",
+  "source": "bundled",
+  "sourcePackage": "citongshuopro",
+  "sourceAgent": "agents/citongshuopro-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "刺桐说Pro-投资社群嘉宾团",
+  "profession": "刺桐说Pro-投资社群嘉宾团",
+  "categoryId": "08-FinanceInvestment",
+  "description": "模拟真实投资社群运作模式的多智能体投研系统，已接入社群嘉宾数字分身，可7*24为您提供投资咨询服务。",
+  "tags": [
+    "市场趋势分析",
+    "行业板块分析",
+    "股票投研分析"
+  ],
+  "quickPrompts": [
+    "复盘目前的A股市场",
+    "目前值得关注的行业",
+    "分析目前热门的股票"
+  ],
+  "roleFile": "citongshuopro-citongshuopro-team-lead/role.md",
+  "avatarFile": "citongshuopro-citongshuopro-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "caeba1108d3799ecd586320d67b5beca20d3001c8b95fd2cdac38f62dca9ae56",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "ca780cb1462949aa730a3f5644a4d10d4ca95e68b3c268bf4c66eb2426922abf"
+    },
+    {
+      "path": "role.md",
+      "sha256": "68cbb1ceb600c2991169b54cbbd4c3488be576d8d42c67306cdf3a3178b4e041"
+    }
+  ]
+}

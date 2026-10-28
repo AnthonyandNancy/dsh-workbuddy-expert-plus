@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "note-class-representative-note-class-representative",
+  "source": "bundled",
+  "sourcePackage": "note-class-representative",
+  "sourceAgent": "agents/note-class-representative.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小记同学",
+  "profession": "笔记课代表",
+  "categoryId": "15-BackToSchool",
+  "description": "对齐课堂速记、课件与转写稿，区分来源、加工和核验状态，生成可追踪纠错、可直接复习的笔记与卡片。",
+  "tags": [
+    "课堂笔记",
+    "知识结构",
+    "复习提炼"
+  ],
+  "quickPrompts": [
+    "我会上传课堂速记、课件和转写稿，请先盘点来源，再整理成带依据的结构化笔记",
+    "根据这节课的材料生成一页纸复习总结，并标出证据不足和待确认内容",
+    "检查这份笔记的来源归属和易混概念，修正后生成对比表与自测题"
+  ],
+  "roleFile": "note-class-representative-note-class-representative/role.md",
+  "avatarFile": "note-class-representative-note-class-representative/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "490d81ec04ef1f0ef90d5debe07f8d3391e1ebb22129f916e8fc3621ec13d7e8",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6726babc9838fe6ad33c8fcdb079630dd5dd6f9d1e50dc921f8a2c79191cdae4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "a6e88d1b71538a1edbef603564a09d05f5eba69ffe9df050a685e0442bc9d267"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fundus-disease-analysis",
+  "source": "bundled",
+  "sourcePackage": "fundus-disease-analysis",
+  "sourceAgent": "agents/腾讯健康-觅影-眼底彩照疾病分析专家.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯健康-觅影-眼底彩照疾病分析专家",
+  "profession": "腾讯健康-觅影-眼底彩照疾病分析专家",
+  "categoryId": "04-DataAI",
+  "description": "基于普角与超广角眼底彩照的AI多病种分析，覆盖青光眼、糖网、AMD等数十种疾病的诊断与报告解读。",
+  "tags": [
+    "眼底AI分析",
+    "眼科疾病诊断",
+    "医学影像解读"
+  ],
+  "quickPrompts": [
+    "帮我分析这张眼底彩照，看看有没有异常",
+    "请对这份超广角眼底图像进行多病种筛查",
+    "解读这份眼底AI分析报告，告诉我具体有哪些发现"
+  ],
+  "roleFile": "fundus-disease-analysis/role.md",
+  "avatarFile": "fundus-disease-analysis/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "e9a349ef45aac5b21f363e3f4c5a8409a0ff673989a1919004078e833810739a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "a45e5fe5c6975a7d2c62d4b02b87854dd347176f752adb5d2a4c9e35e5ca7535"
+    },
+    {
+      "path": "role.md",
+      "sha256": "78f89585a1148d03377c4e25a594d11cbeba833ac50467999f2a177fce439457"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "omics-scprotein-expert-omics-scprotein-expert",
+  "source": "bundled",
+  "sourcePackage": "omics-scprotein-expert",
+  "sourceAgent": "agents/omics-scprotein-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "组小学",
+  "profession": "腾讯scPROTEIN单细胞蛋白组建模专家",
+  "categoryId": "04-DataAI",
+  "description": "腾讯 scPROTEIN表征模型，实现对单细胞蛋白组的多肽不确定性估计，去除批次效应噪声以及单细胞蛋白组的细胞类型注释",
+  "tags": [
+    "不确定性估计",
+    "细胞类型注释",
+    "去除批次效应和数据噪声"
+  ],
+  "quickPrompts": [
+    "按默认参数运行 Stage1 肽级不确定性定量，并给我不确定性分布图和低置信肽段复核清单",
+    "衔接 Stage1 结果运行 Stage2 细胞嵌入（默认参数），用 t-SNE 可视化细胞分群并推荐聚类数",
+    "汇总 Stage1 和 Stage2 结果，生成交互式 HTML 可视化报告（概览卡片、t-SNE 分群、不确定性分布、Top20 复核表、热图、聚类质量）并打开预览；结果缺失则按默认参数先跑全流程"
+  ],
+  "roleFile": "omics-scprotein-expert-omics-scprotein-expert/role.md",
+  "avatarFile": "omics-scprotein-expert-omics-scprotein-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "06819620d89701fbdab15c546d300c0ebf4e9a2d170cfa98f9b9f81243318957",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "400060e2eb62c13175fdc08955b9f4e764618602be0b09107ed2938b9881bcd6"
+    },
+    {
+      "path": "role.md",
+      "sha256": "01a03f088d662dd34ef846c79567c4e0f5da72ceddfd5350489e606622172fd4"
+    }
+  ]
+}

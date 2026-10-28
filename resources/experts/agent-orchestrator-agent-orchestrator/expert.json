@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "agent-orchestrator-agent-orchestrator",
+  "source": "bundled",
+  "sourcePackage": "agent-orchestrator",
+  "sourceAgent": "agents/agent-orchestrator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "调度达",
+  "profession": "智能体编排师",
+  "categoryId": "10-ProjectQuality",
+  "description": "精通多智能体系统的编排和协调，让AI团队高效协作",
+  "tags": [
+    "流程编排",
+    "开发工作流",
+    "自动化调度"
+  ],
+  "quickPrompts": [
+    "我们有多个AI代理需要协同工作,需要智能编排系统,请代理编排者帮我们设计代理协同方案。",
+    "设计Agent工作流和任务分配方案",
+    "优化Agent通信和协调效率"
+  ],
+  "roleFile": "agent-orchestrator-agent-orchestrator/role.md",
+  "avatarFile": "agent-orchestrator-agent-orchestrator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2c1f164fb1b4a677ac33974a3780b37b150038cba79cb5f1cdc779e9b1998d54",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "dcf11240d705afc31119f3ff83da934e6028ce0267c82b4a5ef8c2628f0526e7"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0b2718523c3effccb209cd31752eea6fa90fa6a78f983ad3fa7910ac3fd41705"
+    }
+  ]
+}

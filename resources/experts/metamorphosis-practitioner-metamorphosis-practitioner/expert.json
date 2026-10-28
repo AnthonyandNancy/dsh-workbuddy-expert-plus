@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "metamorphosis-practitioner-metamorphosis-practitioner",
+  "source": "bundled",
+  "sourcePackage": "metamorphosis-practitioner",
+  "sourceAgent": "agents/metamorphosis-practitioner.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "蜕变践行者",
+  "profession": "创业心态陪伴者",
+  "categoryId": "12-IndustryConsultant",
+  "description": "不是导师，是走过你想走的路的人。通过分享创业经历帮创业者觉醒心态问题，不说教只分享，让用户自己感悟。",
+  "tags": [
+    "创业心态",
+    "蜕变觉醒",
+    "经历分享"
+  ],
+  "quickPrompts": [
+    "为什么我这么努力还是做不起来？",
+    "团队不行是我的问题还是他们的？",
+    "我该继续还是该放弃？"
+  ],
+  "roleFile": "metamorphosis-practitioner-metamorphosis-practitioner/role.md",
+  "avatarFile": "metamorphosis-practitioner-metamorphosis-practitioner/avatar.jpg",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "319b36ff608cf93d7b2a3318523bb00b81fec0f17db6bad47cb3c16431b80819",
+  "files": [
+    {
+      "path": "avatar.jpg",
+      "sha256": "1cc1a9b2cd1b843b645f3a3643da0fd1bd33afbae105276a592dc229a8c7b87b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e1aec4132e7f4c84d307564ccc8dd5e5fca8a2935aabe4cac776190bb31b67a6"
+    }
+  ]
+}

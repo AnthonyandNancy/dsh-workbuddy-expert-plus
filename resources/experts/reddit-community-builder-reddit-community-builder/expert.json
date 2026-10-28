@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "reddit-community-builder-reddit-community-builder",
+  "source": "bundled",
+  "sourcePackage": "reddit-community-builder",
+  "sourceAgent": "agents/reddit-community-builder.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "红迪迪",
+  "profession": "Reddit社区建设者",
+  "categoryId": "05-MarketingGrowth",
+  "description": "深谙Reddit社区文化，在全球最大论坛上建立真实社区影响力",
+  "tags": [
+    "Reddit社区",
+    "社区运营",
+    "话题引导"
+  ],
+  "quickPrompts": [
+    "我们想在Reddit社区建立品牌影响力,需要了解Reddit文化和社区运营方法,请Reddit社区建设者帮我们制定社区策略。",
+    "制定Reddit内容策略和增长方案",
+    "优化Reddit社区活跃度和品牌影响力"
+  ],
+  "roleFile": "reddit-community-builder-reddit-community-builder/role.md",
+  "avatarFile": "reddit-community-builder-reddit-community-builder/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0b1dfc5118025f23225ce59e60d98c1a9ac62b27505b4bfecb762c19d9538510",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "47fed80c4973ebd3bfab9c91f18a2248abcd5dbe3771970eb5837a5253842d94"
+    },
+    {
+      "path": "role.md",
+      "sha256": "8530f18b86245f6d532a71a410bb02d494d7eaa25680b47d26263e5685874b36"
+    }
+  ]
+}

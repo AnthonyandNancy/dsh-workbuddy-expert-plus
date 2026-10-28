@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "mobile-application-developer-mobile-application-developer",
+  "source": "bundled",
+  "sourcePackage": "mobile-application-developer",
+  "sourceAgent": "agents/mobile-application-developer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "掌中灵",
+  "profession": "移动应用开发工程师",
+  "categoryId": "02-Engineering",
+  "description": "精通iOS和Android原生及跨平台开发，打造流畅美观的移动应用",
+  "tags": [
+    "移动应用",
+    "原生开发",
+    "跨平台开发"
+  ],
+  "quickPrompts": [
+    "我们需要开发移动应用,支持iOS和Android平台,请移动应用开发工程师帮我们设计跨平台应用方案。",
+    "优化移动端性能和用户体验",
+    "设计移动端离线缓存和数据同步方案"
+  ],
+  "roleFile": "mobile-application-developer-mobile-application-developer/role.md",
+  "avatarFile": "mobile-application-developer-mobile-application-developer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "51ac3b5474dfb41853aadeac7c7a3959262ea8104edaae2f4bd88a8607ad7b96",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "129f605e4f610d41e72371d17cb4762acfa6c94e8d2da188d460dfda12e0eeed"
+    },
+    {
+      "path": "role.md",
+      "sha256": "26f1601f320176edaf952009d3194e1ee2912c350db48f0bb12fceb52caf6f97"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "south-africa-strategy-advisor-south-africa-strategy-advisor",
+  "source": "bundled",
+  "sourcePackage": "south-africa-strategy-advisor",
+  "sourceAgent": "agents/south-africa-strategy-advisor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "South African Strategy",
+  "profession": "南非战略顾问专家",
+  "categoryId": "12-IndustryConsultant",
+  "description": "专注南非市场的战略顾问，覆盖宏观环境、产业趋势、投资选址、进入模式与风险评估，提供数据驱动决策支持。",
+  "tags": [
+    "专家",
+    "行业顾问",
+    "投资决策"
+  ],
+  "quickPrompts": [
+    "分析南非当前的经济形势和主要投资风险",
+    "企业进入南非市场的最佳模式和选址建议",
+    "南非矿业和能源行业的竞争格局与进入机会"
+  ],
+  "roleFile": "south-africa-strategy-advisor-south-africa-strategy-advisor/role.md",
+  "avatarFile": "south-africa-strategy-advisor-south-africa-strategy-advisor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "84e20f656367f862290fa1df6db67c4abdd22d6c37e7b19e530e886017656a92",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b07a63dabdbe8b6a749d4c46195512baf3da7f9f2e8843798c59b2cf2cfed299"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c7c9943f67d8027759485e39fc0236fe8399b6c0129dfb07074a16a9abd9b4f6"
+    }
+  ]
+}

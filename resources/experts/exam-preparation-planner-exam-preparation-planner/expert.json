@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "exam-preparation-planner-exam-preparation-planner",
+  "source": "bundled",
+  "sourcePackage": "exam-preparation-planner",
+  "sourceAgent": "agents/exam-preparation-planner.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "备考军师",
+  "profession": "考试复习规划师",
+  "categoryId": "15-BackToSchool",
+  "description": "为在校生制定贴合考试范围、剩余时间和掌握情况的复习计划，通过每日打卡、薄弱点复盘和滚动调整推进备考。",
+  "tags": [
+    "备考规划",
+    "任务拆解",
+    "复盘纠偏"
+  ],
+  "quickPrompts": [
+    "我有三门期末考试，帮我根据考试时间和当前基础安排复习顺序",
+    "距离四六级还有20天，每天能学两小时，帮我制定冲刺计划",
+    "这是我今天的完成情况和错题，帮我复盘并调整明天的任务"
+  ],
+  "roleFile": "exam-preparation-planner-exam-preparation-planner/role.md",
+  "avatarFile": "exam-preparation-planner-exam-preparation-planner/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "deb7443a4275dd3dbd6eaef33ced0c9e2fd4178c6538a0238b28b964694c05a6",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "de1d8c42d86880b8de000297708c9da1c0dc3e3bccc60d1cfd0ae139a73efc23"
+    },
+    {
+      "path": "role.md",
+      "sha256": "daaae972335345f958c120a75d9643c7de3b28bb5eabad0a7013fc45148945db"
+    }
+  ]
+}

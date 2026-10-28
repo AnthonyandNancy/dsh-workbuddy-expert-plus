@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "stock-partner-team-stock-partner-lead",
+  "source": "bundled",
+  "sourcePackage": "stock-partner-team",
+  "sourceAgent": "agents/stock-partner-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯自选股股票投研专家团",
+  "profession": "腾讯自选股股票投研专家团",
+  "categoryId": "08-FinanceInvestment",
+  "description": "六位投研专家团，兼擅产业策略、信号捕捉、估值定价、逆向布局、基本面与短线，基于实时行情多视角研判。",
+  "tags": [
+    "估值定价",
+    "资金风向",
+    "短线节奏"
+  ],
+  "quickPrompts": [
+    "算力 VS 人形机器人，2026 下半年哪条主线更值得关注？",
+    "兆易创新、寒武纪这波都翻倍了，当前估值和资金面怎么看？",
+    "创业板创 10 年新高，从估值、资金与情绪看当前处于哪一阶段？"
+  ],
+  "roleFile": "stock-partner-team-stock-partner-lead/role.md",
+  "avatarFile": "stock-partner-team-stock-partner-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8e1ca862aa0f44e1176e2eaa0b7f78623368026fb3619e8177d80fc27628d2c9",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "85b8d75afbd7411705a03bae63afb9625c2f3b6a8a39e84bf99e2e428d2e4a62"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0393a09adaa11a69450a384d0fad87439f7ab0ced95ab975d3ae51208af9fe69"
+    }
+  ]
+}

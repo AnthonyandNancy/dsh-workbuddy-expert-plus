@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "sprint-priority-manager-sprint-priority-manager",
+  "source": "bundled",
+  "sourcePackage": "sprint-priority-manager",
+  "sourceAgent": "agents/sprint-priority-manager.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "排序序",
+  "profession": "迭代优先级管理者",
+  "categoryId": "01-ProductDesign",
+  "description": "在有限迭代周期内做出最优优先级决策，确保Sprint交付最大价值",
+  "tags": [
+    "迭代优先级",
+    "需求排序",
+    "敏捷管理"
+  ],
+  "quickPrompts": [
+    "我们的冲刺优先级经常调整,导致团队效率低下,请冲刺优先级管理者帮我们制定科学的需求优先级管理方法。",
+    "制定需求拆分和故事点估算方案",
+    "优化迭代交付效率和风险管控"
+  ],
+  "roleFile": "sprint-priority-manager-sprint-priority-manager/role.md",
+  "avatarFile": "sprint-priority-manager-sprint-priority-manager/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "552e4ba802168a7e21b006566b4eda4eebad6aac045e57a5dcaa38810762fe88",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f5706b2c6d85f32b6785892fb6cc1323ba18bb0b3ab6f62c6d7a81570edef41e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "eeb4be23b33a8cd888da93711fb139e159dcf03150f6d7aaa059a942446cf5dd"
+    }
+  ]
+}

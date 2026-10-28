@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "marketing-campaign-team-marketing-director",
+  "source": "bundled",
+  "sourcePackage": "marketing-campaign-team",
+  "sourceAgent": "agents/marketing-director.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "营销战役团队",
+  "profession": "营销战役团队",
+  "categoryId": "05-MarketingGrowth",
+  "description": "由营销总监领导的 4 人营销专家团队：内容创作者（博客/邮件/社媒/品牌声音）、活动策划师（战役策略/受众/渠道/预算）、SEO 专家（技术审计/内容优化/效果分析）和品牌分析师（竞品定位/品牌审核）。覆盖完整营销生命周期。",
+  "tags": [
+    "营销策划",
+    "品牌分析",
+    "内容创作"
+  ],
+  "quickPrompts": [
+    "策划一场营销战役 / 为产品发布起草内容 / 审计我们的 SEO",
+    "制定跨渠道营销传播和预算分配方案",
+    "设计营销活动全链路执行和复盘流程"
+  ],
+  "roleFile": "marketing-campaign-team-marketing-director/role.md",
+  "avatarFile": "marketing-campaign-team-marketing-director/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "cbc0247ddafa76ccb0aacf61642ce7a1cff0a6deb405798587459e1230d9e308",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b5630858bba1c905f9c5800083031f5d3a86ae0bdd888cbed18ba1eeccf6d66a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ef5a3acbdf809543abf7b1e7e8dac9215178b568d2b0dd606ba030d04c5114c7"
+    }
+  ]
+}

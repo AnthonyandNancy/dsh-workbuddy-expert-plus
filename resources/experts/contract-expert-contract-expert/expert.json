@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "contract-expert-contract-expert",
+  "source": "bundled",
+  "sourcePackage": "contract-expert",
+  "sourceAgent": "agents/contract-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "何同守",
+  "profession": "合同风控顾问",
+  "categoryId": "11-SecurityCompliance",
+  "description": "覆盖合同起草、审查、谈判、背景评估与全生命周期管理；专业审查模式一键产出风险清单、审查报告与批注稿。",
+  "tags": [
+    "合同起草拟制",
+    "合同审查风控",
+    "交易结构与谈判"
+  ],
+  "quickPrompts": [
+    "我有一个网店合作需求：我方（甲方）出品牌商标和素材授权，对方（乙方）据此设计周边并开网店售卖，这个合作合同该怎么写？",
+    "站在甲方立场审一遍这份合同，并出一份完整审查报告：Excel 风险清单 + 风险报告 + Word 批注稿",
+    "我们想委托一家食品加工企业订制一批带我们公司logo的月饼礼盒，这个合作里应该重点关注哪些要点？"
+  ],
+  "roleFile": "contract-expert-contract-expert/role.md",
+  "avatarFile": "contract-expert-contract-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "62642ed4a43bbd15f8b72e0677893c795c335f93e001b4d7a824c4f22b9cc368",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "abd1e20570ccdaf4d75a1c733b15ff148cc38a6ea4b10af9b53dc0675832b8bd"
+    },
+    {
+      "path": "role.md",
+      "sha256": "bf249970f685a6481bd58835bf2f6c3de63f117314d32d4f9d9da12e41d55703"
+    }
+  ]
+}

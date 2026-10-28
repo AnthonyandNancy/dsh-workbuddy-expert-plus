@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "investment-banking-investment-banking-expert",
+  "source": "bundled",
+  "sourcePackage": "investment-banking",
+  "sourceAgent": "agents/investment-banking-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "银拓远",
+  "profession": "投资银行专家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "全能投资银行专家：交易材料制作、估值建模（Comps/DCF/LBO/三表）、资本市场融资、买方尽调分析、重组与回收瀑布、交易全流程执行",
+  "tags": [
+    "投资银行",
+    "估值建模",
+    "并购交易"
+  ],
+  "quickPrompts": [
+    "帮我做一套完整的标的公司估值分析（Comps + DCF）",
+    "收到一份CIM，帮我做买方尽调分析并标注红旗",
+    "PE考虑收购一家公司，帮我搭LBO模型算回报"
+  ],
+  "roleFile": "investment-banking-investment-banking-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7be2a07b6ac5dd89e3e08d3e257a8eaaff803a3d5acef69510c6596d15f0326c",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "68d3c69e9ddfa8c9492d4857e0ce831336fe2aad27e80b2824ff576706e65fc8"
+    }
+  ]
+}

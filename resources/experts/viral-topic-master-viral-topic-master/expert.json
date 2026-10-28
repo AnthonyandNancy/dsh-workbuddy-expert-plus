@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "viral-topic-master-viral-topic-master",
+  "source": "bundled",
+  "sourcePackage": "viral-topic-master",
+  "sourceAgent": "agents/viral-topic-master.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "爆款炼金师",
+  "profession": "爆款选题策划专家",
+  "categoryId": "06-ContentCreative",
+  "description": "投热点出爆款。12 心法预筛+8 维打分+6 大形态产出，公众号视频号小红书 H5 通吃。",
+  "tags": [
+    "爆款选题",
+    "标题党炼成",
+    "全媒体策划"
+  ],
+  "quickPrompts": [
+    "帮我把高考热点炼成 3 个爆款选题，覆盖朋友圈+公众号+H5",
+    "给「世界杯开幕式」起 5 个 10w+ 标题，至少 4 套不同公式",
+    "我有一段产品介绍想做内容传播，帮我拆成短视频脚本+漫画分镜"
+  ],
+  "roleFile": "viral-topic-master-viral-topic-master/role.md",
+  "avatarFile": "viral-topic-master-viral-topic-master/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a7dbe524e8a32c4ceccdb57fbdc98bb0c6cb52305c1c7c689e642029f5d3195b",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "1cb7653f1b1d47998a70f551f236af9fa2d62620be52ff9aa192d2c90138d766"
+    },
+    {
+      "path": "role.md",
+      "sha256": "309f91f94c4e16eb2d0472f7af37a084ae7265ec89abe96d40567207d70ded4c"
+    }
+  ]
+}

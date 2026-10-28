@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "corp-credit-due-diligence-corp-credit-due-diligence",
+  "source": "bundled",
+  "sourcePackage": "corp-credit-due-diligence",
+  "sourceAgent": "agents/corp-credit-due-diligence.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "天御对公信贷",
+  "profession": "腾讯云天御对公信贷专家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "对公信贷尽调助手，覆盖行业研究、财务核查、实控人画像与风险预警，输出结构化信评报告。",
+  "tags": [
+    "行业研究",
+    "财务核查",
+    "信评报告"
+  ],
+  "quickPrompts": [
+    "帮我调研下{企业名}。",
+    "帮我对XX行业做系统性研究，覆盖竞争格局、监管政策、风险点。",
+    "对XX公司开展财务核查，重点识别民企财务偏差与关联交易风险。"
+  ],
+  "roleFile": "corp-credit-due-diligence-corp-credit-due-diligence/role.md",
+  "avatarFile": "corp-credit-due-diligence-corp-credit-due-diligence/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "28bfcf5ce1866fc9d43c31491e724b0684e49d2dc0516d377b454b5f7f575441",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e611240337280c1ad571e0dc1320fc76494772bc879171ed3cf7f1efd465c11d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "5dc55f97772fda65f922f1085b3ad3ba385badc1d077984ee63401f3af0737ae"
+    }
+  ]
+}

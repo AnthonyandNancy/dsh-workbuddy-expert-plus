@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "unreal-multiplayer-architect-unreal-multiplayer-architect",
+  "source": "bundled",
+  "sourcePackage": "unreal-multiplayer-architect",
+  "sourceAgent": "agents/unreal-multiplayer-architect.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "联机达",
+  "profession": "Unreal多人架构师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通Unreal Actor复制和服务器权威架构",
+  "tags": [
+    "UE多人架构",
+    "Actor复制",
+    "服务端权威"
+  ],
+  "quickPrompts": [
+    "我们的虚幻游戏需要多人架构,需要专业的网络架构设计,请虚幻多人架构师帮我们设计多人系统。",
+    "搭建服务器权威和网络预测系统",
+    "优化多人同步和延迟补偿策略"
+  ],
+  "roleFile": "unreal-multiplayer-architect-unreal-multiplayer-architect/role.md",
+  "avatarFile": "unreal-multiplayer-architect-unreal-multiplayer-architect/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a6bf5c2c3234bdceedfde1e292fd82585e9ba2ebe68ff5ca80cc74cf64e995f0",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "5570b4db1919fa0129c67c85b821a5bcbb6ce030fef4be62b44aecb8b826bc97"
+    },
+    {
+      "path": "role.md",
+      "sha256": "79b0e3720e5673fbc09861d0c3ceb416c8e50210d068c6a1eda59abf5aaf990f"
+    }
+  ]
+}

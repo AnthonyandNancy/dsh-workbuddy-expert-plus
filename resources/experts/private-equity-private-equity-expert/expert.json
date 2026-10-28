@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "private-equity-private-equity-expert",
+  "source": "bundled",
+  "sourcePackage": "private-equity",
+  "sourceAgent": "agents/private-equity-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "募资资",
+  "profession": "私募股权专家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "私募股权工具集：Deal Sourcing、项目筛选、尽调清单、IC Memo、单位经济学分析、回报分析、投后管理和价值创造方案",
+  "tags": [
+    "私募股权",
+    "尽调清单",
+    "投后管理"
+  ],
+  "quickPrompts": [
+    "帮我准备一份尽职调查清单",
+    "搭建私募基金募资材料和数据室",
+    "制定投后管理和退出策略方案"
+  ],
+  "roleFile": "private-equity-private-equity-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "afeb863170bb26b974667799ad7957c7d51d4342a59bae49c7bd4915fec01151",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "bbff79c09a929b7618382260eb52e8e4e2410c8ee41c5d4fa5646c282754c11f"
+    }
+  ]
+}

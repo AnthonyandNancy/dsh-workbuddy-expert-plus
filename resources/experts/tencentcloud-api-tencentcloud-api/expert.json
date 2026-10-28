@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tencentcloud-api-tencentcloud-api",
+  "source": "bundled",
+  "sourcePackage": "tencentcloud-api",
+  "sourceAgent": "agents/tencentcloud-api.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯云API专家",
+  "profession": "腾讯云API专家",
+  "categoryId": "02-Engineering",
+  "description": "自然语言管理腾讯云200+产品资源，智能检索API并构造CLI命令，内置安全管控与异常处理",
+  "tags": [
+    "云资源管理",
+    "API智能调用",
+    "运维自动化"
+  ],
+  "quickPrompts": [
+    "帮我在广州创建一台2核4G的按量计费云服务器",
+    "查看我所有地域的云服务器实例及运行状态",
+    "帮我配置一个安全组，放通HTTP和SSH访问"
+  ],
+  "roleFile": "tencentcloud-api-tencentcloud-api/role.md",
+  "avatarFile": "tencentcloud-api-tencentcloud-api/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "dad665553d5bd34c338d484f9f6fa73a3ef91e3cafb403336f2df8b72bb32fea",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "00bca6ca6c25496c92a6dddfec323fc4f978b9635c5a2317272c3a5a07bf7b81"
+    },
+    {
+      "path": "role.md",
+      "sha256": "11a6b5bf9707a3dda2f1c4cca5095db2d729e540f4a6462e96c46839f60ac45c"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "dd-due-diligence-team-dd-due-diligence-lead",
+  "source": "bundled",
+  "sourcePackage": "dd-due-diligence-team",
+  "sourceAgent": "agents/dd-due-diligence-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "AI尽调专家团",
+  "profession": "AI尽调专家团",
+  "categoryId": "08-FinanceInvestment",
+  "description": "银行对公授信尽调专家团：主理人按七步流程统筹进件/核验/画像/财务/经营/行业/风险/报告八岗协同。",
+  "tags": [
+    "授信尽调",
+    "授信风控",
+    "风险识别"
+  ],
+  "quickPrompts": [
+    "帮我跑一遍对公授信尽调全流程：进件解析、财务核验、专项分析、风险总览，最后生成尽调报告",
+    "查一下当前尽调项目的状态和材料缺口，列出下一步要做的事",
+    "进件材料齐了，帮我解析识别、查漏补缺，然后推进到财务核验"
+  ],
+  "roleFile": "dd-due-diligence-team-dd-due-diligence-lead/role.md",
+  "avatarFile": "dd-due-diligence-team-dd-due-diligence-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ed5101ed3a41e5e5883db89673eaa5701b07d589c54db90b4d3176cc187b5b0d",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2ea9ff76864cf8a4bbaab589f3cead2a6b005b4906d16d9abe0c1db3f7a34662"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f218751c33e448b21bc1401ead1cfdc936fde9a4ddbf4b01ef841bb918c1e28c"
+    }
+  ]
+}

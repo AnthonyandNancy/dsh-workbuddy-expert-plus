@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ihr-conference-ihr-conference",
+  "source": "bundled",
+  "sourcePackage": "ihr-conference",
+  "sourceAgent": "agents/ihr-conference.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "i人事-利唐智语AI面谈官",
+  "profession": "i人事-利唐智语AI面谈官",
+  "categoryId": "09-OperationsHR",
+  "description": "提供九大智能面谈大纲与线上实时指引，基于云录制自动生成结构化纪要与待办，全周期辅助管理者高效沟通。",
+  "tags": [
+    "智能面谈",
+    "组织绩效",
+    "沟通提效"
+  ],
+  "quickPrompts": [
+    "安排本周五与张三（[邮箱/手机号]）的绩效复盘，沟通目标达成与改进计划",
+    "发起下周一与李四（[邮箱/手机号]）的辅导面谈，了解困难并明确支持措施",
+    "总结近期项目会议结论，明确后续分工和行动计划"
+  ],
+  "roleFile": "ihr-conference-ihr-conference/role.md",
+  "avatarFile": "ihr-conference-ihr-conference/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "418c2cc5942d34cd8ade3501106206ed4ecf9696812c723c3d59f011d9944456",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "11cc4593a508d1e6f2a2b639c09842668ddce495e2cde6894ddd3b1ea62b2f6a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "717039fbf2be385f35eea3f98ef0f30e21844b1e100c87819c983e666e32881a"
+    }
+  ]
+}

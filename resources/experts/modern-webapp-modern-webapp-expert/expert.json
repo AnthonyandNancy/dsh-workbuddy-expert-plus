@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "modern-webapp-modern-webapp-expert",
+  "source": "bundled",
+  "sourcePackage": "modern-webapp",
+  "sourceAgent": "agents/modern-webapp-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "速构构",
+  "profession": "现代Web开发专家",
+  "categoryId": "02-Engineering",
+  "description": "现代 Web 应用开发专家，基于 React + TypeScript + Vite + Tailwind CSS + shadcn/ui 技术栈，含浏览器自动化能力",
+  "tags": [
+    "浏览器自动化",
+    "Web测试",
+    "数据采集"
+  ],
+  "quickPrompts": [
+    "帮我搭建一个现代化的Web应用",
+    "使用shadcn/ui快速搭建UI组件",
+    "设计响应式布局和交互动效"
+  ],
+  "roleFile": "modern-webapp-modern-webapp-expert/role.md",
+  "avatarFile": "modern-webapp-modern-webapp-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "08e1baa1d6e5e29a91037864d978b030421dd7d3e92c302e7f8ef869ae06e2c9",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6c662d43def8f576d77105f670f7477ede52c257d64b985bf143c521d9db8f72"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6365b93508e27e5710c973e1f81dffae4679f69c154ecd28577fd812f9f29975"
+    }
+  ]
+}

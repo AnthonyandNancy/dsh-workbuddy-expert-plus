@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "programmatic-ad-buyer-programmatic-ad-buyer",
+  "source": "bundled",
+  "sourcePackage": "programmatic-ad-buyer",
+  "sourceAgent": "agents/programmatic-ad-buyer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "算法投",
+  "profession": "程序化广告买手",
+  "categoryId": "05-MarketingGrowth",
+  "description": "精通程序化广告购买和DSP平台，通过算法实现大规模精准投放",
+  "tags": [
+    "程序化购买",
+    "RTB竞价",
+    "广告交易"
+  ],
+  "quickPrompts": [
+    "我们想尝试程序化广告投放,需要专业的DSP和RTB操作经验,请程序化广告买家帮我们设计程序化投放策略。",
+    "设计DSP/SSP集成和受众定向方案",
+    "优化程序化广告效果和成本效率"
+  ],
+  "roleFile": "programmatic-ad-buyer-programmatic-ad-buyer/role.md",
+  "avatarFile": "programmatic-ad-buyer-programmatic-ad-buyer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9f16c4324a64f224c5f417f1a145016789f5acd0661c1002f40acb9078c0014f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "a19fb203cda52ba58055d46adcc88e65009027db35ce3b34be53459f6404dc2f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "8cb93b2662f0a0a00b87b9a66a9ca18814c9de5dcdbb96eb0081b022643b2342"
+    }
+  ]
+}

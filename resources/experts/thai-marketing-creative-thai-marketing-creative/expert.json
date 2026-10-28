@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "thai-marketing-creative-thai-marketing-creative",
+  "source": "bundled",
+  "sourcePackage": "thai-marketing-creative",
+  "sourceAgent": "agents/thai-marketing-creative.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "泰国市场营销专家",
+  "profession": "泰国市场营销专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "整合全链路用户洞察与行为决策，锚定本土松弛悦己情绪切口，打通泰语市场转化路径，输出泰国市场营销方案。",
+  "tags": [
+    "泰语策划",
+    "合规营销",
+    "行为转化"
+  ],
+  "quickPrompts": [
+    "我司主营人工智能产品，为泰国市场做一个市场营销策划案。",
+    "帮我为一款美妆产品策划面向泰国的TikTok海报，符合合规要求。",
+    "我司正策划泰国双十一大促活动，目标是中低收入年轻群体，帮我做一个营销方案，要用行为经济学的稀缺性机制。"
+  ],
+  "roleFile": "thai-marketing-creative-thai-marketing-creative/role.md",
+  "avatarFile": "thai-marketing-creative-thai-marketing-creative/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6cf700a369e9636ecf842c6b0d98138f3334f0b3916ad0a0c242cb7d20afb8e5",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0773e6fd0bc7b620194896576ab25e4df0a52b7fe3d31419676896dd9adbb3b5"
+    },
+    {
+      "path": "role.md",
+      "sha256": "507175a2fdac69269b436c5d8320f58b60a0085505c6efeb30eb546be56cce02"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "customer-support-expert-customer-support-expert",
+  "source": "bundled",
+  "sourcePackage": "customer-support-expert",
+  "sourceAgent": "agents/customer-support-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "暖心心",
+  "profession": "客户支持专家",
+  "categoryId": "09-OperationsHR",
+  "description": "将每次沮丧的用户互动转化为忠实拥护者，用卓越服务创口碑",
+  "tags": [
+    "客户服务",
+    "工单处理",
+    "服务质量"
+  ],
+  "quickPrompts": [
+    "我们的客户服务质量参差不齐,需要建立标准化的客户服务体系,请客户支持专家帮我们制定客户服务标准。",
+    "设计智能客服话术和常见问题库",
+    "制定客户满意度提升和投诉处理方案"
+  ],
+  "roleFile": "customer-support-expert-customer-support-expert/role.md",
+  "avatarFile": "customer-support-expert-customer-support-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "345538571e1af58c61a50132eff6c8227b9ecd045764c060385485f718b23947",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "a13a98311a480bc6fceebc6b49882eb2d6a4d1f115ff1983d85cf39d8e39bf1d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "1823a505f41b9890070ec744666cf0cbae8669386b5088e792888c7c83082f13"
+    }
+  ]
+}

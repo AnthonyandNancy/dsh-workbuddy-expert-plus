@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "lazy-travel-planner-travel-planner",
+  "source": "bundled",
+  "sourcePackage": "lazy-travel-planner",
+  "sourceAgent": "agents/travel-planner.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "懒人出游规划师",
+  "profession": "懒人出游规划师",
+  "categoryId": "12-IndustryConsultant",
+  "description": "专注国内3-7天2-4人自由行，整合实时口碑与一手数据，一站式产出含地图、预算与防坑的可落地行程书。",
+  "tags": [
+    "国内自由行",
+    "行程规划",
+    "避坑攻略"
+  ],
+  "quickPrompts": [
+    "帮我规划一次成都4天3晚2人自由行，想轻松点、吃好点。",
+    "推荐几个适合老人和小孩的轻松路线。",
+    "我想五一去重庆，帮我看看人流和预算怎么安排。"
+  ],
+  "roleFile": "lazy-travel-planner-travel-planner/role.md",
+  "avatarFile": "lazy-travel-planner-travel-planner/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ca88ca2df2dbd9844599880078077ab87a00fbd15dcbcc396e7489702067942a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "261250fc25b017b1aedc6fff76b4f73de0d12d3e387e50811900a50b874f0da1"
+    },
+    {
+      "path": "role.md",
+      "sha256": "5db1fe6e71da2ad48a83123e0c07be472e4ec8eed0d7a9f74bf42315ddf8552d"
+    }
+  ]
+}

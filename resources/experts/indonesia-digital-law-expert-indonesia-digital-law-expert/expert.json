@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "indonesia-digital-law-expert-indonesia-digital-law-expert",
+  "source": "bundled",
+  "sourcePackage": "indonesia-digital-law-expert",
+  "sourceAgent": "agents/indonesia-digital-law-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "印尼法务合规专家",
+  "profession": "印尼法务合规专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "聚焦外商投资、数据合规与商业交易，打通营商审批、金融监管与知识产权保护链路，赋能跨境SaaS与AI等新兴赛道全流程印尼法务保障。",
+  "tags": [
+    "准入注册",
+    "数据合规",
+    "审批协同"
+  ],
+  "quickPrompts": [
+    "我们是AI产品公司，想在印尼提供大语言模型服务。需要关注哪些合规要求？注册、数据本地化、内容审核分别怎么做？",
+    "我司产品是境外 SaaS（AI写作工具），准备进入印尼市场，请给出全流程合规清单与时间表。",
+    "我们的服务器在新加坡，依据印尼法律用户数据能否跨境传输？法律依据与步骤是什么？"
+  ],
+  "roleFile": "indonesia-digital-law-expert-indonesia-digital-law-expert/role.md",
+  "avatarFile": "indonesia-digital-law-expert-indonesia-digital-law-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "c708b4eedd53ec553614bc4352d271d05633ccd79556f8362984703cd75028d1",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "dcf408b4fa60d96148706aaa5b1b1429c99a53ed1a338b48349634276d795502"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3164dd8f0d554aa27cf75f5a40e0d499b2563b91b64ae02fb90600e78b8330c0"
+    }
+  ]
+}

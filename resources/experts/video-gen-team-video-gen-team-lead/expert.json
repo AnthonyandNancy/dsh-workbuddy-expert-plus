@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "video-gen-team-video-gen-team-lead",
+  "source": "bundled",
+  "sourcePackage": "video-gen-team",
+  "sourceAgent": "agents/video-gen-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "苍何视频生成团队",
+  "profession": "AI视频创作团队",
+  "categoryId": "06-ContentCreative",
+  "description": "三位一体的AI视频创作团队：灵阅负责采集AI/科技热点，灵枢负责策划选题与脚本，灵映负责渲染MP4视频成品（配音+字幕）。全流程自动化，60秒短视频一键生成。",
+  "tags": [
+    "AI视频",
+    "内容创作",
+    "短视频",
+    "语音合成",
+    "视频渲染"
+  ],
+  "quickPrompts": [
+    "帮我做一期AI周报视频，60秒左右",
+    "做一个科技产品评测短视频",
+    "生成一期AI Agent科普视频"
+  ],
+  "roleFile": "video-gen-team-video-gen-team-lead/role.md",
+  "avatarFile": "video-gen-team-video-gen-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a3eb5ffbc23c1cd374ac1b2b724db90eaa67f801ca6a33f24dc5fd3edde6b4fc",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "217b8c91c434794ae8f7d62e1a2385859c4926af06f7bf605a305f03ee9ca0f8"
+    },
+    {
+      "path": "role.md",
+      "sha256": "dfd68f73e3a44e486c40bb6814ef8467e587a21a844f86ff7b472540610eb23f"
+    }
+  ]
+}

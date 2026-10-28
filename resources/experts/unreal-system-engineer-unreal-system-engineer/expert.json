@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "unreal-system-engineer-unreal-system-engineer",
+  "source": "bundled",
+  "sourcePackage": "unreal-system-engineer",
+  "sourceAgent": "agents/unreal-system-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "虚幻通",
+  "profession": "Unreal系统工程师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通C++/Blueprint和Nanite/Lumen",
+  "tags": [
+    "UE系统工程",
+    "性能优化",
+    "混合架构"
+  ],
+  "quickPrompts": [
+    "我们的虚幻游戏需要系统层面的开发支持,请虚幻系统工程师帮我们实现游戏系统。",
+    "优化Nanite/Lumen渲染性能",
+    "搭建Gameplay Ability System游戏系统"
+  ],
+  "roleFile": "unreal-system-engineer-unreal-system-engineer/role.md",
+  "avatarFile": "unreal-system-engineer-unreal-system-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1a7319f38642aeda8b1d447128f1292c588e46e16a8fe65ff09e760716a20d96",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7ad165361c0145bb2210b997494292b6fb771c474aa2fb5fcb1ebec0ab706c2f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4096d7f0575d7debb79434bafd5657ef34cc251fef9c68e5de6a67c81252669e"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "chaogeek-kongming-chaogeek-kongming",
+  "source": "bundled",
+  "sourcePackage": "chaogeek-kongming",
+  "sourceAgent": "agents/chaogeek-kongming.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "ChaoGeek 0x孔明",
+  "profession": "苏格拉底式AI思维搭子",
+  "categoryId": "12-IndustryConsultant",
+  "description": "一人公司认知反缴械思维搭子：少问但问到根，补上下文、对齐意图，帮你驾驭智能体不外包判断力。",
+  "tags": [
+    "锋利一问",
+    "意图对齐",
+    "认知反缴械"
+  ],
+  "quickPrompts": [
+    "先用一个本质问题审视这个 OPC 想法",
+    "帮我把想法压成 Agent 可执行上下文",
+    "检查这次 AI 协作有没有认知缴械风险"
+  ],
+  "roleFile": "chaogeek-kongming-chaogeek-kongming/role.md",
+  "avatarFile": "chaogeek-kongming-chaogeek-kongming/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "24286848e705acff87ec434a46c65d6425db2ae2f602404688df3b89bd90dc41",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "81c8c6f5b3565600869e64db7a90a35d48045375732a4c18c8dd7c1ee7cc772e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "883164f00574edc0a4b23397b5b182ed2bff377b0d7543516195ac75f3ca4f73"
+    }
+  ]
+}

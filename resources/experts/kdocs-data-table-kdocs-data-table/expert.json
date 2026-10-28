@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "kdocs-data-table-kdocs-data-table",
+  "source": "bundled",
+  "sourcePackage": "kdocs-data-table",
+  "sourceAgent": "agents/kdocs-data-table.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "金山文档智能建表助手",
+  "profession": "数据建表专家",
+  "categoryId": "04-DataAI",
+  "description": "金山文档出品，专注接龙转表与智能表单，支持条件格式、数据校验和区域保护，省心好用。",
+  "tags": [
+    "接龙转表格",
+    "智能表单",
+    "智能表格"
+  ],
+  "quickPrompts": [
+    "帮我把这段接龙整理成表格：\n1. 张三 2份牛肉\n2. 李四 1份鸡排 3份牛肉\n3. 王五 5份鸡排",
+    "帮我做一个班级春游报名表，收集姓名、联系电话、是否需要租车、午餐偏好",
+    "帮我优化一下这个客户信息表，有些手机号格式不统一，有些行是重复的"
+  ],
+  "roleFile": "kdocs-data-table-kdocs-data-table/role.md",
+  "avatarFile": "kdocs-data-table-kdocs-data-table/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "be3f6ccac1cd7aafa1f3993bc214a6468c5bee99484cee8521105e82c059058d",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0d0647a85b1338d5c4663e56cb5e30181bcd8dc2fceb390fa196c5b36e6e4c51"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3755c8fbc292ef1c34c9e21a58b74cbce9892a966a45574d6b73448a7c21ac34"
+    }
+  ]
+}

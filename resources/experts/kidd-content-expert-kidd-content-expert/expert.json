@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "kidd-content-expert-kidd-content-expert",
+  "source": "bundled",
+  "sourcePackage": "kidd-content-expert",
+  "sourceAgent": "agents/kidd-content-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "吟游诗人基德创作专家",
+  "profession": "知识视频创作专家",
+  "categoryId": "06-ContentCreative",
+  "description": "基于深度研究报告，用基德风格创作口语化、反常识的知识视频脚本，覆盖时政财经、宇宙科普与科技前沿。",
+  "tags": [
+    "短视频文案",
+    "深度分析",
+    "知识科普"
+  ],
+  "quickPrompts": [
+    "帮我写一篇关于美联储加息影响的视频文案，用基德风格",
+    "用基德风格分析当前中美关税战，写一期深度科普脚本",
+    "创作一期火星殖民的科普视频脚本，宇宙科普题材"
+  ],
+  "roleFile": "kidd-content-expert-kidd-content-expert/role.md",
+  "avatarFile": "kidd-content-expert-kidd-content-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b4efcae27be1b293ec953f62590ebc70ed7b108cda462ccfa8f8e22036a036e2",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "66aa722101153c26e07b6e6c11b9fa6800e04f34fab81e227a984802ace428ff"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f206a2ff2c528d734386b936b359fefaa6a1761ffe8e202b6084fc20a6be3441"
+    }
+  ]
+}

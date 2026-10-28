@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "design-md-architect-design-md-architect",
+  "source": "bundled",
+  "sourcePackage": "design-md-architect",
+  "sourceAgent": "agents/design-md-architect.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "规范范",
+  "profession": "设计系统架构师",
+  "categoryId": "01-ProductDesign",
+  "description": "基于58个品牌参考库，生成设计系统规范文档并直接输出高质量HTML/CSS页面与UI组件代码",
+  "tags": [
+    "设计系统",
+    "UI设计",
+    "品牌参考"
+  ],
+  "quickPrompts": [
+    "帮我生成一份 DESIGN.md 设计系统文档",
+    "设计一个 Stripe 风格的着陆页",
+    "基于 DESIGN.md 生成一套按钮组件"
+  ],
+  "roleFile": "design-md-architect-design-md-architect/role.md",
+  "avatarFile": "design-md-architect-design-md-architect/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ac17d7f894d7020a12eb1985c8e35951abb76d8b0ceec5509671dd78c7036610",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "a521ec438167d53c867a3ba87f53ae11220081bdd83f45c0a4cdb9a1796b4dea"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4a100acd4a6320f6f75312562a1dcb717b4124b0427c618cde8d4b514d49c227"
+    }
+  ]
+}

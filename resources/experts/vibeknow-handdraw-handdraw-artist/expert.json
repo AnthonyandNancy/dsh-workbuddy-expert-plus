@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "vibeknow-handdraw-handdraw-artist",
+  "source": "bundled",
+  "sourcePackage": "vibeknow-handdraw",
+  "sourceAgent": "agents/handdraw-artist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "把专业内容画给外行看懂",
+  "profession": "VibeKnow 手绘视频专家",
+  "categoryId": "06-ContentCreative",
+  "description": "老师讲考点、医生讲术后护理、工程师讲原理，专业内容边画边讲成手绘科普视频，51种风格随选。",
+  "tags": [
+    "手绘动画",
+    "知识科普",
+    "插画"
+  ],
+  "quickPrompts": [
+    "把这篇公众号文章做成 3 分钟手绘科普，边画边讲，旁白配好",
+    "把术后护理规范画成手绘讲解，配上旁白，病人和家属都看得懂",
+    "用水墨风画一个溪山访茶的短片，出竖版，配好旁白"
+  ],
+  "roleFile": "vibeknow-handdraw-handdraw-artist/role.md",
+  "avatarFile": "vibeknow-handdraw-handdraw-artist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d9de61e2343bccdfb9c582bc7483582fe3d05acbd7ac6f8b5af6d9f0dd00c9ff",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "585956af113e8524139f6d51dc7a8f96e3d1fd5110e8aaf08927827bbfd5fb29"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d7b80ef9c48778bf23911041d83f9a59d4aa490ba4fb316700d41ef4db25f52b"
+    }
+  ]
+}

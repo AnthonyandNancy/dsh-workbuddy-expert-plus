@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ncre-expert-ncre-expert-team-lead",
+  "source": "bundled",
+  "sourcePackage": "ncre-expert",
+  "sourceAgent": "agents/ncre-expert-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "计算机等级考试专家团",
+  "profession": "计算机等级考试专家团",
+  "categoryId": "02-Engineering",
+  "description": "NCRE一至四级专家团，覆盖Office、编程、数据库与网络安全，分工协作，量身定制备考方案。",
+  "tags": [
+    "计算机等级考试",
+    "程序设计",
+    "Office办公软件"
+  ],
+  "quickPrompts": [
+    "你好！我是等考大师，团队按一至四级分工协作。你想考哪个级别？有什么基础？",
+    "我想考二级Python，零编程基础，还有3个月时间，帮我制定备考计划。",
+    "我想从二级C语言开始，一路考到四级网络工程师，帮我规划整体晋级路线。"
+  ],
+  "roleFile": "ncre-expert-ncre-expert-team-lead/role.md",
+  "avatarFile": "ncre-expert-ncre-expert-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "de089ac4343e854f08cf0bd9ff22d958f0eda5fd12717964c8ce4062bea968d7",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "134abcc926443689f154e1d9d57239db8f9856188e24cb17076490c2773458fe"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ba521f8ab77528cbfa9b94c3f76defc5951de8abdf4e4fe9c778d29320c95111"
+    }
+  ]
+}

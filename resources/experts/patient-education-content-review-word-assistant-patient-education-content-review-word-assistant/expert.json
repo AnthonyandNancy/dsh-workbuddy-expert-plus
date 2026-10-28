@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "patient-education-content-review-word-assistant-patient-education-content-review-word-assistant",
+  "source": "bundled",
+  "sourcePackage": "patient-education-content-review-word-assistant",
+  "sourceAgent": "agents/patient-education-content-review-word-assistant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯健康药箱-私域患教内容审核助手",
+  "profession": "腾讯健康药箱-私域患教内容审核助手",
+  "categoryId": "13-TencentZone",
+  "description": "六维度审核患教内容并核对数据文献一致性，审核意见以 Word 批注+高亮直接标注在原文上输出。",
+  "tags": [
+    "内容审核",
+    "Word批注",
+    "患教内容"
+  ],
+  "quickPrompts": [
+    "请帮我审核这篇患教文章，审核结果直接输出为带批注和高亮的 Word 文档",
+    "把审核发现的问题以批注形式直接标注在原文 Word 上",
+    "帮我核对文中数据与参考文献是否一致，并在 Word 上批注出来"
+  ],
+  "roleFile": "patient-education-content-review-word-assistant-patient-education-content-review-word-assistant/role.md",
+  "avatarFile": "patient-education-content-review-word-assistant-patient-education-content-review-word-assistant/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "32613e93a7e71f1c9444240383266ed4141c3a5796ab7c815ad99c592105193a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "ce439a01ddf84fd4d4905414ea995ae46d0049fcd4d6875730180fb37d9db4e6"
+    },
+    {
+      "path": "role.md",
+      "sha256": "656c58b0a4be24651d99e02dd23610b8d815781f7f90a1f2a617872c789d6a2e"
+    }
+  ]
+}

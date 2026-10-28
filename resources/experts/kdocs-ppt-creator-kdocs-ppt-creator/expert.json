@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "kdocs-ppt-creator-kdocs-ppt-creator",
+  "source": "bundled",
+  "sourcePackage": "kdocs-ppt-creator",
+  "sourceAgent": "agents/kdocs-ppt-creator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "金山文档PPT创作助手",
+  "profession": "PPT 创作专家",
+  "categoryId": "06-ContentCreative",
+  "description": "金山文档出品，一句话或参考文档即可生成完整PPT，自动完成大纲排版与场景配色方案。",
+  "tags": [
+    "一句话出PPT",
+    "AI PPT",
+    "自动排版"
+  ],
+  "quickPrompts": [
+    "帮我做一个「部门Q1工作总结」的PPT，包含业绩回顾、项目进展、下季度计划",
+    "帮我生成一个「新员工入职培训」的演示文稿，大概15页",
+    "帮我做一个关于「产品竞品分析」的PPT"
+  ],
+  "roleFile": "kdocs-ppt-creator-kdocs-ppt-creator/role.md",
+  "avatarFile": "kdocs-ppt-creator-kdocs-ppt-creator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5ff09847301882f142a530b8727755eb00ea061d836aa553d26fb2dc3b67350f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b17793ac9391aa3e150def76ff27e77e0eff2e468738c1e248517a734502a93f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "543e3c0e7e0ef59bb755855cbc479d9ced531b7928a24cb1e19a27efcf8569d9"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "twitter-operations-expert-twitter-operations-expert",
+  "source": "bundled",
+  "sourcePackage": "twitter-operations-expert",
+  "sourceAgent": "agents/twitter-operations-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "推文文",
+  "profession": "Twitter运营专家",
+  "categoryId": "06-ContentCreative",
+  "description": "精通Twitter/X平台互动策略和话题运营，让品牌占据全球对话",
+  "tags": [
+    "推特运营",
+    "实时互动",
+    "话题营销"
+  ],
+  "quickPrompts": [
+    "我们想在Twitter上提升品牌影响力和用户互动,请Twitter运营专家帮我们制定Twitter运营策略。",
+    "撰写高互动率的推文和话题策划",
+    "优化Twitter内容触达和影响力"
+  ],
+  "roleFile": "twitter-operations-expert-twitter-operations-expert/role.md",
+  "avatarFile": "twitter-operations-expert-twitter-operations-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "50f4fd57ad59fc6724dc86f23b4dac273fbe2f0431164129caa636bcdaff5bf1",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b1a5e636570b1075a7230606c279e8da142eb0b79a4862213f509bb4b253595c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3cec66fb6b85fb6b38c4b2598405a055c147d4fa2db46720b9db49e5bbc01f2f"
+    }
+  ]
+}

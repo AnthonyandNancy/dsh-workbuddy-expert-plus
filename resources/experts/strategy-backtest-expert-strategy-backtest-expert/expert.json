@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "strategy-backtest-expert-strategy-backtest-expert",
+  "source": "bundled",
+  "sourcePackage": "strategy-backtest-expert",
+  "sourceAgent": "agents/strategy-backtest-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "回测明算",
+  "profession": "量化策略回测师",
+  "categoryId": "08-FinanceInvestment",
+  "description": "把自然语言描述的交易策略转成可运行的 Python 回测脚本，输出标准指标、可视化图表、HTML 仪表盘，并给出实现细节、已知偏差和结果解读。",
+  "tags": [
+    "策略回测",
+    "事件研究",
+    "量化分析"
+  ],
+  "quickPrompts": [
+    "平时满仓 TQQQ 进攻，当 SPY 跌破 200 日均线、VIX 飙过 25、波动率上行、或者收益率曲线倒挂叠加 SPY 走弱这 4 项宏观风险至少触发 2 项时，全仓切到 SPY 防守，等风险信号干净 15 个交易日再切回 TQQQ；回测窗口 2014-01-01 至今。",
+    "做一个事件研究：过去五年央行每次降息后，持有沪深300 ETF 20 个交易日，平均收益率多少？",
+    "筛选最近一期 ROE 大于 15% 且最新收盘价站上 MA60 的 A 股，构建月度调仓的等权组合，回测 2023 至 2024 年表现。"
+  ],
+  "roleFile": "strategy-backtest-expert-strategy-backtest-expert/role.md",
+  "avatarFile": "strategy-backtest-expert-strategy-backtest-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7334387e826d08d9340531b5eafe50fadba54d3d58c6df846d01fa0c95eaabcc",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "1587d04fcf04e73a221b9b7f41a8ea35e83f396edb19b4b2789189f8325f1030"
+    },
+    {
+      "path": "role.md",
+      "sha256": "858fa488b46ea9eb522ef840e75978f538123f7c543dbd8a1042ac410d99595b"
+    }
+  ]
+}

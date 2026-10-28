@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "malaysia-marketing-malaysia-marketing",
+  "source": "bundled",
+  "sourcePackage": "malaysia-marketing",
+  "sourceAgent": "agents/malaysia-marketing.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "大马营销通",
+  "profession": "马来西亚市场营销专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "深谙马来西亚文化与宗教，覆盖消费者画像、品牌本地化、社媒投放与用户增长，生成营销海报与短视频。",
+  "tags": [
+    "视频海报",
+    "社媒投流",
+    "品牌落地"
+  ],
+  "quickPrompts": [
+    "分析马来西亚消费者画像与购买行为趋势",
+    "帮我生成一张产品在马来西亚的促销海报",
+    "马来西亚市场社交媒体投放，TikTok 和 Facebook 怎么分配预算？"
+  ],
+  "roleFile": "malaysia-marketing-malaysia-marketing/role.md",
+  "avatarFile": "malaysia-marketing-malaysia-marketing/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "014506aed3344f3ceb3b6e6edd6f9a7f4bab21997810a3dbcb3f01df422f56a4",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "a2ced31703f51923f87c084d39f624c6672558dcb322cb2ec4619eefd7382f88"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3c7b32e2d86846dace3854d06285cd0a75129b6061ece47eab2c8932f6d981e8"
+    }
+  ]
+}

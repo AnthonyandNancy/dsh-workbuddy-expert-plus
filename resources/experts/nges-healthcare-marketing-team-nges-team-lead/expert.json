@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "nges-healthcare-marketing-team-nges-team-lead",
+  "source": "bundled",
+  "sourcePackage": "nges-healthcare-marketing-team",
+  "sourceAgent": "agents/nges-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯健康NGES医药营销专家团",
+  "profession": "腾讯健康NGES医药营销专家团",
+  "categoryId": "05-MarketingGrowth",
+  "description": "由医药营销智能协调官统一调度的医药营销专家团，整合HCP客户洞察、互动病例生成、学术物料生成、医学内容二创、合规审核五大能力，覆盖从客户情报分析到内容生产到合规检测的全流程。企业版提供完整功能，访问 [NGES 官网](https://nges.tencent.com/) 了解更多。",
+  "tags": [
+    "HCP洞察",
+    "内容生产",
+    "合规审核"
+  ],
+  "quickPrompts": [
+    "明天要去见协和肿瘤科张教授，帮我做一个拜访前的准备分析",
+    "先分析协和肿瘤科张教授的学术画像，再基于他的研究方向生成一份可转发给他的物料",
+    "帮我审核这段医药推广内容是否合规，并给出合规改写建议"
+  ],
+  "roleFile": "nges-healthcare-marketing-team-nges-team-lead/role.md",
+  "avatarFile": "nges-healthcare-marketing-team-nges-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f2f0eff865ee32936dc1fb4315edee6b57cc369f23cd2519d2018000caf8385e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "cad5baafb512f76c95bb5bb0bb9b249029452dbff0958c654e9cd1ce372d6507"
+    },
+    {
+      "path": "role.md",
+      "sha256": "8e2e68af6063c2935fc11dbd73d5a72ee462f132000d1c11cc1ddadd3db874f7"
+    }
+  ]
+}

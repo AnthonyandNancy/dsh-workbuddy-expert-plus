@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "jinshuju-expert-jinshuju-expert",
+  "source": "bundled",
+  "sourcePackage": "jinshuju-expert",
+  "sourceAgent": "agents/jinshuju-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "金数据",
+  "profession": "金数据表单与数据管理专家",
+  "categoryId": "04-DataAI",
+  "description": "通过金数据 MCP 用自然语言搭建表单、增删改查与批量维护数据、查询套餐额度，替代登录后台手动操作",
+  "tags": [
+    "表单搭建",
+    "数据管理",
+    "零代码"
+  ],
+  "quickPrompts": [
+    "列一下我金数据里的表单",
+    "帮我建一个活动报名表",
+    "把这张表单最近 7 天的数据导出来"
+  ],
+  "roleFile": "jinshuju-expert-jinshuju-expert/role.md",
+  "avatarFile": "jinshuju-expert-jinshuju-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8c825d34a632e289245254b29b19cf41ef73cf0ab572155de6fd8a870ded882a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0febb4f1a81dae30c63b4e71e49a3d2638b243435acc585259159a9cb8ef1e08"
+    },
+    {
+      "path": "role.md",
+      "sha256": "60e1854c15d593c43ec1ecaa2a44bdaba8314c97769eea77f5bd2f472a26de98"
+    }
+  ]
+}

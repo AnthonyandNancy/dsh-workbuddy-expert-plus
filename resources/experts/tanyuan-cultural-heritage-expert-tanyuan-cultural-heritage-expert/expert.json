@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tanyuan-cultural-heritage-expert-tanyuan-cultural-heritage-expert",
+  "source": "bundled",
+  "sourcePackage": "tanyuan-cultural-heritage-expert",
+  "sourceAgent": "agents/tanyuan-cultural-heritage-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "文博领域AI顾问",
+  "profession": "腾讯探元文博专家",
+  "categoryId": "12-IndustryConsultant",
+  "description": "基于腾讯探元文博知识库，提供文物与世界遗产查询、知识问答、文物对比、文博攻略及研学方案等专业服务。",
+  "tags": [
+    "文物",
+    "博物馆",
+    "文化遗产"
+  ],
+  "quickPrompts": [
+    "曾侯乙编钟的音律体系复原",
+    "敦煌莫高窟有哪些艺术瑰宝",
+    "越王勾践剑为何不锈"
+  ],
+  "roleFile": "tanyuan-cultural-heritage-expert-tanyuan-cultural-heritage-expert/role.md",
+  "avatarFile": "tanyuan-cultural-heritage-expert-tanyuan-cultural-heritage-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a1512cf32c3de21d10dee4b8d590c2dd21d7be7ef5d5ce2eea6621ae656e53c8",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b6d5061b4dc03c91bf877f399facc2f7a6f4ec344e66aeb7f5c52f7ba911526f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "bf2c537780a8df86604b5662beb89742660d24f9a4e88cac80db2c182f5f7423"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "software-architect-software-architect",
+  "source": "bundled",
+  "sourcePackage": "software-architect",
+  "sourceAgent": "agents/software-architect.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "架构通",
+  "profession": "软件架构师",
+  "categoryId": "02-Engineering",
+  "description": "站在全局高度设计可扩展高可用的软件架构，为技术团队指明方向",
+  "tags": [
+    "软件架构",
+    "系统设计",
+    "技术决策"
+  ],
+  "quickPrompts": [
+    "我们正在开发大型软件系统,需要整体架构设计和长期发展规划,请软件架构师帮我们设计可扩展的系统架构。",
+    "制定架构演进和重构路线图",
+    "评审架构方案并输出设计文档"
+  ],
+  "roleFile": "software-architect-software-architect/role.md",
+  "avatarFile": "software-architect-software-architect/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "bb727a339c1ee7ea7552982daa901ec5694ab76bc4b32d9ce8deb6e5d18a90b9",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6c662d43def8f576d77105f670f7477ede52c257d64b985bf143c521d9db8f72"
+    },
+    {
+      "path": "role.md",
+      "sha256": "08c73154317fe8e46464e020c1cdec98a082325010494d815d64a464b6c22e0f"
+    }
+  ]
+}

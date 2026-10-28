@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "sg-hr-admin-expert-sg-hr-admin-expert",
+  "source": "bundled",
+  "sourcePackage": "sg-hr-admin-expert",
+  "sourceAgent": "agents/sg-hr-admin-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Sg HR & Admin",
+  "profession": "新加坡人力行政专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "精通新加坡当地招聘、劳动合同、薪酬福利、签证工签、社保、办公场地、行政流程和员工管理等内容。",
+  "tags": [
+    "人力招聘",
+    "行政流程",
+    "薪酬福利"
+  ],
+  "quickPrompts": [
+    "一家新加坡企业计划在当地招聘一名高级软件工程师，薪资标准应该如何设置？",
+    "新加坡办公室租赁有哪些需要注意的地方？",
+    "新加坡员工离职的行政流程是什么？"
+  ],
+  "roleFile": "sg-hr-admin-expert-sg-hr-admin-expert/role.md",
+  "avatarFile": "sg-hr-admin-expert-sg-hr-admin-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "866f00ed170dd866ac86df550a8adc4dcdcb2bbe9f8192c6b302c35d80cef9b0",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "5a5ed49225671e11ab6b8ee8f03a3b62039830d85671ca05ebd3f011045261ac"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6999470ea991f092b941e0b73b4dddca8a604d8811d840862fcb289dc151d978"
+    }
+  ]
+}

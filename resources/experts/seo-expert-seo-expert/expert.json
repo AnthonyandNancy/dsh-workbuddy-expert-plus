@@ -1,0 +1,1884 @@
+{
+  "schemaVersion": 1,
+  "id": "seo-expert-seo-expert",
+  "source": "bundled",
+  "sourcePackage": "seo-expert",
+  "sourceAgent": "agents/seo-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "搜霸霸",
+  "profession": "SEO专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "精通Google搜索算法和技术SEO，让网站在搜索结果中稳居前列",
+  "tags": [
+    "SEO优化",
+    "关键词策略",
+    "技术SEO"
+  ],
+  "quickPrompts": [
+    "我们的网站自然搜索流量不足,需要全面的SEO优化策略,请SEO专家帮我们提升搜索引擎排名和流量。",
+    "进行关键词研究和竞品SEO分析",
+    "优化页面SEO元素提升自然流量"
+  ],
+  "roleFile": "seo-expert-seo-expert/role.md",
+  "avatarFile": "seo-expert-seo-expert/avatar.png",
+  "skills": [
+    "fbs-bookwriter"
+  ],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ab0ca03f7f2a27b46d3b736f798a45f8cd5574aa64ede892d03382ca4da8eccb",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "338917cd8d6692c84f9c6f936c92bd4c090eaea632e2637bbb3ef9c71d7ed506"
+    },
+    {
+      "path": "role.md",
+      "sha256": "339478b54c0c8111aa33c5a284f760903479d6ed1df53d2963c258c97baec105"
+    },
+    {
+      "path": "skills/fbs-bookwriter/_plugin_meta.json",
+      "sha256": "72af86d70f4168a5f56667a4c3a974428b2c27fc56f70da7be18a715989b3437"
+    },
+    {
+      "path": "skills/fbs-bookwriter/assets/books.config.mjs",
+      "sha256": "1c0d93334d993062807e9be1d742fabe762e27dad45c6d65dfa5ec47e6cf16b7"
+    },
+    {
+      "path": "skills/fbs-bookwriter/assets/build.mjs",
+      "sha256": "7b536a9cbc838ff59ce261ac9c058b257d7371e5abd74e1ae3505c5767d92492"
+    },
+    {
+      "path": "skills/fbs-bookwriter/assets/style.css",
+      "sha256": "5be0f47337a021a0a6379b67ab50a7828bc6b647d636b260da179bcd083cd5f3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/assets/template-fallback.html",
+      "sha256": "8f23b2f3b5eb7d39b6c9bee23956a32031f2ad6e9fc3a64b45b7d51bb21345f3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/CHANGELOG.md",
+      "sha256": "537449debefac5d2a455ba41d5a2f067b06bee1806e80bac900fb47af1e277fa"
+    },
+    {
+      "path": "skills/fbs-bookwriter/codebuddy/agents/fbs-researcher.md",
+      "sha256": "c98dcdc9961ff53a03e8e65fc1c320d09ca2e1b66fba3e27d2c6cd61958f84df"
+    },
+    {
+      "path": "skills/fbs-bookwriter/codebuddy/agents/fbs-reviewer-b.md",
+      "sha256": "d902ef6a9a41a8d38b7d6c2bf8d628639ee35b0c0507b492ef4d4d220e93b6b8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/codebuddy/agents/fbs-reviewer-c.md",
+      "sha256": "2acf44de3122e675d97c4b957635fb3e0a605cbfc1e77b8cb7c0da0eae34ff4d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/codebuddy/agents/fbs-reviewer-p.md",
+      "sha256": "4e47e9262745bc9dc4f2e9b4decdfb0441e6d798d5bfe7b47e305b18fbadb4bd"
+    },
+    {
+      "path": "skills/fbs-bookwriter/codebuddy/agents/fbs-team-lead.md",
+      "sha256": "f9c5d401bfb63beb3a69ca842b1d96f95686dfd91914d82cea075de80b237962"
+    },
+    {
+      "path": "skills/fbs-bookwriter/codebuddy/agents/fbs-writer.md",
+      "sha256": "de21d2934bc22928c4f52af7ac42a215fd156d3a8334eba49a3b3291fbabb637"
+    },
+    {
+      "path": "skills/fbs-bookwriter/codebuddy/agents/README.md",
+      "sha256": "0193a4b7c47895511672a4b2d2fa0438b42527c4f553a2e349f39e2a413122a9"
+    },
+    {
+      "path": "skills/fbs-bookwriter/codebuddy/channel-manifest.json",
+      "sha256": "cca227632a1afc8420762a8af76562ed74af43eb7302d8585387eb67dd07f4b6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/docs/history/README.md",
+      "sha256": "d23064d630ed480bff52ea04f298c63e8d3d5c3f255b03b50be6782f7e85add1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/docs/history/SMART-MEMORY-ARCHITECTURE-v2.0.2.md",
+      "sha256": "6ef58f4367fe3155fa9754c9eb52bf4f120d95fb50bf343b5f30216a9ee733aa"
+    },
+    {
+      "path": "skills/fbs-bookwriter/docs/history/version-baseline-v2.1.1.md",
+      "sha256": "8cb8b4d06d53b1facf04c7f8baba8f450ac86f5e623a8730318d6d23db559597"
+    },
+    {
+      "path": "skills/fbs-bookwriter/fbs-runtime-hints.json",
+      "sha256": "098f6d2e022f1eac48c3229663252024b9f1afecaa41f7d44af54a63eaf8cc61"
+    },
+    {
+      "path": "skills/fbs-bookwriter/LICENSE",
+      "sha256": "f341ce4afa2aa7f7b5ac5cbe345a512113f88e4129514d60ce6ff346bddaddc1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/package.json",
+      "sha256": "546397be6161867c46e04567b2a4f5020a0f53a744250db9e0b2f9f85e7adbb6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/README-v2.1.2.md",
+      "sha256": "7a125719bbd8e384fa0f119e961b812764733fbf659efabf6692875c6f4fc66a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/brand-platform-convention.md",
+      "sha256": "463f87e12fd70aaae267ac7cbe8da0dd029d58d9e2e448ccebdcb04b5cc58769"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/documentation-layers.md",
+      "sha256": "17f1013a7cfab65190c9eb66851dbfed776bc93a725d9f3ddc35f9621040fd07"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/execution-contract-brief.md",
+      "sha256": "49373391fb178656bda0c3e2570893851d57b6ee835a775ba6cce827617d849a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/expansion-fact-tagging.md",
+      "sha256": "db24c2d773f142eeef570d768899c51152bfc5e975debe292adbed6f1e952dbb"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/information-ownership-and-arbitration.md",
+      "sha256": "7b31901548b766959e1860372ab04e233e412cbcbbd4a01dc6e05de03def4905"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/intake-and-routing.md",
+      "sha256": "5663adf6324bcfb8d146e56683c5d5cc4524e22508f5d92463498866b7cc3f1e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/intent-canonical.generated.md",
+      "sha256": "1535b892ed6bc7fc609bce19344df8e6bc336327c02b4e6162c3899c43a3e2ae"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/intent-canonical.json",
+      "sha256": "5950ae11c6ea2e7a08b0d08ba66cbda82e3f0e01011360d2894b4d7c672e6628"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/intent-capability-map.md",
+      "sha256": "671de8a196ea25d2e3c76be4b355c2c12a328abbffff655a1f646197346aba5a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/memory-layer-matrix.md",
+      "sha256": "ff491edc740cdce01b1ffdf18778e1497a7478bc50466e10ebea382f85b4b2fa"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/offline-online-upgrade-guide.md",
+      "sha256": "70619394ff706e0935d72d3b5657e17d1290452d183a650172d279470e0ce066"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/outline-freeze.md",
+      "sha256": "86a8dbb61a050d995a39be677826b592a306d2f3ddfb9d6d46cf1bd3d5c9b7ac"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/qc-agent-briefing-template.md",
+      "sha256": "e6dbeebd8dd7283c87d36af92cc321f0a43718c9c8bf0bf6d383e2713e1a6181"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/runtime-mandatory-contract.md",
+      "sha256": "f6800fda38a5b4a893846e2fac7b894ea31e3ba78acb96e75b2b62fcb381c925"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/s0-material-phase-guard.md",
+      "sha256": "0283b42fcd535b42692d651b8ec744c4d546f54ccc9916a31ef2a99a33f00c5d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/s3-expansion-phase.md",
+      "sha256": "f3236be1ca8bf484a809c9feb146d9a8ba9ed56bb795c081289065ce2387c82c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/s3-refinement-phase.md",
+      "sha256": "a1d3fd104c7a050821fe9b51ead6231b0728c5f29b93678b509212cd21d90a53"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/scene-pack-activation-guide.md",
+      "sha256": "a4067dc11060936cf6f03931b47a73f45ea04aaa9b0a6e94aebc84a959785e8e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/section-3-workflow.full.md",
+      "sha256": "a3dd34ce569ca8abf10bb7c7b6ca772f9cc0b84647fd92042f42c894b492d7bb"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/section-3-workflow.md",
+      "sha256": "79f024cae4548690b70a0ca4acffe59dc057313f889a3cdc0baff22af8dc7569"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/section-4-commands.md",
+      "sha256": "9a07eca9ff231c95429722f6f4760a4fceafe222bc0b45f7c7d65889f94682bb"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/section-6-tech.md",
+      "sha256": "f54fdf935b8060cb510770db051b6fe41889aad6cfb702dfd124dd7d27ebb713"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/section-8-onboarding.md",
+      "sha256": "efff96cc62960f91041c122f3a23ecd04d6a3a8aaf198e30c6d66896e2b89dd6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/section-nlu.md",
+      "sha256": "5a5a1f6212649d6ef252186e83270bdb61b74a8a875144224517d4cb2a64a296"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/section-s6-transformation.md",
+      "sha256": "1153e028a26ef781d53b9a4d77c456c7716cdcc07dbf112ae848598b9c5dec98"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/session-protocols.md",
+      "sha256": "7478ec540e82038adbb88545052c0f01ff6e86dd73418cc278739fc746f99189"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/skill-authoritative-supplement.md",
+      "sha256": "7aa98e05db99cec224d07203eca01247714553d21acc2b51c26a0e6ba75f49ef"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/skill-cli-bridge-matrix.md",
+      "sha256": "29abd3967af7bd0dd67b6079b4c57bad64c6f4b8ed35e99fba120cd207443c8b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/skill-full-spec.md",
+      "sha256": "51632697773fefb59570723d432012ec296005803b614632d3a87f998ffd2e45"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/skill-index.md",
+      "sha256": "d1ce15baefe06e671814762bb1a0ac739ed93b379e94296dc001139cef4e4384"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/ux-optimization-rules.md",
+      "sha256": "eda2e44baf6c3d68f2322deccda15163c9cfd317ed0b0f99bda24bbca3f5c3f5"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workbuddy-agent-briefings.md",
+      "sha256": "e3e1a02893d7ba39927fcf201eb7fa8c4cc8501b40bbbcb65766d3b94c5abd90"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s0.md",
+      "sha256": "01b5492b3982339b01607fce00b7f1016af7e5e566605f51e671b2ca513fbbd1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s1.md",
+      "sha256": "9fd426aa833d7f3981bb4b2b032a409e602caded5cba5f7d21dfa44fad7c0201"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s2.5.md",
+      "sha256": "589d58c158d5c1898f392fce5d09fec31592b65f32657b2dd656a64a659a55b4"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s2.md",
+      "sha256": "74b47a0a8d85bb9dce97417f9d52da2bb83104b3802abf094678f3c4599cc3cc"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s3-closure.md",
+      "sha256": "8f6aaecdd1e0a59a3a14290b26c83504869c549b4e1e00f21d6d05d6cc284b52"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s3-core.md",
+      "sha256": "aa1fee2623a4c4e1893ecabb66ae2296037e98cfd332bf1f413c28a5941415f9"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s3-writing-guide.md",
+      "sha256": "b7d308d994754723fa81d5b9098da331c0a6f2fe47f25cb04caae6d7c2be0c2a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s3.md",
+      "sha256": "4b8ca3a37ed7907a164153dd6d2865e6cb24d95c529e13e17d9d45a4163f8672"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s4.md",
+      "sha256": "24f89a1a9e8927063c6b5f7ecb8e21622ee4bcb6524ba78fa71b8bf8c8d58c5f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s5.md",
+      "sha256": "500161898a9802d4bd4d1c1ac983fe07109ac5643a91525d50e3cc4abc307b91"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/01-core/workflow-volumes/workflow-s6.md",
+      "sha256": "4581f19bbd0f428dc5c6ec3b6a12b7d7b28e8a504784df38e9c124ad4b5cf3b0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/abbreviation-audit-lexicon.json",
+      "sha256": "252813eb12ab29bb02580302e318be1ee7fc820447f54f88ae0e9ef37b0814b2"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/ai-pattern-lexicon.json",
+      "sha256": "af3cfa1e8fe38b7d47a1abe3a159452a0bf2d126d2d1d3f7d176ad3d644f79e4"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/book-level-consistency.md",
+      "sha256": "8b6d4ae97b589a237a9c7d512d6728297b47ec78418409f4a71a1e61a546c8b1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/citation-format.md",
+      "sha256": "d06fd1f668890652ffc33416f6882950f4d4ae5f832e598836dfbc8ac728d177"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/cross-chapter-consistency.md",
+      "sha256": "02eb3cc937f3e1ab6feed7731bfb46e3fa8316f134e0082703082ad29903a566"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/genre-completion-checklist.md",
+      "sha256": "94105365baa40f5652bf748eafd4e3171a96f53a9479cd21c018676d6e5e8c38"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/metrics.md",
+      "sha256": "12c2a5307d8ec4b73c6a883a4b27a888246eddf928b8a3f0c4d179a14d0ac9b1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/quality-AI-scan.md",
+      "sha256": "f846065887644bcd7fc17dfa2204dfad6fb3472703d7c06f07361bcaed7ef732"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/quality-check.md",
+      "sha256": "5cfda4c7a46b8b4248cda18e61914ccd66aa6ab86716e2694a1d7a1dcdc7486b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/quality-PLC.md",
+      "sha256": "e0c7283c16d0568f4a4df4c0e3e40335ef48158c8c76aa718e59f388bf269b6c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/quality-S.md",
+      "sha256": "0f9f72cbd82d432bafe7a248bfc4b215be0d92dac7f2ab4bece97695a22b9158"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/s2-imperative-lexicon.json",
+      "sha256": "8c5fe32a6863bbb2ff9c104c2e6cec337fce61bd8bd9a96b06399d2f73f10e4a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/s2-quality-machine-lexicon.json",
+      "sha256": "2c1f7f2026605793baba497808ca63a7ca4c4ca9005077dd29ae87c66e7e7c3e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/s5-buzzword-lexicon.json",
+      "sha256": "d159ed5930a83b55c2178f269496d0cce4e4165bfc5735e6e291e5351b49dae0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/02-quality/writing-phase-alert-tiers.md",
+      "sha256": "93a9e1e285123489d9920e94af647f4dbaa680c2e91eb786a9052add0dbd0216"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/01-user-install-guide.md",
+      "sha256": "e5631ee98f2e700f4466ff74b89a30dd0d97eb844a68ada66c35b67209c3cdda"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/04-templates.md",
+      "sha256": "27d91294f83ce7d72099c275b4e4dab6278e767dbd6f67f66ed85822040ab8e6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/06-typography.md",
+      "sha256": "1d6cd393df35a752fa8850ccced60f0152d413839960bd300bd8765cce04f1f4"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/07-ux-design.md",
+      "sha256": "5258ff03ae404c8271426ec915600169016249d8fc312d5160bbe133ad1b8c1a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/08-visual.md",
+      "sha256": "3573cf23e4acaed94e21c25b8d747f2a1c6511000672559a99881ec237aeb70d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/10-case-library.md",
+      "sha256": "a2210c7ef9f05c11f8ca2b15b4df2d83e885f901409871a597867de844eea9e3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/fbs-value-one-pager.md",
+      "sha256": "c458acbfa003f4c72dc044cc0ea7bd28c48f1b6c458a59efeb7b00b4a0313194"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/lexical-editor-guide.md",
+      "sha256": "bf03c07a72dac60045269af6c7942a918afab210c18613d64111da6eca27152f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/mermaid-templates/flowchart.md",
+      "sha256": "57b82c71bb1ad0326581f921d78ce01fdca9ce171cbb8d815b5cf4c38cf93878"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/mermaid-templates/gantt.md",
+      "sha256": "39e9287c0a9e36f87fc31979341ac1117a5eafbfd1d024801c1d75e7a60354b9"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/mermaid-templates/mindmap.md",
+      "sha256": "5b5d788e6b317f68b3f4c119ab132d2af2ee5b977a7a9d2d1d7d501b57661870"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/mermaid-templates/sequence.md",
+      "sha256": "9acf7f995b4ba13288e4a7a89f15e372a2857fc6f15da732a5b6150f87104128"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/mermaid-templates/state.md",
+      "sha256": "3a3fadf5228a532ed82365efc3c82091c8f155c5aaebed715e7448f6a97a3f18"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/03-product/mermaid-templates/timeline.md",
+      "sha256": "d26de162c7644548f27f6540b4eeddc749b7da401984f28dd46325c513542906"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/agent-task-strategy.md",
+      "sha256": "9c80131fdebc9b21ec6b60b07d642c0060afc5642959e5eb44a3fdebda525723"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/anti-stall-guide.md",
+      "sha256": "edc7597b131e01250f7f5aa12c090d704d692de02debab783bd7aadfcbb6ad1a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/audit-optimization-summary-v201.md",
+      "sha256": "2b9987eae1a377fe2b9dfec181ccf9669d812318aed458fad0ac61b7c68d2cca"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/brand-outputs.md",
+      "sha256": "c2fd5f8843050577dc513a31f0ee531c7963627629ab10365d42c207f48b3f94"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/cognitive-asset-threeization.md",
+      "sha256": "bac4ba25ba98662e7c7069b570909a9dee8c9cb83568bbf648570f5c5bae3306"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/credits-guide.md",
+      "sha256": "8333ac78b5b5f4cbe4317a3ee8c1f24b3fdaf3715e3867f4cacc24a55e623565"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/delivery-guide.md",
+      "sha256": "8720b98e70a6080e311856ff30f6bc714cf216819daf3635c5f2eecf702739da"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/entry-state-machine-ops-onepager.md",
+      "sha256": "66e39f8759a4d8784884403d24bf4cc5eeb398d5c4347194b76a223c36d0fdec"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/entry-state-machine-tech-manual.md",
+      "sha256": "b417bf7b9d9a6ae6a2daca0ca459d967373c3a994c9db97cbdb3d7862d4b60fd"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-auxiliary-tasks.md",
+      "sha256": "8e62b33ce876d6b5c089c4471492267b81f0a31e3bad7ea4501e3e87648b2ecd"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-context-compression.md",
+      "sha256": "76809a76f14b460d5e53b5dfba09e705efdfe92712f5d13f3df1a5ef5eb09ad5"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-continuous-improvement.md",
+      "sha256": "24bd30e4ad61a53809681a214d804e455356f40a859f982640b67610f79b4f02"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-final-draft-governance.md",
+      "sha256": "f41f80d640efc123e7dd204a75fe63f086e014f4b576de1d8d13950b64c9aa2b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-narrative-gates-and-parity.md",
+      "sha256": "690ced65b8ba395a9c459f8ae4b7e19a77d8b75afa9becd1ee1a1e3f6ac96d98"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-optimization-roadmap-spec.md",
+      "sha256": "c97a4a4a3abeca7faa1e18a8ba78f652bb23a8d5f3c95b24ed78fcd511d2fec0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-performance-ux.md",
+      "sha256": "4bcb9dfc45ada4ad8ed5421d38e12071a4941107bd4e8b0afe0a018b75f66b4a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-run-retrospective-template.md",
+      "sha256": "8e1ea20c1e2f7186ea615ce369e68c7bb6bbbc444376f495081e212f1fdc8730"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-source-of-truth-matrix.md",
+      "sha256": "1471f3e4b5f569abfc30daf2b974b879b2d52ad39178d9a0e6f8bc217924f212"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-subtask-contract.md",
+      "sha256": "28624579b84107716b4fdbee6b96520e985355f47864bfd5f7a0a524de83b48d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/fbs-trace-events.schema.json",
+      "sha256": "c2877dc761e149fcfd0480178d783a91f434ff63993de0ca727dd8f851b555c9"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/host-qc-and-fbs-reports.md",
+      "sha256": "4efe66fd0f8806b225c5cf84ed9289ac18afe62a38bc5c115d35063ecf97e4ee"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/html-deliverable-gate.md",
+      "sha256": "48aa210455ed20259547a567110503ac09bc9caa509a70e6cabc2e9dfaae325c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/large-scale-book-strategy.md",
+      "sha256": "2a2ad9e5e286d4ddb027cc1cd7f94ec5ec3570628cab69c8ed34b577ed94ce65"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/lexicon-governance.md",
+      "sha256": "be917d96f1ad70e9f7a14d2d75f97d294bfbad33b986540da13e752939a2df0e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/multi-agent-horizontal-sync.md",
+      "sha256": "c48f578853c40ead8462356185c1a1c71478680039faf1684f3b7cfa4a5a5a6c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/offline-fallback-guide.md",
+      "sha256": "26e968015acb4db1ea92c33f0a2847dace20a07ffcb817af03a945bb0bb599e6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/optimization-complete-report-v201.md",
+      "sha256": "695a1a0c98ff1ee1b5ec873656ba699a9c99c24d285bc8205daec600969196c0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/phased-quality-improvement-report-v201.md",
+      "sha256": "c67497f6ab742f5487a5a55b011297f709491188a5e8fa787717729f7a96c2e3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/platform-ops-brief.md",
+      "sha256": "fff6924b7ca7c7cbe2f0f1b95f0e8fd89a64843bea0a5a480af4f4f82b8e227c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/promise-code-user-alignment.md",
+      "sha256": "048e1546f51339f7e1b2f4ce9702ca86aa4c46afe3f8c28856391fddaef0051a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/quality-gates-brief.md",
+      "sha256": "c833ef5ba6b14e787236a59492a76286647114db8f980a60de736d4965e0bb0f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/release-checklist.md",
+      "sha256": "c8c402111c4f3391dc13a2680ef1d08ba4fe7b91cb46c21bfc3fb5fbb08d093b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/s3-write-constraints.md",
+      "sha256": "a3e341b18700bc9ceefda9af009138da54601695ab600e21cab51a273595299b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/scale-tiers.json",
+      "sha256": "b18e9fc1ebf3453fed71d5658b071912d577dd043e4a6c8ab2cbeda1c503a1d3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.json",
+      "sha256": "63c31b4ab096a56382670389f4e95ae96eaa4581095e5f5478f625e9ee7b2598"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/01-core.json",
+      "sha256": "e1567ae200a8613a873a993af7614a6edc4eabd05789f5a64e9280b0782579c9"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/02-stages.json",
+      "sha256": "3bedc621588d72923a968d8a4696667d27c135206a6d3a0f19a93f8163a1d3d6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/03-topic-memory-env.json",
+      "sha256": "cc1bc1dbcdafcc236290dcc672a633cf7bae5e1f8090cfedb3e370a40f1df41a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/04-entry-workplanes.json",
+      "sha256": "1c6c765665c2142c5f6df5a219618a96f2a4d93ebfd5f3f8a382d462bb10c952"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/05-s5-smart.json",
+      "sha256": "757cea62b646ec61982a658d09f4f25357d6b6f7db630ed1db25d142db204380"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/06-chapter-s0.json",
+      "sha256": "e8841a49dd9c3d56d5f71f6972da94cf532ff9d7dc6f99ed621602974162e53e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/07-quality.json",
+      "sha256": "3e1a6f8626bcc487ca28e416fc86f5628a3e3bc7e6c34eaf44f317e43dc7216e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/08-access-budgets.json",
+      "sha256": "31a1912153694b0f6d6a40784cab0c9550d10cc128f017bbabecf5f07d9d3989"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/09-writing-gates.json",
+      "sha256": "1baece846ce0e53617b95552e1b9ff32eed307da4b8866ee011a6cb39c8485f5"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/10-material.json",
+      "sha256": "884c3783c4de03c2f39cc23ef9e2b0ae12cf9e690676f45675e7e1abc6fc9183"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/11-temporal-esm.json",
+      "sha256": "96c66ba4800d117600c601774aa7493cdc4433b439b7d74cde90f1266a5e1753"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-policy.parts/12-index-routing.json",
+      "sha256": "9da681b821dfa10b47860f63d1726fa0ee835d7de9b5fbfa1a84cb6bd00fc326"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/search-preflight-contract.json",
+      "sha256": "cefda4e4207dd1389878af738c5f6a531b628e9748ec3f754d3d90389296564c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/teams-inbox-mapping.md",
+      "sha256": "43eddd05b0b03419ec6d381b19c304c2523df43d1025fc566d5e74dc4c8182c1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/template-narrative-context.md",
+      "sha256": "c2299c5414b057d5726c4408cc5060b9419c3c3406a8908d6a4414ff59a18007"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/template-reader-uat-checklist.md",
+      "sha256": "91423c423dff3a7550ee1fb854c9b77712f8e922a3abe00f0177541fc6c47743"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/temporal-accuracy-samples.md",
+      "sha256": "6f1c8c0f874b9ac6bb35ad46643898946d82ba266ef1b5e7f65a611533ec4a71"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/ux-agent-playbook.md",
+      "sha256": "4858d1b11a257b833a7659e8a1155648a1288a213ccbb8a28b2df9fc96017c2c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/web-search-reverse-verification.md",
+      "sha256": "8585cf13e5f45938dd73417b95489727ea10cbc7d6899797b322ef1ad55b6e25"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/web-search-strategy-deep.md",
+      "sha256": "3f13716845956bdd1f5a5fb03d6376b9a4e72dc329cda8f47ce78496367e5778"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/windows-host-cli.md",
+      "sha256": "04959355113c2a6e764bd0367311aef73136f94f214ef599ef8a1bccb28d5370"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/05-ops/workbuddy-delivery-tier2.md",
+      "sha256": "6825db4c74d002199c412f59227cf95e97f9b67f1686d27900d056140beab18d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/06-plugin/plugin-bus-spec.md",
+      "sha256": "ea7dfa97173082a20286aea3923c23c1fb93318fd17c947c8441a6754de010ce"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/06-plugin/s5-full-delivery-sop.md",
+      "sha256": "16feceb27d89ed5c692acff9e2c041f9932762617c419fd34ce106326712139e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/06-plugin/tier1-marketplace-faq.md",
+      "sha256": "f64e4d9e20bae664cd9ab1e821da56386d20cb72261e23ad25e4c5db0b601b0b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/06-plugin/workbuddy-host-integration.md",
+      "sha256": "26d514d45ec8efc24f86736efaf5cafa883b9a505e31e65fed4a448a449825a2"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/bibliography.md",
+      "sha256": "720dd49ccc475cd26108f161d2d725fb91b65878567c64137636d220bdace35f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/consultant-local-rule.md",
+      "sha256": "eb33d4d34f9e794953868b3a377d2402b2088ff20c949fb466e3899a3f98e75d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/consultant.md",
+      "sha256": "256a9d66373c719e7053b4928bb687d3a0020e95b2bc0e47ba3af352aaf9b7e8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/genealogy-local-rule.md",
+      "sha256": "41d5fc4a4194024b247f7d2f09b6dfa9caa23ab915aacc68f9bba399c1b84db1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/genealogy.md",
+      "sha256": "96daf73596b45c0189ac838be53c2fb8209d41cb0896ae28e221212180f34197"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/general-local-rule.md",
+      "sha256": "8aa85cbb3c0a488a689a5652674d75c49084b9cc1eea1599d4d15c5609b26d9a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/general.md",
+      "sha256": "a2680a3b515f28edf4a8a9cf733fdd940c26008c9f1ac13afce1959ab8884dab"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/ghostwriter-local-rule.md",
+      "sha256": "3d513c052907cc0e4cdca0fe7902f4e28bbf7b3b77fdf66a5780fbfcf20e5747"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/ghostwriter.md",
+      "sha256": "8643c464297cbbd0a3458e0f16180f3b52ab960963f0d01cc71eb05ba8e257ad"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/personal-book-local-rule.md",
+      "sha256": "280c769d3c2f696830c50f22b71bdb55f175668ef94d3885cf540121cdb82869"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/personal-book.md",
+      "sha256": "bc3a1044a83a303935fe874a9e39fd70ba4ac4eba1a5e8a0dff6331647fd4841"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/report-local-rule.md",
+      "sha256": "4d65ca2404c9ec7b146b05e3ca1c0ae6562a9c102c6c0b6bd45895fbdf44babb"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/report.md",
+      "sha256": "3df503fead9f1d7bd7ed6a83af8be1fc7c28a162d90f71f5b7055aec7658cc3b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/training-local-rule.md",
+      "sha256": "ed468d0543b7b9f3a2947007972026e61f2a07e115b357f799ed8b18e9c0fa50"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/training.md",
+      "sha256": "24d0ba71a3292c626297064e513e26608ba1117c8605ce82dabb58ede7a287a8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/whitepaper-local-rule.md",
+      "sha256": "b4d8e9ca91707a174f02e8291016fc05bf5d85a8f299670dbcb3a545923bfed7"
+    },
+    {
+      "path": "skills/fbs-bookwriter/references/scene-packs/whitepaper.md",
+      "sha256": "47edfe387c244a6327eb1becd19aac6b94902a3321e00a9f9a43bf7e3911c359"
+    },
+    {
+      "path": "skills/fbs-bookwriter/releases/codebuddy-review-v2.1.1.md",
+      "sha256": "e666d683f8c50c521d832cae0b6c7a80e28ea318b28744ca615f807e65abf474"
+    },
+    {
+      "path": "skills/fbs-bookwriter/releases/codebuddy-review-v2.1.2.md",
+      "sha256": "9369695b7d1e9a7ba08d688e4bc5ab780b8b61402adc32c204442bcb6a818733"
+    },
+    {
+      "path": "skills/fbs-bookwriter/releases/hermes-agent-benchmark-to-fbs-improvement-checklist-v2.1.2.md",
+      "sha256": "30a942902ce1f578778a8cc177ce90d90ef2cdedb91c25f0a2b60bf3bbec0113"
+    },
+    {
+      "path": "skills/fbs-bookwriter/releases/README.md",
+      "sha256": "c4b3c1ddf62c6f630574f34a0d798fd8d5d98fd309711e1d48216b59481944f5"
+    },
+    {
+      "path": "skills/fbs-bookwriter/releases/workbuddy-integration-checklist.md",
+      "sha256": "dfda9c11497e75a982fe661869d3f81c8dc955b884d5f21c1697dfed1e730752"
+    },
+    {
+      "path": "skills/fbs-bookwriter/releases/workbuddy-review-v2.1.1.md",
+      "sha256": "1a7c73098cd65db582b255f21ccc8bd86a8aef9690a46f7bc8c421a8b1a5e64a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/releases/workbuddy-review-v2.1.2.md",
+      "sha256": "3a7cdccace9bfb11708eefb561e97c7bf39edebd9c921a23722db21b34f56cdf"
+    },
+    {
+      "path": "skills/fbs-bookwriter/releases/workbuddy-writing-first-os-implementation-v2.1.2.md",
+      "sha256": "5db5b4485230cef2d85ae5327c634c5424bf78e2e5339d108b382ab2e8201030"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scene-packs/enterprise.json",
+      "sha256": "7c7b3850a019b03010ecd208b233c445b43405ced988adf9b53d9ee8e809b959"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scene-packs/official-schema.json",
+      "sha256": "406360326918e91dbd08b27e5413f48f40c3cb31229ff89d5538848ac9902a8c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scene-packs/registry.json",
+      "sha256": "a40791271e91a21c359bbff53571cfde7dc506d9c0b0261dd97955926f69ef44"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/_deprecated/nlu-optimization-enhanced.mjs",
+      "sha256": "2608edd68d323de2c4f92fe9d1e9ea0961ab0da44f5cb0290837a5cedef1e311"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/_deprecated/nlu-optimization.mjs",
+      "sha256": "2bf88761a81da0f5377681a82320c97972e4edbf5c88d2b672ab6147168e6156"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/_deprecated/README.md",
+      "sha256": "a865466331a0b58ab0184b08b8f8fe0447b3846e133c39ee00079afec48b9ba0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/adjacent-chapter-similarity.mjs",
+      "sha256": "5c87181b1137b11ebe79d994f52a6611d93287e74eba3da48c6ed3e4725f3fff"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/agent-base.mjs",
+      "sha256": "7856cf604c2b11b38ab36b07421d4831346baafaf19f40666f364bf46864098c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/agent-pool.mjs",
+      "sha256": "99df009631d842cf41cf9ccf28d4c63867065c5bca809f390bdb04e6ed9820cd"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/audit-agent.mjs",
+      "sha256": "e46a7ba11a6251a1d6dc45cd8eda1bf89f996f7d1cb07ef4725b51759531a77a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/audit-chapter-brief.mjs",
+      "sha256": "9ca7b17395d74081eeef526087aed0b38e1333ebfe6caecb278b107bf562c48c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/audit-esm-self-check.mjs",
+      "sha256": "634b77aa19537278a228b6bcd69dbb4ca93b1d4f3e996ff94747b21a425f2c6b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/audit-query-optimization.mjs",
+      "sha256": "2eb544e6e3cde2073bed3443328365f64b3ad7d832181f258511ee856108324a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/audit-report-brief.mjs",
+      "sha256": "29b00848914e59783c2a2ad598719f827ef7dc3f5c16c1dbb0ba6d9ec9ae0fec"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/audit-state-transition.mjs",
+      "sha256": "1490d3e0e3249ebb3ce9799ddbf93ec5c896d0073f0f12d5e8bcf53fc2fcbb60"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/audit-temporal-accuracy.mjs",
+      "sha256": "80bdc8ea9d1666b480368359872ce246d52a63c05b24aa1d923fa8ac4a3c89d3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/audit-term-consistency.mjs",
+      "sha256": "5ec05bfd64af52a6d636a75a17c0957ba0f357bdf185fab06e92806d96720130"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/concurrency-controller.mjs",
+      "sha256": "9c9c23538e25fd64ec7bd258e7910095b03228301f47fa5479f9d7bca982319b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/cross-pipeline-coordinator.mjs",
+      "sha256": "658153cb7c59bece2fcf577b26a7be63177a18e4d62d320edca2933ad362095f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/deploy-agent.mjs",
+      "sha256": "f4e09aec2297ae80cfc2c4c52e1b3b4c30e14acb86c51e6d9a3284515dd4d531"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/esm-orchestrator.mjs",
+      "sha256": "e58725507a91056bbf5af045f7ee62dcba21fda4409ce793747fe0fcc24bcc2e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/esm-state-executor.mjs",
+      "sha256": "7f8201822017e06e1c5a2bf89981b214265d52021ffe4faebe968d982eeffcbe"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/event-bus.mjs",
+      "sha256": "fcd1738156c0e736bf11090fe69cc7fd9264ba89046158ddab0d644c29a59969"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/event-subscriber.mjs",
+      "sha256": "6b8463728fd19179354a9bc466bc319708f8ba398c1091a771f5ff9b31091795"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/failure-recovery.mjs",
+      "sha256": "46ecc648d6887dde69cd20844fcdf97c935552c3280067ee19d82b759b037adc"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/fbs-reviewer.md",
+      "sha256": "d55b6c143f08e5ac3261e6dcbd37e021aed4ddc1ce92b14b0346d1589312b995"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/fbs-writer.md",
+      "sha256": "44b3117e342f4ddf121d774255c5a300da0c31e8c44a8d2da3db7704bf9da2df"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/load-balancer.mjs",
+      "sha256": "5cedf103b14595d8a5b317296b15c7172b4a59259775fdebc9086edd046fc2ea"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/parallel-orchestrator.mjs",
+      "sha256": "c0bdd2df371ff9f52adae348beccf11b8e015a1d85b8a72be7d5e13d8cee6a07"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/performance-optimizer.mjs",
+      "sha256": "a6a264b383334c33cd6f9ec604cc119d4f8334b063b54a01b4ee6ad6fc82ff1d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/pipeline-orchestrator.mjs",
+      "sha256": "833ce936e5ab852b58e88865ae70f59c13483dc0d07276285ddee033b4ef18d2"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/progress-monitor.mjs",
+      "sha256": "c6cd802ef01d7c6a7a6ed0a993135bebcafab130dfddbaff21b92b672bf08102"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/research-agent.mjs",
+      "sha256": "2d830cedebde1b8ac5d6c5694e1ca5ead6f692df1ecb9eae01e41319efcebb9c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/review-agent.mjs",
+      "sha256": "606a0de29bd8d9b3abd0e35aa5d87dff81e5f093b499dc5c88493087e12fee8f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/session-agent-constants.mjs",
+      "sha256": "ee503a2874dc8cae7ae8d4bd3678e16d543606fb2ad0cdd599db10aaa80ddcaa"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/session-agent.mjs",
+      "sha256": "89feae971e6e826c652ae440470e60d38df7d555405b63f55c9d879e3ee81577"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/shutdown-protocol.mjs",
+      "sha256": "53228cdf4b039a828f53a74088aa65329ebfbfc66e7d4ac3daa52434d6af91a0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/task-queue.mjs",
+      "sha256": "cdf99032de3e227ed99911c1bba5a1a74e84341712236c3a51ea10230a610bd8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/validation-agent.mjs",
+      "sha256": "5eedce31847a93b3f1c2316654786b6788314311246db0aad3c63e6cbf891b3e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/agents/writing-agent.mjs",
+      "sha256": "bf359065267105e03014414aac6b5ae70674e1ca40fe1d747a905b3370b95fc3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/apply-book-memory-template.mjs",
+      "sha256": "f35bec625630ed445d26cd28f1125cb661c1de14fbd1f04b0168247e292583f4"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/approval-policy.mjs",
+      "sha256": "3ba9a228beaaa950aa71dd30bddf4364cc6f39a08a2b5cb165f51a4d273778a4"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/audit-broken-links.mjs",
+      "sha256": "402a5f575f5f84ae9118ae935de1a0c4f9d1eb02a3c3f8f9a5036949b4689399"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/audit-entry-performance.mjs",
+      "sha256": "0c8d8a19ddc80d1b686e07d862f1b2edb1b390e6727cc568f204f61c04b2d7eb"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/audit-garble.mjs",
+      "sha256": "d4bec187a82861499781e9ed03f282ed0adb804cd38e73203eb5f6e27188fae0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/audit-pending-verification.mjs",
+      "sha256": "89bc47ce74f19f24796e8097e6637a5273fcb5d49ae563c6209b78b2a40b34ad"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/audit-query-optimization.mjs",
+      "sha256": "e8c6a2fb671f939b8ec9f14ae22ac45d97e46bef51b60c4d97b9b4e41f4a62f0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/audit-temporal-accuracy.mjs",
+      "sha256": "c79554994e783c3aa2b97c483195e148538040dbdbe50068b4afb1444beae211"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/audit-term-consistency.mjs",
+      "sha256": "53e4a3a9c2145e573c02f3fd71af49eab8f8cd4d86f72b9e528aa4556852865c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/auto-update-esm-state.mjs",
+      "sha256": "b70fa9857808da37639f69c6be73349fe8e8a28de10461a2dca8bf18601b3d77"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/book-health-snapshot.mjs",
+      "sha256": "a5356cc174ad6fe48f34ba60ab017d74b377febfd8d4eb146b8f7831d3be66c1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/book-state-weekly-export.mjs",
+      "sha256": "6f936c8cf239338e3a067562ccd93f080ae0b48f052a95c0c2f1a0ba3574ab4e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/build-intent-canonical-assets.mjs",
+      "sha256": "19da57a3250fd2ab7291488613aff456712bfdddf4d02beac1ea6258c65c1985"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/build-search-knowledge-cards.mjs",
+      "sha256": "edd50da197f16371b6998aafe6ada13753f83b7eb7740dcdb2b186bf32675875"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/build-search-policy.mjs",
+      "sha256": "37552386163679cc32508df47aa786ad8486cc5933209b1ab412c1f7333d2603"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/chapter-dependency-gate.mjs",
+      "sha256": "2f25accb9e78b087c9ee0d4a457366a7513535d13bb447cca186f8a3162c2092"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/chapter-scheduler-hint.mjs",
+      "sha256": "41264df9514f5bd1533947444926a9450f2123eb8fd9c8945b5211ea2c4f58aa"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/chapter-status-drift.mjs",
+      "sha256": "ece6f57233929407e04a6d6817409b90746fb3fff8b688ce460c0bcd537141fc"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/check-and-init-artifacts.mjs",
+      "sha256": "512f968a0a2d8da7fb31b3d7feb746b8ee6e34e2f725e9a307488d4c37b23a66"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/citation-format-check.mjs",
+      "sha256": "b101c3215671df02ae25c8bee1a3abf860953e9b5e01491a3d80a9a22022baed"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/clean-dist.mjs",
+      "sha256": "d39f1b92ecf89e6fe680f42b18dde333e077caa1022f417d75ec4ed405fa4735"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/cleanup-dev-data.mjs",
+      "sha256": "f8d7b5eafe26b834d3fd8851f5cca2cc4c6f89c99197a74ec11826f42e0e3954"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/cn-source-router.mjs",
+      "sha256": "47071cbd1d7c23561355bc3bfbd2556da50efba334079e000100584b6bd3f407"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/collect-host-diagnostics.mjs",
+      "sha256": "beeb35583d0448161d3b69d5c1d51dfe508d4e32a0431f1aa0ed49fc19ba6435"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/command-approval-policy.mjs",
+      "sha256": "ec1fada16897e3116df6e0dc29ce76553b674aa925063df18b8bdda967bc5209"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/consistency-audit.mjs",
+      "sha256": "0cd211962e674498df4e25e142992dd2a777fa7f1add1297543f0b8d16fd785c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/content-safety-precheck.mjs",
+      "sha256": "56612602b0129d9ddbaede1d489bfb1fb8c398d91cd0b80a3ec6314c96aed1b6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/delivery-chain.mjs",
+      "sha256": "d4860a5b2d492f7a8c982b5a234e1980f751ccd9169f7f1a3045f1e186cd2e40"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/emit-upgrade-summary.mjs",
+      "sha256": "e8ccbcf61dadd6ff665bec74a57407628b705696ed9e2dd02a0e73f52cd32bfe"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/encoding-governance.mjs",
+      "sha256": "56ee7a65f35763334e2f04be7f718c449c37b7e71f579c07593ee298770a340d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/enforce-search-policy.mjs",
+      "sha256": "084b01cbbc9be1f1f8a00267a2851e920bde3b384bebd8e1727b6208b5009f29"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/env-preflight.mjs",
+      "sha256": "7f34df5b2a506b489d1a8752c0b8055fb661ef1768e999433d1803aa02885799"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/esm-exit-hook.mjs",
+      "sha256": "b4bc03f9312d057b36bd660ea3f0a940eee8a92b2bbebc08f443a37f44b4a4ac"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/evolution-gate.mjs",
+      "sha256": "bde9424c197b58d135abedabcac77eb7e1eb347298846bcc4db31ee110abda72"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/evolution-natural.mjs",
+      "sha256": "2586fdec9f3042b614320871c994d875d1864bdfbe60cd191bbcc668c8a29237"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/evolution-propose.mjs",
+      "sha256": "daaf607f48f5bc36efc3995aed5ffcf5ecd746d2d5db883b78ba669154c0425c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/exa-search-enhancer.mjs",
+      "sha256": "d1bebc6306c8a9e5491112877d0c82299ca696af76c75add30c9df3f174b2528"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/execute-phase1.mjs",
+      "sha256": "fdcf34b95c93fa4724fb0d05922a805d321065541d0f59b23ac5b6f365612356"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/execute-phase2.mjs",
+      "sha256": "48f9319d4656254c39983d19a8e7e446f5f48396d6f4fca3490755110e06ea3f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/execute-phase3.mjs",
+      "sha256": "5f3479a9f7ec6d3ca6557aefc1e48078a0efc7c72928c2789e8ddbc111a57b07"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/expansion-gate.mjs",
+      "sha256": "a55a02832fe36bc926970efda3b0ffdabf238cb3cb367685cc0595e492d4fd0b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/expansion-plan-vs-material.mjs",
+      "sha256": "2a4e2e31bb57df6abea532c6e824ea0b10bea234c8f860cfb9b08483e982b798"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/expansion-word-verify.mjs",
+      "sha256": "06938bc5f6f2a0691f6a13c69bafab29cc3d9b0c6b86d9b94468a793ddcf490b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/extract-search-policy-parts.mjs",
+      "sha256": "b5fd18b088e2e7ab9df2330e5953c2f0aa52735107b541a34bb52f6f3da1b3b1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/fbs-auto-archive.mjs",
+      "sha256": "2771b2e9696122b50eb7ea90dab49813b96417a4e3c572a2753d8c2aaba1e887"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/fbs-cleanup.mjs",
+      "sha256": "e4605ced75837a0b65652a1e2faa28952b7154a6b6f641566a2b4673e938a7f3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/fbs-cli-bridge.mjs",
+      "sha256": "600d3f0743c8089feb2b7b870e70be5d3b79ed77db206a016ab52c0446abdde8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/fbs-doctor.mjs",
+      "sha256": "97dde76ef5ae1614db1359f98128b172a835c1929c7ae2ad4f36bab97a7fb4d6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/fbs-quality-full.mjs",
+      "sha256": "f5962677400ddff39b6d39a972d68f9f91f4d6aad3daa6de4af0f0048519af26"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/fbs-record-esm-transition.mjs",
+      "sha256": "8502b5c9b22ef8c6b6e2d1435b9f0b5152ae9ef6ee4858fd712190ddc8f3dfc9"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/file-growth-guard.mjs",
+      "sha256": "b03cf3ad54b68ac198be36748c533b194ba40e9f727b928bd89bb46619ad7682"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/final-draft-state-machine.mjs",
+      "sha256": "82e1a5ccc6b11109873a2c537bb5ad4a7ffcc5bc0b139cc7e2eb7ed5e25055a2"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/final-manuscript-clean-gate.mjs",
+      "sha256": "72c957ee1490b58447227d9962e451e1be0b03eebb0358f4b43c61d779276ae3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/generate-book-context-index.mjs",
+      "sha256": "fff99ca1c53a712e48918b792007171b0878584551b5a3b57f99695571e520c3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/generate-scripts-manifest.mjs",
+      "sha256": "ff3b17727ad46f51a4fb9d6bf4b3a2e0ba60f6edef66d456d1e32c63480ddd36"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/generated/intent-canonical.snapshot.json",
+      "sha256": "6fe06cf313c3a1464b39ebcc7faa1aa7854d39f9a6e75d9a185b2453f4d31b1d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/generated/scripts-manifest.json",
+      "sha256": "1803487627890ed4fa1f5996772887ec8e800a527e7adf971c725f93d1b9e650"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/heartbeat-monitor.mjs",
+      "sha256": "70ad93f42814497afa32a8531a1628702633f7c8306a5bc9ff1b30b778c99c55"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/high-risk-dual-source-gate.mjs",
+      "sha256": "7ed5031f05162ea43e8cdfddeffd32fb58d0a719699f286ab328176c61678d46"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/host-bridge.mjs",
+      "sha256": "48d54c192343c8872e0c93f0adbce01f0dfa419108d95e1646082c64b466b545"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/host-capability-detect.mjs",
+      "sha256": "3ad58f9a2477fd07d80e1ac73ffeafd1da9d095a35c85014296ee40df7a6c7e1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/host-consume-presentation.mjs",
+      "sha256": "3acbf3e58a41745590927505f196cfb47c046a256711fc88ce786c1215536a6c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/html-delivery-smoke.mjs",
+      "sha256": "b75d50393e007466c38ad49a38f52e74485f940d7fac7e0a466ccf6d56569d1d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/init-fbs-multiagent-artifacts.mjs",
+      "sha256": "cc34d2051fdc42b2125c743fc0a1658dfe917c4f44728fe5aa34b343cce588d2"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/init-project-memory.mjs",
+      "sha256": "8174c990463105162eb0998137666507e7243ec0491c7124631a09fac2750427"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/intake-router.mjs",
+      "sha256": "7957af2c3f21e8c9d31b33b90b3df2767d385c4d904c7063bd135055889b3507"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/intake-runtime-hooks.mjs",
+      "sha256": "5bb821b6c19c0af51c6657b031f3a52bdd710f22573d6be1635887ac7fcb999e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/intent-ops-report.mjs",
+      "sha256": "b7fb4247d497914e3deeb8122467187ad859f7f728eb83b655d7ebd5589f8e87"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/knowledge-delta-extractor.mjs",
+      "sha256": "77ee266cea26257ef03a7173b53a487d5e275bb6a97f874669e3c3aff9f63876"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/knowledge-fetcher.mjs",
+      "sha256": "b60ff15d765eefbdc9aa02939dcfbb890d2b7de95559551ce5d297361b18493b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/knowledge-reuse-kpi.mjs",
+      "sha256": "eeed05c80a1a29688c60f4a296ad682fd42490ce606b28bbdcedd32d5a9d0052"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/large-file-inspector.mjs",
+      "sha256": "0df7b270086726fea14fabfdf0cf93020482b6b00ac774e8c865b95b53a259c9"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/launch-presentation-preview.mjs",
+      "sha256": "05e9631f72e9392d86cd3b3f1a2abd9edccb6866d947536d10c2059a722eb93e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/book-state-db.mjs",
+      "sha256": "4345d93e231f07751153fb52292178fb978fe578791787ef06381ee3e5457ec5"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/channel-pack.mjs",
+      "sha256": "77b5d2487b7e8299aac02408bdf4013b888477005bcd7ae86eb10b0b778ae7d2"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/chapter-md-resolve.mjs",
+      "sha256": "b209da4f7f4c25fd682e4174a7b29f194c6cf4fa926f7e258798afd0022de63d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/context-engine.mjs",
+      "sha256": "bbdb9d06f0f26089b715d17857a5e7623fab19370cc9f56f593a95764ef18b5f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/entry-contract-runtime.mjs",
+      "sha256": "9242234a5aeefdb675148baab13ccbe7e5540e9aac43ebc1b09bd7ba8d7bae14"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/fbs-book-projects-registry.mjs",
+      "sha256": "05e4dc0d69a91f4b80d9688c470611c742c7d0da95ede921ee3d22995f633a6d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/fbs-book-snippet-index.mjs",
+      "sha256": "9c71fb83c0d3ea202bbef970b42aebee2af440775d6cb4e1c07b3575d7711f51"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/fbs-context-fences.mjs",
+      "sha256": "fd70326792402abce95f5809c1032c3a72124a16cbd317fa058f311fb009104e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/fbs-trace-logger.mjs",
+      "sha256": "b1d766f3658d02a013cf97b14e99187f32cc8c03e2e6aa3606e22fff8d8ea7b1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/git-workspace-changes.mjs",
+      "sha256": "029c20ce6635292656a84bdf5e6c5d253365a22e93de87074d9b404df9f1742c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/governance-artifacts.mjs",
+      "sha256": "42b38921c5d234c342efce11e4ffb2557ce3830ebd530b9c54078fa372601e7a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/intake-router-gates.mjs",
+      "sha256": "a1dbb6c889ce752f52a635fcefa83dc7e3ba524969f2cc89268eebfc92223ce5"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/intake-ux-enhancements.mjs",
+      "sha256": "cf757031016f8bc1dd0781589febdf80c33636f84b9fe3d6469766660e1889fa"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/intent-canonical.mjs",
+      "sha256": "a62cd2905a2439bc5592eda2dbd0cb274b2d0303df309ce90ab79c5600171596"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/memory-adapter.mjs",
+      "sha256": "0121b4dece0ee3c4790797cc472e2b243ccc0e131eafb6648869ae3d7b30f2c6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/memory-preference-dedupe.mjs",
+      "sha256": "e5ec653c8cc5b5a5faa8e08c2ec2b6476b1e3a1c3918f2ea1d4e2938cb0f6dd1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/memory-provider.mjs",
+      "sha256": "0d6c7d516ecf309ac518d25a9db6ab3c92e16c8916b84a3b11938cdb68acd5e1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/node-env-check.mjs",
+      "sha256": "8503eec05df69b7841e53c7eaabfdf1e5ef8e6559d962c9f7be9ee6899f0f4a1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/onboarding-config.mjs",
+      "sha256": "46351edf25a689d3863e7723ea0fe320d6b38305aa61dd9bf8cfa1b70dd4c10b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/onboarding-progress-service.mjs",
+      "sha256": "9488aeb2324f354cd286671bac3710af050d59c4c465db4ea260485fd6e967fe"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/onboarding-store.mjs",
+      "sha256": "b2879ce52d8380b6195911c70624bd4a4a08cae9b8d2b629ff56dd91b8f9d2e3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/pack-skill-gates.mjs",
+      "sha256": "ccbc118c75960209289a37a87669d70da620126c8c23934d11e3177a28613961"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/presentation-runtime.mjs",
+      "sha256": "355a1d19ef211e6efd5a37cb381988edff68c7e0b5b5c6768d5650b2533464e4"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/quality-runtime.mjs",
+      "sha256": "5d7170e0052396f0ce88fc636075b847d28f063341d08d94e06a8f80dc12e670"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/runtime-result-store.mjs",
+      "sha256": "d860082c290631e7a2d18442f82c24dea6160a8f5c55bfd88d5363ef81c71c4d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/s2-quality-lexicon.mjs",
+      "sha256": "c3b12029d94c83e9d6e0a2a20fdfa5ff15a3e1e69b6260c0eddc1b00f79994ae"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/safe-fbs-json-write.mjs",
+      "sha256": "c6254c14d69222a59d3057da020480018620c338254944011c62b95f056bf4ec"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/scale-tiers.mjs",
+      "sha256": "8c857e03282d0a2a7f644396fd03e3b5f6b9ec28f0abccd92d131bd20bdd3e50"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/search-policy-parts.mjs",
+      "sha256": "2ce801878880cb061bb8e0d8c9ea5124a242e1b2d854c4f9771dea4a97f40944"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/skill-frontmatter.mjs",
+      "sha256": "dcaaf2867628c6724f074383da4572ab7ad109c76baf86304853e51bd85f7a78"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/suppress-node-sqlite-experimental-warning.mjs",
+      "sha256": "5600347eea406158dfe20102ab89dcb2da8da7d2960750d0157cfbde418304f9"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/ux-concurrency-controller.mjs",
+      "sha256": "0391fd05c34002dd00f0238d762c6ba4beaefb901183144675188ab27b7c9fe9"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/ux-memory-manager.mjs",
+      "sha256": "a426a6f12e7c7b695e60cd9235e50f8c962997adbf61aacff641486537df9e4c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/ux-optimization-enhanced-config.mjs",
+      "sha256": "0b2aa752cf46ad7a941fda83d99823d584b7208dc0d99dac93c912d3dc67198d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/ux-progress-reporter.mjs",
+      "sha256": "8accaad8cdc7549aa212e59d081eaacbead415e559a1f98cf35cd76aba4c4405"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/workbuddy-host-runtime.mjs",
+      "sha256": "f508faeffd3b064ebffd53ea696dcda9a79806af46da3a37dde412c968a77d14"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lib/workbuddy-workspace-memory.mjs",
+      "sha256": "08b689876ee7a5a0cb3ff06d8e2992098e77e1696c448feb7d070c3b7512e481"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/link-search-ledger-to-chapters.mjs",
+      "sha256": "ebec5bba6c56d64fa6d4e7f43d1c35c87a3b9cf6e134a9d0bfc95a7f28e45b82"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/lockfile-diff-summary.mjs",
+      "sha256": "17638c875d9a8a8f4811d59a2aaa6599d7d79db6f4427250aa8fa3b1c01822e0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/material-marker-governor.mjs",
+      "sha256": "6d43676181867682b3520e8197e97d11ae3d75ffe48f3ae4815b4c9be3d761d8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/material-marker-scan.mjs",
+      "sha256": "f533ced916179393cb62e18b0d53c6a5da37ce8f4c2a321d0cca4a54fe834e88"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/md-mermaid-to-pdf.mjs",
+      "sha256": "45b74266e8b2db6c1bbd4e8e7229a758460223fb69c7dceb69f05d50482b076e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/merge-chapters.mjs",
+      "sha256": "3663bf5cda5ed876be9b8edd8721858d34690df393420ec3d45751a53b8578c9"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/merge-expansion-batch.mjs",
+      "sha256": "57b1009cc896491c15bcaf180a11dc1d4daf57318d48fb19a7411752a5c9b4bc"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/method-drift-detector.mjs",
+      "sha256": "2124530f8afc8571ecdee8bd20a2985f7644edfffb5fcd79b4815ff36166382d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/midterm-execution-chain.mjs",
+      "sha256": "f4111b307ba4a9254dc8f07f4659cbc0bf4c16491c819614da4f7897993a3d8e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/midterm-governance-report.mjs",
+      "sha256": "c52533629269831f709085a1a64f264617f6c72370874eaf92e37de31adb5127"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/midterm-milestone-report.mjs",
+      "sha256": "014cbbb53b412d794da8aad6490efbaca4e33bc86ad83e61307d9df74a74edd1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/midterm-performance-dashboard.mjs",
+      "sha256": "44f5e46dd5ceb750befbbe254bb9d8a9a048bac914bf43f6f121ced38d3957b1"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/midterm-target-streak-check.mjs",
+      "sha256": "26fa3c8d9846f7abcdd10787c57534ec409e0eeb49cf15fb3bbccf07cb382c7c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/midterm-trend-summary.mjs",
+      "sha256": "cacbab2ffb4878851262b33d755de75cb1d889384a5608f488be0f5e58b8282f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/multiagent-orchestrator.mjs",
+      "sha256": "d5b7dce3b34c2dab05173fa57fc76371cfab45cf9f2cb2e51f3a516996cedd28"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/nlu-optimization-enhanced.mjs",
+      "sha256": "4a36214c7005ef959885436155ac7be52eeb11894656e2ddbd1e85e77504c675"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/nlu-optimization.mjs",
+      "sha256": "b89f8b8b2f9742c7250a2685d9ee165ba0aed188ab23e3c05125bfe9a855fea4"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/normalize-governance-artifacts.mjs",
+      "sha256": "33fe3b965d3ffdd4b43a73f68ecf666e4a214dd2475bee0d844e70612adffd19"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/normalize-ledger-dimensions.mjs",
+      "sha256": "5956e6b235675d1da1dd7fe6fd403556cf87a5cf6f6884d27014aefe0ccd066a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/northstar-kpi.mjs",
+      "sha256": "f9f1b85765ef40d7adb89b151bfc4630eee59494ec242931661c4df37a8f4e87"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/onboarding-system.mjs",
+      "sha256": "f443013851dee85083dd01055b9b74900baaf0c200829560ba7fb1adb25bc756"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/optimization-package-final.mjs",
+      "sha256": "cf5bb25fc9a03591945de9c88677d4bd44127d5e2d7cbc0f3799fbc41d9d875b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/output-validator.mjs",
+      "sha256": "40f9b6b8e534fa3878ee8ff5d3dffac21c5f16dfb3c3a3620bcbf9dd9cd516ed"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/pack-codebuddy-plugin.mjs",
+      "sha256": "bb863148aeaadeed4e1a75dfe18f427701eddd8c5d9554a5fa8b2ddf34ca3a2c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/pack-openclaw-skill.mjs",
+      "sha256": "5271d9dd03c0a58a7834718fe6426547e56781b35599c6c7cfdc11216cdf2869"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/pack-release.mjs",
+      "sha256": "80f10e0cb74b436f31a04ceb709bf6058928cbc814f3c26b74bd553ca7d35931"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/pack-team-handoff.mjs",
+      "sha256": "2aa44ce2d20ad4ecb4b0e88e308a8df490dfbef74aee7535ebe1b671885171a8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/pack-workbuddy-marketplace.mjs",
+      "sha256": "02a1ac06e576da8ac0e2cd3927d7d10292e0af071e3c972b6796c34c55113ed7"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/pack.ps1",
+      "sha256": "3c67f20f81ee2b4725cd87982da3ef56e7fd9f2e87c15177dd3fac15ce0b3b84"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/phase1-nlu-performance.mjs",
+      "sha256": "01d19be534a498ac37a685e8a2ce9e0447848a8714236efe1a2bd449358680ba"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/phase1-onboarding-enhanced.mjs",
+      "sha256": "8a16c0bf44b54a56e1dfc9d4f1a3d1278a5e15f6fc441f4c20435c9288c46f8e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/plan-board.mjs",
+      "sha256": "5ebde36f023cf7eff437bb2f203d2a108699ccfe20ad09fefb102938bcb4b9ad"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/plugin-capability-snapshot.mjs",
+      "sha256": "0e524476306f3ddc030cb22aa7e9b2c25bde333a81ab6f309ab0350072aa5462"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/plugin-routing-kpi.mjs",
+      "sha256": "eee1bc46f68bf325a1c0ea9318333cdfcc1b9b5110b14bb88b18cd517e2e81d6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/polish-gate.mjs",
+      "sha256": "df93251fe5b1d5ae2924dc5e46f10101f62268c43332bb7d4a19ac0debfdeecc"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/presentation-preview-server.mjs",
+      "sha256": "102ceedc4631f8ada0d751c897b3563f14cc835ba24ad06bc76cda4bbcceee2a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/propagation-debt-tracker.mjs",
+      "sha256": "fe8775b1155319266dc40e689a9a92726b242cabef4dd2d16229fcf75e00dccd"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/propose-lexicon-refresh.mjs",
+      "sha256": "f8e50462c2b33309b6050f0e179246a333d68a772916d17a0798336a0b5bdd13"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/quality-audit-incremental.mjs",
+      "sha256": "d2aa757bef205c20143e898762dbc6d8698dda8f32f5ea849ef4a3a9f5a4686b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/quality-auditor-lite.mjs",
+      "sha256": "26e4c73c93c5bf0797eeffc08e8f975d9127ff6ff968e25675cfb0f45cdcfde6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/quality-auditor.mjs",
+      "sha256": "49c90f0047b778e03daa78403cedafa7c8860194685a929baae86bce9f2c2eda"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/quality-coverage-auditor.mjs",
+      "sha256": "3cb0dfa0afbb24e561c3f005076836cf8aacf19474bf3faac8ab7fe31196f86b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/quality-improvement-phases.mjs",
+      "sha256": "a16b42771f6c3026b148c34fb547e49be166dca6136dc52be6cd00dd181dabf3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/quality-panorama-orchestrator.mjs",
+      "sha256": "44b2c446b40255072bea23d7cfac781c5ae87b499d376d337348ecae2ea4a162"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/quick-scan.ps1",
+      "sha256": "a70ac22a041a562e1cc8c2e74da7683a037c94b20e287d8c0fa63169f81dfaef"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/README.md",
+      "sha256": "1057814608879acd54d24d3072f90d0192d98efefb8c63a825d8f05da9000e11"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/record-search-preflight.mjs",
+      "sha256": "db8f87a0457a8a7977c69d9f26b36126b710be300882b48906583174debe9134"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/reflective-repair-orchestrator.mjs",
+      "sha256": "4ee6926244dbf5525d15b78966830ed5c519385cb6321d26f2e3f34669c3ebd0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/release-feedback-bridge.mjs",
+      "sha256": "cf45a3184212ead190db77e65869fccdcce440105efd075d918b1567b89e4744"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/release-governor.mjs",
+      "sha256": "a5a4817bceb001504128aeeaf0ddb19ab7673dd98f1d84849977a0ad4486b01e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/releases-registry.mjs",
+      "sha256": "0514d94ede13d2aab662fac9df8a62d54878a4eac54d6378e7f02eb5257845d8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/repair-esm-state-from-table.mjs",
+      "sha256": "c2fb082c82b065964e308b615ae68bc80ec5e46cc156e9d94ac145091ce52f18"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/repair-expansion-plan-skeleton.mjs",
+      "sha256": "15bab48ecd48f3624e29eaa3f64b72603ccd0b1f43be43286f382a6f8dcbc63f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/retrieval-evaluator.mjs",
+      "sha256": "d8d2f08aefa1e2ffe1fe05b9eda02491df7b97942d6d1366820271e253945f3b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/retro-action-sync.mjs",
+      "sha256": "b953cc0be02143832acafba4c4577f87c4cdbc9a2b6213defc756cb3a8a0ca21"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/retro-mapping-matrix.mjs",
+      "sha256": "7765e7f0aeeb8d39a0a7ffc274713b31300be9958e90814b7cf5838715499214"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/retro-to-skill-candidates.mjs",
+      "sha256": "d6d4943755a8323ac3b6f3048043a8598ecc7cda1a57f25d2ec43c9b914a70ec"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/rewrite-plan-bootstrap.mjs",
+      "sha256": "2b98fbbb10e30898072278c04711635b063aee263c8d1835623e99e743199b8a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/run-p0-audits.mjs",
+      "sha256": "47e3a974546455520fe23c8f21ed0a37b8089660eafafb8b3224458d82db2a86"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/runtime-nudge.mjs",
+      "sha256": "1309bb61ff4a6cfcf963c50b4fb59bb1bb6ab8759a30c8ca6bd4935ed1e9dfa0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/s0-exit-gate.mjs",
+      "sha256": "126a5a10800213c0eafb69075f8bed7f2e813ef296e44c39193c97d58b03103f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/s3-guard.mjs",
+      "sha256": "9d5a13bdda419dd9633a69eb3119e264256630bad868cc68152c327c86d70258"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/s3-start-gate.mjs",
+      "sha256": "9db779795598689e68357ab5af9b6786078dbc822d42fe46ea107adb207c9067"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/save-chapter-brief.mjs",
+      "sha256": "bcdb8d2195e5f68df1df3cb882a8a270fa5ffd45fbfb044ba3dfb3ab41dc40c8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/scan-adjacent-chapters.mjs",
+      "sha256": "f930500e75d06de3b794609561d512c6c5e2e53623e32d36a6385d06cebcb14c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/search-query-planner.mjs",
+      "sha256": "176a4adb060ca1b620e93f32b7d72dda885134d9a2a4664c5a17dd30463cdea3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/security-fence.mjs",
+      "sha256": "12d3e6b57d05ac44c5a0621787bbd84abb6349bedfd6c21b31c5dc4838f11e7d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/self-enhancement-evolution.mjs",
+      "sha256": "031bfeb01459fc032a4040d48c42eb112e9a10e242b1a02b4fb4031f65cc2720"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/session-exit.mjs",
+      "sha256": "78d172d81a09a9618b54a408dac811bfab015e2873376636ca453fb0d91d94f3"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/session-recall-summarizer.mjs",
+      "sha256": "1d897886ee47b63cbf234f5036532d1f8d5ffccb4e12044b7666a7545ae46753"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/session-state-manager.mjs",
+      "sha256": "3c5a5a4e83f337f9ba9fa10bcb3f8d354c8b6364c2d3209cf4a4f05caf7d829f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/shared-knowledge-base.mjs",
+      "sha256": "07c6afc958c137c79467649c1ff6b6d6e9590c3dff31c3186e637005a14389ea"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/skill-import-security-scan.mjs",
+      "sha256": "9db5efbb0d4cb3e80ca70db28a3ce7e77a69bf0a3736bdfd197cd97e7e41fc87"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/skills-import-guard.mjs",
+      "sha256": "28e82dbe75c8ccd23ec0d2a94f44556a6aa0b0b0f5318dec6585bdb470c50a26"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/smart-memory-core.mjs",
+      "sha256": "dd74542ec18b63003f3df16234d4537538e92ba15675aee4796039eb9f8a9ee0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/smart-memory-natural.mjs",
+      "sha256": "58556dab5486b3e0faa5a8e29703f73e2c682d0d061f4cae45f61a7d98a9974d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/smart-memory-security-enhanced.mjs",
+      "sha256": "54f9bb2b2b26f87e9608b7895577191a7a07275b7b029094195a44c3d0dbce2d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/smoke-pack-verify.mjs",
+      "sha256": "1e2ea0da3654752758e5c782e34b2a5ac6e11c2a99555b2d93093b4f2fc727a5"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/source-write-backup.mjs",
+      "sha256": "8cb7b1c4c56b00882edeb444eed2eec671d08bf065fa3f3c806b98e56a9217a6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/split-workflow-full.mjs",
+      "sha256": "e6f5fc89d87ac0ea10cc28eebd45b9662e28b7c6b88b6d9fb307cbb194dac47a"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/standard-execution-chain.mjs",
+      "sha256": "bb8fe28f393a1ff34607b194fe8a42e7dfb75e32c8317a5a222e0939ad573614"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/structural-bottleneck-guard.mjs",
+      "sha256": "5b0a77a7ee92bc45d64006fae65c1ad542ce592bdae8e784629545f0b460a08e"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/style-learning.mjs",
+      "sha256": "b4c900c4f74851d704ece2c32d6c6de436a9d35bce5289779b718c4f3ed12444"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/sync-book-chapter-index.mjs",
+      "sha256": "f4f5d5e6f92ce91a4ff69df54d122a1dc7e4ea792f9eddd8214ef35f00337da8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/sync-chapter-status-chars.mjs",
+      "sha256": "2fd731d8d76c420091ae49e14177c2af075997b36c342960b5c31a6f359dfcc8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/template-recommender.mjs",
+      "sha256": "0aa063d17098b59cef3f23f761cdc0828cf107f50450df4d34e59b310ccf2c54"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/temporal-anchor-missing-checklist.mjs",
+      "sha256": "e14f476a8d8d264ef642a9de70c38ae4197d5467ec955cfc40028e31d3a1fe96"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/terminology-gate.mjs",
+      "sha256": "b69755dbb68662aaeecac9bb98b218e7502e717a42aa6f14df7fb9c573388f80"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/test-probe-gate.mjs",
+      "sha256": "6e9e6884a2c6857ba7e44de34728dfe0a776d19e041924ca8e057f1b72b0c5a8"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/time-anchor-resolver.mjs",
+      "sha256": "224b447cb1c8483d758552405690e3b91ff5aa53bd09be7277f8dc9d4743fe2b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/tool-output-budget-gate.mjs",
+      "sha256": "47ab12fe4337683d9142620ce4fdbdc6763b02083ade72a930a1d4968369f0d4"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/tools/list-large-sources.mjs",
+      "sha256": "0a88c8767d057305dd971a63ffb42ca301cc06b678424f0ff61cda33995344df"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/upgrade-diff-scan.mjs",
+      "sha256": "3d58351d5ba0f7614668a46c5b329b973ba20872aaa9c750bfc852cd413b79bd"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/ux-flow-guard.mjs",
+      "sha256": "3194c53d9b5de302fc886bbe882c916ac07bea0fc8766738ec7474222de67ce0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/ux-optimization-enhanced.mjs",
+      "sha256": "104a26d1455bdcc87487b053b7d5a2e20a9a1b3b34e133d04b6d1a780df60d1c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/ux-optimization.mjs",
+      "sha256": "676dd57607600aa68e334b9d00b516d7567102708bc98e2e7908856ffed23648"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/validate-runtime-hints.mjs",
+      "sha256": "64f02a873e5e6519016a8140b98b5955b97850d3631e223f32284d973d5923db"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/validate-skill-frontmatter.mjs",
+      "sha256": "589eabd4a04a94f3fb095e0d4ca6cb38c5c3399d11a79b82779c0c775c09effc"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/verify-chapter-status-truth.mjs",
+      "sha256": "ec3d20e6b1db59c32fc2909f8542d4f61c6c590f1d6c5ad9b259f786418a14ab"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/verify-expansion-plan-structure.mjs",
+      "sha256": "ec04a146e292f87595d7cd979ec22a68d9ca6047cf794464c724772a153f09a2"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/verify-expected-artifacts.mjs",
+      "sha256": "dbdbe48c918411f559eb68830c4bdf12ce5fd918aa7705c7e160e197e38d6a9c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/version-bump.mjs",
+      "sha256": "88b4465d8138347e6e40b305644c6a6c66e052932b4c68f1dc75d2e87500f209"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/version.mjs",
+      "sha256": "50de9ca98522e3deab46317cb5a0534eac641055a3900e4f8718c57b1fbb9d78"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/visible-tech-action-kpi.mjs",
+      "sha256": "9b15371fa9f435ffc8618094df5180b9e0eb0c0ab8d9ecb7d0818a3b031a5e70"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/watermark-utils.mjs",
+      "sha256": "0fba7a957b06b8a66d38e77574149b1416947857416115d26686a5d4ff21db0c"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/auth-check.mjs",
+      "sha256": "4e1117f1e4c149c7ae836e68d283f657ee274dffaae21408cb9b8e900e46eaa0"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/INTERFACE_CONTRACT.md",
+      "sha256": "5fbc2c05059dd6431942b8b6419125cfc804631b89b2113002cbc1b36e989f4f"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/lib/credits-ledger.mjs",
+      "sha256": "d2f68899df61f8415c8ddcfe06be8ca83ba041a9c8973cbb2b93a161f5c7ac8d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/lib/entitlement.mjs",
+      "sha256": "cc3c689cac08ac975668f632b47c6fe283af2f9be4515141dbe3b2821fe9d7ff"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/lib/fbs-points.mjs",
+      "sha256": "f311a710b9808fa178f4a77c8c9d1358f58f23bb193cefebca7f759d9e148659"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/lib/scene-pack-schema.mjs",
+      "sha256": "8f1b49c7b38b99ddec577a3c8f4bb4bfd3328be461f0b96cfb19cbfaca813214"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/lib/user-config.mjs",
+      "sha256": "44b3b05b26586737db4a80aae2c422ffaef7f85f1b7d48213f9d7caba3b70c2d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/lib/utils.mjs",
+      "sha256": "7c64f34d2127edf19a7be75a47e1fbc2258ac8036e01c72573455824b2c3d603"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/scene-pack-admin.mjs",
+      "sha256": "8297691eb284185fe00e42695f176405036a66ff66cb05322a3ba94ce00f124d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/scene-pack-loader.mjs",
+      "sha256": "bdf1bce19b58140fc5d9593ee4011bda1abfedfafd1d26a2a6d1e6f1452a0a71"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/verify-member.mjs",
+      "sha256": "3ba16f08baf3d4f9ede50f6b5e8acbc8115c93692e932952b3557d10e84871ed"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/wecom-client.mjs",
+      "sha256": "15fadd84b8b617df19663e6b3a00a7b52e2aaf46f21a1ee8e366508ea89b0cdc"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/wecom/wecom-probe-certified.json",
+      "sha256": "30a1c1e1fc6471624e1738f5618badb0b6963df398b9384d3f42ee00f49eb31b"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/workbuddy-session-snapshot.mjs",
+      "sha256": "8412819806a51120df564f4c7b75d4cbb3b395748f17d319479e421ea6a1c712"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/workbuddy-user-profile-bridge.mjs",
+      "sha256": "f595fedeb9ba31d64a0b9c624228f6e58eb19ff1f36ca6843ba11a3e6687a917"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/workflow-progressor.mjs",
+      "sha256": "7e818324f5a955878ff512e20aca36bd62fd6c01e8fb2940643922c02b5893ce"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/workspace-inspector.mjs",
+      "sha256": "3e9e2b57958e7c1009cef66d5b69135466376f9b6e603101cf265bbdf445c7fe"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/workspace-manifest.mjs",
+      "sha256": "e63ad09f0f6d23f4af42532016c145e09a16e70c54791c4d91dee4b251b542c6"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/workspace-runtime.mjs",
+      "sha256": "160ecaa9876cfb95d571923c6ae817dbef83894138a62be7c8875b119a9ce768"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/write-merge-report.mjs",
+      "sha256": "620f3c2fcedb233aa7077c20f3c300d8d0228691bc88a365e21fc77016ea4f2d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/write-progress-snapshot.mjs",
+      "sha256": "26bba68045bf4f69b8fbd2019870d9a34f0caa14854fb1dd629de6f44bcf71e4"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/writing-contract-gate.mjs",
+      "sha256": "2db39ba5395cb7efce28088db811fa11ccd8770bcff439b51a9c2037ece922bb"
+    },
+    {
+      "path": "skills/fbs-bookwriter/scripts/xl-project-init.mjs",
+      "sha256": "ca4d326c60b6a2e5358f09be8804175ff9ef4e92d1deb8b0c72a2aee4c132c9d"
+    },
+    {
+      "path": "skills/fbs-bookwriter/SKILL.md",
+      "sha256": "89495b851e00cd765c969f4350b7da7b5114bbbd021d9f26b9a7750db8a00bf7"
+    },
+    {
+      "path": "skills/fbs-bookwriter/workbuddy/channel-manifest.json",
+      "sha256": "8e333704ac4a4ff9111a460af65f7a6fd95760b35c0b7827cd9b72f69fddc09d"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "consulting-partners-consulting-partner",
+  "source": "bundled",
+  "sourcePackage": "consulting-partners",
+  "sourceAgent": "agents/consulting-partner.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "丁笃行",
+  "profession": "战略咨询合伙人",
+  "categoryId": "12-IndustryConsultant",
+  "description": "假设驱动的战略顾问，按需破题、取证、测算与撰写，产出证据扎实的决策报告与专业级PPT",
+  "tags": [
+    "战略分析",
+    "决策备忘录",
+    "PPT/测算交付"
+  ],
+  "quickPrompts": [
+    "帮我拆一下这个战略问题：我们该不该进入XX市场？",
+    "帮我做一份行业研究报告的分析框架",
+    "帮我出一份决策备忘录和汇报PPT"
+  ],
+  "roleFile": "consulting-partners-consulting-partner/role.md",
+  "avatarFile": "consulting-partners-consulting-partner/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0b7dd7b91162b5234c3f6ab38335e86c8c4aad7dbc0a6fc53abc13c3d1199ea5",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "3e595611653543d148b22cb7434f0df8129f0e8460de4b313b0ed2dab4a1f52e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d9fa946683d3cb2dfc2106aab421dd82fe0ada4a83823024c6b3e8421e5034f8"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "egypt-public-affairs-egypt-public-affairs",
+  "source": "bundled",
+  "sourcePackage": "egypt-public-affairs",
+  "sourceAgent": "agents/egypt-public-affairs.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Egypt Public Affairs",
+  "profession": "埃及公共事务专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "精通埃及政府关系、政策解读、监管沟通、行业协会、危机公关和舆情管理，服务企业一站式公共事务咨询。",
+  "tags": [
+    "埃及市场",
+    "政府关系",
+    "政策分析"
+  ],
+  "quickPrompts": [
+    "企业在埃及遇到政府审批延迟，该如何通过GAFI（埃及投资与自由区管理总局）和使馆经商处协调推进？",
+    "埃及最新《媒体法》和《数据保护法》对企业品牌传播有哪些合规要求？",
+    "设计一个企业在埃及的政府关系建设方案，包含关键部委对接和年度沟通计划。"
+  ],
+  "roleFile": "egypt-public-affairs-egypt-public-affairs/role.md",
+  "avatarFile": "egypt-public-affairs-egypt-public-affairs/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "835aaf1dbb7ab0588526a53fc63da2d376992460e5e545f20fc5297e5cf25271",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "1fdf80668e15e807bb2b4cd9215a7373ae2e1a2dbc75499c4ff922a61390b209"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e580f08b588b9e6d47f1500c3bc5d0b63ae7510052a30d41f664b039ae757577"
+    }
+  ]
+}

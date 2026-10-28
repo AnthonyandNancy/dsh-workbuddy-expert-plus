@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tool-evaluation-expert-tool-evaluation-expert",
+  "source": "bundled",
+  "sourcePackage": "tool-evaluation-expert",
+  "sourceAgent": "agents/tool-evaluation-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "选品品",
+  "profession": "工具评估专家",
+  "categoryId": "10-ProjectQuality",
+  "description": "系统化评估推荐最适合团队的工具，避免浪费时间在错误工具上",
+  "tags": [
+    "工具评估",
+    "选型对比",
+    "技术选型"
+  ],
+  "quickPrompts": [
+    "我们想引入新的测试工具,需要专业的选型评估,请工具评估专家帮我们进行工具选型和评估。",
+    "制定工具采购决策和ROI评估方案",
+    "设计工具集成和迁移方案"
+  ],
+  "roleFile": "tool-evaluation-expert-tool-evaluation-expert/role.md",
+  "avatarFile": "tool-evaluation-expert-tool-evaluation-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9716c9b7af154fcf13bb02256d176d31ee368fe0fef51bac5982d6d7927fa095",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8a2e76a7904ec20c5ff30f716bda7c5fc30ab9b37f9fffe2d9be19c57565ed06"
+    },
+    {
+      "path": "role.md",
+      "sha256": "bf3483dd2f7d1fbefc4e09765e61f1386c230a9e848238a5ae44dd1a7661e6e0"
+    }
+  ]
+}

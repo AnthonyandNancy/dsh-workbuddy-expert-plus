@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "indonesia-pa-expert-indonesia-pa-expert",
+  "source": "bundled",
+  "sourcePackage": "indonesia-pa-expert",
+  "sourceAgent": "agents/indonesia-pa-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Indo Pub Affair",
+  "profession": "印尼公共事务专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "剖析印尼政商生态与合规风险，整合政策解读危机公关，融合本土宗教文化，输出落地GR策略。",
+  "tags": [
+    "政府关系",
+    "政策法规",
+    "危机公关"
+  ],
+  "quickPrompts": [
+    "我们是一家科技公司，计划进入印尼市场，请帮我们梳理外资准入政策、牌照申请流程，以及需要重点维护的政商关系。",
+    "印尼政府刚刚发布了一项影响我们行业的新法规，请帮我快速解读其核心条款、政策背景以及可能带来的合规风险",
+    "我们在印尼遭遇了涉及宗教文化的负面舆情事件，请帮我制定紧急危机公关方案，包括媒体沟通话术、社区关系修复和社会责任补救措施。"
+  ],
+  "roleFile": "indonesia-pa-expert-indonesia-pa-expert/role.md",
+  "avatarFile": "indonesia-pa-expert-indonesia-pa-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2c20a91bfb8fe3a8511b02de85e57e9e91b6b4d9a50386b699427b6a4f1fe613",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d8649fcc97b61e50d650f53fae24e7e76b40c031bdcb57a9871e3b1b97359d4c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ab978b1deff0f5135383cb0455b0c1e5366ecebca639e2f0028ae5af057fd46c"
+    }
+  ]
+}

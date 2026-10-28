@@ -5,8 +5,8 @@
     "sourcePackage": "content-creator",
     "sourceAgent": "agents/content-creator.md",
     "displayName": "文博凯",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "data-analytics-reporter-data-analytics-reporter",
@@ -14,8 +14,8 @@
     "sourcePackage": "data-analytics-reporter",
     "sourceAgent": "agents/data-analytics-reporter.md",
     "displayName": "舒明析",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "china-ecommerce-operations-expert-china-ecommerce-operations-expert",
@@ -23,8 +23,8 @@
     "sourcePackage": "china-ecommerce-operations-expert",
     "sourceAgent": "agents/china-ecommerce-operations-expert.md",
     "displayName": "卖得好",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "douyin-strategist-douyin-strategist",
@@ -32,8 +32,8 @@
     "sourcePackage": "douyin-strategist",
     "sourceAgent": "agents/douyin-strategist.md",
     "displayName": "斗音音",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ui-designer-ui-designer",
@@ -41,8 +41,8 @@
     "sourcePackage": "ui-designer",
     "sourceAgent": "agents/ui-designer.md",
     "displayName": "像素君",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sales-coach-sales-coach",
@@ -50,8 +50,8 @@
     "sourcePackage": "sales-coach",
     "sourceAgent": "agents/sales-coach.md",
     "displayName": "单必成",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "brand-guardian-brand-guardian",
@@ -59,8 +59,8 @@
     "sourcePackage": "brand-guardian",
     "sourceAgent": "agents/brand-guardian.md",
     "displayName": "盾卫卫",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "xiaohongshu-operations-expert-xiaohongshu-operations-expert",
@@ -68,8 +68,8 @@
     "sourcePackage": "xiaohongshu-operations-expert",
     "sourceAgent": "agents/xiaohongshu-operations-expert.md",
     "displayName": "薛红笙",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "recruitment-expert-recruitment-expert",
@@ -77,8 +77,8 @@
     "sourcePackage": "recruitment-expert",
     "sourceAgent": "agents/recruitment-expert.md",
     "displayName": "伯乐乐",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "growth-hacker-growth-hacker",
@@ -86,8 +86,8 @@
     "sourcePackage": "growth-hacker",
     "sourceAgent": "agents/growth-hacker.md",
     "displayName": "裂变变",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ad-creative-strategist-ad-creative-strategist",
@@ -95,8 +95,8 @@
     "sourcePackage": "ad-creative-strategist",
     "sourceAgent": "agents/ad-creative-strategist.md",
     "displayName": "点睛睛",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "livestream-ecommerce-coach-livestream-ecommerce-coach",
@@ -104,8 +104,8 @@
     "sourcePackage": "livestream-ecommerce-coach",
     "sourceAgent": "agents/livestream-ecommerce-coach.md",
     "displayName": "播旺旺",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "executive-summary-generator-executive-summary-generator",
@@ -113,8 +113,8 @@
     "sourcePackage": "executive-summary-generator",
     "sourceAgent": "agents/executive-summary-generator.md",
     "displayName": "简明明",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "social-media-strategist-social-media-strategist",
@@ -122,8 +122,8 @@
     "sourcePackage": "social-media-strategist",
     "sourceAgent": "agents/social-media-strategist.md",
     "displayName": "传声声",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "short-video-editing-coach-short-video-editing-coach",
@@ -131,8 +131,8 @@
     "sourcePackage": "short-video-editing-coach",
     "sourceAgent": "agents/short-video-editing-coach.md",
     "displayName": "剪神神",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "senior-project-manager-senior-project-manager",
@@ -140,8 +140,8 @@
     "sourcePackage": "senior-project-manager",
     "sourceAgent": "agents/senior-project-manager.md",
     "displayName": "关德豪",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ai-image-prompt-engineer-ai-image-prompt-engineer",
@@ -149,8 +149,8 @@
     "sourcePackage": "ai-image-prompt-engineer",
     "sourceAgent": "agents/ai-image-prompt-engineer.md",
     "displayName": "画令令",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "document-generation-expert-document-generation-expert",
@@ -158,8 +158,8 @@
     "sourcePackage": "document-generation-expert",
     "sourceAgent": "agents/document-generation-expert.md",
     "displayName": "文档达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "seo-expert-seo-expert",
@@ -167,8 +167,8 @@
     "sourcePackage": "seo-expert",
     "sourceAgent": "agents/seo-expert.md",
     "displayName": "搜霸霸",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "wechat-official-account-expert-wechat-official-account-expert",
@@ -176,8 +176,8 @@
     "sourcePackage": "wechat-official-account-expert",
     "sourceAgent": "agents/wechat-official-account-expert.md",
     "displayName": "郝文昌",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "cross-border-ecommerce-expert-cross-border-ecommerce-expert",
@@ -185,8 +185,8 @@
     "sourcePackage": "cross-border-ecommerce-expert",
     "sourceAgent": "agents/cross-border-ecommerce-expert.md",
     "displayName": "海跨洋",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "private-domain-operations-expert-private-domain-operations-expert",
@@ -194,8 +194,8 @@
     "sourcePackage": "private-domain-operations-expert",
     "sourceAgent": "agents/private-domain-operations-expert.md",
     "displayName": "留客客",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "customer-support-expert-customer-support-expert",
@@ -203,8 +203,8 @@
     "sourcePackage": "customer-support-expert",
     "sourceAgent": "agents/customer-support-expert.md",
     "displayName": "暖心心",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "financial-tracker-financial-tracker",
@@ -212,8 +212,8 @@
     "sourcePackage": "financial-tracker",
     "sourceAgent": "agents/financial-tracker.md",
     "displayName": "账清清",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "proposal-strategist-proposal-strategist",
@@ -221,8 +221,8 @@
     "sourcePackage": "proposal-strategist",
     "sourceAgent": "agents/proposal-strategist.md",
     "displayName": "策必中",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "user-experience-architect-user-experience-architect",
@@ -230,8 +230,8 @@
     "sourcePackage": "user-experience-architect",
     "sourceAgent": "agents/user-experience-architect.md",
     "displayName": "体验达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "trend-researcher-trend-researcher",
@@ -239,8 +239,8 @@
     "sourcePackage": "trend-researcher",
     "sourceAgent": "agents/trend-researcher.md",
     "displayName": "风向标",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "corporate-training-designer-corporate-training-designer",
@@ -248,8 +248,8 @@
     "sourcePackage": "corporate-training-designer",
     "sourceAgent": "agents/corporate-training-designer.md",
     "displayName": "育才才",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "bilibili-content-strategist-bilibili-content-strategist",
@@ -257,8 +257,8 @@
     "sourcePackage": "bilibili-content-strategist",
     "sourceAgent": "agents/bilibili-content-strategist.md",
     "displayName": "弹幕幕",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "visual-storytelling-expert-visual-storytelling-expert",
@@ -266,8 +266,8 @@
     "sourcePackage": "visual-storytelling-expert",
     "sourceAgent": "agents/visual-storytelling-expert.md",
     "displayName": "图说说",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "workflow-optimization-expert-workflow-optimization-expert",
@@ -275,8 +275,8 @@
     "sourcePackage": "workflow-optimization-expert",
     "sourceAgent": "agents/workflow-optimization-expert.md",
     "displayName": "流畅畅",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "user-experience-researcher-user-experience-researcher",
@@ -284,8 +284,8 @@
     "sourcePackage": "user-experience-researcher",
     "sourceAgent": "agents/user-experience-researcher.md",
     "displayName": "探真真",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "baidu-seo-expert-baidu-seo-expert",
@@ -293,8 +293,8 @@
     "sourcePackage": "baidu-seo-expert",
     "sourceAgent": "agents/baidu-seo-expert.md",
     "displayName": "度优优",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ppc-bidding-strategist-ppc-bidding-strategist",
@@ -302,8 +302,8 @@
     "sourcePackage": "ppc-bidding-strategist",
     "sourceAgent": "agents/ppc-bidding-strategist.md",
     "displayName": "竞高高",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tik-tok-strategist-tik-tok-strategist",
@@ -311,8 +311,8 @@
     "sourcePackage": "tik-tok-strategist",
     "sourceAgent": "agents/tik-tok-strategist.md",
     "displayName": "拓刻刻",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "legal-compliance-reviewer-legal-compliance-reviewer",
@@ -320,8 +320,8 @@
     "sourcePackage": "legal-compliance-reviewer",
     "sourceAgent": "agents/legal-compliance-reviewer.md",
     "displayName": "律守正",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tencent-charity-expert-tencent-charity-expert",
@@ -329,8 +329,8 @@
     "sourcePackage": "tencent-charity-expert",
     "sourceAgent": "agents/tencent-charity-expert.md",
     "displayName": "小益",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "study-abroad-consultant-study-abroad-consultant",
@@ -338,8 +338,8 @@
     "sourcePackage": "study-abroad-consultant",
     "sourceAgent": "agents/study-abroad-consultant.md",
     "displayName": "留洋洋",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "multi-cloud-management-expert-multi-cloud-management-expert",
@@ -347,8 +347,8 @@
     "sourcePackage": "multi-cloud-management-expert",
     "sourceAgent": "agents/multi-cloud-management-expert.md",
     "displayName": "CloudQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "cloud-ops-team-cloud-ops-team-lead",
@@ -356,8 +356,8 @@
     "sourcePackage": "cloud-ops-team",
     "sourceAgent": "agents/cloud-ops-team-lead.md",
     "displayName": "腾讯云技术支持",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "andon-q-expert-andon-q-expert",
@@ -365,8 +365,8 @@
     "sourcePackage": "andon-q-expert",
     "sourceAgent": "agents/andon-q-expert.md",
     "displayName": "AndonQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tencent-security-expert-tencent-security-expert",
@@ -374,8 +374,8 @@
     "sourcePackage": "tencent-security-expert",
     "sourceAgent": "agents/tencent-security-expert.md",
     "displayName": "云鼎安全专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ai-engineer-ai-engineer",
@@ -383,8 +383,8 @@
     "sourcePackage": "ai-engineer",
     "sourceAgent": "agents/ai-engineer.md",
     "displayName": "深网网",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "senior-developer-senior-developer",
@@ -392,8 +392,8 @@
     "sourcePackage": "senior-developer",
     "sourceAgent": "agents/senior-developer.md",
     "displayName": "吴八哥",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "frontend-developer-frontend-developer",
@@ -401,8 +401,8 @@
     "sourcePackage": "frontend-developer",
     "sourceAgent": "agents/frontend-developer.md",
     "displayName": "像素匠",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "backend-architect-backend-architect",
@@ -410,8 +410,8 @@
     "sourcePackage": "backend-architect",
     "sourceAgent": "agents/backend-architect.md",
     "displayName": "磐石石",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "software-architect-software-architect",
@@ -419,8 +419,8 @@
     "sourcePackage": "software-architect",
     "sourceAgent": "agents/software-architect.md",
     "displayName": "架构通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "mobile-application-developer-mobile-application-developer",
@@ -428,8 +428,8 @@
     "sourcePackage": "mobile-application-developer",
     "sourceAgent": "agents/mobile-application-developer.md",
     "displayName": "掌中灵",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "we-chat-mini-program-developer-we-chat-mini-program-developer",
@@ -437,8 +437,8 @@
     "sourcePackage": "we-chat-mini-program-developer",
     "sourceAgent": "agents/we-chat-mini-program-developer.md",
     "displayName": "小程达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "code-review-expert-code-review-expert",
@@ -446,8 +446,8 @@
     "sourcePackage": "code-review-expert",
     "sourceAgent": "agents/code-review-expert.md",
     "displayName": "火眼眼",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "security-engineer-security-engineer",
@@ -455,8 +455,8 @@
     "sourcePackage": "security-engineer",
     "sourceAgent": "agents/security-engineer.md",
     "displayName": "盾甲甲",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "dev-ops-automation-engineer-dev-ops-automation-engineer",
@@ -464,8 +464,8 @@
     "sourcePackage": "dev-ops-automation-engineer",
     "sourceAgent": "agents/dev-ops-automation-engineer.md",
     "displayName": "一键达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "technical-documentation-engineer-technical-documentation-engineer",
@@ -473,8 +473,8 @@
     "sourcePackage": "technical-documentation-engineer",
     "sourceAgent": "agents/technical-documentation-engineer.md",
     "displayName": "文通通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "database-optimization-expert-database-optimization-expert",
@@ -482,8 +482,8 @@
     "sourcePackage": "database-optimization-expert",
     "sourceAgent": "agents/database-optimization-expert.md",
     "displayName": "索引灵",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "data-engineer-data-engineer",
@@ -491,8 +491,8 @@
     "sourcePackage": "data-engineer",
     "sourceAgent": "agents/data-engineer.md",
     "displayName": "管道通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "rapid-prototyping-engineer-rapid-prototyping-engineer",
@@ -500,8 +500,8 @@
     "sourcePackage": "rapid-prototyping-engineer",
     "sourceAgent": "agents/rapid-prototyping-engineer.md",
     "displayName": "闪造造",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "git-workflow-expert-git-workflow-expert",
@@ -509,8 +509,8 @@
     "sourcePackage": "git-workflow-expert",
     "sourceAgent": "agents/git-workflow-expert.md",
     "displayName": "分支通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "linked-in-content-creator-linked-in-content-creator",
@@ -518,8 +518,8 @@
     "sourcePackage": "linked-in-content-creator",
     "sourceAgent": "agents/linked-in-content-creator.md",
     "displayName": "领英达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "weibo-strategist-weibo-strategist",
@@ -527,8 +527,8 @@
     "sourcePackage": "weibo-strategist",
     "sourceAgent": "agents/weibo-strategist.md",
     "displayName": "热搜搜",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "instagram-operations-expert-instagram-operations-expert",
@@ -536,8 +536,8 @@
     "sourcePackage": "instagram-operations-expert",
     "sourceAgent": "agents/instagram-operations-expert.md",
     "displayName": "晒图图",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "twitter-operations-expert-twitter-operations-expert",
@@ -545,8 +545,8 @@
     "sourcePackage": "twitter-operations-expert",
     "sourceAgent": "agents/twitter-operations-expert.md",
     "displayName": "推文文",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "social-ad-strategist-social-ad-strategist",
@@ -554,8 +554,8 @@
     "sourcePackage": "social-ad-strategist",
     "sourceAgent": "agents/social-ad-strategist.md",
     "displayName": "精投投",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "carousel-content-growth-expert-carousel-content-growth-expert",
@@ -563,8 +563,8 @@
     "sourcePackage": "carousel-content-growth-expert",
     "sourceAgent": "agents/carousel-content-growth-expert.md",
     "displayName": "翻页页",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "app-store-optimization-expert-app-store-optimization-expert",
@@ -572,8 +572,8 @@
     "sourcePackage": "app-store-optimization-expert",
     "sourceAgent": "agents/app-store-optimization-expert.md",
     "displayName": "榜上上",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "book-co-creator-book-co-creator",
@@ -581,8 +581,8 @@
     "sourcePackage": "book-co-creator",
     "sourceAgent": "agents/book-co-creator.md",
     "displayName": "著书书",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "agent-orchestrator-agent-orchestrator",
@@ -590,8 +590,8 @@
     "sourcePackage": "agent-orchestrator",
     "sourceAgent": "agents/agent-orchestrator.md",
     "displayName": "调度达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "enterprise-account-strategist-enterprise-account-strategist",
@@ -599,8 +599,8 @@
     "sourcePackage": "enterprise-account-strategist",
     "sourceAgent": "agents/enterprise-account-strategist.md",
     "displayName": "拓客客",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "deal-strategist-deal-strategist",
@@ -608,8 +608,8 @@
     "sourcePackage": "deal-strategist",
     "sourceAgent": "agents/deal-strategist.md",
     "displayName": "赢单单",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "presales-technical-consultant-presales-technical-consultant",
@@ -617,8 +617,8 @@
     "sourcePackage": "presales-technical-consultant",
     "sourceAgent": "agents/presales-technical-consultant.md",
     "displayName": "方案通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sales-pipeline-analyst-sales-pipeline-analyst",
@@ -626,8 +626,8 @@
     "sourcePackage": "sales-pipeline-analyst",
     "sourceAgent": "agents/sales-pipeline-analyst.md",
     "displayName": "漏斗通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "discovery-coach-discovery-coach",
@@ -635,8 +635,8 @@
     "sourcePackage": "discovery-coach",
     "sourceAgent": "agents/discovery-coach.md",
     "displayName": "掘需需",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "outbound-strategist-outbound-strategist",
@@ -644,8 +644,8 @@
     "sourcePackage": "outbound-strategist",
     "sourceAgent": "agents/outbound-strategist.md",
     "displayName": "拨必通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sprint-priority-manager-sprint-priority-manager",
@@ -653,8 +653,8 @@
     "sourcePackage": "sprint-priority-manager",
     "sourceAgent": "agents/sprint-priority-manager.md",
     "displayName": "排序序",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "feedback-synthesis-analyst-feedback-synthesis-analyst",
@@ -662,8 +662,8 @@
     "sourcePackage": "feedback-synthesis-analyst",
     "sourceAgent": "agents/feedback-synthesis-analyst.md",
     "displayName": "听声声",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "podcast-strategist-podcast-strategist",
@@ -671,8 +671,8 @@
     "sourcePackage": "podcast-strategist",
     "sourceAgent": "agents/podcast-strategist.md",
     "displayName": "声浪浪",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "zhihu-strategist-zhihu-strategist",
@@ -680,8 +680,8 @@
     "sourcePackage": "zhihu-strategist",
     "sourceAgent": "agents/zhihu-strategist.md",
     "displayName": "答有道",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "kuaishou-strategist-kuaishou-strategist",
@@ -689,8 +689,8 @@
     "sourcePackage": "kuaishou-strategist",
     "sourceAgent": "agents/kuaishou-strategist.md",
     "displayName": "老铁铁",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "reddit-community-builder-reddit-community-builder",
@@ -698,8 +698,8 @@
     "sourcePackage": "reddit-community-builder",
     "sourceAgent": "agents/reddit-community-builder.md",
     "displayName": "红迪迪",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "paid-media-auditor-paid-media-auditor",
@@ -707,8 +707,8 @@
     "sourcePackage": "paid-media-auditor",
     "sourceAgent": "agents/paid-media-auditor.md",
     "displayName": "查账账",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ad-tracking-expert-ad-tracking-expert",
@@ -716,8 +716,8 @@
     "sourcePackage": "ad-tracking-expert",
     "sourceAgent": "agents/ad-tracking-expert.md",
     "displayName": "追踪踪",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "search-term-analyst-search-term-analyst",
@@ -725,8 +725,8 @@
     "sourcePackage": "search-term-analyst",
     "sourceAgent": "agents/search-term-analyst.md",
     "displayName": "词探探",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "programmatic-ad-buyer-programmatic-ad-buyer",
@@ -734,8 +734,8 @@
     "sourcePackage": "programmatic-ad-buyer",
     "sourceAgent": "agents/programmatic-ad-buyer.md",
     "displayName": "算法投",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "site-reliability-engineer-site-reliability-engineer",
@@ -743,8 +743,8 @@
     "sourcePackage": "site-reliability-engineer",
     "sourceAgent": "agents/site-reliability-engineer.md",
     "displayName": "稳如山",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "performance-testing-expert-performance-testing-expert",
@@ -752,8 +752,8 @@
     "sourcePackage": "performance-testing-expert",
     "sourceAgent": "agents/performance-testing-expert.md",
     "displayName": "压测测",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "api-testing-expert-api-testing-expert",
@@ -761,8 +761,8 @@
     "sourcePackage": "api-testing-expert",
     "sourceAgent": "agents/api-testing-expert.md",
     "displayName": "接口探",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "incident-response-commander-incident-response-commander",
@@ -770,8 +770,8 @@
     "sourcePackage": "incident-response-commander",
     "sourceAgent": "agents/incident-response-commander.md",
     "displayName": "救火队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "infrastructure-operations-expert-infrastructure-operations-expert",
@@ -779,8 +779,8 @@
     "sourcePackage": "infrastructure-operations-expert",
     "sourceAgent": "agents/infrastructure-operations-expert.md",
     "displayName": "运维通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "jira-workflow-admin-jira-workflow-admin",
@@ -788,8 +788,8 @@
     "sourcePackage": "jira-workflow-admin",
     "sourceAgent": "agents/jira-workflow-admin.md",
     "displayName": "看板达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "project-shepherd-project-shepherd",
@@ -797,8 +797,8 @@
     "sourcePackage": "project-shepherd",
     "sourceAgent": "agents/project-shepherd.md",
     "displayName": "牧羊羊",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "studio-operations-manager-studio-operations-manager",
@@ -806,8 +806,8 @@
     "sourcePackage": "studio-operations-manager",
     "sourceAgent": "agents/studio-operations-manager.md",
     "displayName": "统筹筹",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "studio-producer-studio-producer",
@@ -815,8 +815,8 @@
     "sourcePackage": "studio-producer",
     "sourceAgent": "agents/studio-producer.md",
     "displayName": "制片达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "compliance-auditor-compliance-auditor",
@@ -824,8 +824,8 @@
     "sourcePackage": "compliance-auditor",
     "sourceAgent": "agents/compliance-auditor.md",
     "displayName": "合规规",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tool-evaluation-expert-tool-evaluation-expert",
@@ -833,8 +833,8 @@
     "sourcePackage": "tool-evaluation-expert",
     "sourceAgent": "agents/tool-evaluation-expert.md",
     "displayName": "选品品",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "test-results-analyst-test-results-analyst",
@@ -842,8 +842,8 @@
     "sourcePackage": "test-results-analyst",
     "sourceAgent": "agents/test-results-analyst.md",
     "displayName": "析测测",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "developer-evangelist-developer-evangelist",
@@ -851,8 +851,8 @@
     "sourcePackage": "developer-evangelist",
     "sourceAgent": "agents/developer-evangelist.md",
     "displayName": "布道道",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "mcp-build-expert-mcp-build-expert",
@@ -860,8 +860,8 @@
     "sourcePackage": "mcp-build-expert",
     "sourceAgent": "agents/mcp-build-expert.md",
     "displayName": "协议通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "supply-chain-strategist-supply-chain-strategist",
@@ -869,8 +869,8 @@
     "sourcePackage": "supply-chain-strategist",
     "sourceAgent": "agents/supply-chain-strategist.md",
     "displayName": "链优优",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "game-designer-game-designer",
@@ -878,8 +878,8 @@
     "sourcePackage": "game-designer",
     "sourceAgent": "agents/game-designer.md",
     "displayName": "玩法师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "experiment-tracking-manager-experiment-tracking-manager",
@@ -887,8 +887,8 @@
     "sourcePackage": "experiment-tracking-manager",
     "sourceAgent": "agents/experiment-tracking-manager.md",
     "displayName": "实验通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "delightful-experience-designer-delightful-experience-designer",
@@ -896,8 +896,8 @@
     "sourcePackage": "delightful-experience-designer",
     "sourceAgent": "agents/delightful-experience-designer.md",
     "displayName": "惊喜喜",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "behavioral-nudge-engine-behavioral-nudge-engine",
@@ -905,8 +905,8 @@
     "sourcePackage": "behavioral-nudge-engine",
     "sourceAgent": "agents/behavioral-nudge-engine.md",
     "displayName": "助推推",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "data-integration-agent-data-integration-agent",
@@ -914,8 +914,8 @@
     "sourcePackage": "data-integration-agent",
     "sourceAgent": "agents/data-integration-agent.md",
     "displayName": "聚数数",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "accounts-payable-agent-accounts-payable-agent",
@@ -923,8 +923,8 @@
     "sourcePackage": "accounts-payable-agent",
     "sourceAgent": "agents/accounts-payable-agent.md",
     "displayName": "付清清",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sales-data-extraction-agent-sales-data-extraction-agent",
@@ -932,8 +932,8 @@
     "sourcePackage": "sales-data-extraction-agent",
     "sourceAgent": "agents/sales-data-extraction-agent.md",
     "displayName": "拉数数",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "cultural-intelligence-strategist-cultural-intelligence-strategist",
@@ -941,8 +941,8 @@
     "sourcePackage": "cultural-intelligence-strategist",
     "sourceAgent": "agents/cultural-intelligence-strategist.md",
     "displayName": "知文文",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "government-digital-presales-consultant-government-digital-presales-consultant",
@@ -950,8 +950,8 @@
     "sourcePackage": "government-digital-presales-consultant",
     "sourceAgent": "agents/government-digital-presales-consultant.md",
     "displayName": "政通通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "healthcare-marketing-compliance-expert-healthcare-marketing-compliance-expert",
@@ -959,8 +959,8 @@
     "sourcePackage": "healthcare-marketing-compliance-expert",
     "sourceAgent": "agents/healthcare-marketing-compliance-expert.md",
     "displayName": "医合合",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "autonomous-optimization-architect-autonomous-optimization-architect",
@@ -968,8 +968,8 @@
     "sourcePackage": "autonomous-optimization-architect",
     "sourceAgent": "agents/autonomous-optimization-architect.md",
     "displayName": "自进化",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "identity-graph-operator-identity-graph-operator",
@@ -977,8 +977,8 @@
     "sourcePackage": "identity-graph-operator",
     "sourceAgent": "agents/identity-graph-operator.md",
     "displayName": "识图图",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "model-quality-assurance-expert-model-quality-assurance-expert",
@@ -986,8 +986,8 @@
     "sourcePackage": "model-quality-assurance-expert",
     "sourceAgent": "agents/model-quality-assurance-expert.md",
     "displayName": "模检检",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "threat-detection-engineer-threat-detection-engineer",
@@ -995,8 +995,8 @@
     "sourcePackage": "threat-detection-engineer",
     "sourceAgent": "agents/threat-detection-engineer.md",
     "displayName": "猎威威",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "embedded-firmware-engineer-embedded-firmware-engineer",
@@ -1004,8 +1004,8 @@
     "sourcePackage": "embedded-firmware-engineer",
     "sourceAgent": "agents/embedded-firmware-engineer.md",
     "displayName": "固件通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "lsp-index-engineer-lsp-index-engineer",
@@ -1013,8 +1013,8 @@
     "sourcePackage": "lsp-index-engineer",
     "sourceAgent": "agents/lsp-index-engineer.md",
     "displayName": "索引引",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "solidity-smart-contract-engineer-solidity-smart-contract-engineer",
@@ -1022,8 +1022,8 @@
     "sourcePackage": "solidity-smart-contract-engineer",
     "sourceAgent": "agents/solidity-smart-contract-engineer.md",
     "displayName": "链合约",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "blockchain-security-auditor-blockchain-security-auditor",
@@ -1031,8 +1031,8 @@
     "sourcePackage": "blockchain-security-auditor",
     "sourceAgent": "agents/blockchain-security-auditor.md",
     "displayName": "链审审",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "agent-identity-trust-expert-agent-identity-trust-expert",
@@ -1040,8 +1040,8 @@
     "sourcePackage": "agent-identity-trust-expert",
     "sourceAgent": "agents/agent-identity-trust-expert.md",
     "displayName": "信链链",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "zero-knowledge-proof-admin-zero-knowledge-proof-admin",
@@ -1049,8 +1049,8 @@
     "sourcePackage": "zero-knowledge-proof-admin",
     "sourceAgent": "agents/zero-knowledge-proof-admin.md",
     "displayName": "零知知",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "diversity-visual-expert-diversity-visual-expert",
@@ -1058,8 +1058,8 @@
     "sourcePackage": "diversity-visual-expert",
     "sourceAgent": "agents/diversity-visual-expert.md",
     "displayName": "多元元",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "adort-design-expert-adort-design-expert",
@@ -1067,8 +1067,8 @@
     "sourcePackage": "adort-design-expert",
     "sourceAgent": "agents/adort-design-expert.md",
     "displayName": "林觉初",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "technical-artist-technical-artist",
@@ -1076,8 +1076,8 @@
     "sourcePackage": "technical-artist",
     "sourceAgent": "agents/technical-artist.md",
     "displayName": "技美美",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "narrative-designer-narrative-designer",
@@ -1085,8 +1085,8 @@
     "sourcePackage": "narrative-designer",
     "sourceAgent": "agents/narrative-designer.md",
     "displayName": "剧本本",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "level-designer-level-designer",
@@ -1094,8 +1094,8 @@
     "sourcePackage": "level-designer",
     "sourceAgent": "agents/level-designer.md",
     "displayName": "关卡卡",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "game-audio-engineer-game-audio-engineer",
@@ -1103,8 +1103,8 @@
     "sourcePackage": "game-audio-engineer",
     "sourceAgent": "agents/game-audio-engineer.md",
     "displayName": "音效效",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "accessibility-auditor-accessibility-auditor",
@@ -1112,8 +1112,8 @@
     "sourcePackage": "accessibility-auditor",
     "sourceAgent": "agents/accessibility-auditor.md",
     "displayName": "无碍碍",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "evidence-collector-evidence-collector",
@@ -1121,8 +1121,8 @@
     "sourcePackage": "evidence-collector",
     "sourceAgent": "agents/evidence-collector.md",
     "displayName": "截图图",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "unity-architect-unity-architect",
@@ -1130,8 +1130,8 @@
     "sourcePackage": "unity-architect",
     "sourceAgent": "agents/unity-architect.md",
     "displayName": "解耦达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "unreal-system-engineer-unreal-system-engineer",
@@ -1139,8 +1139,8 @@
     "sourcePackage": "unreal-system-engineer",
     "sourceAgent": "agents/unreal-system-engineer.md",
     "displayName": "虚幻通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "unreal-world-builder-unreal-world-builder",
@@ -1148,8 +1148,8 @@
     "sourcePackage": "unreal-world-builder",
     "sourceAgent": "agents/unreal-world-builder.md",
     "displayName": "造世界",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "unreal-multiplayer-architect-unreal-multiplayer-architect",
@@ -1157,8 +1157,8 @@
     "sourcePackage": "unreal-multiplayer-architect",
     "sourceAgent": "agents/unreal-multiplayer-architect.md",
     "displayName": "联机达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "unreal-technical-artist-unreal-technical-artist",
@@ -1166,8 +1166,8 @@
     "sourcePackage": "unreal-technical-artist",
     "sourceAgent": "agents/unreal-technical-artist.md",
     "displayName": "材质通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "unity-multiplayer-engineer-unity-multiplayer-engineer",
@@ -1175,8 +1175,8 @@
     "sourcePackage": "unity-multiplayer-engineer",
     "sourceAgent": "agents/unity-multiplayer-engineer.md",
     "displayName": "同步达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "unity-shader-graph-artist-unity-shader-graph-artist",
@@ -1184,8 +1184,8 @@
     "sourcePackage": "unity-shader-graph-artist",
     "sourceAgent": "agents/unity-shader-graph-artist.md",
     "displayName": "着色师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "unity-editor-tool-developer-unity-editor-tool-developer",
@@ -1193,8 +1193,8 @@
     "sourcePackage": "unity-editor-tool-developer",
     "sourceAgent": "agents/unity-editor-tool-developer.md",
     "displayName": "插件达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "godot-game-script-engineer-godot-game-script-engineer",
@@ -1202,8 +1202,8 @@
     "sourcePackage": "godot-game-script-engineer",
     "sourceAgent": "agents/godot-game-script-engineer.md",
     "displayName": "节点通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "godot-multiplayer-engineer-godot-multiplayer-engineer",
@@ -1211,8 +1211,8 @@
     "sourcePackage": "godot-multiplayer-engineer",
     "sourceAgent": "agents/godot-multiplayer-engineer.md",
     "displayName": "联网达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "godot-shader-developer-godot-shader-developer",
@@ -1220,8 +1220,8 @@
     "sourcePackage": "godot-shader-developer",
     "sourceAgent": "agents/godot-shader-developer.md",
     "displayName": "渲染达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "roblox-experience-designer-roblox-experience-designer",
@@ -1229,8 +1229,8 @@
     "sourcePackage": "roblox-experience-designer",
     "sourceAgent": "agents/roblox-experience-designer.md",
     "displayName": "乐体验",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "roblox-system-script-engineer-roblox-system-script-engineer",
@@ -1238,8 +1238,8 @@
     "sourcePackage": "roblox-system-script-engineer",
     "sourceAgent": "agents/roblox-system-script-engineer.md",
     "displayName": "脚本通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "roblox-avatar-creator-roblox-avatar-creator",
@@ -1247,8 +1247,8 @@
     "sourcePackage": "roblox-avatar-creator",
     "sourceAgent": "agents/roblox-avatar-creator.md",
     "displayName": "捏脸达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "vision-os-spatial-engineer-vision-os-spatial-engineer",
@@ -1256,8 +1256,8 @@
     "sourcePackage": "vision-os-spatial-engineer",
     "sourceAgent": "agents/vision-os-spatial-engineer.md",
     "displayName": "空间通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "mac-os-spatial-metal-engineer-mac-os-spatial-metal-engineer",
@@ -1265,8 +1265,8 @@
     "sourcePackage": "mac-os-spatial-metal-engineer",
     "sourceAgent": "agents/mac-os-spatial-metal-engineer.md",
     "displayName": "渲染师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "xr-immersive-developer-xr-immersive-developer",
@@ -1274,8 +1274,8 @@
     "sourcePackage": "xr-immersive-developer",
     "sourceAgent": "agents/xr-immersive-developer.md",
     "displayName": "沉浸达",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "xr-interface-architect-xr-interface-architect",
@@ -1283,8 +1283,8 @@
     "sourcePackage": "xr-interface-architect",
     "sourceAgent": "agents/xr-interface-architect.md",
     "displayName": "空间界",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "xr-cockpit-interaction-expert-xr-cockpit-interaction-expert",
@@ -1292,8 +1292,8 @@
     "sourcePackage": "xr-cockpit-interaction-expert",
     "sourceAgent": "agents/xr-cockpit-interaction-expert.md",
     "displayName": "座舱师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "terminal-integration-expert-terminal-integration-expert",
@@ -1301,8 +1301,8 @@
     "sourcePackage": "terminal-integration-expert",
     "sourceAgent": "agents/terminal-integration-expert.md",
     "displayName": "终端通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "reality-checker-reality-checker",
@@ -1310,8 +1310,8 @@
     "sourcePackage": "reality-checker",
     "sourceAgent": "agents/reality-checker.md",
     "displayName": "验真真",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "llm-wiki-llm-wiki",
@@ -1319,8 +1319,8 @@
     "sourcePackage": "llm-wiki",
     "sourceAgent": "agents/llm-wiki.md",
     "displayName": "知库库",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "software-company-software-team-lead",
@@ -1328,8 +1328,8 @@
     "sourcePackage": "software-company",
     "sourceAgent": "agents/software-team-lead.md",
     "displayName": "软件开发团队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "design-md-architect-design-md-architect",
@@ -1337,8 +1337,8 @@
     "sourcePackage": "design-md-architect",
     "sourceAgent": "agents/design-md-architect.md",
     "displayName": "规范范",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "trading-agent-trading-team-lead",
@@ -1418,8 +1418,8 @@
     "sourcePackage": "data-analysis",
     "sourceAgent": "agents/data-analysis-expert.md",
     "displayName": "析数数",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "data-data-exploration-expert",
@@ -1427,8 +1427,8 @@
     "sourcePackage": "data",
     "sourceAgent": "agents/data-exploration-expert.md",
     "displayName": "探数数",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "finance-finance-accounting-expert",
@@ -1445,8 +1445,8 @@
     "sourcePackage": "financial-analysis",
     "sourceAgent": "agents/financial-modeling-expert.md",
     "displayName": "建模模",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "equity-research-equity-research-expert",
@@ -1454,8 +1454,8 @@
     "sourcePackage": "equity-research",
     "sourceAgent": "agents/equity-research-expert.md",
     "displayName": "严估深",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "investment-banking-investment-banking-expert",
@@ -1463,8 +1463,8 @@
     "sourcePackage": "investment-banking",
     "sourceAgent": "agents/investment-banking-expert.md",
     "displayName": "银拓远",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "private-equity-private-equity-expert",
@@ -1472,8 +1472,8 @@
     "sourcePackage": "private-equity",
     "sourceAgent": "agents/private-equity-expert.md",
     "displayName": "募资资",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "wealth-management-wealth-management-expert",
@@ -1481,8 +1481,8 @@
     "sourcePackage": "wealth-management",
     "sourceAgent": "agents/wealth-management-expert.md",
     "displayName": "理财财",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "document-skills-document-processing-expert",
@@ -1490,8 +1490,8 @@
     "sourcePackage": "document-skills",
     "sourceAgent": "agents/document-processing-expert.md",
     "displayName": "理文文",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ppt-creation-expert-ppt-creator",
@@ -1499,8 +1499,8 @@
     "sourcePackage": "ppt-creation-expert",
     "sourceAgent": "agents/ppt-creator.md",
     "displayName": "腾讯云知（乐享）",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "modern-webapp-modern-webapp-expert",
@@ -1508,8 +1508,8 @@
     "sourcePackage": "modern-webapp",
     "sourceAgent": "agents/modern-webapp-expert.md",
     "displayName": "速构构",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "finance-data-finance-data-expert",
@@ -1517,8 +1517,8 @@
     "sourcePackage": "finance-data",
     "sourceAgent": "agents/finance-data-expert.md",
     "displayName": "财数数",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "dockerfile-gen-dockerfile-gen-expert",
@@ -1544,8 +1544,8 @@
     "sourcePackage": "internal-comms",
     "sourceAgent": "agents/internal-comms-expert.md",
     "displayName": "传令令",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "remotion-video-generator-remotion-video-expert",
@@ -1553,8 +1553,8 @@
     "sourcePackage": "remotion-video-generator",
     "sourceAgent": "agents/remotion-video-expert.md",
     "displayName": "动画画",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "openspec-doc-team-doc-team-lead",
@@ -1580,8 +1580,8 @@
     "sourcePackage": "stock-partner-team",
     "sourceAgent": "agents/stock-partner-lead.md",
     "displayName": "腾讯自选股股票投研专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "investment-masters-team-hedge-fund-lead",
@@ -1589,8 +1589,8 @@
     "sourcePackage": "investment-masters-team",
     "sourceAgent": "agents/hedge-fund-lead.md",
     "displayName": "投资大师专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "engineering-assurance-team-engineering-director",
@@ -1598,8 +1598,8 @@
     "sourcePackage": "engineering-assurance-team",
     "sourceAgent": "agents/engineering-director.md",
     "displayName": "工程保障团队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "hr-operations-team-hr-director",
@@ -1607,8 +1607,8 @@
     "sourcePackage": "hr-operations-team",
     "sourceAgent": "agents/hr-director.md",
     "displayName": "HR 运营团队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "marketing-campaign-team-marketing-director",
@@ -1616,8 +1616,8 @@
     "sourcePackage": "marketing-campaign-team",
     "sourceAgent": "agents/marketing-director.md",
     "displayName": "营销战役团队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "product-strategy-team-product-director",
@@ -1625,8 +1625,8 @@
     "sourcePackage": "product-strategy-team",
     "sourceAgent": "agents/product-director.md",
     "displayName": "产品战略团队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sales-battle-team-sales-director",
@@ -1634,8 +1634,8 @@
     "sourcePackage": "sales-battle-team",
     "sourceAgent": "agents/sales-director.md",
     "displayName": "销售作战团队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "chatlaw-team-chatlaw-team-lead",
@@ -1643,8 +1643,8 @@
     "sourcePackage": "chatlaw-team",
     "sourceAgent": "agents/chatlaw-team-lead.md",
     "displayName": "中文法律咨询团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "chuangye-manor-chuangye-manor",
@@ -1652,8 +1652,8 @@
     "sourcePackage": "chuangye-manor",
     "sourceAgent": "agents/chuangye-manor.md",
     "displayName": "林正刚",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "gstack-gstack-lead",
@@ -1661,8 +1661,8 @@
     "sourcePackage": "gstack",
     "sourceAgent": "agents/gstack-lead.md",
     "displayName": "软件工坊",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "a-share-analysis-a-share-advisor",
@@ -1670,8 +1670,8 @@
     "sourcePackage": "a-share-analysis",
     "sourceAgent": "agents/a-share-advisor.md",
     "displayName": "A股研究团队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tripstar-agent-trip-planner",
@@ -1688,8 +1688,8 @@
     "sourcePackage": "kdocs-data-table",
     "sourceAgent": "agents/kdocs-data-table.md",
     "displayName": "金山文档智能建表助手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "kdocs-doc-butler-kdocs-doc-butler",
@@ -1697,8 +1697,8 @@
     "sourcePackage": "kdocs-doc-butler",
     "sourceAgent": "agents/kdocs-doc-butler.md",
     "displayName": "金山文档文档管家助手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "kdocs-knowledge-collector-kdocs-knowledge-collector",
@@ -1706,8 +1706,8 @@
     "sourcePackage": "kdocs-knowledge-collector",
     "sourceAgent": "agents/kdocs-knowledge-collector.md",
     "displayName": "金山文档知识收藏助手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "kdocs-pdf-toolbox-kdocs-pdf-toolbox",
@@ -1715,8 +1715,8 @@
     "sourcePackage": "kdocs-pdf-toolbox",
     "sourceAgent": "agents/kdocs-pdf-toolbox.md",
     "displayName": "金山文档PDF处理助手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "kdocs-ppt-creator-kdocs-ppt-creator",
@@ -1724,8 +1724,8 @@
     "sourcePackage": "kdocs-ppt-creator",
     "sourceAgent": "agents/kdocs-ppt-creator.md",
     "displayName": "金山文档PPT创作助手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ai-shifu-expert-ai-shifu",
@@ -1733,8 +1733,8 @@
     "sourcePackage": "ai-shifu-expert",
     "sourceAgent": "agents/ai-shifu.md",
     "displayName": "AI师傅",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "rum-fullstack-team-rum-team-lead",
@@ -1751,8 +1751,8 @@
     "sourcePackage": "design-engine",
     "sourceAgent": "agents/design-engine-team-lead.md",
     "displayName": "设计原型专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ai-data-copilot-copilot-team-lead",
@@ -1760,8 +1760,8 @@
     "sourcePackage": "ai-data-copilot",
     "sourceAgent": "agents/copilot-team-lead.md",
     "displayName": "智数分析专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ai-content-creator-team-ai-content-creator-team-lead",
@@ -1769,8 +1769,8 @@
     "sourcePackage": "ai-content-creator-team",
     "sourceAgent": "agents/ai-content-creator-team-lead.md",
     "displayName": "内容创作专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "content-monetization-team-content-monetization-team-lead",
@@ -1787,8 +1787,8 @@
     "sourcePackage": "content-distribution-team",
     "sourceAgent": "agents/content-distribution-team-lead.md",
     "displayName": "全域内容分发专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "social-engagement-team-social-engagement-team-lead",
@@ -1796,8 +1796,8 @@
     "sourcePackage": "social-engagement-team",
     "sourceAgent": "agents/social-engagement-team-lead.md",
     "displayName": "社媒互动增长专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "seo-content-team-seo-content-team-lead",
@@ -1805,8 +1805,8 @@
     "sourcePackage": "seo-content-team",
     "sourceAgent": "agents/seo-content-team-lead.md",
     "displayName": "SEO 内容营销团队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tax-compliance-team-tax-compliance-team-lead",
@@ -1814,8 +1814,8 @@
     "sourcePackage": "tax-compliance-team",
     "sourceAgent": "agents/tax-compliance-team-lead.md",
     "displayName": "财税合规专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "vocab-craft-expert-vocab-coach",
@@ -1823,8 +1823,8 @@
     "sourcePackage": "vocab-craft-expert",
     "sourceAgent": "agents/vocab-coach.md",
     "displayName": "词力",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "indie-founder-coach-indie-founder-coach",
@@ -1832,8 +1832,8 @@
     "sourcePackage": "indie-founder-coach",
     "sourceAgent": "agents/indie-founder-coach.md",
     "displayName": "创迪",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "engineering-workflow-skills-engineering-workflow-coach",
@@ -1850,8 +1850,8 @@
     "sourcePackage": "mermaid-diagram-expert",
     "sourceAgent": "agents/mermaid-diagram-expert.md",
     "displayName": "绘灵",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "earnings-reviewer-earnings-reviewer",
@@ -1859,8 +1859,8 @@
     "sourcePackage": "earnings-reviewer",
     "sourceAgent": "agents/earnings-reviewer.md",
     "displayName": "季明辨",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "gl-reconciler-gl-reconciler",
@@ -1868,8 +1868,8 @@
     "sourcePackage": "gl-reconciler",
     "sourceAgent": "agents/gl-reconciler.md",
     "displayName": "钱对齐",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "kyc-screener-kyc-screener",
@@ -1877,8 +1877,8 @@
     "sourcePackage": "kyc-screener",
     "sourceAgent": "agents/kyc-screener.md",
     "displayName": "查本源",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "market-researcher-market-researcher",
@@ -1886,8 +1886,8 @@
     "sourcePackage": "market-researcher",
     "sourceAgent": "agents/market-researcher.md",
     "displayName": "严研行",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "meeting-prep-agent-meeting-prep-agent",
@@ -1895,8 +1895,8 @@
     "sourcePackage": "meeting-prep-agent",
     "sourceAgent": "agents/meeting-prep-agent.md",
     "displayName": "周备全",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "model-builder-model-builder",
@@ -1904,8 +1904,8 @@
     "sourcePackage": "model-builder",
     "sourceAgent": "agents/model-builder.md",
     "displayName": "莫百炼",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "month-end-closer-month-end-closer",
@@ -1913,8 +1913,8 @@
     "sourcePackage": "month-end-closer",
     "sourceAgent": "agents/month-end-closer.md",
     "displayName": "关月结",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "pitch-agent-pitch-agent",
@@ -1922,8 +1922,8 @@
     "sourcePackage": "pitch-agent",
     "sourceAgent": "agents/pitch-agent.md",
     "displayName": "白必得",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "statement-auditor-statement-auditor",
@@ -1931,8 +1931,8 @@
     "sourcePackage": "statement-auditor",
     "sourceAgent": "agents/statement-auditor.md",
     "displayName": "审细明",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "valuation-reviewer-valuation-reviewer",
@@ -1940,8 +1940,8 @@
     "sourcePackage": "valuation-reviewer",
     "sourceAgent": "agents/valuation-reviewer.md",
     "displayName": "顾估衡",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "charity-doc-finance-expert-charity-doc-finance-expert",
@@ -1949,8 +1949,8 @@
     "sourcePackage": "charity-doc-finance-expert",
     "sourceAgent": "agents/charity-doc-finance-expert.md",
     "displayName": "小益",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ask-liuxiaopai-ask-liuxiaopai",
@@ -1958,8 +1958,8 @@
     "sourcePackage": "ask-liuxiaopai",
     "sourceAgent": "agents/ask-liuxiaopai.md",
     "displayName": "AI 刘小排",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fortune-consultant-fortune-consultant",
@@ -1967,8 +1967,8 @@
     "sourcePackage": "fortune-consultant",
     "sourceAgent": "agents/fortune-consultant.md",
     "displayName": "运势分析师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "opc-team-opc-team-lead",
@@ -1976,8 +1976,8 @@
     "sourcePackage": "opc-team",
     "sourceAgent": "agents/opc-team-lead.md",
     "displayName": "一人公司专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "aihot-aihot",
@@ -1985,8 +1985,8 @@
     "sourcePackage": "aihot",
     "sourceAgent": "agents/aihot.md",
     "displayName": "数字生命卡兹克",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "huashu-doc-reviewer-doc-reviewer",
@@ -1994,8 +1994,8 @@
     "sourcePackage": "huashu-doc-reviewer",
     "sourceAgent": "agents/doc-reviewer.md",
     "displayName": "花叔文档审稿专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "huashu-data-pro-huashu-data-pro-team-lead",
@@ -2003,8 +2003,8 @@
     "sourcePackage": "huashu-data-pro",
     "sourceAgent": "agents/huashu-data-pro-team-lead.md",
     "displayName": "花叔数据分析专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "video-gen-team-video-gen-team-lead",
@@ -2012,8 +2012,8 @@
     "sourcePackage": "video-gen-team",
     "sourceAgent": "agents/video-gen-team-lead.md",
     "displayName": "苍何视频生成团队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "video-dissection-video-dissection-team-lead",
@@ -2021,8 +2021,8 @@
     "sourcePackage": "video-dissection",
     "sourceAgent": "agents/video-dissection-team-lead.md",
     "displayName": "苍何视频解剖",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "promo-creator-team-promo-team-lead",
@@ -2030,8 +2030,8 @@
     "sourcePackage": "promo-creator-team",
     "sourceAgent": "agents/promo-team-lead.md",
     "displayName": "袋鼠帝宣传片创作团队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "enterprise-legal-team-enterprise-legal-lead",
@@ -2084,8 +2084,8 @@
     "sourcePackage": "humanize-ppt-team",
     "sourceAgent": "agents/humanize-ppt-team-lead.md",
     "displayName": "PPT大纲、生成、视频、演示与交付专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "yunzhi-qa-assistant-yunzhi-qa-assistant",
@@ -2093,8 +2093,8 @@
     "sourcePackage": "yunzhi-qa-assistant",
     "sourceAgent": "agents/yunzhi-qa-assistant.md",
     "displayName": "腾讯云知（乐享）",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "capacity-expert-capacity-expert",
@@ -2102,8 +2102,8 @@
     "sourcePackage": "capacity-expert",
     "sourceAgent": "agents/capacity-expert.md",
     "displayName": "CloudQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "chaos-expert-chaos-expert",
@@ -2111,8 +2111,8 @@
     "sourcePackage": "chaos-expert",
     "sourceAgent": "agents/chaos-expert.md",
     "displayName": "CloudQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "finops-expert-finops-expert",
@@ -2120,8 +2120,8 @@
     "sourcePackage": "finops-expert",
     "sourceAgent": "agents/finops-expert.md",
     "displayName": "CloudQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "inspection-expert-inspection-expert",
@@ -2129,8 +2129,8 @@
     "sourcePackage": "inspection-expert",
     "sourceAgent": "agents/inspection-expert.md",
     "displayName": "CloudQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sre-expert-sre-expert",
@@ -2138,8 +2138,8 @@
     "sourcePackage": "sre-expert",
     "sourceAgent": "agents/sre-expert.md",
     "displayName": "CloudQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "well-arch-expert-well-arch-expert",
@@ -2147,8 +2147,8 @@
     "sourcePackage": "well-arch-expert",
     "sourceAgent": "agents/well-arch-expert.md",
     "displayName": "CloudQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "strategy-backtest-expert-strategy-backtest-expert",
@@ -2156,8 +2156,8 @@
     "sourcePackage": "strategy-backtest-expert",
     "sourceAgent": "agents/strategy-backtest-expert.md",
     "displayName": "回测明算",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "industry-sre-team-industry-sre-team-lead",
@@ -2165,8 +2165,8 @@
     "sourcePackage": "industry-sre-team",
     "sourceAgent": "agents/industry-sre-team-lead.md",
     "displayName": "腾讯云行业 SRE",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tencent-rtc-expert-tencent-rtc-expert",
@@ -2174,8 +2174,8 @@
     "sourcePackage": "tencent-rtc-expert",
     "sourceAgent": "agents/tencent-rtc-expert.md",
     "displayName": "CloudQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "smb-finance-smb-finance",
@@ -2228,8 +2228,8 @@
     "sourcePackage": "viral-topic-master",
     "sourceAgent": "agents/viral-topic-master.md",
     "displayName": "爆款炼金师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "citongshuopro-citongshuopro-team-lead",
@@ -2237,8 +2237,8 @@
     "sourcePackage": "citongshuopro",
     "sourceAgent": "agents/citongshuopro-team-lead.md",
     "displayName": "刺桐说Pro-投资社群嘉宾团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "invoice-verify-workbuddy-invoice-verify-team-lead",
@@ -2246,8 +2246,8 @@
     "sourcePackage": "invoice-verify-workbuddy",
     "sourceAgent": "agents/invoice-verify-team-lead.md",
     "displayName": "智能发票专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "jiayi-ads-analytics-expert-jiayi-ads-analytics-expert",
@@ -2255,8 +2255,8 @@
     "sourcePackage": "jiayi-ads-analytics-expert",
     "sourceAgent": "agents/jiayi-ads-analytics-expert.md",
     "displayName": "爆量君",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "kidd-content-expert-kidd-content-expert",
@@ -2264,8 +2264,8 @@
     "sourcePackage": "kidd-content-expert",
     "sourceAgent": "agents/kidd-content-expert.md",
     "displayName": "吟游诗人基德创作专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "chaogeek-kongming-chaogeek-kongming",
@@ -2273,8 +2273,8 @@
     "sourcePackage": "chaogeek-kongming",
     "sourceAgent": "agents/chaogeek-kongming.md",
     "displayName": "ChaoGeek 0x孔明",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ncre-expert-ncre-expert-team-lead",
@@ -2282,8 +2282,8 @@
     "sourcePackage": "ncre-expert",
     "sourceAgent": "agents/ncre-expert-team-lead.md",
     "displayName": "计算机等级考试专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "mvp-dev-expert-team-mvp-dev-expert-team-team-lead",
@@ -2318,8 +2318,8 @@
     "sourcePackage": "gaokao-advisor",
     "sourceAgent": "agents/gaokao-advisor.md",
     "displayName": "专业高考顾问",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "academic-journal-selector-academic-journal-selector-team-lead",
@@ -2327,8 +2327,8 @@
     "sourcePackage": "academic-journal-selector",
     "sourceAgent": "agents/academic-journal-selector-team-lead.md",
     "displayName": "万方数据",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ket-prep-team-ket-prep-team-team-lead",
@@ -2336,8 +2336,8 @@
     "sourcePackage": "ket-prep-team",
     "sourceAgent": "agents/ket-prep-team-team-lead.md",
     "displayName": "KET备考专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tdx-stock-diagnostician-tdx-stock-diagnostician",
@@ -2345,8 +2345,8 @@
     "sourcePackage": "tdx-stock-diagnostician",
     "sourceAgent": "agents/tdx-stock-diagnostician.md",
     "displayName": "通达信诊断师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tdx-stock-hunter-tdx-stock-hunter",
@@ -2354,8 +2354,8 @@
     "sourcePackage": "tdx-stock-hunter",
     "sourceAgent": "agents/tdx-stock-hunter.md",
     "displayName": "通达信选股猎手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tdx-value-assessor-tdx-value-assessor",
@@ -2363,8 +2363,8 @@
     "sourcePackage": "tdx-value-assessor",
     "sourceAgent": "agents/tdx-value-assessor.md",
     "displayName": "通达信评估师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "anti-scam-agent-anti-scam-agent",
@@ -2372,8 +2372,8 @@
     "sourcePackage": "anti-scam-agent",
     "sourceAgent": "agents/anti-scam-agent.md",
     "displayName": "天御金融反诈",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "meituan-living-assistant-meituan-living-assistant",
@@ -2381,8 +2381,8 @@
     "sourcePackage": "meituan-living-assistant",
     "sourceAgent": "agents/meituan-living-assistant.md",
     "displayName": "40-20 外卖券",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "topic-evaluator-topic-evaluator",
@@ -2390,8 +2390,8 @@
     "sourcePackage": "topic-evaluator",
     "sourceAgent": "agents/topic-evaluator.md",
     "displayName": "科技侠来了",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tencentcloud-api-tencentcloud-api",
@@ -2399,8 +2399,8 @@
     "sourcePackage": "tencentcloud-api",
     "sourceAgent": "agents/tencentcloud-api.md",
     "displayName": "腾讯云API专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "long-manuscript-expert-long-manuscript-expert",
@@ -2417,8 +2417,8 @@
     "sourcePackage": "geo-diagnosis-expert",
     "sourceAgent": "agents/geo-diagnosis-expert.md",
     "displayName": "苍何",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "xiaofa-litigation-assistant-xiaofa-litigation-assistant",
@@ -2426,8 +2426,8 @@
     "sourcePackage": "xiaofa-litigation-assistant",
     "sourceAgent": "agents/xiaofa-litigation-assistant.md",
     "displayName": "小法同学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "contract-legal-expert-contract-legal-expert",
@@ -2435,8 +2435,8 @@
     "sourcePackage": "contract-legal-expert",
     "sourceAgent": "agents/contract-legal-expert.md",
     "displayName": "腾讯电子签合同法务专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tianyu-marketing-guardian-tianyu-marketing-guardian",
@@ -2444,8 +2444,8 @@
     "sourcePackage": "tianyu-marketing-guardian",
     "sourceAgent": "agents/tianyu-marketing-guardian.md",
     "displayName": "天御营销保护",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tianyu-account-guardian-tianyu-account-guardian",
@@ -2453,8 +2453,8 @@
     "sourcePackage": "tianyu-account-guardian",
     "sourceAgent": "agents/tianyu-account-guardian.md",
     "displayName": "天御账号保护",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ihr-conference-ihr-conference",
@@ -2462,8 +2462,8 @@
     "sourcePackage": "ihr-conference",
     "sourceAgent": "agents/ihr-conference.md",
     "displayName": "i人事-利唐智语AI面谈官",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "family-education-ma-family-education-ma",
@@ -2471,8 +2471,8 @@
     "sourcePackage": "family-education-ma",
     "sourceAgent": "agents/family-education-ma.md",
     "displayName": "马滢老师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "edgeone-makers-experts-edgeone-makers-team-lead",
@@ -2480,8 +2480,8 @@
     "sourcePackage": "edgeone-makers-experts",
     "sourceAgent": "agents/edgeone-makers-team-lead.md",
     "displayName": "Makers 开发专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tc-sec-tc-sec",
@@ -2489,8 +2489,8 @@
     "sourcePackage": "tc-sec",
     "sourceAgent": "agents/tc-sec.md",
     "displayName": "腾讯云安全专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "auto-consultant-auto-consultant",
@@ -2498,8 +2498,8 @@
     "sourcePackage": "auto-consultant",
     "sourceAgent": "agents/auto-consultant.md",
     "displayName": "车赢赢",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "metamorphosis-practitioner-metamorphosis-practitioner",
@@ -2507,8 +2507,8 @@
     "sourcePackage": "metamorphosis-practitioner",
     "sourceAgent": "agents/metamorphosis-practitioner.md",
     "displayName": "蜕变践行者",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "legal-search-pro-legal-search-pro",
@@ -2516,8 +2516,8 @@
     "sourcePackage": "legal-search-pro",
     "sourceAgent": "agents/legal-search-pro.md",
     "displayName": "法检 Pro",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "news-buddy-news-buddy",
@@ -2525,8 +2525,8 @@
     "sourcePackage": "news-buddy",
     "sourceAgent": "agents/news-buddy.md",
     "displayName": "懂秘",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "liuxue-yanxue-expert-liuxue-yanxue-expert",
@@ -2534,8 +2534,8 @@
     "sourcePackage": "liuxue-yanxue-expert",
     "sourceAgent": "agents/liuxue-yanxue-expert.md",
     "displayName": "福帮手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "contract-expert-contract-expert",
@@ -2543,8 +2543,8 @@
     "sourcePackage": "contract-expert",
     "sourceAgent": "agents/contract-expert.md",
     "displayName": "何同守",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "marketing-reviewer-marketing-reviewer",
@@ -2552,8 +2552,8 @@
     "sourcePackage": "marketing-reviewer",
     "sourceAgent": "agents/marketing-reviewer.md",
     "displayName": "营文稳",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "migraq-team-migraq-team-lead",
@@ -2561,8 +2561,8 @@
     "sourcePackage": "migraq-team",
     "sourceAgent": "agents/migraq-team-lead.md",
     "displayName": "腾讯云上云迁移专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "smart-stock-analyst-smart-stock-analyst",
@@ -2570,8 +2570,8 @@
     "sourcePackage": "smart-stock-analyst",
     "sourceAgent": "agents/smart-stock-analyst.md",
     "displayName": "星辰",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "egypt-marketing-egypt-marketing",
@@ -2579,8 +2579,8 @@
     "sourcePackage": "egypt-marketing",
     "sourceAgent": "agents/egypt-marketing.md",
     "displayName": "埃及市场营销专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "content-creation-expert-prod-content-creation-expert-prod-team-lead",
@@ -2588,8 +2588,8 @@
     "sourcePackage": "content-creation-expert-prod",
     "sourceAgent": "agents/content-creation-expert-prod-team-lead.md",
     "displayName": "汽车行业内容创作专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sg-finance-tax-sg-finance-tax",
@@ -2597,8 +2597,8 @@
     "sourcePackage": "sg-finance-tax",
     "sourceAgent": "agents/sg-finance-tax.md",
     "displayName": "Sg Finance & Tax",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "brazil-company-query-brazil-company-query",
@@ -2606,8 +2606,8 @@
     "sourcePackage": "brazil-company-query",
     "sourceAgent": "agents/brazil-company-query.md",
     "displayName": "巴西商务拓展专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "malaysia-hr-admin-malaysia-hr-admin",
@@ -2615,8 +2615,8 @@
     "sourcePackage": "malaysia-hr-admin",
     "sourceAgent": "agents/malaysia-hr-admin.md",
     "displayName": "Malaysia HR & Administration",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "vibeknow-handdraw-handdraw-artist",
@@ -2624,8 +2624,8 @@
     "sourcePackage": "vibeknow-handdraw",
     "sourceAgent": "agents/handdraw-artist.md",
     "displayName": "把专业内容画给外行看懂",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "yahoo-finance-cli-yahoo-finance-cli",
@@ -2633,8 +2633,8 @@
     "sourcePackage": "yahoo-finance-cli",
     "sourceAgent": "agents/yahoo-finance-cli.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sg-biz-dev-sg-biz-dev",
@@ -2642,8 +2642,8 @@
     "sourcePackage": "sg-biz-dev",
     "sourceAgent": "agents/sg-biz-dev.md",
     "displayName": "Sg Business",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "resume-assistant-resume-assistant",
@@ -2651,8 +2651,8 @@
     "sourcePackage": "resume-assistant",
     "sourceAgent": "agents/resume-assistant.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "api-dev-api-dev",
@@ -2660,8 +2660,8 @@
     "sourcePackage": "api-dev",
     "sourceAgent": "agents/api-dev.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "prompt-engineering-expert-prompt-engineering-expert",
@@ -2669,8 +2669,8 @@
     "sourcePackage": "prompt-engineering-expert",
     "sourceAgent": "agents/prompt-engineering-expert.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "interview-simulator-interview-simulator",
@@ -2678,8 +2678,8 @@
     "sourcePackage": "interview-simulator",
     "sourceAgent": "agents/interview-simulator.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "dev-pipeline-orchestrator-dev-pipeline-orchestrator",
@@ -2687,8 +2687,8 @@
     "sourcePackage": "dev-pipeline-orchestrator",
     "sourceAgent": "agents/dev-pipeline-orchestrator.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "game-development-studio-game-development-studio-team-lead",
@@ -2696,8 +2696,8 @@
     "sourcePackage": "game-development-studio",
     "sourceAgent": "agents/game-development-studio-team-lead.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "eno-eno",
@@ -2705,8 +2705,8 @@
     "sourcePackage": "eno",
     "sourceAgent": "agents/eno.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "superpowers-zh-superpowers-zh",
@@ -2714,8 +2714,8 @@
     "sourcePackage": "superpowers-zh",
     "sourceAgent": "agents/superpowers-zh.md",
     "displayName": "AI编程方法论专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ai-humanizer-ai-humanizer",
@@ -2723,8 +2723,8 @@
     "sourcePackage": "ai-humanizer",
     "sourceAgent": "agents/ai-humanizer.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ai-shifu-ai-shifu",
@@ -2732,8 +2732,8 @@
     "sourcePackage": "ai-shifu",
     "sourceAgent": "agents/ai-shifu.md",
     "displayName": "AI师傅",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "mai-deal-advisor-mai-deal-advisor",
@@ -2741,8 +2741,8 @@
     "sourcePackage": "mai-deal-advisor",
     "sourceAgent": "agents/mai-deal-advisor.md",
     "displayName": "MAI Lab并购交易Agent",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "hsk-devops-expert-hsk-devops-architect",
@@ -2750,8 +2750,8 @@
     "sourcePackage": "hsk-devops-expert",
     "sourceAgent": "agents/hsk-devops-architect.md",
     "displayName": "贝锐花生壳",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "terminal-veteran-terminal-veteran",
@@ -2759,8 +2759,8 @@
     "sourcePackage": "terminal-veteran",
     "sourceAgent": "agents/terminal-veteran.md",
     "displayName": "终端老兵专家（陈丰伟）",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "cordys-crm-cordys-crm",
@@ -2768,8 +2768,8 @@
     "sourcePackage": "cordys-crm",
     "sourceAgent": "agents/cordys-crm.md",
     "displayName": "Cordys CRM 助手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sg-hr-admin-expert-sg-hr-admin-expert",
@@ -2777,8 +2777,8 @@
     "sourcePackage": "sg-hr-admin-expert",
     "sourceAgent": "agents/sg-hr-admin-expert.md",
     "displayName": "Sg HR & Admin",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fin-research-expert-fin-research-expert",
@@ -2786,8 +2786,8 @@
     "sourcePackage": "fin-research-expert",
     "sourceAgent": "agents/fin-research-expert.md",
     "displayName": "同舟股市投研专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "brazil-rfb-expert-brazil-rfb-expert",
@@ -2795,8 +2795,8 @@
     "sourcePackage": "brazil-rfb-expert",
     "sourceAgent": "agents/brazil-rfb-expert.md",
     "displayName": "Brazil Finance & Tax Expert",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "uae-public-affairs-uae-public-affairs",
@@ -2804,8 +2804,8 @@
     "sourcePackage": "uae-public-affairs",
     "sourceAgent": "agents/uae-public-affairs.md",
     "displayName": "阿联酋公共事务专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "egypt-public-affairs-egypt-public-affairs",
@@ -2813,8 +2813,8 @@
     "sourcePackage": "egypt-public-affairs",
     "sourceAgent": "agents/egypt-public-affairs.md",
     "displayName": "Egypt Public Affairs",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "brazil-legal-brazil-legal",
@@ -2822,8 +2822,8 @@
     "sourcePackage": "brazil-legal",
     "sourceAgent": "agents/brazil-legal.md",
     "displayName": "Brazil Legal Expert",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "uae-marketing-advisor-uae-marketing-advisor",
@@ -2831,8 +2831,8 @@
     "sourcePackage": "uae-marketing-advisor",
     "sourceAgent": "agents/uae-marketing-advisor.md",
     "displayName": "UAE Marketing Expert",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "indonesia-digital-law-expert-indonesia-digital-law-expert",
@@ -2840,8 +2840,8 @@
     "sourcePackage": "indonesia-digital-law-expert",
     "sourceAgent": "agents/indonesia-digital-law-expert.md",
     "displayName": "印尼法务合规专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "thai-marketing-creative-thai-marketing-creative",
@@ -2849,8 +2849,8 @@
     "sourcePackage": "thai-marketing-creative",
     "sourceAgent": "agents/thai-marketing-creative.md",
     "displayName": "泰国市场营销专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "malaysia-marketing-malaysia-marketing",
@@ -2858,8 +2858,8 @@
     "sourcePackage": "malaysia-marketing",
     "sourceAgent": "agents/malaysia-marketing.md",
     "displayName": "大马营销通",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "malaysia-legal-malaysia-legal",
@@ -2867,8 +2867,8 @@
     "sourcePackage": "malaysia-legal",
     "sourceAgent": "agents/malaysia-legal.md",
     "displayName": "Malaysia Legal & Compliance",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ip-expert-ip-expert",
@@ -2876,8 +2876,8 @@
     "sourcePackage": "ip-expert",
     "sourceAgent": "agents/ip-expert.md",
     "displayName": "权知明",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "indonesia-bd-expert-indonesia-bd-expert",
@@ -2885,8 +2885,8 @@
     "sourcePackage": "indonesia-bd-expert",
     "sourceAgent": "agents/indonesia-bd-expert.md",
     "displayName": "印尼商务拓展专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "databrain-agent-v2-databrain-agent-v2",
@@ -2894,8 +2894,8 @@
     "sourcePackage": "databrain-agent-v2",
     "sourceAgent": "agents/databrain-agent-v2.md",
     "displayName": "DataBrain",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "indonesia-pa-expert-indonesia-pa-expert",
@@ -2903,8 +2903,8 @@
     "sourcePackage": "indonesia-pa-expert",
     "sourceAgent": "agents/indonesia-pa-expert.md",
     "displayName": "Indo Pub Affair",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "thailand-hr-admin-thailand-hr-admin",
@@ -2912,8 +2912,8 @@
     "sourcePackage": "thailand-hr-admin",
     "sourceAgent": "agents/thailand-hr-admin.md",
     "displayName": "Thai HR&Admin",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "uae-strategic-advisor-uae-strategic-advisor",
@@ -2921,8 +2921,8 @@
     "sourcePackage": "uae-strategic-advisor",
     "sourceAgent": "agents/uae-strategic-advisor.md",
     "displayName": "阿联酋战略顾问专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "malaysia-finance-tax-malaysia-finance-tax",
@@ -2930,8 +2930,8 @@
     "sourcePackage": "malaysia-finance-tax",
     "sourceAgent": "agents/malaysia-finance-tax.md",
     "displayName": "马来西亚财税金融专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "egypt-strategic-advisory-egypt-strategic-advisory",
@@ -2939,8 +2939,8 @@
     "sourcePackage": "egypt-strategic-advisory",
     "sourceAgent": "agents/egypt-strategic-advisory.md",
     "displayName": "Egypt Strategic Advisory",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "nges-healthcare-marketing-team-nges-team-lead",
@@ -2948,8 +2948,8 @@
     "sourcePackage": "nges-healthcare-marketing-team",
     "sourceAgent": "agents/nges-team-lead.md",
     "displayName": "腾讯健康NGES医药营销专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "multi-cloud-expert-multi-cloud-expert",
@@ -2957,8 +2957,8 @@
     "sourcePackage": "multi-cloud-expert",
     "sourceAgent": "agents/multi-cloud-expert.md",
     "displayName": "CloudQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "design-prototype-expert-design-prototype-expert",
@@ -2966,8 +2966,8 @@
     "sourcePackage": "design-prototype-expert",
     "sourceAgent": "agents/design-prototype-expert.md",
     "displayName": "小花创意",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "code-code",
@@ -2975,8 +2975,8 @@
     "sourcePackage": "code",
     "sourceAgent": "agents/code.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "soe-soe",
@@ -2984,8 +2984,8 @@
     "sourcePackage": "soe",
     "sourceAgent": "agents/soe.md",
     "displayName": "腾讯云安全运营专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fbsir-super-partner-fbsir-super-partner",
@@ -3002,8 +3002,8 @@
     "sourcePackage": "frontend",
     "sourceAgent": "agents/frontend.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ai-meeting-notes-ai-meeting-notes",
@@ -3011,8 +3011,8 @@
     "sourcePackage": "ai-meeting-notes",
     "sourceAgent": "agents/ai-meeting-notes.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "market-analysis-cn-market-analysis-cn",
@@ -3020,8 +3020,8 @@
     "sourcePackage": "market-analysis-cn",
     "sourceAgent": "agents/market-analysis-cn.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "database-operations-database-operations",
@@ -3029,8 +3029,8 @@
     "sourcePackage": "database-operations",
     "sourceAgent": "agents/database-operations.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "chatcut-video-editor-chatcut-video-editor",
@@ -3038,8 +3038,8 @@
     "sourcePackage": "chatcut-video-editor",
     "sourceAgent": "agents/chatcut-video-editor.md",
     "displayName": "一站式视频创作专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "novel-generator-novel-generator",
@@ -3047,8 +3047,8 @@
     "sourcePackage": "novel-generator",
     "sourceAgent": "agents/novel-generator.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fundus-disease-analysis",
@@ -3056,8 +3056,8 @@
     "sourcePackage": "fundus-disease-analysis",
     "sourceAgent": "agents/腾讯健康-觅影-眼底彩照疾病分析专家.md",
     "displayName": "腾讯健康-觅影-眼底彩照疾病分析专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "content-writer-content-writer",
@@ -3065,8 +3065,8 @@
     "sourcePackage": "content-writer",
     "sourceAgent": "agents/content-writer.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ai-video-script-ai-video-script",
@@ -3074,8 +3074,8 @@
     "sourcePackage": "ai-video-script",
     "sourceAgent": "agents/ai-video-script.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "arxiv-watcher-arxiv-watcher",
@@ -3083,8 +3083,8 @@
     "sourcePackage": "arxiv-watcher",
     "sourceAgent": "agents/arxiv-watcher.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "frontend-slides-frontend-slides",
@@ -3092,8 +3092,8 @@
     "sourcePackage": "frontend-slides",
     "sourceAgent": "agents/frontend-slides.md",
     "displayName": "鹏城信息AI专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "paper-topic-selection-zhuge-consultant",
@@ -3101,8 +3101,8 @@
     "sourcePackage": "paper-topic-selection",
     "sourceAgent": "agents/zhuge-consultant.md",
     "displayName": "选题顾问（WANFANG TOPIC）",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "patient-education-content-review-word-assistant-patient-education-content-review-word-assistant",
@@ -3110,8 +3110,8 @@
     "sourcePackage": "patient-education-content-review-word-assistant",
     "sourceAgent": "agents/patient-education-content-review-word-assistant.md",
     "displayName": "腾讯健康药箱-私域患教内容审核助手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fbsir-eight-seat-board-board-convener",
@@ -3119,8 +3119,8 @@
     "sourcePackage": "fbsir-eight-seat-board",
     "sourceAgent": "agents/board-convener.md",
     "displayName": "独董会",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "uupt-delivery-uupt-delivery",
@@ -3128,8 +3128,8 @@
     "sourcePackage": "uupt-delivery",
     "sourceAgent": "agents/uupt-delivery.md",
     "displayName": "UU跑腿",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "jinshuju-expert-jinshuju-expert",
@@ -3137,8 +3137,8 @@
     "sourcePackage": "jinshuju-expert",
     "sourceAgent": "agents/jinshuju-expert.md",
     "displayName": "金数据",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "skillhub-charity-expert-team-skillhub-manager",
@@ -3146,8 +3146,8 @@
     "sourcePackage": "skillhub-charity-expert-team",
     "sourceAgent": "agents/skillhub-manager.md",
     "displayName": "技术公益专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sdk-log-expert-sdk-log-expert",
@@ -3155,8 +3155,8 @@
     "sourcePackage": "sdk-log-expert",
     "sourceAgent": "agents/sdk-log-expert.md",
     "displayName": "CloudQ",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "databrain-opinion-expert-databrain-opinion-expert",
@@ -3164,8 +3164,8 @@
     "sourcePackage": "databrain-opinion-expert",
     "sourceAgent": "agents/databrain-opinion-expert.md",
     "displayName": "DataBrain舆情分析专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "vibeknow-ppt-explain-ppt-explainer",
@@ -3173,8 +3173,8 @@
     "sourcePackage": "vibeknow-ppt-explain",
     "sourceAgent": "agents/ppt-explainer.md",
     "displayName": "逐页讲解，一键成片",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "vibeknow-design-video-design-artist",
@@ -3182,8 +3182,8 @@
     "sourcePackage": "vibeknow-design-video",
     "sourceAgent": "agents/design-artist.md",
     "displayName": "一份文档，排成一条成片",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ihr-ai-interviewer-ihr-ai-interviewer",
@@ -3191,8 +3191,8 @@
     "sourcePackage": "ihr-ai-interviewer",
     "sourceAgent": "agents/ihr-ai-interviewer.md",
     "displayName": "AI面试官",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "omics-bioinfo-expert-omics-bioinfo-expert",
@@ -3200,8 +3200,8 @@
     "sourcePackage": "omics-bioinfo-expert",
     "sourceAgent": "agents/omics-bioinfo-expert.md",
     "displayName": "组小学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "omics-cdgpt-expert-omics-cdgpt-expert",
@@ -3209,8 +3209,8 @@
     "sourcePackage": "omics-cdgpt-expert",
     "sourceAgent": "agents/omics-cdgpt-expert.md",
     "displayName": "组小学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "omics-diagnosis-expert-omics-diagnosis-expert",
@@ -3218,8 +3218,8 @@
     "sourcePackage": "omics-diagnosis-expert",
     "sourceAgent": "agents/omics-diagnosis-expert.md",
     "displayName": "组小学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "omics-hpc-expert-omics-hpc-expert",
@@ -3227,8 +3227,8 @@
     "sourcePackage": "omics-hpc-expert",
     "sourceAgent": "agents/omics-hpc-expert.md",
     "displayName": "组小学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "omics-iggm-expert-omics-iggm-expert",
@@ -3236,8 +3236,8 @@
     "sourcePackage": "omics-iggm-expert",
     "sourceAgent": "agents/omics-iggm-expert.md",
     "displayName": "组小学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "omics-ori-expert-omics-ori-expert",
@@ -3245,8 +3245,8 @@
     "sourcePackage": "omics-ori-expert",
     "sourceAgent": "agents/omics-ori-expert.md",
     "displayName": "组小学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "omics-scbert-expert-omics-scbert-expert",
@@ -3254,8 +3254,8 @@
     "sourcePackage": "omics-scbert-expert",
     "sourceAgent": "agents/omics-scbert-expert.md",
     "displayName": "组小学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "omics-scprotein-expert-omics-scprotein-expert",
@@ -3263,8 +3263,8 @@
     "sourcePackage": "omics-scprotein-expert",
     "sourceAgent": "agents/omics-scprotein-expert.md",
     "displayName": "组小学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "omics-tfold-expert-omics-tfold-expert",
@@ -3272,8 +3272,8 @@
     "sourcePackage": "omics-tfold-expert",
     "sourceAgent": "agents/omics-tfold-expert.md",
     "displayName": "组小学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "nuwa-nuwa",
@@ -3290,8 +3290,8 @@
     "sourcePackage": "bidding-strategist",
     "sourceAgent": "agents/bidding-strategist.md",
     "displayName": "投标策略师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fortune-master-fortune-master",
@@ -3299,8 +3299,8 @@
     "sourcePackage": "fortune-master",
     "sourceAgent": "agents/fortune-master.md",
     "displayName": "生辰命理大师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "lazy-travel-planner-travel-planner",
@@ -3308,8 +3308,8 @@
     "sourcePackage": "lazy-travel-planner",
     "sourceAgent": "agents/travel-planner.md",
     "displayName": "懒人出游规划师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "news-briefing-expert-news-briefing-expert",
@@ -3317,8 +3317,8 @@
     "sourcePackage": "news-briefing-expert",
     "sourceAgent": "agents/news-briefing-expert.md",
     "displayName": "新闻资讯专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "novel-creator-novel-creator",
@@ -3326,8 +3326,8 @@
     "sourcePackage": "novel-creator",
     "sourceAgent": "agents/novel-creator.md",
     "displayName": "小说故事创作专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "personal-fitness-coach-fitness-coach",
@@ -3335,8 +3335,8 @@
     "sourcePackage": "personal-fitness-coach",
     "sourceAgent": "agents/fitness-coach.md",
     "displayName": "私人健身教练",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "personal-knowledge-architect-personal-knowledge-architect",
@@ -3353,8 +3353,8 @@
     "sourcePackage": "prompt-engineer",
     "sourceAgent": "agents/prompt-engineer.md",
     "displayName": "提示词工程师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "study-planner-study-planner",
@@ -3362,8 +3362,8 @@
     "sourcePackage": "study-planner",
     "sourceAgent": "agents/study-planner.md",
     "displayName": "学习规划师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "worldcup-buddy-worldcup-buddy",
@@ -3371,8 +3371,8 @@
     "sourcePackage": "worldcup-buddy",
     "sourceAgent": "agents/worldcup-buddy.md",
     "displayName": "看球搭子",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fund-research-analyst-fund-research-analyst",
@@ -3380,8 +3380,8 @@
     "sourcePackage": "fund-research-analyst",
     "sourceAgent": "agents/fund-research-analyst.md",
     "displayName": "基金投研分析师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "python-fullstack-engineer-python-fullstack-engineer",
@@ -3389,8 +3389,8 @@
     "sourcePackage": "python-fullstack-engineer",
     "sourceAgent": "agents/python-fullstack-engineer.md",
     "displayName": "Python 全栈工程师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "trend-hunter-trend-hunter",
@@ -3398,8 +3398,8 @@
     "sourcePackage": "trend-hunter",
     "sourceAgent": "agents/trend-hunter.md",
     "displayName": "热点猎手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "wechat-channels-strategist-wechat-channels-strategist",
@@ -3407,8 +3407,8 @@
     "sourcePackage": "wechat-channels-strategist",
     "sourceAgent": "agents/wechat-channels-strategist.md",
     "displayName": "微信视频号运营策略师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tanyuan-cultural-heritage-expert-tanyuan-cultural-heritage-expert",
@@ -3416,8 +3416,8 @@
     "sourcePackage": "tanyuan-cultural-heritage-expert",
     "sourceAgent": "agents/tanyuan-cultural-heritage-expert.md",
     "displayName": "文博领域AI顾问",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "believe-in-light-believe-in-light-team-lead",
@@ -3425,8 +3425,8 @@
     "sourcePackage": "believe-in-light",
     "sourceAgent": "agents/believe-in-light-team-lead.md",
     "displayName": "相信光么",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "consulting-partners-consulting-partner",
@@ -3434,8 +3434,8 @@
     "sourcePackage": "consulting-partners",
     "sourceAgent": "agents/consulting-partner.md",
     "displayName": "丁笃行",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "career-broker-career-broker",
@@ -3443,8 +3443,8 @@
     "sourcePackage": "career-broker",
     "sourceAgent": "agents/career-broker.md",
     "displayName": "鹅厂职业经纪人",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "jinshuju-form-expert-jinshuju-form-expert",
@@ -3452,8 +3452,8 @@
     "sourcePackage": "jinshuju-form-expert",
     "sourceAgent": "agents/jinshuju-form-expert.md",
     "displayName": "表单管理专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "jinshuju-table-expert-jinshuju-table-expert",
@@ -3461,8 +3461,8 @@
     "sourcePackage": "jinshuju-table-expert",
     "sourceAgent": "agents/jinshuju-table-expert.md",
     "displayName": "AI表格专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "pneumonia-ai-analyst-pneumonia-ai-analyst",
@@ -3470,8 +3470,8 @@
     "sourcePackage": "pneumonia-ai-analyst",
     "sourceAgent": "agents/pneumonia-ai-analyst.md",
     "displayName": "腾讯健康-觅影-肺部CT影像的肺炎辅助评估专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "ngo-challenge-advisor-ngo-challenge-advisor",
@@ -3479,8 +3479,8 @@
     "sourcePackage": "ngo-challenge-advisor",
     "sourceAgent": "agents/ngo-challenge-advisor.md",
     "displayName": "卡仔",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "new-share-expert-new-share-expert",
@@ -3488,8 +3488,8 @@
     "sourcePackage": "new-share-expert",
     "sourceAgent": "agents/new-share-expert.md",
     "displayName": "新股专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "invoice-verify-expert-invoice-verify",
@@ -3497,8 +3497,8 @@
     "sourcePackage": "invoice-verify-expert",
     "sourceAgent": "agents/invoice-verify.md",
     "displayName": "票证核验专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "roadshow-research-team-roadshow-team-lead",
@@ -3506,8 +3506,8 @@
     "sourcePackage": "roadshow-research-team",
     "sourceAgent": "agents/roadshow-team-lead.md",
     "displayName": "资本市场路演研究团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tiderider-sentiment-tiderider-analyst",
@@ -3515,8 +3515,8 @@
     "sourcePackage": "tiderider-sentiment",
     "sourceAgent": "agents/tiderider-analyst.md",
     "displayName": "DataBrain X TideRider",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "industrial-park-investment-attraction-expert-industrial-park-investment-attraction-expert",
@@ -3533,8 +3533,8 @@
     "sourcePackage": "job-companion-team",
     "sourceAgent": "agents/job-companion-team-lead.md",
     "displayName": "求职陪跑团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "corp-credit-due-diligence-corp-credit-due-diligence",
@@ -3542,8 +3542,8 @@
     "sourcePackage": "corp-credit-due-diligence",
     "sourceAgent": "agents/corp-credit-due-diligence.md",
     "displayName": "天御对公信贷",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "qingflow-hr-expert-qingflow-hr-expert",
@@ -3551,8 +3551,8 @@
     "sourcePackage": "qingflow-hr-expert",
     "sourceAgent": "agents/qingflow-hr-expert.md",
     "displayName": "小Q",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "mentougou-business-guide-mentougou-business-guide",
@@ -3560,8 +3560,8 @@
     "sourcePackage": "mentougou-business-guide",
     "sourceAgent": "agents/mentougou-business-guide.md",
     "displayName": "门头沟营商顾问",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "panshi-customer-visit-agent-panshi-customer-visit-agent",
@@ -3569,8 +3569,8 @@
     "sourcePackage": "panshi-customer-visit-agent",
     "sourceAgent": "agents/panshi-customer-visit-agent.md",
     "displayName": "磐石CRM跟进拜访助手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "empirical-research-team-empirical-research-team-team-lead",
@@ -3578,8 +3578,8 @@
     "sourcePackage": "empirical-research-team",
     "sourceAgent": "agents/empirical-research-team-team-lead.md",
     "displayName": "科研专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "workspace-builder-workspace-builder",
@@ -3587,8 +3587,8 @@
     "sourcePackage": "workspace-builder",
     "sourceAgent": "agents/workspace-builder.md",
     "displayName": "小台",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "south-africa-strategy-advisor-south-africa-strategy-advisor",
@@ -3596,8 +3596,8 @@
     "sourcePackage": "south-africa-strategy-advisor",
     "sourceAgent": "agents/south-africa-strategy-advisor.md",
     "displayName": "South African Strategy",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "south-africa-hr-admin-south-africa-hr-admin",
@@ -3605,8 +3605,8 @@
     "sourcePackage": "south-africa-hr-admin",
     "sourceAgent": "agents/south-africa-hr-admin.md",
     "displayName": "South Africa HR",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "vietnam-finance-tax-expert-vietnam-finance-tax-expert",
@@ -3614,8 +3614,8 @@
     "sourcePackage": "vietnam-finance-tax-expert",
     "sourceAgent": "agents/vietnam-finance-tax-expert.md",
     "displayName": "Vietnam Finance & Tax Expert",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "vietnam-public-affairs-vietnam-public-affairs",
@@ -3623,8 +3623,8 @@
     "sourcePackage": "vietnam-public-affairs",
     "sourceAgent": "agents/vietnam-public-affairs.md",
     "displayName": "VN Pub Affair",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "sa-legal-compliance-sa-legal-compliance",
@@ -3632,8 +3632,8 @@
     "sourcePackage": "sa-legal-compliance",
     "sourceAgent": "agents/sa-legal-compliance.md",
     "displayName": "南非法务合规专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "marketing-growth-team-marketing-growth-team-lead",
@@ -3641,8 +3641,8 @@
     "sourcePackage": "marketing-growth-team",
     "sourceAgent": "agents/marketing-growth-team-lead.md",
     "displayName": "营销增长专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "skill-smith-skill-smith",
@@ -3650,8 +3650,8 @@
     "sourcePackage": "skill-smith",
     "sourceAgent": "agents/skill-smith.md",
     "displayName": "技能匠人",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tencent-cloud-quote-assistant-price-inquiry-assistant",
@@ -3659,8 +3659,8 @@
     "sourcePackage": "tencent-cloud-quote-assistant",
     "sourceAgent": "agents/price-inquiry-assistant.md",
     "displayName": "腾讯云报价助手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "innovation-startup-mentor-innovation-startup-mentor",
@@ -3668,8 +3668,8 @@
     "sourcePackage": "innovation-startup-mentor",
     "sourceAgent": "agents/innovation-startup-mentor.md",
     "displayName": "青创领航员",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "hr-digital-expert-hr-digital-expert",
@@ -3677,8 +3677,8 @@
     "sourcePackage": "hr-digital-expert",
     "sourceAgent": "agents/hr-digital-expert.md",
     "displayName": "HR数智专家",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fbsir-aigc-compliance-red-team-fbsir-aigc-compliance-red-team",
@@ -3686,8 +3686,8 @@
     "sourcePackage": "fbsir-aigc-compliance-red-team",
     "sourceAgent": "agents/fbsir-aigc-compliance-red-team.md",
     "displayName": "AIGC 合规红队",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "campus-conversation-coach-campus-conversation-coach",
@@ -3695,8 +3695,8 @@
     "sourcePackage": "campus-conversation-coach",
     "sourceAgent": "agents/campus-conversation-coach.md",
     "displayName": "社交搭子",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "campus-event-navigator-campus-event-navigator",
@@ -3704,8 +3704,8 @@
     "sourcePackage": "campus-event-navigator",
     "sourceAgent": "agents/campus-event-navigator.md",
     "displayName": "活动操盘手",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "campus-job-search-coach-campus-job-search-coach",
@@ -3713,8 +3713,8 @@
     "sourcePackage": "campus-job-search-coach",
     "sourceAgent": "agents/campus-job-search-coach.md",
     "displayName": "求职冲刺",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "career-navigator-career-navigator",
@@ -3722,8 +3722,8 @@
     "sourcePackage": "career-navigator",
     "sourceAgent": "agents/career-navigator.md",
     "displayName": "生涯领航员",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "computer-operations-advisor-computer-operations-advisor",
@@ -3731,8 +3731,8 @@
     "sourcePackage": "computer-operations-advisor",
     "sourceAgent": "agents/computer-operations-advisor.md",
     "displayName": "小修同学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "english-writing-coach-english-writing-coach",
@@ -3740,8 +3740,8 @@
     "sourcePackage": "english-writing-coach",
     "sourceAgent": "agents/english-writing-coach.md",
     "displayName": "Evan老师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "exam-preparation-planner-exam-preparation-planner",
@@ -3749,8 +3749,8 @@
     "sourcePackage": "exam-preparation-planner",
     "sourceAgent": "agents/exam-preparation-planner.md",
     "displayName": "备考军师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "note-class-representative-note-class-representative",
@@ -3758,8 +3758,8 @@
     "sourcePackage": "note-class-representative",
     "sourceAgent": "agents/note-class-representative.md",
     "displayName": "小记同学",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "study-fortune-compass-study-fortune-compass",
@@ -3767,8 +3767,8 @@
     "sourcePackage": "study-fortune-compass",
     "sourceAgent": "agents/study-fortune-compass.md",
     "displayName": "学运趋势解读师",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "thesis-writing-mentor-thesis-writing-mentor",
@@ -3776,8 +3776,8 @@
     "sourcePackage": "thesis-writing-mentor",
     "sourceAgent": "agents/thesis-writing-mentor.md",
     "displayName": "论小舟",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fbsir-super-independent-board-fbsir-super-independent-board",
@@ -3794,8 +3794,8 @@
     "sourcePackage": "workbuddy-universal-mentor",
     "sourceAgent": "agents/workbuddy-universal-mentor.md",
     "displayName": "欧明智",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fbsir-mom-dialogue-expert-fbsir-mom-dialogue-expert",
@@ -3821,8 +3821,8 @@
     "sourcePackage": "tietu-toutiao",
     "sourceAgent": "agents/tietu-toutiao.md",
     "displayName": "贴图头条",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "fbsir-beike-yi-fbsir-beike-yi",
@@ -3839,8 +3839,8 @@
     "sourcePackage": "linkfox-expert-amazon-listing-specialist",
     "sourceAgent": "agents/linkfox-expert-amazon-listing-specialist.md",
     "displayName": "Linkfox",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "dd-due-diligence-team-dd-due-diligence-lead",
@@ -3848,8 +3848,8 @@
     "sourcePackage": "dd-due-diligence-team",
     "sourceAgent": "agents/dd-due-diligence-lead.md",
     "displayName": "AI尽调专家团",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   },
   {
     "id": "tc-chengxin-travel-expert-tongcheng-travel-advisor",
@@ -3857,7 +3857,7 @@
     "sourcePackage": "tc-chengxin-travel-expert",
     "sourceAgent": "agents/tongcheng-travel-advisor.md",
     "displayName": "轻松出行",
-    "status": "invalid",
-    "reason": "license evidence missing for the agent prompt"
+    "status": "ready",
+    "reason": ""
   }
 ]

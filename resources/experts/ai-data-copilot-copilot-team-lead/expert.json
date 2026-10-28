@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-data-copilot-copilot-team-lead",
+  "source": "bundled",
+  "sourcePackage": "ai-data-copilot",
+  "sourceAgent": "agents/copilot-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "智数分析专家团",
+  "profession": "智数分析专家团",
+  "categoryId": "04-DataAI",
+  "description": "6人AI数据分析团队，擅长自然语言转SQL、Python建模、RAG知识问答、仪表盘可视化与报告生成",
+  "tags": [
+    "数据分析",
+    "SQL生成",
+    "报告生成"
+  ],
+  "quickPrompts": [
+    "分析这个CSV文件，生成一份包含关键指标和可视化图表的数据画像报告",
+    "连接我的数据库，用SQL回答：本季度营收前10的客户是哪些？",
+    "阅读上传的文档，结合数据驱动的洞察生成一份知识分析报告"
+  ],
+  "roleFile": "ai-data-copilot-copilot-team-lead/role.md",
+  "avatarFile": "ai-data-copilot-copilot-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "27c11b4b6c0a45742a3df7d091dceb5b7f9bd31ab03bda699f2ca46fcc7bf42c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "23b4fdb63d5d718e04f4e64dabfa4fc9cec16a998427dbcbf71276e6b7d7f0fd"
+    },
+    {
+      "path": "role.md",
+      "sha256": "cd051c5dc918ca90edccd069eb76c3afbc13c9b942d6552b5ab22d1c4bf6a795"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ui-designer-ui-designer",
+  "source": "bundled",
+  "sourcePackage": "ui-designer",
+  "sourceAgent": "agents/ui-designer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "像素君",
+  "profession": "UI设计师",
+  "categoryId": "01-ProductDesign",
+  "description": "精通设计系统和组件库，追求像素级完美，打造无障碍用户界面",
+  "tags": [
+    "UI设计",
+    "组件库",
+    "界面规范"
+  ],
+  "quickPrompts": [
+    "我们需要设计一个全新的用户界面,要求既美观又易用,请UI设计师帮我创建符合用户习惯的界面设计方案。",
+    "为产品搭建完整设计规范系统",
+    "评审现有UI设计并提出优化方案"
+  ],
+  "roleFile": "ui-designer-ui-designer/role.md",
+  "avatarFile": "ui-designer-ui-designer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f939dd666076f11011d0d6dba8e51dfebeb6060954c0f0039e514e4074349999",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "86399b938def53e15c84d7c3e3e7542248c2d834862511b6e2e78ed62b332014"
+    },
+    {
+      "path": "role.md",
+      "sha256": "20e8adac395e51005cc211b429ac842647862cbf17ffe3b0f123a212d8a3ecc9"
+    }
+  ]
+}

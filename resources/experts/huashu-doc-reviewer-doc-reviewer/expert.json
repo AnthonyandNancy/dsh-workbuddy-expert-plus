@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "huashu-doc-reviewer-doc-reviewer",
+  "source": "bundled",
+  "sourcePackage": "huashu-doc-reviewer",
+  "sourceAgent": "agents/doc-reviewer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "花叔文档审稿专家",
+  "profession": "合同与公文审稿",
+  "categoryId": "11-SecurityCompliance",
+  "description": "为「一人公司」打造的 AI 审稿专家。直接在 .docx 原文里加批注气泡和追踪修订，不返回新文档、不破坏原格式。",
+  "tags": [
+    "合同审查",
+    "文档批注",
+    "追踪修订"
+  ],
+  "quickPrompts": [
+    "用合同审查模式帮我审一下：contract.docx",
+    "这份方案需要逻辑评审：proposal-v2.docx",
+    "帮我把这份报告的表述顺一遍，留修订痕迹：report.docx"
+  ],
+  "roleFile": "huashu-doc-reviewer-doc-reviewer/role.md",
+  "avatarFile": "huashu-doc-reviewer-doc-reviewer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8589ece09922154cbd4b642ef96cc549fbf4fbff854bb849e3955823f57099d5",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6e6a7a6481cad9635a81084865d9524523409b30432d6b5d486aebdbc21be9a1"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f1d2a7fc6e1359dcf30a8786a5550b86283cf54a3d31f924787d4f93d9620e0c"
+    }
+  ]
+}

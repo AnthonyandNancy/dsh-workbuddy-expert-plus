@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "kdocs-knowledge-collector-kdocs-knowledge-collector",
+  "source": "bundled",
+  "sourcePackage": "kdocs-knowledge-collector",
+  "sourceAgent": "agents/kdocs-knowledge-collector.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "金山文档知识收藏助手",
+  "profession": "知识收藏专家",
+  "categoryId": "06-ContentCreative",
+  "description": "金山文档出品，支持网页剪藏、碎片笔记整理与多文档智能摘要，帮你沉淀云端知识资产。",
+  "tags": [
+    "网页剪藏",
+    "文档总结",
+    "知识管理"
+  ],
+  "quickPrompts": [
+    "帮我整理一下这些碎片笔记：\n- AI大模型趋势\n- 下周要交季报\n- 新功能上线计划\n- 竞品分析要做\n- Agent是未来方向",
+    "帮我保存这篇公众号文章到金山文档 https://mp.weixin.qq.com/s/example123",
+    "帮我把「Q1总结」和「Q2计划」这两份文档汇总，生成一份半年度工作报告"
+  ],
+  "roleFile": "kdocs-knowledge-collector-kdocs-knowledge-collector/role.md",
+  "avatarFile": "kdocs-knowledge-collector-kdocs-knowledge-collector/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b905395f54d022caee142ca4c8b527abe54720f42f34113b410b0de6c2674f35",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f3cfa7b3c146e8a32b1211520b739060d8bd69dfc064053879ece27febd57e16"
+    },
+    {
+      "path": "role.md",
+      "sha256": "da79bdace5da471634f9ab1856a168fe5f7859d2ce8f61837b73a288cd096bff"
+    }
+  ]
+}

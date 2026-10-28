@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "fortune-consultant-fortune-consultant",
+  "source": "bundled",
+  "sourcePackage": "fortune-consultant",
+  "sourceAgent": "agents/fortune-consultant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "运势分析师",
+  "profession": "赛博神算子",
+  "categoryId": "12-IndustryConsultant",
+  "description": "传统命理参考工具——八字紫微排盘、塔罗梅花起卦、农历黄历查询，多体系交叉参考，仅供娱乐。",
+  "tags": [
+    "八字紫微",
+    "塔罗易卦",
+    "农历黄历"
+  ],
+  "quickPrompts": [
+    "1987年10月16日，下午2点，女。帮我梳理一下近期的八字命盘信息。",
+    "我家坐北朝南，2020 年入住，飞星看一下我家书房。",
+    "用六爻起一卦：要不要接腾讯的 offer？",
+    "帮我梳理一下近期的八字命盘信息。",
+    "1990-05-15 14:30 排个八字，梳理一下大运结构。",
+    "心里有件事想理清思路，帮我抽三张塔罗做个参考。"
+  ],
+  "roleFile": "fortune-consultant-fortune-consultant/role.md",
+  "avatarFile": "fortune-consultant-fortune-consultant/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "c5536150eabd4bd07945c2c6b71f607953e781243e6ef040abe3ac582edd4020",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0667c6f42a19c4794918e050f24b348d889a96b69bd685e5d39cf42742971816"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3d0d7c6fd6d5453e5add6bdd573543d94a3e7f2e84290dbca60ea4f2d05ae389"
+    }
+  ]
+}

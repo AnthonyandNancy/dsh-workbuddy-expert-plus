@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "brazil-company-query-brazil-company-query",
+  "source": "bundled",
+  "sourcePackage": "brazil-company-query",
+  "sourceAgent": "agents/brazil-company-query.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "巴西商务拓展专家",
+  "profession": "巴西商务拓展专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "排查巴西企业工商与信用风险，尽调专利商标知识产权，分析市场拓展路径，降低商务拓展风险。",
+  "tags": [
+    "企业尽调",
+    "风险筛查",
+    "市场分析"
+  ],
+  "quickPrompts": [
+    "请帮我查询XX公司的经营现状，历史诉讼记录，评估合作风险",
+    "这个专利最初是谁申请的？现在归谁？",
+    "XX 公司名下有哪些技术转让合同？分别转给谁？"
+  ],
+  "roleFile": "brazil-company-query-brazil-company-query/role.md",
+  "avatarFile": "brazil-company-query-brazil-company-query/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8d7373ae5f0833332fad2bea38689fd5a6a0b382752dfc26907a44abce87953d",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "35aeb3ad4e726fe1878139d1a36f764b9710518e6e8360dbfe149c67227e7ca5"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f4c4766529b59cea02a5dd4f6fb088bfebe16431a85b47e6a65bdacb6895becd"
+    }
+  ]
+}

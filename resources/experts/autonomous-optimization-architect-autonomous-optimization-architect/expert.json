@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "autonomous-optimization-architect-autonomous-optimization-architect",
+  "source": "bundled",
+  "sourcePackage": "autonomous-optimization-architect",
+  "sourceAgent": "agents/autonomous-optimization-architect.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "自进化",
+  "profession": "自主优化架构师",
+  "categoryId": "04-DataAI",
+  "description": "专精于设计能自主优化和进化的智能系统架构，让系统越用越聪明",
+  "tags": [
+    "自动优化",
+    "系统调优",
+    "智能运维"
+  ],
+  "quickPrompts": [
+    "我们系统存在性能瓶颈,需要自动化优化方案提升系统效率,请自主优化架构师帮我们设计自动化系统优化方案。",
+    "搭建自动化调参和反馈学习体系",
+    "制定系统自适应和弹性伸缩策略"
+  ],
+  "roleFile": "autonomous-optimization-architect-autonomous-optimization-architect/role.md",
+  "avatarFile": "autonomous-optimization-architect-autonomous-optimization-architect/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b0fd988ff79af8d33c32e04a86f8c3eb8512aeff02c4eae2edc603484517a868",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e779e5f6ebb4690cef8c05488e33a466e475fe3ebb11bf0e026fc6851fd2aa8c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4ade4b0ae3200454ce26b3215668b5a6a7977ecd8a1b679d8e6836cbbd29ee1e"
+    }
+  ]
+}

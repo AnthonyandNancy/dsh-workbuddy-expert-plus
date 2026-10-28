@@ -3148,7 +3148,7 @@ function apply (ctx) {
   // wrong surface decision in one look.
   try {
     window.__WORKBUDDY_PLUS__ = {
-      version: '0.1.6',
+      version: '0.2.0',
       surface: function () { return surfaceStore.get() },
       slots: function () {
         var out = {}

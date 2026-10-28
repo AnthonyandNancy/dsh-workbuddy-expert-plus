@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "egypt-marketing-egypt-marketing",
+  "source": "bundled",
+  "sourcePackage": "egypt-marketing",
+  "sourceAgent": "agents/egypt-marketing.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "埃及市场营销专家",
+  "profession": "埃及市场营销专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "中国企业出海埃及的CMO级营销引擎，覆盖数字生态、斋月营销、品牌本地化、消费者洞察与ROI预估全链路",
+  "tags": [
+    "埃及市场",
+    "品牌策略",
+    "营销分析"
+  ],
+  "quickPrompts": [
+    "帮我做一份XX产品在埃及市场的营销方案，包含渠道策略、预算分配和ROI预估。",
+    "分析埃及社交媒体格局，为准备进入市场的新品牌推荐最佳平台组合。",
+    "为品牌设计一个斋月营销Campaign，包括完整时间线、内容策略和预算分解。"
+  ],
+  "roleFile": "egypt-marketing-egypt-marketing/role.md",
+  "avatarFile": "egypt-marketing-egypt-marketing/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ccc7de3714cf47871d74057ea65dc80ee0173e6abd782d38c10476c513512fb7",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "9862813de343b267e62acb65a29f1dc47e6a5cfdcc146ebcff464b88cf5a96c5"
+    },
+    {
+      "path": "role.md",
+      "sha256": "df9e93ead0f1d5de6cf908dca04bc6247b6b936d2c587f19220f7c476f649df1"
+    }
+  ]
+}

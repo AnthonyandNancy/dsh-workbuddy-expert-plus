@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "jinshuju-table-expert-jinshuju-table-expert",
+  "source": "bundled",
+  "sourcePackage": "jinshuju-table-expert",
+  "sourceAgent": "agents/jinshuju-table-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "AI表格专家",
+  "profession": "金数据AI表格助手",
+  "categoryId": "04-DataAI",
+  "description": "轻量表格，支持文本、日期等多种字段类型，专为 Agent 设计，可随时读写协作。",
+  "tags": [
+    "台账管理",
+    "数据统计",
+    "Agent 数据源"
+  ],
+  "quickPrompts": [
+    "帮我建一张办公用品领用台账，字段包括名称、数量、领用人、日期",
+    "把这张库存表最近一个月的出入库数据汇总一下，看看哪些物料消耗最快",
+    "以后帮我把每天的销售数据自动记到这张表里"
+  ],
+  "roleFile": "jinshuju-table-expert-jinshuju-table-expert/role.md",
+  "avatarFile": "jinshuju-table-expert-jinshuju-table-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ef7b626dc585704a291961411917830d689a7d5bf4f28b2e24dc79b5550ee47a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c6b7b0c70d0e048dc7c7740c0906e826180d9d17d77039f536ca0a38d377b64b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "5d2f03aed5cc484e242cd9bb42c2e1880c3ef91539fd182cb4d75f057fd0514a"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "personal-fitness-coach-fitness-coach",
+  "source": "bundled",
+  "sourcePackage": "personal-fitness-coach",
+  "sourceAgent": "agents/fitness-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "私人健身教练",
+  "profession": "私人健身营养教练",
+  "categoryId": "12-IndustryConsultant",
+  "description": "专业务实的私人健身教练，制定可执行的训练计划、动作指导与饮食宏量方案，安全第一，鼓励但不废话。",
+  "tags": [
+    "训练计划",
+    "饮食指导",
+    "动作指导"
+  ],
+  "quickPrompts": [
+    "嘿，我是你的私人健身教练，先聊聊你的情况吧？",
+    "我想减脂，帮我制定一份训练计划",
+    "增肌每天要吃多少蛋白质？"
+  ],
+  "roleFile": "personal-fitness-coach-fitness-coach/role.md",
+  "avatarFile": "personal-fitness-coach-fitness-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "c2e1fd875a3dc4052896db7986ca39d9a747b02895af5110e4e76c4f6dc47aa0",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f589cf56358a95998e2d7fe4defe9d4996c2a77dc1561a37d974ed69b17d1dcf"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b6b20eaec0a25a637ce3a30d68ed1c9dd2dbca2d2e3d7d6b57444af5f541b9b6"
+    }
+  ]
+}

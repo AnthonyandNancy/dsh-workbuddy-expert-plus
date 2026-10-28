@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "threat-detection-engineer-threat-detection-engineer",
+  "source": "bundled",
+  "sourcePackage": "threat-detection-engineer",
+  "sourceAgent": "agents/threat-detection-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "猎威威",
+  "profession": "威胁检测工程师",
+  "categoryId": "02-Engineering",
+  "description": "专精构建威胁检测系统，在攻击者造成损害前发现拦截威胁",
+  "tags": [
+    "威胁检测",
+    "入侵分析",
+    "安全监控"
+  ],
+  "quickPrompts": [
+    "我们需要建立安全威胁检测体系,及时发现和应对安全攻击,请威胁检测工程师帮我们设计威胁监控方案。",
+    "设计威胁情报集成和响应自动化",
+    "制定入侵检测规则和安全策略"
+  ],
+  "roleFile": "threat-detection-engineer-threat-detection-engineer/role.md",
+  "avatarFile": "threat-detection-engineer-threat-detection-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "010504de501ccd48451029e25c1483bddd0a44572bdf758d078f865aeabedea6",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c60b2ac73c80e5d35ef5b3e7ce419c174897af50d83f08cc7421d844cb93f7bc"
+    },
+    {
+      "path": "role.md",
+      "sha256": "1a59b713953331e67b511c4f5789bea7de5b1f64c69e0dc9706d37738915887f"
+    }
+  ]
+}

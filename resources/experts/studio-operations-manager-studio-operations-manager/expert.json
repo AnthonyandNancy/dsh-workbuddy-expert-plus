@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "studio-operations-manager-studio-operations-manager",
+  "source": "bundled",
+  "sourcePackage": "studio-operations-manager",
+  "sourceAgent": "agents/studio-operations-manager.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "统筹筹",
+  "profession": "工作室运营管理者",
+  "categoryId": "10-ProjectQuality",
+  "description": "全面管理工作室日常运营，从资源调配到流程优化",
+  "tags": [
+    "工作室运营",
+    "团队协调",
+    "资源调度"
+  ],
+  "quickPrompts": [
+    "我们工作室的运营流程需要优化,提升团队协作效率,请工作室运营经理帮我们设计运营管理体系。",
+    "优化团队协作效率和质量标准",
+    "搭建项目排期和产能管理体系"
+  ],
+  "roleFile": "studio-operations-manager-studio-operations-manager/role.md",
+  "avatarFile": "studio-operations-manager-studio-operations-manager/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0aff5854d55ee40fa007dc26c81abeee9be224ca5ae78f0b54ee7fe23d47a9f3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7169b74f5f9084eaeca81fc12c493c120aba0e27a87af6e9f8ec51cc80627ab9"
+    },
+    {
+      "path": "role.md",
+      "sha256": "db1a9e7ea0904428982e664c794ecdc82a30b2f97acab9700a9257b2c7447034"
+    }
+  ]
+}

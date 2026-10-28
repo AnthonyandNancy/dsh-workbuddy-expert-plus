@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "database-operations-database-operations",
+  "source": "bundled",
+  "sourcePackage": "database-operations",
+  "sourceAgent": "agents/database-operations.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "数据库设计调优专家",
+  "categoryId": "02-Engineering",
+  "description": "精通表结构设计、迁移与性能调优。先用执行计划分析慢查询，再构建复合索引、修复N+1问题、实施分区与缓存优化。",
+  "tags": [
+    "数据库设计",
+    "SQL调优",
+    "数据库迁移"
+  ],
+  "quickPrompts": [
+    "分析这条慢查询并给出索引优化方案",
+    "为用户订单系统设计PostgreSQL表结构",
+    "生成零停机的字段重命名迁移脚本"
+  ],
+  "roleFile": "database-operations-database-operations/role.md",
+  "avatarFile": "database-operations-database-operations/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "3b50e00c6bef70d6ee82aa30c2823604be792bc41ae9ebc6ceacc4b55b09f514",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e324a8e20efdbfeefb22a348bf69861d63951f721a5a02367635530fb2ea3c20"
+    },
+    {
+      "path": "role.md",
+      "sha256": "74036c07f8a79a25ae5f205838f351453ba26e09109d669f19ba67e7de922233"
+    }
+  ]
+}

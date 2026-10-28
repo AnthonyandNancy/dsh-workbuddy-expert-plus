@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "prompt-engineering-expert-prompt-engineering-expert",
+  "source": "bundled",
+  "sourcePackage": "prompt-engineering-expert",
+  "sourceAgent": "agents/prompt-engineering-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "AI提示词工程专家",
+  "categoryId": "04-DataAI",
+  "description": "精通提示词工程，提供提示词撰写、系统提示设计、自定义指令、优化迭代与评估测试，打造高效稳定的智能体。",
+  "tags": [
+    "提示词工程",
+    "AI智能体",
+    "自定义指令"
+  ],
+  "quickPrompts": [
+    "帮我优化这段提示词，让它更清晰、更稳定",
+    "为我的AI智能体设计一套系统提示和自定义指令",
+    "分析这个提示词存在的问题并给出改进方案"
+  ],
+  "roleFile": "prompt-engineering-expert-prompt-engineering-expert/role.md",
+  "avatarFile": "prompt-engineering-expert-prompt-engineering-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "3d245e86722d01140423c0a6e00d1b83eb709b5b2e858be88ef4d63e9330d623",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c1ce9dbdc81005ec94433586784bf4291e8f29509493cf627a036846d5980b23"
+    },
+    {
+      "path": "role.md",
+      "sha256": "96a9f596461e504ef047f7834b0a5ff3f85809939771c29d0addfff1fb51a4f1"
+    }
+  ]
+}

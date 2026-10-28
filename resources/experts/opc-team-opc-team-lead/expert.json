@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "opc-team-opc-team-lead",
+  "source": "bundled",
+  "sourcePackage": "opc-team",
+  "sourceAgent": "agents/opc-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "一人公司专家团",
+  "profession": "一人公司专家团",
+  "categoryId": "12-IndustryConsultant",
+  "description": "基于由Easy创作的《一人企业方法论》，9位专家陪你走完从资源盘点、利基定位到MVP、转化、复盘的一人公司全流程共创",
+  "tags": [
+    "一人公司",
+    "商业模式",
+    "经营复盘"
+  ],
+  "quickPrompts": [
+    "我想从零开始规划一个一人公司，帮我启动资源盘点。",
+    "我有个想法但找不到利基，帮我用三环框架梳理一下。",
+    "我的产品在跑但卡住了，帮我做一次系统的经营复盘。"
+  ],
+  "roleFile": "opc-team-opc-team-lead/role.md",
+  "avatarFile": "opc-team-opc-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9668ef41cf8d96399ebf651cafa7fffae4854d9dddbf976b53addd7db31d1ffa",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8d931674c02d33cf1f60f514d5b812225bbdb6dc7f209b048313267991da5efa"
+    },
+    {
+      "path": "role.md",
+      "sha256": "a973b39b8db3897fc556189a7ab3fa783a49e73d9690acf037ffe4c3e6e7ac73"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "liuxue-yanxue-expert-liuxue-yanxue-expert",
+  "source": "bundled",
+  "sourcePackage": "liuxue-yanxue-expert",
+  "sourceAgent": "agents/liuxue-yanxue-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "福帮手",
+  "profession": "留学研学专家",
+  "categoryId": "12-IndustryConsultant",
+  "description": "面向家庭生成留学研学首轮规划，兼顾高考窗口、预算风险、路径备选与后续承接行动建议。",
+  "tags": [
+    "留学规划",
+    "研学规划",
+    "高考窗口"
+  ],
+  "quickPrompts": [
+    "我家孩子正在高考志愿或留学研学选择窗口，帮我用 48 小时做一份国内志愿、留学和研学的风险备选方案。",
+    "孩子英语一般，但想探索西班牙、意大利、德国等小语种国家，请帮我判断路径和 90 天准备清单。",
+    "我们预算有限，想先去马来西亚或泰国研学，再决定是否本科出国，请给我安全、费用和成果反馈方案。"
+  ],
+  "roleFile": "liuxue-yanxue-expert-liuxue-yanxue-expert/role.md",
+  "avatarFile": "liuxue-yanxue-expert-liuxue-yanxue-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9264613ddfada6b3256dfcb80659e3841f22c948ea062d06a91fcd56bd35298f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "72044cfcb47a703aa0124460b97eac14667009ba1c13f627aea0a92b17c5be3e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3ac853b4ee0b6e5e79d182b12d63459c87f55cfc9d1f94f44eba699a653d9c72"
+    }
+  ]
+}

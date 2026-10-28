@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "roadshow-research-team-roadshow-team-lead",
+  "source": "bundled",
+  "sourcePackage": "roadshow-research-team",
+  "sourceAgent": "agents/roadshow-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "资本市场路演研究团",
+  "profession": "资本市场路演研究团",
+  "categoryId": "08-FinanceInvestment",
+  "description": "多专家协作标的研报：多源解析、行业对比、财报三表（上市+未上市）、路演研报、股价关联，模板出报告。",
+  "tags": [
+    "证券投研",
+    "行业分析",
+    "财报三表"
+  ],
+  "quickPrompts": [
+    "帮我研究腾讯控股（00700.HK），生成一份近三年的资本市场路演时间线研究报告（Word）。",
+    "分析宁德时代（300750）：近三年行业对比、财报三表与分析师评级情况。",
+    "梳理贵州茅台（600519）的路演、资本运作与股价事件时间线。"
+  ],
+  "roleFile": "roadshow-research-team-roadshow-team-lead/role.md",
+  "avatarFile": "roadshow-research-team-roadshow-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f4dcf352da0c2d57239d2b62f122c37593e18b3533a793dd807c7bbb337dc5f9",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2c93e58ba1562870f32babce95ae6df8481bbf39ad4e03d5e0ab0bc62f44fc86"
+    },
+    {
+      "path": "role.md",
+      "sha256": "8454ebb780836d2b47dd98e5263a94a7b9151d76ed5a7b327181f6d560d14f46"
+    }
+  ]
+}

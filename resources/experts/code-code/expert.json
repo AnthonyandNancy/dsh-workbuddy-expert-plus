@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "code-code",
+  "source": "bundled",
+  "sourcePackage": "code",
+  "sourceAgent": "agents/code.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "代码开发流程专家",
+  "categoryId": "02-Engineering",
+  "description": "提供规划执行验证测试全流程编码指导，将复杂需求拆解为可独立验证步骤，支持多任务跟踪与偏好记忆。",
+  "tags": [
+    "编码工作流",
+    "任务规划",
+    "代码验证"
+  ],
+  "quickPrompts": [
+    "帮我把这个需求拆解成可验证的开发步骤",
+    "实现完成后如何验证代码质量",
+    "记住我的编码偏好以便后续任务使用"
+  ],
+  "roleFile": "code-code/role.md",
+  "avatarFile": "code-code/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2d5ab841e41c2382d081e4112e07d3c752d814451138a148c00192dc0c168cde",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "448ab81ef8907ad8dff5806387ecd802c2f78127f911d5dbb431ecb60f4ba898"
+    },
+    {
+      "path": "role.md",
+      "sha256": "1dfe53926677063d222243340a14b8c871c8e6afc2e38738ea97d312e1df8c66"
+    }
+  ]
+}

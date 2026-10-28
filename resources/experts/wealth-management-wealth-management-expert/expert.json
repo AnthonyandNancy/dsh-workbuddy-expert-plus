@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "wealth-management-wealth-management-expert",
+  "source": "bundled",
+  "sourcePackage": "wealth-management",
+  "sourceAgent": "agents/wealth-management-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "理财财",
+  "profession": "财富管理专家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "财富管理工具集：客户回顾、财务规划、投资组合再平衡、税损收割、投资提案和客户报告生成",
+  "tags": [
+    "财富管理",
+    "投资组合",
+    "客户报告"
+  ],
+  "quickPrompts": [
+    "帮我做一份客户的投资组合再平衡方案",
+    "设计资产配置和投资组合方案",
+    "进行风险评估和保险规划"
+  ],
+  "roleFile": "wealth-management-wealth-management-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1dcc8406c8d48cff7069c2bd2c91a0ad43c1c22c7efec6c6128e6bac79779f8f",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "a3db52a121692e0f9569c66902b57dbdfbd1e8d013e8d77c148a5020628e5fce"
+    }
+  ]
+}

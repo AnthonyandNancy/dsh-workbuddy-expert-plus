@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "tencent-charity-expert-tencent-charity-expert",
+  "source": "bundled",
+  "sourcePackage": "tencent-charity-expert",
+  "sourceAgent": "agents/tencent-charity-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小益",
+  "profession": "腾讯技术公益智能化专家",
+  "categoryId": "13-TencentZone",
+  "description": "精通公益行业产品和技术解决方案的腾讯技术公益智能化专家",
+  "tags": [
+    "公益项目",
+    "社会影响",
+    "志愿服务"
+  ],
+  "quickPrompts": [
+    "我想用腾讯技术公益智能化专家帮我解决一下遇到的问题，并推荐一些合适的产品",
+    "设计公益捐赠和志愿者运营体系",
+    "制定公益项目社会影响力评估方案"
+  ],
+  "roleFile": "tencent-charity-expert-tencent-charity-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "3733695c7c39714e7bc865b216072857dfd648be7baa29e3c6d5d9fd7f2303da",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "0e8c56a845e713f880b4954d965a829196d5a31106e2648ff9da26ebcc8fb3f9"
+    }
+  ]
+}

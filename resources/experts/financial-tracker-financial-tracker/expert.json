@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "financial-tracker-financial-tracker",
+  "source": "bundled",
+  "sourcePackage": "financial-tracker",
+  "sourceAgent": "agents/financial-tracker.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "账清清",
+  "profession": "财务追踪师",
+  "categoryId": "08-FinanceInvestment",
+  "description": "精准追踪项目和业务的财务数据，确保每笔收支清晰透明",
+  "tags": [
+    "财务追踪",
+    "预算监控",
+    "现金流管理"
+  ],
+  "quickPrompts": [
+    "我们的财务数据管理混乱,需要更好的财务追踪和预算管理,请财务追踪者帮我们建立财务管理体系。",
+    "制定月度/季度财务收支分析报告",
+    "设计费用管控和预算跟踪方案"
+  ],
+  "roleFile": "financial-tracker-financial-tracker/role.md",
+  "avatarFile": "financial-tracker-financial-tracker/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "dec5a47400cbf78ef2475cbc5c2d71c0fd406de8d32f976980d86bbae547b8a5",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b91930a3583f1f81b44cb46ad75acd6d3d2c042739562763673c116c0f6d42fa"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ea5c665541819a6627fe29e5f5d50462a56ff074d5f28bea9ef33a82a77a4f7d"
+    }
+  ]
+}

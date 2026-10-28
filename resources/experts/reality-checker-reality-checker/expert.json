@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "reality-checker-reality-checker",
+  "source": "bundled",
+  "sourcePackage": "reality-checker",
+  "sourceAgent": "agents/reality-checker.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "验真真",
+  "profession": "现实检查员",
+  "categoryId": "10-ProjectQuality",
+  "description": "默认认为一切需要更多证据，需要压倒性证据才批准生产就绪",
+  "tags": [
+    "事实核查",
+    "数据验证",
+    "逻辑审查"
+  ],
+  "quickPrompts": [
+    "我们的产品上线前需要进行全面的现实检验,发现潜在问题,请现实检查者帮我们进行上线前质量审查。",
+    "进行事实核查和信源追溯",
+    "识别AI幻觉和虚假信息"
+  ],
+  "roleFile": "reality-checker-reality-checker/role.md",
+  "avatarFile": "reality-checker-reality-checker/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "467dddc79823b63299d19663e743311fc37f247bc34530fa6a7da424c4fe9f82",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "3e4d31b5bdad7092e1e1330e4e21c1a86f5c1d3c88cacb9dd84a7e9391a63524"
+    },
+    {
+      "path": "role.md",
+      "sha256": "38bdb6a09e988bcaf974de2f605758e8ff6a5933ad3aa5cbe824425a811b1f45"
+    }
+  ]
+}

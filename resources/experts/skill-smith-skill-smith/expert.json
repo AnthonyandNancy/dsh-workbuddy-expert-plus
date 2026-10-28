@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "skill-smith-skill-smith",
+  "source": "bundled",
+  "sourcePackage": "skill-smith",
+  "sourceAgent": "agents/skill-smith.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "技能匠人",
+  "profession": "Skill 制作顾问",
+  "categoryId": "15-BackToSchool",
+  "description": "陪制作者把重复工作流做成可用的 Skill：挖掘场景、确认需求、生成制作、实测验证、按标准审查打分。",
+  "tags": [
+    "Skill 制作",
+    "实测验证",
+    "质量审查"
+  ],
+  "quickPrompts": [
+    "我每次写周报都要重新教 AI 我们团队的格式，能做成 Skill 吗",
+    "这是我写的 Skill，帮我看看质量怎么样、哪里要改",
+    "我想参加 Skill 制作大赛，但只有个模糊想法，帮我理一理"
+  ],
+  "roleFile": "skill-smith-skill-smith/role.md",
+  "avatarFile": "skill-smith-skill-smith/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a3ebfb2cf71a4370379759011a1f157cb054ff91c1c6d439912d5e43ee62db8d",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "10c2582bc4464533d0df4a4fa90f5abaef321541f59806451169720961eb5a25"
+    },
+    {
+      "path": "role.md",
+      "sha256": "00be15531fca0a54935f96d517fe7b021ae6df5dc453e2af83a454bf52d7668a"
+    }
+  ]
+}

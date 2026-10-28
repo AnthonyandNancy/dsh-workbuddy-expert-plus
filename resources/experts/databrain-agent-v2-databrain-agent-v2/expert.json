@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "databrain-agent-v2-databrain-agent-v2",
+  "source": "bundled",
+  "sourcePackage": "databrain-agent-v2",
+  "sourceAgent": "agents/databrain-agent-v2.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "DataBrain",
+  "profession": "DataBrain数据专家2.0",
+  "categoryId": "13-TencentZone",
+  "description": "覆盖经分取数、三方市场情报、舆情情感分析、归因下钻及跨游戏竞品对比，提供有数据支撑的专业洞察与建议。",
+  "tags": [
+    "数据分析",
+    "市场情报",
+    "舆情分析"
+  ],
+  "quickPrompts": [
+    "你好！我是 DataBrain 游戏数据分析师，擅长经分数据、市场情报、舆情分析和归因下钻。你想分析哪款游戏或哪个市场问题？",
+    "对比一下【游戏A】和【游戏B】最近3个月的流水趋势。",
+    "【游戏名称】近期在社交平台上的玩家口碑如何？总结主要情绪和痛点。"
+  ],
+  "roleFile": "databrain-agent-v2-databrain-agent-v2/role.md",
+  "avatarFile": "databrain-agent-v2-databrain-agent-v2/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "e41d41a73387bb47bfc84c2facb4f7148e6a6c0fdde4464f44123080e297d8fb",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8ffb10d4c1a08fc29a8815d067c482867cd9958009a2d143654a6c003ae870cf"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7de5a9678df8ba91a58431860b2d4f5ab480245de15c94ec813e15d3dd83b719"
+    }
+  ]
+}

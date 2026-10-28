@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-image-prompt-engineer-ai-image-prompt-engineer",
+  "source": "bundled",
+  "sourcePackage": "ai-image-prompt-engineer",
+  "sourceAgent": "agents/ai-image-prompt-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "画令令",
+  "profession": "AI图像提示词工程师",
+  "categoryId": "01-ProductDesign",
+  "description": "精通AI图像生成的语言密码，将抽象视觉概念转化为精准提示词",
+  "tags": [
+    "AI绘画",
+    "提示词工程",
+    "视觉创作"
+  ],
+  "quickPrompts": [
+    "我需要用AI生成专业级的摄影图片,但不知道如何编写精确的提示词,请图像提示词工程师帮我设计能产生惊艳效果的详细提示词。",
+    "设计一套品牌视觉风格的AI绘画提示词",
+    "将文字描述转化为精准的AI绘画指令"
+  ],
+  "roleFile": "ai-image-prompt-engineer-ai-image-prompt-engineer/role.md",
+  "avatarFile": "ai-image-prompt-engineer-ai-image-prompt-engineer/avatar.png",
+  "skills": [
+    "canvas-design"
+  ],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1be48c3e172374407d1aa3da67f9284250b06e33334ff261c0dc6741a22881b9",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f23ae7770732c78efa35915733ce7c8e314881a450071328caf3b89862f43c37"
+    },
+    {
+      "path": "role.md",
+      "sha256": "a7bd39216d8f9598a4cdc09caafc9482f31f03a9e5796bf88beae9f4e60cf817"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/ArsenalSC-OFL.txt",
+      "sha256": "8ddd61b18ba2c0d0dbe4a691cf5f1a0673f473d02fa0546e67ee88c006aeff6e"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/BigShoulders-OFL.txt",
+      "sha256": "fbc746aabf0eb1847dfd92e2efc4596d79fa897d60b8e64062a22f585508fb3f"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/Boldonse-OFL.txt",
+      "sha256": "45cc82ab4032273c0924025ffcf8f0665a68e1a5955e3f7247e5daf1deeb1326"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/BricolageGrotesque-OFL.txt",
+      "sha256": "0e4f4eb8534bc66a76aca13dd19c1f9731b2008866b29ccff182b764649df9b4"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/CrimsonPro-OFL.txt",
+      "sha256": "35680d14547b6748b6f362a052a46d22764ce5eccf96e18b74f567bb2ee58114"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/DMMono-OFL.txt",
+      "sha256": "bfe7842fcb88323e2981e24710c25202677385a8c75fb6a87217b275a0247ae3"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/download-fonts.py",
+      "sha256": "d555f9119dfdea3d883074796d5abc814c47619baef93ce6f5d0a2fae4fd1925"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/EricaOne-OFL.txt",
+      "sha256": "e0de629968b52255548d5fafcf30b24ff9edae0eda362380755a75816404d0fa"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/GeistMono-OFL.txt",
+      "sha256": "6a873c900f584109b13ae0aaf81d6e3cf0a68751a216b03f7b6c68d547057bb4"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/Gloock-OFL.txt",
+      "sha256": "c0a3f3125ac491ef3d1f09f401be4834c646562f647e44f2bcbc49f0466c656d"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/IBMPlexMono-OFL.txt",
+      "sha256": "5294ce778857e1eb02e830b6ab06435537d38f43055327e73d03a2d4d57d5123"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/InstrumentSans-OFL.txt",
+      "sha256": "bf4dc6d13a8cccd4807133c77a1ee9619a16b92cb23322258725ab6731c2f6e5"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/Italiana-OFL.txt",
+      "sha256": "8373b11312ace78c4cec2e8f9f6aa9f2330601107dac7bcf899c6f2dbd40c5a5"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/JetBrainsMono-OFL.txt",
+      "sha256": "a76abf002c49097d146e86740a3105a5d00450b1592e820a1109a8c5680cd697"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/Jura-OFL.txt",
+      "sha256": "eaf9bdb675f6d87e5feb88199ab3ea581d3bd2082f426e384fa9c394576d7260"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/LibreBaskerville-OFL.txt",
+      "sha256": "55959eef5b0c3b2e3c1c7631b8ff0f9447d75de20f29cfa7db5bcfb026763343"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/Lora-OFL.txt",
+      "sha256": "62e37a82d3f1ef2a70712885fa8b3144b65fd144d8e748d6196b690a354d792c"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/NationalPark-OFL.txt",
+      "sha256": "81c6c71d83b5b45d7344f96df12bb4a2477a5b092a9144757ee1d0f50f855175"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/NothingYouCouldDo-OFL.txt",
+      "sha256": "7c2a6970584ddad04919816163746f83b378078015899b18468b40f05e9ce128"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/Outfit-OFL.txt",
+      "sha256": "1945b62cd76da9a3051a1660dde72afaa64ffc2666d30e7a78356d651653ba2f"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/PixelifySans-OFL.txt",
+      "sha256": "7f54d1d9f1ae1ba9f2722f978145f90324fea34ca3c2304b3a29cfa96ac6037e"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/PoiretOne-OFL.txt",
+      "sha256": "2eaf541f7eb8b512e4c757a5212060abf5b6edfef230e9d7640bf736b315c33a"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/RedHatMono-OFL.txt",
+      "sha256": "435fbfb7e66988b2a06686a4cb966faec733f35d8fe100a1601573c27f3e0bb8"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/Silkscreen-OFL.txt",
+      "sha256": "6b849745119bbe85ec01fd080c9cd50234da9f52ac6e48b55d1a424a0c4d7ca9"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/SmoochSans-OFL.txt",
+      "sha256": "74c9c4eb88e891483e1b7bc54780b452cbf4f4df66d4e71881d7569aa2130749"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/Tektur-OFL.txt",
+      "sha256": "3f1466cb5438f31782eeb6e895f3a655bc4d090e24263e331f555357d1cb734e"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/WorkSans-OFL.txt",
+      "sha256": "ace8c22a3326318b54e67c3691857929634205533f454a70ef5a3473ddb2e2ba"
+    },
+    {
+      "path": "skills/canvas-design/canvas-fonts/YoungSerif-OFL.txt",
+      "sha256": "cdcb8039606b40a027a6d24586ec62d5fe29c701343d82a048c829cb28a3dd28"
+    },
+    {
+      "path": "skills/canvas-design/LICENSE.txt",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "skills/canvas-design/SKILL.md",
+      "sha256": "4bdc0cdbc445041bd2cc4d849e75ccaa911b36314c01f980010aafd6f77cc2c2"
+    }
+  ]
+}

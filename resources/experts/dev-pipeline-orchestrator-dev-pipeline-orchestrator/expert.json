@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "dev-pipeline-orchestrator-dev-pipeline-orchestrator",
+  "source": "bundled",
+  "sourcePackage": "dev-pipeline-orchestrator",
+  "sourceAgent": "agents/dev-pipeline-orchestrator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "开发流水线编排专家",
+  "categoryId": "02-Engineering",
+  "description": "编排开发流水线：澄清需求意图，拆解为测试驱动的细粒度任务，子代理逐任务实现并双重评审，最终集成分支。",
+  "tags": [
+    "开发流水线",
+    "子代理编排",
+    "测试驱动交付"
+  ],
+  "quickPrompts": [
+    "帮我把这个功能从想法推进到合并入主干，走完整的开发流水线",
+    "把这份需求拆成测试驱动的细粒度任务计划，含精确文件路径与完整代码",
+    "逐任务派子代理执行这份计划，每个任务过规格与质量双门评审"
+  ],
+  "roleFile": "dev-pipeline-orchestrator-dev-pipeline-orchestrator/role.md",
+  "avatarFile": "dev-pipeline-orchestrator-dev-pipeline-orchestrator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "475de83a295be15f43a08595e022a6e56f95a4110114ea7b82be764eaf4f17ef",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6911248a239243442d6976921d78f287cadfcb60f9b4cce2ab662ea9502fba08"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6da0ea7825f7a41d6ebcd7a84c39bdcf388a6baea71df34b9da92a40c9af68d9"
+    }
+  ]
+}

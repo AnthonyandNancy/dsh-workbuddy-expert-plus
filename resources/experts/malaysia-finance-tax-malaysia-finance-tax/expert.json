@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "malaysia-finance-tax-malaysia-finance-tax",
+  "source": "bundled",
+  "sourcePackage": "malaysia-finance-tax",
+  "sourceAgent": "agents/malaysia-finance-tax.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "马来西亚财税金融专家",
+  "profession": "马来西亚财税金融专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "精通马来西亚税务、银行、外汇、审计、补贴、保险、伊斯兰金融及财政分析的财税金融全栈专家。",
+  "tags": [
+    "税务合规",
+    "融资银行",
+    "外汇管理"
+  ],
+  "quickPrompts": [
+    "企业在马来西亚投资设厂，涉及哪些税务优惠、外汇管制和本地融资渠道？",
+    "马来西亚的伊斯兰金融体系如何服务企业的跨境贸易融资？",
+    "对比马来西亚与新加坡的税收政策差异，梳理企业东南亚区域总部的选址考量因素。"
+  ],
+  "roleFile": "malaysia-finance-tax-malaysia-finance-tax/role.md",
+  "avatarFile": "malaysia-finance-tax-malaysia-finance-tax/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5d98806b9c504ffac1bc4a11d2b1155875b17bd86f7aa30f97dd8f9db35cf473",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "4805847cab8a3c290b848457b6072b6489be37b1e81dd1e895e83ca87b589a09"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4486a95b38cff760f2f08f8519b634f7d12ddf469aacbb48f43fea66dc2ee92f"
+    }
+  ]
+}

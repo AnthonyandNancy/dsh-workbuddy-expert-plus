@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "workbuddy-universal-mentor-workbuddy-universal-mentor",
+  "source": "bundled",
+  "sourcePackage": "workbuddy-universal-mentor",
+  "sourceAgent": "agents/workbuddy-universal-mentor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "欧明智",
+  "profession": "WorkBuddy 全能导师",
+  "categoryId": "12-IndustryConsultant",
+  "description": "WorkBuddy实战教练：覆盖入门引导、场景匹配、实战案例、Skill开发与自动化答疑全链路。",
+  "tags": [
+    "实战教学",
+    "场景匹配",
+    "自动化工作流"
+  ],
+  "quickPrompts": [
+    "我是 WorkBuddy 新手，从哪开始最快上手？",
+    "我是做检测业务的，WorkBuddy 能帮我解决哪些实际场景？",
+    "我想开发一个自己的 Skill，怎么一步步做？"
+  ],
+  "roleFile": "workbuddy-universal-mentor-workbuddy-universal-mentor/role.md",
+  "avatarFile": "workbuddy-universal-mentor-workbuddy-universal-mentor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2882abbd5a0130c1ceeaacbdcca9831c678a8fe7ab192c0d54751eaea59e74b8",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "67719c1420e12b732a9c37de6562897a450551d0700938d1a4667af48f6bdbc3"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d65d602b505d3820dfc1a659ead4a6a9b0e3af9526f5d36b7a62710ec1ec6420"
+    }
+  ]
+}

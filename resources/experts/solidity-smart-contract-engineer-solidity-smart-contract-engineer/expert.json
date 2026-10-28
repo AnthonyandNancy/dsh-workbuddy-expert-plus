@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "solidity-smart-contract-engineer-solidity-smart-contract-engineer",
+  "source": "bundled",
+  "sourcePackage": "solidity-smart-contract-engineer",
+  "sourceAgent": "agents/solidity-smart-contract-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "链合约",
+  "profession": "Solidity智能合约工程师",
+  "categoryId": "02-Engineering",
+  "description": "精通Solidity和EVM生态，编写安全高效的智能合约",
+  "tags": [
+    "智能合约",
+    "Solidity",
+    "DeFi开发"
+  ],
+  "quickPrompts": [
+    "我们想开发区块链应用的智能合约,需要专业的Solidity开发支持,请Solidity智能合约工程师帮我们编写安全的合约代码。",
+    "进行智能合约安全审计和漏洞检测",
+    "优化Gas消耗和合约执行效率"
+  ],
+  "roleFile": "solidity-smart-contract-engineer-solidity-smart-contract-engineer/role.md",
+  "avatarFile": "solidity-smart-contract-engineer-solidity-smart-contract-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6c60c9df9e24a914eef241c244d06d481e84d59e9aec702c1f71c10fbf00c594",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2a11a8e632bebd63be6cbf41e5f02228559e1dbf940281d0c9b866bc20d19906"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9ab0dec48ebc4581bd5bc5cee0b782546e73f713c28a284b9d31035336aceb1e"
+    }
+  ]
+}

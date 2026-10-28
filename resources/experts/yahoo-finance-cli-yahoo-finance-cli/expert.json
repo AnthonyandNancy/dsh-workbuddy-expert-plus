@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "yahoo-finance-cli-yahoo-finance-cli",
+  "source": "bundled",
+  "sourcePackage": "yahoo-finance-cli",
+  "sourceAgent": "agents/yahoo-finance-cli.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "行情洞察与趋势发现专家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "查询全球股票实时行情、基本面、财报预期、评级、历史走势与估值洞察，发现热门趋势标的，支持模糊检索与并排对比。",
+  "tags": [
+    "股票行情",
+    "市场洞察",
+    "热门标的"
+  ],
+  "quickPrompts": [
+    "查看苹果（AAPL）的实时行情、基本面与分析师评级",
+    "查看今日美股热门趋势标的",
+    "并排对比 AAPL、MSFT、GOOGL 的关键指标"
+  ],
+  "roleFile": "yahoo-finance-cli-yahoo-finance-cli/role.md",
+  "avatarFile": "yahoo-finance-cli-yahoo-finance-cli/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d8aaa60bf79044d8a04810dbfb85c846cd32735a4f472881d3e130887bf579c5",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6a120c4641f9f40d85f9aa3790a6c19b9b8a98e9527e12d086d6dc0d40c22f4b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "80cda84be95a3b3bee2307afffe9d29bab27154a02617244fa3f0b269c7ad449"
+    }
+  ]
+}

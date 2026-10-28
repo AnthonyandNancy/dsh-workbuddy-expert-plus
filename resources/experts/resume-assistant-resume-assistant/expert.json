@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "resume-assistant-resume-assistant",
+  "source": "bundled",
+  "sourcePackage": "resume-assistant",
+  "sourceAgent": "agents/resume-assistant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "简历优化专家",
+  "categoryId": "09-OperationsHR",
+  "description": "提供百分制专业评分、四十项深度清单润色、岗位匹配定制与多格式导出，全面打造高竞争力求职简历。",
+  "tags": [
+    "简历润色",
+    "岗位定制",
+    "简历评分"
+  ],
+  "quickPrompts": [
+    "帮我评分并优化这份简历",
+    "根据岗位描述定制我的简历",
+    "将简历导出为PDF格式"
+  ],
+  "roleFile": "resume-assistant-resume-assistant/role.md",
+  "avatarFile": "resume-assistant-resume-assistant/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f36029c05ceb3bef1c3a75337a70d52aab6d9dfbe00a87cbd839259ee9929c58",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8949aa332c784559b071a8ca1e4f4101ae5210e25c4b426ca07d3a20b8f5835c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7025fa8c810e29f83b40969cca0b79d86ca9b4c727c2a1c85477f67a2cd507ec"
+    }
+  ]
+}

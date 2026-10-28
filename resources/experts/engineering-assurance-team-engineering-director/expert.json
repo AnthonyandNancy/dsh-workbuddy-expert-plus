@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "engineering-assurance-team-engineering-director",
+  "source": "bundled",
+  "sourcePackage": "engineering-assurance-team",
+  "sourceAgent": "agents/engineering-director.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "工程保障团队",
+  "profession": "工程保障团队",
+  "categoryId": "02-Engineering",
+  "description": "由工程总监领导的 5 人工程专家团队：代码审查师（安全/性能/正确性）、架构师（系统设计/ADR）、SRE 工程师（事故响应/部署）、测试专家（测试策略/覆盖率）和技术文档师（文档/Runbook）。处理从代码审查到事故响应的复杂工程工作流。",
+  "tags": [
+    "工程保障",
+    "代码审查",
+    "架构评审"
+  ],
+  "quickPrompts": [
+    "帮我对系统进行全面工程审查 / 运行完整的事故响应流程",
+    "制定工程质量和安全审查方案",
+    "搭建代码审查和测试保障流程"
+  ],
+  "roleFile": "engineering-assurance-team-engineering-director/role.md",
+  "avatarFile": "engineering-assurance-team-engineering-director/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "4db1a5353d186f1c4ca390cff12c4f2214c311c441b0af8a0d543c2aa63eb96b",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "bc3dbc1457ee39f0cfbd8704a36f9d2788a43b3522776173e00a4932a4370f0b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c1c460e271137c448bf0166e17bc26abcd4e483f5b563887ffb2d229e657da76"
+    }
+  ]
+}

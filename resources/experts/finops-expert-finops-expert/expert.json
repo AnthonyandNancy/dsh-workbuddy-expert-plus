@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "finops-expert-finops-expert",
+  "source": "bundled",
+  "sourcePackage": "finops-expert",
+  "sourceAgent": "agents/finops-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "CloudQ",
+  "profession": "腾讯云FinOps专家",
+  "categoryId": "13-TencentZone",
+  "description": "云成本治理专家。擅长账单分析、闲置资源识别、计费模式优化与成本分摊，驱动降本增效决策。",
+  "tags": [
+    "FinOps",
+    "成本优化",
+    "账单分析",
+    "闲置资源"
+  ],
+  "quickPrompts": [
+    "帮我分析本月云费用异常增长的原因",
+    "哪些资源闲置超过30天可以释放？",
+    "本月云资源费用有哪些？"
+  ],
+  "roleFile": "finops-expert-finops-expert/role.md",
+  "avatarFile": "finops-expert-finops-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "fee1b702d4b31f4277fe70a76c67b25279f4e657cd3198bbfb97bc8e0076b581",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d3d273ebf61775f9a97b179e2cf2d60299ba3637ad8eafde4846124d57ca979c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "2880d25a5af0fd7dba632757a3bcfbcf4cb742c79a267bacd4cb96b56bd2ff19"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "content-writer-content-writer",
+  "source": "bundled",
+  "sourcePackage": "content-writer",
+  "sourceAgent": "agents/content-writer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "自媒体内容写作专家",
+  "categoryId": "06-ContentCreative",
+  "description": "专注为小红书、知乎、公众号、抖音生成平台原生的可发布内容，含标题钩子、正文结构与转化引导，匹配各平台字数规范。",
+  "tags": [
+    "社交媒体内容",
+    "文案创作",
+    "爆款标题"
+  ],
+  "quickPrompts": [
+    "帮我写一篇小红书种草笔记",
+    "为我的公众号生成一篇深度文章",
+    "写一段抖音口播脚本"
+  ],
+  "roleFile": "content-writer-content-writer/role.md",
+  "avatarFile": "content-writer-content-writer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "41dece2b24189e5eb453571a3fe5e08702627288e912a4baadc30c4c867101d5",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "cc0210126349f51243016ccdc64236cf8c902102195bd47b76ac05b383667a5b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "45a32fea60222f0e0459700886694017114484586c683671b738eaf736a3e4d8"
+    }
+  ]
+}

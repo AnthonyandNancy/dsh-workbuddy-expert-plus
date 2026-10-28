@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "frontend-developer-frontend-developer",
+  "source": "bundled",
+  "sourcePackage": "frontend-developer",
+  "sourceAgent": "agents/frontend-developer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "像素匠",
+  "profession": "前端开发工程师",
+  "categoryId": "02-Engineering",
+  "description": "精通现代Web技术和主流框架，以像素级精度构建响应式高性能Web应用",
+  "tags": [
+    "前端开发",
+    "页面交互",
+    "组件开发"
+  ],
+  "quickPrompts": [
+    "我们的前端界面需要开发,要求响应式设计和良好的用户交互体验,请前端开发工程师帮我们实现前端功能。",
+    "优化前端性能和首屏加载速度",
+    "实现复杂UI组件和交互效果"
+  ],
+  "roleFile": "frontend-developer-frontend-developer/role.md",
+  "avatarFile": "frontend-developer-frontend-developer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "efd3582a65b8662bf22ee6c6a4f8174d9d90aef628193906d536c3ba7097dbe2",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "1bf727291426b0150552bf7baac657267e557a84d7349269114b37f05bd2921e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7ed914f287fd0e02f24e538faec828775b8529b1dd39bb4c2eeab91b0ecbe05f"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "bilibili-content-strategist-bilibili-content-strategist",
+  "source": "bundled",
+  "sourcePackage": "bilibili-content-strategist",
+  "sourceAgent": "agents/bilibili-content-strategist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "弹幕幕",
+  "profession": "B站内容策略师",
+  "categoryId": "06-ContentCreative",
+  "description": "精通B站平台生态和年轻用户偏好，打造高播放量视频策略",
+  "tags": [
+    "B站策略",
+    "UP主运营",
+    "弹幕文化"
+  ],
+  "quickPrompts": [
+    "我们想在B站建立品牌影响力,需要专业的视频内容策略,请B站内容战略家帮我们制定B站运营方案。",
+    "策划B站爆款视频选题和脚本",
+    "优化B站UP主变现和商业合作方案"
+  ],
+  "roleFile": "bilibili-content-strategist-bilibili-content-strategist/role.md",
+  "avatarFile": "bilibili-content-strategist-bilibili-content-strategist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "273502e21b3fb042c52a35f9812a516c55dbc755f2e1c88a113179188224c826",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "4991342b582d785ad200716d4124c7f8e27cb9c350f964c40fa0096781fdb592"
+    },
+    {
+      "path": "role.md",
+      "sha256": "dfea2a396a191bfd8e73c564e510ae5e15333aeba8c4cf11a7ad491a54e0baaf"
+    }
+  ]
+}

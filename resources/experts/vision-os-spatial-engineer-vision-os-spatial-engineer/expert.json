@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "vision-os-spatial-engineer-vision-os-spatial-engineer",
+  "source": "bundled",
+  "sourcePackage": "vision-os-spatial-engineer",
+  "sourceAgent": "agents/vision-os-spatial-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "空间通",
+  "profession": "visionOS空间工程师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通visionOS平台开发，打造Apple Vision Pro空间应用",
+  "tags": [
+    "visionOS开发",
+    "空间界面",
+    "SwiftUI"
+  ],
+  "quickPrompts": [
+    "我们想为visionOS开发空间计算应用,需要原生空间界面设计,请visionOS空间工程师帮我们设计空间应用。",
+    "设计空间UI交互和手势操作方案",
+    "优化visionOS渲染性能和3D体验"
+  ],
+  "roleFile": "vision-os-spatial-engineer-vision-os-spatial-engineer/role.md",
+  "avatarFile": "vision-os-spatial-engineer-vision-os-spatial-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6eef6d1cf261876305a031e735ba48373d2de6ee5214187df2e7e35e2336e13d",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "896c9d5647f13beef5747451c8e591dfa656ab447e2328434691dbfe1e403267"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7100e42bad3d009dff8b280c964678aab125dbf3e4fabb708d16af7e265d77e5"
+    }
+  ]
+}

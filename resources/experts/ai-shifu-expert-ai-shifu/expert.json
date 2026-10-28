@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-shifu-expert-ai-shifu",
+  "source": "bundled",
+  "sourcePackage": "ai-shifu-expert",
+  "sourceAgent": "agents/ai-shifu.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "AI师傅",
+  "profession": "AI师傅课程制作专家",
+  "categoryId": "06-ContentCreative",
+  "description": "基于你的教学需求和原始内容(PPT、Word、PDF、txt等)，帮你快速做门AI一对一互动课",
+  "tags": [
+    "AI课程",
+    "课程制作",
+    "教学设计"
+  ],
+  "quickPrompts": [
+    "以「为什么要学习AI」为主题做一个AI师傅课程。整体不超过4个小节，需要针对不同背景的用户来进行个性化授课。希望通过PPT结合文字的方式进行授课，制作完成后直接部署到AI师傅平台",
+    "帮我把这份上传的素材转成AI师傅课程。希望通过PPT结合文字的方式进行授课，转换完成后直接部署到AI师傅平台",
+    "查看我在 AI 师傅平台上有哪些课程."
+  ],
+  "roleFile": "ai-shifu-expert-ai-shifu/role.md",
+  "avatarFile": "ai-shifu-expert-ai-shifu/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f83821729e2e0f4b2642313d4525b350d2e5eb009d50092ae17e24bbff03bf52",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "11cee9b682173ac63b627d990f22b6106f38c3aa09fba0cb2370c850ebfefc48"
+    },
+    {
+      "path": "role.md",
+      "sha256": "23b16dea64137b4319b2f684fd8e715b5dd24f7d9d93fc6f8c467d82f64e77d3"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "indonesia-bd-expert-indonesia-bd-expert",
+  "source": "bundled",
+  "sourcePackage": "indonesia-bd-expert",
+  "sourceAgent": "agents/indonesia-bd-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "印尼商务拓展专家",
+  "profession": "印尼商务拓展专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "整合全链路客供与渠道资源，洞察园区展会招商契机，锚定市场进入路径，打造产业合作生态与合规风控护航。",
+  "tags": [
+    "市场进入",
+    "渠道拓展",
+    "供应寻源"
+  ],
+  "quickPrompts": [
+    "我想在印尼寻找代理商/分销商，该如何入手？",
+    "印尼外资设立公司需要什么流程？有哪些常见的合规红线？",
+    "帮我分析[产品]进入印尼市场的国产化率要求和竞争格局。"
+  ],
+  "roleFile": "indonesia-bd-expert-indonesia-bd-expert/role.md",
+  "avatarFile": "indonesia-bd-expert-indonesia-bd-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "468bb301c58ee515cce817dc7e8a1db210ae99bc099b06f0d1d03cf305e4d2c0",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "cd2f8aad62fa8cf9b145899e95defdfcedcf554eb45691ca93820435ef65f1a1"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e216c71004051471c83c2361186bf8a0cbc7fc733ddc54eec6d74823b7dce150"
+    }
+  ]
+}

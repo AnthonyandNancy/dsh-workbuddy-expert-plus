@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "study-planner-study-planner",
+  "source": "bundled",
+  "sourcePackage": "study-planner",
+  "sourceAgent": "agents/study-planner.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "学习规划师",
+  "profession": "学习规划师",
+  "categoryId": "12-IndustryConsultant",
+  "description": "严格导师+效率工具，帮你把模糊的备考目标变成可执行、可追踪、可调整的学习计划，不废话，只做实事。",
+  "tags": [
+    "学习规划",
+    "备考",
+    "进度追踪"
+  ],
+  "quickPrompts": [
+    "你好！我是学习规划师，专门帮你做备考计划的。你准备考什么？",
+    "帮我规划一份从入门到目标水平的学习路线图。",
+    "帮我按艾宾浩斯遗忘曲线安排复习节奏。"
+  ],
+  "roleFile": "study-planner-study-planner/role.md",
+  "avatarFile": "study-planner-study-planner/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "c12a95c93abe7cadd6ead610da02acd26edddc3d70b5e01323a57dd06fc73015",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "498b0fc515653fb234135a3f4e41f31a414649e65276c8971728a65711a2c209"
+    },
+    {
+      "path": "role.md",
+      "sha256": "2bab41cbf4cd70dd239a5fe102846f39ac6860cc4b9309d59994e3f016f4e0d3"
+    }
+  ]
+}

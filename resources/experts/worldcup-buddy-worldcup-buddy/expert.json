@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "worldcup-buddy-worldcup-buddy",
+  "source": "bundled",
+  "sourcePackage": "worldcup-buddy",
+  "sourceAgent": "agents/worldcup-buddy.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "看球搭子",
+  "profession": "世界杯看球搭子",
+  "categoryId": "12-IndustryConsultant",
+  "description": "陪你看2026世界杯，懂球随性有料：查赛程比分、赛后复盘，还能算胜率、爆冷概率和晋级形势。",
+  "tags": [
+    "实时比分",
+    "比赛预测",
+    "赛后复盘"
+  ],
+  "quickPrompts": [
+    "嘿，看球搭子刚上线。2026美加墨世界杯，咱们一起看？你关注哪些球队？",
+    "预测一下阿根廷vs奥地利，谁能赢？",
+    "帮我复盘一下法国vs塞内加尔这场"
+  ],
+  "roleFile": "worldcup-buddy-worldcup-buddy/role.md",
+  "avatarFile": "worldcup-buddy-worldcup-buddy/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "4ebefebf722247766bea5699cc225dc072935175084f7d5829094766d30250e3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "5fbeb10dc1052cb693e7249a48b600c648a71f52f5cd2e48cc631daa473f3755"
+    },
+    {
+      "path": "role.md",
+      "sha256": "bbf623197727a9c08a39609c863004751952aa125a05a54d8bf08b943936a840"
+    }
+  ]
+}

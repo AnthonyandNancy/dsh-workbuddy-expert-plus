@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "malaysia-hr-admin-malaysia-hr-admin",
+  "source": "bundled",
+  "sourcePackage": "malaysia-hr-admin",
+  "sourceAgent": "agents/malaysia-hr-admin.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Malaysia HR & Administration",
+  "profession": "马来西亚人力行政专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "精通马来西亚招聘、劳动合同、薪酬福利、签证工签与社保，服务企业跨境人力行政咨询。",
+  "tags": [
+    "薪酬福利",
+    "劳动合同",
+    "办公行政"
+  ],
+  "quickPrompts": [
+    "某个岗位在马来西亚的薪资待遇市场标准是怎样的？",
+    "帮我做一个马来西亚办公室的招聘计划。",
+    "在马来西亚租办公室要注意什么？"
+  ],
+  "roleFile": "malaysia-hr-admin-malaysia-hr-admin/role.md",
+  "avatarFile": "malaysia-hr-admin-malaysia-hr-admin/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a14d76f33f76c6ea254187747ff8354655345b74e9cc554bb9602d7035ca26b3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7f3086afbb50d6f3688855c9ec8dfe6bc697aebb6acb90714caad93ac84e3ea5"
+    },
+    {
+      "path": "role.md",
+      "sha256": "56911cfdc55b3cd8c9647e8eddf5f1d1d2fe2dd0579b0f6b342303fe38650f4d"
+    }
+  ]
+}

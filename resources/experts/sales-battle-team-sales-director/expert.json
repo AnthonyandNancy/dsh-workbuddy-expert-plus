@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "sales-battle-team-sales-director",
+  "source": "bundled",
+  "sourcePackage": "sales-battle-team",
+  "sourceAgent": "agents/sales-director.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "销售作战团队",
+  "profession": "销售作战团队",
+  "categoryId": "07-SalesCommerce",
+  "description": "销售攻坚体系，客户研究锁定目标、外联策略提升触达、竞品情报预警风险、销售预测优化资源分配",
+  "tags": [
+    "销售作战",
+    "客户调研",
+    "竞情分析"
+  ],
+  "quickPrompts": [
+    "研究一个潜在客户 / 为我的销售电话做准备 / 评审我的销售漏斗预测",
+    "制定大客户攻坚和赢单策略",
+    "搭建销售流程优化和漏斗管理体系"
+  ],
+  "roleFile": "sales-battle-team-sales-director/role.md",
+  "avatarFile": "sales-battle-team-sales-director/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "850d7ee5861d367219cb52b567cb196a3b900cbae7d4c71727aeb6e4ef2626db",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c1d2091377cb30508c7206f1172b393e64e04f89f3e8621e8bd37f39ab559a85"
+    },
+    {
+      "path": "role.md",
+      "sha256": "999aedf028c70a2ecd1080261e7d9cb55684b925267621125bd7c6a3ca42c4e2"
+    }
+  ]
+}

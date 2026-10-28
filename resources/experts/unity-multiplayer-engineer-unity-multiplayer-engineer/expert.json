@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "unity-multiplayer-engineer-unity-multiplayer-engineer",
+  "source": "bundled",
+  "sourcePackage": "unity-multiplayer-engineer",
+  "sourceAgent": "agents/unity-multiplayer-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "同步达",
+  "profession": "Unity多人联机工程师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通Netcode for GameObjects和网络预测",
+  "tags": [
+    "联机工程",
+    "网络架构",
+    "状态同步"
+  ],
+  "quickPrompts": [
+    "我们的Unity游戏需要多人网络功能,请Unity多人工程师帮我们实现网络同步。",
+    "集成Unity Gaming Services (Relay/Lobby)",
+    "优化客户端-服务器权威和延迟补偿"
+  ],
+  "roleFile": "unity-multiplayer-engineer-unity-multiplayer-engineer/role.md",
+  "avatarFile": "unity-multiplayer-engineer-unity-multiplayer-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "c6b95b37a93777eee9597faa001470ca9fe1516bf16fb63c6ab08cd788d30443",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "438f09be57c9d51037e5fdf529d1b141774df4c6554cb66b25eb67ea38b7fffd"
+    },
+    {
+      "path": "role.md",
+      "sha256": "8b51196eadafc802e7a8cd66acf7d83858de849a278096191d42121121053979"
+    }
+  ]
+}

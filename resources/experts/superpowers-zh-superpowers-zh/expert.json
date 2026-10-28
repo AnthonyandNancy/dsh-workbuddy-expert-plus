@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "superpowers-zh-superpowers-zh",
+  "source": "bundled",
+  "sourcePackage": "superpowers-zh",
+  "sourceAgent": "agents/superpowers-zh.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "AI编程方法论专家",
+  "profession": "AI编程方法论与中文开发规范专家",
+  "categoryId": "02-Engineering",
+  "description": "二十项AI编程方法论，覆盖头脑风暴、测试驱动开发、系统化调试、代码审查，适配中文文档与国内平台规范。",
+  "tags": [
+    "工作方法论",
+    "代码审查",
+    "中文开发规范"
+  ],
+  "quickPrompts": [
+    "动手写代码前，帮我头脑风暴并产出设计规格",
+    "系统化排查这个故障的根因再修复",
+    "按国内团队沟通风格做一次代码审查"
+  ],
+  "roleFile": "superpowers-zh-superpowers-zh/role.md",
+  "avatarFile": "superpowers-zh-superpowers-zh/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1c289fbc58b94adc89ba99fdd4ece547ec01f92fefe5b463ec667a7c8012f257",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b6ccdc5e4a9e2d1f190062d7c3ec67e47431c37ce0c686c732c664c43fffe56e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c01479751d67e939bb63edfa17a1fea974488a8d56ffae2eb005ef5df3bfb2d1"
+    }
+  ]
+}

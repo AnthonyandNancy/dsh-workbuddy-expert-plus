@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "kdocs-pdf-toolbox-kdocs-pdf-toolbox",
+  "source": "bundled",
+  "sourcePackage": "kdocs-pdf-toolbox",
+  "sourceAgent": "agents/kdocs-pdf-toolbox.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "金山文档PDF处理助手",
+  "profession": "PDF 处理专家",
+  "categoryId": "06-ContentCreative",
+  "description": "金山文档出品，支持PDF按页拆分合并、格式转换与全文翻译，覆盖常见文档处理场景。",
+  "tags": [
+    "PDF 拆分合并",
+    "格式转换",
+    "全文翻译"
+  ],
+  "quickPrompts": [
+    "帮我把这三份PDF合并成一个，按顺序拼接",
+    "帮我把这份PDF转成Word文档，方便编辑",
+    "帮我把这份英文PDF全文翻译成中文并导出"
+  ],
+  "roleFile": "kdocs-pdf-toolbox-kdocs-pdf-toolbox/role.md",
+  "avatarFile": "kdocs-pdf-toolbox-kdocs-pdf-toolbox/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6e273c6fdc04781d6db661c24a2d901c353442d9977cd29f1aed9e058ead7d19",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "5bd7574d6f3dd172d720901064f44c16eca5d75a3e01ba3a56e7b2d9aeefcbd3"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e59003c2d4416867e04acc3cec5411cffa3f0702e2348a0a218ec7cf063bdd7a"
+    }
+  ]
+}

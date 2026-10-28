@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "mac-os-spatial-metal-engineer-mac-os-spatial-metal-engineer",
+  "source": "bundled",
+  "sourcePackage": "mac-os-spatial-metal-engineer",
+  "sourceAgent": "agents/mac-os-spatial-metal-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "渲染师",
+  "profession": "macOS空间Metal工程师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通Apple Metal图形API和macOS空间计算开发",
+  "tags": [
+    "Metal渲染",
+    "macOS空间计算",
+    "GPU编程"
+  ],
+  "quickPrompts": [
+    "我们想在macOS上开发Metal渲染应用,需要专业的Metal编程支持,请macOS空间Metal工程师帮我们设计渲染方案。",
+    "优化Metal Shader渲染管线性能",
+    "设计空间计算GPU加速和并行方案"
+  ],
+  "roleFile": "mac-os-spatial-metal-engineer-mac-os-spatial-metal-engineer/role.md",
+  "avatarFile": "mac-os-spatial-metal-engineer-mac-os-spatial-metal-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "eab090ed15c82011b7ea03645d0c0871302a58e9de7f7517d93751273d9461a2",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "5dde610b8b2845e648253c36bb76d77d5631c50763630fc948acbe6cbe5d8284"
+    },
+    {
+      "path": "role.md",
+      "sha256": "cf6f636b80a052fb6e7e960f2e4dc0dc535993e7b845c29f671a1f29a14f6175"
+    }
+  ]
+}

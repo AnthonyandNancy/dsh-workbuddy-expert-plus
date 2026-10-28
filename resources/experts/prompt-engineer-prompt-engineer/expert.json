@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "prompt-engineer-prompt-engineer",
+  "source": "bundled",
+  "sourcePackage": "prompt-engineer",
+  "sourceAgent": "agents/prompt-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "提示词工程师",
+  "profession": "大语言模型提示词架构师",
+  "categoryId": "02-Engineering",
+  "description": "精通系统提示词架构、思维链与少样本设计，用测试数据驱动迭代，把提示词优化到模型稳定输出。",
+  "tags": [
+    "系统提示词设计",
+    "思维链设计",
+    "评测与迭代"
+  ],
+  "quickPrompts": [
+    "你好！我是提示词工程师。告诉我你希望AI完成什么任务，我来帮你设计最优的提示词。如果你有现成的提示词效果不理想，我们也可以一起优化。",
+    "帮我从零设计一个特定任务的系统提示词",
+    "帮我诊断现有提示词效果不佳的原因，并给出数据驱动的优化方案"
+  ],
+  "roleFile": "prompt-engineer-prompt-engineer/role.md",
+  "avatarFile": "prompt-engineer-prompt-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "c3899669bba0b04463c8c05172d3e88053ce56d8522e7415994a173518d046ed",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "90a4a8bfec735212da1653f4e9915c76c399b3a1313ef23a1f9fb9c75d55e434"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9d38b9abeed74a41f36f6e2c7cef789a0cb67479e2ca454348bb36c2c0b1f0e0"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "executive-summary-generator-executive-summary-generator",
+  "source": "bundled",
+  "sourcePackage": "executive-summary-generator",
+  "sourceAgent": "agents/executive-summary-generator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "简明明",
+  "profession": "战略报告顾问",
+  "categoryId": "10-ProjectQuality",
+  "description": "将冗长报告浓缩为高管可快速消化的精华摘要，节省每分钟",
+  "tags": [
+    "执行摘要",
+    "战略报告",
+    "决策简报"
+  ],
+  "quickPrompts": [
+    "我们需要为管理层准备高质量的业务总结报告,请执行摘要生成器帮我们提炼关键信息。",
+    "为商业计划书撰写高管摘要",
+    "汇总多份文件生成决策简报"
+  ],
+  "roleFile": "executive-summary-generator-executive-summary-generator/role.md",
+  "avatarFile": "executive-summary-generator-executive-summary-generator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "30c1905213a308dc1f2288f8df1d3d1de5951ad033c4d31a33d4e7410a972096",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d3a6f692bbb61e91de39a4167d8c4ef2c7c5d77801acd4c88375ab0ac4a5782e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ce8dbcd23251af5bb4d02c6698d7f81e2f841be846a6b65b0f55a0f250e0ca01"
+    }
+  ]
+}

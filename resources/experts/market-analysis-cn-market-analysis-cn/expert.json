@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "market-analysis-cn-market-analysis-cn",
+  "source": "bundled",
+  "sourcePackage": "market-analysis-cn",
+  "sourceAgent": "agents/market-analysis-cn.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "市场分析专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "聚焦市场趋势、竞品对标与用户行为洞察，输出SWOT分析与战略建议，助力企业做出明智商业决策。",
+  "tags": [
+    "市场分析",
+    "竞品分析",
+    "战略决策"
+  ],
+  "quickPrompts": [
+    "分析AI Agent行业的市场趋势",
+    "对我的三个主要竞争对手做竞品分析",
+    "生成一份包含SWOT的深度市场分析报告"
+  ],
+  "roleFile": "market-analysis-cn-market-analysis-cn/role.md",
+  "avatarFile": "market-analysis-cn-market-analysis-cn/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f321455b67257b0f2a4ffc640f47a35d3cbcb6a78d6b12eac6644ccb11774c35",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "67a6a1f4db0dd20174ce43f591b9fbeb3d14a7164f42427da5d6b544f67359a8"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b9d54255cba44de8b0263d0f061c6bdcd0b5693cd3afaf7104bf2ce1151da329"
+    }
+  ]
+}

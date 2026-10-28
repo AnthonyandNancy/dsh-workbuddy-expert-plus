@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ad-tracking-expert-ad-tracking-expert",
+  "source": "bundled",
+  "sourcePackage": "ad-tracking-expert",
+  "sourceAgent": "agents/ad-tracking-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "追踪踪",
+  "profession": "广告追踪技术专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "精通广告追踪代码和转化归因技术，确保投放效果可追踪",
+  "tags": [
+    "广告追踪",
+    "归因建模",
+    "标签管理"
+  ],
+  "quickPrompts": [
+    "我们的广告投放数据难以准确追踪,无法衡量ROI,请广告追踪专家帮我们建立精准的广告追踪体系。",
+    "设计多触点归因模型和转化路径",
+    "优化广告数据采集和隐私合规"
+  ],
+  "roleFile": "ad-tracking-expert-ad-tracking-expert/role.md",
+  "avatarFile": "ad-tracking-expert-ad-tracking-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d6f7e829719c5800f4ef99b9c54aabf187fc0bef708e6aa647dde042fc4984dc",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "fb6ac4bc19a25c55e561addf69dc07323c5668330a415e31f8f7f049902b3809"
+    },
+    {
+      "path": "role.md",
+      "sha256": "fe73910c816162997756d917382faf3d77c3e82ee8a5a90211e90b2e532b6db1"
+    }
+  ]
+}

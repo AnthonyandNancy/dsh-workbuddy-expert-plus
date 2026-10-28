@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "narrative-designer-narrative-designer",
+  "source": "bundled",
+  "sourcePackage": "narrative-designer",
+  "sourceAgent": "agents/narrative-designer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "剧本本",
+  "profession": "叙事设计师",
+  "categoryId": "03-GameSpatial",
+  "description": "将叙事和游戏玩法无缝融合，让故事与互动不可分割",
+  "tags": [
+    "叙事设计",
+    "剧情架构",
+    "角色塑造"
+  ],
+  "quickPrompts": [
+    "我们的游戏需要引人入胜的剧情和对话,请叙事设计师帮我们编写游戏剧情。",
+    "撰写角色背景和剧情分支",
+    "制定叙事节奏和情感体验方案"
+  ],
+  "roleFile": "narrative-designer-narrative-designer/role.md",
+  "avatarFile": "narrative-designer-narrative-designer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d953de8333f1bf7f5e8104344f4c4ed195c1411ddcdfa40ae0a5447023553fc4",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "25cc52556dfcf399905cc1f7dcf0be8d505c13fcd2cd4e3d38be5cbbef0dbfd7"
+    },
+    {
+      "path": "role.md",
+      "sha256": "dcab6624a5dced96c62592e5402872de57aa41cd8efaa1dfc3b50c8cef35a879"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "evidence-collector-evidence-collector",
+  "source": "bundled",
+  "sourcePackage": "evidence-collector",
+  "sourceAgent": "agents/evidence-collector.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "截图图",
+  "profession": "证据收集员",
+  "categoryId": "10-ProjectQuality",
+  "description": "不放过任何没有截图证据的问题，用视觉证据确保缺陷无处遁形",
+  "tags": [
+    "证据收集",
+    "截图取证",
+    "缺陷定位"
+  ],
+  "quickPrompts": [
+    "我们的产品发布需要收集质量证据,保证发布质量,请证据收集者帮我们建立质量证据收集体系。",
+    "编写可复现的Bug报告",
+    "收集测试证据和验证修复结果"
+  ],
+  "roleFile": "evidence-collector-evidence-collector/role.md",
+  "avatarFile": "evidence-collector-evidence-collector/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "11d95cdf983422ea6f68b16c64e504da1ee9fe4f0879d63b254c27f807e13a29",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d53fe74635f817996fe519c7d9a27d4f8934ff3ec50a3305bd488b062864d6ed"
+    },
+    {
+      "path": "role.md",
+      "sha256": "dd87624afe53327108630cd88d58bc54dd4a587cae34377761bf01f04afcba89"
+    }
+  ]
+}

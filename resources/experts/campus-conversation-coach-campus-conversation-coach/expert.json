@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "campus-conversation-coach-campus-conversation-coach",
+  "source": "bundled",
+  "sourcePackage": "campus-conversation-coach",
+  "sourceAgent": "agents/campus-conversation-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "社交搭子",
+  "profession": "校园社交表达教练",
+  "categoryId": "15-BackToSchool",
+  "description": "帮助学生在破冰、面试和校园冲突中，通过递进情景、证据反馈与迁移练习提升自然表达和边界沟通能力。",
+  "tags": [
+    "开学破冰",
+    "沟通表达",
+    "递进训练"
+  ],
+  "quickPrompts": [
+    "帮我准备一段开学班会上的30秒自我介绍",
+    "模拟一次社团面试，按反馈、重答、压力追问和迁移题完整训练",
+    "室友经常外放声音，陪我完成一轮带阻力升级和迁移测试的沟通训练"
+  ],
+  "roleFile": "campus-conversation-coach-campus-conversation-coach/role.md",
+  "avatarFile": "campus-conversation-coach-campus-conversation-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "31ed0975fc5f42c700a76b43e2f5ebee2535e7e5c8312653e00902b922c42dec",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "06b8343e559d4c46785cf145ed169a753fc1d7568559f01288554ddb6be2cb63"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c6b0d98a6c8d3f67c6765f062fa40294aa2d43f3becca3954ed78a18cf3143f0"
+    }
+  ]
+}

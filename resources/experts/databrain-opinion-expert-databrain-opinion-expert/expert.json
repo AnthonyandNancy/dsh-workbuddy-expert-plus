@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "databrain-opinion-expert-databrain-opinion-expert",
+  "source": "bundled",
+  "sourcePackage": "databrain-opinion-expert",
+  "sourceAgent": "agents/databrain-opinion-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "DataBrain舆情分析专家",
+  "profession": "DataBrain舆情分析专家",
+  "categoryId": "04-DataAI",
+  "description": "玩家口碑与舆情侦察兵，覆盖评分告警、内容趋势、竞品对比与热点挖掘，实时感知玩家声音，辅助运营决策",
+  "tags": [
+    "舆情指标",
+    "评分告警",
+    "内容趋势"
+  ],
+  "quickPrompts": [
+    "帮我查看一款游戏近期玩家口碑与舆情变化，识别风险、热点和可跟进建议。",
+    "帮我生成某款游戏过去 24 小时的分平台热帖日报。",
+    "帮我设置某款游戏的商店评分下滑告警，并说明触发阈值。"
+  ],
+  "roleFile": "databrain-opinion-expert-databrain-opinion-expert/role.md",
+  "avatarFile": "databrain-opinion-expert-databrain-opinion-expert/avatar.jpg",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "52d60f4d7f74e5d75976e7dd1c0440bbf805b5c0e8f972be27a54291a3420f6e",
+  "files": [
+    {
+      "path": "avatar.jpg",
+      "sha256": "34124cf9509815d1f02c11e62d8acca2cd052b287aa4eb6278a2a90bdaf31331"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b7e727669905d9e56afa3f80e138a776bd3cbda0987ad82f7e61e675de06434f"
+    }
+  ]
+}

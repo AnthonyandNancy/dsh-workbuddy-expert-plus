@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "we-chat-mini-program-developer-we-chat-mini-program-developer",
+  "source": "bundled",
+  "sourcePackage": "we-chat-mini-program-developer",
+  "sourceAgent": "agents/we-chat-mini-program-developer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小程达",
+  "profession": "微信小程序开发者",
+  "categoryId": "02-Engineering",
+  "description": "精通微信小程序开发框架和生态，打造流畅微信原生体验应用",
+  "tags": [
+    "小程序开发",
+    "微信生态",
+    "WXML开发"
+  ],
+  "quickPrompts": [
+    "我们需要开发微信小程序,希望快速上线并获得用户,请微信小程序开发工程师帮我们设计小程序架构。",
+    "优化小程序性能和审核通过率",
+    "集成微信支付和分享能力"
+  ],
+  "roleFile": "we-chat-mini-program-developer-we-chat-mini-program-developer/role.md",
+  "avatarFile": "we-chat-mini-program-developer-we-chat-mini-program-developer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "701ab4285801a325c0b97ac96f564d9cd368f76738f092454abb9decdf533d69",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "71f98c86f7055c165b82db3a73eeedc4e1c899985d51f2d759bd2279ddce9a5f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b20e6438b93e72c3349cec2fe2f3436a2941570853fc16e20286956b7ff08c23"
+    }
+  ]
+}

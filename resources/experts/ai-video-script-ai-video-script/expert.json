@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-video-script-ai-video-script",
+  "source": "bundled",
+  "sourcePackage": "ai-video-script",
+  "sourceAgent": "agents/ai-video-script.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "AI视频脚本创作专家",
+  "categoryId": "06-ContentCreative",
+  "description": "依据主题或关键词生成完整视频脚本，涵盖分镜表、画面提示词、配音文案与字幕，适配主流AI生成工具及抖音、B站平台。",
+  "tags": [
+    "视频脚本",
+    "分镜设计",
+    "AI提示词"
+  ],
+  "quickPrompts": [
+    "生成一个30秒产品介绍视频脚本",
+    "写一个60秒科普视频脚本",
+    "为我的视频生成分镜画面提示词"
+  ],
+  "roleFile": "ai-video-script-ai-video-script/role.md",
+  "avatarFile": "ai-video-script-ai-video-script/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "29b02ec1bc50f8d83b3640d33e5be11248490754031f18e906f30d4314ab1edf",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "3ebe8b654d002abb0e216af7a6eaa474bd316e450018eacfb204f593e89670e6"
+    },
+    {
+      "path": "role.md",
+      "sha256": "1a0d5477d81849246761c9216b7e482d4a68e53c913574521746c8e615c8e34d"
+    }
+  ]
+}

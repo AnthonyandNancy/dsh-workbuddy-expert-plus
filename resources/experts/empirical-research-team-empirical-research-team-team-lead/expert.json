@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "empirical-research-team-empirical-research-team-team-lead",
+  "source": "bundled",
+  "sourcePackage": "empirical-research-team",
+  "sourceAgent": "agents/empirical-research-team-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "科研专家团",
+  "profession": "科研专家团",
+  "categoryId": "04-DataAI",
+  "description": "覆盖实证研究全流程的专家团：因果推断、稳健性检验、出版级表图与降AIGC，高效完成可复现学术论文",
+  "tags": [
+    "因果推断",
+    "实证论文",
+    "计量经济学"
+  ],
+  "quickPrompts": [
+    "帮我用 DID 方法分析一项政策的处理效应，从数据清洗到发表级表格",
+    "我有一篇完成的中文实证论文初稿，帮我降低 AIGC 检测率",
+    "帮我设计一个 IV 策略并评估工具变量的有效性"
+  ],
+  "roleFile": "empirical-research-team-empirical-research-team-team-lead/role.md",
+  "avatarFile": "empirical-research-team-empirical-research-team-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f61b358d14e380ee3d7109bf9934a6bcb23840b754095c4fe11f1d06db90987c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6dfb5cfcedc508fad7d52fd3b23d6804da70fdc822a5c15648d4c69e7432e4c5"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7d6b3f182cef63b262412408208b66940ede1171b03935b315ef30691c46d04d"
+    }
+  ]
+}

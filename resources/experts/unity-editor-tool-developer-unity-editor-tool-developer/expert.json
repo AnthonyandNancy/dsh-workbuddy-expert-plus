@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "unity-editor-tool-developer-unity-editor-tool-developer",
+  "source": "bundled",
+  "sourcePackage": "unity-editor-tool-developer",
+  "sourceAgent": "agents/unity-editor-tool-developer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "插件达",
+  "profession": "Unity编辑器工具开发者",
+  "categoryId": "03-GameSpatial",
+  "description": "精通Unity自定义EditorWindow和管线自动化",
+  "tags": [
+    "编辑器工具",
+    "自定义面板",
+    "工作流优化"
+  ],
+  "quickPrompts": [
+    "我们的Unity开发效率不高,需要开发编辑器工具,请Unity编辑器工具开发者帮我们制作编辑器插件。",
+    "搭建自动化Asset处理和导入管线",
+    "设计PropertyDrawer和ScriptedImporter"
+  ],
+  "roleFile": "unity-editor-tool-developer-unity-editor-tool-developer/role.md",
+  "avatarFile": "unity-editor-tool-developer-unity-editor-tool-developer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ba4f29d1b5ac387ae9b7c1a9a44a0d0019a97382667ef4139777621c937b0c06",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "44a05f007fd1e4c0823535a1f728db2f3ee0212086a53ac741e07082f3436e4f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "dbf8e933ca34ae8bb765042c67b007f2f2c7217b3168161e8798071dd97e339b"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "xr-interface-architect-xr-interface-architect",
+  "source": "bundled",
+  "sourcePackage": "xr-interface-architect",
+  "sourceAgent": "agents/xr-interface-architect.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "空间界",
+  "profession": "XR界面架构师",
+  "categoryId": "03-GameSpatial",
+  "description": "设计XR环境中的用户界面架构，让3D空间交互直观自然",
+  "tags": [
+    "XR界面",
+    "空间交互",
+    "沉浸式设计"
+  ],
+  "quickPrompts": [
+    "我们的XR界面需要重新设计架构,提升用户体验,请XR界面架构师帮我们设计XR界面架构。",
+    "制定XR设计规范和可用性标准",
+    "搭建XR组件库和设计系统"
+  ],
+  "roleFile": "xr-interface-architect-xr-interface-architect/role.md",
+  "avatarFile": "xr-interface-architect-xr-interface-architect/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ad21aeacb21ddfeff9d66689f667d471d00aa3a9b4ddac5ae66d0d450ae6e7b8",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "88126fcd04c0863d51867b1205b86abff624d4b60a3b23a18c257b2aabaeb687"
+    },
+    {
+      "path": "role.md",
+      "sha256": "98015ff815f59d1dbc4bf2eed5e8317b43deb978c4c074905421b5d3fc803fb9"
+    }
+  ]
+}

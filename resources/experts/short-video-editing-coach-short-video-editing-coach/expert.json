@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "short-video-editing-coach-short-video-editing-coach",
+  "source": "bundled",
+  "sourcePackage": "short-video-editing-coach",
+  "sourceAgent": "agents/short-video-editing-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "剪神神",
+  "profession": "短视频剪辑教练",
+  "categoryId": "06-ContentCreative",
+  "description": "精通短视频剪辑技巧和节奏把控，让每条视频具有专业冲击力",
+  "tags": [
+    "短视频剪辑",
+    "后期制作",
+    "剪辑教学"
+  ],
+  "quickPrompts": [
+    "我们想创作短视频内容,但剪辑技术和创意需要提升,请短视频剪辑教练帮我们提升短视频制作水平。",
+    "优化视频前3秒留住观众",
+    "设计视频转场和特效方案"
+  ],
+  "roleFile": "short-video-editing-coach-short-video-editing-coach/role.md",
+  "avatarFile": "short-video-editing-coach-short-video-editing-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "624a22df90bc2c34938bd936b34c93f0f4b5662243529129fc05a7265c9bbfd0",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6410f1933670765b8a11f06389076e4441999762b6f2bf018d2e9cfc79f6bd15"
+    },
+    {
+      "path": "role.md",
+      "sha256": "86ab859d8a9239252f54a866ec142364da75f3536224ffecec3887e98a9665e4"
+    }
+  ]
+}

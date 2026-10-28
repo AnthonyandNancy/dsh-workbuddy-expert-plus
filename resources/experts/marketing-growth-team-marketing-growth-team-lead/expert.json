@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "marketing-growth-team-marketing-growth-team-lead",
+  "source": "bundled",
+  "sourcePackage": "marketing-growth-team",
+  "sourceAgent": "agents/marketing-growth-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "营销增长专家团",
+  "profession": "营销增长专家团",
+  "categoryId": "05-MarketingGrowth",
+  "description": "fCMO 级全栈营销增长团队：转化率优化、SEO 与内容策略、增长工程、数据归因分析与策略规划，全方位助力 SaaS 产品增长",
+  "tags": [
+    "SaaS 增长策略",
+    "转化率优化",
+    "全栈营销"
+  ],
+  "quickPrompts": [
+    "为我的 SaaS 产品制定 90 天营销计划",
+    "审计我的落地页并给出转化优化建议",
+    "根据我的产品和阶段推荐 5 个增长策略"
+  ],
+  "roleFile": "marketing-growth-team-marketing-growth-team-lead/role.md",
+  "avatarFile": "marketing-growth-team-marketing-growth-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "90a9d69a66a4d08eb654b61f5db61471932a00b4dd078b74b98fa375bd05c1d7",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f1c556e5dc2b688f0d1c32ef2cfb1dd0b91b9ef3e68ce2fc9740730b5263e380"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4001dedd712e954b72e7b33afe3ef66b47abf0803a095dc9108d7d6ba01046f3"
+    }
+  ]
+}

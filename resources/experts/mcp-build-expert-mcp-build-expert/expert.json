@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "mcp-build-expert-mcp-build-expert",
+  "source": "bundled",
+  "sourcePackage": "mcp-build-expert",
+  "sourceAgent": "agents/mcp-build-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "协议通",
+  "profession": "MCP构建专家",
+  "categoryId": "02-Engineering",
+  "description": "精通Model Context Protocol设计实现",
+  "tags": [
+    "MCP构建",
+    "协议开发",
+    "工具集成"
+  ],
+  "quickPrompts": [
+    "我们想构建MCP(Model Context Protocol)应用,需要专业的MCP开发经验,请MCP构建专家帮我们设计MCP应用。",
+    "设计MCP服务架构和安全方案",
+    "搭建MCP工具测试和部署流程"
+  ],
+  "roleFile": "mcp-build-expert-mcp-build-expert/role.md",
+  "avatarFile": "mcp-build-expert-mcp-build-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f1fe7ecf4ec426747ba60aead401b13ebff8fed2704f9e587b39e084a66b67fe",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "722d61da3a716f747933b1e148ed04d652eb19306ee986031aab70e2054029b0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "1cd1f0ea249e5e61f23d95a492ba8d7e0929bbcf2a9d847f60e03f217fcc63dc"
+    }
+  ]
+}

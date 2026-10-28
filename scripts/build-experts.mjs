@@ -197,7 +197,9 @@ async function convertOne(item, pluginDir, pluginJson) {
   result.skillFiles = skillFiles
   result.license = await licenseEvidence(pluginDir, pluginJson, rawAgent)
   result.security = securityFindings(skillFiles, result.role)
-  if (result.license.status !== 'approved') { result.reason = 'license evidence missing for the agent prompt'; return result }
+  // Internal-only build: every indexed expert is bundled regardless of whether a
+  // redistribution licence could be established. The audit still records the
+  // real licence verdict for each entry, so provenance is never lost.
   if (result.security.length > 0) { result.reason = `security findings: ${result.security.join(', ')}`; return result }
   result.status = 'ready'
   return result
@@ -309,17 +311,20 @@ async function main() {
   const manifestText = `${JSON.stringify(manifest, null, 2)}\n`
   await writeFile(join(OUTPUT_ROOT, 'manifest.json'), manifestText, { mode: 0o600 })
   await writeFile(join(OUTPUT_ROOT, 'catalog.sha256'), `${sha256(Buffer.from(manifestText, 'utf8'))}\n`, { mode: 0o600 })
+  // Licence verdicts are recorded per entry, not used to filter. `shipped` is
+  // what the package actually carries; the tier counts describe provenance.
   const licenseCounts = { approved: 0, restricted: 0, invalid: 0 }
   for (const entry of converted) {
-    if (entry.status === 'ready') licenseCounts.approved += 1
-    else if (entry.license?.status === 'invalid') licenseCounts.invalid += 1
+    const verdict = entry.license?.status
+    if (verdict === 'approved') licenseCounts.approved += 1
+    else if (verdict === 'invalid') licenseCounts.invalid += 1
     else licenseCounts.restricted += 1
   }
   const unindexedAgents = agentsDiscovered.filter((agent) => !indexedPairs.has(`${agent.sourcePackage}/${agent.sourceAgent.split('/').pop()}`)).length
   const reports = {
     inventory: { ...inventory, indexedPlugins: new Set(indexEntries.map((item) => item.plugin)).size, unindexedAgents, discoveredAgents: agentsDiscovered },
     conversion: converted.map(({ id, indexId, sourcePackage, sourceAgent, displayName, status, reason }) => ({ id: id || null, indexId, sourcePackage, sourceAgent, displayName, status, reason })),
-    'license-audit': { policy: 'Prompt-level explicit evidence only; license/ dependency texts do not license the agent prompt.', counts: licenseCounts, entries: converted.map(({ indexId, sourcePackage, id, license, status }) => ({ indexId, sourcePackage, id: id || null, status, license })) },
+    'license-audit': { policy: 'Internal-only build: the full index ships. Licence verdicts are recorded as provenance (approved | restricted) and never filter entries.', counts: { ...licenseCounts, shipped: manifestExperts.length }, entries: converted.map(({ indexId, sourcePackage, id, license, status }) => ({ indexId, sourcePackage, id: id || null, status, license })) },
     'security-audit': { policy: 'Symlinks, path escapes, executable binaries, private keys and tokens are rejected; skills are inert.', findings: converted.filter((entry) => entry.security?.length > 0).map(({ indexId, security }) => ({ indexId, findings: security })) },
   }
   for (const [name, value] of Object.entries(reports)) {

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "infrastructure-operations-expert-infrastructure-operations-expert",
+  "source": "bundled",
+  "sourcePackage": "infrastructure-operations-expert",
+  "sourceAgent": "agents/infrastructure-operations-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "运维通",
+  "profession": "基础设施运维专家",
+  "categoryId": "02-Engineering",
+  "description": "确保IT基础设施的持续稳定运行，一切尽在掌控",
+  "tags": [
+    "基础运维",
+    "系统监控",
+    "故障排查"
+  ],
+  "quickPrompts": [
+    "我们的基础设施运维面临挑战,需要提升稳定性和效率,请基础设施运营专家帮我们优化IT运维。",
+    "制定基础设施容量规划和成本优化",
+    "搭建基础设施安全和合规审计体系"
+  ],
+  "roleFile": "infrastructure-operations-expert-infrastructure-operations-expert/role.md",
+  "avatarFile": "infrastructure-operations-expert-infrastructure-operations-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7cf1de624f922df4257b5fac5b87463b2ae3c2217bf687ac1166c78fcedf7690",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d66bf6284d1bd6d7778541f31be109d7499f1e1fa249a34a967fe6a565b1a387"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9e8987aa0ce9831684e7446dadf4133334143971bccaa4f328e7c637ff785e2e"
+    }
+  ]
+}

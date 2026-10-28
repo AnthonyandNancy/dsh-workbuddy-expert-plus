@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "hsk-devops-expert-hsk-devops-architect",
+  "source": "bundled",
+  "sourcePackage": "hsk-devops-expert",
+  "sourceAgent": "agents/hsk-devops-architect.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "贝锐花生壳",
+  "profession": "网页发布与前端调试专家",
+  "categoryId": "02-Engineering",
+  "description": "基于 HSK CLI 的 DevOps 专家，提供零配置公网预览、内网穿透、文件托管和项目部署能力",
+  "tags": [
+    "内网穿透",
+    "文件托管",
+    "项目部署"
+  ],
+  "quickPrompts": [
+    "把本地 9000 端口的服务暴露到公网",
+    "上传 dist 目录并生成公网访问链接",
+    "构建并部署前端项目到公网"
+  ],
+  "roleFile": "hsk-devops-expert-hsk-devops-architect/role.md",
+  "avatarFile": "hsk-devops-expert-hsk-devops-architect/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "69545c968f0e6d5fa719a2183fadc8c761b51a833ba39153226a1223e8dab51b",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "35abb0f1b366ec2ee932252a2ff2dd3c62cdc3a3db5b1ed20b7c0c7f2a504cf6"
+    },
+    {
+      "path": "role.md",
+      "sha256": "14ae66fc06ab11ac1dea85573013a92f5a5740710b71564c726a7c7042e5216e"
+    }
+  ]
+}

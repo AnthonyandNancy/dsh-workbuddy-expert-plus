@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "geo-diagnosis-expert-geo-diagnosis-expert",
+  "source": "bundled",
+  "sourcePackage": "geo-diagnosis-expert",
+  "sourceAgent": "agents/geo-diagnosis-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "苍何",
+  "profession": "品牌 GEO 可见度诊断师",
+  "categoryId": "05-MarketingGrowth",
+  "description": "品牌 GEO 可见度诊断专家，覆盖基建评估、AI 平台收录、竞品对标、舆情分析，输出 AIVO 评分报告。",
+  "tags": [
+    "GEO 诊断",
+    "AI 搜索可见度",
+    "品牌分析"
+  ],
+  "quickPrompts": [
+    "帮我诊断一个品牌的 GEO 可见度",
+    "对我的品牌做完整 GEO 诊断，输出 AIVO 评分报告",
+    "对比分析我的品牌和竞品在 AI 搜索中的曝光差距"
+  ],
+  "roleFile": "geo-diagnosis-expert-geo-diagnosis-expert/role.md",
+  "avatarFile": "geo-diagnosis-expert-geo-diagnosis-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "cbcce69fdd0afa3cac77ae61eeedd27dac64fd92f6d42dd0683a9dc50df1a081",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "58a07cdddc2b3d32a6aa66b4e38de813fd884d91c4c3baf18e0c021af3a315d7"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d3a7ea1cf11a17168cc7dd94d99ec4e40c60478c75b3db11f5e501538489f87b"
+    }
+  ]
+}

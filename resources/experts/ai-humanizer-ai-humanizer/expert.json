@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-humanizer-ai-humanizer",
+  "source": "bundled",
+  "sourcePackage": "ai-humanizer",
+  "sourceAgent": "agents/ai-humanizer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "AI痕迹消除专家",
+  "categoryId": "06-ContentCreative",
+  "description": "识别24种AI写作模式与500+词汇，统计突发性与多样性，重写为自然真实的人类表达，彻底消除机器味。",
+  "tags": [
+    "AI痕迹检测",
+    "文本去AI化",
+    "自然语言润色"
+  ],
+  "quickPrompts": [
+    "帮我把这段文字去AI化，消除机器味",
+    "检测这段内容的AI痕迹并打分",
+    "把这篇草稿改写得更自然真实"
+  ],
+  "roleFile": "ai-humanizer-ai-humanizer/role.md",
+  "avatarFile": "ai-humanizer-ai-humanizer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "821a366c32ee15f361243930f3fe82c6975a40d64ea54ca14884e1c53debbfb7",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "936599c238dd05b915898425165bb212a020ceecd96dc35e92eeffc02f195169"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d10b0caab5c20a9fd42579c5518562628366aa83c580ca06d55b3a4cbf23ce4d"
+    }
+  ]
+}

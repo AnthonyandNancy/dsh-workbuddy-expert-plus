@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "id": "financial-analysis-financial-modeling-expert",
+  "source": "bundled",
+  "sourcePackage": "financial-analysis",
+  "sourceAgent": "agents/financial-modeling-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "建模模",
+  "profession": "金融建模专家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "核心金融建模工具：DCF 估值、可比公司分析、LBO 模型、三张表模型、竞争格局分析和 PPT 质检",
+  "tags": [
+    "财务建模",
+    "估值分析",
+    "三表联动"
+  ],
+  "quickPrompts": [
+    "帮我搭建一个DCF估值模型",
+    "制作三表联动财务预测模型",
+    "设计情景分析和敏感性测试方案"
+  ],
+  "roleFile": "financial-analysis-financial-modeling-expert/role.md",
+  "skills": [
+    "skill-creator"
+  ],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d6821bec29c140f8a48ef5697c33e64beaca9dd4436d754bd47e73003a5b0a70",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "a62b8f5b9e4b47708360db70be8a51a1f9569f3f58d237d132340402047722e6"
+    },
+    {
+      "path": "skills/skill-creator/LICENSE.txt",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "path": "skills/skill-creator/references/output-patterns.md",
+      "sha256": "65a01e45e835405b27e359f33c1008131553c0823cdcae3878d930f43da3d291"
+    },
+    {
+      "path": "skills/skill-creator/references/workflows.md",
+      "sha256": "d2181eb532a5a05f3fec8f230eda0d58c4f294e7f724ac7874c90824b098de6e"
+    },
+    {
+      "path": "skills/skill-creator/scripts/init_skill.py",
+      "sha256": "b980b4cef985b62f561006f862f5018e33074c000cfb2ed091fc35dd5b4fa1fb"
+    },
+    {
+      "path": "skills/skill-creator/scripts/package_skill.py",
+      "sha256": "b31fbcb3e362d5c5308e99255ff8e83cde3a513e0636953964a648494ca10931"
+    },
+    {
+      "path": "skills/skill-creator/scripts/quick_validate.py",
+      "sha256": "381ab2d3d1fd5ec32371016413063eff99d0d48c415747085c61517e967dbb87"
+    },
+    {
+      "path": "skills/skill-creator/SKILL.md",
+      "sha256": "0540862292239fbc21f6f831e7cf77b8e533f119aa53193c59acf7c2e69659f4"
+    }
+  ]
+}

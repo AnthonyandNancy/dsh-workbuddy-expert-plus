@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "career-broker-career-broker",
+  "source": "bundled",
+  "sourcePackage": "career-broker",
+  "sourceAgent": "agents/career-broker.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹅厂职业经纪人",
+  "profession": "鹅厂职业经纪人",
+  "categoryId": "09-OperationsHR",
+  "description": "陪你梳理职业画像，讨论发展与转型方向，并推荐课程、经验文章、内部案例和活水机会。",
+  "tags": [
+    "职业成长",
+    "资源链接",
+    "内部机会"
+  ],
+  "quickPrompts": [
+    "作为我的经纪人，你可以做什么事情？",
+    "根据我的情况推荐司内资源",
+    "我现在到底能不能走活水？帮我看看资格"
+  ],
+  "roleFile": "career-broker-career-broker/role.md",
+  "avatarFile": "career-broker-career-broker/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "098a86007149510f77e8124a92539d06ecf8e1eb1d67becdd2906f42b68f50ae",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e1f5530492162ac10d351aa95c05c257be8f5bcf25fd862940a21dae470a1e35"
+    },
+    {
+      "path": "role.md",
+      "sha256": "007647368b41be43de1014c85a190e3c9de819f9880d5049823f3a92ec649f43"
+    }
+  ]
+}

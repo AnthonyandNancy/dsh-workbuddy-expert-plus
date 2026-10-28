@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "vietnam-public-affairs-vietnam-public-affairs",
+  "source": "bundled",
+  "sourcePackage": "vietnam-public-affairs",
+  "sourceAgent": "agents/vietnam-public-affairs.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "VN Pub Affair",
+  "profession": "越南公共事务专家",
+  "categoryId": "12-IndustryConsultant",
+  "description": "精通越南政府关系、政策解读、监管沟通、行业协会、公共舆论、社会责任、媒体关系和危机公关",
+  "tags": [
+    "政府关系",
+    "政策解读",
+    "危机公关"
+  ],
+  "quickPrompts": [
+    "分析越南政府近期出台的某政策对于企业经营的影响",
+    "分析越南某地方政府对特定项目的审批流程与关键节点",
+    "评估越南某行业当前面临的公共舆论风险及应对建议"
+  ],
+  "roleFile": "vietnam-public-affairs-vietnam-public-affairs/role.md",
+  "avatarFile": "vietnam-public-affairs-vietnam-public-affairs/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "e9d9678de7eee4a05a07a0e9b7fde86ee8541ebf6c226ef0328fe0d94741796a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d7a835d38772b3837bdb6b44a1fca5392c09ddac3787d173920633b5fd1960aa"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3b2fbbc29ef4ba7a26995ea0bfee35d453d7cc3beae40999dd21a2a18696f771"
+    }
+  ]
+}

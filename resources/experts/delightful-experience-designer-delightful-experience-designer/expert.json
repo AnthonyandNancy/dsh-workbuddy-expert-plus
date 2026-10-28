@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "delightful-experience-designer-delightful-experience-designer",
+  "source": "bundled",
+  "sourcePackage": "delightful-experience-designer",
+  "sourceAgent": "agents/delightful-experience-designer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "惊喜喜",
+  "profession": "趣味体验设计师",
+  "categoryId": "01-ProductDesign",
+  "description": "专注于在品牌体验中注入意想不到的愉悦时刻",
+  "tags": [
+    "体验设计",
+    "交互创新",
+    "情感化设计"
+  ],
+  "quickPrompts": [
+    "我们的产品功能完备但用户体验不够惊艳,用户满意度有待提升,请愉悦体验设计师帮我创造令人愉悦的用户交互体验。",
+    "优化用户情感触点和惊喜时刻",
+    "制定体验创新和微交互设计方案"
+  ],
+  "roleFile": "delightful-experience-designer-delightful-experience-designer/role.md",
+  "avatarFile": "delightful-experience-designer-delightful-experience-designer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "22beb8d83aed111419a8da0d49732811d1e4768d516b8c9f1ba2c58a892ea556",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "88904293fc9702558b00cc0936e5d1ebcb06f51e38d0dcafe0b1a1f63920ec87"
+    },
+    {
+      "path": "role.md",
+      "sha256": "13084f699c52ac942462d1b23d48f61b6989eb8d9aad3a0f0ebc5223c782ab02"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "brazil-legal-brazil-legal",
+  "source": "bundled",
+  "sourcePackage": "brazil-legal",
+  "sourceAgent": "agents/brazil-legal.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Brazil Legal Expert",
+  "profession": "巴西法务合规专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "巴西公司注册、合同审查、知识产权、产品准入、劳动用工、数据合规及争议解决，助力企业合规出海巴西。",
+  "tags": [
+    "合同审查",
+    "企业注册",
+    "法规解读"
+  ],
+  "quickPrompts": [
+    "企业如何在巴西注册有限责任公司？需要哪些材料？",
+    "帮我梳理产品进入巴西市场的法律要求",
+    "帮我审查这份巴西经销协议，识别高风险条款并提出修改建议"
+  ],
+  "roleFile": "brazil-legal-brazil-legal/role.md",
+  "avatarFile": "brazil-legal-brazil-legal/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "23a813b619c3126f18589e9b99794d53e2413efc6196f76109c59b0b30ab592e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "92119c0163b73d9b14efb8078dc60fe1ca03adf25469a84692a359d81d9034c0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "de2b94799b6f90a7f009abf8fed6e73647d8ca8ae6e86e68e2aed9556cc3995e"
+    }
+  ]
+}

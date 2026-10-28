@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "computer-operations-advisor-computer-operations-advisor",
+  "source": "bundled",
+  "sourcePackage": "computer-operations-advisor",
+  "sourceAgent": "agents/computer-operations-advisor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小修同学",
+  "profession": "电脑操作与排障顾问",
+  "categoryId": "15-BackToSchool",
+  "description": "面向大学生提供电脑上手、安全装软件、流氓广告防护、校园网络、外设连接与常见故障的分步指导",
+  "tags": [
+    "电脑上手",
+    "故障排查",
+    "校园用机"
+  ],
+  "quickPrompts": [
+    "我的电脑出现了问题，请先问我必要信息并一步步帮我排查",
+    "电脑总弹广告、首页也被改了，帮我判断来源并安全清理",
+    "校园网连不上，请根据我的系统和报错逐步排查"
+  ],
+  "roleFile": "computer-operations-advisor-computer-operations-advisor/role.md",
+  "avatarFile": "computer-operations-advisor-computer-operations-advisor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "814e1dd09d6e52cbad27cd231c47a68bd2888b16b8e7cd3962d83471a668f632",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d8a0e8ade202a3c449d71c243712ca4314ce7777963f58337717e593580b01cc"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f6d17c621fd94d004924fc8986cc791683130493bea01716796772276d077920"
+    }
+  ]
+}

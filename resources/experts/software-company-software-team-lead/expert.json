@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "software-company-software-team-lead",
+  "source": "bundled",
+  "sourcePackage": "software-company",
+  "sourceAgent": "agents/software-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "软件开发团队",
+  "profession": "软件开发团队",
+  "categoryId": "02-Engineering",
+  "description": "高效软件研发团队，产品经理定需求、架构师设计+拆任务、工程师批量实现代码、QA验证质量，小需求支持快速模式",
+  "tags": [
+    "软件公司",
+    "组织管理",
+    "产品交付"
+  ],
+  "quickPrompts": [
+    "帮我开发一个贪吃蛇游戏",
+    "规划软件开发项目架构和任务分工",
+    "搭建开发团队协作规范和交付流程"
+  ],
+  "roleFile": "software-company-software-team-lead/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ef3fd1e99b25d516961e9c3f5ace145f6edee70269c853ae2a0f951f2e2e397a",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "0553445247b090bade18d1a3f3b2b34b590515944e4c4b905283ea7fdd9da25f"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tencent-rtc-expert-tencent-rtc-expert",
+  "source": "bundled",
+  "sourcePackage": "tencent-rtc-expert",
+  "sourceAgent": "agents/tencent-rtc-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "CloudQ",
+  "profession": "腾讯云实时音视频专家",
+  "categoryId": "13-TencentZone",
+  "description": "TRTC 技术支持专家：通话用量与质量查询、单次通话诊断、云端巡检解读、故障排查与友商代码迁移。",
+  "tags": [
+    "实时音视频",
+    "通话诊断与巡检",
+    "友商迁移"
+  ],
+  "quickPrompts": [
+    "我名下有哪些 TRTC 应用？列一下 SdkAppId",
+    "SdkAppId 1400000001 房间 1256732 昨天 11:30 左右观众反馈卡顿，帮我诊断下原因",
+    "帮我的 TRTC 应用发起一次云端巡检，看看当前有没有风险"
+  ],
+  "roleFile": "tencent-rtc-expert-tencent-rtc-expert/role.md",
+  "avatarFile": "tencent-rtc-expert-tencent-rtc-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8dd980c4bf8d3ab497eae490149e6027d5192506c20206110133213bc6da2d3e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6aad4affae3ed3dce13708ec7f97ca0b8e8e331b19195825ac101525e6201887"
+    },
+    {
+      "path": "role.md",
+      "sha256": "371cc469880f7fb495e11ed1e4c0406ae8c0c544e29612d1d9a6deb787ddf2c9"
+    }
+  ]
+}

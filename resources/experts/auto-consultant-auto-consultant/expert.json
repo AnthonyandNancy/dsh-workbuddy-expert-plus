@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "auto-consultant-auto-consultant",
+  "source": "bundled",
+  "sourcePackage": "auto-consultant",
+  "sourceAgent": "agents/auto-consultant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "车赢赢",
+  "profession": "汽车营销专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "精通用户选车购车决策，深谙汽车营销增长，覆盖品牌营销、用户增长、车型分析、购车咨询等全链路汽车服务。",
+  "tags": [
+    "汽车营销",
+    "购车选车",
+    "内容创作"
+  ],
+  "quickPrompts": [
+    "这款新车上市，帮我做小红书种草方案",
+    "诊断我的营销漏斗，找线索流失点",
+    "15 万预算，家用第一辆车，帮我选车"
+  ],
+  "roleFile": "auto-consultant-auto-consultant/role.md",
+  "avatarFile": "auto-consultant-auto-consultant/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "cfbdf53084b5d54459606c9e41d2429a2b6c5d565260437d37c8dacbccd2e684",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b75b896712a8f8548925a0c825a136b4bca2da8a2ba20a44be14cd8ef67f8cd0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f56c2a96a78995d0d2d452c55ba7f3d34f96999fe82361cb5d3f4e6457a0a44b"
+    }
+  ]
+}

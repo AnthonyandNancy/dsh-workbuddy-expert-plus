@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "search-term-analyst-search-term-analyst",
+  "source": "bundled",
+  "sourcePackage": "search-term-analyst",
+  "sourceAgent": "agents/search-term-analyst.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "词探探",
+  "profession": "搜索词分析师",
+  "categoryId": "05-MarketingGrowth",
+  "description": "深度分析搜索词数据，挖掘用户真实搜索意图",
+  "tags": [
+    "搜索词分析",
+    "关键词挖掘",
+    "搜索意图"
+  ],
+  "quickPrompts": [
+    "我们的搜索广告关键词表现参差不齐,需要优化关键词策略,请搜索词分析师帮我们分析并优化关键词。",
+    "挖掘高价值搜索词和否定词",
+    "搭建搜索词监控和趋势分析体系"
+  ],
+  "roleFile": "search-term-analyst-search-term-analyst/role.md",
+  "avatarFile": "search-term-analyst-search-term-analyst/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2816f5d025f9bd87c907234f06a0e0afcfecab8f1331f0911c92b18a8e03155e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "fe0154d98d04aa08ba2777175a287bf4379deb2bce8b966a15bbc86b0dd55f66"
+    },
+    {
+      "path": "role.md",
+      "sha256": "76460974cc50fe1fcc2d7d31c42bf6e8803b8c8235496b71818b61aff96c3ab3"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "carousel-content-growth-expert-carousel-content-growth-expert",
+  "source": "bundled",
+  "sourcePackage": "carousel-content-growth-expert",
+  "sourceAgent": "agents/carousel-content-growth-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "翻页页",
+  "profession": "轮播内容增长专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "专精设计高互动率轮播图内容，驱动社交平台用户参与和增长",
+  "tags": [
+    "轮播内容",
+    "社媒增长",
+    "爆款图文"
+  ],
+  "quickPrompts": [
+    "我们想在社交媒体做图文内容营销,需要专业的轮播内容策略,请轮播内容增长专家帮我们设计图文内容方案。",
+    "制作LinkedIn/Instagram轮播图文",
+    "优化轮播内容转化和粉丝获取"
+  ],
+  "roleFile": "carousel-content-growth-expert-carousel-content-growth-expert/role.md",
+  "avatarFile": "carousel-content-growth-expert-carousel-content-growth-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "bc5dc524c5f379c377d4a278ec7aece84587c49b9bd8e0ab4afedf6a63624b06",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7df11552322571dcb7b0db4964f29db01838352eed4ba7bc79e1b301a43894da"
+    },
+    {
+      "path": "role.md",
+      "sha256": "caf843ec92bb50ba973d2c02043da0a9db7d3aa802b58c7cd769bc6abcb2e7e9"
+    }
+  ]
+}

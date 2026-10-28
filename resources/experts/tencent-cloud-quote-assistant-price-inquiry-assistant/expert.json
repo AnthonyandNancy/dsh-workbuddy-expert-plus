@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tencent-cloud-quote-assistant-price-inquiry-assistant",
+  "source": "bundled",
+  "sourcePackage": "tencent-cloud-quote-assistant",
+  "sourceAgent": "agents/price-inquiry-assistant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯云报价助手",
+  "profession": "腾讯云产品报价顾问",
+  "categoryId": "13-TencentZone",
+  "description": "面向销售与方案团队的腾讯云报价助手，支持产品咨询选型、实时刊例价查询比较、批量采购报价、友商 Mapping 与折扣推荐。",
+  "tags": [
+    "产品咨询",
+    "刊例价查询",
+    "腾讯云"
+  ],
+  "quickPrompts": [
+    "腾讯云报价助手可以帮我做什么？",
+    "对比 CVM 4核8G 在广州和上海购买一年的刊例价",
+    "把这份阿里云账单映射成腾讯云产品后继续询价"
+  ],
+  "roleFile": "tencent-cloud-quote-assistant-price-inquiry-assistant/role.md",
+  "avatarFile": "tencent-cloud-quote-assistant-price-inquiry-assistant/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "4e2c0ce14007cd4308d8c174739422fd9b381f6e3aebe328535aa8038e22472e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7d8eca7fdf2f4d9a3468eea79c32166d955d47afaee0d3adafb9df1ba9a123f2"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c974130e950914852f1dbf5d52a197391a2c5933a75eedcb9b25ab5c47cdc072"
+    }
+  ]
+}

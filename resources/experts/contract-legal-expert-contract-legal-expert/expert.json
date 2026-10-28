@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "contract-legal-expert-contract-legal-expert",
+  "source": "bundled",
+  "sourcePackage": "contract-legal-expert",
+  "sourceAgent": "agents/contract-legal-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯电子签合同法务专家",
+  "profession": "资深合同法务专家",
+  "categoryId": "11-SecurityCompliance",
+  "description": "腾讯电子签合同法务专家擅长合同起草、审查、对比、法规检索，能在线发起签署，劳动/租赁/买卖全场景覆盖",
+  "tags": [
+    "合同起草",
+    "合同审查",
+    "法规检索"
+  ],
+  "quickPrompts": [
+    "帮我起草一份采购合同：甲方是A公司、乙方是B供应商，标的为办公电脑200台，含售后与违约条款。",
+    "请帮我审查这份租房合同，找出其中对租客不利的法律风险和权责不对等条款，并给出修改建议。",
+    "劳动合同期限 1 年，最多可以约定多长试用期？请给我相关法条原文。"
+  ],
+  "roleFile": "contract-legal-expert-contract-legal-expert/role.md",
+  "avatarFile": "contract-legal-expert-contract-legal-expert/avatar.png",
+  "skills": [
+    "tencent-esign-contract"
+  ],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1b8c1eca7b4d9b313fc2f6839dfcfb8df5e7b50522f8b68a910b6cff5d60b114",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c441daec964300532478959321fb5c02bb44cc3c8e19a51089d5148d83daaa02"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9b5758dcc6dab7d0aaa8567924528c64bc83bcd730309a715f18a69ece6004f9"
+    },
+    {
+      "path": "skills/tencent-esign-contract/icons/tencent-esign-icon.png",
+      "sha256": "21d7e591d23799aa47d2252c42737926203ba1ddbb268faed8650282085e141d"
+    },
+    {
+      "path": "skills/tencent-esign-contract/LICENSE",
+      "sha256": "d71e7d7f8fd44765a32cf154af348a1a639fbf4a0b6b1e0b2c2c7b909478a0ed"
+    },
+    {
+      "path": "skills/tencent-esign-contract/README.md",
+      "sha256": "1b16fafcd4790fe04226b425f5647c4555e8972a73067595ded6b8c6171764db"
+    },
+    {
+      "path": "skills/tencent-esign-contract/references/api_references.md",
+      "sha256": "2335d7bc1c349d0d7b4bd975bf1a3172e3b4bb943a20c4a39702ed66b89183cf"
+    },
+    {
+      "path": "skills/tencent-esign-contract/references/common_guide.md",
+      "sha256": "958c06a5351ac85b7d9ccfdd65d8656d4c74220e388e985f097148a9794370d6"
+    },
+    {
+      "path": "skills/tencent-esign-contract/references/compare_guide.md",
+      "sha256": "5e1bc4ddf362e63cf6a470c79d449e975a07f5efb8d1bb8a5c0002d91780b24e"
+    },
+    {
+      "path": "skills/tencent-esign-contract/references/create_flow_guide.md",
+      "sha256": "80c204ad3dbef211f330d7b852d9cbe6d68b6694286a746432dfda68ab209d65"
+    },
+    {
+      "path": "skills/tencent-esign-contract/references/draft_guide.md",
+      "sha256": "9e9af5d4cfcaec00a165a28b4aa1ab3cc898cbb45c3edd9ae84c4d24ab1539d3"
+    },
+    {
+      "path": "skills/tencent-esign-contract/references/law_search_guide.md",
+      "sha256": "d8f5d33d29dc96a5b63a4bce8ea5fe8c1ad4ad67710b12fdb010a50b292a08d7"
+    },
+    {
+      "path": "skills/tencent-esign-contract/references/review_guide.md",
+      "sha256": "aa2b055df9bbe9057f606348332ef027a584539c6cd024cff72d8fa34973db22"
+    },
+    {
+      "path": "skills/tencent-esign-contract/scripts/config.json",
+      "sha256": "41a682d05beb874c675bf7e82691c95e2e2d7c09c6d4ded3a86d5980e00cbd95"
+    },
+    {
+      "path": "skills/tencent-esign-contract/scripts/tencent_esign.py",
+      "sha256": "b6257c21ef1b461a88a0747741dc85291065664d0932f16a06f7a8be0d17f7e1"
+    },
+    {
+      "path": "skills/tencent-esign-contract/SKILL.md",
+      "sha256": "5f92c97d1156eca372c4b480144370026965613de68de3553eb5fc78949cb2be"
+    }
+  ]
+}

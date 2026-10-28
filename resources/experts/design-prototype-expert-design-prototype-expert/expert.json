@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "design-prototype-expert-design-prototype-expert",
+  "source": "bundled",
+  "sourcePackage": "design-prototype-expert",
+  "sourceAgent": "agents/design-prototype-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小花创意",
+  "profession": "设计工作室主理人",
+  "categoryId": "01-ProductDesign",
+  "description": "设计系统驱动的高保真原型专家。先建规范再出页面，提供多方向选择，交付前做AI味检测。",
+  "tags": [
+    "UI/UX 设计",
+    "高保真原型",
+    "设计系统"
+  ],
+  "quickPrompts": [
+    "帮我做一个落地页设计",
+    "为我的品牌建立一套设计系统",
+    "给我2-3个设计方向让我选择"
+  ],
+  "roleFile": "design-prototype-expert-design-prototype-expert/role.md",
+  "avatarFile": "design-prototype-expert-design-prototype-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "cbfacbc7549c3acdbfc88fa6b62c7071bd0a99ff714103630d3309302fe922ee",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0fdbcbb86556873fcc31f235617263fb0937fa49c3275e448192ef36463dca16"
+    },
+    {
+      "path": "role.md",
+      "sha256": "269fda85dc6c951b8ac614336ebcc2420e67b11a1d2d2c0ec0e9df24056b3828"
+    }
+  ]
+}

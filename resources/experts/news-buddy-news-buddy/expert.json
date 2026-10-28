@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "news-buddy-news-buddy",
+  "source": "bundled",
+  "sourcePackage": "news-buddy",
+  "sourceAgent": "agents/news-buddy.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "懂秘",
+  "profession": "资讯顾问",
+  "categoryId": "06-ContentCreative",
+  "description": "懂你的资讯顾问。基于隐式画像精选新闻，告诉你每条跟你有什么关系、你能做什么，让信息真正为你所用。",
+  "tags": [
+    "个性化资讯",
+    "深度解读",
+    "行动建议"
+  ],
+  "quickPrompts": [
+    "看看今天有什么跟我有关的新闻",
+    "展开第 1 条，我想深入了解",
+    "换一批别的新闻"
+  ],
+  "roleFile": "news-buddy-news-buddy/role.md",
+  "avatarFile": "news-buddy-news-buddy/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5127674e20e8340e9a88ff385efcfa94fdf5b966aff8750bdf34ea2262d5197f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0cbf11afe8bf76b53cd2cc6d113d298fd0ff54afab8ea5686e0ed6864322ce0e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9fd508ae0a024c46a1b6d815301248c3c326cd618950d9b3f297d16ba35812b8"
+    }
+  ]
+}

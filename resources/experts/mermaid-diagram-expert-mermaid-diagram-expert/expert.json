@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "mermaid-diagram-expert-mermaid-diagram-expert",
+  "source": "bundled",
+  "sourcePackage": "mermaid-diagram-expert",
+  "sourceAgent": "agents/mermaid-diagram-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "绘灵",
+  "profession": "图表设计与渲染专家",
+  "categoryId": "01-ProductDesign",
+  "description": "将自然语言转化为专业级Mermaid图表，支持6种图表类型、15种主题配色，秒级渲染出版级SVG与ASCII可视化",
+  "tags": [
+    "Mermaid图表",
+    "SVG渲染",
+    "架构可视化"
+  ],
+  "quickPrompts": [
+    "画一个用户登录认证流程图",
+    "设计一个微服务架构的时序交互图",
+    "画一个电商系统的ER实体关系图"
+  ],
+  "roleFile": "mermaid-diagram-expert-mermaid-diagram-expert/role.md",
+  "avatarFile": "mermaid-diagram-expert-mermaid-diagram-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "dd135e678c3c1f9311911880d1ebde91fa3aeccf7e6d121660fee87803cf3fe7",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "07d35405cfaef683206219827e10259246025b55bc134f0f45c6995da956ba37"
+    },
+    {
+      "path": "role.md",
+      "sha256": "76faa4c5c5f14c419e2c0afcfffd492e53dd305f8c409bdf7f1669787cbcb028"
+    }
+  ]
+}

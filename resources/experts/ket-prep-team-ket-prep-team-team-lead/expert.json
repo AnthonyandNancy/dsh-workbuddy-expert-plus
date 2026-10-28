@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ket-prep-team-ket-prep-team-team-lead",
+  "source": "bundled",
+  "sourcePackage": "ket-prep-team",
+  "sourceAgent": "agents/ket-prep-team-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "KET备考专家团",
+  "profession": "KET备考专家团",
+  "categoryId": "12-IndustryConsultant",
+  "description": "剑桥认证考官领衔，为小学生提供KET全流程备考：学情测评、词汇语法地基、听说读写专项提分、考前冲刺模考，助力Merit（优秀）/Distinction（卓越）达标。",
+  "tags": [
+    "KET考试备考",
+    "少儿英语教学",
+    "剑桥英语考评"
+  ],
+  "quickPrompts": [
+    "你好！请帮我评估孩子的英语现状，并制定一份KET备考计划。",
+    "孩子在KET听力陷阱题和写作提示点覆盖上总是失分，怎么针对性提升？",
+    "距离KET考试还有3个月，请给我们制定一份考前冲刺计划。"
+  ],
+  "roleFile": "ket-prep-team-ket-prep-team-team-lead/role.md",
+  "avatarFile": "ket-prep-team-ket-prep-team-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1e9259141c3c2099bf1bb3f6506059f14f0404888312329791221bdb392782de",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "fcfdb2c30e3dec2eeb99b0be6e316dd0e4737a5529ac03114e78923e283e1556"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3036327d9de008f98c1e04eda46fef6bc92938a82c0204067bed2ffe08de22db"
+    }
+  ]
+}

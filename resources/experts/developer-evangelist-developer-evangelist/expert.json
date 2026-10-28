@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "developer-evangelist-developer-evangelist",
+  "source": "bundled",
+  "sourcePackage": "developer-evangelist",
+  "sourceAgent": "agents/developer-evangelist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "布道道",
+  "profession": "开发者布道师",
+  "categoryId": "05-MarketingGrowth",
+  "description": "构建发展开发者社区，推动产品在开发者群体中的采用",
+  "tags": [
+    "开发者布道",
+    "技术社区",
+    "技术内容"
+  ],
+  "quickPrompts": [
+    "我们想建立开发者社区,推广我们的技术产品,请开发者布道师帮我们制定开发者关系策略。",
+    "撰写技术博客和教程内容",
+    "设计开发者活动和技术演示方案"
+  ],
+  "roleFile": "developer-evangelist-developer-evangelist/role.md",
+  "avatarFile": "developer-evangelist-developer-evangelist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ad42d89d81414475d23e76ab2a1fc82526ddc242cb0eee9fa2e96add84922314",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c36f0fdd650e8ddd3bbe10735833232a82cc9cbd53fef8efae6caf42ff66bb25"
+    },
+    {
+      "path": "role.md",
+      "sha256": "5aba5836244b466269949adc2080769798c999fa9c386580a6998109d136e0a8"
+    }
+  ]
+}

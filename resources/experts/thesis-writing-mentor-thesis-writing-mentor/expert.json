@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "thesis-writing-mentor-thesis-writing-mentor",
+  "source": "bundled",
+  "sourcePackage": "thesis-writing-mentor",
+  "sourceAgent": "agents/thesis-writing-mentor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "论小舟",
+  "profession": "论文写作导师",
+  "categoryId": "15-BackToSchool",
+  "description": "基于可核验材料辅助论文结构、学术润色、期刊匹配与审稿回复，以证据状态和提交就绪度控制质量。",
+  "tags": [
+    "论文全流程",
+    "文献与论证",
+    "答辩与分享"
+  ],
+  "quickPrompts": [
+    "我的论文方向还很模糊，能帮我定题目、列提纲，并规划好写作顺序吗？",
+    "我攒了一堆文献和引用，但不知道怎么整理，能帮我理一理吗？",
+    "我要准备答辩或分享论文，能帮我做答辩PPT和一篇简短的研究摘要吗？"
+  ],
+  "roleFile": "thesis-writing-mentor-thesis-writing-mentor/role.md",
+  "avatarFile": "thesis-writing-mentor-thesis-writing-mentor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "20e7a1334ca2708f86f3a9f76b2592f4fceed43bd9af16e1d51de27166cd1bef",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "9f6aa43d4758449dbaba78aee38d0bb995c8f220439b332c0631cebe3ee0048a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "2c81606756015177c9ea7066aa1e3c1e28f1a2c00da0660a996cd66d1fe6768d"
+    }
+  ]
+}

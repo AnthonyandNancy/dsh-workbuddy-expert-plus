@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "thailand-hr-admin-thailand-hr-admin",
+  "source": "bundled",
+  "sourcePackage": "thailand-hr-admin",
+  "sourceAgent": "agents/thailand-hr-admin.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Thai HR&Admin",
+  "profession": "泰国人力行政专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "精通泰国劳动法(LPA)、外籍员工工签合规、薪酬福利设计与本土职场文化适配，护航中资企业出海泰国全周期人力行政",
+  "tags": [
+    "用工合规",
+    "外籍工签",
+    "招聘薪酬"
+  ],
+  "quickPrompts": [
+    "我们公司准备在泰国设立分公司，需要招聘泰籍员工，劳动合同该怎么签？",
+    "外籍员工在泰国办理工作证和签证的完整流程是什么？",
+    "泰国试用期为119天是什么意思？遣散费怎么算？"
+  ],
+  "roleFile": "thailand-hr-admin-thailand-hr-admin/role.md",
+  "avatarFile": "thailand-hr-admin-thailand-hr-admin/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "098f0d77efa31e08814ead8594d6801febe29bf330a72ce7f95357a12729d0ae",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "9862cdc9dc79388303b05463d6077f5510f69b35d01b5d5d87b63485aee948e7"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b51b39609c1331a7dd29a8429b9b7114fbf5925badd79663ae9c1c64ef5f958a"
+    }
+  ]
+}

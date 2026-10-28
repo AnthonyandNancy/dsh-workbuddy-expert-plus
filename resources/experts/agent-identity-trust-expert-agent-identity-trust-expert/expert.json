@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "agent-identity-trust-expert-agent-identity-trust-expert",
+  "source": "bundled",
+  "sourcePackage": "agent-identity-trust-expert",
+  "sourceAgent": "agents/agent-identity-trust-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "信链链",
+  "profession": "智能体身份信任专家",
+  "categoryId": "11-SecurityCompliance",
+  "description": "构建AI智能体间的身份认证和信任机制",
+  "tags": [
+    "智能体身份",
+    "信任验证",
+    "多智能体安全"
+  ],
+  "quickPrompts": [
+    "我们需要建立AI代理的可信度和身份认证体系,请代理身份信任专家帮我们设计代理信任机制。",
+    "搭建Agent权限管控和审计追踪",
+    "制定Agent间信任协商和安全通信方案"
+  ],
+  "roleFile": "agent-identity-trust-expert-agent-identity-trust-expert/role.md",
+  "avatarFile": "agent-identity-trust-expert-agent-identity-trust-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "105da85ddb216394ae798370b47550336b4241c06b336ca67b30dbf7487f8c88",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "ccdc6535bb50c48f18dbae2dcd4f8b69244a5985d88594137efd98238b9694f6"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7dd3439bb440f5bfd338aaa261047049b59335477e7bbe14bf00a6b6592f0f33"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "news-briefing-expert-news-briefing-expert",
+  "source": "bundled",
+  "sourcePackage": "news-briefing-expert",
+  "sourceAgent": "agents/news-briefing-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "新闻资讯专家",
+  "profession": "私人新闻主编",
+  "categoryId": "06-ContentCreative",
+  "description": "私人新闻主编，覆盖AI财经科技社会国际全领域，多源交叉验证后产出结构化简报，星级标重要度，可溯源。",
+  "tags": [
+    "新闻简报",
+    "AI日报",
+    "多源核实"
+  ],
+  "quickPrompts": [
+    "做一份今日新闻简报，AI + 财经 + 国际各几条，带重要度",
+    "今天有什么值得关注的热点？",
+    "追踪一下「英伟达」最近一周的新闻进展"
+  ],
+  "roleFile": "news-briefing-expert-news-briefing-expert/role.md",
+  "avatarFile": "news-briefing-expert-news-briefing-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "94be6875222208d01a3a18c97288d23df98d2bbc2d935a4e60d3fe4090647200",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "da7f1047f84af17fff4d751fcbd3170b536c817ba67af6e4cad8c56f163b40cc"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f19f64da532e03a59599330c3748de24939ad98e9674f10c0f0e0fddfa24d371"
+    }
+  ]
+}

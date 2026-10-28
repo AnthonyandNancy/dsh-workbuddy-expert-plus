@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "data-analytics-reporter-data-analytics-reporter",
+  "source": "bundled",
+  "sourcePackage": "data-analytics-reporter",
+  "sourceAgent": "agents/data-analytics-reporter.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "舒明析",
+  "profession": "数据分析报告师",
+  "categoryId": "04-DataAI",
+  "description": "将复杂数据转化为战略洞察，提供指标诊断、KPI框架设计、数据质量评估与决策报告",
+  "tags": [
+    "数据分析",
+    "指标诊断",
+    "KPI报告"
+  ],
+  "quickPrompts": [
+    "我们的数据分析报告不够深入,难以支持业务决策,请帮我们设计数据分析报告体系。",
+    "诊断我们核心指标本周下降的原因并给出操作建议",
+    "为新产品功能设计KPI框架，包含成功指标、驱动指标和护栏指标"
+  ],
+  "roleFile": "data-analytics-reporter-data-analytics-reporter/role.md",
+  "avatarFile": "data-analytics-reporter-data-analytics-reporter/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8eeae88d1fd9483c23952955a60cf9f91766841fd52ae36f65694e3a28606966",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "807a5259731b6ca0b832f3846829eb8c71bda5f0b6e71f05528cabf7bce828c7"
+    },
+    {
+      "path": "role.md",
+      "sha256": "adcdea2676e7d685e0b6a1a6a1611695f16691fa3033e5ff864cca94411eec5b"
+    }
+  ]
+}

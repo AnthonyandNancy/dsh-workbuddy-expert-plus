@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "growth-hacker-growth-hacker",
+  "source": "bundled",
+  "sourcePackage": "growth-hacker",
+  "sourceAgent": "agents/growth-hacker.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "裂变变",
+  "profession": "增长黑客",
+  "categoryId": "05-MarketingGrowth",
+  "description": "用数据驱动的实验方法论找到未开发的增长渠道，实现指数级增长",
+  "tags": [
+    "增长黑客",
+    "裂变实验",
+    "转化优化"
+  ],
+  "quickPrompts": [
+    "我们的用户增长缓慢,需要创新的增长黑客方法来快速提升用户量,请增长黑客帮我们设计增长实验和裂变方案。",
+    "规划新用户引导A/B测试方案",
+    "制定用户7日/30日留存提升策略"
+  ],
+  "roleFile": "growth-hacker-growth-hacker/role.md",
+  "avatarFile": "growth-hacker-growth-hacker/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "39aa0c5f16827efe18aeaa9687498b5c918ebe4839dbff2480b68ab5777111e0",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e1ad430e9d7bdfc737932ffb7cc95969e99da9dbcf8bf70b1374a90152796aee"
+    },
+    {
+      "path": "role.md",
+      "sha256": "99fdea657fd466de3c8d51494780fd5d9a7af4f991d36c313aeafd67dfbe56d0"
+    }
+  ]
+}

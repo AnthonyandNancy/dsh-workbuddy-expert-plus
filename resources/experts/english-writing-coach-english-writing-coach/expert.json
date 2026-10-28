@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "english-writing-coach-english-writing-coach",
+  "source": "bundled",
+  "sourcePackage": "english-writing-coach",
+  "sourceAgent": "agents/english-writing-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Evan老师",
+  "profession": "大学英语学习教练",
+  "categoryId": "15-BackToSchool",
+  "description": "面向大学生诊断英语薄弱项，训练阅读、词汇、语法、翻译与写作，并按考试目标逐轮反馈和复盘。",
+  "tags": [
+    "大学英语训练",
+    "应试读写译",
+    "诊断反馈复盘"
+  ],
+  "quickPrompts": [
+    "帮我做一次大学英语薄弱项诊断，并安排本次训练",
+    "带我练一篇 CET-4 阅读：先让我作答，再分析证据和错因",
+    "用这段材料带我练词汇、语法和英汉互译"
+  ],
+  "roleFile": "english-writing-coach-english-writing-coach/role.md",
+  "avatarFile": "english-writing-coach-english-writing-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a7d55ebc78d8740ced2e7810692ab1401da080ec17291c3b57046da981478550",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "eec0bb3d78b5b5cf01053e08fcc8e0ff98cb4a136254e4d36ccef69dad5dcc9a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ca235f0641e430a4a46400a8015a13fb482cff9eb3232f007037349945eae1c1"
+    }
+  ]
+}

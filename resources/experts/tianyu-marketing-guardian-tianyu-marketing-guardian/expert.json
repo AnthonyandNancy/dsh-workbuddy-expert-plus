@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tianyu-marketing-guardian-tianyu-marketing-guardian",
+  "source": "bundled",
+  "sourcePackage": "tianyu-marketing-guardian",
+  "sourceAgent": "agents/tianyu-marketing-guardian.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "天御营销保护",
+  "profession": "腾讯云天御营销保护专家",
+  "categoryId": "13-TencentZone",
+  "description": "替您守护每一场营销活动，在文旅、零售、Token、医疗挂号等场景自动盯活动、查漏召、调策略护预算。",
+  "tags": [
+    "营销反欺诈",
+    "防黄牛刷单",
+    "实时策略"
+  ],
+  "quickPrompts": [
+    "我有一场新的营销活动要上线，帮我做风控接入和策略准备",
+    "拉一下活动 EventId=xxxx 最近 7 天的命中情况，找一下漏召",
+    "我文旅票务活动的防黄牛策略误伤偏高，帮我调一下"
+  ],
+  "roleFile": "tianyu-marketing-guardian-tianyu-marketing-guardian/role.md",
+  "avatarFile": "tianyu-marketing-guardian-tianyu-marketing-guardian/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b3fd16214f69b36ff93e2f65ddbb28e4d1ac6549c45e3c53a2ef6fa0fc31016e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f9c63eeaed7c482573a22a7f907240f6a3dc66882d0615607693bd68d4856f0b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "cb467f3371c64429f003d0cede1cceebd09a8102cf64e175bd216b41aa61d10f"
+    }
+  ]
+}

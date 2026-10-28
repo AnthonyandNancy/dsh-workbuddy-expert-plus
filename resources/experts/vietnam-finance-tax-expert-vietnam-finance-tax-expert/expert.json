@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "vietnam-finance-tax-expert-vietnam-finance-tax-expert",
+  "source": "bundled",
+  "sourcePackage": "vietnam-finance-tax-expert",
+  "sourceAgent": "agents/vietnam-finance-tax-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Vietnam Finance & Tax Expert",
+  "profession": "越南财税金融专家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "覆盖越南企业税务、会计、银行、外汇与财务合规，提供选址测算、税负计算与ODI落地等可量化交付物。",
+  "tags": [
+    "税负测算",
+    "选址对比",
+    "外汇合规"
+  ],
+  "quickPrompts": [
+    "实时对比越南建厂成本（输入人数和面积即可）",
+    "越南外资企业所得税税率多少？去工业区还有优惠吗？",
+    "在越南赚的利润，怎么合规汇回中国？要准备哪些材料？"
+  ],
+  "roleFile": "vietnam-finance-tax-expert-vietnam-finance-tax-expert/role.md",
+  "avatarFile": "vietnam-finance-tax-expert-vietnam-finance-tax-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0333fc516dc72303321ec483fe4ef88b9512ae5b6d96f6119338cb64f3cb7850",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c25c402622e618d2a33b3827dcd01b7262d774e172dc7f3c0a858eaf4359814f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c0053c57e129eecc439696b9751f2fda9eecb3f1c6c9d9c2f0d714725a91a6e8"
+    }
+  ]
+}

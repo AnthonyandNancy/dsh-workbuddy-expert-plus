@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "vibeknow-ppt-explain-ppt-explainer",
+  "source": "bundled",
+  "sourcePackage": "vibeknow-ppt-explain",
+  "sourceAgent": "agents/ppt-explainer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "逐页讲解，一键成片",
+  "profession": "VibeKnow PPT/PDF讲解大师",
+  "categoryId": "06-ContentCreative",
+  "description": "讲师做内训、医生讲病理、投标专员讲方案，PPT/PDF 逐页配音成讲解视频，原页原版式不用重做。",
+  "tags": [
+    "PPT讲解",
+    "文档成片",
+    "培训视频"
+  ],
+  "quickPrompts": [
+    "把这份培训 PPT 做成逐页讲解视频，配好讲师旁白和字幕",
+    "把这份投标方案 PDF 逐页讲清楚，配上旁白，做成能发给客户的视频",
+    "把门店训练材料做成逐页讲解，配音加字幕，出竖版给新人在手机上看"
+  ],
+  "roleFile": "vibeknow-ppt-explain-ppt-explainer/role.md",
+  "avatarFile": "vibeknow-ppt-explain-ppt-explainer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "556f6d64efc5d3e8ebf3f74d0449859f6a5ecf431920cc4b3ad32c758e16e949",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "72d6c285c9b8d1cb7a1c2425528034daf3bd0e8942906eff27cca7986b9908a3"
+    },
+    {
+      "path": "role.md",
+      "sha256": "90b5b3de0ab5d2191f870beca759334b2cc4d3bcd0e7e0ca25e8a47250e1612d"
+    }
+  ]
+}

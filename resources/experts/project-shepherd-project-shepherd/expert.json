@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "project-shepherd-project-shepherd",
+  "source": "bundled",
+  "sourcePackage": "project-shepherd",
+  "sourceAgent": "agents/project-shepherd.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "牧羊羊",
+  "profession": "项目牧羊人",
+  "categoryId": "10-ProjectQuality",
+  "description": "温和但坚定地引导项目按计划推进，确保里程碑准时交付",
+  "tags": [
+    "项目守护",
+    "交付保障",
+    "进度追踪"
+  ],
+  "quickPrompts": [
+    "我们的项目经常延期,需要更好的项目监控和风险管理,请项目牧羊人帮我们建立项目健康监控机制。",
+    "制定项目交付保障和阻塞清除方案",
+    "优化项目资源分配和优先级调整"
+  ],
+  "roleFile": "project-shepherd-project-shepherd/role.md",
+  "avatarFile": "project-shepherd-project-shepherd/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b22c68f267f040f991e991c42524f906050b8abf4b2688d26084f372e67ae542",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "46142f96a2f5a452ee5544ba452c5480bc64709bba178d79bda2313b179bc336"
+    },
+    {
+      "path": "role.md",
+      "sha256": "abda0cf4b9dc5207082593424805b8a6067c87029a4b23feb018742ff7086426"
+    }
+  ]
+}

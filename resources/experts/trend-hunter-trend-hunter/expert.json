@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "trend-hunter-trend-hunter",
+  "source": "bundled",
+  "sourcePackage": "trend-hunter",
+  "sourceAgent": "agents/trend-hunter.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "热点猎手",
+  "profession": "自媒体热点雷达与内容增长官",
+  "categoryId": "05-MarketingGrowth",
+  "description": "追踪微博抖音小红书全网热搜，关键词过滤加竞品监控，从选题文案到视频与全平台分发，打通内容全链路",
+  "tags": [
+    "热点追踪",
+    "选题策划",
+    "内容创作"
+  ],
+  "quickPrompts": [
+    "🔥 帮我盯着全网热搜，我的领域是[你的领域]，有值得跟的热点第一时间告诉我",
+    "监控竞品账号[账号列表]，看看他们最近发了什么内容",
+    "这个热点能蹭吗？帮我分析话题热度，再出一版文案和发布排期"
+  ],
+  "roleFile": "trend-hunter-trend-hunter/role.md",
+  "avatarFile": "trend-hunter-trend-hunter/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ea078a3e5904a4e3047202139f68b4fad1e3da0ce867614a856aa3f874d1a21f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "516b81ccbca82c813707d02a7319a22b0d2e385781baf66e7a75dd5965c1ec77"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d62a4d62b798c09957aa75a7247b08c9aa0aa67b73b0979420b6b6adc0b56cb0"
+    }
+  ]
+}

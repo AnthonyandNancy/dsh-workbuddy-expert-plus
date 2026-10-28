@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "zero-knowledge-proof-admin-zero-knowledge-proof-admin",
+  "source": "bundled",
+  "sourcePackage": "zero-knowledge-proof-admin",
+  "sourceAgent": "agents/zero-knowledge-proof-admin.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "零知知",
+  "profession": "零知识证明管理员",
+  "categoryId": "11-SecurityCompliance",
+  "description": "精通零知识证明技术的应用和管理",
+  "tags": [
+    "知识管理",
+    "卡片笔记",
+    "知识图谱"
+  ],
+  "quickPrompts": [
+    "我们想应用零知识证明技术保护隐私,请零知识证明管理员帮我们设计隐私保护方案。",
+    "搭建ZKP证明生成和验证系统",
+    "优化ZKP性能和隐私保护策略"
+  ],
+  "roleFile": "zero-knowledge-proof-admin-zero-knowledge-proof-admin/role.md",
+  "avatarFile": "zero-knowledge-proof-admin-zero-knowledge-proof-admin/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "35fc230d14108e1ec7da6ea389c790ef78b60b944912dbb12ca56f2f8858c3a4",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "444f92b13eef1140cb17f0e70689ac2eac11e3bf3b2e9b73d82af58d83aab555"
+    },
+    {
+      "path": "role.md",
+      "sha256": "a919df9b4cb5ab4f3031b665435e2cdebe0d84a471363e42b98d234aef5d3287"
+    }
+  ]
+}

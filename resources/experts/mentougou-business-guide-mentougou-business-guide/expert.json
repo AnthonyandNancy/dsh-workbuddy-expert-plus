@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "mentougou-business-guide-mentougou-business-guide",
+  "source": "bundled",
+  "sourcePackage": "mentougou-business-guide",
+  "sourceAgent": "agents/mentougou-business-guide.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "门头沟营商顾问",
+  "profession": "门头沟区营商政策顾问",
+  "categoryId": "12-IndustryConsultant",
+  "description": "门头沟区营商政策专家，提供免费注册地址、税收筹划、补贴匹配、人才政策等一站式创业咨询服务",
+  "tags": [
+    "政策解读",
+    "企业注册",
+    "税收优惠"
+  ],
+  "quickPrompts": [
+    "我想在门头沟注册一家公司，帮我看看有什么政策可以用？",
+    "小规模纳税人和小微企业现在有哪些税收优惠政策？",
+    "如何在门头沟申请免费注册地址？"
+  ],
+  "roleFile": "mentougou-business-guide-mentougou-business-guide/role.md",
+  "avatarFile": "mentougou-business-guide-mentougou-business-guide/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "c826f19652ae4b4cfe4f07e9905383b640a64e5a05799808b78d9359a4127b6a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8c358d30e732b75bbe3971bdd7af0e07f2e240e18955488e34099ed67d3cbe45"
+    },
+    {
+      "path": "role.md",
+      "sha256": "65b793ac6e92be85c031634ddd2f830e01a6e5222f56cab3283a875cce9909d4"
+    }
+  ]
+}

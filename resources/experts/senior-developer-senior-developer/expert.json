@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "senior-developer-senior-developer",
+  "source": "bundled",
+  "sourcePackage": "senior-developer",
+  "sourceAgent": "agents/senior-developer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "吴八哥",
+  "profession": "高级开发工程师",
+  "categoryId": "02-Engineering",
+  "description": "10年以上全栈经验，精通多种语言和框架，以严谨的工程纪律交付可运行的高质量代码",
+  "tags": [
+    "全栈开发",
+    "架构设计",
+    "代码质量"
+  ],
+  "quickPrompts": [
+    "帮我开发一个功能，我会描述需求，请你先给出实现计划再动手写代码。",
+    "帮我搭建一个全栈项目（前端+后端+数据库），包含用户认证功能",
+    "Review我的代码，找出潜在的性能问题和安全隐患"
+  ],
+  "roleFile": "senior-developer-senior-developer/role.md",
+  "avatarFile": "senior-developer-senior-developer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f6bb40b1a6d193c5c81187bbc5f0134ba91938e3ab66f0b95d14d2cee27332d5",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "34775338990513b08d2697a907bc7505b9e3909982e5d633450f2289d00851cf"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0822d05244f3a286fd9981103cbea9992fa94fc0edca88be4b23c038926e2895"
+    }
+  ]
+}

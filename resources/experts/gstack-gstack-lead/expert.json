@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "gstack-gstack-lead",
+  "source": "bundled",
+  "sourcePackage": "gstack",
+  "sourceAgent": "agents/gstack-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "软件工坊",
+  "profession": "软件工坊",
+  "categoryId": "02-Engineering",
+  "description": "6位工程专业角色：产品评审、代码审查、安全审计、QA测试、设计系统、调试运维，覆盖从想法到生产的完整软件生命周期",
+  "tags": [
+    "代码审查",
+    "安全审计",
+    "质量测试"
+  ],
+  "quickPrompts": [
+    "上线前全检：代码审查+安全审计+QA测试",
+    "评审产品方案，再出设计系统落地",
+    "排查线上问题，定位根因并修复验证"
+  ],
+  "roleFile": "gstack-gstack-lead/role.md",
+  "avatarFile": "gstack-gstack-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "4baf5e03a424f3f8c76975a5da797cc608f9b1f464bcfaa635ecd4364b2a6286",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "428557627dfdf4331cf492427ce57db55fc551f4f32f6545b089abc672f7cae9"
+    },
+    {
+      "path": "role.md",
+      "sha256": "fc744fdefd243ae86e64b33da6fcebccf90bdd8028389b66f76dd4445337a363"
+    }
+  ]
+}

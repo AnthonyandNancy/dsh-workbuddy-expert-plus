@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "brand-guardian-brand-guardian",
+  "source": "bundled",
+  "sourcePackage": "brand-guardian",
+  "sourceAgent": "agents/brand-guardian.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "盾卫卫",
+  "profession": "品牌策略师",
+  "categoryId": "05-MarketingGrowth",
+  "description": "15年品牌战略经验，守护品牌一致性的终极捍卫者",
+  "tags": [
+    "品牌策略",
+    "品牌一致性",
+    "视觉识别"
+  ],
+  "quickPrompts": [
+    "我们公司的品牌形象在不同渠道中不够统一,需要建立一致的品牌声音和视觉规范,请品牌守护者帮我制定品牌一致性策略。",
+    "搭建品牌故事和叙事框架",
+    "审查品牌跨渠道一致性问题"
+  ],
+  "roleFile": "brand-guardian-brand-guardian/role.md",
+  "avatarFile": "brand-guardian-brand-guardian/avatar.png",
+  "skills": [
+    "brand-guidelines"
+  ],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "492e4217d084ad0de48693f329901626caa24e06bef29f8470abff43e379424f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0c43cf3d67d3f4c923eae3c20069da0e624b7b89cb872df70cd46ebe7e17c132"
+    },
+    {
+      "path": "role.md",
+      "sha256": "332356648eb8e15ab5d3add090760f5b97f12c7ac08fb3d794ca755da0426b35"
+    },
+    {
+      "path": "skills/brand-guidelines/LICENSE.txt",
+      "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362"
+    },
+    {
+      "path": "skills/brand-guidelines/references/brand-guideline-template.md",
+      "sha256": "d66c8191c8871b1f678f4bea0f4a4e6e1fd28416fa57251e585afd18bfbd4e38"
+    },
+    {
+      "path": "skills/brand-guidelines/references/color-palette-management.md",
+      "sha256": "8802895b78501fe58f29cce5b319aa4eb712b268996205a442ad0d420f309a0e"
+    },
+    {
+      "path": "skills/brand-guidelines/references/logo-usage-rules.md",
+      "sha256": "044c5ddf30cfe0eea047451cfce6ea654939198ffdd8968a19161c97066a5a26"
+    },
+    {
+      "path": "skills/brand-guidelines/references/typography-specifications.md",
+      "sha256": "921c3d9e6ddfde2677b9a3e32eee94c7922f54f22c1f380c5ed2eb25a7d5bfa9"
+    },
+    {
+      "path": "skills/brand-guidelines/SKILL.md",
+      "sha256": "3d0ae481a95700462059fc2ed1be409f8c50f6823d00d4a8f71f8981126695de"
+    }
+  ]
+}

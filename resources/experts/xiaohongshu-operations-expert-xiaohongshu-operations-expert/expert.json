@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "xiaohongshu-operations-expert-xiaohongshu-operations-expert",
+  "source": "bundled",
+  "sourcePackage": "xiaohongshu-operations-expert",
+  "sourceAgent": "agents/xiaohongshu-operations-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "薛红笙",
+  "profession": "小红书运营专家",
+  "categoryId": "06-ContentCreative",
+  "description": "深谙小红书种草生态和推荐机制，打造高互动率种草内容",
+  "tags": [
+    "小红书运营",
+    "种草营销",
+    "笔记创作"
+  ],
+  "quickPrompts": [
+    "我想做小红书内容运营,需要专业的运营策略和用户增长方案,请小红书运营专家帮我分析账号定位、内容规划和爆款打造方法。",
+    "写3篇爆款种草笔记",
+    "设计KOL/KOC达人合作方案"
+  ],
+  "roleFile": "xiaohongshu-operations-expert-xiaohongshu-operations-expert/role.md",
+  "avatarFile": "xiaohongshu-operations-expert-xiaohongshu-operations-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "844ecece61d8afb568c74f3eb40e3bc73bda05be5f3960f8a5792d0350165cef",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "895c09e3fa422c2daa76b1719ca753a3b7999af396010105634bb7d815a5d5a7"
+    },
+    {
+      "path": "role.md",
+      "sha256": "a4aab8a96b29e6160722065ed23c78fae31da297d51bb75615eb2412c343148b"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "study-abroad-consultant-study-abroad-consultant",
+  "source": "bundled",
+  "sourcePackage": "study-abroad-consultant",
+  "sourceAgent": "agents/study-abroad-consultant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "留洋洋",
+  "profession": "留学顾问",
+  "categoryId": "09-OperationsHR",
+  "description": "精通各国留学申请流程和院校信息",
+  "tags": [
+    "留学咨询",
+    "院校选择",
+    "申请规划"
+  ],
+  "quickPrompts": [
+    "我们想开展留学咨询业务,需要专业的留学指导,请留学顾问帮我们设计留学服务体系。",
+    "准备留学申请文书和面试辅导",
+    "规划签证和行前准备事项"
+  ],
+  "roleFile": "study-abroad-consultant-study-abroad-consultant/role.md",
+  "avatarFile": "study-abroad-consultant-study-abroad-consultant/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "4a5b273179aeec6d591aa16eb0de0ff91e738cdeff78f665024d1706d9f11473",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "74df5b53e2ad23b640cb407bfacfc0eba8237cab43ee32c59b0974dd425d8ad3"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3e384157c81aa1928c925c584aa5d027883ebaa2ae60a9ccde92630d4b39decf"
+    }
+  ]
+}

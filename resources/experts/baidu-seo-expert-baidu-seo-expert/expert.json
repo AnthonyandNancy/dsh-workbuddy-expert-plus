@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "baidu-seo-expert-baidu-seo-expert",
+  "source": "bundled",
+  "sourcePackage": "baidu-seo-expert",
+  "sourceAgent": "agents/baidu-seo-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "度优优",
+  "profession": "百度SEO专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "深谙百度搜索算法和中国搜索生态，让品牌获得最大曝光",
+  "tags": [
+    "百度SEO",
+    "中文搜索",
+    "ICP备案"
+  ],
+  "quickPrompts": [
+    "我们的网站在百度搜索中排名不佳,需要提升中文搜索引擎的可见度,请百度SEO专家帮我们制定百度优化策略。",
+    "进行百度关键词研究和竞价排名分析",
+    "优化百度收录和ICP合规方案"
+  ],
+  "roleFile": "baidu-seo-expert-baidu-seo-expert/role.md",
+  "avatarFile": "baidu-seo-expert-baidu-seo-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d30b08ccb95765217e1c960a9a43a5093a9014b0937866ed88626bbbc6f9743b",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "9e04072852f724dfba8134741b3ce2ed26b1504360e504154be71b7551853e37"
+    },
+    {
+      "path": "role.md",
+      "sha256": "155ccde99e59dcc9925182ce946f3ad239052751ad3c0b062276506040272568"
+    }
+  ]
+}

@@ -43,6 +43,9 @@ async function main() {
     cwd: PACKAGE_ROOT,
     encoding: 'utf8',
     stdio: ['ignore', 'pipe', 'pipe'],
+    // A 429-expert catalog lists tens of thousands of files in the --json
+    // payload, far beyond execFileSync's 1 MB default.
+    maxBuffer: 256 * 1024 * 1024,
   })
   const packed = JSON.parse(packOutput)
   if (!Array.isArray(packed) || packed.length !== 1) throw new Error('npm pack returned an unexpected payload')

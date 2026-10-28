@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-content-creator-team-ai-content-creator-team-lead",
+  "source": "bundled",
+  "sourcePackage": "ai-content-creator-team",
+  "sourceAgent": "agents/ai-content-creator-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "内容创作专家团",
+  "profession": "内容创作专家团",
+  "categoryId": "06-ContentCreative",
+  "description": "AI驱动的多模态内容生产团队，从创意策划到成品交付全覆盖，涵盖品牌定位、情绪板、广告方向、文案创作、视频生成、图片设计、精修合成和素材改编。",
+  "tags": [
+    "创意策划",
+    "AI视频与图片",
+    "精修合成"
+  ],
+  "quickPrompts": [
+    "帮我确定新产品的品牌视觉方向，做一个情绪板",
+    "帮我用 AI 生成一段 15 秒的产品宣传短视频",
+    "为我的新品上市生成一组小红书风格的种草图文，包含配图和文案"
+  ],
+  "roleFile": "ai-content-creator-team-ai-content-creator-team-lead/role.md",
+  "avatarFile": "ai-content-creator-team-ai-content-creator-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "3a48419ce02b686753b8e5ce5f038b9e1d60a3c6315b71997f3da0d7af10b914",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "fbb13e59d4351934fa22e0067b1ee56281e9004b260c720e697b605d79634910"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7221436189c1e6391ac7eae1c52b97c8137055e4359f63bc0763922d3e5e817b"
+    }
+  ]
+}

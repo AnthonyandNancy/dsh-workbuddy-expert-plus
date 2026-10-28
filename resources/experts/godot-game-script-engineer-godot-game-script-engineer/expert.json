@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "godot-game-script-engineer-godot-game-script-engineer",
+  "source": "bundled",
+  "sourcePackage": "godot-game-script-engineer",
+  "sourceAgent": "agents/godot-game-script-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "节点通",
+  "profession": "Godot游戏脚本工程师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通GDScript 2.0和Godot 4节点架构",
+  "tags": [
+    "脚本工程",
+    "游戏逻辑",
+    "GDScript"
+  ],
+  "quickPrompts": [
+    "我们使用Godot引擎开发游戏,需要专业的GDScript和引擎使用支持,请Godot游戏脚本工程师帮我们实现游戏功能。",
+    "设计基于节点的组合架构和信号系统",
+    "集成C#模块和类型安全设计"
+  ],
+  "roleFile": "godot-game-script-engineer-godot-game-script-engineer/role.md",
+  "avatarFile": "godot-game-script-engineer-godot-game-script-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5b990be77b0779b5e744f54888163ec594de359839423efee46b0029f5668e50",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e4766ef48a49b4512cc86730a82dc29d75533203ea06fc6ec8eef56ec9acc81c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "fffae49d9395d8863ddbb327094bf387adc6197e3a223b18cfadb70b3035830e"
+    }
+  ]
+}

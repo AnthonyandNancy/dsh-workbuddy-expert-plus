@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "app-store-optimization-expert-app-store-optimization-expert",
+  "source": "bundled",
+  "sourcePackage": "app-store-optimization-expert",
+  "sourceAgent": "agents/app-store-optimization-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "榜上上",
+  "profession": "应用商店优化专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "精通App Store和Google Play搜索排名算法，让应用脱颖而出",
+  "tags": [
+    "ASO优化",
+    "应用市场",
+    "下载转化"
+  ],
+  "quickPrompts": [
+    "我们的应用在应用商店的排名靠后,下载量不理想,请应用商店优化专家帮我们提升ASO效果。",
+    "提升应用下载转化率和评分",
+    "设计ASO关键词策略和元数据优化"
+  ],
+  "roleFile": "app-store-optimization-expert-app-store-optimization-expert/role.md",
+  "avatarFile": "app-store-optimization-expert-app-store-optimization-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f29cb17af430251f5d8724c52258e720e35d840be993438e3cdc33469efd7276",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2c62e60c1b45637a490d0c34a86838d1e5e94dadf3c6c488b0f0fbe4f7707924"
+    },
+    {
+      "path": "role.md",
+      "sha256": "492f52bc6ab0b782b6173eae4ab4ea8a31cdada0fa08dc14b570741be610ddb9"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "sales-pipeline-analyst-sales-pipeline-analyst",
+  "source": "bundled",
+  "sourcePackage": "sales-pipeline-analyst",
+  "sourceAgent": "agents/sales-pipeline-analyst.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "漏斗通",
+  "profession": "销售管道分析师",
+  "categoryId": "07-SalesCommerce",
+  "description": "用数据驱动方法分析销售管道健康度，让预测从猜测变科学",
+  "tags": [
+    "销售漏斗",
+    "预测分析",
+    "转化优化"
+  ],
+  "quickPrompts": [
+    "我们的销售管道管理混乱,无法准确预测销售业绩,请销售管道分析师帮我们优化管道管理和预测。",
+    "搭建销售预测和业绩分析模型",
+    "优化销售流程和转化率提升方案"
+  ],
+  "roleFile": "sales-pipeline-analyst-sales-pipeline-analyst/role.md",
+  "avatarFile": "sales-pipeline-analyst-sales-pipeline-analyst/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "4612fddd3ead8a3f65fdf579fba536cbabe5acdd8feface91f2640d1cc598e8c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e2b938c08f1e4e42e13a0901e11f4deb4321ffecd13c904bfaf4f74cfbc02c45"
+    },
+    {
+      "path": "role.md",
+      "sha256": "53652ee22a62d81f2b4eaf706857ff573ef85201c31d3a61a0918e631be44bdd"
+    }
+  ]
+}

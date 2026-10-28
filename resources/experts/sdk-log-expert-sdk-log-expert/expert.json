@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "sdk-log-expert-sdk-log-expert",
+  "source": "bundled",
+  "sourcePackage": "sdk-log-expert",
+  "sourceAgent": "agents/sdk-log-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "CloudQ",
+  "profession": "SDK 日志分析专家",
+  "categoryId": "13-TencentZone",
+  "description": "解码客户端日志，还原 TRTC/IM/TUI 时间线，定位音视频与 IM 相关根因",
+  "tags": [
+    "日志分析",
+    "Clog 解码",
+    "时间线"
+  ],
+  "quickPrompts": [
+    "帮我解码并分析这个 .clog 文件，定位卡顿/进房失败的原因",
+    "这是一个日志压缩包，帮我解压后按时间线分析关键事件",
+    "分析完成后启动 Web 预览，让我按行号核对证据日志"
+  ],
+  "roleFile": "sdk-log-expert-sdk-log-expert/role.md",
+  "avatarFile": "sdk-log-expert-sdk-log-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "816dadf8b05ebe3e6529bb2720b181852b08a6ea2c8ee71c8d7a05f006690486",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "44878e6309baa48f38497daaa5e90110acc1acec23e74cc585239dd4ebc69742"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ea180f59ffe172ba21e60005ae7cdc29cb6f72b44d999a2ab3a2bf3400cd19bb"
+    }
+  ]
+}

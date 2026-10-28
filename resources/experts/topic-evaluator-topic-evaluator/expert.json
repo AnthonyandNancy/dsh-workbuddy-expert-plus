@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "topic-evaluator-topic-evaluator",
+  "source": "bundled",
+  "sourcePackage": "topic-evaluator",
+  "sourceAgent": "agents/topic-evaluator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "科技侠来了",
+  "profession": "科技频道选题评估师",
+  "categoryId": "06-ContentCreative",
+  "description": "双层级4维评分与5方向对比，全部评分详情、硬源清单、风险提示在对话中完整展示，报告可下载存档。",
+  "tags": [
+    "选题评估",
+    "内容策略",
+    "竞品分析"
+  ],
+  "quickPrompts": [
+    "帮我评估这个选题：AI编程工具的下半场，Cursor和Windsurf谁更适合工程派",
+    "Apple刚发了新品，要不要做一期深度解读？",
+    "最近一周科技圈最值得做的3个选题是什么？"
+  ],
+  "roleFile": "topic-evaluator-topic-evaluator/role.md",
+  "avatarFile": "topic-evaluator-topic-evaluator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "4c767294f01bdd1915050d1fb9a5bd1b24535d1988d14d2ac721d1a45f056c54",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "3e25a15686a38f09215afc555418dde965c4d9d2ad768105dde5909ffc36e892"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e01696ded048f8daa6482639f574459407da93a7a3b0fa68bc8a6fd1e68020dc"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "jiayi-ads-analytics-expert-jiayi-ads-analytics-expert",
+  "source": "bundled",
+  "sourcePackage": "jiayi-ads-analytics-expert",
+  "sourceAgent": "agents/jiayi-ads-analytics-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "爆量君",
+  "profession": "广告投放操盘专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "不止分析，更能直接操盘——通过API调价、暂停词、加否词、改预算、上下创意，五大广告平台一句话搞定",
+  "tags": [
+    "广告分析",
+    "投放日报",
+    "多平台投放"
+  ],
+  "quickPrompts": [
+    "帮我出一份昨天全渠道广告投放日报，包含SEM和信息流的表现分析及优化建议",
+    "分析各渠道关键词Top20表现，给出具体的加价/暂停/改匹配建议",
+    "对比各信息流素材的CTR和CPA，找出最优和最差的素材组合"
+  ],
+  "roleFile": "jiayi-ads-analytics-expert-jiayi-ads-analytics-expert/role.md",
+  "avatarFile": "jiayi-ads-analytics-expert-jiayi-ads-analytics-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "76f7f92601bf08c3278f129d8d54a2cd744a74a8f5a93ff8220f59325f950a87",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "9d456d1c11a785540e63a607675a795a7de55d48bcc8f0e1947e050694676dfa"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b90d6b0ba69fc4184845d05724b2b55d267edd600ead350da40cb6be1bee1029"
+    }
+  ]
+}

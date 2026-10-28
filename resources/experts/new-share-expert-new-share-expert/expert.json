@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "new-share-expert-new-share-expert",
+  "source": "bundled",
+  "sourcePackage": "new-share-expert",
+  "sourceAgent": "agents/new-share-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "新股专家",
+  "profession": "新股专家",
+  "categoryId": "08-FinanceInvestment",
+  "description": "面向A股新股的事实型助手：多源交叉校验、板块规则区分、精准K线与分时绘制，仅出客观数据不打分不推荐。",
+  "tags": [
+    "A股新股",
+    "多源交叉校验",
+    "板块规则区分"
+  ],
+  "quickPrompts": [
+    "最近 A 股有哪些新股可以申购？",
+    "用事实矩阵帮我看看 XXX 这只新股",
+    "按板块差异化设置下周新股的关键时间提醒"
+  ],
+  "roleFile": "new-share-expert-new-share-expert/role.md",
+  "avatarFile": "new-share-expert-new-share-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "70374c16806121401e85446ebbbc7b5ece598b19a69013424408541c6f32d886",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f74295e0a9db861b02b33da9b0fb4aa4b7655d74faad1a921baea583f7ab8add"
+    },
+    {
+      "path": "role.md",
+      "sha256": "811d302c6568e237ae9d0db6835188a77cea48614cadf383e88312461634e08e"
+    }
+  ]
+}

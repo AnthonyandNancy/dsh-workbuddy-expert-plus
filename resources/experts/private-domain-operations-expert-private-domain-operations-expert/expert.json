@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "private-domain-operations-expert-private-domain-operations-expert",
+  "source": "bundled",
+  "sourcePackage": "private-domain-operations-expert",
+  "sourceAgent": "agents/private-domain-operations-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "留客客",
+  "profession": "私域运营专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "精通微信私域流量池搭建运营，将公域流量沉淀为私域资产",
+  "tags": [
+    "私域运营",
+    "社群管理",
+    "用户裂变"
+  ],
+  "quickPrompts": [
+    "我们想做私域流量运营,提升用户粘性和复购率,请私域运营专家帮我们设计私域流量管理方案。",
+    "设计私域用户分层和精准营销方案",
+    "制定社群活跃和转化提升策略"
+  ],
+  "roleFile": "private-domain-operations-expert-private-domain-operations-expert/role.md",
+  "avatarFile": "private-domain-operations-expert-private-domain-operations-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "06f054332ce23a46750ac24bb5b14531f45b4e89ae0a95306f86c618b3f43e71",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "12cc593c232ff98f12cf65d73b7fe073fb08cdc83ed3092ddd75d294f9a3ac23"
+    },
+    {
+      "path": "role.md",
+      "sha256": "31899170682a4e42548a8c47b8a762634e703760cb9946187daf5feeec37cd2e"
+    }
+  ]
+}

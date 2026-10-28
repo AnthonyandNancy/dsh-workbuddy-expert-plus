@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "interview-simulator-interview-simulator",
+  "source": "bundled",
+  "sourcePackage": "interview-simulator",
+  "sourceAgent": "agents/interview-simulator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "面试模拟专家",
+  "categoryId": "09-OperationsHR",
+  "description": "模拟任意职位的真实面试官，覆盖技术产品销售人事等全岗位，提供逐题评分详细反馈与录用建议，助你高效备战面试。",
+  "tags": [
+    "模拟面试",
+    "面试准备",
+    "职业发展"
+  ],
+  "quickPrompts": [
+    "帮我进行后端工程师高级职位的模拟面试，聚焦分布式系统",
+    "用STAR方法进行产品经理的行为面试练习",
+    "审阅我的面试答案并给出改进建议"
+  ],
+  "roleFile": "interview-simulator-interview-simulator/role.md",
+  "avatarFile": "interview-simulator-interview-simulator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "14a9c347bee4d9101da88ccc5f31080bd15bbc10c5f0f65a57433683df5ed686",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e228325647b53043f40293ff36181e46ef6eea657a8bec08210d0d69cf825e1a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "251398d94fcf10bcfc22ebebf86a907f03485246a7fb187be04a973d67d3159a"
+    }
+  ]
+}

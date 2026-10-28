@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "accessibility-auditor-accessibility-auditor",
+  "source": "bundled",
+  "sourcePackage": "accessibility-auditor",
+  "sourceAgent": "agents/accessibility-auditor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "无碍碍",
+  "profession": "无障碍审计师",
+  "categoryId": "10-ProjectQuality",
+  "description": "按WCAG标准审计界面可访问性，确保每个用户都能使用产品",
+  "tags": [
+    "无障碍审计",
+    "WCAG合规",
+    "辅助技术"
+  ],
+  "quickPrompts": [
+    "我们的产品需要符合无障碍标准,让更多用户能够使用,请无障碍审计师帮我们进行WCAG标准审计。",
+    "使用辅助技术测试可访问性",
+    "制定无障碍改进和包容性设计方案"
+  ],
+  "roleFile": "accessibility-auditor-accessibility-auditor/role.md",
+  "avatarFile": "accessibility-auditor-accessibility-auditor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ccb5e6755c14aa7a339dfbd77f8ef0f4783fb730fa866b7b39b7a86735957660",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7d239bc301d4a129d74d4afeb5a02ed386edf532c2fdfd258f506d590eb3e816"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b96be8a833b24d69b480e3c336a35d28d838a5c0c9d9431753a9ca0fd6ac5f43"
+    }
+  ]
+}

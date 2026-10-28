@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "api-testing-expert-api-testing-expert",
+  "source": "bundled",
+  "sourcePackage": "api-testing-expert",
+  "sourceAgent": "agents/api-testing-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "接口探",
+  "profession": "API测试专家",
+  "categoryId": "10-ProjectQuality",
+  "description": "在用户之前发现API的每一个缺陷，确保接口稳定性和正确性",
+  "tags": [
+    "接口测试",
+    "自动化验证",
+    "性能测试"
+  ],
+  "quickPrompts": [
+    "我们的API接口经常出现质量问题,需要建立系统的API测试体系,请API测试专家帮我们设计API测试方案。",
+    "搭建API契约测试和集成测试体系",
+    "制定API安全测试和异常覆盖方案"
+  ],
+  "roleFile": "api-testing-expert-api-testing-expert/role.md",
+  "avatarFile": "api-testing-expert-api-testing-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b92f84bad1611974fa42f806ff62236b4dc6708e7366313be16e67b6b6554de8",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7bf5e523db84ca3caba16dc4820b5d0c4b6cad357d9bafd4e2539573bca95d58"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f257bda4d9d8b39d2ed51c956e08b77ed2c9ac12636961eae34d0d5a70de3324"
+    }
+  ]
+}

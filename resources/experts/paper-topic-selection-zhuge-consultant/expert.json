@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "paper-topic-selection-zhuge-consultant",
+  "source": "bundled",
+  "sourcePackage": "paper-topic-selection",
+  "sourceAgent": "agents/zhuge-consultant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "选题顾问（WANFANG TOPIC）",
+  "profession": "选题顾问（WANFANG TOPIC）",
+  "categoryId": "12-IndustryConsultant",
+  "description": "基于万方数据帮你做论文选题：检索文献、推荐方向、评估新颖性、生成标题、出领域报告。说学科方向即可。",
+  "tags": [
+    "文献精读",
+    "选题发现",
+    "定题评测"
+  ],
+  "quickPrompts": [
+    "文献精读 → 请检索【学科方向，如：深度学习+医学影像】方向的文献，我重点关注【研究现状 / 核心学者 / 研究热点 / 学术空白】（可多选）",
+    "选题发现 → 我是【学科方向，如：环境科学】方向的【硕士 / 博士 / 青年教师】，想找一个【有创新空间】的选题，请基于万方数据帮我推荐【3-5】个方向，并附近期热点启发",
+    "定题评测 → 我拟了题目《【选题标题】》，研究内容是【一句话摘要】。请评估它的新颖性与可行性，并帮我生成几个候选标题、给出领域发展建议"
+  ],
+  "roleFile": "paper-topic-selection-zhuge-consultant/role.md",
+  "avatarFile": "paper-topic-selection-zhuge-consultant/avatar.jpg",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7574081c99569a870b8781a60be9fcdb162d2e51c0f17659298c68165edf91a2",
+  "files": [
+    {
+      "path": "avatar.jpg",
+      "sha256": "84fddb67bb5c9502e00f28cb8c62669d8c1716ab76d1dfa32dd7e8ace6bc336d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f56732366535eacb8593b29c00645018bb8b93e8e0f4274a9257bdf83e9ad71c"
+    }
+  ]
+}

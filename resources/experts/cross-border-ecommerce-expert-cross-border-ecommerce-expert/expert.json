@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "cross-border-ecommerce-expert-cross-border-ecommerce-expert",
+  "source": "bundled",
+  "sourcePackage": "cross-border-ecommerce-expert",
+  "sourceAgent": "agents/cross-border-ecommerce-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "海跨洋",
+  "profession": "跨境电商专家",
+  "categoryId": "05-MarketingGrowth",
+  "description": "精通亚马逊Shopify等国际电商平台，助力品牌出海全球",
+  "tags": [
+    "跨境电商",
+    "海外仓配",
+    "国际合规"
+  ],
+  "quickPrompts": [
+    "我们想做跨境电商,但面临物流、支付和本地化等挑战,请跨境电商专家帮我们设计跨境业务方案。",
+    "优化亚马逊/独立站Listing提升排名",
+    "规划跨境物流和供应链方案"
+  ],
+  "roleFile": "cross-border-ecommerce-expert-cross-border-ecommerce-expert/role.md",
+  "avatarFile": "cross-border-ecommerce-expert-cross-border-ecommerce-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "3eea51c27534e458044afa4da94f030a1899a3f071b7e5638c454fa9a0562452",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8312dd11f73f8c362aedfc9ff191d1ba6bc7d78ef90fde4a5a8312227b361eb2"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6353f43fe99197e32475511e15d044b1ae160928bb4e765ca66dbd7bad63dab5"
+    }
+  ]
+}

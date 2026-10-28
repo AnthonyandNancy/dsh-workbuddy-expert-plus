@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "terminal-integration-expert-terminal-integration-expert",
+  "source": "bundled",
+  "sourcePackage": "terminal-integration-expert",
+  "sourceAgent": "agents/terminal-integration-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "终端通",
+  "profession": "终端集成专家",
+  "categoryId": "02-Engineering",
+  "description": "精通终端应用与空间计算环境的集成",
+  "tags": [
+    "终端集成",
+    "CLI工具",
+    "命令行开发"
+  ],
+  "quickPrompts": [
+    "我们想开发终端集成应用,需要专业的终端交互和开发经验,请终端集成专家帮我们设计终端应用。",
+    "设计跨设备XR交互和协同方案",
+    "搭建空间计算外设和传感器对接方案"
+  ],
+  "roleFile": "terminal-integration-expert-terminal-integration-expert/role.md",
+  "avatarFile": "terminal-integration-expert-terminal-integration-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "e8d7fb2b04a82a315efda83b1d92dc3ec44ace2146108c35415b268bd3922fad",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2976403733b4b590c9860dd9c04391ba99e9b9fef05a220fa00ce907978919fc"
+    },
+    {
+      "path": "role.md",
+      "sha256": "78496e570052b984db5bca255ca89ea4195711a892afb989544d91a1bacb71e6"
+    }
+  ]
+}

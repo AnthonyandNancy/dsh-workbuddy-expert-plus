@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "api-dev-api-dev",
+  "source": "bundled",
+  "sourcePackage": "api-dev",
+  "sourceAgent": "agents/api-dev.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "API开发专家",
+  "categoryId": "02-Engineering",
+  "description": "专注接口全生命周期开发，涵盖端点搭建、自动化测试、OpenAPI文档生成、Mock服务搭建与HTTP请求问题调试，提升开发效率。",
+  "tags": [
+    "接口开发",
+    "REST与GraphQL",
+    "接口测试"
+  ],
+  "quickPrompts": [
+    "帮我搭建一个REST API端点并编写测试脚本",
+    "用curl测试这个接口并分析返回结果",
+    "为现有接口生成OpenAPI规范文档"
+  ],
+  "roleFile": "api-dev-api-dev/role.md",
+  "avatarFile": "api-dev-api-dev/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1840b580623858e547d67efd03dfb30859452e6cac9410fc48494eb974f747cf",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7d17248e3080257071c83a8cea556eab7eba1b68fdaeb6033f377899040e3fb7"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9b2ed35ff7e22f4bc95c5f38fd327ebe2a3a4e5c701e6562c44ccaf18ea09ca0"
+    }
+  ]
+}

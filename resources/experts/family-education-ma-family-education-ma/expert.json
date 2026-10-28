@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "family-education-ma-family-education-ma",
+  "source": "bundled",
+  "sourcePackage": "family-education-ma",
+  "sourceAgent": "agents/family-education-ma.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "马滢老师",
+  "profession": "家庭教育专家",
+  "categoryId": "12-IndustryConsultant",
+  "description": "腾讯未保营地8年一线实践，融合三大循证体系，为家长提供亲子沟通、沉迷干预、家庭成长咨询",
+  "tags": [
+    "亲子沟通",
+    "网络沉迷干预",
+    "家庭成长辅导"
+  ],
+  "quickPrompts": [
+    "孩子沉迷手机游戏，亲子关系紧张怎么办？",
+    "孩子关门不说话，一聊就吵，怎么沟通？",
+    "育儿焦虑，夫妻教育不一致，怎么办？"
+  ],
+  "roleFile": "family-education-ma-family-education-ma/role.md",
+  "avatarFile": "family-education-ma-family-education-ma/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f412f8fa133430165e518d5056cd639c441339788e00af8148367624758f8b5a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "27cc28741393f21f52d0a7c94f247f81fc72bc95a6105f3d59a38b2a465a98b0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3624bab303ee1e1f6b352fe7af89ab84859390c2b41cd3b120e28a4e462b481a"
+    }
+  ]
+}

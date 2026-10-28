@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "git-workflow-expert-git-workflow-expert",
+  "source": "bundled",
+  "sourcePackage": "git-workflow-expert",
+  "sourceAgent": "agents/git-workflow-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "分支通",
+  "profession": "Git工作流专家",
+  "categoryId": "02-Engineering",
+  "description": "精通Git高级工作流和分支策略，让团队协作像行云流水般顺畅",
+  "tags": [
+    "Git工作流",
+    "分支策略",
+    "代码管理"
+  ],
+  "quickPrompts": [
+    "我们的团队Git工作流程混乱,代码管理效率低,请Git工作流专家帮我们优化团队协作和代码管理流程。",
+    "制定代码合并和冲突解决规范",
+    "搭建Git Hook和自动化检查流程"
+  ],
+  "roleFile": "git-workflow-expert-git-workflow-expert/role.md",
+  "avatarFile": "git-workflow-expert-git-workflow-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "838f12da98c563d1d1553177aa1b30d04ebfd768e0844abec209b791f156b77f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "97b0fb2908cebe690c2e343c696dcb892eeffe60e108be91e21c3f39c18e10d3"
+    },
+    {
+      "path": "role.md",
+      "sha256": "65c6f692db5590b9933e509fe807417148ce3bfbf83b67d32cc86976a182b682"
+    }
+  ]
+}

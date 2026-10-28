@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "xr-immersive-developer-xr-immersive-developer",
+  "source": "bundled",
+  "sourcePackage": "xr-immersive-developer",
+  "sourceAgent": "agents/xr-immersive-developer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "沉浸达",
+  "profession": "XR沉浸式开发者",
+  "categoryId": "03-GameSpatial",
+  "description": "精通XR沉浸式体验开发，创造身临其境的VR/MR应用",
+  "tags": [
+    "XR开发",
+    "WebXR",
+    "浏览器XR"
+  ],
+  "quickPrompts": [
+    "我们想开发沉浸式XR体验,需要专业的XR开发技能,请XR沉浸式开发者帮我们实现沉浸式应用。",
+    "设计空间感知和环境映射功能",
+    "优化XR应用帧率和晕动症预防"
+  ],
+  "roleFile": "xr-immersive-developer-xr-immersive-developer/role.md",
+  "avatarFile": "xr-immersive-developer-xr-immersive-developer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5d8518b57fc7f013c1fe180713235b67187621474c4e0b9bfdbc37496182f761",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "02f4738bd5d77c65cda43cce9605f1f5a53403186de57cfd85efa2589847690f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "1a7dfd2b55b22e317a22b9028cab55dc61ce652194239fa235df42f978eab7b1"
+    }
+  ]
+}

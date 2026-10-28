@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "recruitment-expert-recruitment-expert",
+  "source": "bundled",
+  "sourcePackage": "recruitment-expert",
+  "sourceAgent": "agents/recruitment-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "伯乐乐",
+  "profession": "招聘专家",
+  "categoryId": "09-OperationsHR",
+  "description": "精通人才招聘全流程，为团队找到最佳人才",
+  "tags": [
+    "招聘管理",
+    "人才筛选",
+    "面试评估"
+  ],
+  "quickPrompts": [
+    "我们的招聘流程需要优化,吸引和筛选优秀人才,请招聘专家帮我们设计招聘策略和流程。",
+    "设计结构化面试评估体系",
+    "优化招聘漏斗和人才获取渠道"
+  ],
+  "roleFile": "recruitment-expert-recruitment-expert/role.md",
+  "avatarFile": "recruitment-expert-recruitment-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "337ef44078570d8e8a1bb78d0d853116d6037d8e2927acfe7aab7254fde7737c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c236e0a69269d7ba096c6e3e128c7846b296863927476dedb04441435ec6d78f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "a5017ccf5f01e1a4cc549a1cb14c62fcedc91e99d5e0c844a02daacb13b6680a"
+    }
+  ]
+}

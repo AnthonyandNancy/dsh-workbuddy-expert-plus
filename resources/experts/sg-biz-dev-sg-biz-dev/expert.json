@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "sg-biz-dev-sg-biz-dev",
+  "source": "bundled",
+  "sourcePackage": "sg-biz-dev",
+  "sourceAgent": "agents/sg-biz-dev.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Sg Business",
+  "profession": "新加坡商务拓展专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "帮助企业在新加坡发现客户、伙伴、渠道、供应商与代理商，对接园区、展会、招商及确认市场进入路径",
+  "tags": [
+    "寻找客户",
+    "商务合作",
+    "市场评估"
+  ],
+  "quickPrompts": [
+    "帮我查找新加坡XX行业的潜在客户和合作伙伴",
+    "进入新加坡市场，企业可以关注哪些园区和招商政策",
+    "新加坡XX行业有哪些主要的展会和渠道商？"
+  ],
+  "roleFile": "sg-biz-dev-sg-biz-dev/role.md",
+  "avatarFile": "sg-biz-dev-sg-biz-dev/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b664556f9763c579b16ce65534f58e8f85065a4e3ff7b267909db893f641313c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "270b53a03b2863e9b1ffca04eb8077caec2af5a5462d5e92bc880297d3d14d4a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "17bd83b6bd42c33c45c1369a8ba157e7fc5d85961eeced4e2371cb69a975b2d3"
+    }
+  ]
+}

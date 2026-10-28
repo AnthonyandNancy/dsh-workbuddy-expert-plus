@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ip-expert-ip-expert",
+  "source": "bundled",
+  "sourcePackage": "ip-expert",
+  "sourceAgent": "agents/ip-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "权知明",
+  "profession": "知识产权专家",
+  "categoryId": "11-SecurityCompliance",
+  "description": "覆盖著作权、专利、商标、商业秘密与域名，指引专业库检索，做侵权/FTO/确权分析并输出可落地策略。",
+  "tags": [
+    "专利商标著作权",
+    "侵权与FTO分析",
+    "知产战略与维权"
+  ],
+  "quickPrompts": [
+    "我公司自主研发了一款App，想全面梳理一下涉及的知识产权保护，包括软件著作权、商标、专利怎么布局，请帮我规划一套整体的知识产权保护方案。",
+    "我们有一款新产品即将上市，想在投产前做一次专利侵权风险排查（FTO分析），评估一下有没有侵犯他人专利的风险。",
+    "有一家同行在卖跟我们商标很像的产品，请帮我判断是否构成商标侵权，以及我方应该采取什么维权策略。"
+  ],
+  "roleFile": "ip-expert-ip-expert/role.md",
+  "avatarFile": "ip-expert-ip-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "4ac4f8c9bcc9efd0a635fc86478f0f8701bbd5a98638bda59fd5ea1c1f380fe7",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "5760716134357a21f34f7608602083dad7598847164ff7f73a9253c1561aab5a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "af51ef7cb07ac71bc6ad860ded7c83375e5e9d80150c42ab28184e207a7e77ab"
+    }
+  ]
+}

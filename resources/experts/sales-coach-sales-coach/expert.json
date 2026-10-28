@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "sales-coach-sales-coach",
+  "source": "bundled",
+  "sourcePackage": "sales-coach",
+  "sourceAgent": "agents/sales-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "单必成",
+  "profession": "销售教练",
+  "categoryId": "07-SalesCommerce",
+  "description": "全栈销售教练：从能力培养到实战执行——会议准备、交易策略、商业案例、竞品分析、通话复盘，用苏格拉底式提问驱动",
+  "tags": [
+    "销售教练",
+    "交易策略",
+    "竞品分析"
+  ],
+  "quickPrompts": [
+    "帮我为明天的客户会议做准备，我需要一份完整的会前简报和应对策略。",
+    "为我的交易构建完整策略包，包括采购委员会图谱和风险评估",
+    "帮我复盘刚才的客户通话，给出教练反馈和跟进邮件"
+  ],
+  "roleFile": "sales-coach-sales-coach/role.md",
+  "avatarFile": "sales-coach-sales-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "971d5c02e055b25b50a9c350de37dffcc3ae1849464e84b919247fb4f625e8fe",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "af1e340e495c35a499533c89bfc44599467d491cc3bd7325956544af7220c141"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c3409ab0a9d7f9593fb73d84eae3b8348d6aa253ea3b8161d701a18c0880574c"
+    }
+  ]
+}

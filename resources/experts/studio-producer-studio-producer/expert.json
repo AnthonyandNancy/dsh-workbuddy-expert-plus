@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "studio-producer-studio-producer",
+  "source": "bundled",
+  "sourcePackage": "studio-producer",
+  "sourceAgent": "agents/studio-producer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "制片达",
+  "profession": "工作室制片人",
+  "categoryId": "10-ProjectQuality",
+  "description": "统筹项目从立项到交付的全过程，平衡创意预算和时间",
+  "tags": [
+    "制作管理",
+    "项目排期",
+    "质量把控"
+  ],
+  "quickPrompts": [
+    "我们的创意项目需要专业的制片人管理,把控项目质量和进度,请工作室制片人帮我们统筹创意项目管理。",
+    "协调创意团队按时交付高质量作品",
+    "优化制作流程和预算管控"
+  ],
+  "roleFile": "studio-producer-studio-producer/role.md",
+  "avatarFile": "studio-producer-studio-producer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d5fde5001562bbba1b8e61a09b87f4ff1a119a2b41a267cc99fca98250bf42cc",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "090dd3e4e4222f106b843074a959d989784d20e454d776e93c232c9fd1701810"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6ada8343432936a716b6e19fddde47eebff91366633ddc213f7dd237b4037e55"
+    }
+  ]
+}

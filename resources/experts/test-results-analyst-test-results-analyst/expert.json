@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "test-results-analyst-test-results-analyst",
+  "source": "bundled",
+  "sourcePackage": "test-results-analyst",
+  "sourceAgent": "agents/test-results-analyst.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "析测测",
+  "profession": "测试结果分析师",
+  "categoryId": "10-ProjectQuality",
+  "description": "像侦探解读证据一样分析测试结果，发现隐藏的质量问题",
+  "tags": [
+    "测试分析",
+    "质量度量",
+    "缺陷趋势"
+  ],
+  "quickPrompts": [
+    "我们的测试数据很多但难以发现质量趋势,请测试结果分析师帮我们分析测试数据并给出改进建议。",
+    "搭建质量趋势分析和缺陷预测模型",
+    "制定测试覆盖率提升和风险区域方案"
+  ],
+  "roleFile": "test-results-analyst-test-results-analyst/role.md",
+  "avatarFile": "test-results-analyst-test-results-analyst/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ce6f6ca055633734ef9b67126cd87f165a1e909a06d992515388f51a9229ede9",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "554b915d9ebc76ab1a15b6ee156bd3e4915dba9a4d3462016e69a079c533ac6b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9d69cd35c1f844da52ec5ad32e8c8d1bb0f6f4842489cd4ca34791ca83a6487c"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fbsir-aigc-compliance-red-team-fbsir-aigc-compliance-red-team",
+  "source": "bundled",
+  "sourcePackage": "fbsir-aigc-compliance-red-team",
+  "sourceAgent": "agents/fbsir-aigc-compliance-red-team.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "AIGC 合规红队",
+  "profession": "AIGC 营销合规审查官",
+  "categoryId": "11-SecurityCompliance",
+  "description": "福帮手 AIGC 发布前对抗审查：核验双标识、违禁词、虚假人设，输出风险等级、法条依据与安全改写。",
+  "tags": [
+    "AIGC 标识核验",
+    "广告法合规",
+    "营销内容红队"
+  ],
+  "quickPrompts": [
+    "把这篇准备发布的小红书种草笔记贴给你，帮我出一张红队风险卡并给安全改写",
+    "检查这张 AI 生成的外卖店招海报有没有 AI 照骗和标识缺失风险",
+    "我们研学机构的招生话术有没有保过类违规承诺？请按广告法审查并给出合规版本"
+  ],
+  "roleFile": "fbsir-aigc-compliance-red-team-fbsir-aigc-compliance-red-team/role.md",
+  "avatarFile": "fbsir-aigc-compliance-red-team-fbsir-aigc-compliance-red-team/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "8a1945bc67d4c625751290bfc2c439c8481828156e8afbb3c383991a3f4b8b13",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "086d92e8c096634aa81bf14e7e617ba631b62e220f72b32a133c2afed722c379"
+    },
+    {
+      "path": "role.md",
+      "sha256": "30cea9b93036bf19efe48d8e9c3a4d63a18c262ba7fdaad205afd3af14e5f793"
+    }
+  ]
+}

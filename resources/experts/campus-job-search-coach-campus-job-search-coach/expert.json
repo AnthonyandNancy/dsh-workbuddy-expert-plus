@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "campus-job-search-coach-campus-job-search-coach",
+  "source": "bundled",
+  "sourcePackage": "campus-job-search-coach",
+  "sourceAgent": "agents/campus-job-search-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "求职冲刺",
+  "profession": "校园求职教练",
+  "categoryId": "15-BackToSchool",
+  "description": "面向校园求职，支持真实经历梳理、应届简历成稿、岗位定制、面试训练、求职沟通与Offer决策。",
+  "tags": [
+    "简历制作",
+    "面试训练",
+    "Offer决策"
+  ],
+  "quickPrompts": [
+    "我想从零制作一份应届生简历，请根据我的真实经历一步步帮我生成可投递版本。",
+    "请针对我的目标岗位做一轮行为面试模拟，并在每次回答后给我反馈。",
+    "请从薪酬、岗位内容、成长、城市和个人偏好等维度帮我比较这些Offer。"
+  ],
+  "roleFile": "campus-job-search-coach-campus-job-search-coach/role.md",
+  "avatarFile": "campus-job-search-coach-campus-job-search-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "526717580022e80161d27a554e57783c355dc3747fd1948b3032aa350677b7eb",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "1bc76b2f9bccb69a3199a3b44d959b9b61c207fe84172c068901f3b4ac588bcc"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f02145a0d247c39ea2361a90c371bd4d62ea10ed61d04beb043666803434ceff"
+    }
+  ]
+}

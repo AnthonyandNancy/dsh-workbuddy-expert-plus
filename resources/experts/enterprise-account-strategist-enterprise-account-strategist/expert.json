@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "enterprise-account-strategist-enterprise-account-strategist",
+  "source": "bundled",
+  "sourcePackage": "enterprise-account-strategist",
+  "sourceAgent": "agents/enterprise-account-strategist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "拓客客",
+  "profession": "大客户策略师",
+  "categoryId": "07-SalesCommerce",
+  "description": "精通大客户经营和账户扩展策略，将客户发展为长期战略伙伴",
+  "tags": [
+    "大客户战略",
+    "客户规划",
+    "关系管理"
+  ],
+  "quickPrompts": [
+    "我们想拓展企业级大客户,需要制定系统的大客户开发和管理策略,请企业账户策略师帮我们设计大客户销售方案。",
+    "设计大客户需求分析和服务方案",
+    "搭建客户成功和续约管理体系"
+  ],
+  "roleFile": "enterprise-account-strategist-enterprise-account-strategist/role.md",
+  "avatarFile": "enterprise-account-strategist-enterprise-account-strategist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "34b73b15bc9b183a633d135c42ad19d292ed6301fef5d7a3a07531f8150ece54",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f744b4f8d661701df7d8b00a2617c7f94493e5335ae4fd31d82adf6e6c898ff1"
+    },
+    {
+      "path": "role.md",
+      "sha256": "8e17edf9b038b05bf96d16bd650a2e449237fc83dab285eb39370aa69fe4fdcb"
+    }
+  ]
+}

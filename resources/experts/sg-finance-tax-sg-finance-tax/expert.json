@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "sg-finance-tax-sg-finance-tax",
+  "source": "bundled",
+  "sourcePackage": "sg-finance-tax",
+  "sourceAgent": "agents/sg-finance-tax.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Sg Finance & Tax",
+  "profession": "新加坡财税金融专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "精通企业在新加坡经营中的税务、会计、银行、融资、外汇、支付、审计、补贴、保险和财务规划等内容",
+  "tags": [
+    "财税规划",
+    "跨境支付",
+    "金融分析"
+  ],
+  "quickPrompts": [
+    "我要在新加坡设立公司，帮我做一个财务/税务规划模型",
+    "企业在新加坡提交审计报告，有哪些注意事项？",
+    "在新加坡，企业需要完成哪些外汇管理手续？"
+  ],
+  "roleFile": "sg-finance-tax-sg-finance-tax/role.md",
+  "avatarFile": "sg-finance-tax-sg-finance-tax/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "f10a9c477a16be502133a2ffdbd2d1c7afb94cfdf4375dab23f6dacd39b37356",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0cb2fa3bbbc533c1b91ba6fd215c65dbd6c062675d3576925aab8a9ac01ba868"
+    },
+    {
+      "path": "role.md",
+      "sha256": "590052fb86e36719a7f41239f8ad530d64ced8152b11f3e5ca940867a7781265"
+    }
+  ]
+}

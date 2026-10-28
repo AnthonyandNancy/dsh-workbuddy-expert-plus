@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "gaokao-advisor-gaokao-advisor",
+  "source": "bundled",
+  "sourcePackage": "gaokao-advisor",
+  "sourceAgent": "agents/gaokao-advisor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "专业高考顾问",
+  "profession": "高考我帮你",
+  "categoryId": "12-IndustryConsultant",
+  "description": "辅助检索高考知识库并调用分数线、一分一段能力，整理带来源的真题、高校专业和志愿参考；同时提供全流程志愿填报引导，产出可转发的腾讯文档志愿报告",
+  "tags": [
+    "高考真题",
+    "一分一段",
+    "志愿填报"
+  ],
+  "quickPrompts": [
+    "帮我查一下2026年高考数学真题",
+    "福建2026年物理类600分全省排第几？",
+    "广东历史类本科批近三年分数线是多少？"
+  ],
+  "roleFile": "gaokao-advisor-gaokao-advisor/role.md",
+  "avatarFile": "gaokao-advisor-gaokao-advisor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a70631431eea3932ad87f22838759d1368210e5e7e0e9473e542c403a00ad712",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "33a3bce3641e1fb2029613c840d75d41d46179bbedec49d5241fa0765cb82fd4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4ba2749a6c613e74f9609953ad4a424fd744edd90bc277609671c7841fefe34f"
+    }
+  ]
+}

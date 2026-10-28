@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "panshi-customer-visit-agent-panshi-customer-visit-agent",
+  "source": "bundled",
+  "sourcePackage": "panshi-customer-visit-agent",
+  "sourceAgent": "agents/panshi-customer-visit-agent.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "磐石CRM跟进拜访助手",
+  "profession": "跟进拜访助手",
+  "categoryId": "12-IndustryConsultant",
+  "description": "磐石官方AI助手，查询跟进与拜访打卡，将iWiki/腾讯文档/企微文档或粘贴文本同步录入磐石CRM。",
+  "tags": [
+    "查询跟进拜访记录",
+    "写入跟进记录",
+    "多平台跟进记录同步"
+  ],
+  "quickPrompts": [
+    "帮我查一下我上周的跟进记录",
+    "列一下我还没关联跟进的拜访打卡",
+    "把这个文档里的跟进记录搬运录入到磐石 CRM"
+  ],
+  "roleFile": "panshi-customer-visit-agent-panshi-customer-visit-agent/role.md",
+  "avatarFile": "panshi-customer-visit-agent-panshi-customer-visit-agent/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "08e42d7abd4005716fc19db737d91e1a60c4e16b9b1f192ee0702b368bcb5f49",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "37fc179b3f4c70c16a0bbdee6eeb30eb35cd53584ad43956d463964f0900f4ed"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e9051b6402eaa7b28f3bf3671abf2ac6c1fdb333d5e492bf8b2074f8dcb35545"
+    }
+  ]
+}

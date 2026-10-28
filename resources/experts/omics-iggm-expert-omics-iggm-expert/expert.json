@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "omics-iggm-expert-omics-iggm-expert",
+  "source": "bundled",
+  "sourcePackage": "omics-iggm-expert",
+  "sourceAgent": "agents/omics-iggm-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "组小学",
+  "profession": "腾讯IgGM抗体药物研发专家",
+  "categoryId": "04-DataAI",
+  "description": "精通腾讯IgGM生成式模型。覆盖CDR重设计、全链生成与人源化亲和力优化，输出可验证的抗体候选序列",
+  "tags": [
+    "抗体设计",
+    "CDR重设计",
+    "亲和力成熟"
+  ],
+  "quickPrompts": [
+    "针对默认的 PD-L1 靶点，按默认参数执行抗体从头设计（De Novo Design），输出候选序列表并 3D 展示代表结构",
+    "保持框架区不变，对我提供的抗 PD-L1 先导抗体执行 CDR-H3 重设计（CDR Redesign），输出前后序列对比和结构展示",
+    "针对默认的 PD-L1 体系，按默认参数执行 CDR-H3 条件设计（CDR-H3 Conditional Design），输出候选序列汇总表并 3D 展示代表结构"
+  ],
+  "roleFile": "omics-iggm-expert-omics-iggm-expert/role.md",
+  "avatarFile": "omics-iggm-expert-omics-iggm-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5982494223061b7a9e5cd9e87ff54a168caa001ba2d3a951025078e7bdcbeb18",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f0826298b1f744fa58f64f1a8815221a580cca76cd2470a9e68e2a700b73cf01"
+    },
+    {
+      "path": "role.md",
+      "sha256": "4ee5ee16f45bc905af78f61234bbdb570e483ce7b219845ef460300e05fdf6e1"
+    }
+  ]
+}

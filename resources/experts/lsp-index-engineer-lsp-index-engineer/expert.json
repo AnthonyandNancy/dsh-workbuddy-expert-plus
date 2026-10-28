@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "lsp-index-engineer-lsp-index-engineer",
+  "source": "bundled",
+  "sourcePackage": "lsp-index-engineer",
+  "sourceAgent": "agents/lsp-index-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "索引引",
+  "profession": "LSP索引工程师",
+  "categoryId": "02-Engineering",
+  "description": "精通语言服务器协议和代码索引技术",
+  "tags": [
+    "语言服务",
+    "代码索引",
+    "智能补全"
+  ],
+  "quickPrompts": [
+    "我们需要构建语言服务提供商的索引系统,请LSP索引工程师帮我们设计索引架构。",
+    "设计代码索引和符号解析方案",
+    "优化LSP性能和跨语言支持"
+  ],
+  "roleFile": "lsp-index-engineer-lsp-index-engineer/role.md",
+  "avatarFile": "lsp-index-engineer-lsp-index-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9e48a286b5706c0996699e14194bb56a1007cd7fa84ab9f7caa27fd00cf7fe61",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b8d75d66cc1815cfacdfb578afbc873619eb49f4980a675783eb1dfd08ddd12a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7bd72a60745386752da0902a942c472ad83e4effc3dcd25501a8e00c8e7c3445"
+    }
+  ]
+}

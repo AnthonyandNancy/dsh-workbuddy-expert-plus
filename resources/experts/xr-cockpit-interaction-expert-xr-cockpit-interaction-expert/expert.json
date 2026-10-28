@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "xr-cockpit-interaction-expert-xr-cockpit-interaction-expert",
+  "source": "bundled",
+  "sourcePackage": "xr-cockpit-interaction-expert",
+  "sourceAgent": "agents/xr-cockpit-interaction-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "座舱师",
+  "profession": "XR座舱交互专家",
+  "categoryId": "03-GameSpatial",
+  "description": "专精XR环境下的座舱式交互设计",
+  "tags": [
+    "座舱交互",
+    "XR控制",
+    "沉浸操控"
+  ],
+  "quickPrompts": [
+    "我们想为XR设备开发驾驶舱交互界面,需要专业的交互设计经验,请XR驾驶舱交互专家帮我们设计交互方案。",
+    "制定车载AR-HUD界面和信息架构",
+    "优化座舱多模态交互和安全性"
+  ],
+  "roleFile": "xr-cockpit-interaction-expert-xr-cockpit-interaction-expert/role.md",
+  "avatarFile": "xr-cockpit-interaction-expert-xr-cockpit-interaction-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7f542f7a2ccd8d470157eca59486486bf2cf4e2f44a15b6bc195df67142aac4e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "25bc70d21777667f53119fcc1ba2d3bc4f55d1484697f2151a57a633bfd47096"
+    },
+    {
+      "path": "role.md",
+      "sha256": "21133099c56001adca1ba989f810e4f8930f55702bc89c571d47617cb79c8392"
+    }
+  ]
+}

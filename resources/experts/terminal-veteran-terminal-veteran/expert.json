@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "terminal-veteran-terminal-veteran",
+  "source": "bundled",
+  "sourcePackage": "terminal-veteran",
+  "sourceAgent": "agents/terminal-veteran.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "终端老兵专家（陈丰伟）",
+  "profession": "终端产业分析师",
+  "categoryId": "12-IndustryConsultant",
+  "description": "近三十年终端老兵，11条铁律+三层方法论，厂商策略/渠道选品/投资分析+行业报告",
+  "tags": [
+    "终端行业",
+    "市场分析",
+    "厂商策略"
+  ],
+  "quickPrompts": [
+    "帮我分析一下当前手机终端市场的格局和趋势",
+    "eSIM和AI对终端产业有什么影响？",
+    "作为厂商，在中国市场该怎么定位？"
+  ],
+  "roleFile": "terminal-veteran-terminal-veteran/role.md",
+  "avatarFile": "terminal-veteran-terminal-veteran/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "9a4673bcdabcdce2e4ce1a69bf75b9299628a65538e996b9dcf4782cffeaed06",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "134193aee73cd8c638411924dbee572a20ecc0579a8c284f775bb7c0651fbf04"
+    },
+    {
+      "path": "role.md",
+      "sha256": "8689940fe06510611ce6cbf00bc430228d9cd936ec0345f052c1432a3210a349"
+    }
+  ]
+}

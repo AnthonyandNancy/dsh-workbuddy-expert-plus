@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "wechat-official-account-expert-wechat-official-account-expert",
+  "source": "bundled",
+  "sourcePackage": "wechat-official-account-expert",
+  "sourceAgent": "agents/wechat-official-account-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "郝文昌",
+  "profession": "微信公众号运营专家",
+  "categoryId": "06-ContentCreative",
+  "description": "精通公众号内容策略和粉丝增长，打造10万+品牌自媒体矩阵",
+  "tags": [
+    "公众号运营",
+    "图文排版",
+    "粉丝运营"
+  ],
+  "quickPrompts": [
+    "我们的微信公众号阅读量低,需要提升内容质量和粉丝活跃度,请微信公众号专家帮我们优化公众号运营。",
+    "规划公众号菜单和自动回复体系",
+    "设计公众号活动裂变方案"
+  ],
+  "roleFile": "wechat-official-account-expert-wechat-official-account-expert/role.md",
+  "avatarFile": "wechat-official-account-expert-wechat-official-account-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "49898cfcfdfeedf71ff2a0d7aef72d542398d9328d9e507474bae1d1123741d4",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "e284fdcbf6a8b8aaf18ecf979517ca0bd4a4d0835792ccbff5bdaaee59f6d90c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e94874d0cc1e5d20a511c57ed28d16d3540eece455cc4001afafda9b460d0b06"
+    }
+  ]
+}

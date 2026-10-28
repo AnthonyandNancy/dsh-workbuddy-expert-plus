@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "roblox-avatar-creator-roblox-avatar-creator",
+  "source": "bundled",
+  "sourcePackage": "roblox-avatar-creator",
+  "sourceAgent": "agents/roblox-avatar-creator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "捏脸达",
+  "profession": "Roblox虚拟形象创作者",
+  "categoryId": "03-GameSpatial",
+  "description": "精通Roblox UGC和虚拟形象管线",
+  "tags": [
+    "虚拟形象",
+    "角色定制",
+    "3D建模"
+  ],
+  "quickPrompts": [
+    "我们想在Roblox上创建角色,需要专业的Avatar制作,请Roblox角色创建者帮我们设计角色系统。",
+    "制作Roblox UGC虚拟商品上架方案",
+    "优化角色模型性能和兼容性"
+  ],
+  "roleFile": "roblox-avatar-creator-roblox-avatar-creator/role.md",
+  "avatarFile": "roblox-avatar-creator-roblox-avatar-creator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "85f2dbf88481e79a785e90ea28b09464733cf6fb4bf2bf5ceedac90943e70322",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "70c374a53cb14e470f9aad6208f6ae8169f2f1645dc29a1114065b562397a806"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0bb9036403b96f21ef2af19132b31a08111db5dfcb713e9a8a1d51bdea8a3151"
+    }
+  ]
+}

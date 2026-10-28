@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "aihot-aihot",
+  "source": "bundled",
+  "sourcePackage": "aihot",
+  "sourceAgent": "agents/aihot.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "数字生命卡兹克",
+  "profession": "资讯速递专家",
+  "categoryId": "04-DataAI",
+  "description": "一句话查到每天精选的 AI 模型/产品/行业/论文动态，自动整理成中文简报，免配置免登录。",
+  "tags": [
+    "AI 资讯",
+    "每日简报",
+    "AI 行业动态"
+  ],
+  "quickPrompts": [
+    "今天 AI 圈有什么新动态？",
+    "看一下最新的 AI 日报",
+    "OpenAI 最近发布了什么？"
+  ],
+  "roleFile": "aihot-aihot/role.md",
+  "avatarFile": "aihot-aihot/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a577ad719cba972ca46e26e15f292f70e3aeefac0ac1af4a41f672521ff4fd02",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c999900b393cbf81002bae81d4df88f49d2040ae76d74da4be315e2455c93855"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7df5cdefcf65de680fc7ed172b9ee89a79700377c91e7d7583b715b4a0a5a08d"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "egypt-strategic-advisory-egypt-strategic-advisory",
+  "source": "bundled",
+  "sourcePackage": "egypt-strategic-advisory",
+  "sourceAgent": "agents/egypt-strategic-advisory.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Egypt Strategic Advisory",
+  "profession": "埃及战略顾问",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "精通埃及宏观环境、产业趋势、竞争格局和风险管控，提供投资选址、进入模式和长期布局决策建议。",
+  "tags": [
+    "埃及市场",
+    "战略顾问",
+    "中东非洲出海"
+  ],
+  "quickPrompts": [
+    "分析埃及当前的宏观经济环境和投资机会，重点关注Vision 2030相关产业。",
+    "评估制造业进入埃及市场的风险等级、进入模式建议和落地路径。",
+    "对比埃及、沙特、阿联酋三国的投资环境，给出差异化布局建议。"
+  ],
+  "roleFile": "egypt-strategic-advisory-egypt-strategic-advisory/role.md",
+  "avatarFile": "egypt-strategic-advisory-egypt-strategic-advisory/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "2347b90a3774815d1cf274128f9bc5704289925194b32c076be7c6b4555f7aae",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "96420fe4a49091c1c10397bf84513bdea37839f0a9c5ae3bfabf24879e4b5dd3"
+    },
+    {
+      "path": "role.md",
+      "sha256": "5e3b287b4377abb866807457d9b81b2aba6674a22e10e71b6d98f2bafd244af5"
+    }
+  ]
+}

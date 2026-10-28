@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "godot-multiplayer-engineer-godot-multiplayer-engineer",
+  "source": "bundled",
+  "sourcePackage": "godot-multiplayer-engineer",
+  "sourceAgent": "agents/godot-multiplayer-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "联网达",
+  "profession": "Godot多人联机工程师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通Godot 4 MultiplayerAPI和网络复制",
+  "tags": [
+    "Godot多人",
+    "网络同步",
+    "服务端开发"
+  ],
+  "quickPrompts": [
+    "我们的Godot游戏需要多人在线功能,请Godot多人工程师帮我们实现多人网络系统。",
+    "设计MultiplayerAPI场景复制和RPC方案",
+    "优化ENet/WebRTC传输和权威模型"
+  ],
+  "roleFile": "godot-multiplayer-engineer-godot-multiplayer-engineer/role.md",
+  "avatarFile": "godot-multiplayer-engineer-godot-multiplayer-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "a5f6406b21c25c5575d0f5ebfa26a92d675c4484021c689c7e997ff814493cf3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "3e0b46f81e90923715bb6bdff074310634585a6d54128271dea0482285fdbbdb"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ca16a5558f80c9572d6b169ba886a82ddcb0d3a11640ec3c35a83db3146588bd"
+    }
+  ]
+}

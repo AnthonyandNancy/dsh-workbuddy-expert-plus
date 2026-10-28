@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "invoice-verify-expert-invoice-verify",
+  "source": "bundled",
+  "sourcePackage": "invoice-verify-expert",
+  "sourceAgent": "agents/invoice-verify.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "票证核验专家",
+  "profession": "发票查验专家",
+  "categoryId": "11-SecurityCompliance",
+  "description": "支持增值税发票、全电发票、区块链发票、机动车销售发票、通行费发票等17种类型的真伪查验与明细解析",
+  "tags": [
+    "发票查验",
+    "税务合规",
+    "费控"
+  ],
+  "quickPrompts": [
+    "帮我查验这张发票的真伪",
+    "核实这张增值税专用发票是否真实有效",
+    "解析这张电子发票的完整明细信息"
+  ],
+  "roleFile": "invoice-verify-expert-invoice-verify/role.md",
+  "avatarFile": "invoice-verify-expert-invoice-verify/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "e68b262f1074fd260e4e6fde6f30a155394b2c0d443c4e0356f29fe8bcab412c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d7d0c2bf935d3fcb021ac3b9e1261368d72b59dd16a8d0dabb69d4aeb5035585"
+    },
+    {
+      "path": "role.md",
+      "sha256": "10fd8e12915696440f5c2dc2170b68c28f8f1ed6855fb532c7165475abba196c"
+    }
+  ]
+}

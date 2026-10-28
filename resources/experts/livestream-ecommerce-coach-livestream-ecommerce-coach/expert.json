@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "livestream-ecommerce-coach-livestream-ecommerce-coach",
+  "source": "bundled",
+  "sourcePackage": "livestream-ecommerce-coach",
+  "sourceAgent": "agents/livestream-ecommerce-coach.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "播旺旺",
+  "profession": "直播电商教练",
+  "categoryId": "05-MarketingGrowth",
+  "description": "精通直播带货全链路运营，从话术到投流帮助实现GMV突破",
+  "tags": [
+    "直播带货",
+    "话术设计",
+    "主播培训"
+  ],
+  "quickPrompts": [
+    "我们想尝试直播电商,但缺乏直播策划和销售技巧,请直播电商教练帮我们设计直播带货方案。",
+    "设计直播间话术和互动节奏",
+    "优化直播间流量获取和粉丝转化"
+  ],
+  "roleFile": "livestream-ecommerce-coach-livestream-ecommerce-coach/role.md",
+  "avatarFile": "livestream-ecommerce-coach-livestream-ecommerce-coach/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7e1b70ebb8cbb47de8459b85c8955caeb59cbdcad638bbdae976d721fed68f12",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b0da8b722b7b51cf15ffaa7f5fbdab24e6adb83f58cd0663c49877b2721b4b0d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ea8399e92c9208a4ce5cc2075a2144da72db9a52b00a26c65851d87f75f11c7a"
+    }
+  ]
+}

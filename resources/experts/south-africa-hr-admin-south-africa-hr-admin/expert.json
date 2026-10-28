@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "south-africa-hr-admin-south-africa-hr-admin",
+  "source": "bundled",
+  "sourcePackage": "south-africa-hr-admin",
+  "sourceAgent": "agents/south-africa-hr-admin.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "South Africa HR",
+  "profession": "南非人力行政专家",
+  "categoryId": "09-OperationsHR",
+  "description": "南非人力行政专家，覆盖招聘、薪酬、签证、B-BBEE与劳动合规，可算成本、查费用、生成可视化交付物。",
+  "tags": [
+    "南非招聘",
+    "劳动合规",
+    "签证工签"
+  ],
+  "quickPrompts": [
+    "在南非雇佣一名员工，帮我算算雇主每月总成本和员工到手净薪，并出一张成本结构图。",
+    "南非企业在 2026/27 年度有哪些强制合规申报节点？请给我一份全年合规时间线。",
+    "我想做一次 B-BBEE 评分缺口分析，当前得分离目标等级还差多少？应该优先补哪一项？"
+  ],
+  "roleFile": "south-africa-hr-admin-south-africa-hr-admin/role.md",
+  "avatarFile": "south-africa-hr-admin-south-africa-hr-admin/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "e2282e5095b1f55252f0efbcec4e832475e62c0e838c93e80b512bed58fff731",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "38ddcd5e6b1c20a8a52ba79b29bd5d0c7f9b5c78eafee815662cd784d863ee0d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ace7b70de8a04b3b85ea74a4664b512b4208b0fb2352a2468b62c061f9ba05a3"
+    }
+  ]
+}

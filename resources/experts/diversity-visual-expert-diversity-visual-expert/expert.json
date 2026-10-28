@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "diversity-visual-expert-diversity-visual-expert",
+  "source": "bundled",
+  "sourcePackage": "diversity-visual-expert",
+  "sourceAgent": "agents/diversity-visual-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "多元元",
+  "profession": "多元视觉专家",
+  "categoryId": "01-ProductDesign",
+  "description": "致力于消除AI图像中的系统性偏见，确保视觉内容文化准确和包容",
+  "tags": [
+    "多元视觉",
+    "包容性设计",
+    "文化适配"
+  ],
+  "quickPrompts": [
+    "我们的视觉内容在多元化和包容性方面需要改进,希望展现更丰富的多样性,请多样性视觉专家帮我评估和优化视觉设计。",
+    "审查视觉内容的多元化和包容性",
+    "制定无障碍视觉设计和文化敏感方案"
+  ],
+  "roleFile": "diversity-visual-expert-diversity-visual-expert/role.md",
+  "avatarFile": "diversity-visual-expert-diversity-visual-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "eff8764fdc21d4eefac9b1a9b0f48fdb5bfbe1b6e6fdab9f42585d71fe23c5e6",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "94dcd56b060ffdf1f5cdef9d148eee6b712821d295f20b032969abe4c4dd24a1"
+    },
+    {
+      "path": "role.md",
+      "sha256": "aaf6b5821d567381a30d828f83b9c13030501a641ef69807e289400870a17499"
+    }
+  ]
+}

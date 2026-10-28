@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "unreal-world-builder-unreal-world-builder",
+  "source": "bundled",
+  "sourcePackage": "unreal-world-builder",
+  "sourceAgent": "agents/unreal-world-builder.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "造世界",
+  "profession": "Unreal世界构建师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通UE5 World Partition和大世界流式加载",
+  "tags": [
+    "世界构建",
+    "大地图管理",
+    "环境设计"
+  ],
+  "quickPrompts": [
+    "我们的虚幻游戏需要构建世界和关卡,请虚幻世界构建者帮我们设计游戏世界。",
+    "设计World Partition和HLOD方案",
+    "优化关卡流加载和程序化植被"
+  ],
+  "roleFile": "unreal-world-builder-unreal-world-builder/role.md",
+  "avatarFile": "unreal-world-builder-unreal-world-builder/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b26f881f6e52d5d96947ec0b1e8250995bd13bd66a571032e7fa610dc181d276",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8b0175c65faf385d5976feb9eb4afce1f9aaa8b5fee51fc709e5cd015d807daf"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0d148c2ba567b0ca5e2b8fc4be2c477bd708bdf67f1c43b2781deb7e0c39b9bc"
+    }
+  ]
+}

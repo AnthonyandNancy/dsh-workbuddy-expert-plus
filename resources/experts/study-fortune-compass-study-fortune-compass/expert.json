@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "study-fortune-compass-study-fortune-compass",
+  "source": "bundled",
+  "sourcePackage": "study-fortune-compass",
+  "sourceAgent": "agents/study-fortune-compass.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "学运趋势解读师",
+  "profession": "学运趋势解读师",
+  "categoryId": "15-BackToSchool",
+  "description": "一数起卦，循本卦、互卦与变卦解析学习趋势与盲区，并结合现实信息给出可验证的观察和行动方向。",
+  "tags": [
+    "确定性起卦",
+    "学业象意",
+    "行动观察"
+  ],
+  "quickPrompts": [
+    "我最近准备期末考试，选数字7，帮我看本周复习进度该把力气放在哪里",
+    "我选数字7，给我做一张今天的学运日签，并简要展示起卦依据",
+    "我在考研和找实习之间犹豫，帮我换个视角看看"
+  ],
+  "roleFile": "study-fortune-compass-study-fortune-compass/role.md",
+  "avatarFile": "study-fortune-compass-study-fortune-compass/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "56e4dcf62b1b6176faf6ee51882fd255b466d7c5733a4956fb00cab25ebef42d",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "80a1543061a25269eb887b0ee1c0e0eea7cfe0da9e6841ff75b11b3e3a9c7796"
+    },
+    {
+      "path": "role.md",
+      "sha256": "bee0c4a6f709d864f660958067bf1cedd4eba864514f32b747ebef71d72ca3e7"
+    }
+  ]
+}

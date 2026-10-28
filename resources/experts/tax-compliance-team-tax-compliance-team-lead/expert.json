@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tax-compliance-team-tax-compliance-team-lead",
+  "source": "bundled",
+  "sourcePackage": "tax-compliance-team",
+  "sourceAgent": "agents/tax-compliance-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "财税合规专家团",
+  "profession": "财税合规专家团",
+  "categoryId": "11-SecurityCompliance",
+  "description": "覆盖票据处理、记账核算、报表编制、税务申报、合规审计五大环节的企业财税合规全链路管理专家团",
+  "tags": [
+    "税务合规",
+    "财务核算",
+    "合规审计"
+  ],
+  "quickPrompts": [
+    "帮我执行本月的企业财税合规检查",
+    "计算本季度增值税和企业所得税",
+    "编制财务报表并分析财务健康状况"
+  ],
+  "roleFile": "tax-compliance-team-tax-compliance-team-lead/role.md",
+  "avatarFile": "tax-compliance-team-tax-compliance-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "035a3f4569d5e5c5511d61afd54642b5f6b2e104bd17127f234f0924e983f076",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "9df77dd6689e93cc824abefbae376fa7d57668482d7b8fc0b967aebe00126da7"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ef1e970636c5b300173e5e59b71dd872f77414d30c1ea3c6b12383a6b19be0be"
+    }
+  ]
+}

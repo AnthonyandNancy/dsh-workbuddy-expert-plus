@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "mai-deal-advisor-mai-deal-advisor",
+  "source": "bundled",
+  "sourcePackage": "mai-deal-advisor",
+  "sourceAgent": "agents/mai-deal-advisor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "MAI Lab并购交易Agent",
+  "profession": "项目来了，先把路理清",
+  "categoryId": "08-FinanceInvestment",
+  "description": "接住真实并购项目：拆解资料、画交易结构、核数字与股权，也梳理买方、资金与推进路径。",
+  "tags": [
+    "项目拆解",
+    "交易结构图",
+    "买方与资金对接"
+  ],
+  "quickPrompts": [
+    "客户刚发来这些材料，帮我判断这单先从哪里下手",
+    "把这套交易安排画成结构图，并检查股权比例",
+    "这单需要找买方，帮我梳理买方画像和推进路径"
+  ],
+  "roleFile": "mai-deal-advisor-mai-deal-advisor/role.md",
+  "avatarFile": "mai-deal-advisor-mai-deal-advisor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7637dfb129fd371321e023c7253ec8d2d81dae5a9931aba03f50b992201428e9",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "00e21c197d9a1128d8cb7b5b82a4ae4a87e5b19cad8b675c280648cdef8530f2"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0339b5b64e1c0e8ff76261a8be0528e8c91bfd6b91c3332d9fd59cf3e007b22a"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "hr-operations-team-hr-director",
+  "source": "bundled",
+  "sourcePackage": "hr-operations-team",
+  "sourceAgent": "agents/hr-director.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "HR 运营团队",
+  "profession": "HR 运营团队",
+  "categoryId": "09-OperationsHR",
+  "description": "人力资源管理流程化，招聘筛选、薪酬体系设计、组织发展与HR运营流程化管理，助力企业人才战略落地",
+  "tags": [
+    "HR运营",
+    "薪酬分析",
+    "组织发展"
+  ],
+  "quickPrompts": [
+    "帮我设计面试方案 / 起草 Offer / 规划组织架构",
+    "制定人力资源全流程管理方案",
+    "搭建招聘培训和绩效管理体系"
+  ],
+  "roleFile": "hr-operations-team-hr-director/role.md",
+  "avatarFile": "hr-operations-team-hr-director/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6549113f588d4972dc16bf74d7d97163db2cc6f6bc772a2349fc0160fd0ab15a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "82fad8eebfa70688db0c0ca1948cdd7cb433f81ef8a0d9bf67face00159d8450"
+    },
+    {
+      "path": "role.md",
+      "sha256": "51587c3e2a2234f8bd1e99539b66392cc1a2fa0fd54f58aa093b68baec51ee5e"
+    }
+  ]
+}

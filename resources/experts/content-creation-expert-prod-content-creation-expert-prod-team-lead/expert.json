@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "content-creation-expert-prod-content-creation-expert-prod-team-lead",
+  "source": "bundled",
+  "sourcePackage": "content-creation-expert-prod",
+  "sourceAgent": "agents/content-creation-expert-prod-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "汽车行业内容创作专家团",
+  "profession": "汽车行业内容创作专家团",
+  "categoryId": "06-ContentCreative",
+  "description": "汽车行业垂类图文创作团队，5 人协作完成选题、撰写、智能配图与质检，一键交付懂车帝、小红书等风格图文",
+  "tags": [
+    "汽车内容创作",
+    "AI配图",
+    "汽车营销"
+  ],
+  "quickPrompts": [
+    "帮我写一篇比亚迪汉EV的深度评测图文文章",
+    "帮我写一篇新款宝马X5的实拍图文",
+    "帮我写一篇三款热门新能源SUV的盘点文章"
+  ],
+  "roleFile": "content-creation-expert-prod-content-creation-expert-prod-team-lead/role.md",
+  "avatarFile": "content-creation-expert-prod-content-creation-expert-prod-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1021b926310c69d7d9f30a7ce1ab831f6e7bd523b50f4579867595d6f7fa7fb1",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "9fd4f2a76c067a7f457e9d5585a66c686826cc823d0480dde02a93ecf73da376"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9065650e348068a6781bc2996197522c55a312c98adf54792fac28879e693ef3"
+    }
+  ]
+}

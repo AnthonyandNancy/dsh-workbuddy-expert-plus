@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "frontend-slides-frontend-slides",
+  "source": "bundled",
+  "sourcePackage": "frontend-slides",
+  "sourceAgent": "agents/frontend-slides.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "HTML幻灯片制作专家",
+  "categoryId": "06-ContentCreative",
+  "description": "零依赖打造动画丰富的网页演示文稿，支持从零创建、PPTX转换与幻灯片增强，提供风格预览、在线部署与PDF导出。",
+  "tags": [
+    "幻灯片",
+    "HTML演示",
+    "PPT转换"
+  ],
+  "quickPrompts": [
+    "帮我制作一个HTML网页演示文稿",
+    "把这份PPTX转换成网页幻灯片",
+    "生成三套风格预览供我挑选"
+  ],
+  "roleFile": "frontend-slides-frontend-slides/role.md",
+  "avatarFile": "frontend-slides-frontend-slides/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "29aa0e5b6254b176c02682b0fc914dd061dcfb18dfe6945b5ca03466b128b77b",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "5ff6b81289b2c5b02cb3a055cee91285d9335db0c86b58afaded3da2691785d3"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7cb13e87ecd7b95ff79b14643f90db2de7588fe9e9b94dbc5b9e76f1df1c827f"
+    }
+  ]
+}

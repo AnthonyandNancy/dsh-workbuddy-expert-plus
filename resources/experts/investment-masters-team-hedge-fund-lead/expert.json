@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "investment-masters-team-hedge-fund-lead",
+  "source": "bundled",
+  "sourcePackage": "investment-masters-team",
+  "sourceAgent": "agents/hedge-fund-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "投资大师专家团",
+  "profession": "投资大师专家团",
+  "categoryId": "08-FinanceInvestment",
+  "description": "13位传奇投资哲学家 + 6位专业分析师并行分析，风险管理师评估约束，投资组合经理信号聚合投票，多角度投资分析参考",
+  "tags": [
+    "投资分析",
+    "投资组合",
+    "多大师分析"
+  ],
+  "quickPrompts": [
+    "帮我从多位投资大师的视角分析下腾讯的基本面和估值",
+    "快速分析比亚迪的投资价值",
+    "用巴菲特的方法分析贵州茅台"
+  ],
+  "roleFile": "investment-masters-team-hedge-fund-lead/role.md",
+  "avatarFile": "investment-masters-team-hedge-fund-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "1ccdde67787591ce4016ebe3a64f652603d0ca28706242c6a78096b2380a98a0",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0c8b93775a913f1c88b97473de94a080dff8aa69e70480126a18ecc7ad49e8a8"
+    },
+    {
+      "path": "role.md",
+      "sha256": "1f8696edd7e65b017dfd7363297dd04ae1c86e032b8c34d20a0d220240c51a59"
+    }
+  ]
+}

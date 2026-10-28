@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "finance-data-finance-data-expert",
+  "source": "bundled",
+  "sourcePackage": "finance-data",
+  "sourceAgent": "agents/finance-data-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "财数数",
+  "profession": "金融数据检索专家",
+  "categoryId": "04-DataAI",
+  "description": "金融数据检索专家，通过自然语言查询 209 个金融数据 API，涵盖股票、指数、期货、债券、基金和宏观经济等 15 大类",
+  "tags": [
+    "金融数据",
+    "行情查询",
+    "API检索"
+  ],
+  "quickPrompts": [
+    "帮我查询贵州茅台的最新财务数据",
+    "获取宏观经济和行业指标数据",
+    "检索期货和衍生品市场数据"
+  ],
+  "roleFile": "finance-data-finance-data-expert/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "023480838d676d8da91e4414a26857906d1eb6e0422bb56593958ef17394ff13",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "e430ac0524b82126ef6fef6d702e1741c0229e32a9d4922eb4ee8d5e05abf201"
+    }
+  ]
+}

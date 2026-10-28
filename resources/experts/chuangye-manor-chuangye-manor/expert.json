@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "chuangye-manor-chuangye-manor",
+  "source": "bundled",
+  "sourcePackage": "chuangye-manor",
+  "sourceAgent": "agents/chuangye-manor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "林正刚",
+  "profession": "创业伙伴",
+  "categoryId": "12-IndustryConsultant",
+  "description": "林老师分身+读书伙伴。送《创业可以学》，陪创业者读书，从读书中听痛点，痛点匹配时自然引出课程咨询。擅长GTM落地、敢见客户情绪层突破、顺序判断。",
+  "tags": [
+    "创业判断",
+    "GTM落地",
+    "客户心法"
+  ],
+  "quickPrompts": [
+    "送我一本《创业可以学》",
+    "我正在读《创业可以学》，有想法想聊聊",
+    "帮我看看我现在的创业顺序对不对"
+  ],
+  "roleFile": "chuangye-manor-chuangye-manor/role.md",
+  "avatarFile": "chuangye-manor-chuangye-manor/avatar.jpg",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "da0b6578024fc4de55f3832d60d620e3e6931f7b6161bd630be7315a3b3937d3",
+  "files": [
+    {
+      "path": "avatar.jpg",
+      "sha256": "7155fe2d704fc8e710f9f4ec02090a51834a81b3bef07dd39b715b2f9812c81f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "a02fc0c7388774f44de463b1618fd28e2e65f342afee8117acfc9782fe584f20"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "uae-strategic-advisor-uae-strategic-advisor",
+  "source": "bundled",
+  "sourcePackage": "uae-strategic-advisor",
+  "sourceAgent": "agents/uae-strategic-advisor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "阿联酋战略顾问专家",
+  "profession": "阿联酋战略顾问",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "研判阿联酋七酋长国宏观环境与产业趋势，对比竞合格局与投资选址，评估进入模式与风险，输出出海战略建议",
+  "tags": [
+    "国家分析",
+    "风险评估",
+    "战略布局"
+  ],
+  "quickPrompts": [
+    "我想做个XXX产品进军阿联酋市场，但考虑到阿联酋有独特的文化价值观、习俗、宗教，不同酋长国还有所不同，那我在制订业务战略时需要注意什么",
+    "进军迪拜和阿布扎比的XX业务在战略布局上有什么注意点？",
+    "阿联酋七个酋长国哪个最适合我开设AI科技公司？帮我对比政策、成本与人才分布。"
+  ],
+  "roleFile": "uae-strategic-advisor-uae-strategic-advisor/role.md",
+  "avatarFile": "uae-strategic-advisor-uae-strategic-advisor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "56de52afb14846536f5026e5c25936c37a7df26ec7a53de7bdd82b53a23773e5",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2e169a0ef5524ece914b1d319d27e0aabdecad1c296e3137b9eec5892e8ac897"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7d759bb29e8a00113dc9c15926630daa56b10c266b1b353953972605fee3014c"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "design-engine-design-engine-team-lead",
+  "source": "bundled",
+  "sourcePackage": "design-engine",
+  "sourceAgent": "agents/design-engine-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "设计原型专家团",
+  "profession": "设计原型专家团",
+  "categoryId": "01-ProductDesign",
+  "description": "6 角色 AI 设计团队，覆盖从需求发现到品牌级原型交付的完整工作流，内置 71 套设计系统",
+  "tags": [
+    "设计系统",
+    "原型生成",
+    "品牌设计"
+  ],
+  "quickPrompts": [
+    "用 Stripe 风格设计一个 SaaS 落地页",
+    "设计一套移动端引导流程",
+    "用 Linear 风格做一个数据仪表盘"
+  ],
+  "roleFile": "design-engine-design-engine-team-lead/role.md",
+  "avatarFile": "design-engine-design-engine-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "67e14190a2740caf3bbc46c178c9a4c61dce4b669d2018d76c52ae7af509be52",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "ee3c5d9a20dc31d4a779b17cd8ff8826dfd47fdd348f1dea06552bf9cb59eeef"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e5b5997f9c27cde213fddd23461b1de84ffcb0a7f6cd1969ed49f2fffb024697"
+    }
+  ]
+}

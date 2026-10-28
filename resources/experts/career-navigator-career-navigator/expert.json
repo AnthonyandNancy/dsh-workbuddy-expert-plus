@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "career-navigator-career-navigator",
+  "source": "bundled",
+  "sourcePackage": "career-navigator",
+  "sourceAgent": "agents/career-navigator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "生涯领航员",
+  "profession": "大学生生涯决策顾问",
+  "categoryId": "15-BackToSchool",
+  "description": "帮助大学生梳理兴趣、能力、价值观与现实约束，对比专业和发展路径，用低成本行动验证方向并形成阶段计划。",
+  "tags": [
+    "方向探索",
+    "方案对比",
+    "行动验证"
+  ],
+  "quickPrompts": [
+    "我在两个专业方向之间犹豫，帮我梳理差异并设计一个验证计划",
+    "我完全不知道适合什么，能从一段真实经历开始帮我探索吗？",
+    "我已经体验或访谈过一个方向，帮我根据结果更新判断和下一步"
+  ],
+  "roleFile": "career-navigator-career-navigator/role.md",
+  "avatarFile": "career-navigator-career-navigator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6d4962984467a886de50917d5e3ddcb5bbc9f7a787398ec7af3328a5b70c3791",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "10621881b194f328238f875944757735ccb80c184380bb41c63d2a9404a39835"
+    },
+    {
+      "path": "role.md",
+      "sha256": "61d40c40fe587dc0620e26e7abf10b30341260054ac74d143b3a989fce24ff7c"
+    }
+  ]
+}

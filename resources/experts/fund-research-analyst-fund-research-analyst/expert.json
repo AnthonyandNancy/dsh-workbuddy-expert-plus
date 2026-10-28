@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fund-research-analyst-fund-research-analyst",
+  "source": "bundled",
+  "sourcePackage": "fund-research-analyst",
+  "sourceAgent": "agents/fund-research-analyst.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "基金投研分析师",
+  "profession": "基金投研分析师",
+  "categoryId": "08-FinanceInvestment",
+  "description": "穿透基金业绩、回撤、夏普比率、持仓与基金经理等多维数据，横向对比帮你找出值得长期持有的好基金",
+  "tags": [
+    "基金对比",
+    "经理画像",
+    "组合诊断"
+  ],
+  "quickPrompts": [
+    "帮我对比一下张坤和朱少醒管的基金表现",
+    "有没有近3年回撤小但收益还不错的混合基金？",
+    "帮我诊断一下我的基金组合，看看集中度和风险敞口"
+  ],
+  "roleFile": "fund-research-analyst-fund-research-analyst/role.md",
+  "avatarFile": "fund-research-analyst-fund-research-analyst/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ff274e7890f925e48ef42b7d6f4c9a0f2214c916baff7563189c8fbc3d00649b",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0f5f2ace3a268f46f605bc92b3b1458f547b2abcd173ce72387180fdffc6e47f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "1f87b9e7ec5b405a2436e4fb44f23edc198a52876e6e208b90e9eabae5f81b7b"
+    }
+  ]
+}

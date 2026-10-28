@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "jira-workflow-admin-jira-workflow-admin",
+  "source": "bundled",
+  "sourcePackage": "jira-workflow-admin",
+  "sourceAgent": "agents/jira-workflow-admin.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "看板达",
+  "profession": "Jira工作流管理员",
+  "categoryId": "10-ProjectQuality",
+  "description": "精通Jira配置和敏捷工作流设计，让工具真正服务于团队效率",
+  "tags": [
+    "Jira管理",
+    "工作流配置",
+    "项目模板"
+  ],
+  "quickPrompts": [
+    "我们的Jira工作流程不够优化,影响团队协作效率,请Jira工作流管理员帮我们优化Jira配置。",
+    "搭建Jira自动化规则和通知体系",
+    "制定Jira项目模板和字段规范"
+  ],
+  "roleFile": "jira-workflow-admin-jira-workflow-admin/role.md",
+  "avatarFile": "jira-workflow-admin-jira-workflow-admin/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "93c9ecade3c7415357b35e70f12ffd0f89defda7c56a551d20c77745aa025ac3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "de0a6f03d5fc5909d04a8d503cabbbacb33f5456bce3d35d508d0d35847ac8bf"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c540a4296fc8485857f647db279643ffeb9455592f8644cd5d3fa1cf2f66655e"
+    }
+  ]
+}

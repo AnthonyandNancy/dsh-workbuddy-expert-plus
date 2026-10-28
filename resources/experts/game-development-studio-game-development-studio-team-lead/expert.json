@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "game-development-studio-game-development-studio-team-lead",
+  "source": "bundled",
+  "sourcePackage": "game-development-studio",
+  "sourceAgent": "agents/game-development-studio-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "游戏开发工作室",
+  "categoryId": "03-GameSpatial",
+  "description": "统筹策划、技术、美术、音频、质量、运营六大专业成员，以七阶段工作流驱动游戏从概念到上线流程协同开发。",
+  "tags": [
+    "游戏开发",
+    "工作室流程",
+    "设计到发布"
+  ],
+  "quickPrompts": [
+    "帮我把游戏项目当工作室来推进，先告诉我现在该走哪个阶段",
+    "帮我头脑风暴一个游戏概念，含设计支柱、MDA分析与范围分层",
+    "规划下一个冲刺：挑选就绪故事、实现、测试并收尾"
+  ],
+  "roleFile": "game-development-studio-game-development-studio-team-lead/role.md",
+  "avatarFile": "game-development-studio-game-development-studio-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ddfb7818b2f5742326cb3c4d561cbb12a47f26656882e94799e232184af7f125",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "223159588c10aca0d29aa60e33271b8a4b74e4f303e4385ea2e64ededc867edb"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f30aaebcea12d14f047aecb7fffc7c3095d1aad8369648b940c51751e07a0d6d"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "migraq-team-migraq-team-lead",
+  "source": "bundled",
+  "sourcePackage": "migraq-team",
+  "sourceAgent": "agents/migraq-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯云上云迁移专家团",
+  "profession": "腾讯云上云迁移专家团",
+  "categoryId": "13-TencentZone",
+  "description": "7位专家协作完成上云迁移：产品选型、Landing Zone、架构设计、交付实施、运维与FDE部署",
+  "tags": [
+    "云迁移",
+    "方案设计",
+    "Landing Zone"
+  ],
+  "quickPrompts": [
+    "帮我规划从阿里云整体迁移到腾讯云的方案",
+    "帮我设计多账号云环境的 Landing Zone",
+    "评估迁移风险并制定交付时间表"
+  ],
+  "roleFile": "migraq-team-migraq-team-lead/role.md",
+  "avatarFile": "migraq-team-migraq-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "fd4553707fe99a9d413caa4e794ba36d862c70e8ad071e004309bed0480ea456",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "29e1e385d7a0a7d957a8a55fd3c18f84b93a0fb358eb1812e155705ea782a7f5"
+    },
+    {
+      "path": "role.md",
+      "sha256": "ce6322a8940d956114cba56e2abc5e2c1f4d5c1a5d0382a1664ed8af35523d4d"
+    }
+  ]
+}

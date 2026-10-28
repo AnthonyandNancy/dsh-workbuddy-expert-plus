@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "id": "user-experience-researcher-user-experience-researcher",
+  "source": "bundled",
+  "sourcePackage": "user-experience-researcher",
+  "sourceAgent": "agents/user-experience-researcher.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "探真真",
+  "profession": "用户体验研究员",
+  "categoryId": "01-ProductDesign",
+  "description": "用真实数据而非假设验证设计决策，专精用户行为分析和可用性测试",
+  "tags": [
+    "用户研究",
+    "可用性测试",
+    "数据洞察"
+  ],
+  "quickPrompts": [
+    "我们想深入了解用户需求和痛点,需要科学的用户研究方法,请用户体验研究员帮我制定用户研究计划并分析研究结果。",
+    "进行用户行为分析和体验洞察",
+    "输出可执行的用户研究报告和建议"
+  ],
+  "roleFile": "user-experience-researcher-user-experience-researcher/role.md",
+  "avatarFile": "user-experience-researcher-user-experience-researcher/avatar.png",
+  "skills": [
+    "minimax-docx"
+  ],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "26ecd357f032cbb60a4767dbd4a742ec1dae90f8e41f05d5bb44c8a1bfb4c8e4",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "4138226ee89e6e6cd7147818cc916548c04ebb5690f2803523e7e5f3789f7682"
+    },
+    {
+      "path": "role.md",
+      "sha256": "13debf738b179ca1e1fceaed1516036e0812c4127f733cae70ace482d76ff126"
+    },
+    {
+      "path": "skills/minimax-docx/assets/styles/academic_styles.xml",
+      "sha256": "367341503b9ff77c8f8809f4a1eb3e351b654cbaea2209b4fe305d734f714d9b"
+    },
+    {
+      "path": "skills/minimax-docx/assets/styles/corporate_styles.xml",
+      "sha256": "d6216dce62323e626049172ea9c77447dfca2eb518fdf17c64d4f2239f1ef2b5"
+    },
+    {
+      "path": "skills/minimax-docx/assets/styles/default_styles.xml",
+      "sha256": "f77d90d5c9a255a4adc351e655d2248da76c1bc01e1af6b7323e3d0e37fcddfc"
+    },
+    {
+      "path": "skills/minimax-docx/assets/xsd/aesthetic-rules.xsd",
+      "sha256": "734888609265c327fd1f5d1a068957676b442ba65dcd79a6b735e0bae3d5e03e"
+    },
+    {
+      "path": "skills/minimax-docx/assets/xsd/business-rules.xsd",
+      "sha256": "ebf945da7561e2457ec0a9e2b9cd36f3c88fbd926d0c13c643d61c235bc8b056"
+    },
+    {
+      "path": "skills/minimax-docx/assets/xsd/common-types.xsd",
+      "sha256": "2cccc41a42855d6c10471b2e7e085c633c47d8344276b0be4d75d772b18839cd"
+    },
+    {
+      "path": "skills/minimax-docx/assets/xsd/wml-subset.xsd",
+      "sha256": "4c23b3cb324b85989f6c1a7bdcaa35c617289e47ccfed043464446dd06d75b7c"
+    },
+    {
+      "path": "skills/minimax-docx/LICENSE",
+      "sha256": "8288840186d6d3d6a0b74395e17448c06160b38e796963c7745f579631b47b01"
+    },
+    {
+      "path": "skills/minimax-docx/references/cjk_typography.md",
+      "sha256": "ddc0b9e0984d43101da24b67df3d0603236b67fe46c8d0ecbc3c6bea7983afcd"
+    },
+    {
+      "path": "skills/minimax-docx/references/cjk_university_template_guide.md",
+      "sha256": "986e44f5cf3ea4aa69b436c73581dca2d31ad130965269a934caf3838c9ff27d"
+    },
+    {
+      "path": "skills/minimax-docx/references/comments_guide.md",
+      "sha256": "fe9150b84734844f3010561927436f6bc787fe46c4cf4d621abb330835d1ba38"
+    },
+    {
+      "path": "skills/minimax-docx/references/design_good_bad_examples.md",
+      "sha256": "e2c9331ed35b211f1239ed283abbac444c2a15347c710f01a97c33d0e952a079"
+    },
+    {
+      "path": "skills/minimax-docx/references/design_principles.md",
+      "sha256": "e9fe196ad16fecce988671cf8a8fc9ec3403e792530ee4c665370ddbc266ed20"
+    },
+    {
+      "path": "skills/minimax-docx/references/openxml_element_order.md",
+      "sha256": "d9ab673ca87ffb2fc0586b77702bf339cdb3283edc540c2f450732746afe8ca1"
+    },
+    {
+      "path": "skills/minimax-docx/references/openxml_encyclopedia_part1.md",
+      "sha256": "598c5fbf357f536fd9f3bd1a1307be536f533495631981d9f7518751019490c9"
+    },
+    {
+      "path": "skills/minimax-docx/references/openxml_encyclopedia_part2.md",
+      "sha256": "c4adc5480fedaeee85e8963d09fd27914f731ce298b323df9133b9745679ecea"
+    },
+    {
+      "path": "skills/minimax-docx/references/openxml_encyclopedia_part3.md",
+      "sha256": "9e801e58c53b83f5988a23a533a0a5b0b3a80c6b3dea06b5a1ce902a685b2ba0"
+    },
+    {
+      "path": "skills/minimax-docx/references/openxml_namespaces.md",
+      "sha256": "be2ecd2f84e02b2ba492d9c68fb4cf6cac3d016cc583425b73d4105c5464d02d"
+    },
+    {
+      "path": "skills/minimax-docx/references/openxml_units.md",
+      "sha256": "ce480ab62cf78c045a04b0c8f9ef6400a5efaa33233ace8eb666f9cbe1f9acde"
+    },
+    {
+      "path": "skills/minimax-docx/references/scenario_a_create.md",
+      "sha256": "4be8e1f88b2993a43b74854a78533233b385a84d5b3c1510be86bed2f6af567e"
+    },
+    {
+      "path": "skills/minimax-docx/references/scenario_b_edit_content.md",
+      "sha256": "f04c35eec63b6e5df6b1b6d1a06a1feb26c920262686941ff705642c55e6cc4a"
+    },
+    {
+      "path": "skills/minimax-docx/references/scenario_c_apply_template.md",
+      "sha256": "3602c5cad48ef0f3e2ed08113be2a7ce36e9b8cadb5987bc9a5a9f06e2f6d335"
+    },
+    {
+      "path": "skills/minimax-docx/references/track_changes_guide.md",
+      "sha256": "57fa023f4a6db8b9225d56a7d5e17f3eb9fa05ddaac6f891033253f84f94b82f"
+    },
+    {
+      "path": "skills/minimax-docx/references/troubleshooting.md",
+      "sha256": "70382108dcd419fd46b7c66cee4dfad7da82d378afe4f3bed74c60ffdb9d1caa"
+    },
+    {
+      "path": "skills/minimax-docx/references/typography_guide.md",
+      "sha256": "835f3549972f24b94b89eb08a86df932e5f957f322337fcd75e24cb3b06c0738"
+    },
+    {
+      "path": "skills/minimax-docx/references/xsd_validation_guide.md",
+      "sha256": "de6c4285ffec5cbd5c80bbc1eff6afb9c7fc0757d957a1f069cd3eec277036be"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/doc_to_docx.sh",
+      "sha256": "9966b21215c82094efdd07cbeb36975307ebc5e15170c4694e9fa2a0f3645e8f"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/docx_preview.sh",
+      "sha256": "3960b1a02b73aad32efaca316f98239079caf7993307540ed4cf4b8039e70ccd"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Cli/MiniMaxAIDocx.Cli.csproj",
+      "sha256": "d5ef8fdb094916f8e6d3cb4eff17069aec91e14683d8755175457bd3d9db000b"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Cli/Program.cs",
+      "sha256": "daae3bc20cbdc9b77d91cab3a74efb40f5b9af661384a8c87eb726405d13bddc"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Commands/AnalyzeCommand.cs",
+      "sha256": "b1d452ad764f4ea8ea106bb0e837adba53014e612c9166c71fb7aa9d72f0a019"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Commands/ApplyTemplateCommand.cs",
+      "sha256": "934bc17f239a9bf478596312447c048b001b459ddd2db70010ca0314aed23675"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Commands/CreateCommand.cs",
+      "sha256": "74382c607387fbf2036ee202696799f20b6bcf6a52a7670cc2fd0a01c4045449"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Commands/DiffCommand.cs",
+      "sha256": "218239b9325cde5b1955a6ce0237d1d6ac05ed6a006a340733767e59b575234f"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Commands/EditContentCommand.cs",
+      "sha256": "cc779ef7ddc364310ab942e231eb8cfc8c761beae8ae4e57b6134b8ce1702624"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Commands/FixOrderCommand.cs",
+      "sha256": "0bdfd163069211eb17594504f4b61f26773a96c00182cb84a028df0a096b73f0"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Commands/MergeRunsCommand.cs",
+      "sha256": "2dd5d519aa5e0cf9533448f63d89e6776b5b7019ffb34868a6c715741a389e66"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Commands/ValidateCommand.cs",
+      "sha256": "856697852a5254b977d97f301a759e42a03b893f690fe88ede2c46a30f336480"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/MiniMaxAIDocx.Core.csproj",
+      "sha256": "6f87fe7e0b6b2e8c7d4a068ebfb7d6709d932e2f11294afc5613f63327377829"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/OpenXml/CommentSynchronizer.cs",
+      "sha256": "a4454a6a493f011857a5d634a918e9e9a398556644d6706e57ac8eb4078de7f0"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/OpenXml/ElementOrder.cs",
+      "sha256": "01620be46ba0dc6a7ae113c800181367b1da02070f661252d80187b051273c11"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/OpenXml/NamespaceConstants.cs",
+      "sha256": "8d8099f70cac3e8976b47ef34fec224b4bc92ee9ff8286483ef7315cfedeb467"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/OpenXml/RunMerger.cs",
+      "sha256": "6d90be5f4427c29eabd92a5709bbe7a0b0f6ab8177347575bc5e197a350e13c8"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/OpenXml/StyleAnalyzer.cs",
+      "sha256": "8d45627608eaef19b7844c1bd8e6d8c8796bc0cbf5f9c50a47d85b45b61f8985"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/OpenXml/TrackChangesHelper.cs",
+      "sha256": "a95da32c428f58d6fb76090de47679f0dc3ee0b9e9d1821cea7e778e0d3cccb3"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/OpenXml/UnitConverter.cs",
+      "sha256": "045038a1865d21cb11e32c74b7dc5152e03905e969ca892743c256840f2a1ee7"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/AestheticRecipeSamples_Batch1.cs",
+      "sha256": "e5b478f71abe1892064b5baec9c5d3d91b8e9e14e21a5ee98bdca7f543510cb6"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/AestheticRecipeSamples_Batch2.cs",
+      "sha256": "f984ed0493762c12706e88295504fa2cced700d230a0de030d80e28cbc7e650f"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/AestheticRecipeSamples_Batch3.cs",
+      "sha256": "e2e4ff1ecefcd9e984af4ac2b82c6cfda2b01e842812eb420c377a4921fb6f92"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/AestheticRecipeSamples_Batch4.cs",
+      "sha256": "6c0c370a2dc5b06e6ceb4f09333d15f043bb4314673740bd150d2d34fb13454f"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/AestheticRecipeSamples.cs",
+      "sha256": "12e6921d53b8e4b7f71f499c7d06a9c169e16a80b9666bd6a17e27503bc9c651"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/CharacterFormattingSamples.cs",
+      "sha256": "95458b9de60a381e14461a6224aa2d660266de4344800870bbc1530511818075"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/DocumentCreationSamples.cs",
+      "sha256": "f6d567f68f624c455549040629c3419fdc0591e5a45ba5b9abe79fb84c7ab425"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/FieldAndTocSamples.cs",
+      "sha256": "138652396d18836cc2252a82fcd2528a949ea32db1c3d74c47d14c3440ccdf8d"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/FootnoteAndCommentSamples.cs",
+      "sha256": "aace21251fd6a4aa5aa7b754d3eab3d291419641c1dad2350278ae64dc5e842c"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/HeaderFooterSamples.cs",
+      "sha256": "12f51f5a2befe41ff299c342eedfa5c0549cfe2fe53df69533009c2f7479cf92"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/ImageSamples.cs",
+      "sha256": "0fe5bbb7c810b6c99313c11829f72d01cc896d9c6e01909edcd1431b8e7c690e"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/ListAndNumberingSamples.cs",
+      "sha256": "2e696c491f4d95cdb1bef4e65898202a87385a76ab4793cd9422ee0452b89287"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/ParagraphFormattingSamples.cs",
+      "sha256": "2fe44aa4461eafdb6d20f8e6f5480c217bf0bc54284ea025914f315f394c0258"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/StyleSystemSamples.cs",
+      "sha256": "b8b4cb6ed9a0c67797cf8b0aab00b482c650173ad41d7cdd5d78af3a50b4cbea"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/TableSamples.cs",
+      "sha256": "9d8cb65afaef088d8c90ea438fd8155b91e1ca74c5b92a1049698565faa39052"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Samples/TrackChangesSamples.cs",
+      "sha256": "067ecbc69bf70bece3f26553ddfb2452e166a570d73942dcc60c996b8fc52d6a"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Typography/CjkHelper.cs",
+      "sha256": "eacdceed0103749ef34de8a32bdc1cc4df8c23dad360dce33e24ba626d733ebc"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Typography/FontDefaults.cs",
+      "sha256": "91aa2368bad387763f60e4b2156012dc699ed78eaacccc3e1e32dca95e1fc0f4"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Typography/PageSizes.cs",
+      "sha256": "6e95bb3f99d0b35e93ea55233e58cb1d6b4d947c0ca769ab01d983c9b78aef66"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Validation/BusinessRuleValidator.cs",
+      "sha256": "173b07e0c24f4f5b64e145a90a2630a640e22b2afb6e092f75f3a5ec42197791"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Validation/GateCheckValidator.cs",
+      "sha256": "6f07ee9a1631d868e119313131b8cfc75a605ac6ba4046ebbae17d164f94d9d7"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Validation/ValidationResult.cs",
+      "sha256": "e992fec3bf1756869a523dfc22714f02f91639b5051f64567b76f89caa037d0f"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.Core/Validation/XsdValidator.cs",
+      "sha256": "d6ca121941dcb906047f2c591eaf80f1e69bd8cd5c687a238c5b6f80f89f6a6d"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/dotnet/MiniMaxAIDocx.slnx",
+      "sha256": "145f185521c15cfc13a3cc1bd6ca5494132a88f5c242b1f0994c330faa9b2aeb"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/env_check.sh",
+      "sha256": "317dd5067710d32699f1bb7819c406ee57f33a496db31944570dd24110cc7342"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/setup.ps1",
+      "sha256": "d47aa72db7d0558a67695b88d50127175cfdbec17f03f12e48317a36ab54c121"
+    },
+    {
+      "path": "skills/minimax-docx/scripts/setup.sh",
+      "sha256": "9b371d075d4ca29346cd4d2d6889e0200d35c8ea07ce2aa3edbe651749c6bc9b"
+    },
+    {
+      "path": "skills/minimax-docx/SKILL.md",
+      "sha256": "ca1bfe874dd38ddb4f06485c8b0f495dd61ef5b6fb84803671ed4c927a8e36fc"
+    }
+  ]
+}

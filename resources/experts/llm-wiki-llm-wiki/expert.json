@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "llm-wiki-llm-wiki",
+  "source": "bundled",
+  "sourcePackage": "llm-wiki",
+  "sourceAgent": "agents/llm-wiki.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "知库库",
+  "profession": "知识管理专家",
+  "categoryId": "04-DataAI",
+  "description": "基于 Andrej Karpathy 的 LLM Wiki 模式，帮助用户构建、维护和查询持久化的个人知识库。擅长将原始资料（论文、文章、笔记等）编译为结构化 Markdown Wiki，自动建立交叉引用、标注矛盾、维护索引。",
+  "tags": [
+    "LLM知识库",
+    "模型文档",
+    "技术百科"
+  ],
+  "quickPrompts": [
+    "帮我管理下我的知识库？",
+    "整理LLM论文和最佳实践文档",
+    "对比分析不同LLM模型能力"
+  ],
+  "roleFile": "llm-wiki-llm-wiki/role.md",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "52fc9896baefcaca006a71bf5c73a7a15063d463b49b52d6ba9e5b03dafedf76",
+  "files": [
+    {
+      "path": "role.md",
+      "sha256": "ed386dac5f12bceeb160e747a71a5308606896020d90d730195588c18692d2f6"
+    }
+  ]
+}

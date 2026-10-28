@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "jinshuju-form-expert-jinshuju-form-expert",
+  "source": "bundled",
+  "sourcePackage": "jinshuju-form-expert",
+  "sourceAgent": "agents/jinshuju-form-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "表单管理专家",
+  "profession": "金数据表单助手",
+  "categoryId": "04-DataAI",
+  "description": "搭建报名、问卷、预约、收款等表单，增删改查、批量导入导出数据，替代登录后台操作。",
+  "tags": [
+    "活动报名",
+    "问卷调研",
+    "数据管理"
+  ],
+  "quickPrompts": [
+    "帮我做一个训练营报名表，299 元一位，限 60 人报名",
+    "帮我分析这个月的满意度调研数据，看看用户最关心的问题是什么",
+    "查一下上周报名表里还没缴费的人，列个清单"
+  ],
+  "roleFile": "jinshuju-form-expert-jinshuju-form-expert/role.md",
+  "avatarFile": "jinshuju-form-expert-jinshuju-form-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "99e03457a9b0e614524d7de895bdc8c01fe57a1139a2d5470ef6c68e9a59978c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "bdfb700edd1df3cf076877ea891f9310425cac0ab476b0597bb79b7e629a84b4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "614bc0401d8e728e60f4a729531fca3acf028351e2219bf29d086d8fe23f38ad"
+    }
+  ]
+}

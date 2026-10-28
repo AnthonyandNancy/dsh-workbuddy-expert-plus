@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "game-designer-game-designer",
+  "source": "bundled",
+  "sourcePackage": "game-designer",
+  "sourceAgent": "agents/game-designer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "玩法师",
+  "profession": "游戏设计师",
+  "categoryId": "03-GameSpatial",
+  "description": "精通游戏系统和机制设计，用循环杠杆和心理构建玩法",
+  "tags": [
+    "游戏设计",
+    "玩法策划",
+    "游戏系统"
+  ],
+  "quickPrompts": [
+    "我们需要设计好玩的游戏机制和系统,请游戏设计师帮我们设计游戏玩法和平衡性。",
+    "制定游戏数值体系和平衡方案",
+    "撰写游戏设计文档GDD"
+  ],
+  "roleFile": "game-designer-game-designer/role.md",
+  "avatarFile": "game-designer-game-designer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "bd4fc1f2e88a8e028f2c5aa5e0e31e95a1b9c8e5a5ebb88e2aab90654e51fa0b",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "b06ad8ac0fd9df06cebb261f9a9ba595d258010fcdefb8a5a562bbd23e96fd73"
+    },
+    {
+      "path": "role.md",
+      "sha256": "840850af278f1dc89da002f8e070bc8f806ee38505586611a95964d9089ad96f"
+    }
+  ]
+}

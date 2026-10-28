@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "chatcut-video-editor-chatcut-video-editor",
+  "source": "bundled",
+  "sourcePackage": "chatcut-video-editor",
+  "sourceAgent": "agents/chatcut-video-editor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "一站式视频创作专家",
+  "profession": "ChatCut 视频剪辑师",
+  "categoryId": "06-ContentCreative",
+  "description": "AI 视频剪辑与素材生成：剪辑、字幕、转场、特效，并生成视频/图片/音乐/配音，保持可手动编辑的多轨时间线，支持导出 Pr / DaVinci 工程文件。",
+  "tags": [
+    "视频剪辑",
+    "动效设计",
+    "AI 视频生成"
+  ],
+  "quickPrompts": [
+    "创意精剪这段口播，优化叙事节奏，并添加字幕、B-roll、音乐和MG动画",
+    "制作一条讲解AI如何改变视频剪辑的MG动画视频，并添加英文旁白",
+    "将这份素材剪成10条短视频，添加字幕、MG动画，并为每条制作封面"
+  ],
+  "roleFile": "chatcut-video-editor-chatcut-video-editor/role.md",
+  "avatarFile": "chatcut-video-editor-chatcut-video-editor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "fd55c330fb975c2647bfc99bf9a68ea4e2c459c7076adf33f203743d5326ed24",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "521cc2088a18d6d38211e34dcf816a52ad8cfd06a0583ace65f6307d49f0b26e"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b550d239185a46f1d5de4cb8ad773862f456a56c0abbd5698b2cd4964d32bdb6"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ppt-creation-expert-ppt-creator",
+  "source": "bundled",
+  "sourcePackage": "ppt-creation-expert",
+  "sourceAgent": "agents/ppt-creator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯云知（乐享）",
+  "profession": "腾讯云PPT制作专家",
+  "categoryId": "06-ContentCreative",
+  "description": "基于腾讯云知（乐享）平台，整合通用汇报、面客方案、高拜材料与演讲讲稿生成的 PPT 制作专家",
+  "tags": [
+    "PPT 生成",
+    "解决方案",
+    "面客材料"
+  ],
+  "quickPrompts": [
+    "帮我生成一份智慧医疗行业的面客解决方案 PPT",
+    "帮我做一份拜访客户董事长的高拜材料",
+    "把这份文档做成 PPT"
+  ],
+  "roleFile": "ppt-creation-expert-ppt-creator/role.md",
+  "avatarFile": "ppt-creation-expert-ppt-creator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ae389b2d237bfac6983b7e8497229a97c52b991fae5601fd728be726f6868062",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8d4fd701d30c54ffdeb54ff5168c40136bb85e8c09a21828bf1351d9e1f63975"
+    },
+    {
+      "path": "role.md",
+      "sha256": "a6086ed32ea11848c2cebedb70098db8025cfdc7af6968fd55bcc041926dea60"
+    }
+  ]
+}

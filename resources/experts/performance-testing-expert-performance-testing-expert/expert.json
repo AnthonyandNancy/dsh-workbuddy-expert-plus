@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "performance-testing-expert-performance-testing-expert",
+  "source": "bundled",
+  "sourcePackage": "performance-testing-expert",
+  "sourceAgent": "agents/performance-testing-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "压测测",
+  "profession": "性能测试专家",
+  "categoryId": "10-ProjectQuality",
+  "description": "精通性能测试和基准评估，用数据证明性能改进而非凭感觉",
+  "tags": [
+    "性能测试",
+    "压力测试",
+    "容量规划"
+  ],
+  "quickPrompts": [
+    "我们的产品性能在高峰期表现不佳,需要进行性能测试和优化,请性能测试专家帮我们进行性能压测和调优。",
+    "分析性能瓶颈并输出优化建议",
+    "搭建性能基线和持续监控体系"
+  ],
+  "roleFile": "performance-testing-expert-performance-testing-expert/role.md",
+  "avatarFile": "performance-testing-expert-performance-testing-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0e04741359e5452cb4c20c97d0f3d96198539b27aab07c9c41b56c273846f92e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d097f5be75f29dfc330bc9cdae8971a009b888e09788043b52daf394326c37e6"
+    },
+    {
+      "path": "role.md",
+      "sha256": "fea07003b66a14de8bec1e49c1e3a498fa5b59695bdbee497c2e80d779aa5f18"
+    }
+  ]
+}

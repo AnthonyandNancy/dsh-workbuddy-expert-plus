@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "remotion-video-generator-remotion-video-expert",
+  "source": "bundled",
+  "sourcePackage": "remotion-video-generator",
+  "sourceAgent": "agents/remotion-video-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "动画画",
+  "profession": "视频生成专家",
+  "categoryId": "06-ContentCreative",
+  "description": "基于 Remotion 的视频生成专家，创建产品演示、解说视频、社交媒体内容和演示文稿",
+  "tags": [
+    "编程式视频",
+    "视频生成",
+    "React视频"
+  ],
+  "quickPrompts": [
+    "帮我生成一个产品介绍视频",
+    "设计视频场景规划和分镜脚本",
+    "为视频添加背景音乐和转场特效"
+  ],
+  "roleFile": "remotion-video-generator-remotion-video-expert/role.md",
+  "avatarFile": "remotion-video-generator-remotion-video-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6cc57e5b5ee0f7b6bfe503bae65431510c6ade0dcac3a3410b3a039be4e9bac1",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "338917cd8d6692c84f9c6f936c92bd4c090eaea632e2637bbb3ef9c71d7ed506"
+    },
+    {
+      "path": "role.md",
+      "sha256": "93789d338d4d8734c1a2c3a0f55e343103dad1e257bdb41d18d40cca184effd4"
+    }
+  ]
+}

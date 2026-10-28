@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "inspection-expert-inspection-expert",
+  "source": "bundled",
+  "sourcePackage": "inspection-expert",
+  "sourceAgent": "agents/inspection-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "CloudQ",
+  "profession": "腾讯云风险巡检专家",
+  "categoryId": "13-TencentZone",
+  "description": "云资源巡检专家。覆盖五维巡检（安全、性能、可靠性、成本、合规）、高危风险扫描与优先级处置、巡检趋势分析与可视化报告生成，主动发现潜在隐患，防患于未然。",
+  "tags": [
+    "云巡检",
+    "风险扫描",
+    "安全合规",
+    "主动运维"
+  ],
+  "quickPrompts": [
+    "对我的云资源发起一次全量巡检",
+    "当前有哪些高危风险需要立即处理？",
+    "上次巡检发现了哪些问题？"
+  ],
+  "roleFile": "inspection-expert-inspection-expert/role.md",
+  "avatarFile": "inspection-expert-inspection-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b310fa2d98cedf31a28b7a0a1a158d42de53dc2700080711c39b20ac8a103880",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "679f13a0fae80509b47bb5009fa842c5df2fcb923610558e91226ad8a3debd5b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b9b3c068a9d94f335dcf901e3b10493353ba34af1cdaacf6d1bd284e1d036ccf"
+    }
+  ]
+}

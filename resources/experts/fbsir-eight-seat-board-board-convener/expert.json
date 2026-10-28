@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fbsir-eight-seat-board-board-convener",
+  "source": "bundled",
+  "sourcePackage": "fbsir-eight-seat-board",
+  "sourceAgent": "agents/board-convener.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "独董会",
+  "profession": "独董会",
+  "categoryId": "12-IndustryConsultant",
+  "description": "福帮手经营决策独立审议专家团｜按案组建必要席位，独立判断、交叉质询、保留异议，交付可追溯行动备忘录",
+  "tags": [
+    "一号位决策",
+    "独立审议",
+    "决策备忘录"
+  ],
+  "quickPrompts": [
+    "我正在面对一个重要经营决策。请先给我一张紧凑决策起手卡，最多问 2 个决定性问题；末尾只给主动作“按建议开始独立审议”和次级分支“补充关键事实”“切换审议模式”。在我明确确认前不要写案卷，也不要建团。",
+    "为这个并购或投资决策起手卡，问2个决定性问题，从战略、资本财务、法务和整合候选中选3个改变结论的专业席保留异议；只显示“按建议开始独立审议”“补充关键事实”“切换审议模式”，确认前不写案卷不建团。",
+    "公司增长停滞了，请先形成紧凑决策起手卡，比较深挖主业、变革渠道和可逆的小试第二曲线，最多问 2 个决定性问题；仍只显示“按建议开始独立审议”“补充关键事实”“切换审议模式”，确认前不要写案卷不建团。"
+  ],
+  "roleFile": "fbsir-eight-seat-board-board-convener/role.md",
+  "avatarFile": "fbsir-eight-seat-board-board-convener/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0f59b5de4eedb993eaab572657a8c4712e1f3cb658faf1e0cebcafafd1b753b3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c6cf8ef3e38f00e179f4b30caa4bc43708e6c76638224be8c1b3357fd93119ba"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6ef7debdb8dee3efb56079b1686fec7e28b0b01d62b836a992dd9765144ba2fe"
+    }
+  ]
+}

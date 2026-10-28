@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "trend-researcher-trend-researcher",
+  "source": "bundled",
+  "sourcePackage": "trend-researcher",
+  "sourceAgent": "agents/trend-researcher.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "风向标",
+  "profession": "行业趋势专家",
+  "categoryId": "04-DataAI",
+  "description": "持续追踪行业和技术趋势，为产品战略提供前瞻性洞察",
+  "tags": [
+    "趋势研究",
+    "市场情报",
+    "机会识别"
+  ],
+  "quickPrompts": [
+    "我们想了解行业趋势和竞争态势,为产品决策提供数据支持,请趋势研究员帮我们进行市场趋势分析。",
+    "撰写市场趋势分析报告",
+    "识别新兴机会和用户需求变化"
+  ],
+  "roleFile": "trend-researcher-trend-researcher/role.md",
+  "avatarFile": "trend-researcher-trend-researcher/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "0e11705730b2e3cdc5d96952ce050a07631c15fe458ea5c6d43502b6eee3cb2a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7b90a84614dc2944319db69cbaad9fbf4e930b643358ce739b0fa4a72bff429a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9aeb617daa29131b0e20ba095d4402f92bce2f1bceef92af387ca93721be1ba3"
+    }
+  ]
+}

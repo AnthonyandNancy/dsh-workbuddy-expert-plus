@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "charity-doc-finance-expert-charity-doc-finance-expert",
+  "source": "bundled",
+  "sourcePackage": "charity-doc-finance-expert",
+  "sourceAgent": "agents/charity-doc-finance-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小益",
+  "profession": "公益文书与财务专家",
+  "categoryId": "13-TencentZone",
+  "description": "公益机构文书与财务一站式专家，覆盖项目申请书、结项报告、票据管理、审计准备与合规咨询，帮助公益人从繁琐行政中解放。",
+  "tags": [
+    "公益文书",
+    "公益财务",
+    "合规咨询"
+  ],
+  "quickPrompts": [
+    "帮我写一份腾讯公益平台的项目结项报告",
+    "整理这批捐赠票据并生成台账",
+    "帮我准备年度审计材料清单"
+  ],
+  "roleFile": "charity-doc-finance-expert-charity-doc-finance-expert/role.md",
+  "avatarFile": "charity-doc-finance-expert-charity-doc-finance-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ebd9938f93f836c5197e4d6241b08d306bd6ba92c0165b3499e13d8dbbe62372",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c2a99ec6939ce59d4787f4924684c976db0abc7aa32bd04c2c6ef73095178b43"
+    },
+    {
+      "path": "role.md",
+      "sha256": "5d7cf22e506239891b848e6bc04630b915cf38e4350923b06cd7dbf4bd497668"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "a-share-analysis-a-share-advisor",
+  "source": "bundled",
+  "sourcePackage": "a-share-analysis",
+  "sourceAgent": "agents/a-share-advisor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "A股研究团队",
+  "profession": "A股研究团队",
+  "categoryId": "08-FinanceInvestment",
+  "description": "8位研究专家支持6个预设工作流编排，覆盖宏观策略、盘面解读、个股深度、估值定价、产业链映射、资金追踪、风险诊断",
+  "tags": [
+    "A股研究",
+    "全链路分析",
+    "聪明钱"
+  ],
+  "quickPrompts": [
+    "分析宁德时代基本面和估值",
+    "当前哪个板块最值得关注",
+    "帮我做个持仓健康诊断"
+  ],
+  "roleFile": "a-share-analysis-a-share-advisor/role.md",
+  "avatarFile": "a-share-analysis-a-share-advisor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b8c226ffa74ae211f60a2ddc08d2580c293b965c6d45eddb7e4daf291eabb3da",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "4f1f465d1cd85650dca260495c68b3017e5a9ba5bbe38c345067acafb88d779d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c6bf676b6998064dfb9aa5c57bd5312003ce23beff3f756a407ff6b5cebecca1"
+    }
+  ]
+}

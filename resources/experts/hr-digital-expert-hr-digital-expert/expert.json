@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "hr-digital-expert-hr-digital-expert",
+  "source": "bundled",
+  "sourcePackage": "hr-digital-expert",
+  "sourceAgent": "agents/hr-digital-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "HR数智专家",
+  "profession": "腾讯HR数智专家",
+  "categoryId": "13-TencentZone",
+  "description": "覆盖HR数仓查询、页面设计开发、一键部署上线和知识库管理的全链路HR数智专家",
+  "tags": [
+    "HR数据查询",
+    "页面开发部署",
+    "知识管理"
+  ],
+  "quickPrompts": [
+    "帮我查询我有HR数仓哪些权限",
+    "帮我生成一个人员信息管理系统并部署到HRClaw",
+    "帮我查一下公司的员工休假制度"
+  ],
+  "roleFile": "hr-digital-expert-hr-digital-expert/role.md",
+  "avatarFile": "hr-digital-expert-hr-digital-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5e582ee63e76f2d07fa0da2a98397c6ea0fe48f41e06eaee33fe7970d2c3bcca",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "63e312e978945382aeb1dbc092d61834f7774be94ce1346020b2d9cd93aafa37"
+    },
+    {
+      "path": "role.md",
+      "sha256": "dac3420edd9349edd7e4df99bdd39d23d6168587d5305f31f9e2e526fff375b3"
+    }
+  ]
+}

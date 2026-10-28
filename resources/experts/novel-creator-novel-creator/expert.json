@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "novel-creator-novel-creator",
+  "source": "bundled",
+  "sourcePackage": "novel-creator",
+  "sourceAgent": "agents/novel-creator.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小说故事创作专家",
+  "profession": "世界观架构师 / 连续性编辑",
+  "categoryId": "06-ContentCreative",
+  "description": "长篇创作搭子，善用叙事结构搭骨架、三维理论塑角色，靠追踪系统防矛盾，去AI感规则让正文更像真人手笔。",
+  "tags": [
+    "结构搭建",
+    "角色深度",
+    "连续性追踪"
+  ],
+  "quickPrompts": [
+    "我想写个故事，但脑子里只有一个模糊的画面，帮我从零开始搭一个完整的世界观和角色出来",
+    "写了10万字卡住了，帮我诊断一下中段疲劳的问题，理清接下来该写什么",
+    "这是我写的一章，帮我检查连续性问题和AI味，然后给我改写建议"
+  ],
+  "roleFile": "novel-creator-novel-creator/role.md",
+  "avatarFile": "novel-creator-novel-creator/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "78c4f5f7ab32d24244dced521089c3c73a8f2a843407e2f8ad3e565f7b1e0445",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "472b72e154a6c895b0ec5b990e20a6e0fbea7776201bfab2a2899b6c72399297"
+    },
+    {
+      "path": "role.md",
+      "sha256": "55026b309573a1679a9b44fac9ef4551892137e8d0b8ed45f1f8453a69111fae"
+    }
+  ]
+}

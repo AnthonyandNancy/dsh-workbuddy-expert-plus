@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "legal-search-pro-legal-search-pro",
+  "source": "bundled",
+  "sourcePackage": "legal-search-pro",
+  "sourceAgent": "agents/legal-search-pro.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "法检 Pro",
+  "profession": "法律检索专家",
+  "categoryId": "11-SecurityCompliance",
+  "description": "识别检索意图与场景，按法源位阶检索法规与类案，验证效力评估相似度，适配14种输出可溯源报告。",
+  "tags": [
+    "法规类案检索",
+    "效力核验溯源",
+    "合规依据汇编"
+  ],
+  "quickPrompts": [
+    "我被公司口头辞退，入职半年没签书面劳动合同，能主张哪些赔偿？要法律依据加类案",
+    "对方引用的《合同法》第94条还有效吗，现在对应哪一条",
+    "开一家奶茶店涉及哪些合规法律法规和监管规则？请按效力层级汇编"
+  ],
+  "roleFile": "legal-search-pro-legal-search-pro/role.md",
+  "avatarFile": "legal-search-pro-legal-search-pro/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ecf6a79c06737263991bceefc50b66609fb46b23a6ea363eeb476822483f820b",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c28cd06f23c980227d0a6c2a824e0998010a827263e607d846b6d6b1b029b518"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6d20fa554bfa214ec222f0ce24ac529eade71ae6f0f78a644c6389010bd6ebdf"
+    }
+  ]
+}

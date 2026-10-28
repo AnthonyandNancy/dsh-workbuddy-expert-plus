@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "unreal-technical-artist-unreal-technical-artist",
+  "source": "bundled",
+  "sourcePackage": "unreal-technical-artist",
+  "sourceAgent": "agents/unreal-technical-artist.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "材质通",
+  "profession": "Unreal技术美术",
+  "categoryId": "03-GameSpatial",
+  "description": "精通UE5材质编辑器和Niagara VFX",
+  "tags": [
+    "UE技术美术",
+    "材质编辑",
+    "程序化生成"
+  ],
+  "quickPrompts": [
+    "我们的虚幻项目需要技术美术优化,请虚幻技术美术帮我们优化画面效果。",
+    "设计程序化内容生成PCG方案",
+    "优化美术到引擎的管线流程"
+  ],
+  "roleFile": "unreal-technical-artist-unreal-technical-artist/role.md",
+  "avatarFile": "unreal-technical-artist-unreal-technical-artist/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "bfe8f6697c95312da0d5d2793706676c11fec660bfce865d8c7d616f8e15cea7",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d28f21b9d9ddb65b311986abb39af859fb4fc8715c90b76a436a6e02079905f4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "894ee0491aeef3ef2eb8c6054c19b6c448b61da443b057a1b5d7381967d3507e"
+    }
+  ]
+}

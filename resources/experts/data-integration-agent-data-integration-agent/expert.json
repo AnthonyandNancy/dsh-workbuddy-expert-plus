@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "data-integration-agent-data-integration-agent",
+  "source": "bundled",
+  "sourcePackage": "data-integration-agent",
+  "sourceAgent": "agents/data-integration-agent.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "聚数数",
+  "profession": "数据整合代理",
+  "categoryId": "04-DataAI",
+  "description": "将分散数据清洗整合统一，构建企业统一数据视图",
+  "tags": [
+    "数据集成",
+    "API对接",
+    "数据同步"
+  ],
+  "quickPrompts": [
+    "我们的数据分散在多个系统,需要集成和同步,请数据集成代理帮我们设计数据集成方案。",
+    "设计数据同步和一致性保障方案",
+    "优化数据集成性能和错误处理"
+  ],
+  "roleFile": "data-integration-agent-data-integration-agent/role.md",
+  "avatarFile": "data-integration-agent-data-integration-agent/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d5d1a36f4a31a5599bd2344806df9ca391c002320a08e9494f596ec9a7f33da3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "8ff3ce3d44e80c3048d6e80e8867f00c8098af171c431cb3096ca0f4ad5d464a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "2d6c85c035a83fd528e393d91ebb3c3a19e26c9baed76b9ac3ef7db0e4007de3"
+    }
+  ]
+}

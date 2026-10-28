@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "cordys-crm-cordys-crm",
+  "source": "bundled",
+  "sourcePackage": "cordys-crm",
+  "sourceAgent": "agents/cordys-crm.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Cordys CRM 助手",
+  "profession": "Cordys CRM L2C 管道专家",
+  "categoryId": "07-SalesCommerce",
+  "description": "角色感知型CRM助手，覆盖线索到现金全链路。自动识别角色，提供查询、风险预警与漏斗分析。",
+  "tags": [
+    "CRM管道",
+    "L2C追踪",
+    "销售智能"
+  ],
+  "quickPrompts": [
+    "帮我看看今天有什么要跟的",
+    "这周团队情况怎么样",
+    "看看有哪些逾期回款"
+  ],
+  "roleFile": "cordys-crm-cordys-crm/role.md",
+  "avatarFile": "cordys-crm-cordys-crm/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5892880b96b85e91707d40442dd8ed06328c88a863b4ecd687344947172c5cb0",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "d3d206e89d8ffe6c56704f994998dfe900fd7134b359b9b81ec1b8b4e5dbc19c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "62544329b62f8c80aee4f35aa8caec050420ab6569c04d8ea9da5fe5ffe600a2"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "site-reliability-engineer-site-reliability-engineer",
+  "source": "bundled",
+  "sourcePackage": "site-reliability-engineer",
+  "sourceAgent": "agents/site-reliability-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "稳如山",
+  "profession": "站点可靠性工程师",
+  "categoryId": "02-Engineering",
+  "description": "用软件工程方法论解决运维问题，确保99.99%可用性",
+  "tags": [
+    "站点可靠",
+    "SLO管理",
+    "运维自动化"
+  ],
+  "quickPrompts": [
+    "我们系统的稳定性不足,需要建立监控和自动化的运维体系,请站点可靠性工程师帮我们设计SRE解决方案。",
+    "搭建监控告警和故障自愈体系",
+    "制定容量规划和混沌工程方案"
+  ],
+  "roleFile": "site-reliability-engineer-site-reliability-engineer/role.md",
+  "avatarFile": "site-reliability-engineer-site-reliability-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "14b539c6ddd3680771ec47f428cbb7e81f63c22183c2fef5243f29ca969da681",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7a7087485bc51f193fdee2107b9712496d4bad7cbcdb766e3f97022e6935e93a"
+    },
+    {
+      "path": "role.md",
+      "sha256": "799117a6fcc725f81e6f3632df46756d85b866fc1791343fe4b0e809040a0a4a"
+    }
+  ]
+}

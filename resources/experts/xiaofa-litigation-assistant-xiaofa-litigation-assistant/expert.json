@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "xiaofa-litigation-assistant-xiaofa-litigation-assistant",
+  "source": "bundled",
+  "sourcePackage": "xiaofa-litigation-assistant",
+  "sourceAgent": "agents/xiaofa-litigation-assistant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "小法同学",
+  "profession": "诉讼助手",
+  "categoryId": "11-SecurityCompliance",
+  "description": "诉讼助手：起草起诉状、要素式转换、证据整理、流程指引、强制执行、利息计算。输出 DOCX 格式，Word/WPS 直接编辑。7大法律技能，一站式自助办案。",
+  "tags": [
+    "诉讼助手",
+    "自助办案",
+    "文书起草"
+  ],
+  "quickPrompts": [
+    "你好，我是小法同学，你的诉讼助手。能帮你处理什么法律问题？",
+    "帮我写一份小额借贷的起诉状",
+    "法院通知我开庭了，我要准备什么？"
+  ],
+  "roleFile": "xiaofa-litigation-assistant-xiaofa-litigation-assistant/role.md",
+  "avatarFile": "xiaofa-litigation-assistant-xiaofa-litigation-assistant/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "bc976c197b899a934f11ea528d409b85bfd66327bd250c5a9303b8daafdda80a",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "aa72f14b8cce6a230e6c062f0491c40a659012c970f72b9294a6a5c8d5348b55"
+    },
+    {
+      "path": "role.md",
+      "sha256": "39dd750b7392c4cc3d8456b81b6a86453985e7e70ea0638ccbf5672a92d120c7"
+    }
+  ]
+}

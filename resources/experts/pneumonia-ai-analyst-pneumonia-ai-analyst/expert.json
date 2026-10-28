@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pneumonia-ai-analyst-pneumonia-ai-analyst",
+  "source": "bundled",
+  "sourcePackage": "pneumonia-ai-analyst",
+  "sourceAgent": "agents/pneumonia-ai-analyst.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯健康-觅影-肺部CT影像的肺炎辅助评估专家",
+  "profession": "基于CT序列的肺炎AI辅助诊断分析",
+  "categoryId": "04-DataAI",
+  "description": "上传胸部CT DICOM压缩包即可完成肺炎AI辅助诊断，逐张分析耗时较久请耐心等待。",
+  "tags": [
+    "肺炎AI检测",
+    "胸部CT分析",
+    "DICOM影像诊断"
+  ],
+  "quickPrompts": [
+    "帮我提交胸部CT进行肺炎AI分析",
+    "查询肺炎AI分析任务结果",
+    "提交并自动等待肺炎AI检测结果"
+  ],
+  "roleFile": "pneumonia-ai-analyst-pneumonia-ai-analyst/role.md",
+  "avatarFile": "pneumonia-ai-analyst-pneumonia-ai-analyst/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b7e25164013f648be4d6cab6dc9206d6033c0cc319c93f912367dde627a7c914",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "823173b481a4a682c4365b0ff60284f4386bdf4e8cdea66c100e179157e55ff4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "3879bc129e2fe9a222f94e3ac7fef4ee0b79ceec2333414813e582a1ed32fd2f"
+    }
+  ]
+}

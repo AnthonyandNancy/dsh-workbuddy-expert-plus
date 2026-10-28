@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tiderider-sentiment-tiderider-analyst",
+  "source": "bundled",
+  "sourcePackage": "tiderider-sentiment",
+  "sourceAgent": "agents/tiderider-analyst.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "DataBrain X TideRider",
+  "profession": "游戏舆情分析师",
+  "categoryId": "04-DataAI",
+  "description": "游戏舆情分析师：基于多平台玩家评论，做异动归因、话题提取、版本趋势对比，并生成精品可视化分析报告。",
+  "tags": [
+    "游戏舆情",
+    "玩家分析",
+    "数据智能"
+  ],
+  "quickPrompts": [
+    "帮我分析一下这款游戏最近一周的舆情",
+    "帮我对比不同版本的舆情变化",
+    "做一个玩家游玩时长分段的深度分析"
+  ],
+  "roleFile": "tiderider-sentiment-tiderider-analyst/role.md",
+  "avatarFile": "tiderider-sentiment-tiderider-analyst/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "dfd45dc5f1a3900d1a236a343484115c65903c5ecac455da8146636fa218d34f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "410fea161fcccc9a2c9a5bef4f36fa40583a3bfb367dd174fbb1db4b2332cf7f"
+    },
+    {
+      "path": "role.md",
+      "sha256": "b21b0feab6563b4d99e3e4e772508033a1d769446dd95e0d6d2c70e1c758d739"
+    }
+  ]
+}

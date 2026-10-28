@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "document-skills-document-processing-expert",
+  "source": "bundled",
+  "sourcePackage": "document-skills",
+  "sourceAgent": "agents/document-processing-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "理文文",
+  "profession": "文档处理专家",
+  "categoryId": "10-ProjectQuality",
+  "description": "文档处理套件：Excel 电子表格、Word 文档、PowerPoint 演示文稿和 PDF 文件的创建、编辑与转换",
+  "tags": [
+    "文档处理",
+    "Word操作",
+    "格式转换"
+  ],
+  "quickPrompts": [
+    "帮我处理这份Excel文件并生成PDF报告",
+    "将文档内容转换为结构化数据",
+    "生成和编辑专业商务文档"
+  ],
+  "roleFile": "document-skills-document-processing-expert/role.md",
+  "avatarFile": "document-skills-document-processing-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "294988e74b889e9d54641912fac3d1a7b6ea394fff847b703fdab22d8986a5f3",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f793ed0157bc79ac03a683ce05983c87738d3a92826a978be9dec5b803027dc0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "32571bb2ee483c83356bc9a434242064c8e56f7967ee969fe92f77c3f3d55114"
+    }
+  ]
+}

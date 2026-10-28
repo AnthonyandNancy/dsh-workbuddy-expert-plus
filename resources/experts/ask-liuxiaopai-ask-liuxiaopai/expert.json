@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ask-liuxiaopai-ask-liuxiaopai",
+  "source": "bundled",
+  "sourcePackage": "ask-liuxiaopai",
+  "sourceAgent": "agents/ask-liuxiaopai.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "AI 刘小排",
+  "profession": "产品顾问",
+  "categoryId": "12-IndustryConsultant",
+  "description": "Raphael AI 创始人刘小排的数字分身，office-hours 风格陪你拆 idea：钉死具体的人、真痛点、第一笔钱、第一批用户在哪，再给一件今晚就能做的事。",
+  "tags": [
+    "Idea 诊断",
+    "超级个体",
+    "Idea to Business"
+  ],
+  "quickPrompts": [
+    "我有个 idea 想找你聊聊——值不值得做？",
+    "我想一个人做出海 AI 产品，从哪开始？",
+    "不知道做什么，AI 时代我应该做什么方向？"
+  ],
+  "roleFile": "ask-liuxiaopai-ask-liuxiaopai/role.md",
+  "avatarFile": "ask-liuxiaopai-ask-liuxiaopai/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "479ee5b737e34243826bcdd7f3ce9a568594e9a94a8a73cffc2e6fd0d811c15e",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "4af0100d46c4c5f1a303ce9c17dcf399a14d308e971d0ab28b57cc70349a5bc4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d7696b32be22c9a03d688527bb06acb81a6afa7ee1c0bf5fd18e710af37976bc"
+    }
+  ]
+}

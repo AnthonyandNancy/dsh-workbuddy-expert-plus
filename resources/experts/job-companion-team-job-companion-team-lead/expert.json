@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "job-companion-team-job-companion-team-lead",
+  "source": "bundled",
+  "sourcePackage": "job-companion-team",
+  "sourceAgent": "agents/job-companion-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "求职陪跑团",
+  "profession": "求职陪跑团",
+  "categoryId": "12-IndustryConsultant",
+  "description": "5 角色陪跑型专家团，7 阶段接力覆盖自我盘点、目标定位、简历打磨、面试陪练、谈薪决策与入职复盘全流程。",
+  "tags": [
+    "求职陪跑",
+    "简历面试",
+    "Offer 决策"
+  ],
+  "quickPrompts": [
+    "我现在想找工作，但完全不知道从哪儿开始，你能陪我理一理吗？",
+    "帮我把这段项目经历改写成简历要点，突出可量化结果。",
+    "面试官让我用 STAR 法讲一个失败案例，陪我练一下。"
+  ],
+  "roleFile": "job-companion-team-job-companion-team-lead/role.md",
+  "avatarFile": "job-companion-team-job-companion-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d7e4ad15de5bf6458f5f283bd3311007ba479e440aca07e92fb17c2a83f75d5f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "2f718582221e9629b96b85829287473f55bdbe7c48d92de99ff0278905ca99be"
+    },
+    {
+      "path": "role.md",
+      "sha256": "f9fbcbd0a819911cfe853cee4bb51074259a5865fbcdb385ef8dd9be0009a196"
+    }
+  ]
+}

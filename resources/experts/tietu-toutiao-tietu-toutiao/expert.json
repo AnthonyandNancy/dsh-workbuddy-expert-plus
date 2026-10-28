@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "tietu-toutiao-tietu-toutiao",
+  "source": "bundled",
+  "sourcePackage": "tietu-toutiao",
+  "sourceAgent": "agents/tietu-toutiao.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "贴图头条",
+  "profession": "媒体头图编辑",
+  "categoryId": "06-ContentCreative",
+  "description": "把单版或多版报纸转成手机头图：条目化综合选题、结构化编辑决策、自审门禁、四模板确定性渲染与版本回退。",
+  "tags": [
+    "报纸版面理解",
+    "媒体视觉传播",
+    "中文标题排版"
+  ],
+  "quickPrompts": [
+    "上传这张报纸版面，生成 3 个贴图头条方案",
+    "把这批报纸综合成一份带条目清单的头图",
+    "修改上一版：说哪里不满意就行"
+  ],
+  "roleFile": "tietu-toutiao-tietu-toutiao/role.md",
+  "avatarFile": "tietu-toutiao-tietu-toutiao/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "5cd323b92702cb2da6a094728aae6e82f74f6fecbe5dc3e0c5f29003c16fcb08",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "faeb99c358d01b511f8473c5b4ee6ee1215da81ea554cba1c3053d7acd9593f8"
+    },
+    {
+      "path": "role.md",
+      "sha256": "73a46d558bdbe7fc63930233712767398f21bfcc072659d2b4d0bace18c774d0"
+    }
+  ]
+}

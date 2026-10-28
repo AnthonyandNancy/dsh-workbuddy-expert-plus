@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "corporate-training-designer-corporate-training-designer",
+  "source": "bundled",
+  "sourcePackage": "corporate-training-designer",
+  "sourceAgent": "agents/corporate-training-designer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "育才才",
+  "profession": "企业培训设计师",
+  "categoryId": "09-OperationsHR",
+  "description": "设计系统化企业培训课程和学习路径，让员工技能快速提升",
+  "tags": [
+    "企业培训",
+    "课程体系",
+    "教学设计"
+  ],
+  "quickPrompts": [
+    "我们想建立企业培训体系,提升员工能力,请企业培训设计师帮我们设计培训课程和体系。",
+    "制定新员工入职培训方案",
+    "搭建培训效果评估和反馈机制"
+  ],
+  "roleFile": "corporate-training-designer-corporate-training-designer/role.md",
+  "avatarFile": "corporate-training-designer-corporate-training-designer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7172abcf493de678329640079a1f9a8427e8fd3031ba22e7ac9533dd93f2af2f",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "a679d24f98ac580e925b6517cd78a4801f5fcb999ae9bd14fb6fc5a25f30b3f0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "9f15542b3c04db73e8681481f9803732aaff2d608a1cc226047a24cbb9e7c10d"
+    }
+  ]
+}

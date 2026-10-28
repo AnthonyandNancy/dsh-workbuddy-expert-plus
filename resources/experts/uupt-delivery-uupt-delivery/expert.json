@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "uupt-delivery-uupt-delivery",
+  "source": "bundled",
+  "sourcePackage": "uupt-delivery",
+  "sourceAgent": "agents/uupt-delivery.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "UU跑腿",
+  "profession": "同城配送助手",
+  "categoryId": "07-SalesCommerce",
+  "description": "提供UU跑腿同城即时配送与现场帮帮服务，支持订单询价、发单下单、订单查询取消、跑男实时追踪及优惠券领取。",
+  "tags": [
+    "同城配送",
+    "跑腿发单",
+    "帮帮服务"
+  ],
+  "quickPrompts": [
+    "帮我从金水区送个东西到二七区",
+    "帮我在医院代排队取个号",
+    "给我领个UU跑腿优惠券"
+  ],
+  "roleFile": "uupt-delivery-uupt-delivery/role.md",
+  "avatarFile": "uupt-delivery-uupt-delivery/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "abd0748086a476f70ebf8d4d61b94f7226bc891005b8028a9ab33bb03b41cb72",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "6d1080093e384e5926e14b4d1d0dc9a7807a7fadc69ed6df0727bb92a0ff980d"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d7611e17979500d12ab3a3ebe985353642bb85708a5a1931f99d4f33affedc70"
+    }
+  ]
+}

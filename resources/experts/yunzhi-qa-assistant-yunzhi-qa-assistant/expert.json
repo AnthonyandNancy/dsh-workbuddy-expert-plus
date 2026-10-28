@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "yunzhi-qa-assistant-yunzhi-qa-assistant",
+  "source": "bundled",
+  "sourcePackage": "yunzhi-qa-assistant",
+  "sourceAgent": "agents/yunzhi-qa-assistant.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "腾讯云知（乐享）",
+  "profession": "腾讯云知识问答专家",
+  "categoryId": "04-DataAI",
+  "description": "基于腾讯云知（乐享）知识库的检索增强问答专家，支持竞品对比与国际化海外检索，输出带引用的结构化答案。",
+  "tags": [
+    "知识库问答",
+    "竞品对比",
+    "国际化海外"
+  ],
+  "quickPrompts": [
+    "WorkBuddy售前介绍资料",
+    "腾讯云在海外金融行业的客户案例有哪些",
+    "腾讯云智能体开发平台相比竞对产品有哪些优势?"
+  ],
+  "roleFile": "yunzhi-qa-assistant-yunzhi-qa-assistant/role.md",
+  "avatarFile": "yunzhi-qa-assistant-yunzhi-qa-assistant/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "04ecbdd7b356a50e4e687d548c2590126b3c03d34a3d9cc40a8c161833d4a04c",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f5e433254018737679b187fd3c585bfa02131d6bca4484251ce293647dfbdee0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "738275e12f2356cd409b0d164874843a9ac2355ad81c9ea265d2ad8cd3a5780c"
+    }
+  ]
+}

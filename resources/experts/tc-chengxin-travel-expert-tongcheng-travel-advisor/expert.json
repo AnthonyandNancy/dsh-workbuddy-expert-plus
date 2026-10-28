@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "tc-chengxin-travel-expert-tongcheng-travel-advisor",
+  "source": "bundled",
+  "sourcePackage": "tc-chengxin-travel-expert",
+  "sourceAgent": "agents/tongcheng-travel-advisor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "轻松出行",
+  "profession": "同程旅行助手",
+  "categoryId": "12-IndustryConsultant",
+  "description": "同程官方服务，可一键领取优惠券和红包，查询机票、火车、酒店、景点、规划旅行。我会结合实时旅行资源与账号权益，为您快速找到合适的出行选择，让每一次出发更简单、更省心。",
+  "tags": [
+    "实时资源查询",
+    "智能行程规划",
+    "优惠券红包"
+  ],
+  "quickPrompts": [
+    "帮我领取同程优惠券",
+    "上海到北京的特价机票",
+    "上海迪士尼附近的三星级酒店",
+    "明天去杭州的高铁",
+    "帮我规划一个苏州两日游行程"
+  ],
+  "roleFile": "tc-chengxin-travel-expert-tongcheng-travel-advisor/role.md",
+  "avatarFile": "tc-chengxin-travel-expert-tongcheng-travel-advisor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "7bdbfaf5eb0723b0a744a9e019bcbde95be1ac3652d04fe1fa18341d1c65d7bd",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "59a30a790e5f4cda2094b025937da65342c246633e6636c2e91d68dc4c64f1c4"
+    },
+    {
+      "path": "role.md",
+      "sha256": "af365c0d56b26566ad0d75df845c05720132761b4beb1d255f8ea4473059f720"
+    }
+  ]
+}

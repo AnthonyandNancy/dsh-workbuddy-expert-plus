@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "sa-legal-compliance-sa-legal-compliance",
+  "source": "bundled",
+  "sourcePackage": "sa-legal-compliance",
+  "sourceAgent": "agents/sa-legal-compliance.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "南非法务合规专家",
+  "profession": "南非法务合规专家",
+  "categoryId": "11-SecurityCompliance",
+  "description": "专注南非法务合规领域，覆盖公司注册、合同管理、知识产权保护、数据隐私合规、行业准入与争议解决等关键领域。",
+  "tags": [
+    "南非法务",
+    "合规审查",
+    "跨境投资"
+  ],
+  "quickPrompts": [
+    "南非公司注册需要哪些步骤和文件？",
+    "南非《个人信息保护法》(POPIA)对企业有哪些合规要求？",
+    "南非矿业投资需要获得哪些监管审批？"
+  ],
+  "roleFile": "sa-legal-compliance-sa-legal-compliance/role.md",
+  "avatarFile": "sa-legal-compliance-sa-legal-compliance/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "072f8c0ad6ec3425d2af2c85140bfb497ff25f9f6b23195df6b88beb1382f3d8",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "ff2fad310d744e91677851e1f1658a00932ee9b199b723a8ab8c4a48487f3957"
+    },
+    {
+      "path": "role.md",
+      "sha256": "7349958a81ce07eb0de386f456d3e775d82c7b82b8f38e6369a6b6523d30675c"
+    }
+  ]
+}

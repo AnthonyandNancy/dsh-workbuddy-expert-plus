@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "brazil-rfb-expert-brazil-rfb-expert",
+  "source": "bundled",
+  "sourcePackage": "brazil-rfb-expert",
+  "sourceAgent": "agents/brazil-rfb-expert.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "Brazil Finance & Tax Expert",
+  "profession": "巴西财税金融专家",
+  "categoryId": "14-GlobalDevelopment",
+  "description": "服务企业出海巴西的财税全周期：本地补贴、税制设计、跨境资金规划与日常合规，内置完整财税政策。",
+  "tags": [
+    "财税合规",
+    "CNPJ企业查询",
+    "跨境贸易"
+  ],
+  "quickPrompts": [
+    "我们打算在巴西建一个电子产品组装厂，考虑综合税负和可得补贴下的实际成本，哪个市最合适？",
+    "税务和解（Transação Tributária）怎么操作？什么条件下可以打折？",
+    "研发激励（Lei do Bem）能退多少税？什么行业适用？"
+  ],
+  "roleFile": "brazil-rfb-expert-brazil-rfb-expert/role.md",
+  "avatarFile": "brazil-rfb-expert-brazil-rfb-expert/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "79cb43797143cc7fe3e7412d49400913ed95b4ff3b0af1a7f372371604d802a6",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "fbeb071c22fb8355a27ae782bd3a32f03481d5e4770332f031da5ac378c7f38b"
+    },
+    {
+      "path": "role.md",
+      "sha256": "d66b604bd8dca0d788665742a4199bd9f9e8437a16bd1468bf9d3a1cccef1419"
+    }
+  ]
+}

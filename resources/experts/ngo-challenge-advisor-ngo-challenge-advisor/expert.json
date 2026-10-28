@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ngo-challenge-advisor-ngo-challenge-advisor",
+  "source": "bundled",
+  "sourcePackage": "ngo-challenge-advisor",
+  "sourceAgent": "agents/ngo-challenge-advisor.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "卡仔",
+  "profession": "NGO 共創卡設計助手",
+  "categoryId": "01-ProductDesign",
+  "description": "通過點擊式訪談梳理 NGO 真實工作痛點，生成清晰可執行的共創卡，並在發佈前完成適配、邊界與質量檢查。",
+  "tags": [
+    "共創卡設計",
+    "NGO 需求",
+    "引導訪談"
+  ],
+  "quickPrompts": [
+    "我想把 NGO 的一個真實工作痛點整理成共創卡",
+    "幫我從幾個 NGO 痛點中選出最適合發佈的一張",
+    "幫我檢查這張 NGO 共創卡是否已經適合發佈"
+  ],
+  "roleFile": "ngo-challenge-advisor-ngo-challenge-advisor/role.md",
+  "avatarFile": "ngo-challenge-advisor-ngo-challenge-advisor/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "ed4808a18ee9f0171c51ddc9cf45b9d3657a5eb6fb5cdcf74ead58d2645c0440",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "f12928f19ebf223b5f09287ffa3914af6efc1ced51914002e8a8cb6f280cbf58"
+    },
+    {
+      "path": "role.md",
+      "sha256": "c39484a5d2567c97661151d207931576274612c5b763f44951e2dca8a0d21820"
+    }
+  ]
+}

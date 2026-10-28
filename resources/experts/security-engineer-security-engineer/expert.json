@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "security-engineer-security-engineer",
+  "source": "bundled",
+  "sourcePackage": "security-engineer",
+  "sourceAgent": "agents/security-engineer.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "盾甲甲",
+  "profession": "安全工程师",
+  "categoryId": "02-Engineering",
+  "description": "全方位保障系统安全，在黑客之前发现并修复安全漏洞",
+  "tags": [
+    "安全工程",
+    "漏洞修复",
+    "安全加固"
+  ],
+  "quickPrompts": [
+    "我们系统存在安全隐患,需要进行全面的安全评估和加固,请安全工程师帮我们进行安全审计和漏洞修复。",
+    "制定安全防护和漏洞修复方案",
+    "搭建安全监控和入侵检测体系"
+  ],
+  "roleFile": "security-engineer-security-engineer/role.md",
+  "avatarFile": "security-engineer-security-engineer/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "6fbd8927214ac68d641965c00c25100578985bd5fdf5c0db1047f7ae3d658d90",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "fd102fabc7249b5ca108089b3602c4aa32eba72cad41ad41c983010021e5dbd0"
+    },
+    {
+      "path": "role.md",
+      "sha256": "6e99057dd78b51153fc684ea6cac75b7c005b7f1ca24485fa2648234550d4bcb"
+    }
+  ]
+}

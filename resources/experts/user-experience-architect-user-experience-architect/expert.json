@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "user-experience-architect-user-experience-architect",
+  "source": "bundled",
+  "sourcePackage": "user-experience-architect",
+  "sourceAgent": "agents/user-experience-architect.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "体验达",
+  "profession": "用户体验架构师",
+  "categoryId": "01-ProductDesign",
+  "description": "为开发者提供坚实的技术基础和CSS系统，是设计与开发之间的桥梁",
+  "tags": [
+    "信息架构",
+    "用户旅程",
+    "体验策略"
+  ],
+  "quickPrompts": [
+    "我们的产品架构需要重新梳理,用户体验流程存在断点,请用户体验架构师帮我设计更流畅的用户体验架构。",
+    "设计用户旅程地图和交互方案",
+    "制定用户体验优化和测试计划"
+  ],
+  "roleFile": "user-experience-architect-user-experience-architect/role.md",
+  "avatarFile": "user-experience-architect-user-experience-architect/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "91d34f8dd7573cc5df147f24067d6d83867bd9f5ede63cbcf514085503394cf1",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "c273fc422986f282ce7ddacc7de12ae987fa7ede9ba2a9b1f9ce9a8237e29abf"
+    },
+    {
+      "path": "role.md",
+      "sha256": "8d01bf3105f903c460a40dbe594d55b3a5392aab956d6bd002500789fff307c8"
+    }
+  ]
+}

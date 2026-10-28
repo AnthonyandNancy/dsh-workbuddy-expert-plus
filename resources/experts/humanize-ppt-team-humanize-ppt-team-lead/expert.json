@@ -1,0 +1,1205 @@
+{
+  "schemaVersion": 1,
+  "id": "humanize-ppt-team-humanize-ppt-team-lead",
+  "source": "bundled",
+  "sourcePackage": "humanize-ppt-team",
+  "sourceAgent": "agents/humanize-ppt-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "PPT大纲、生成、视频、演示与交付专家团",
+  "profession": "卡尔的人感PPT专家团",
+  "categoryId": "06-ContentCreative",
+  "description": "把原始资料梳理成人感PPT大纲，调度HTML生成、演讲模式、视频动效与交付质检，形成可演示成果。",
+  "tags": [
+    "PPT",
+    "专家团",
+    "HTML PPT",
+    "视频动效",
+    "演讲模式"
+  ],
+  "quickPrompts": [
+    "帮我把这份资料完整做成一套人感PPT：先出大纲，再生成HTML PPT，加演讲模式、视频动效位，并给出上线/导出方案。",
+    "生成PPT并加演讲模式和视频动效位",
+    "检查PPT交付包是否可上线可演示"
+  ],
+  "roleFile": "humanize-ppt-team-humanize-ppt-team-lead/role.md",
+  "avatarFile": "humanize-ppt-team-humanize-ppt-team-lead/avatar.png",
+  "skills": [
+    "frontend-slides",
+    "guizang-ppt-skill",
+    "html-ppt",
+    "humanize-ppt"
+  ],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d68818c13a05b7c6ab09bd2fd231ccac9aa308ba55f99f0b0e4d972cd5c8e6b7",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "7513dd1c16dfcb673d54df0fcf713cf10ab2960207f5cbd886f2cbb4198911e1"
+    },
+    {
+      "path": "role.md",
+      "sha256": "e01623e1070e7cfd56cc31ca6e176420b96391ffc3059671bc4e92a0c0d06c53"
+    },
+    {
+      "path": "skills/frontend-slides/animation-patterns.md",
+      "sha256": "1b7b7409893b68c09effb04f20a4603a5168e4956d76c3999c2ba8f86c4bbc8f"
+    },
+    {
+      "path": "skills/frontend-slides/html-template.md",
+      "sha256": "004d77d7631fd75ff1cac02f37777ec70fc9df692ba2caf8cb72857516ff2bb4"
+    },
+    {
+      "path": "skills/frontend-slides/LICENSE",
+      "sha256": "62928eb197fe4662d1efc3af0735b3ba5df3c0308badd9a2baf2b619009f5366"
+    },
+    {
+      "path": "skills/frontend-slides/README.md",
+      "sha256": "65d98bf179f806e43d06fac54f11e9e8470605460ad42b010165f72fcf00b4ce"
+    },
+    {
+      "path": "skills/frontend-slides/scripts/deploy.sh",
+      "sha256": "7bde6d52a3bf97881a1a77765bafd2c9cab36829b7209e8d90b3095455404af9"
+    },
+    {
+      "path": "skills/frontend-slides/scripts/export-pdf.sh",
+      "sha256": "16336202904f677bb988e784a3e1d5098ff09381733b63047c3a688d6a1989b4"
+    },
+    {
+      "path": "skills/frontend-slides/scripts/extract-pptx.py",
+      "sha256": "4f5e7603c99b8b53e20c5b2a65abdf5edf9422b4c490dca9f2b872a752c17d2a"
+    },
+    {
+      "path": "skills/frontend-slides/SKILL.md",
+      "sha256": "41fccbe44d4882f412e141028eb21395bb13327492a512abee6e55c672cb0c5a"
+    },
+    {
+      "path": "skills/frontend-slides/STYLE_PRESETS.md",
+      "sha256": "6dc14784dc7f59620a28e814ecbcaedcec387fac72db7cb81e623924cb5063f6"
+    },
+    {
+      "path": "skills/frontend-slides/viewport-base.css",
+      "sha256": "dab42c1a556a0fa51d3c39f7edfb93d8303e5c29625ade479a18ba97f2640734"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/assets/motion.min.js",
+      "sha256": "45615c1e7639fb9828942d0689c897e745690b0f6df13022223c9409fc01557c"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/assets/template.html",
+      "sha256": "f19ac83ea16bbc4399fdef17e1f5bde58bc17934d21fecf2792e4cd8c28306ca"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/LICENSE",
+      "sha256": "2b33f1f1d11c7bc2dc2985f4a7f014338323ff58a1cd6ae91c16b727275a3df3"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/README.en.md",
+      "sha256": "e68fc0d1f1a7f2425dc9af3e21a0e46dee365e87059b7a44a795637e07c17e84"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/README.md",
+      "sha256": "c39734c21f06aea79584cb095074b85f25325a9c0dec221c4f7a466c432696b7"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/references/browser-validation-notes.md",
+      "sha256": "362638dd1fb46c22a941de502b1d2fdec0a806c944cb19d78727c1c8fd60b6eb"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/references/checklist.md",
+      "sha256": "04f3188ddf3a239d7b551dffdcc70e1ba66da6e0bf9467bedacc42c09ca342bb"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/references/components.md",
+      "sha256": "f5f705ef7e6b3c88d2ec8c2d1d85d6e98442d48340b4a74be1b8c0f3cea3a65c"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/references/image-prompts.md",
+      "sha256": "56d46a13f51765290a39f64efae7f25688e109965ddf6554bdad0e1b0c9fdaff"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/references/layouts.md",
+      "sha256": "4c3743146af11b258dddca6d97a269e5ec90d446c5332b0da34327b3f6f1dca5"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/references/template-known-issues.md",
+      "sha256": "561f01cd9415154b6e1b1ecd9e801dc97ba999032bc4371b98349016e5fc531b"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/references/themes.md",
+      "sha256": "a4bee3ef7b22d56fb904b0643a117368d85f0265ceccdf5111ad497fe22cc656"
+    },
+    {
+      "path": "skills/guizang-ppt-skill/SKILL.md",
+      "sha256": "9b6339ae824ec011fe9f3518563d5d39d6cf7245da9019352a0092225b5ea59f"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/animations.css",
+      "sha256": "3bc36127d7e491b0a723fe5788682824c9b9e8849cf2a5ceb72dc3ebb951e3e8"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx-runtime.js",
+      "sha256": "f6a2f0523cd2b130154af36fab4c25a18ad4d8ece2dd31bdc729f40daf6a2c53"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/_util.js",
+      "sha256": "e6527435f90454748dffb9fb6ed63dec5ad357080758f4aa4a4b91c693958284"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/chain-react.js",
+      "sha256": "1c04028b69359cf1f813ad3490a960291b464f85e14fd3afefe555c6bc696535"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/confetti-cannon.js",
+      "sha256": "f8d25ae4ba38831ebba6869f2e0895e651d30b01aba71a8905491dab214c771a"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/constellation.js",
+      "sha256": "1fb0226d41722f9cf92d3f62e6fd83ba8e5280de6871e56bdbcbc4ac76197aec"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/counter-explosion.js",
+      "sha256": "584ebf4e3eb5ba16196651a461a8fcc6e002c395956409386f5a8cbdd73b8b96"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/data-stream.js",
+      "sha256": "d7d6f2d5f7c6350f3b9e48013cdc144a90bcc4a46c4a2e9ed47cc57096a19c1a"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/firework.js",
+      "sha256": "8538f18cf82d896b422a1f0e3156b9ded9e0bdd3942f45a786d265a99c757033"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/galaxy-swirl.js",
+      "sha256": "897ea17ef247fb8f2b02b8987eb21f237e6dd316a5bf41ccaef09c8b07733730"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/gradient-blob.js",
+      "sha256": "a7555b015c37572eb67750310eb3a65a5db29e31a80c686dd29b38f9373c3156"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/knowledge-graph.js",
+      "sha256": "4bde168b8247caabed89658f2db2fb7c0ae61a15b97365a0e9ed207970084070"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/letter-explode.js",
+      "sha256": "88c6808aca836a3f96fecc5a27af43ae84a4a1631be8ed805155af40d38f5cda"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/magnetic-field.js",
+      "sha256": "936ccef3ee3ac52858078b4db43d7bca1e7fe1278256f54ea1c72aed2b615e1e"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/matrix-rain.js",
+      "sha256": "bb733d04e8ae1dd8ff9d7274407a5dde5b94d6119549c4af7696c97e2f4675b0"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/neural-net.js",
+      "sha256": "174c24d0a0ec80c004acb8235d30789f5f8cd19673b0bf0c035cd0c3f1a3063a"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/orbit-ring.js",
+      "sha256": "4868ae9ecbcb50ad2aff9e1ae92757dd22de9afbd6c920c60a21bf8bc9108840"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/particle-burst.js",
+      "sha256": "13e8477605b9e1348c1f6864675e53cdc33a56e7701b2d19dddf2c33c80116c3"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/shockwave.js",
+      "sha256": "b569f5cbc1a8c0a60097533dd4c04bd142b48ea8acb3f5e039313a1f8336907a"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/sparkle-trail.js",
+      "sha256": "563051867ec3dc35121b834209a734df2b40ec89792b2112bc543a84e85108fa"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/starfield.js",
+      "sha256": "25952feaebcd17fa517257b234f02c458c683790b1289e0c39c2d4ce8bffd643"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/typewriter-multi.js",
+      "sha256": "6d56c7cab7afd7441d4e36b32c998fd8ff93012634df7e855c2f1cdc9fdaa5c7"
+    },
+    {
+      "path": "skills/html-ppt/assets/animations/fx/word-cascade.js",
+      "sha256": "236070f2f5becbcc8f2d69c9255aaa8883891c442ea312ed523bc3829da4f17f"
+    },
+    {
+      "path": "skills/html-ppt/assets/base.css",
+      "sha256": "04e7c427d1d9401ff080bf72c5c9c0161c1a4759b5efdb2a64bed4e09830e688"
+    },
+    {
+      "path": "skills/html-ppt/assets/fonts.css",
+      "sha256": "1e93c54e2a4c5f27a2404cc2c8f682d50f5d41a95ebecd11ed41f925e3a79572"
+    },
+    {
+      "path": "skills/html-ppt/assets/runtime.js",
+      "sha256": "b1ab907d5b7115c2721edcecbf5ea7659368d0c95b23fd444e6eacbe278a4517"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/academic-paper.css",
+      "sha256": "8e20c84fdb93640fbb63516ea76e20fbbbc50841cb8455317b54bf3b0f2c874e"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/arctic-cool.css",
+      "sha256": "713f073fecf4e172b02e3a84292b345ec6cc9c20fbe5a0c8af4bcbced15b3ceb"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/aurora.css",
+      "sha256": "c966dd1dbf9b15c03d01bc6e94cbb7cee5d2c051a421373cef8b6593c754f466"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/bauhaus.css",
+      "sha256": "357ad13a4008c4301da44ccff8fb3c778cbf79071ff010df9cd6c6308be39969"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/blueprint.css",
+      "sha256": "27bd9486619d76c3f2cc1ec85906f290cbba424dff937ca6796fc3996299cd14"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/catppuccin-latte.css",
+      "sha256": "4ac1a50e481d736a627149bc1dcfc8d39a22b2efdf143c7a3366d2f6a641960e"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/catppuccin-mocha.css",
+      "sha256": "38909d6bf3cbf0eaba7b6fd18c97428e611d7e1833fc55200b4d35b3ed5f8c89"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/corporate-clean.css",
+      "sha256": "cee1a778416fc849d5812036d58fc4d8d99c886f258e7d8a3052f4f358ed5ea1"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/cyberpunk-neon.css",
+      "sha256": "cf4d96648488bc5a10dd7bcf7152804abf74f7a5b7f345f082d473b3acd2c458"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/dracula.css",
+      "sha256": "cfef3b85c3355461c62eb9d1491ab4987279b5ed362bdf988d770169860f5307"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/editorial-serif.css",
+      "sha256": "9f9bb9651f7c3b90dd6b0ffe22e9c938907b1263543669899c5057454c7f16c9"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/engineering-whiteprint.css",
+      "sha256": "3760c2b412a8a08eb56d68026ba426e3ee1ea14e8b671149468d55004de85ec8"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/glassmorphism.css",
+      "sha256": "95eb2cf42e056219e0b1570177f7c657a7c060ccb86f7604be6f657a8a973fea"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/gruvbox-dark.css",
+      "sha256": "6ecad4e2450e797e02de565b3a758de3adc00206f431cd50746c89429348bcc7"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/japanese-minimal.css",
+      "sha256": "fe796d2363d9a7b9ffb1a5dffcf22af3044762787d88770aab1f3169ae51f4e5"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/magazine-bold.css",
+      "sha256": "8be33662bef6f1f43d4590fb2aa677805e21f0e98274c67e4f09ad19d49321a6"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/memphis-pop.css",
+      "sha256": "e5f14ec241aedae760148504ab49c5964df84f90f3951c6ee2da9f689623aff5"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/midcentury.css",
+      "sha256": "ddbdc292ae8b552f0b627c813f84192f4421539af125554f70d1dfb1a5fd82c5"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/minimal-white.css",
+      "sha256": "993453010bdcb3c9530d387d66085ae18242636a702cf7ef88f32a8bb940497d"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/neo-brutalism.css",
+      "sha256": "3dc64c36707d43593d719d79fa059138c6cf9b262e6999297d3514a10a11a95f"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/news-broadcast.css",
+      "sha256": "b31c9ff2e5a37c911e8f6f64dd1ec8c71bc66f182723a1fcfa864968bf52c670"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/nord.css",
+      "sha256": "d5587ffc68a454afc48ca5124a980c99e64d51676d204bd29a113a162230d680"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/pitch-deck-vc.css",
+      "sha256": "0b979b80fbb9b6f70aa8337c11341b2c43c9995715648bba3f48a8f7039a804f"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/rainbow-gradient.css",
+      "sha256": "d385b8580bf0fd348690f91ab6bd4513042d8dbcdcf48f4e9382dbc36da17e6f"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/retro-tv.css",
+      "sha256": "c1de5fcd32097a94b8191dd6c1dcd8691355e76433979a7731d40a4b7d5152c8"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/rose-pine.css",
+      "sha256": "8130294083fe74f744b24f63b42d3814f2a99495a8302379cbd1228083170cc4"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/sharp-mono.css",
+      "sha256": "e400ee28018b59ccd609b1680fe65e835a8f7bdc35e4b3084ab6e89bb9c68249"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/soft-pastel.css",
+      "sha256": "38d5c625edee3c838cf93bb1eed5960f5d6f0fa2377efe5b238010edf5295739"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/solarized-light.css",
+      "sha256": "cefe19079f28128c768d5ade14cb61c72ea93e2c13372968c49d19011a8d0cc0"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/sunset-warm.css",
+      "sha256": "1f6279e5e52abbff2f5879547d42dc4b38321d5dbb9ebd30bf13d677ae443a69"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/swiss-grid.css",
+      "sha256": "564addd78eab014558eb314c37f3b32cae38ff78747c5a4ef2927ebcdb545c42"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/terminal-green.css",
+      "sha256": "92a225d1d472892f75888f42182d4a62a929125ff41507179ce394fa115a0fc0"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/tokyo-night.css",
+      "sha256": "7eebc89d3b89516b7b4b58bafa92cf1b35f16755c7fdb95ef81670d145559f99"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/vaporwave.css",
+      "sha256": "86603b1921d173ccb15339742dc75bd4e87fd6c59faf8ccea317687a620df725"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/xiaohongshu-white.css",
+      "sha256": "37bb30f95b437112d70c39b1a2aebfcce37bcd22ac46dbf74d5e65278a742c63"
+    },
+    {
+      "path": "skills/html-ppt/assets/themes/y2k-chrome.css",
+      "sha256": "3511019fd184e35cc4422c5fd366f1004f2f9a27352f88cb97e0bc43b389256f"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/_theme-cell.html",
+      "sha256": "a95f52a9ff05730f4041ec49d129ed49f6a73de878da16da99938f380fdb17cf"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/animations.png",
+      "sha256": "08f10fb73b61f5f76ad2ee63a3007ce76d02c79c6d71361f689f37849a8224ab"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/hero.gif",
+      "sha256": "77bac9d3a7ad532e5c0597c87a26e62dad2253b2de2dc1ae294a7bbdfecebb66"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/layouts-live.gif",
+      "sha256": "785f2094a28d660c6c09a935ccbc6d204b2707674ddc9bff063a28bdff05b248"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/layouts.png",
+      "sha256": "a430697321ca3ee2009e8458dad0a86cbe7cb0c0441986463d71bdf1e0c0a12b"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/montage-animations.html",
+      "sha256": "3ac9e01919e21f486b2ad7d61e3e4a4bb5939a9f22de59a6c61196d754dc08ad"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/montage-layouts.html",
+      "sha256": "0f4dd758b8fbc219f69b772a991cdd95997c94f5d12003732309481967b4b259"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/montage-templates.html",
+      "sha256": "91a965d4371228f3499e2fc7f3261b5ad4396cec8f906f32660fdb77b17f61cd"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/montage-themes.html",
+      "sha256": "ab03b85d946deb5f34d37efdf5538f694a8cffd0159ce739c613dee5ff317fca"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/presenter-mode.png",
+      "sha256": "ba45a6030ed277092f5bdcc2d53de811544d6b8a216c1498072c77a33ecb1ea7"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/templates.png",
+      "sha256": "1f58e3adb84f41d28e545ed2eedafe02456e72297948d86fcfee24da4cf47fde"
+    },
+    {
+      "path": "skills/html-ppt/docs/readme/themes.png",
+      "sha256": "af68501d9c31f42bc5a6fa053ce588432fc40f034f465d03e102c24f986f7085"
+    },
+    {
+      "path": "skills/html-ppt/examples/demo-deck/index.html",
+      "sha256": "27f699c018ef1b14c3b0980298e0eb14d429b014d92e113937f587e396a09efc"
+    },
+    {
+      "path": "skills/html-ppt/LICENSE",
+      "sha256": "a5ed4059e25a3ec35e439abd2623753d1f42d4aa4989ffb5c6b7a97b61f6a949"
+    },
+    {
+      "path": "skills/html-ppt/README.md",
+      "sha256": "c416aff4e9d3ef9cd1fe74e492e80a28274333b3d4bd2085482b0fe517d42b3c"
+    },
+    {
+      "path": "skills/html-ppt/README.zh-CN.md",
+      "sha256": "25012c1556aa3b11f0abfdeb66adb3351ab10690a9e2c5b740b6f36fe71ff7f2"
+    },
+    {
+      "path": "skills/html-ppt/references/animations.md",
+      "sha256": "89ff078c6610e44f52d192d4c1ea1ce83441d762f417e096b7834106a3b48706"
+    },
+    {
+      "path": "skills/html-ppt/references/authoring-guide.md",
+      "sha256": "891e0bcd8afdb92dbd4401740ec473097c037b46cd7e49592f5c9690bcb1423a"
+    },
+    {
+      "path": "skills/html-ppt/references/full-decks.md",
+      "sha256": "c623b261744239ad4d057440beb130190afafee671f79af51cd66d4c9b75c700"
+    },
+    {
+      "path": "skills/html-ppt/references/layouts.md",
+      "sha256": "9cbee86e6b6d246d4a77ea3e4643b6d3be5478635ad5442e9353ced4a2e915b4"
+    },
+    {
+      "path": "skills/html-ppt/references/presenter-mode.md",
+      "sha256": "25eb1e51ccfb1e3ad058a8276ed99ce4ebd00804840f6d4f28b9cb72878c5236"
+    },
+    {
+      "path": "skills/html-ppt/references/themes.md",
+      "sha256": "0948a98fbbc84cc8eb0329d79045c28079cf9b2590ee72d27de01a2d8b60bdd1"
+    },
+    {
+      "path": "skills/html-ppt/scripts/new-deck.sh",
+      "sha256": "d7c80a97da6fec453836a5c2c36043dd63a163e8e04b6ddef965aba3fcaf6c11"
+    },
+    {
+      "path": "skills/html-ppt/scripts/render.sh",
+      "sha256": "486a355ed7fb2190fd8b8475b90b38355aff7870d83e03fe83169b24824ec767"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_01.png",
+      "sha256": "fcbe8582141463fed44b4b430f3592a2513968ae48f1e4c4929afc61c4d45b06"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_02.png",
+      "sha256": "e6a37a80d37fab7df31a2fa4e9a0ed0a8bb37e29073fe098ade7f220673b2ae5"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_03.png",
+      "sha256": "d6860f49aa31731d8a61e983048fe26396e3d09689ec5b3cc1af7e75dd65dca6"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_04.png",
+      "sha256": "16e8fba0a47d019f28dcc2799b1dd94a1d3cacdba671de029fc6c0d2bf1f6b3e"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_05.png",
+      "sha256": "5273d3f00739660f4ce8d651be94987ddddfba1fff028544d99e8fa06e7a3807"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_06.png",
+      "sha256": "f54ed28cdf9eb39f89b2fb33c672dafe4488adebd31fde697eb8c68ecbcc1bf6"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_07.png",
+      "sha256": "313bb0ff44d77631edf2474997ad4a7b9c904974d089a20e6143a842d352c231"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_08.png",
+      "sha256": "c805432548a6d6a897765441399e07984fe6134da138ada264d4676a30590bde"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_09.png",
+      "sha256": "f081a95bd660001c7e63bedb28474bd375425f879238d91633837ae66014e0bf"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_10.png",
+      "sha256": "06929b0116bcef4909816d7ccc63a6125a31c7dadcfad145db2c8b055c363b79"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_11.png",
+      "sha256": "0d060f3a874143d4b9fde2dbd9dcca4239f3aa6d18dbe41783a201c0fb0ad811"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_12.png",
+      "sha256": "736b6d9cd363f8c622a7877629c4fb5b3cd90990c09224271d3d254d21b77559"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_13.png",
+      "sha256": "283bf9cd0593e60c76deb1169e9b53ca60609af8fc32f51ee81436ab790d5021"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_14.png",
+      "sha256": "202ad6111257033d21ad67e7d789ae1b79dbe96c520e96b61a67e83c27be67f8"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_15.png",
+      "sha256": "7cd4d1044db0fe0a4b9944e52a923e434e60ad3ee0de8946acf80c0f284b9fff"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_16.png",
+      "sha256": "02dfacb073f4b8e704af721f6c836f3c1476a19143289d220ae3243fc5da4a5b"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_17.png",
+      "sha256": "061d2cbcf6bad16a328254d6fe1883158d20b37e2d2f427a11a64ae2d35c2700"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_18.png",
+      "sha256": "2964e0fc7f341e452ef3ec8c622bd2586a7e24fa204074f111166c7941039c7a"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_19.png",
+      "sha256": "edc521f41bb73009edaaa768fb4cdd2a59ac7facd45d1934096f46044aff3acf"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/animation-showcase/animation-showcase_20.png",
+      "sha256": "19ba94d900d73919a0f543c71dcf4176eef678e928034c2f62847bc543a08106"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_01.png",
+      "sha256": "fb2a5bc9eec1f735247c15001cfbe18bee631e51ff5b270bea53575d6daace0d"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_02.png",
+      "sha256": "33c618a53ea267cb3a9ba924296408056392f40c85bd2238e6ff03a0ffe86c13"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_03.png",
+      "sha256": "22545e5245fb6dc22afe2acd9bf793add1dd6819ae385b9be241d3a0d0498e8b"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_04.png",
+      "sha256": "946886ef638332469eb0fbf93a24ef73e4c0adaabb9e9a2ee462b70c99aecbf4"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_05.png",
+      "sha256": "ccacc4ee590c952ec9c0b166da2b2854fe930c06468c4711f20c829c6376eccd"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_06.png",
+      "sha256": "588144c6cffc89b24c1c86ac23dcc7370aab769509659c08f30fad943f912ad7"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_07.png",
+      "sha256": "460ef8245d88fdef16542540bbe8ee9fe3be44906d863e7a8b584b957cf883a3"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_08.png",
+      "sha256": "805052901631daea37674efbb6f89b5344b60223043c2840a0993663a3a84d0f"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_09.png",
+      "sha256": "196629161e41ee269c93e7bfa775b198a9432039642dd8bff8db41ac0b440cf5"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_10.png",
+      "sha256": "ebfa0aeb784503ba52495cecc58b2fbda677ab1bf353f6205f642aeec87e04b3"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_11.png",
+      "sha256": "75d9241626270b3b5848d3db36e5ad1a027bb0afb5242fd32dd8d8ad09eb288e"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_12.png",
+      "sha256": "5e6fe0906b90f870bb750b1841e09de9a8f6b3c0e958ad91cf927440d215c94f"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_13.png",
+      "sha256": "a4ec10130f5ab37cae1f983c8d4686b6a775386c3ce0192ae435df7ac190665b"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_14.png",
+      "sha256": "482fc0187a06c6dde68c5afda8f74a849904b2c5ac617fa333443671af5e8756"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_15.png",
+      "sha256": "c9ddd7a359a262bca46bcff1149dafbe2d87aa88b6f768a2e85dcc5ccfb2bb4d"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_16.png",
+      "sha256": "f81fa13c8ccb85fe4ecee864c78f4e336d2fa6d7f50f1c9630fb169f2940ee9e"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_17.png",
+      "sha256": "3e0906eaf867e80c88fbf0e284b0cccde8c9fe72e9a0b3e710622f7c92e17c10"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_18.png",
+      "sha256": "4e7ce7aa565487289bf6213f9c8f1119ed950d51467e6a8894264467c4836fd2"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_19.png",
+      "sha256": "b5d055e7cc0619531564819730527466dbb8a8ec3c3165a660486fbf82c045d0"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_20.png",
+      "sha256": "c0ad8b2d96883f081da2da973e4a6fa8d95ef5a77a30967e096ba79f6a8fe2d5"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_21.png",
+      "sha256": "18d70d2168d6d46b4fa469f4b257b6330f4f23b61e40901402715a98a7816261"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_22.png",
+      "sha256": "cecf0668289488f38ce3e6a1c9d628e393773a27e7968a25c365b38552a279d4"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_23.png",
+      "sha256": "a0a8dbdb8487c812632f357becd789306c378ba9f474066eed241aeb14394203"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_24.png",
+      "sha256": "60d0bdf0aec9c3241e603d7d0a7245d95df8e8506a2295de8455b8a83f250f3f"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_25.png",
+      "sha256": "0bb09e8b83f78c81539101a86cbac2e8e322402b43ea1f52c67a4e0634b74314"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_26.png",
+      "sha256": "1a1abd8d61eff7ab56a12818936108611c055224414c8b4a2267ff24d74d5007"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_27.png",
+      "sha256": "97dca664409b0b07d722a9a592e98ff007b59bec489ece2c540c3f1496e908eb"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_28.png",
+      "sha256": "dbd33857ea7ce79f4ada3626c9251aa18badbbcf982e998b1f0fa3b15d2c53b2"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_29.png",
+      "sha256": "4cfc99b36383edfc67bde4ebbec59d4c6f96fc3a091a75553efe91da575b5ee0"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_30.png",
+      "sha256": "b05b4449699756f69b2672a60da8fee1eb01e124f274a50872192ea91b2c2ff3"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_31.png",
+      "sha256": "d305d9dc1a78430eeb421f2f417fabe3e3d4ebb43085edb1c30e12e65da3fc93"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_32.png",
+      "sha256": "44d61aa758fdb3bed9727c6f3923530ff9421fb27c0b9b3be5f479301db13a3b"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_33.png",
+      "sha256": "a1bda923e7c1cc08fc0cde6bca3f3851af267d4bb660dfe1d10ab61779fea096"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_34.png",
+      "sha256": "23700b0928d2d2a72d7d3760554bf9bc9660962e375768b658cd385366fed037"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_35.png",
+      "sha256": "e7e904b62c4414f7a70d3b1c6eea345278c60c5a79494c0d17dc0e50fef20eda"
+    },
+    {
+      "path": "skills/html-ppt/scripts/verify-output/theme-showcase/theme-showcase_36.png",
+      "sha256": "fd02e264de39df124410fdaf3ba3dcf3591eb578fbc7e7ec1e81178743a95c2a"
+    },
+    {
+      "path": "skills/html-ppt/SKILL.md",
+      "sha256": "a11df7758320782db64205c2b2d2c4496852a4b9588a7136a65767a2274669ea"
+    },
+    {
+      "path": "skills/html-ppt/templates/animation-showcase.html",
+      "sha256": "f9ea23f4488557127b41132f9ee0e5887fef44dfc95a5c1608ee345726c5fcb8"
+    },
+    {
+      "path": "skills/html-ppt/templates/deck.html",
+      "sha256": "51cc424b4672a1187a64a66083d55ae6bebcedd73f55f15e3adf2e826d6bcdf3"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks-index.html",
+      "sha256": "d5d2c43d03355dd7f0e7b5c4f65f9666eb70073f4f8a507e7859c581d640d98b"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/course-module/index.html",
+      "sha256": "b1201e084e502422c6d7e75fd773303b26b49eb9056010b5a77c00649d0adbb7"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/course-module/README.md",
+      "sha256": "86e4b3b148ce1b8e21da12d643566e266b4f016145a644355079214d4e2cbed6"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/course-module/style.css",
+      "sha256": "548baae68a20d34842dbe100693da62edd326bf3431753c8bbd88dcd19450f6f"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/dir-key-nav-minimal/index.html",
+      "sha256": "d948ca75e5bc8548766f0088ec426ebd700c16313ef48d7a55aa1b7beedb6088"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/dir-key-nav-minimal/README.md",
+      "sha256": "9e6503d841f12918da70b8c21cc553d320a3d5cf841dbf0b5f95743a8954cf56"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/dir-key-nav-minimal/style.css",
+      "sha256": "6ac8e4b604cb0f778d8dd442399dfb5047a990b3dcb72d3619957fb18a776f33"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/graphify-dark-graph/index.html",
+      "sha256": "2066326a6c5a5306c58dd5aae6317653852a68e8912d78feeb0592d1578d8427"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/graphify-dark-graph/README.md",
+      "sha256": "58993adbd693cfe255e9d7009c482400f7ba6468e9ab88a8c725889bcf5288df"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/graphify-dark-graph/style.css",
+      "sha256": "ee41ae01bd2ee130731675122c16b77f194a46fe1d13c7e5eaf4a7e8e0efb430"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/hermes-cyber-terminal/index.html",
+      "sha256": "ea84aa48baa3b567a82977156fed457f7d512596fa352d152d412e22041e19bd"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/hermes-cyber-terminal/README.md",
+      "sha256": "40934801d31e4c7abe45433d36118806f1f4adb82e387a7a0bfcb2a1e2822b95"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/hermes-cyber-terminal/style.css",
+      "sha256": "925291b19fade3c73f92faaf0fc0abc42a6971feb2f5ffbed500d4729cc2eb52"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/knowledge-arch-blueprint/index.html",
+      "sha256": "5f4d190d84f6ee1b3f496cb8b71eeff45fb7c16b12057ba4cc4ae3705f126880"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/knowledge-arch-blueprint/README.md",
+      "sha256": "6e3139cef0a25e5097d44274400ee13073aefc1139667d25a07537d89a8679b1"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/knowledge-arch-blueprint/style.css",
+      "sha256": "c50dcac8a4400a8808bb514ee786a8c135e9c9162e7b2447d7d35753dc9ff5a3"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/obsidian-claude-gradient/index.html",
+      "sha256": "2e8cd87904c53859492e300c088616deb04d4badfabff353a3ab3580dcf155db"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/obsidian-claude-gradient/README.md",
+      "sha256": "a07535297396b940fd158a4c8cb1ead97465f747f1d611d85084394f74e920e1"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/obsidian-claude-gradient/style.css",
+      "sha256": "cf0f1a21e0dcdf2e807d531aedbea35c183582e77329c57db00606ee29ea22ed"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/pitch-deck/index.html",
+      "sha256": "05a02a090d18a0880b6b80269a0f8e85bd9e57610f650eb3f2c63bf1e3aa2879"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/pitch-deck/README.md",
+      "sha256": "edc9f3c88c049dc71e1257aaa18c1189d61f67fdbdf33c6c8538d2ba5041426d"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/pitch-deck/style.css",
+      "sha256": "393e9e3175af3cbaeeec94aa056975e72289fdf592fd143ecf5b789a1d75e9ab"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/presenter-mode-reveal/index.html",
+      "sha256": "b324d0e34560c0ccb2e01a8a06caa8f9a333d6d5e51bcaf0f7e5a49dbf63c98f"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/presenter-mode-reveal/README.md",
+      "sha256": "cc92770560dc7b1030e90b078e74c5f0b19cad25cac585b53164682a081c555f"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/presenter-mode-reveal/style.css",
+      "sha256": "f5e6cfe5f8c20a46184c6d44b6fc7eed20bc23a7ee6d2faf34a7957e7d7ffe8a"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/product-launch/index.html",
+      "sha256": "8767bffd223471864197288fd08d1cd23ae4ed4a0588c206094e3fe88a878895"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/product-launch/README.md",
+      "sha256": "1977aaa0949dc23cc21e27d6717233778b6847e20703c2dd9ed5a6314f4a94c4"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/product-launch/style.css",
+      "sha256": "f9f048b913b205450f16ccf72d11d60662a4a7196cf0a8db1f6b991603c48dbe"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/tech-sharing/index.html",
+      "sha256": "972e0750360efc61cfd1887cbce3ae33fdf4b06c521d7db7ebc88b9e77b9e25e"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/tech-sharing/README.md",
+      "sha256": "05f352191afb8421bff65aa4b0b7f2709e04375b036ce44c4ca02af7dabe3e67"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/tech-sharing/style.css",
+      "sha256": "bbdcd19c201f82812828343e47304999dce301a6dafdd27056a99d82a99e37f7"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/testing-safety-alert/index.html",
+      "sha256": "f2328446265123b444f9c37ef1198dc23f276edc575f11fa5e9781f77569164b"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/testing-safety-alert/README.md",
+      "sha256": "81fceed958bfdde754a8ef96fd119fd7728e010fbbf29258c7ac7ea53eef0428"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/testing-safety-alert/style.css",
+      "sha256": "97a4b2c2d72103f85f689d0a062ec88f9692ff56b9af65a906d89babb8c5a82b"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/weekly-report/index.html",
+      "sha256": "db9c913e65ed987da32ca313ab9c252ceaa784cb98dbcd8e55e716be9b5613ef"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/weekly-report/README.md",
+      "sha256": "a684102b3792c8ff3a75935d39d11f20158b8fbea6e779b36ddf349bbd985d96"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/weekly-report/style.css",
+      "sha256": "9d06cef0e17b07079b510dd50b5c6cdc342673522d93f22e1f89a88b5b5f8ae0"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/xhs-pastel-card/index.html",
+      "sha256": "a52ee9f12c89dfe522322096c1570d6c47512febe87218fe9a7d78abfe808bd2"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/xhs-pastel-card/README.md",
+      "sha256": "cc4bb1a008785cdd1cabdc4c7a4d7ca02f83c417861f825a824ec80c7bf9c54d"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/xhs-pastel-card/style.css",
+      "sha256": "75e2920a9016d420987e34c70fb612a7538d0385b4dfc4f76e46c63750f64f71"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/xhs-post/index.html",
+      "sha256": "d9e1fe496bea5a82680d64010bdc1af92cb66436b5813f0c65a318fe7a58035a"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/xhs-post/README.md",
+      "sha256": "7581b991f9c535bfd427b4129b7c3df4bfbee2bfeef253ac70be012117f81f8e"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/xhs-post/style.css",
+      "sha256": "bed87880dc65491c23ec8a23cff1cf24af558f1906f20d89562394c51ca58aba"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/xhs-white-editorial/index.html",
+      "sha256": "62f0a2a05afa76749c89e1953be74740bea5fbb5f314c85d1edac5c8e39a55ad"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/xhs-white-editorial/README.md",
+      "sha256": "c21841430bb6390e54fdff31ce00ea42b6b0002e5e3170644869a15a885aeab2"
+    },
+    {
+      "path": "skills/html-ppt/templates/full-decks/xhs-white-editorial/style.css",
+      "sha256": "2724a733cffd6a66cca9f33cce1f3e11ec3998cf758d591cde58af909a76f9ed"
+    },
+    {
+      "path": "skills/html-ppt/templates/layout-showcase.html",
+      "sha256": "c90a4e324e2bcaf25115570742497ebfe4aa86d799be7cfe0d09a6a2d721cbcc"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/arch-diagram.html",
+      "sha256": "555d00db06b720212357ab5c59039f5f3fca1595452c2c330ccc5998e8f0bb1b"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/big-quote.html",
+      "sha256": "b4cc71b66192ed844457b88e7093534e79977b0e8da6c4a8ef3d292df6c0a792"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/bullets.html",
+      "sha256": "f1bee00e539c75373f7a78ec7c487a68ccba8e54b00d77e97e19f5fa0f39899f"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/chart-bar.html",
+      "sha256": "4f3510567d46fac93b3e14f50fc4ee376edb25a1ff2834293c6964984f32542d"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/chart-line.html",
+      "sha256": "7d88cb3459e019317d757e766f6508916f9055f86faf89faf7af4e7c0fef39c1"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/chart-pie.html",
+      "sha256": "5205625652efc782136f131e06586b35df888a0cdc6dbe8e998c70dff6f26b72"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/chart-radar.html",
+      "sha256": "4890a9018a5ce648daf42ee0f7f41790998a3b7befeb5cf003582fb49a6fb426"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/code.html",
+      "sha256": "02d1a0a1e6d71ec9a547d46f6e16f1ded4ab090d82c4435a9e68047d04ac222a"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/comparison.html",
+      "sha256": "18fc03519e9b0ed036444677972317eb53d970f530d8bceb0e30a591686ac49b"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/cover.html",
+      "sha256": "a573ccf02a15d13d4514424aad1afbdbbeab6cd1cc61ccbb935b4f370421832a"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/cta.html",
+      "sha256": "db206cbb5873db9447e431f626373d509af2a8397b82c7bf17849df92a666f12"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/diff.html",
+      "sha256": "a07bc6f7114b19439b9212500e4231d19de1683f7aceaf17097bb1c41e74245e"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/flow-diagram.html",
+      "sha256": "3691ce0b2d465b6ac409a5909990d55be7a399ad649614ccb83b24397aa69391"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/gantt.html",
+      "sha256": "308c28ae552d90f59c957a033d61b3a37fe5a5cdf9b25940665c291f78e5425a"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/image-grid.html",
+      "sha256": "6fcf1d7e35151fbb96ae794a9ed11513fb38f9b29758c74550d4fef149bd5544"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/image-hero.html",
+      "sha256": "c5043568162dd90f8696cd12fddc59a2b2168a07c075d466fc5ce9c6f1cf21a3"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/kpi-grid.html",
+      "sha256": "c001e9e0bb548b8c6357cd3c353a243353e35bc2e44b36b3b62e6d8ef9252c69"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/mindmap.html",
+      "sha256": "3c22f7bdd80e74cd60aaa815cac1ac6d54d4d022b0d3c3e2dbd9dcb5f96b736c"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/process-steps.html",
+      "sha256": "70af5a435a4bcdc640f35b5f8870ca2adb36e2e2f4f681e5172661e7acd2d94d"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/pros-cons.html",
+      "sha256": "3b79df7ac312598d460c48a80bc6e8accf27f350ecfb8e5a779f0c5f9de3da9d"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/roadmap.html",
+      "sha256": "d4271458034989cafad7f410847a6f3ae17fd0600077fd6949f8b1cc48b005f1"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/section-divider.html",
+      "sha256": "3fefdd2240707a1a6cda7f875456108ed93cb55359dcf00d92c556656688ade7"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/stat-highlight.html",
+      "sha256": "b638b0fbf09221ad7d39ba338560f6ea037d9e6fdc9ab0a93757ddadb277d9dd"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/table.html",
+      "sha256": "ae31373b9457d2776c6807ad87b602155b39296749c3c59a37ba98b14f008229"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/terminal.html",
+      "sha256": "1cd7ecaae72f096e89b38611232163c48fb12ff1fc7131a1326858d3fa6ed39a"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/thanks.html",
+      "sha256": "a1deed0b8122b72cb14dd0d5cbfaf2dbb58ea6524688072b926fd19bc999076a"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/three-column.html",
+      "sha256": "6c751cb3fa639928df442e1cccab91d9565168d2e76244c562802145503b1e87"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/timeline.html",
+      "sha256": "5e424003fb97bb59fe732768c2bc40451902cd6800bbc4dd49f84c6e95e02652"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/toc.html",
+      "sha256": "ddddd908a2014424a4cd032cd39c202583a7cadcc1e4b223491969eeacdd6bda"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/todo-checklist.html",
+      "sha256": "434559de5f083491fdaff601f8fcaadb65fb601d0ec065c045b532f1eaac9314"
+    },
+    {
+      "path": "skills/html-ppt/templates/single-page/two-column.html",
+      "sha256": "8246257fc2866d35f2113a3ec4eb0c329fe3d4ab5908c613ff2e801fde638267"
+    },
+    {
+      "path": "skills/html-ppt/templates/theme-showcase.html",
+      "sha256": "6068323b3d82e1994370d86c20a76a9b76fda2bd5fad1e3e32367fd15c6fb4e1"
+    },
+    {
+      "path": "skills/humanize-ppt/adapters/guizang-bridge-notes.md",
+      "sha256": "afd996ee5db174e617e7cb561031f7ed75946377641ba28549d9797d2bf19ad3"
+    },
+    {
+      "path": "skills/humanize-ppt/adapters/presenter-adapter-spec.md",
+      "sha256": "62df38e44b951aac5dfcf5b774c5332cec95b64cd5dfd720fa1051e67839039d"
+    },
+    {
+      "path": "skills/humanize-ppt/adapters/zara-bridge-notes.md",
+      "sha256": "5ce754456769df273214f1cfbd86b8da1876e4e3e85c9d620f29f808a632caa7"
+    },
+    {
+      "path": "skills/humanize-ppt/contracts/asset-manifest.template.md",
+      "sha256": "08e4844bea416ed3e17833f295ab7b6a3e8500ef7acf30a5426f8b8cb8fecfa5"
+    },
+    {
+      "path": "skills/humanize-ppt/contracts/ast-outline.schema.md",
+      "sha256": "e57b67b4c6a89dac8bba12a528b7a61ae334bebd9298db37a564071468ba26d3"
+    },
+    {
+      "path": "skills/humanize-ppt/contracts/deck-brief.template.md",
+      "sha256": "125d161dbcfc6464bfd5f8856886af26aad588fde19d069a30f3107fd19ab090"
+    },
+    {
+      "path": "skills/humanize-ppt/contracts/slide-plan.schema.json",
+      "sha256": "61efa29f842de5c28b69d02bca1cbf5fc07b0fea5e0349a8f9e02d884a07c190"
+    },
+    {
+      "path": "skills/humanize-ppt/contracts/speaker-intent.template.md",
+      "sha256": "0c1a79c60b3bdd5cd80128c1706936dce0dd2cf377a68ba54f03d8d6dce969e2"
+    },
+    {
+      "path": "skills/humanize-ppt/contracts/video-slots.schema.json",
+      "sha256": "4ec82b8ebfff47375a524ec476ce8aa9cf4ca6a4eee01dd56f2ca60745b17683"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/agent-teams.md",
+      "sha256": "c3a7d889c14ccebfd13a7962bb21a1c21145f3e22d216e950134a7dd609f01b0"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/AST-theory.md",
+      "sha256": "81ab6f711500dd51dd0db781ac607e7292f3cb789d817919b860ca7a1ecd6d56"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/hermes-install/index.html",
+      "sha256": "71829a452b63daf07fabf6cb28950408a1f720cdf338d8ba5b333a1ed731ac31"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/hermes-install/presenter.html",
+      "sha256": "cb49378f8a390c97da297fd731fa9c99d961ceb876a80236fd4b116b02ceb64b"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/hermes-install/presenter/index.html",
+      "sha256": "f749249c1c327e802bdac9777fa8757a45d88cbf3f9962fba677d5f0157b153c"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/hermes-install/presenter/notes.json",
+      "sha256": "32120d1b6495cc8071db0ab49c8071f68e7601e5c2afc8ceae3453449383aee4"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/hermes-install/styles/guizang-stable.html",
+      "sha256": "a4ae97828aff8236d9265c6633c40898fea18926d177383b3c66a03ab103d184"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/hermes-install/styles/index.html",
+      "sha256": "9fafecdf882d22a50665288ddf280c2bf9f50f14ae94f646a263f8f6598d2988"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/hermes-install/styles/zara-contrast.html",
+      "sha256": "f1a2496f8bab3c5fcb8da96b089b2ac478f2584f278bc1b3fd1165152411d606"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/hermes-install/styles/zara-editorial.html",
+      "sha256": "c3181aadf545d42c730d4b875abdbd7be2b05e18a9baf1bf9c55a03921993fda"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/index.html",
+      "sha256": "71829a452b63daf07fabf6cb28950408a1f720cdf338d8ba5b333a1ed731ac31"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/presenter.html",
+      "sha256": "cb49378f8a390c97da297fd731fa9c99d961ceb876a80236fd4b116b02ceb64b"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/presenter/index.html",
+      "sha256": "31a1af1d2f9f8647fc20b67f73f3cf6a775c47db7a548c114c45bf3cc31e9cee"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/presenter/notes.json",
+      "sha256": "07f51e3ee828b10f3c7d9c057fe3405ed298f6c57580345814a8fc3737c2f7c1"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/styles/guizang-stable.html",
+      "sha256": "60bfd62e93df11e02ecbf04831d95930d713bfc44d968ce3008df91bb5fa3f29"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/styles/index.html",
+      "sha256": "9fafecdf882d22a50665288ddf280c2bf9f50f14ae94f646a263f8f6598d2988"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/styles/zara-contrast.html",
+      "sha256": "80d6629a5342325f2e5877a4fdacd1f2a760998f0103a7fcf9ee9a444e2df4f1"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/demo/styles/zara-editorial.html",
+      "sha256": "7ab9023cf0504e4d6cb1d0abef8158e0e721e3d9a10c753c5e9a9c9d50b5d713"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/index.html",
+      "sha256": "22aa79e5902d023869f23c65fb8ebf0062d67204651f0da52910885703d781c4"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/index.md",
+      "sha256": "a25a4d0b96f4bbc19282f49909576f8a50b73895cb1f46b408b0918c5a4c8086"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/OPC-workflow.md",
+      "sha256": "47e32c79cbc4fda4a70a7f3119e3ca120ad89e46f499a13093d7405c24b160c2"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/plans/2026-05-14-agent-teams-v0.2.md",
+      "sha256": "dfaa3dae62ff806c196191e451b12b360f5225016be2d128bdc5986301e1afa7"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/presenter-adapter.md",
+      "sha256": "62df38e44b951aac5dfcf5b774c5332cec95b64cd5dfd720fa1051e67839039d"
+    },
+    {
+      "path": "skills/humanize-ppt/docs/router-rules.md",
+      "sha256": "bc123dbed9c9afdbb107261a6f966857c21d2f54d45bbd1d0af9ea634d7b6ff6"
+    },
+    {
+      "path": "skills/humanize-ppt/examples/01-ai-tool-update/source.md",
+      "sha256": "0697a7eaf235cf35c6159fdb232deef6e5a82ba9b055f462f23fc7ffe52f94b2"
+    },
+    {
+      "path": "skills/humanize-ppt/examples/02-hermes-install-guide/source.md",
+      "sha256": "4da3c510e3333cbb7bcf005fa0f22df10608229c29a8b0f874f0ca5ceb68b87b"
+    },
+    {
+      "path": "skills/humanize-ppt/LICENSE",
+      "sha256": "e3480cd8e19922d2777c1e94bf4a060531f004603430a05a248cb3be5c813490"
+    },
+    {
+      "path": "skills/humanize-ppt/README.en.md",
+      "sha256": "d7edf0f8775c75d412e95f2f620baaf710b97cd3f67885856558114018620b95"
+    },
+    {
+      "path": "skills/humanize-ppt/README.md",
+      "sha256": "25577d43b497d3abad5459b0c7777b91d04cefded368337323d84391d244daa2"
+    },
+    {
+      "path": "skills/humanize-ppt/references/agent-teams-public-preview.md",
+      "sha256": "294c80390cf883c9144f103223f562450b36c2b2a16ae090252bfae32087d71e"
+    },
+    {
+      "path": "skills/humanize-ppt/scripts/humanize_ppt_v1.py",
+      "sha256": "e536221ca903b24079763141e8dde6e1bb20b43bbae847c3ad4262818dfb28d8"
+    },
+    {
+      "path": "skills/humanize-ppt/SKILL.md",
+      "sha256": "d6216331b75b32f05cf821dfac6e98c65f2b3860a376576371492531cc96ac86"
+    }
+  ]
+}

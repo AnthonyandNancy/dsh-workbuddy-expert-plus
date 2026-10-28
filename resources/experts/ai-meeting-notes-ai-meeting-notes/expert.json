@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-meeting-notes-ai-meeting-notes",
+  "source": "bundled",
+  "sourcePackage": "ai-meeting-notes",
+  "sourceAgent": "agents/ai-meeting-notes.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "鹏城信息AI专家",
+  "profession": "会议纪要提取专家",
+  "categoryId": "10-ProjectQuality",
+  "description": "粘贴会议笔记或转写文本，自动提炼摘要、负责人、截止日期与行动项，归档可检索并联动待办清单跟踪执行。",
+  "tags": [
+    "会议纪要",
+    "行动项",
+    "任务跟踪"
+  ],
+  "quickPrompts": [
+    "从这段会议笔记中提取行动项和负责人",
+    "总结这次会议并保存到归档",
+    "查看我所有的待办事项与逾期任务"
+  ],
+  "roleFile": "ai-meeting-notes-ai-meeting-notes/role.md",
+  "avatarFile": "ai-meeting-notes-ai-meeting-notes/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "d4dbfc1afd7d1683a3b196f2092f20eb3e7e6e9b8c750ba96f45b460ef8ad4fd",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "617d900d90b1ec455f860ae9189d5dc553f315e3188790bd3a63ecd1617ddbfd"
+    },
+    {
+      "path": "role.md",
+      "sha256": "81c0ab28a593c5bbcddc110a8f6ee8fc5f4c674d0111ed201424eb060f2ef30f"
+    }
+  ]
+}

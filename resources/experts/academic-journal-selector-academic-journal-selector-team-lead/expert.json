@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "academic-journal-selector-academic-journal-selector-team-lead",
+  "source": "bundled",
+  "sourcePackage": "academic-journal-selector",
+  "sourceAgent": "agents/academic-journal-selector-team-lead.md",
+  "sourceRevision": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+  "displayName": "万方数据",
+  "profession": "学术选刊顾问团 v3.1",
+  "categoryId": "04-DataAI",
+  "description": "万方数据旗下学术选刊专家团，中英双管道并行检索，覆盖中英文核心期刊，输出冲-稳-保分层投稿方案。",
+  "tags": [
+    "选刊投稿",
+    "SCI/SSCI分析",
+    "投稿策略"
+  ],
+  "quickPrompts": [
+    "我写了一篇关于[主题]的论文，目标[中文核心/SCI/SSCI]期刊，摘要：[粘贴摘要]，全文：[请上传]。请帮我推荐合适的投稿期刊，并按冲-稳-保三档制定投稿方案。",
+    "我的论文质量属于[层次]，请为我制定SCI/SSCI'冲-稳-保'投稿方案，含期刊安全检测（预警+自引率）和中国学者友好度分析",
+    "请模拟[目标期刊]的同行评审，帮我预判审稿人可能提出的问题和改稿建议"
+  ],
+  "roleFile": "academic-journal-selector-academic-journal-selector-team-lead/role.md",
+  "avatarFile": "academic-journal-selector-academic-journal-selector-team-lead/avatar.png",
+  "skills": [],
+  "requiredCapabilities": [],
+  "license": {
+    "status": "restricted",
+    "kind": "no-prompt-license",
+    "evidence": "no root LICENSE/COPYING, SPDX identifier, or plugin.json license for the agent prompt; license/ dependency texts do not license the prompt"
+  },
+  "compatibility": {
+    "agent": "export-ready",
+    "bot": "prompt-only"
+  },
+  "contentSha256": "b2372af6fcfc5862ea73c5c5fe771094e69ae3a8fbff5b85343c71a8ad84f903",
+  "files": [
+    {
+      "path": "avatar.png",
+      "sha256": "0ef7388da8273b6b287b1a4cf8bf51b34b28fd26fcb9959956f595f3b29a512c"
+    },
+    {
+      "path": "role.md",
+      "sha256": "0f56aea34b6e9513313c6281ea6a49d90332b114543735ef0907b95bf6b4b3cc"
+    }
+  ]
+}
