@@ -19,7 +19,7 @@
 | Role | trim + max 24 | Client and server validate |
 | Avatar | data URL, max `160000` bytes | Not auto-generated; optional/omitted |
 | Read-only | refusal code `bot/read-only`; state carries `readOnly` | Creation disabled, no install fallback |
-| Surface | `localStorage['ds-bot:surface']`, missing key defaults to **bot** | Hint only; capability probe is authoritative |
+| Surface | Primary live signal: DS-Bot's Bot-only `sidebar.footer.action` entry `bot-account`, registered only with the Bot shell group. `bot-return` exists in both modes and proves Agent only when `bot-account` is absent. `localStorage['ds-bot:surface']` is a cold-start/cross-window fallback; upstream defaults a missing key to **bot**, so residual storage alone never creates a Bot surface | UI routing only; capability probe remains authoritative |
 | Sidebar slot | `sidebar.footer.action` | Unique id `workbuddy-expert-plus-market` |
 | Overlay slot | `shell.overlay` | Unique id `workbuddy-expert-plus-market-overlay` |
 | Priority helper | DS-Bot uses `freePriority`, Bot priority `-100` | Own ids/orders; no host shadowing |
@@ -35,9 +35,9 @@
 | E05 | DSH Web + DS-Bot Bot mode | Same as E04; **not run live** |
 | E06 | DS-Bot standalone App, Bot mode | **Not verifiable here** (app binary/runtime absent) |
 | E07 | DS-Bot standalone App, Agent mode | **Not verifiable here** |
-| E08 | Residual `ds-bot:surface=bot`, DS-Bot absent | State-machine test passes |
+| E08 | Residual `ds-bot:surface=bot`, DS-Bot absent | Store treats residual storage without DS-Bot footer entries as unknown; state-machine test passes |
 | E09 | DS-Bot read-only | Adapter/service/route tests pass |
-| E10 | Two windows Agent/Bot | Conservative `unknown`/disabled logic implemented; **real multi-window not run** |
+| E10 | Two windows Agent/Bot | Slot transitions drive the current window; storage is only a cross-window fallback. Conservative `unknown`/disabled logic implemented; **real multi-window not run** |
 | E11 | Remove `vendor-input/` and WorkBuddy home | `check:package` reads the unpacked tgz only; vendor input excluded |
 | E12 | Existing hand-written expert / duplicate Bot | Install-overwrite refusal and duplicate-name tests pass |
 | E13 | Delete Bot then reopen | Binding pruning by live bot-id test passes |
