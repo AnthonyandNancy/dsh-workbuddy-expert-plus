@@ -77,6 +77,55 @@ test('market prompt route returns the complete bundled prompt through the produc
   assert.equal(response.body.prompt, await catalog.readPrompt(id))
 })
 
+test('the prompt route returns the role.md baseline hash, not the aggregate content hash', async () => {
+  const unified = createUnifiedCatalog({ bundled: catalog, local: undefined, localEnabled: false })
+  const server = fakeServer()
+  mountBundledMarketRoutes(server, { catalog: unified })
+  const id = await catalog.firstId()
+  const expert = await catalog.find(id)
+  const roleHash = expert.files.find((file) => file.path === 'role.md').sha256
+  const aggregate = await catalog.fingerprint(id)
+  assert.notEqual(roleHash, aggregate, 'fixture proves the two hashes differ')
+  const response = res()
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/prompt')
+    .handler(req({ url: `/dsh-workbuddy-expert-plus/api/market/prompt?id=${id}` }), response)
+  assert.equal(response.status, 200)
+  assert.equal(response.body.contentSha256, roleHash)
+})
+
+test('a prompt edited from the route baseline is accepted by the Bot service', async () => {
+  const unified = createUnifiedCatalog({ bundled: catalog, local: undefined, localEnabled: false })
+  const adapter = createBundledSourceAdapter(catalog)
+  const calls = []
+  const api = {
+    async call(endpoint, payload) {
+      calls.push({ endpoint, payload })
+      if (endpoint === 'state') return { bots: [], models: [], readOnly: false }
+      if (endpoint === 'create-bot') return { id: 'bot-edited', name: payload.name, role: payload.role, instructions: payload.instructions }
+      throw new Error(`unexpected endpoint ${endpoint}`)
+    },
+  }
+  const service = createBotService({ adapter, api })
+  const id = await catalog.firstId()
+  const server = fakeServer()
+  mountBundledMarketRoutes(server, { catalog: unified, botService: service })
+  const promptResponse = res()
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/prompt')
+    .handler(req({ url: `/dsh-workbuddy-expert-plus/api/market/prompt?id=${id}` }), promptResponse)
+  const edited = `${promptResponse.body.prompt}\nEDITED`
+  const createResponse = res()
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/bot/create').handler(
+    req({
+      method: 'POST',
+      headers: { host: '127.0.0.1:3000' },
+      body: { expertId: id, name: 'Edited Bot', role: 'R', instructions: edited, basePromptSha256: promptResponse.body.contentSha256 },
+    }),
+    createResponse,
+  )
+  assert.equal(createResponse.status, 200)
+  assert.equal(calls.find((call) => call.endpoint === 'create-bot').payload.instructions, edited)
+})
+
 test('the unified catalog forwards every bundled read used by the market routes', async () => {
   const unified = createUnifiedCatalog({ bundled: catalog, local: undefined, localEnabled: false })
   const id = await catalog.firstId()

@@ -7,6 +7,7 @@
  * market.
  */
 
+import { sha256 } from '../catalog/resolver.js'
 import { probeDsBot } from '../adapters/environment.js'
 import { createBotRequestFetch } from '../adapters/request-fetch.js'
 
@@ -166,7 +167,13 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
       const id = new URL(request.url ?? '/', 'http://internal.invalid').searchParams.get('id')
       if (typeof id !== 'string' || id === '') return sendJson(response, 400, { error: 'id is required' })
       try {
-        sendJson(response, 200, { id, prompt: await catalog.readPrompt(id), contentSha256: await catalog.fingerprint(id) })
+        const prompt = await catalog.readPrompt(id)
+        // `contentSha256` on this route is the PROMPT baseline the client
+        // sends back for an edited instruction. It must be the role.md byte
+        // hash the create service compares against — the catalog's aggregate
+        // `fingerprint()` is a different value (it covers every declared
+        // file) and would reject every edited prompt.
+        sendJson(response, 200, { id, prompt, contentSha256: sha256(Buffer.from(prompt, 'utf8')) })
       } catch (error) {
         sendJson(response, /unknown expert/.test(String(error?.message)) ? 404 : 500, { error: error instanceof Error ? error.message : String(error) })
       }
