@@ -1,0 +1,33 @@
+{
+  "lockedAt": "2026-10-28",
+  "repositories": {
+    "dsh-workbuddy-expert": {
+      "url": "https://github.com/pbwheel/dsh-workbuddy-expert",
+      "commit": "dd31d79a818125e045f349e0b0cf0b35408f9c9c",
+      "version": "0.2.2",
+      "license": "MIT"
+    },
+    "workbuddyskills": {
+      "url": "https://github.com/infometa/workbuddyskills",
+      "commit": "7ea565af29f6bede2acc0d7b55daa300db5de3f8",
+      "snapshot": "workbuddyskills-main.zip"
+    },
+    "DS-Bot": {
+      "url": "https://github.com/Fei2411/DS-Bot",
+      "commit": "4a7b55069ad300eae8be42a74f31bc170b40ead7",
+      "pluginVersion": "0.2.3",
+      "appVersion": "0.2.2",
+      "license": "Apache-2.0"
+    }
+  },
+  "verifiedContracts": {
+    "dsBotApi": "POST api/bot {endpoint,payload}",
+    "createBotEndpoint": "create-bot",
+    "createBotFields": ["name", "role", "instructions", "avatar", "model", "effort", "workDir"],
+    "botNameMax": 40,
+    "botRoleMax": 24,
+    "avatarMaxBytes": 160000,
+    "surfaceKey": "ds-bot:surface",
+    "slots": ["sidebar.footer.action", "shell.overlay"]
+  }
+}
