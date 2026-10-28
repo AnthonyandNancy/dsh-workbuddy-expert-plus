@@ -95,9 +95,11 @@ function renderComponent(Component, props) {
     tree: () => instance.tree,
     rerender,
     instance,
+    // Resolve only the renders the component actually scheduled. No forced
+    // rerender here: a component that never subscribes must not observe a
+    // surface transition, which is what makes these tests sensitive.
     async flush() {
-      for (let i = 0; i < 4; i++) await Promise.resolve()
-      rerender()
+      for (let i = 0; i < 6; i++) await Promise.resolve()
     },
   }
 }
@@ -150,6 +152,28 @@ function surfaceHarness(initialEntries, initialStorage) {
 
 const botOnly = [{ options: { id: 'bot-account' } }, { options: { id: 'bot-return' } }]
 const agentOnly = [{ options: { id: 'bot-return' } }]
+
+test('DS-Bot footer ids owned by another plugin never switch the surface', () => {
+  const foreignBot = [
+    { registrant: 'some-other-plugin', options: { id: 'bot-account' } },
+    { registrant: 'some-other-plugin', options: { id: 'bot-return' } },
+  ]
+  assert.equal(surfaceHarness(foreignBot, 'agent').store.get(), 'agent',
+    'a foreign footer must not impersonate DS-Bot Bot mode; the stored Agent hint is respected')
+
+  const ownBot = [
+    { registrant: 'dyn/ds-bot', options: { id: 'bot-account' } },
+    { registrant: 'dyn/ds-bot', options: { id: 'bot-return' } },
+  ]
+  assert.equal(surfaceHarness(ownBot, 'agent').store.get(), 'bot',
+    'the dynamic DS-Bot registrant is accepted')
+
+  const ownAgent = [
+    { registrant: 'dyn/ds-bot', options: { id: 'bot-return' } },
+  ]
+  assert.equal(surfaceHarness(ownAgent, 'agent').store.get(), 'agent',
+    'the DS-Bot Agent footer is accepted')
+})
 
 test('surface store reads Bot/Agent from the DS-Bot footer registrations in this window', () => {
   const bot = surfaceHarness(botOnly, 'agent')

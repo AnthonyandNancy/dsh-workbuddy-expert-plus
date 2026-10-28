@@ -2358,6 +2358,18 @@ function botSurfaceHint (storage) {
 var BOT_SURFACE_ENTRY = 'bot-account'
 
 /**
+ * DS-Bot's slot registrants. A dynamic package's fiber is named
+ * `dyn/<pluginId>` by the client runner; a statically loaded copy uses the
+ * module id directly. Older hosts may omit `registrant` entirely, which is
+ * the only case where the id alone is accepted.
+ */
+function isDsBotRegistrant (entry) {
+  var registrant = entry !== null && entry !== undefined ? entry.registrant : undefined
+  if (registrant === undefined || registrant === null || registrant === '') return true
+  return registrant === 'ds-bot' || registrant === 'dyn/ds-bot'
+}
+
+/**
  * One live surface source for both the sidebar launcher and the composer
  * seat.
  *
@@ -2386,7 +2398,7 @@ function createSurfaceStore (options) {
       if (!Array.isArray(entries)) return false
       for (var i = 0; i < entries.length; i++) {
         var entry = entries[i]
-        if (entry !== null && entry !== undefined && entry.options !== null && entry.options !== undefined && entry.options.id === BOT_SURFACE_ENTRY) return true
+        if (entry !== null && entry !== undefined && entry.options !== null && entry.options !== undefined && entry.options.id === BOT_SURFACE_ENTRY && isDsBotRegistrant(entry)) return true
       }
       return false
     } catch (error) {
@@ -2399,8 +2411,9 @@ function createSurfaceStore (options) {
       var entries = readEntries('sidebar.footer.action')
       if (!Array.isArray(entries)) return false
       for (var i = 0; i < entries.length; i++) {
-        var id = entries[i] && entries[i].options ? entries[i].options.id : ''
-        if (typeof id === 'string' && (id === 'bot-account' || id === 'bot-return')) return true
+        var entry = entries[i]
+        var id = entry && entry.options ? entry.options.id : ''
+        if (typeof id === 'string' && (id === 'bot-account' || id === 'bot-return') && isDsBotRegistrant(entry)) return true
       }
       return false
     } catch (error) {
