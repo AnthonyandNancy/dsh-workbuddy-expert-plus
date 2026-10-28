@@ -12,6 +12,7 @@ function bootClient() {
   const seats = new Map()
   const rendered = new Map()
   const tags = []
+  const subscribed = new Set()
   const document = {
     createElement: () => ({
       dataset: {}, textContent: '',
@@ -57,9 +58,14 @@ function bootClient() {
         rendered.set(definition.name, component)
         return () => rendered.delete(definition.name)
       },
+      subscribe(name, listener) {
+        subscribed.add(name)
+        return () => subscribed.delete(name)
+      },
+      entries() { return [] },
     },
   }
-  return { module, ctx, seats, rendered, tags, sandbox }
+  return { module, ctx, seats, rendered, tags, sandbox, subscribed }
 }
 
 test('repeated apply/dispose leaves no slot registrations or style tags', () => {
@@ -81,9 +87,12 @@ test('repeated apply/dispose leaves no slot registrations or style tags', () => 
 
   const second = app.module.apply(app.ctx)
   assert.ok(app.seats.has('settings.section'))
+  assert.deepEqual([...app.subscribed], ['sidebar.footer.action'],
+    'each apply observes only the DS-Bot footer cell and releases it on dispose')
   second()
   assert.equal(app.seats.size, 0)
   assert.equal(app.tags.length, 0)
+  assert.equal(app.subscribed.size, 0, 'the surface subscription is disposed with the plugin')
 })
 
 test('the bundle carries no DOM mutation or private DS-Bot storage writes', () => {

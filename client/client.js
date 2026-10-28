@@ -2340,17 +2340,176 @@ function MarketPage (props) {
 // ── the Bot half: DS-Bot sidebar launcher + overlay market ──────────────────
 
 /**
- * The DS-Bot operation hint. The only localStorage read is a non-authoritative
- * hint; the server-side market/environment probe owns the actual capability
- * decision. Unknown storage degrades to 'unknown', never to 'bot' by default.
+ * The read-only localStorage hint. It is a HINT only: DS-Bot's own
+ * `readMode()` defaults a missing key to 'bot', so an absent or residual
+ * value can never prove the current window paints Bot mode.
  */
-function botSurfaceHint () {
+function botSurfaceHint (storage) {
   try {
-    var value = window.localStorage.getItem('ds-bot:surface')
+    var store = storage !== undefined ? storage : window.localStorage
+    var value = store.getItem('ds-bot:surface')
     return value === 'agent' || value === 'bot' ? value : 'unknown'
   } catch (error) {
     return 'unknown'
   }
+}
+
+/** DS-Bot's Bot-only footer registration; `bot-return` exists in both modes. */
+var BOT_SURFACE_ENTRY = 'bot-account'
+
+/**
+ * One live surface source for both the sidebar launcher and the composer
+ * seat.
+ *
+ * DS-Bot paints Bot mode as a whole slot GROUP: it registers `bot-account`
+ * in `sidebar.footer.action` while Bot mode is on and withdraws it on the
+ * switch to Agent mode. Those registration transitions fire in THIS window,
+ * unlike the localStorage write that caused them, so they are the primary
+ * signal and the reason the old focus/storage listeners lagged.
+ *
+ * The stored surface remains a fallback for a cold start before the footer
+ * is declared and for cross-window writes. A residual `bot` value without
+ * any DS-Bot registration is treated as unknown: the Bot skin is not here.
+ */
+function createSurfaceStore (options) {
+  var opts = options || {}
+  var storage = opts.storage
+  var subscribeSlots = typeof opts.subscribe === 'function' ? opts.subscribe : function () { return function () {} }
+  var readEntries = typeof opts.entries === 'function' ? opts.entries : function () { return [] }
+  var win = opts.win
+  var listeners = []
+  var value = 'unknown'
+
+  function hasBotFooter () {
+    try {
+      var entries = readEntries('sidebar.footer.action')
+      if (!Array.isArray(entries)) return false
+      for (var i = 0; i < entries.length; i++) {
+        var entry = entries[i]
+        if (entry !== null && entry !== undefined && entry.options !== null && entry.options !== undefined && entry.options.id === BOT_SURFACE_ENTRY) return true
+      }
+      return false
+    } catch (error) {
+      return false
+    }
+  }
+
+  function anyDsBotFooter () {
+    try {
+      var entries = readEntries('sidebar.footer.action')
+      if (!Array.isArray(entries)) return false
+      for (var i = 0; i < entries.length; i++) {
+        var id = entries[i] && entries[i].options ? entries[i].options.id : ''
+        if (typeof id === 'string' && (id === 'bot-account' || id === 'bot-return')) return true
+      }
+      return false
+    } catch (error) {
+      return false
+    }
+  }
+
+  function compute () {
+    if (hasBotFooter()) return 'bot'
+    var hint = botSurfaceHint(storage)
+    // DS-Bot always leaves `bot-return` in the footer, so its presence
+    // without `bot-account` is a positive Agent signal. With no DS-Bot
+    // footer at all, a stored 'bot' is residual and must not create a Bot
+    // surface; an explicit 'agent' remains a safe read-only hint.
+    if (anyDsBotFooter()) return 'agent'
+    return hint === 'agent' ? 'agent' : 'unknown'
+  }
+
+  function notify () {
+    var next = compute()
+    if (next === value) return
+    value = next
+    for (var i = 0; i < listeners.length; i++) listeners[i](value)
+  }
+
+  value = compute()
+  var offSlots = subscribeSlots('sidebar.footer.action', notify)
+  function onStorage (event) {
+    if (event && event.key !== null && event.key !== undefined && event.key !== 'ds-bot:surface') return
+    notify()
+  }
+  function onVisible () {
+    if (typeof document !== 'undefined' && document !== null && document.visibilityState === 'hidden') return
+    notify()
+  }
+  if (win && typeof win.addEventListener === 'function') {
+    win.addEventListener('storage', onStorage)
+    win.addEventListener('focus', onVisible)
+    if (typeof document !== 'undefined' && document !== null && typeof document.addEventListener === 'function') {
+      document.addEventListener('visibilitychange', onVisible)
+    }
+  }
+
+  return {
+    get: function () { return value },
+    subscribe: function (listener) {
+      listeners.push(listener)
+      return function () {
+        var index = listeners.indexOf(listener)
+        if (index >= 0) listeners.splice(index, 1)
+      }
+    },
+    refresh: notify,
+    dispose: function () {
+      if (typeof offSlots === 'function') offSlots()
+      if (win && typeof win.removeEventListener === 'function') {
+        win.removeEventListener('storage', onStorage)
+        win.removeEventListener('focus', onVisible)
+        if (typeof document !== 'undefined' && document !== null && typeof document.removeEventListener === 'function') {
+          document.removeEventListener('visibilitychange', onVisible)
+        }
+      }
+      listeners.length = 0
+    }
+  }
+}
+
+/** The launching cell; hidden unless this window currently paints Bot mode. */
+function BotMarketLauncher (props) {
+  var t = props.t
+  var store = props.surfaceStore
+  var surfaceState = React.useState(store !== undefined && store !== null ? store.get() : 'unknown')
+  var surface = surfaceState[0]
+  var setSurface = surfaceState[1]
+  React.useEffect(function () {
+    if (store === undefined || store === null || typeof store.subscribe !== 'function') return undefined
+    setSurface(store.get())
+    return store.subscribe(setSurface)
+  }, [store])
+  if (surface !== 'bot') return null
+  return el('button', {
+    className: 'wbx-launcher', type: 'button',
+    onClick: function () { if (typeof props.onOpen === 'function') props.onOpen() }
+  }, t('nav'))
+}
+
+/**
+ * The composer's expert seat. Agent mode keeps the original selector; Bot
+ * mode withdraws it because DS-Bot's composer owns its own add menu.
+ * The shared store makes the switch visible immediately in the same window.
+ */
+function ComposerExpertSeat (props) {
+  var store = props.surfaceStore
+  var surfaceState = React.useState(store !== undefined && store !== null ? store.get() : 'unknown')
+  var surface = surfaceState[0]
+  var setSurface = surfaceState[1]
+  React.useEffect(function () {
+    if (store === undefined || store === null || typeof store.subscribe !== 'function') return undefined
+    setSurface(store.get())
+    return store.subscribe(setSurface)
+  }, [store])
+  if (surface === 'bot') return null
+  return el(ExpertSelector, {
+    t: props.t,
+    getLocale: props.getLocale,
+    session: props.session,
+    sessionId: props.sessionId,
+    initialData: props.initialData
+  })
 }
 
 /**
@@ -2616,30 +2775,6 @@ function BotMarketOverlayHost (props) {
   })
 }
 
-/** The sidebar launcher; hidden outside a Bot surface so Agent stays untouched. */
-function BotMarketLauncher (props) {
-  var t = props.t
-  var surfaceState = React.useState(botSurfaceHint())
-  var surface = surfaceState[0]
-  React.useEffect(function () {
-    var sync = function () { surfaceState[1](botSurfaceHint()) }
-    if (typeof window !== 'undefined' && window.addEventListener) {
-      window.addEventListener('storage', sync)
-      window.addEventListener('focus', sync)
-      return function () {
-        window.removeEventListener('storage', sync)
-        window.removeEventListener('focus', sync)
-      }
-    }
-    return undefined
-  }, [])
-  if (surface !== 'bot') return null
-  return el('button', {
-    className: 'wbx-launcher', type: 'button',
-    onClick: function () { if (typeof props.onOpen === 'function') props.onOpen() }
-  }, t('nav'))
-}
-
 /** The overlay host state: one launcher and at most one overlay registration. */
 
 
@@ -2867,6 +3002,21 @@ function apply (ctx) {
     if (typeof disposer === 'function') disposers.push(disposer)
   }
 
+  // One surface store for the whole bundle. DS-Bot's Bot-only footer entry
+  // changing fires `slots.subscribe` synchronously in this window, so both
+  // the launcher and the composer seat switch on the same tick as the skin.
+  var surfaceStore = createSurfaceStore({
+    storage: typeof window === 'undefined' ? undefined : window.localStorage,
+    subscribe: function (name, listener) {
+      return typeof slots.subscribe === 'function' ? slots.subscribe(name, listener) : function () {}
+    },
+    entries: function (name) {
+      return typeof slots.entries === 'function' ? slots.entries(name) : []
+    },
+    win: typeof window === 'undefined' ? undefined : window
+  })
+  collect(function () { surfaceStore.dispose() })
+
   // The one seat (design §11 #5): conversation.input.left, the composer
   // tool row's left side. NOTE (verified in the harness source): the
   // shipped composer renders this seat only when a session id exists, so
@@ -2882,9 +3032,10 @@ function apply (ctx) {
       locale: NS
     }, function (props) {
       props = props || {}
-      return el(ExpertSelector, {
+      return el(ComposerExpertSeat, {
         t: t,
         getLocale: getLocale,
+        surfaceStore: surfaceStore,
         session: props.session,
         sessionId: props.sessionId,
         initialData: props.initialData
@@ -2948,9 +3099,11 @@ function apply (ctx) {
       inject: function () { return { t: t } }
     }, function () {
       // The launcher must live in the sidebar cell, but the open flag belongs
-      // to the overlay cell. A tiny module-scope store keeps them in sync.
+      // to the overlay cell. A tiny module-scope store keeps them in sync;
+      // the surface store makes the cell itself follow live mode switches.
       return el(BotMarketLauncher, {
         t: t,
+        surfaceStore: surfaceStore,
         onOpen: function () { openBotMarket() }
       })
     })
@@ -3033,6 +3186,8 @@ module.exports.openBotMarket = openBotMarket
 module.exports.closeBotMarket = closeBotMarket
 module.exports.BotMarketLauncher = BotMarketLauncher
 module.exports.botSurfaceHint = botSurfaceHint
+module.exports.createSurfaceStore = createSurfaceStore
+module.exports.ComposerExpertSeat = ComposerExpertSeat
 // The row configuration (plugins.row.config), same loader-tolerant pattern.
 module.exports.ROW_CONFIG_KEY = ROW_CONFIG_KEY
 module.exports.ROW_CONFIG_CSS = ROW_CONFIG_CSS

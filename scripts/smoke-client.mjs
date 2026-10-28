@@ -682,11 +682,33 @@ function makeDocumentStub() {
 {
   const document = makeDocumentStub()
   // The bundle runs in the vm realm: its `document` resolves against the
-  // sandbox, so the stub is installed there.
+  // sandbox, so the stub is installed there. `window.localStorage` is read
+  // by the read-only surface hint; an absent key falls back to the slots.
   sandbox.document = document
+  sandbox.window.localStorage = { getItem: () => null }
+  sandbox.window.addEventListener = () => {}
+  sandbox.window.removeEventListener = () => {}
   const seatSetups = new Map()
   const renderedBySeat = new Map()
+  const footerEntries = []
+  const footerListeners = []
+  const footerEntryOf = (definition) => ({
+    name: definition.name,
+    options: { id: definition.id, order: definition.order, priority: definition.priority },
+  })
   const slots = {
+    subscribe(name, listener) {
+      assert.equal(name, 'sidebar.footer.action', 'only the DS-Bot footer cell is observed')
+      footerListeners.push(listener)
+      return () => {
+        const index = footerListeners.indexOf(listener)
+        if (index >= 0) footerListeners.splice(index, 1)
+      }
+    },
+    entries(name) {
+      assert.equal(name, 'sidebar.footer.action', 'only the DS-Bot footer cell is inspected')
+      return footerEntries
+    },
     inject(seat, setup) {
       assert.ok(['conversation.input.left', 'settings.section', 'plugins.row.config', 'sidebar.footer.action', 'shell.overlay'].includes(seat),
         `known seat: ${seat}`)
@@ -724,9 +746,21 @@ function makeDocumentStub() {
   assert.ok(document.tags.some((tag) => tag.textContent.includes('.wbx-chip')), 'the market CSS rides another tag')
   assert.ok(document.tags.some((tag) => tag.textContent.includes('.wbr-input')), 'the row-config CSS rides the third tag')
 
-  const tree = renderedBySeat.get('conversation.input.left')({ session: { id: 's' } })
-  assert.equal(tree.type, mod.ExpertSelector, 'the composer seat renders the selector component')
-  assert.equal(tree.props.session.id, 's')
+  const composerTree = renderedBySeat.get('conversation.input.left')({ session: { id: 's' } })
+  assert.equal(composerTree.type, mod.ComposerExpertSeat, 'the composer seat renders the mode-aware wrapper')
+  // With no DS-Bot footer entry and no stored surface, the wrapper keeps the
+  // Agent selector (an unknown surface is treated as Agent, never Bot).
+  const agentStore = mod.createSurfaceStore({ storage: { getItem: () => null }, subscribe: () => () => {}, entries: () => [] })
+  const agentView = renderComponent(mod.ComposerExpertSeat, { t, session: { id: 's' }, surfaceStore: agentStore })
+  assert.equal(agentView.tree().type, mod.ExpertSelector, 'unknown surface keeps the selector')
+  // A live Bot-only footer entry hides it; this is the state DS-Bot installs.
+  const botStore = mod.createSurfaceStore({
+    storage: { getItem: () => null },
+    subscribe: () => () => {},
+    entries: () => [{ options: { id: 'bot-account' } }],
+  })
+  const botView = renderComponent(mod.ComposerExpertSeat, { t, session: { id: 's' }, surfaceStore: botStore })
+  assert.equal(botView.tree(), null, 'Bot mode removes the composer expert entry')
 
   const page = renderedBySeat.get('settings.section')()
   assert.equal(page.type, mod.MarketPage, 'the settings seat renders the market page')
