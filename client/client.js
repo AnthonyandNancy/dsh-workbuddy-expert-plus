@@ -1606,6 +1606,12 @@ function ExpertCard (props) {
 
   var actions = cardActionsOf(expert)
   var rowKey = 'expert:' + strOf(expert.id)
+  // One card anatomy serves both markets. Agent keeps its confirm-on-hover
+  // install row; Bot injects a single create/re-create button. A Bot card
+  // must never inherit the Agent install semantics just because the expert
+  // is not installed.
+  var injectedAction = typeof props.actionLabel === 'string' && props.actionLabel !== ''
+  var extraMark = props.mark !== undefined && props.mark !== null ? props.mark : null
 
   return el('li', {
     className: 'wbx-card',
@@ -1613,23 +1619,34 @@ function ExpertCard (props) {
     'data-broken': expert.broken === true ? 'true' : undefined
   },
     el('div', { className: 'wbx-corner' },
-      el(ActionRow, {
-        t: t,
-        rowKey: rowKey,
-        actions: actions,
-        laneBusy: props.laneBusy === true,
-        busyKey: props.busyKey || '',
-        confirmKey: props.confirmKey || '',
-        onConfirm: function (action) {
-          if (typeof props.onActionConfirm === 'function') props.onActionConfirm(rowKey + ':' + action)
-        },
-        onCancelConfirm: function () {
-          if (typeof props.onCancelConfirm === 'function') props.onCancelConfirm()
-        },
-        onAction: function (action) {
-          if (typeof props.onAction === 'function') props.onAction(expert, action)
-        }
-      })),
+      injectedAction
+        ? el('div', { className: 'wbx-actions' },
+            el('button', {
+              className: 'wbx-btn', type: 'button',
+              'data-variant': 'primary',
+              disabled: props.actionDisabled === true,
+              title: props.actionTitle || undefined,
+              onClick: function () {
+                if (typeof props.onAction === 'function') props.onAction(expert)
+              }
+            }, props.actionLabel))
+        : el(ActionRow, {
+            t: t,
+            rowKey: rowKey,
+            actions: actions,
+            laneBusy: props.laneBusy === true,
+            busyKey: props.busyKey || '',
+            confirmKey: props.confirmKey || '',
+            onConfirm: function (action) {
+              if (typeof props.onActionConfirm === 'function') props.onActionConfirm(rowKey + ':' + action)
+            },
+            onCancelConfirm: function () {
+              if (typeof props.onCancelConfirm === 'function') props.onCancelConfirm()
+            },
+            onAction: function (action) {
+              if (typeof props.onAction === 'function') props.onAction(expert, action)
+            }
+          })),
     el('div', { className: 'wbx-card-top' },
       avatar,
       el('div', { className: 'wbx-card-title' },
@@ -1637,8 +1654,14 @@ function ExpertCard (props) {
         el('span', { className: 'wbx-id' }, strOf(expert.id)))),
     el('p', { className: 'wbx-desc' }, localeDescriptionOf(expert, localeId)),
     badges.length > 0 ? el('div', { className: 'wbx-badges' }, badges) : null,
-    marks.length > 0 ? el('div', { className: 'wbx-foot' },
-      el('div', { className: 'wbx-status' }, marks)) : null)
+    marks.length > 0 || extraMark !== null
+      ? el('div', { className: 'wbx-foot' },
+          el('div', { className: 'wbx-status' },
+            marks,
+            extraMark !== null
+              ? el('span', { className: 'wbx-mark', 'data-kind': 'ok' }, extraMark)
+              : null))
+      : null)
 }
 
 /**
