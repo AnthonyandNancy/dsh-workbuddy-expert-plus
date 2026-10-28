@@ -22,7 +22,7 @@ Baseline plan: `docs/superpowers/plans/2026-10-28-workbuddy-dual-mode-implementa
 | Legacy client smoke | `node scripts/smoke-client.mjs` | PASS |
 | Legacy importer smoke | `node scripts/smoke-importer.mjs` | PASS |
 | Legacy install smoke | `node scripts/smoke-install.mjs` | PASS |
-| Artifact verification | `npm run check:package` | PASS: 230 files, 39 experts, 190 resources |
+| Artifact verification | `npm run check:package` | PASS: 229 files, 39 experts, 190 resources |
 | Full suite | `npm test` | PASS: 30 unit/integration tests + 4 legacy smoke scripts |
 
 ## Artifact
