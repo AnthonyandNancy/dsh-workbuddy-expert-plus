@@ -2707,6 +2707,11 @@ function BotMarketOverlay (props) {
   var queryState = React.useState('')
   var setQuery = queryState[1]
   var query = queryState[0]
+  // The category dimension is shared with the Agent market: same raw
+  // categoryId keys, same labels, same uncategorized sentinel.
+  var categoryState = React.useState('all')
+  var setCategory = categoryState[1]
+  var category = categoryState[0]
   var selectedState = React.useState(null)
   var setSelected = selectedState[1]
   var selected = selectedState[0]
@@ -2767,10 +2772,19 @@ function BotMarketOverlay (props) {
     ? env.state.models.filter(function (option) { return option !== null && typeof option.ref === 'string' })
     : []
   var experts = body !== null && Array.isArray(body.experts) ? body.experts : []
-  var q = query.trim().toLowerCase()
-  var filtered = q === '' ? experts : experts.filter(function (expert) {
-    return (strOf(expert.displayName) + ' ' + strOf(expert.profession) + ' ' + strOf(expert.description)).toLowerCase().indexOf(q) !== -1
+  var loading = body === null
+  // The Bot market is the same catalog and the same card anatomy as Agent:
+  // carry the avatar URL across and reuse the shared filter/category helpers
+  // so chips, counts and search cannot drift between the two surfaces.
+  var cards = experts.map(function (expert) {
+    var card = Object.assign({}, expert)
+    if (strOf(card.avatarFile) !== '') {
+      card.avatarUrl = API_BASE + '/market/avatar?id=' + encodeURIComponent(strOf(card.id))
+    }
+    return card
   })
+  var categoryChips = categoryChipsOf(cards)
+  var filtered = filterExperts(cards, 'all', query, category)
 
   function choose (expert) {
     setSelected(expert)
@@ -2843,25 +2857,47 @@ function BotMarketOverlay (props) {
               placeholder: t('search'),
               onChange: function (event) { setQuery(event.target.value) }
             }),
+            // Same category row as the Agent market. It is hidden while the
+            // first state fetch is in flight and whenever the table carries
+            // no category at all, so a category-less local source degrades
+            // to the plain grid instead of showing an empty chip.
+            !loading && categoryChips.length > 0
+              ? el('div', { className: 'wbx-catrow', role: 'group', 'aria-label': t('categoryRowLabel') },
+                  el('button', {
+                    key: 'all', className: 'wbx-chip', type: 'button',
+                    'aria-pressed': category === 'all' ? 'true' : 'false',
+                    'data-active': category === 'all' ? 'true' : undefined,
+                    onClick: function () { setCategory('all') }
+                  },
+                    t('categoryAll'),
+                    el('span', { className: 'wbx-chip-count' }, String(cards.length))),
+                  categoryChips.map(function (chip) {
+                    var active = category === chip.id
+                    var label = chip.id === NO_CATEGORY ? t('categoryNone') : categoryLabelOf(chip.id, localeId)
+                    return el('button', {
+                      key: chip.id, className: 'wbx-chip', type: 'button',
+                      title: chip.id === NO_CATEGORY ? undefined : chip.id,
+                      'aria-pressed': active ? 'true' : 'false',
+                      'data-active': active ? 'true' : undefined,
+                      onClick: function () { setCategory(chip.id) }
+                    },
+                      el('span', { className: 'wbx-chip-label' }, label),
+                      el('span', { className: 'wbx-chip-count' }, String(chip.count)))
+                  }))
+              : null,
             el('ul', { className: 'wbx-grid' },
               filtered.map(function (expert) {
-                return el('li', { className: 'wbx-card', key: strOf(expert.id) },
-                  el('div', { className: 'wbx-card-top' },
-                    el('div', { className: 'wbx-card-title' },
-                      el('span', { className: 'wbx-name' }, strOf(expert.displayName)),
-                      el('span', { className: 'wbx-id' }, strOf(expert.id))),
-                    expert.botCreated === true
-                      ? el('span', { className: 'wbx-mark', 'data-kind': 'ok' }, '✓ ', t('botCreatedStamp'))
-                      : null),
-                  el('p', { className: 'wbx-desc' }, strOf(expert.description)),
-                  el('div', { className: 'wbx-actions' },
-                    el('button', {
-                      className: 'wbx-btn', type: 'button',
-                      'data-variant': 'primary',
-                      disabled: !ready,
-                      title: ready ? undefined : statusText,
-                      onClick: function () { choose(expert) }
-                    }, expert.botCreated === true ? t('botAgainBtn') : t('botCreateBtn'))))
+                return el(ExpertCard, {
+                  key: strOf(expert.id),
+                  t: t,
+                  expert: expert,
+                  localeId: localeId,
+                  actionLabel: expert.botCreated === true ? t('botAgainBtn') : t('botCreateBtn'),
+                  actionDisabled: !ready,
+                  actionTitle: ready ? undefined : statusText,
+                  onAction: function (card) { choose(card) },
+                  mark: expert.botCreated === true ? t('botCreatedStamp') : null
+                })
               })))
         : el('div', { className: 'wbx-modal-body' },
             el('label', { className: 'wbx-field' }, t('botNameLabel'),

@@ -135,3 +135,111 @@ test('ExpertCard accepts a Bot action and an optional created mark', async () =>
   buttons[0].props.onClick()
   assert.deepEqual(calls, ['meituan-living-assistant-meituan-living-assistant'])
 })
+
+test('Bot market reuses the Agent card anatomy and category chips', async () => {
+  const vm = await import('node:vm')
+  let definition
+  const instance = {
+    hookIndex: 0, hooks: {}, deps: {}, cleanups: {},
+    schedule() {},
+  }
+  const React = {
+    createElement: (type, props, ...children) => ({ type, props: props || {}, children: children.flat(Infinity) }),
+    useState(value) {
+      const index = instance.hookIndex++
+      if (!(index in instance.hooks)) instance.hooks[index] = typeof value === 'function' ? value() : value
+      return [instance.hooks[index], () => {}]
+    },
+    useEffect() { instance.hookIndex++ },
+    useRef(value) { instance.hookIndex++; return { current: value } },
+    Fragment: 'Fragment',
+  }
+  const state = {
+    experts: [
+      {
+        id: 'meituan-living-assistant-meituan-living-assistant',
+        displayName: '40-20 外卖券',
+        profession: '美团生活助手',
+        description: '帮您一键领取美团优惠券',
+        categoryId: '07-SalesCommerce',
+        avatarFile: 'meituan-living-assistant-meituan-living-assistant/avatar.jpg',
+        botCreated: false,
+      },
+      {
+        id: 'uae-public-affairs-uae-public-affairs',
+        displayName: '阿联酋公共事务专家',
+        profession: '公共事务顾问',
+        description: '专注阿联酋政府关系',
+        categoryId: '14-GlobalDevelopment',
+        avatarFile: 'uae-public-affairs-uae-public-affairs/avatar.png',
+        botCreated: true,
+      },
+    ],
+  }
+  const sandbox = {
+    window: {
+      __ModuleLoader__: { load: (value) => { definition = value } },
+      localStorage: { getItem: () => null },
+      addEventListener() {},
+      removeEventListener() {},
+    },
+    document: {
+      createElement: () => ({ dataset: {}, textContent: '', remove() {} }),
+      querySelector: () => null,
+      head: { appendChild() {} },
+    },
+    console, setTimeout, clearTimeout, React,
+    fetch: async (url) => ({
+      ok: true, status: 200,
+      async json() {
+        if (String(url).includes('/market/state')) return state
+        if (String(url).includes('/market/environment')) return { status: 'ready', state: { bots: [], models: [] } }
+        throw new Error(`unexpected ${url}`)
+      },
+    }),
+  }
+  sandbox.globalThis = sandbox
+  vm.createContext(sandbox)
+  vm.runInContext(source, sandbox)
+  const module = definition.factory(() => React)
+
+  // Invoke the component body with the state seeded, so the render is
+  // synchronous and independent of React's effect scheduler.
+  instance.hooks[0] = state
+  instance.hooks[1] = { status: 'ready', reason: '' }
+  const dictionary = {
+    search: '搜索',
+    categoryAll: '全部分类',
+    categoryNone: '未分类',
+    categoryRowLabel: '按分类筛选',
+    botCreateBtn: '创建 Bot',
+    botAgainBtn: '再次创建',
+    botCreatedStamp: '已创建',
+  }
+  const tree = module.BotMarketOverlay({
+    t: (key) => dictionary[key] || key,
+    localeId: 'zh',
+    onClose() {},
+  })
+  // Expand nested component nodes (ExpertCard / AvatarFace) the way the host
+  // renderer would, so the assertions cover the card internals too.
+  function expand(node) {
+    if (node === null || node === undefined || typeof node !== 'object') return node
+    if (Array.isArray(node)) return node.map(expand)
+    if (typeof node.type === 'function') return expand(node.type(node.props))
+    return { ...node, children: (node.children || []).map(expand) }
+  }
+  const rendered = JSON.stringify(expand(tree))
+  assert.match(rendered, /40-20 外卖券/)
+  assert.match(rendered, /阿联酋公共事务专家/)
+  assert.match(rendered, /销售商务/)
+  assert.match(rendered, /全球发展/)
+  assert.match(rendered, /创建 Bot/)
+  assert.match(rendered, /再次创建/)
+  assert.match(rendered, /wbx-avatar/)
+  assert.match(rendered, /wbx-badge/)
+  assert.match(rendered, /wbx-id/)
+  assert.match(rendered, /wbx-catrow/)
+  assert.match(rendered, /全部分类/)
+  assert.doesNotMatch(rendered, /installBtn/)
+})
