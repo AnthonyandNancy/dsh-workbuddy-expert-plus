@@ -580,6 +580,7 @@ var DICTS = {
     botNameLabel: 'Bot 名称',
     botRoleLabel: '角色',
     botModelLabel: '模型',
+    botModelDefault: '默认模型',
     botReadOnly: 'DS-Bot 当前只读，无法创建 Bot',
     botUnavailable: 'DS-Bot 不可用或版本不兼容，无法创建 Bot',
     botLoadingPrompt: '正在读取完整 Prompt…',
@@ -702,6 +703,7 @@ var DICTS = {
     botNameLabel: 'Bot name',
     botRoleLabel: 'Role',
     botModelLabel: 'Model',
+    botModelDefault: 'Default model',
     botReadOnly: 'DS-Bot is read-only; Bot creation is disabled',
     botUnavailable: 'DS-Bot is unavailable or incompatible; Bot creation is disabled',
     botLoadingPrompt: 'Loading the complete prompt…',
@@ -2424,6 +2426,9 @@ function BotMarketOverlay (props) {
   }, [])
 
   var ready = env.status === 'ready'
+  var modelOptions = env !== null && env.state !== null && typeof env.state === 'object' && Array.isArray(env.state.models)
+    ? env.state.models.filter(function (option) { return option !== null && typeof option.ref === 'string' })
+    : []
   var experts = body !== null && Array.isArray(body.experts) ? body.experts : []
   var q = query.trim().toLowerCase()
   var filtered = q === '' ? experts : experts.filter(function (expert) {
@@ -2528,6 +2533,20 @@ function BotMarketOverlay (props) {
                 className: 'wbx-path-input', type: 'text', value: role, maxLength: 24,
                 onChange: function (event) { setRole(event.target.value) }
               })),
+            // Models come from the live DS-Bot state route (the environment
+            // probe returns state.models); an empty list omits the selector
+            // and lets DS-Bot use its default model.
+            modelOptions.length > 0
+              ? el('label', { className: 'wbx-field' }, t('botModelLabel'),
+                  el('select', {
+                    className: 'wbx-path-input', value: model,
+                    onChange: function (event) { setModel(event.target.value) }
+                  },
+                    el('option', { value: '' }, t('botModelDefault')),
+                    modelOptions.map(function (option) {
+                      return el('option', { key: option.ref, value: option.ref }, option.label || option.ref)
+                    })))
+              : null,
             el('p', { className: 'wbx-subtitle' }, t('botSkillsNote')),
             el('label', { className: 'wbx-field' }, t('botPromptLabel'),
               prompt === ''
