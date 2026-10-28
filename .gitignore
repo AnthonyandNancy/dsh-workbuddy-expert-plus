@@ -1,3 +1,7 @@
 node_modules/
 *.log
 .DS_Store
+
+# Local build archives and vendored upstream snapshots
+build/*.tgz
+/vendor-input/workbuddyskills/

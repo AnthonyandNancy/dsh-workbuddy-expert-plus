@@ -1,5 +1,5 @@
 # The bundled catalog checksum is over the exact manifest bytes. Git's
 # autocrlf must never rewrite them between checkouts, or a valid package is
 # rejected as MANIFEST_HASH_MISMATCH on Windows.
-packages/dsh-workbuddy-expert-plus/resources/experts/manifest.json -text
-packages/dsh-workbuddy-expert-plus/resources/experts/catalog.sha256 -text
+resources/experts/manifest.json -text
+resources/experts/catalog.sha256 -text
