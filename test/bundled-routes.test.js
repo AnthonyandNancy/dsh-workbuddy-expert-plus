@@ -6,6 +6,7 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const { createBundledCatalog } = await import('../src/catalog/builtin.js')
+const { createUnifiedCatalog } = await import('../src/catalog/unified.js')
 const { createBundledSourceAdapter } = await import('../src/adapters/source.js')
 const { createInstallService } = await import('../src/services/install-expert.js')
 const { createBotService } = await import('../src/services/create-bot.js')
@@ -62,15 +63,32 @@ test('bundled state renders without WorkBuddy and carries both independent statu
   }
 })
 
-test('market prompt route returns the complete bundled prompt', async () => {
+test('market prompt route returns the complete bundled prompt through the production unified catalog', async () => {
+  const unified = createUnifiedCatalog({ bundled: catalog, local: undefined, localEnabled: false })
   const server = fakeServer()
-  mountBundledMarketRoutes(server, { catalog })
+  mountBundledMarketRoutes(server, { catalog: unified })
   const id = await catalog.firstId()
   const response = res()
   await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/prompt')
     .handler(req({ url: `/dsh-workbuddy-expert-plus/api/market/prompt?id=${id}` }), response)
   assert.equal(response.status, 200)
+  assert.equal(typeof response.body.prompt, 'string')
+  assert.ok(response.body.prompt.length > 0)
   assert.equal(response.body.prompt, await catalog.readPrompt(id))
+})
+
+test('the unified catalog forwards every bundled read used by the market routes', async () => {
+  const unified = createUnifiedCatalog({ bundled: catalog, local: undefined, localEnabled: false })
+  const id = await catalog.firstId()
+  assert.equal(await unified.readPrompt(id), await catalog.readPrompt(id))
+  assert.equal(await unified.fingerprint(id), await catalog.fingerprint(id))
+  assert.equal((await unified.find(id)).id, id)
+  assert.equal((await unified.sourceRecord(id)).source, 'bundled')
+  assert.deepEqual(
+    Buffer.from(await unified.readAsset(id, 'role.md')),
+    Buffer.from(await catalog.readAsset(id, 'role.md')),
+  )
+  await assert.rejects(() => unified.readPrompt('missing-expert'), /unknown expert/)
 })
 
 test('Bot creation rejects read-only and duplicate names before create-bot', async () => {

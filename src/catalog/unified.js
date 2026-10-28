@@ -42,5 +42,24 @@ export function createUnifiedCatalog({ bundled, local, localEnabled = false }) {
       },
     }
   }
-  return { stateOf }
+  // The market routes, installer and Bot service all read through this
+  // facade. Forward every read to the bundled catalog so a prompt/asset goes
+  // through the same manifest hash verification as a direct bundled read;
+  // an absent implementation is a programming error, never a silent empty
+  // prompt.
+  function bundledRead(name, ...args) {
+    if (bundled === undefined || bundled === null || typeof bundled[name] !== 'function') {
+      throw new Error(`bundled catalog does not implement ${name}()`)
+    }
+    return bundled[name](...args)
+  }
+
+  return {
+    stateOf,
+    readPrompt: (id) => bundledRead('readPrompt', id),
+    readAsset: (id, relativePath) => bundledRead('readAsset', id, relativePath),
+    fingerprint: (id) => bundledRead('fingerprint', id),
+    find: (id) => bundledRead('find', id),
+    sourceRecord: (id) => bundledRead('sourceRecord', id),
+  }
 }
