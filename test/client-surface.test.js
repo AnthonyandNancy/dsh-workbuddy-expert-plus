@@ -104,10 +104,11 @@ function renderComponent(Component, props) {
 
 function surfaceHarness(initialEntries, initialStorage) {
   let entries = initialEntries
+  let stored = initialStorage
   const listeners = new Set()
   const pending = []
   const storage = {
-    getItem: (key) => (key === 'ds-bot:surface' ? initialStorage : null),
+    getItem: (key) => (key === 'ds-bot:surface' ? stored : null),
   }
   const store = module.createSurfaceStore({
     storage,
@@ -131,8 +132,16 @@ function surfaceHarness(initialEntries, initialStorage) {
       entries = next
       for (const listener of [...listeners]) pending.push(listener)
     },
+    setStorage(next) {
+      stored = next
+      for (const listener of [...listeners]) pending.push(listener)
+    },
     async transition(next) {
       this.setEntries(next)
+      await flush()
+    },
+    async storageTransition(next) {
+      this.setStorage(next)
       await flush()
     },
     flush,
@@ -147,16 +156,44 @@ test('surface store reads Bot/Agent from the DS-Bot footer registrations in this
   assert.equal(bot.store.get(), 'bot', 'bot-account is live proof of Bot mode even when storage is stale')
 
   const agent = surfaceHarness(agentOnly, 'bot')
-  assert.equal(agent.store.get(), 'agent', 'bot-return without bot-account is live proof of Agent mode')
+  assert.equal(agent.store.get(), 'bot-pending',
+    'a DS-Bot footer whose Bot-only entry is absent while storage says bot is not yet Agent')
 
+  assert.equal(surfaceHarness(agentOnly, 'agent').store.get(), 'agent',
+    'the same footer with storage agent is a positive Agent signal')
   assert.equal(surfaceHarness([], null).store.get(), 'unknown')
   assert.equal(surfaceHarness([], 'agent').store.get(), 'agent')
   assert.equal(surfaceHarness([], 'bot').store.get(), 'unknown',
-    'a residual bot storage value without DS-Bot slots never proves Bot mode')
+    'a residual bot storage value without ANY DS-Bot slots is not Bot mode')
+})
+
+test('bot-pending keeps both surfaces closed but the composer hidable state is testable', async () => {
+  const pending = surfaceHarness(agentOnly, 'bot')
+  const launcher = renderComponent(module.BotMarketLauncher, {
+    t: (key) => key,
+    surfaceStore: pending.store,
+    onOpen() {},
+  })
+  assert.equal(launcher.tree(), null, 'the launcher is hidden while the Bot skin settles')
+  const seat = renderComponent(module.ComposerExpertSeat, {
+    t: (key) => key,
+    surfaceStore: pending.store,
+    session: { id: 's' },
+  })
+  assert.equal(seat.tree(), null,
+    'the Agent picker is hidden during a possible Bot skin swap')
+
+  await pending.transition(agentOnly)
+  await pending.storageTransition('agent')
+  await launcher.flush()
+  await seat.flush()
+  assert.equal(launcher.tree(), null)
+  assert.equal(seat.tree()?.type, module.ExpertSelector,
+    'the picker returns once the Agent storage hint and footer agree')
 })
 
 test('surface store notifies through the host microtask batch when DS-Bot switches skins', async () => {
-  const app = surfaceHarness(agentOnly, 'bot')
+  const app = surfaceHarness(agentOnly, 'agent')
   const seen = []
   const off = app.store.subscribe((mode) => seen.push(mode))
 
@@ -167,12 +204,37 @@ test('surface store notifies through the host microtask batch when DS-Bot switch
   assert.deepEqual(seen, ['bot'])
 
   await app.transition(agentOnly)
-  assert.equal(app.store.get(), 'agent')
+  assert.equal(app.store.get(), 'agent',
+    'an Agent storage hint already agrees with the Agent footer')
   assert.deepEqual(seen, ['bot', 'agent'])
+
+  await app.storageTransition('bot')
+  await app.transition(agentOnly)
+  assert.equal(app.store.get(), 'bot-pending',
+    'bot storage plus an Agent-only footer is the ambiguous mid-swap state')
+  const launcher = renderComponent(module.BotMarketLauncher, {
+    t: (key) => key,
+    surfaceStore: app.store,
+    onOpen() {},
+  })
+  const seat = renderComponent(module.ComposerExpertSeat, {
+    t: (key) => key,
+    surfaceStore: app.store,
+    session: { id: 's' },
+  })
+  assert.equal(launcher.tree(), null, 'pending hides the launcher')
+  assert.equal(seat.tree(), null, 'pending hides the Agent picker')
+
+  await app.storageTransition('agent')
+  await launcher.flush()
+  await seat.flush()
+  assert.equal(app.store.get(), 'agent')
+  assert.equal(seat.tree()?.type, module.ExpertSelector)
 
   off()
   await app.transition(botOnly)
-  assert.deepEqual(seen, ['bot', 'agent'], 'unsubscribed listeners are released')
+  assert.deepEqual(seen, ['bot', 'agent', 'bot-pending', 'agent'],
+    'unsubscribed listeners are released')
 })
 
 test('a cold start before the Bot footer mounts later becomes Bot without a focus event', async () => {
@@ -215,7 +277,7 @@ test('the sidebar launcher follows the live surface store without focus events',
 })
 
 test('the composer expert seat is hidden only in Bot mode', async () => {
-  const agent = surfaceHarness(agentOnly, 'bot')
+  const agent = surfaceHarness(agentOnly, 'agent')
   const agentView = renderComponent(module.ComposerExpertSeat, {
     t: (key) => key,
     surfaceStore: agent.store,
@@ -233,6 +295,7 @@ test('the composer expert seat is hidden only in Bot mode', async () => {
   assert.equal(botView.tree(), null, 'Bot mode removes the composer expert picker')
 
   await bot.transition(agentOnly)
+  await bot.storageTransition('agent')
   await botView.flush()
   assert.equal(botView.tree()?.type, module.ExpertSelector,
     'switching to Agent restores the picker without remounting the plugin')

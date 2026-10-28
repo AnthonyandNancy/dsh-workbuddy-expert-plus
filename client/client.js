@@ -2415,7 +2415,14 @@ function createSurfaceStore (options) {
     // without `bot-account` is a positive Agent signal. With no DS-Bot
     // footer at all, a stored 'bot' is residual and must not create a Bot
     // surface; an explicit 'agent' remains a safe read-only hint.
-    if (anyDsBotFooter()) return 'agent'
+    //
+    // The one remaining Bot doubt: storage says 'bot' and the footer is
+    // present but lacks `bot-account`. That is either the instant between
+    // Bot-group withdrawal and Agent-group install, or an upstream rename
+    // of the Bot-only id. Report `bot-pending` so both our launcher and the
+    // composer picker stay withdrawn while the skin settles; an explicit
+    // storage 'agent' still proves Agent.
+    if (anyDsBotFooter()) return hint === 'bot' ? 'bot-pending' : 'agent'
     return hint === 'agent' ? 'agent' : 'unknown'
   }
 
@@ -2491,6 +2498,11 @@ function BotMarketLauncher (props) {
  * The composer's expert seat. Agent mode keeps the original selector; Bot
  * mode withdraws it because DS-Bot's composer owns its own add menu.
  * The shared store makes the switch visible immediately in the same window.
+ *
+ * `unknown` deliberately keeps the selector for a host that never had
+ * DS-Bot (plain DSH). With DS-Bot present but its Bot-only footer entry not
+ * yet visible while storage says bot, the store reports `bot-pending` and
+ * both the launcher and this picker stay withdrawn until the skin settles.
  */
 function ComposerExpertSeat (props) {
   var store = props.surfaceStore
@@ -2502,7 +2514,7 @@ function ComposerExpertSeat (props) {
     setSurface(store.get())
     return store.subscribe(setSurface)
   }, [store])
-  if (surface === 'bot') return null
+  if (surface === 'bot' || surface === 'bot-pending') return null
   return el(ExpertSelector, {
     t: props.t,
     getLocale: props.getLocale,
