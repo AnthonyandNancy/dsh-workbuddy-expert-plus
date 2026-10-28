@@ -260,3 +260,23 @@ test('bot create accepts the largest bundled prompt, not just a small one', asyn
   assert.ok(created !== undefined, 'create-bot reached DS-Bot')
   assert.equal(created.payload.instructions, biggest.prompt, 'the full prompt reaches DS-Bot unmodified')
 })
+
+test('market state keeps the fields the market cards render', async () => {
+  const server = fakeServer()
+  mountBundledMarketRoutes(server, { catalog, botEnabled: false })
+  const response = res()
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/state').handler(
+    req({ url: '/dsh-workbuddy-expert-plus/api/market/state' }), response,
+  )
+  assert.equal(response.status, 200)
+  const expert = response.body.experts.find((entry) =>
+    entry.id === 'meituan-living-assistant-meituan-living-assistant')
+  assert.equal(expert.displayName, '40-20 外卖券')
+  assert.equal(expert.profession, '美团生活助手')
+  assert.equal(expert.categoryId, '07-SalesCommerce')
+  assert.equal(expert.avatarFile,
+    'meituan-living-assistant-meituan-living-assistant/avatar.jpg')
+  assert.equal(expert.name, undefined)
+  assert.equal(expert.category, undefined,
+    'bundled cards use displayName/categoryId; the client must read those names')
+})
