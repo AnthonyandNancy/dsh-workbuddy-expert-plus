@@ -39,13 +39,18 @@ smallest failing boundary, fixed at the root cause, and re-verified:
 | Bot mode still shows the Agent composer expert picker | The `conversation.input.left` registration was unconditional | New `ComposerExpertSeat` renders `null` in Bot and bot-pending modes and the original `ExpertSelector` in Agent/unknown mode; it subscribes to the same surface store for immediate switching | `test/client-surface.test.js`: Bot hides the picker, bot-pending keeps it hidden, Agent keeps/restores it; deleting the component subscription makes the tests fail |
 | Leaving Bot mode leaves the market modal over Agent UI | The overlay gated only on its own open flag; the launcher hid but the independently mounted `shell.overlay` entry stayed open | `BotMarketOverlayHost` now takes the surface store, renders only when open AND Bot mode is current, and closes the module flag on any non-Bot transition so a later Bot visit never resurrects it | `test/client-surface.test.js`: open in Bot → switch to Agent → dialog unmounts; switching back does not reopen it; an explicit launcher click opens it again |
 
-Important limitation: the locally installed profile
-`~/.dsh/profiles/ds-bot` was found to contain an **older package layout**
-(`resources/catalog.json`, `src/market/*`, `src/integrations/*`) that is not the
-current repository tree. The automated evidence above is for the current
-source and the freshly packed `.tgz`; the live profile must be reinstalled from
-`build/dsh-workbuddy-expert-plus-0.1.1.tgz` before the three screenshots can be
-re-tested against this build.
+Important limitation: the standalone DS-Bot desktop app loads its own profile
+at `E:\DSHbot\data\profiles\ds-bot`, distinct from `~/.dsh/profiles/ds-bot`.
+Both profiles were upgraded to `0.1.1` by installing
+`build/dsh-workbuddy-expert-plus-0.1.1.tgz`; the standalone app's profile now
+lists `dsh-workbuddy-expert-plus` 0.1.1 in its bundle list and lockfile. The
+automated evidence above is for this source and this `.tgz`.
+
+What is still missing is the visual re-test: the standalone app's host requires
+its launch token (`GET /connect?token=…`), so the in-app window cannot be driven
+from an external browser session, and after restarting the app its process
+exited before a window could be inspected here. Open the app yourself and
+verify the three screenshots against 0.1.1.
 
 ## Artifact
 
