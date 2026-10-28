@@ -43,3 +43,16 @@ test('template preserves the complete prompt and enforces DS-Bot field limits', 
   assert.equal(tooLong.ok, false)
   assert.match(tooLong.errors.join(' '), /40|24/)
 })
+
+test('a too-long expert name is refused, never silently truncated', () => {
+  const template = toBotTemplate({ displayName: 'x'.repeat(60), profession: '短角色' }, '完整 Prompt', { models: [] })
+  assert.equal(template.name, '')
+  assert.equal(template.role, '短角色')
+})
+
+test('model references are validated against the live DS-Bot model list', async () => {
+  const { validateModel } = await import('../src/adapters/bot-template.js')
+  assert.equal(validateModel('m1', { models: [{ ref: 'm1' }] }).ok, true)
+  assert.equal(validateModel('nope', { models: [{ ref: 'm1' }] }).ok, false)
+  assert.equal(validateModel(undefined, { models: [] }).ok, true)
+})

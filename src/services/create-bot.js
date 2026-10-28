@@ -11,7 +11,7 @@ import { mkdir, readFile, rename, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 
 import { DsBotApiError, callDsBot, normalizeState } from '../adapters/dsbot-api.js'
-import { isBotNameTaken, toBotTemplate, validateBotFields } from '../adapters/bot-template.js'
+import { isBotNameTaken, toBotTemplate, validateBotFields, validateModel } from '../adapters/bot-template.js'
 
 class BotServiceError extends Error {
   constructor(code, message) {
@@ -95,11 +95,15 @@ export function createBotService({
       }
       if (isBotNameTaken(state, fields.name)) throw new BotServiceError('NAME_TAKEN', `A Bot named ${fields.name} already exists`)
 
+      const requestedModel = input.model !== undefined ? input.model : template.model
+      const modelVerdict = validateModel(requestedModel, state)
+      if (!modelVerdict.ok) throw new BotServiceError('INVALID_FIELDS', modelVerdict.error)
+
       const payload = {
         name: fields.name,
         role: fields.role,
         instructions: prompt,
-        ...(input.model !== undefined ? { model: input.model } : template.model === undefined ? {} : { model: template.model }),
+        ...(modelVerdict.model === undefined ? {} : { model: modelVerdict.model }),
       }
       let bot
       try {

@@ -556,14 +556,20 @@ assert.equal(plugin.name, 'dsh-workbuddy-expert-plus')
 
   const originalCwd = process.cwd
   const originalDshHome = process.env.DSH_HOME
+  const originalProfileDir = process.env.DSH_PROFILE_DIR
   try {
     process.cwd = () => projectRoot
     process.env.DSH_HOME = join(fixture, 'user-home', '.dsh')
+    // The test pinpoints the legacy DSH_HOME root; an ambient profile dir
+    // from the running host must not override the fixture.
+    delete process.env.DSH_PROFILE_DIR
     plugin.apply(fakeCtx, {})
   } finally {
     process.cwd = originalCwd
     if (originalDshHome === undefined) delete process.env.DSH_HOME
     else process.env.DSH_HOME = originalDshHome
+    if (originalProfileDir === undefined) delete process.env.DSH_PROFILE_DIR
+    else process.env.DSH_PROFILE_DIR = originalProfileDir
   }
 
   assert.ok(provided.has('experts'), 'the ctx.experts service is provided')

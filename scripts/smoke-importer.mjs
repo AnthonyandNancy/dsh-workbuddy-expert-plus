@@ -799,7 +799,7 @@ rmSync(OUTSIDE_DIR, { recursive: true, force: true })
     get: (name) => (name === 'webServer' ? harnessServer : name === 'settings' ? harnessSettings : undefined),
   }
   const dispose = await mountImporter(fakeCtx, { config, expertsRoot: join(root, '.smoke-tmp-experts') })
-  assert.equal(harnessServer.routes.size, 13, 'mountImporter registered the bundled market + legacy read-only routes + Agent engine')
+  assert.equal(harnessServer.routes.size, 14, 'mountImporter registered the bundled market + legacy read-only routes + Agent engine')
   assert.equal(typeof listeners.get('loader/volatile-update'), 'function', 'mountImporter subscribed the volatile watcher')
   // The config fallback read answers the scan path even with NO settings row.
   const stateRoute = harnessServer.routes.get('exact /dsh-workbuddy-expert-plus/api/state')

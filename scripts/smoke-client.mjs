@@ -553,7 +553,7 @@ const MARKET_STATE = {
     installed: [...MARKET_STATE.installed, { id: 'solo-a', dir: '/x/solo-a', fingerprint: 'f9', importedAt: '2026-02-01T00:00:00Z', updatable: false }],
   }
   const script = makeFetchScript([
-    { method: 'POST', url: 'dsh-workbuddy-expert-plus/api/install', body: { id: 'solo-a', changed: true, state: afterInstall } },
+    { method: 'POST', url: 'dsh-workbuddy-expert-plus/api/market/install', body: { id: 'solo-a', changed: true, state: afterInstall } },
   ])
   sandbox.fetch = script.fetchStub
   const view = renderComponent(mod.MarketPage, {
@@ -620,8 +620,8 @@ const MARKET_STATE = {
   view.rerender()
   assert.equal(script.calls.length, 1, 'exactly one POST fired (state adopted from the response)')
   assert.deepEqual(script.calls[0], {
-    method: 'POST', url: 'dsh-workbuddy-expert-plus/api/install', body: JSON.stringify({ id: 'solo-a' }),
-  }, 'the confirm POSTs the expert id to /api/install')
+    method: 'POST', url: 'dsh-workbuddy-expert-plus/api/market/install', body: JSON.stringify({ id: 'solo-a' }),
+  }, 'the confirm POSTs the expert id to /api/market/install')
   cards = cardNodes()
   const soloAfter = cards.find((card) => findAll(card, (n) => n.type === 'span' && n.props.className === 'wbx-id')[0].children[0] === 'solo-a')
   assert.equal(soloAfter.props['data-installed'], 'true', 'the card flips ✓ within the adopted state')

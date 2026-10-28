@@ -96,3 +96,14 @@ test('bindings persist by bot id and survive renames; deletion clears stale mapp
     await rm(dir, { recursive: true, force: true })
   }
 })
+
+test('an unavailable model ref is refused before create-bot', async () => {
+  const api = fakeApi()
+  const service = createBotService({ adapter: createBundledSourceAdapter(catalog), api })
+  const expertId = await catalog.firstId()
+  await assert.rejects(
+    () => service.create({ expertId, name: 'A', role: 'R', model: 'not-a-model' }),
+    /unknown model/i,
+  )
+  assert.equal(api.calls.filter((call) => call.endpoint === 'create-bot').length, 0)
+})

@@ -59,9 +59,16 @@ function expandHomePath(value) {
  * `~/.dsh` — the same precedence the harness itself uses, inlined here so the
  * plugin stays zero-dependency.
  */
-function resolveDshHome(configured, env = process.env) {
+export function resolveDshHome(configured, env = process.env) {
+  // A host-managed profile (Desktop, DS-Bot standalone) exposes its active
+  // profile directory explicitly. Experts belong to the CURRENT profile, not
+  // the shared ~/.dsh root; when that directory is present it is the first
+  // fallback after an explicit config override.
+  const profileDir = typeof env.DSH_PROFILE_DIR === 'string' && env.DSH_PROFILE_DIR.trim() !== ''
+    ? env.DSH_PROFILE_DIR
+    : undefined
   const fromEnv = typeof env.DSH_HOME === 'string' && env.DSH_HOME.trim() !== '' ? env.DSH_HOME : undefined
-  return resolve(expandHomePath(configured ?? fromEnv ?? join(homedir(), '.dsh')))
+  return resolve(expandHomePath(configured ?? profileDir ?? fromEnv ?? join(homedir(), '.dsh')))
 }
 
 /**

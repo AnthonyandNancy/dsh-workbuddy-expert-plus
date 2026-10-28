@@ -22,18 +22,33 @@ export function validateBotFields({ name, role, instructions }) {
 
 export function toBotTemplate(expert, prompt, state = {}) {
   const profession = String(expert.profession ?? '').trim()
-  const name = String(expert.displayName ?? '').trim().slice(0, MAX_BOT_NAME)
-  const role = (profession || String(expert.description ?? '')).trim().slice(0, MAX_BOT_ROLE)
+  const description = String(expert.description ?? '').trim()
+  const name = String(expert.displayName ?? '').trim()
+  // Never truncate silently: for a display name that is too long, prefer a
+  // shorter source field only when it is itself valid; otherwise let the
+  // validator refuse the template and the caller ask the user to rename.
+  const candidateName = name.length > MAX_BOT_NAME ? '' : name
+  const roleSource = profession || description
+  const role = roleSource.length > MAX_BOT_ROLE ? '' : roleSource
   const modelRefs = new Set((state.models ?? []).map((model) => model.ref))
   const model = typeof state.defaultModel === 'string' && modelRefs.has(state.defaultModel)
     ? state.defaultModel
     : state.models?.find((entry) => modelRefs.has(entry.ref))?.ref
   return {
-    name,
+    name: candidateName,
     role,
     instructions: String(prompt ?? ''),
     ...(model === undefined ? {} : { model }),
   }
+}
+
+/** Validate an optional model reference against the live DS-Bot model list. */
+export function validateModel(ref, state = {}) {
+  if (ref === undefined || ref === null || ref === '') return { ok: true, model: undefined }
+  if (typeof ref !== 'string') return { ok: false, error: 'model must be a string reference' }
+  const refs = new Set((state.models ?? []).map((model) => model.ref))
+  if (!refs.has(ref)) return { ok: false, error: `unknown model reference: ${ref}` }
+  return { ok: true, model: ref }
 }
 
 /** True when DS-Bot already uses the exact (trimmed) name. */

@@ -114,12 +114,53 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
           pluginVersion: bundled.pluginVersion,
           sourceRevision: bundled.sourceRevision,
           counts: { ...bundled.counts, bundled: experts.length, total: experts.length },
+          // The Agent page still owns a per-view draft/refresh lane; bundled
+          // mode has no mutable source path, so expose a stable empty value
+          // instead of a fake WorkBuddy directory.
+          sourcePath: '',
+          pathExists: true,
+          revision: 0,
           experts,
           errors: bundled.errors,
           installed: overlay.installed,
           broken: overlay.broken,
           orphans: overlay.orphans,
           botEnabled,
+          warnings: [],
+        })
+      } catch (error) {
+        sendJson(response, 500, { error: error instanceof Error ? error.message : String(error) })
+      }
+    },
+  })
+
+  register({
+    kind: 'exact',
+    path: `${ROUTE_BASE}/refresh`,
+    handler: async (request, response) => {
+      if (request.method !== 'POST') return sendJson(response, 405, { error: 'method not allowed' })
+      if (!sameOrigin(request)) return sendJson(response, 403, { error: 'same-origin required' })
+      // The bundled manifest is immutable inside the installed package; a
+      // refresh simply re-reads it (and the install overlay) without scanning
+      // any WorkBuddy directory.
+      try {
+        const bundled = await catalog.stateOf()
+        let overlay = { installed: [], broken: [], orphans: [] }
+        if (installer !== undefined) {
+          try { overlay = await installer.overlay() } catch { /* keep catalog */ }
+        }
+        sendJson(response, 200, {
+          ...bundled,
+          sourcePath: '',
+          pathExists: true,
+          revision: 0,
+          experts: bundled.experts.map((expert) => ({
+            ...expert,
+            installed: overlay.installed.some((entry) => entry.id === expert.id),
+          })),
+          installed: overlay.installed,
+          broken: overlay.broken,
+          orphans: overlay.orphans,
           warnings: [],
         })
       } catch (error) {

@@ -1865,7 +1865,7 @@ function MarketPage (props) {
    * stops when the pull itself fails.
    */
   function pullState () {
-    return api(API_BASE + '/state').then(function (payload) {
+    return api(API_BASE + '/market/state').then(function (payload) {
       adoptState(payload)
       setError('')
       return payload
@@ -1954,7 +1954,7 @@ function MarketPage (props) {
     if (refreshing || saving || busyKey !== '') return
     setNotice(null)
     setRefreshing(true)
-    postJson(API_BASE + '/refresh', {}).then(function (payload) {
+    postJson(API_BASE + '/market/refresh', {}).then(function (payload) {
       adoptState(payload)
       setError('')
     }, function (err) {
@@ -1973,7 +1973,7 @@ function MarketPage (props) {
     setConfirmKey('')
     setNotice(null)
     setBusyKey(entry.key)
-    return postJson(API_BASE + '/' + entry.action, { id: entry.id }).then(function (result) {
+    return postJson(API_BASE + '/market/' + entry.action, { id: entry.id }).then(function (result) {
       setNotice({ kind: 'ok', text: t(ACTION_TEXT[entry.action].done, { name: entry.name }) })
       if (result !== null && typeof result === 'object' && result.state !== null && typeof result.state === 'object') {
         adoptState(result.state)
@@ -2049,9 +2049,17 @@ function MarketPage (props) {
       var card = experts[ei]
       if (card === null || typeof card !== 'object') continue
       expertIds[strOf(card.id)] = true
+      // The bundled market uses agentInstalled; the card renderer uses the
+      // original `installed` flag. Keep Agent status independent of Bot.
+      var normalized = Object.assign({}, card, {
+        installed: card.installed === true || card.agentInstalled === true
+      })
+      if (strOf(card.avatarFile) !== '') {
+        normalized.avatarUrl = API_BASE + '/market/avatar?id=' + encodeURIComponent(strOf(card.id))
+      }
       cards.push(brokenById[strOf(card.id)] !== undefined
-        ? Object.assign({}, card, { broken: true })
-        : card)
+        ? Object.assign({}, normalized, { broken: true })
+        : normalized)
     }
   }
   // Broken exports whose id left the scan table get their own rows below.
@@ -2540,6 +2548,46 @@ function BotMarketOverlay (props) {
               }, t('cancel'))))))
 }
 
+// A module-scope open flag shared by the sidebar cell and overlay cell. The
+// two cells are independent slot registrations; this is the minimal bridge
+// that does not rely on unobserved DOM events or host internals.
+var botMarketStore = { open: false, listeners: [] }
+
+function openBotMarket () {
+  botMarketStore.open = true
+  for (var i = 0; i < botMarketStore.listeners.length; i++) botMarketStore.listeners[i]()
+}
+
+function closeBotMarket () {
+  botMarketStore.open = false
+  for (var i = 0; i < botMarketStore.listeners.length; i++) botMarketStore.listeners[i]()
+}
+
+function useBotMarketOpen () {
+  var state = React.useState(botMarketStore.open)
+  var setOpen = state[1]
+  React.useEffect(function () {
+    var listener = function () { setOpen(botMarketStore.open) }
+    botMarketStore.listeners.push(listener)
+    return function () {
+      var index = botMarketStore.listeners.indexOf(listener)
+      if (index >= 0) botMarketStore.listeners.splice(index, 1)
+    }
+  }, [])
+  return state[0]
+}
+
+/** Overlay cell: render the dialog only while the shared store is open. */
+function BotMarketOverlayHost (props) {
+  var open = useBotMarketOpen()
+  if (!open) return null
+  return el(BotMarketOverlay, {
+    t: props.t,
+    localeId: props.localeId,
+    onClose: closeBotMarket
+  })
+}
+
 /** The sidebar launcher; hidden outside a Bot surface so Agent stays untouched. */
 function BotMarketLauncher (props) {
   var t = props.t
@@ -2565,23 +2613,6 @@ function BotMarketLauncher (props) {
 }
 
 /** The overlay host state: one launcher and at most one overlay registration. */
-function BotMarketHost (props) {
-  var openState = React.useState(false)
-  var open = openState[0]
-  var setOpen = openState[1]
-  return el('div', null,
-    el(BotMarketLauncher, {
-      t: props.t,
-      onOpen: function () { setOpen(true) }
-    }),
-    open
-      ? el(BotMarketOverlay, {
-          t: props.t,
-          localeId: props.localeId,
-          onClose: function () { setOpen(false) }
-        })
-      : null)
-}
 
 
 // ── the row configuration component (plugins.row.config dispatch) ───────────
@@ -2876,6 +2907,10 @@ function apply (ctx) {
   // Bot mode: one sidebar action + one overlay, both owned by this plugin.
   // A registration is opportunistically pending when DS-Bot (or another
   // composition) does not declare the seat; Agent mode never depends on it.
+  // Bot market host: the overlay cell owns BOTH the launcher's open state and
+  // the dialog. The launcher renders only on the Bot surface; the overlay
+  // renders only while the host's state is open. One registration, no
+  // unobserved window events, no duplicate dialogs.
   collect(slots.inject('sidebar.footer.action', function () {
     return slots.register({
       name: 'sidebar.footer.action',
@@ -2884,13 +2919,11 @@ function apply (ctx) {
       locale: NS,
       inject: function () { return { t: t } }
     }, function () {
+      // The launcher must live in the sidebar cell, but the open flag belongs
+      // to the overlay cell. A tiny module-scope store keeps them in sync.
       return el(BotMarketLauncher, {
         t: t,
-        onOpen: function () {
-          if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
-            window.dispatchEvent(new CustomEvent('workbuddy-expert-plus:open-bot-market'))
-          }
-        }
+        onOpen: function () { openBotMarket() }
       })
     })
   }))
@@ -2903,14 +2936,9 @@ function apply (ctx) {
       locale: NS,
       inject: function () { return { t: t } }
     }, function () {
-      return el(BotMarketOverlay, {
+      return el(BotMarketOverlayHost, {
         t: t,
-        localeId: getLocale(),
-        onClose: function () {
-          if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
-            window.dispatchEvent(new CustomEvent('workbuddy-expert-plus:close-bot-market'))
-          }
-        }
+        localeId: getLocale()
       })
     })
   }))
@@ -2972,8 +3000,10 @@ module.exports.OrphanRow = OrphanRow
 module.exports.BrokenRow = BrokenRow
 module.exports.MarketPage = MarketPage
 module.exports.BotMarketOverlay = BotMarketOverlay
+module.exports.BotMarketOverlayHost = BotMarketOverlayHost
+module.exports.openBotMarket = openBotMarket
+module.exports.closeBotMarket = closeBotMarket
 module.exports.BotMarketLauncher = BotMarketLauncher
-module.exports.BotMarketHost = BotMarketHost
 module.exports.botSurfaceHint = botSurfaceHint
 // The row configuration (plugins.row.config), same loader-tolerant pattern.
 module.exports.ROW_CONFIG_KEY = ROW_CONFIG_KEY
