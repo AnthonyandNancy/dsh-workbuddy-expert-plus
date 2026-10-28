@@ -143,7 +143,7 @@ test('surface store notifies immediately when DS-Bot withdraws or installs its B
   assert.equal(app.store.get(), 'bot')
   app.setEntries(agentOnly)
   assert.equal(app.store.get(), 'agent')
-  assert.deepEqual(seen, ['bot', 'agent'], 'each slot mutation reaches subscribers synchronously')
+  assert.deepEqual(seen, ['bot', 'agent'], 'each slot mutation reaches subscribers in the same event loop')
 
   off()
   app.setEntries(botOnly)

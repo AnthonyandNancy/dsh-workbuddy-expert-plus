@@ -3003,8 +3003,9 @@ function apply (ctx) {
   }
 
   // One surface store for the whole bundle. DS-Bot's Bot-only footer entry
-  // changing fires `slots.subscribe` synchronously in this window, so both
-  // the launcher and the composer seat switch on the same tick as the skin.
+  // changing notifies `slots.subscribe` in this window (microtask-batched),
+  // so both the launcher and the composer seat switch in the same event
+  // loop as the skin — no focus or reopen is needed.
   var surfaceStore = createSurfaceStore({
     storage: typeof window === 'undefined' ? undefined : window.localStorage,
     subscribe: function (name, listener) {
