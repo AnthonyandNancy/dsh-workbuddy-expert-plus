@@ -95,3 +95,26 @@ test('Bot creation rejects read-only and duplicate names before create-bot', asy
     await rm(dir, { recursive: true, force: true })
   }
 })
+
+test('install action returns the complete overlay so the card keeps its installed status', async () => {
+  const dir = await mkdtemp(join(tmpdir(), 'wb-routes-overlay-'))
+  try {
+    const adapter = createBundledSourceAdapter(catalog)
+    const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.0' })
+    const server = fakeServer()
+    mountBundledMarketRoutes(server, { catalog, installer, botEnabled: false })
+    const id = await catalog.firstId()
+    const response = res()
+    await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/install').handler(
+      req({ method: 'POST', headers: { host: '127.0.0.1:1' }, body: { id } }),
+      response,
+    )
+    assert.equal(response.status, 200)
+    const installed = response.body.state.experts.find((expert) => expert.id === id)
+    assert.equal(installed.agentInstalled, true)
+    assert.equal(installed.installed, true)
+    assert.ok(Array.isArray(response.body.state.installed))
+  } finally {
+    await rm(dir, { recursive: true, force: true })
+  }
+})

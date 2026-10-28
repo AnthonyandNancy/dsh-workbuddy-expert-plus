@@ -576,7 +576,7 @@ var DICTS = {
     botCreateBtn: '创建 Bot',
     botAgainBtn: '再次创建',
     botCreatedStamp: '已创建',
-    botPromptLabel: '完整 Prompt（可查看，创建时原样提交）',
+    botPromptLabel: '完整 Prompt（可编辑，创建时按编辑内容提交）',
     botNameLabel: 'Bot 名称',
     botRoleLabel: '角色',
     botModelLabel: '模型',
@@ -699,7 +699,7 @@ var DICTS = {
     botCreateBtn: 'Create Bot',
     botAgainBtn: 'Create another',
     botCreatedStamp: 'created',
-    botPromptLabel: 'Complete prompt (view-only; submitted verbatim on create)',
+    botPromptLabel: 'Complete prompt (editable; submitted as edited on create)',
     botNameLabel: 'Bot name',
     botRoleLabel: 'Role',
     botModelLabel: 'Model',
@@ -2380,6 +2380,10 @@ function BotMarketOverlay (props) {
   var promptState = React.useState('')
   var setPrompt = promptState[1]
   var prompt = promptState[0]
+  // Hash of the prompt as returned by the server, proving the edit baseline.
+  var promptHashState = React.useState('')
+  var setPromptHash = promptHashState[1]
+  var promptHash = promptHashState[0]
   var nameState = React.useState('')
   var setName = nameState[1]
   var name = nameState[0]
@@ -2443,6 +2447,7 @@ function BotMarketOverlay (props) {
     setNotice(null)
     api(API_BASE + '/market/prompt?id=' + encodeURIComponent(strOf(expert.id))).then(function (payload) {
       setPrompt(strOf(payload.prompt))
+      setPromptHash(strOf(payload.contentSha256))
     }, function (error) {
       setNotice({ kind: 'error', text: errorOf(error) })
     })
@@ -2458,6 +2463,9 @@ function BotMarketOverlay (props) {
       name: name,
       role: role,
       instructions: prompt,
+      // The server verifies this hash equals the exact bundled role.md, so an
+      // edited prompt is accepted only when it started from the real prompt.
+      basePromptSha256: promptHash,
       ...(model === '' ? {} : { model: model })
     }).then(function (result) {
       setNotice({ kind: 'ok', text: t('botCreateDone', { id: strOf(result.botId) }) })
@@ -2552,8 +2560,9 @@ function BotMarketOverlay (props) {
               prompt === ''
                 ? el('p', { className: 'wbx-subtitle', role: 'status' }, t('botLoadingPrompt'))
                 : el('textarea', {
-                    className: 'wbx-prompt', readOnly: true, value: prompt,
-                    rows: 12, 'aria-label': t('botPromptLabel')
+                    className: 'wbx-prompt', value: prompt,
+                    rows: 12, 'aria-label': t('botPromptLabel'),
+                    onChange: function (event) { setPrompt(event.target.value) }
                   })),
             el('div', { className: 'wbx-actions' },
               el('button', {

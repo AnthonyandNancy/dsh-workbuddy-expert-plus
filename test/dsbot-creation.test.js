@@ -107,3 +107,29 @@ test('an unavailable model ref is refused before create-bot', async () => {
   )
   assert.equal(api.calls.filter((call) => call.endpoint === 'create-bot').length, 0)
 })
+
+test('an edited prompt is accepted only when based on the exact bundled prompt', async () => {
+  const api = fakeApi()
+  const service = createBotService({ adapter: createBundledSourceAdapter(catalog), api })
+  const expertId = await catalog.firstId()
+  const bundled = await catalog.readPrompt(expertId)
+  const expert = await catalog.find(expertId)
+  const roleHash = expert.files.find((file) => file.path === 'role.md').sha256
+
+  await assert.rejects(
+    () => service.create({ expertId, name: 'Edited A', role: 'R', instructions: `${bundled}\nEXTRA`, basePromptSha256: 'x' }),
+    /baseline|bundled prompt/i,
+  )
+  assert.equal(api.calls.filter((call) => call.endpoint === 'create-bot').length, 0)
+
+  const result = await service.create({
+    expertId,
+    name: 'Edited B',
+    role: 'R',
+    instructions: `${bundled}\nEXTRA`,
+    basePromptSha256: roleHash,
+  })
+  assert.equal(result.verified, true)
+  const sent = api.calls.find((call) => call.endpoint === 'create-bot')
+  assert.ok(sent.payload.instructions.endsWith('\nEXTRA'))
+})

@@ -11,7 +11,7 @@ import { readFile } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { createBundledResolver } from './resolver.js'
+import { createBundledResolver, sha256 } from './resolver.js'
 import { normalizeExpert, normalizeManifest } from './schema.js'
 
 const MODULE_DIR = dirname(fileURLToPath(import.meta.url))
@@ -47,11 +47,30 @@ export function createBundledCatalog({ root = defaultBundledRoot(), pluginVersio
         const errors = []
         for (const rawExpert of manifest.experts) {
           try {
-            experts.push(normalizeExpert(rawExpert, {
+            const expert = normalizeExpert(rawExpert, {
               bundleVersion: manifest.bundleVersion,
               pluginVersion: manifest.pluginVersion || pluginVersion,
               sourceRevision: manifest.sourceRevision,
-            }))
+            })
+            // Verify every declared file before exposing the card. A bad hash
+            // must not appear as an installable expert and then fail only when
+            // the user clicks install.
+            for (const declared of expert.files) {
+              const bytes = await resolver.readDeclared(expert, declared.path)
+              if (sha256(bytes) !== declared.sha256) {
+                throw Object.assign(new Error(`${declared.path}: hash mismatch`), { code: 'ASSET_HASH_MISMATCH' })
+              }
+            }
+            // The aggregate hash binds the declared file list to this source
+            // revision. A manifest can have individually valid files but a
+            // forged/stale aggregate; install would otherwise copy a wrong
+            // fingerprint into ownership metadata.
+            const orderedFiles = [...expert.files].sort((a, b) => a.path.localeCompare(b.path))
+            const aggregate = sha256(Buffer.from(JSON.stringify({ revision: expert.sourceRevision, files: orderedFiles }), 'utf8'))
+            if (aggregate !== expert.contentSha256) {
+              throw Object.assign(new Error('contentSha256 does not match the declared file list'), { code: 'ASSET_HASH_MISMATCH' })
+            }
+            experts.push(expert)
           } catch (error) {
             errors.push({
               id: typeof rawExpert?.id === 'string' ? rawExpert.id : undefined,

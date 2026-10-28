@@ -22,8 +22,8 @@ Baseline plan: `docs/superpowers/plans/2026-10-28-workbuddy-dual-mode-implementa
 | Legacy client smoke | `node scripts/smoke-client.mjs` | PASS |
 | Legacy importer smoke | `node scripts/smoke-importer.mjs` | PASS |
 | Legacy install smoke | `node scripts/smoke-install.mjs` | PASS |
-| Artifact verification | `npm run check:package` | PASS: 229 files, 39 experts, 190 resources |
-| Full suite | `npm test` | PASS: 45 unit/integration tests + 4 legacy smoke scripts |
+| Artifact verification | `npm run check:package` | PASS: 231 files, 39 experts, 190 resources |
+| Full suite | `npm test` | PASS: 51 unit/integration tests + 4 legacy smoke scripts |
 
 ## Artifact
 
@@ -45,6 +45,6 @@ Baseline plan: `docs/superpowers/plans/2026-10-28-workbuddy-dual-mode-implementa
 
 ## Final command log
 
-Final run: `npm test` → 45/45 unit tests and all four legacy smoke scripts
-passed; `npm run check:package` → 229 files, 39 experts, 190 resources, every
+Final run: `npm test` → 51/51 unit tests and all four legacy smoke scripts
+passed; `npm run check:package` → 231 files, 39 experts, 190 resources, every
 manifest hash verified after extraction.

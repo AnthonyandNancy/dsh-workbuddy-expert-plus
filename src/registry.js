@@ -16,6 +16,7 @@
  */
 
 import { readdir, readFile, stat } from 'node:fs/promises'
+import { findAvatarFile } from './importer/avatar.js'
 import { join } from 'node:path'
 
 import { sanitizeText } from './sanitize.js'
@@ -369,6 +370,7 @@ export async function scanExpertFolder(dir, folderName, rootInfo) {
   }
 
   const orderValue = Number(fields.order)
+  const avatarFile = await findAvatarFile(dir)
   return {
     id,
     displayName: typeof fields.display_name === 'string' && fields.display_name.trim() !== '' ? fields.display_name.trim() : id,
@@ -387,9 +389,10 @@ export async function scanExpertFolder(dir, folderName, rootInfo) {
     // <base href="./">, so origin-absolute paths break under
     // prefix-stripping proxy mounts — the browser resolves this against
     // the document base (the built-ins' `PATH.slice(1)` convention).
-    avatarUrl: (await isFile(join(dir, 'avatar.png')))
-      ? `dsh-workbuddy-expert-plus/api/expert-avatar?id=${id}`
-      : undefined,
+    avatarFile,
+    avatarUrl: avatarFile === undefined
+      ? undefined
+      : `dsh-workbuddy-expert-plus/api/expert-avatar?id=${id}`,
     trustScripts: fields.trust_scripts === 'true',
     // Computed (ticket 04): user-rank roots always allow scripts/, project
     // rank only with an explicit trust_scripts declaration.

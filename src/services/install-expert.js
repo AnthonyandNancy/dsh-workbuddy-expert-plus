@@ -13,6 +13,7 @@ import { chmod, mkdir, readFile, readdir, rm, stat, writeFile } from 'node:fs/pr
 import { join } from 'node:path'
 
 import { ID_RE } from '../registry.js'
+import { avatarFileNameFor } from '../importer/avatar.js'
 
 export const MANIFEST_NAME = '.expert-source.json'
 export const EXPORT_ORDER = 200
@@ -40,8 +41,18 @@ async function readOwnedManifest(dir) {
   try {
     const value = JSON.parse(text)
     if (value === null || typeof value !== 'object' || Array.isArray(value)) return { status: 'corrupt' }
-    if (typeof value.source !== 'string' || typeof value.contentSha256 !== 'string') return { status: 'corrupt' }
-    return { status: 'ok', value }
+    const isCurrent = typeof value.source === 'string' && typeof value.contentSha256 === 'string'
+    // Legacy dsh-workbuddy-expert exports carry sourcePath/pluginDir/agentFile/
+    // fingerprint and no `source`. They are recognised as owned so an upgrade
+    // can update/uninstall them instead of reporting a corrupt manifest.
+    const isLegacy = typeof value.sourcePath === 'string' && typeof value.pluginDir === 'string'
+      && typeof value.agentFile === 'string' && typeof value.fingerprint === 'string'
+    if (!isCurrent && !isLegacy) return { status: 'corrupt' }
+    return {
+      status: 'ok',
+      legacy: !isCurrent,
+      value: isCurrent ? value : { ...value, source: 'workbuddy', contentSha256: value.fingerprint },
+    }
   } catch { return { status: 'corrupt' } }
 }
 
@@ -56,9 +67,12 @@ async function copyDeclaredAssets({ adapter, expert, dir }) {
     await chmod(target, FILE_MODE)
   }
   if (expert.avatarFile !== undefined) {
+    // Keep the real image extension: a JPEG copied to avatar.png would be
+    // served with the wrong MIME type and can fail strict image decoders.
+    const installedName = avatarFileNameFor(expert.avatarFile)
     const bytes = Buffer.from(await adapter.readAsset(expert.id, expert.avatarFile.replace(`${expert.id}/`, '')))
-    await writeFile(join(dir, 'avatar.png'), bytes, { mode: FILE_MODE })
-    await chmod(join(dir, 'avatar.png'), FILE_MODE)
+    await writeFile(join(dir, installedName), bytes, { mode: FILE_MODE })
+    await chmod(join(dir, installedName), FILE_MODE)
   }
 }
 

@@ -34,15 +34,22 @@ test('manifest tampering is detected per expert without hiding the rest', async 
     const first = manifest.experts[0]
     await writeFile(join(tmp, 'manifest.json'), JSON.stringify({ ...manifest, experts: [first, { ...manifest.experts[1], contentSha256: '0'.repeat(64) }] }))
     await writeFile(join(tmp, 'catalog.sha256'), (await readFile(new URL('../resources/experts/catalog.sha256', import.meta.url), 'utf8')))
-    await mkdir(join(tmp, first.id), { recursive: true })
-    await writeFile(join(tmp, first.roleFile), await readFile(new URL(`../resources/experts/${first.roleFile}`, import.meta.url)))
+    const second = manifest.experts[1]
+    const sourceRoot = fileURLToPath(new URL('../resources/experts/', import.meta.url))
+    for (const expert of [first, second]) {
+      for (const file of expert.files) {
+        const target = join(tmp, expert.id, file.path)
+        await mkdir(join(target, '..'), { recursive: true })
+        await writeFile(target, await readFile(join(sourceRoot, expert.id, file.path)))
+      }
+    }
     const tampered = createBundledCatalog({ root: tmp, pluginVersion: '0.1.0' })
     const state = await tampered.stateOf()
-    // The tampered manifest entry must be rejected while the valid first entry
-    // still renders. The current schema validates shape eagerly; content hashes
-    // are checked on read.
-    assert.ok(state.experts.length >= 1)
-    assert.ok(Array.isArray(state.errors))
+    // Both entries declare their real role.md paths here; the second has a
+    // deliberately wrong content hash. It must be excluded from the card table
+    // while the first stays available.
+    assert.equal(state.experts.length, 1)
+    assert.ok(state.errors.some((error) => error.code === 'ASSET_HASH_MISMATCH' || /hash/i.test(error.message)))
   } finally {
     await rm(tmp, { recursive: true, force: true })
   }

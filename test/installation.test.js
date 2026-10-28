@@ -68,3 +68,54 @@ test('installed expert is visible to the existing DSH registry', async () => {
     await rm(expertsRoot, { recursive: true, force: true })
   }
 })
+
+test('a JPEG bundled avatar is installed as avatar.jpg and served as image/jpeg', async () => {
+  const expertsRoot = await mkdtemp(join(tmpdir(), 'wb-install-avatar-'))
+  try {
+    const jpeg = Buffer.from([0xff, 0xd8, 0xff, 0xe0, 0x00, 0x10, 0x4a, 0x46, 0x49, 0x46])
+    const expert = {
+      id: 'jpeg-expert', displayName: 'JPEG', profession: 'Test', description: '',
+      avatarFile: 'jpeg-expert/avatar.jpg', files: [{ path: 'role.md', sha256: 'a'.repeat(64) }],
+      sourcePackage: 'p', sourceAgent: 'a', sourceRevision: 'r', bundleVersion: 'b', pluginVersion: '0.1.0',
+      license: { status: 'approved', kind: 'test', evidence: 'test' },
+    }
+    const adapter = {
+      async list() { return [expert] },
+      async readPrompt() { return 'complete prompt' },
+      async listSkillFiles() { return [] },
+      async readAsset(_id, path) { return path === 'avatar.jpg' ? jpeg : Buffer.from('') },
+      async fingerprint() { return 'f'.repeat(64) },
+      async sourceRecord() { return { sourcePackage: 'p', sourceAgent: 'a', sourceRevision: 'r', bundleVersion: 'b', pluginVersion: '0.1.0' } },
+    }
+    // Prompt-hash check uses the manifest role hash; make it match this fixture.
+    const crypto = await import('node:crypto')
+    expert.files[0].sha256 = crypto.createHash('sha256').update('complete prompt').digest('hex')
+    const service = createInstallService({ adapter, expertsRoot, pluginVersion: '0.1.0' })
+    const result = await service.install('jpeg-expert')
+    assert.equal(await readFile(join(result.dir, 'avatar.jpg')).then((b) => b[1]), 0xd8)
+    assert.equal(await readFile(join(result.dir, 'avatar.png')).catch(() => undefined), undefined)
+  } finally {
+    await rm(expertsRoot, { recursive: true, force: true })
+  }
+})
+
+test('a legacy .expert-source.json is recognised as owned, not corrupt', async () => {
+  const expertsRoot = await mkdtemp(join(tmpdir(), 'wb-install-legacy-'))
+  try {
+    const first = await catalog.firstId()
+    const dir = join(expertsRoot, first)
+    const { mkdir } = await import('node:fs/promises')
+    await mkdir(dir, { recursive: true })
+    await writeFile(join(dir, 'expert.yml'), `id: "${first}"\ndisplay_name: "Legacy"\n`)
+    await writeFile(join(dir, 'role.md'), 'legacy role')
+    await writeFile(join(dir, '.expert-source.json'), JSON.stringify({
+      sourcePath: '~/.workbuddy/plugins', pluginDir: 'p', agentFile: 'a.md', fingerprint: 'f'.repeat(64), importedAt: '2026-01-01T00:00:00Z',
+    }))
+    const service = createInstallService({ adapter: createBundledSourceAdapter(catalog), expertsRoot, pluginVersion: '0.1.0' })
+    const overlay = await service.overlay()
+    assert.ok(overlay.installed.some((entry) => entry.id === first) || overlay.orphans.some((entry) => entry.id === first))
+    assert.equal(overlay.broken.some((entry) => entry.id === first), false)
+  } finally {
+    await rm(expertsRoot, { recursive: true, force: true })
+  }
+})

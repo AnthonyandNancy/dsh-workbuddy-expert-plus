@@ -77,6 +77,15 @@ export function createBotService({
       if (roleHash !== undefined && roleHash !== await sha256(prompt)) {
         throw new BotServiceError('PROMPT_HASH_MISMATCH', 'the bundled prompt does not match the catalog hash')
       }
+      // When the user edited the prompt, the client must prove the edit began
+      // from the exact bundled prompt. The baseline hash is checked against
+      // the manifest, not trusted from the request.
+      const editedInstructions = input.instructions === undefined ? prompt : String(input.instructions)
+      if (editedInstructions !== prompt) {
+        if (input.basePromptSha256 !== roleHash) {
+          throw new BotServiceError('PROMPT_BASELINE_MISMATCH', 'edited instructions must start from the exact bundled prompt')
+        }
+      }
 
       const state = await stateNow(options)
       if (state.readOnly !== undefined && state.readOnly !== null && state.readOnly !== false) {
@@ -87,12 +96,9 @@ export function createBotService({
       const fields = validateBotFields({
         name: input.name ?? template.name,
         role: input.role ?? template.role,
-        instructions: input.instructions ?? template.instructions,
+        instructions: editedInstructions,
       })
       if (!fields.ok) throw new BotServiceError('INVALID_FIELDS', fields.errors.join('; '))
-      if (input.instructions !== undefined && input.instructions !== prompt) {
-        throw new BotServiceError('PROMPT_ALTERED', 'instructions must be the exact bundled prompt')
-      }
       if (isBotNameTaken(state, fields.name)) throw new BotServiceError('NAME_TAKEN', `A Bot named ${fields.name} already exists`)
 
       const requestedModel = input.model !== undefined ? input.model : template.model
@@ -102,7 +108,7 @@ export function createBotService({
       const payload = {
         name: fields.name,
         role: fields.role,
-        instructions: prompt,
+        instructions: editedInstructions,
         ...(modelVerdict.model === undefined ? {} : { model: modelVerdict.model }),
       }
       let bot
@@ -125,8 +131,8 @@ export function createBotService({
       if (bot === null || typeof bot !== 'object' || typeof bot.id !== 'string' || bot.id === '') {
         throw new BotServiceError('INVALID_RESPONSE', 'create-bot did not return a Bot id')
       }
-      if (bot.instructions !== undefined && bot.instructions !== prompt) {
-        throw new BotServiceError('PROMPT_MISMATCH', 'DS-Bot stored instructions differ from the bundled prompt')
+      if (bot.instructions !== undefined && bot.instructions !== editedInstructions) {
+        throw new BotServiceError('PROMPT_MISMATCH', 'DS-Bot stored instructions differ from the submitted prompt')
       }
 
       const after = await stateNow(options)
@@ -136,7 +142,7 @@ export function createBotService({
       if (!list.some((entry) => entry.botId === bot.id)) list.push({ botId: bot.id, name: bot.name, createdAt: new Date().toISOString() })
       bindings[expert.id] = list
       await writeBindings(bindingsPath, bindings)
-      return { botId: bot.id, bot, verified, promptSha256: await sha256(prompt) }
+      return { botId: bot.id, bot, verified, promptSha256: await sha256(editedInstructions) }
     } finally {
       inFlight = false
     }

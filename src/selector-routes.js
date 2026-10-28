@@ -59,6 +59,7 @@
  */
 
 import { readFile } from 'node:fs/promises'
+import { imageContentType } from './importer/avatar.js'
 import { join } from 'node:path'
 
 export const ROUTE_BASE = '/dsh-workbuddy-expert-plus'
@@ -212,8 +213,14 @@ export function mountSelectorRoutes(hostCtx, { registry, switcher, resolveAgent 
           notFound()
           return
         }
-        const bytes = await readFile(join(card.dir, 'avatar.png'))
-        response.writeHead(200, { 'content-type': 'image/png', 'cache-control': 'max-age=60' })
+        const avatarFile = card.avatarFile ?? 'avatar.png'
+        const bytes = await readFile(join(card.dir, avatarFile))
+        const contentType = imageContentType(bytes)
+        if (contentType === undefined) {
+          notFound()
+          return
+        }
+        response.writeHead(200, { 'content-type': contentType, 'cache-control': 'max-age=60', 'content-length': String(bytes.length) })
         response.end(bytes)
       } catch {
         notFound()

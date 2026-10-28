@@ -8,6 +8,7 @@
  */
 
 import { probeDsBot } from '../adapters/environment.js'
+import { createBotRequestFetch } from '../adapters/request-fetch.js'
 
 export const ROUTE_BASE = '/dsh-workbuddy-expert-plus/api/market'
 const MAX_BODY_BYTES = 64 * 1024
@@ -82,52 +83,58 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
     return true
   }
 
+  /**
+   * The complete card table, install overlay and Bot bindings — the single
+   * source used by both GET /state and every mutating route response.
+   */
+  async function currentState() {
+    const bundled = await catalog.stateOf()
+    let overlay = { installed: [], broken: [], orphans: [] }
+    if (installer !== undefined) {
+      try { overlay = await installer.overlay() } catch { /* overlay failure must not hide the catalog */ }
+    }
+    const installedById = new Map(overlay.installed.map((entry) => [entry.id, entry]))
+    let bindings = {}
+    if (botService !== undefined && botEnabled) {
+      try { bindings = await botService.bindings() } catch { bindings = {} }
+    }
+    const experts = bundled.experts.map((expert) => {
+      const installed = installedById.get(expert.id)
+      const bots = Array.isArray(bindings[expert.id]) ? bindings[expert.id] : []
+      return {
+        ...expert,
+        agentInstalled: installed !== undefined,
+        installed: installed !== undefined,
+        updatable: installed?.updatable === true,
+        botCreated: bots.length > 0,
+        createdBots: bots,
+      }
+    })
+    return {
+      bundleVersion: bundled.bundleVersion,
+      pluginVersion: bundled.pluginVersion,
+      sourceRevision: bundled.sourceRevision,
+      counts: { ...bundled.counts, bundled: experts.length, total: experts.length },
+      sourcePath: '',
+      pathExists: true,
+      revision: 0,
+      experts,
+      errors: bundled.errors,
+      installed: overlay.installed,
+      broken: overlay.broken,
+      orphans: overlay.orphans,
+      botEnabled,
+      warnings: [],
+    }
+  }
+
   register({
     kind: 'exact',
     path: `${ROUTE_BASE}/state`,
     handler: async (request, response) => {
       if (request.method !== 'GET' && request.method !== 'HEAD') return sendJson(response, 405, { error: 'method not allowed' })
       try {
-        const bundled = await catalog.stateOf()
-        let overlay = { installed: [], broken: [], orphans: [] }
-        if (installer !== undefined) {
-          try { overlay = await installer.overlay() } catch { /* overlay failure must not hide the catalog */ }
-        }
-        const installedById = new Map(overlay.installed.map((entry) => [entry.id, entry]))
-        let bindings = {}
-        if (botService !== undefined && botEnabled) {
-          try { bindings = await botService.bindings() } catch { bindings = {} }
-        }
-        const experts = bundled.experts.map((expert) => {
-          const installed = installedById.get(expert.id)
-          const bots = Array.isArray(bindings[expert.id]) ? bindings[expert.id] : []
-          return {
-            ...expert,
-            agentInstalled: installed !== undefined,
-            updatable: installed?.updatable === true,
-            botCreated: bots.length > 0,
-            createdBots: bots,
-          }
-        })
-        sendJson(response, 200, {
-          bundleVersion: bundled.bundleVersion,
-          pluginVersion: bundled.pluginVersion,
-          sourceRevision: bundled.sourceRevision,
-          counts: { ...bundled.counts, bundled: experts.length, total: experts.length },
-          // The Agent page still owns a per-view draft/refresh lane; bundled
-          // mode has no mutable source path, so expose a stable empty value
-          // instead of a fake WorkBuddy directory.
-          sourcePath: '',
-          pathExists: true,
-          revision: 0,
-          experts,
-          errors: bundled.errors,
-          installed: overlay.installed,
-          broken: overlay.broken,
-          orphans: overlay.orphans,
-          botEnabled,
-          warnings: [],
-        })
+        sendJson(response, 200, await currentState())
       } catch (error) {
         sendJson(response, 500, { error: error instanceof Error ? error.message : String(error) })
       }
@@ -144,25 +151,7 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
       // refresh simply re-reads it (and the install overlay) without scanning
       // any WorkBuddy directory.
       try {
-        const bundled = await catalog.stateOf()
-        let overlay = { installed: [], broken: [], orphans: [] }
-        if (installer !== undefined) {
-          try { overlay = await installer.overlay() } catch { /* keep catalog */ }
-        }
-        sendJson(response, 200, {
-          ...bundled,
-          sourcePath: '',
-          pathExists: true,
-          revision: 0,
-          experts: bundled.experts.map((expert) => ({
-            ...expert,
-            installed: overlay.installed.some((entry) => entry.id === expert.id),
-          })),
-          installed: overlay.installed,
-          broken: overlay.broken,
-          orphans: overlay.orphans,
-          warnings: [],
-        })
+        sendJson(response, 200, await currentState())
       } catch (error) {
         sendJson(response, 500, { error: error instanceof Error ? error.message : String(error) })
       }
@@ -212,7 +201,11 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
     handler: async (request, response) => {
       if (request.method !== 'GET' && request.method !== 'HEAD') return sendJson(response, 405, { error: 'method not allowed' })
       if (!botEnabled) return sendJson(response, 200, { status: 'absent', reason: 'Bot integration is disabled' })
-      try { sendJson(response, 200, await probe()) } catch (error) { sendJson(response, 200, { status: 'unknown', reason: error instanceof Error ? error.message : String(error) }) }
+      try {
+        sendJson(response, 200, await probe({ fetchImpl: createBotRequestFetch(request) }))
+      } catch (error) {
+        sendJson(response, 200, { status: 'unknown', reason: error instanceof Error ? error.message : String(error) })
+      }
     },
   })
 
@@ -226,8 +219,7 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
           const body = await readJsonBody(request)
           if (body === null || typeof body !== 'object' || typeof body.id !== 'string') throw Object.assign(new Error('id is required'), { code: 'CARD_INVALID' })
           const result = await run(body.id)
-          const bundled = await catalog.stateOf()
-          sendJson(response, 200, { ...result, state: { ...bundled, counts: { ...bundled.counts, bundled: bundled.experts.length } } })
+          sendJson(response, 200, { ...result, state: await currentState() })
         } catch (error) {
           sendJson(response, STATUS[error?.code] ?? 400, { error: error instanceof Error ? error.message : String(error), ...(error?.code ? { code: error.code } : {}) })
         } finally { mutating = false }
@@ -249,13 +241,15 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
           if (body === null || typeof body !== 'object' || typeof body.expertId !== 'string') {
             throw Object.assign(new Error('expertId is required'), { code: 'INVALID_FIELDS' })
           }
-          sendJson(response, 200, await botService.create({
+          const result = await botService.create({
             expertId: body.expertId,
             name: body.name,
             role: body.role,
             instructions: body.instructions,
+            basePromptSha256: body.basePromptSha256,
             model: body.model,
-          }))
+          }, { fetchImpl: createBotRequestFetch(request) })
+          sendJson(response, 200, { ...result, state: await currentState() })
         } catch (error) {
           sendJson(response, STATUS[error?.code] ?? 400, {
             error: error instanceof Error ? error.message : String(error),
@@ -271,7 +265,7 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
       handler: async (request, response) => {
         if (request.method !== 'GET' && request.method !== 'HEAD') return sendJson(response, 405, { error: 'method not allowed' })
         try {
-          sendJson(response, 200, { bindings: await botService.bindings() })
+          sendJson(response, 200, { bindings: await botService.bindings({ fetchImpl: createBotRequestFetch(request) }) })
         } catch (error) {
           sendJson(response, 502, { error: error instanceof Error ? error.message : String(error) })
         }
