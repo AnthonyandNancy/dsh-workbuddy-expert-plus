@@ -460,9 +460,13 @@ const flush = () => new Promise((resolve) => setTimeout(resolve, 0))
 assert.equal(mod.localeNameOf({ id: 'x', name: 'Coder', zhName: '程序员' }, 'zh'), '程序员')
 assert.equal(mod.localeNameOf({ id: 'x', name: 'Coder', zhName: '程序员' }, 'en'), 'Coder')
 assert.equal(mod.localeNameOf({ id: 'x', name: 'Coder' }, 'zh'), 'Coder', 'zh falls back to the base name')
+assert.equal(mod.localeNameOf({ id: 'x', displayName: '40-20 外卖券' }, 'zh'), '40-20 外卖券',
+  'a bundled displayName is the Chinese title')
+assert.equal(mod.localeNameOf({ id: 'x', displayName: 'CloudQ', profession: '腾讯云SRE专家' }, 'zh'), '腾讯云SRE专家',
+  'a pure-English brand yields to its Chinese profession')
 assert.equal(mod.localeNameOf({ id: 'x' }, 'en'), 'x', 'the id is the terminal name fallback')
 
-assert.equal(mod.categoryLabelOf('02-Engineering', 'zh'), '工程开发')
+assert.equal(mod.categoryLabelOf('02-Engineering', 'zh'), '技术工程')
 assert.equal(mod.categoryLabelOf('02-Engineering', 'en'), 'Engineering')
 assert.equal(mod.categoryLabelOf('99-Future', 'zh'), 'Future', 'unknown keys degrade to the prefix-stripped raw id')
 assert.equal(mod.categoryLabelOf('', 'zh'), '')
@@ -690,24 +694,31 @@ function makeDocumentStub() {
   sandbox.window.removeEventListener = () => {}
   const seatSetups = new Map()
   const renderedBySeat = new Map()
-  const footerEntries = []
-  const footerListeners = []
-  const footerEntryOf = (definition) => ({
-    name: definition.name,
-    options: { id: definition.id, order: definition.order, priority: definition.priority },
-  })
+  // The surface store observes the shell footer AND the conversation group:
+  // DS-Bot withdraws the two groups separately during a skin swap, so both
+  // cells are required to tell a real mode from the empty transition window.
+  const observed = {
+    'sidebar.footer.action': [],
+    'conversation.input.left': [],
+  }
+  const cellEntries = {
+    'sidebar.footer.action': [],
+    'conversation.input.left': [],
+  }
   const slots = {
     subscribe(name, listener) {
-      assert.equal(name, 'sidebar.footer.action', 'only the DS-Bot footer cell is observed')
-      footerListeners.push(listener)
+      assert.ok(Object.prototype.hasOwnProperty.call(observed, name),
+        `known observed cell: ${name}`)
+      observed[name].push(listener)
       return () => {
-        const index = footerListeners.indexOf(listener)
-        if (index >= 0) footerListeners.splice(index, 1)
+        const index = observed[name].indexOf(listener)
+        if (index >= 0) observed[name].splice(index, 1)
       }
     },
     entries(name) {
-      assert.equal(name, 'sidebar.footer.action', 'only the DS-Bot footer cell is inspected')
-      return footerEntries
+      assert.ok(Object.prototype.hasOwnProperty.call(cellEntries, name),
+        `known inspected cell: ${name}`)
+      return cellEntries[name]
     },
     inject(seat, setup) {
       assert.ok(['conversation.input.left', 'settings.section', 'plugins.row.config', 'sidebar.footer.action', 'shell.overlay'].includes(seat),

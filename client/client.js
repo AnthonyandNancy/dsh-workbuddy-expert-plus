@@ -1183,9 +1183,34 @@ function localePick (zh, base, localeId) {
   return localeId === 'zh' ? (zh !== '' ? zh : base) : (base !== '' ? base : zh)
 }
 
-/** The card name under one UI language (localized first, base fallback, id last). */
+/** True when a title carries at least one Han character. */
+var HAN_RE = /[\u3400-\u9fff]/
+
+/**
+ * The card title under one UI language.
+ *
+ * Bundled catalog cards carry a single `displayName` and a `profession`;
+ * legacy local scans carry `zhName` / `name`. In zh, a Chinese field always
+ * wins over an English brand name (e.g. "CloudQ" → "腾讯云SRE专家"); if no
+ * field carries Chinese, the best human-readable name is kept rather than
+ * replacing it with the machine id. en keeps the legacy base-name order.
+ */
 function localeNameOf (expert, localeId) {
-  var pick = localePick(strOf(expert.zhName), strOf(expert.name), localeId)
+  var displayName = strOf(expert.displayName)
+  var zhName = strOf(expert.zhName)
+  var baseName = strOf(expert.name)
+  var profession = strOf(expert.profession)
+  var zhFields = [displayName, zhName, profession, baseName]
+  var pick
+  if (localeId === 'zh') {
+    pick = ''
+    for (var i = 0; i < zhFields.length; i++) {
+      if (HAN_RE.test(zhFields[i])) { pick = zhFields[i]; break }
+    }
+    if (pick === '') pick = displayName || zhName || baseName || profession
+  } else {
+    pick = baseName || displayName || profession
+  }
   return pick !== '' ? pick : strOf(expert.id)
 }
 
@@ -1305,9 +1330,10 @@ function categoryChipsOf (experts) {
   return chips
 }
 
-/** The search haystack of one card: both languages, id, plugin, skills, category. */
+/** The search haystack of one card: every human-facing name, id, description, category. */
 function haystackOf (expert) {
-  return [strOf(expert.id), strOf(expert.name), strOf(expert.zhName),
+  return [strOf(expert.id), strOf(expert.displayName), strOf(expert.profession),
+    strOf(expert.name), strOf(expert.zhName),
     strOf(expert.description), strOf(expert.zhDescription), strOf(expert.pluginDir),
     (Array.isArray(expert.skills) ? expert.skills : []).join(' '),
     categoryHayshare(categoryOf(expert))].join(' ').toLowerCase()
