@@ -1,0 +1,70 @@
+{
+  "name": "dsh-workbuddy-expert-plus",
+  "version": "0.1.0",
+  "description": "Offline WorkBuddy expert marketplace for DeepSeek Harness and DS-Bot — bundled experts, DSH Agent install, and native Bot creation. · 离线内置专家市场，双宿主双模式。",
+  "type": "module",
+  "main": "src/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbwheel/dsh-workbuddy-expert.git"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "3.18.4"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.2 <0.3.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2 <0.3.0"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "client",
+    "resources/experts",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md"
+  ],
+  "icon": "./icon.svg",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "experts",
+    "workbuddy",
+    "ds-bot",
+    "offline"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js && node scripts/smoke.mjs && node scripts/smoke-client.mjs && node scripts/smoke-importer.mjs && node scripts/smoke-install.mjs",
+    "build:experts": "node scripts/build-experts.mjs",
+    "check:package": "node scripts/check-package.mjs"
+  }
+}

@@ -1,0 +1,509 @@
+/**
+ * Read-only HTTP routes for the WorkBuddy importer — ported from
+ * wb-market src/routes.js with the install/update/uninstall/agentPresets
+ * machinery removed (ticket 07 owns export; this ticket is read-only).
+ *
+ *   GET  /dsh-workbuddy-expert-plus/api/state  → { sourcePath, pathExists,
+ *                                             revision, experts, warnings }
+ *                                           (no-store); expert cards carry
+ *                                           avatarUrl (only when the scan
+ *                                           found a PNG) and never leak the
+ *                                           internal absolute avatarPath;
+ *                                           the fingerprint moves → an
+ *                                           automatic rescan before the
+ *                                           answer (catalog.stateOf);
+ *   GET  /dsh-workbuddy-expert-plus/api/avatar?id=<id>
+ *                                     → the expert's PNG read on demand
+ *                                       from the CURRENT scan table (never
+ *                                       copied), image/png + max-age=60;
+ *                                       the id must pass the scanner's
+ *                                       ID_RE, hit the table, and its
+ *                                       avatarPath must realpath inside
+ *                                       the source root — unknown/invalid/
+ *                                       escaping ids all answer one uniform
+ *                                       404 (no probe signal), and read
+ *                                       failures 404 the same way;
+ *   POST /dsh-workbuddy-expert-plus/api/config { sourcePath, expectedRevision }
+ *                                     → save the RAW path string through
+ *                                       the SERVICE-level settings update
+ *                                       (revision conflict protection),
+ *                                       answer with the new state;
+ *                                       nonexistent paths are saveable and
+ *                                       surface as pathExists=false +
+ *                                       warning;
+ *   POST /dsh-workbuddy-expert-plus/api/refresh → drop the scan cache, answer
+ *                                       with a freshly scanned state.
+ *
+ * Ticket 07 (present only when an export engine is injected — the
+ * read-only surface above stays mountable alone):
+ *   POST /dsh-workbuddy-expert-plus/api/install {id}   → export the scanned
+ *                                       card into the user experts root
+ *                                       (404 unknown id, 409 existing
+ *                                       folder without a valid manifest,
+ *                                       409 corrupt manifest);
+ *   POST /dsh-workbuddy-expert-plus/api/update {id}    → in-place re-export
+ *                                       when the source fingerprint
+ *                                       moved (changed:false otherwise);
+ *   POST /dsh-workbuddy-expert-plus/api/uninstall {id} → delete the exported
+ *                                       folder (refused on folders this
+ *                                       importer never exported);
+ *   GET  /api/state additionally carries the installed overlay:
+ *                                       installed/updatable cards,
+ *                                       broken exports, orphans.
+ *
+ * Security baseline (ported from wb-market, hardened per dshmarket #648/#678):
+ * mutating routes accept same-origin POSTs only (405 otherwise), with an
+ * origin fence that tolerates the Desktop proxy's header stripping — a
+ * PRESENT Host must name loopback (rebinding defence), `sec-fetch-site:
+ * cross-site` is refused, an ABSENT Origin passes (the Desktop build's
+ * proxy strips it; browsers always send it on POSTs), and a present
+ * Origin must equal Host (`Origin: null`/empty refused). JSON bodies are
+ * capped at 4 KiB, every JSON response carries no-store, and one mutating
+ * operation runs at a time — a concurrent second change gets 409. The
+ * avatar route is a GET read: no origin fence, no lane — its only guard
+ * is the id/containment chain above, and it is the ONE response allowed
+ * to cache (max-age=60, the sole exception to no-store; a source PNG
+ * mtime change moves the fingerprint, the rescan swaps the bytes, and
+ * the 60s window absorbs itself).
+ */
+
+import { readFile, realpath, stat } from 'node:fs/promises'
+import { isAbsolute, relative, sep } from 'node:path'
+
+import { ID_RE, expandTildePath } from './scanner.js'
+import { entryIdOf, namespaceDescriptor, readSourcePath, settingsRowOf } from './settings.js'
+import { errorMessage } from './util.js'
+
+export const ROUTE_BASE = '/dsh-workbuddy-expert-plus'
+
+/** Write a JSON payload with no-store caching. */
+function sendJson(response, status, payload) {
+  response.writeHead(status, {
+    'cache-control': 'no-store',
+    'content-type': 'application/json; charset=utf-8',
+  })
+  response.end(JSON.stringify(payload))
+}
+
+/**
+ * Whether a `Host` header names a loopback authority. `Origin === Host`
+ * alone does not stop a DNS-rebinding page (evil.com resolving to
+ * 127.0.0.1 sends a matching pair), so Host — the one header the attack
+ * cannot forge — is what must name loopback. `localhost` is included
+ * because browsers and RFC 6761 pin it to loopback; the port is dropped
+ * before comparing and IPv6 literals keep their brackets.
+ */
+function loopbackAuthority(host) {
+  if (host === undefined) return false
+  const lower = host.toLowerCase()
+  const name = lower.startsWith('[') ? lower.slice(0, lower.indexOf(']') + 1) : lower.split(':')[0]
+  return name === '127.0.0.1' || name === 'localhost' || name === '[::1]'
+}
+
+/**
+ * True when the request's origin statement is compatible with this host
+ * (mutating routes only). Contract ported from the dshmarket analysis
+ * (#648/#678), proven on the same runtime:
+ *
+ *   - a PRESENT Host must name a loopback authority (rebinding defence);
+ *     an absent Host is allowed — the Desktop build's proxy strips it;
+ *   - `sec-fetch-site: cross-site` is refused outright — the browser
+ *     itself states the request is cross-site;
+ *   - an ABSENT Origin passes: browsers send Origin on every POST, so its
+ *     absence means the caller is not a page, and the Desktop proxy
+ *     (#648) strips `origin`/`host`/`cookie`/`sec-fetch-site` before the
+ *     in-process host sees the request — refusing absence broke every
+ *     mutating request from the Desktop build with 403;
+ *   - a PRESENT Origin must parse and equal Host: `Origin: null`
+ *     (sandboxed iframe, `data:` document) and an empty Origin are
+ *     present-but-unparseable and refused — only genuine absence is what
+ *     a stripping proxy produces.
+ */
+function sameOrigin(request) {
+  const host = request.headers.host
+  if (host !== undefined && !loopbackAuthority(host)) return false
+  if (request.headers['sec-fetch-site'] === 'cross-site') return false
+  const origin = request.headers.origin
+  if (origin === undefined) return true
+  try {
+    return new URL(origin).host === host
+  } catch {
+    return false
+  }
+}
+
+/** Read and parse a JSON body, rejecting anything over 4 KiB. */
+async function readJsonBody(request, maxBytes = 4096) {
+  const chunks = []
+  let size = 0
+  for await (const chunk of request) {
+    const buffer = Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk)
+    size += buffer.length
+    if (size > maxBytes) throw new Error('request body too large')
+    chunks.push(buffer)
+  }
+  return JSON.parse(Buffer.concat(chunks).toString('utf8'))
+}
+
+/** Whether the expanded form of a raw stored path exists on disk. */
+async function pathExists(rawSourcePath) {
+  try {
+    await stat(expandTildePath(rawSourcePath))
+    return true
+  } catch {
+    return false
+  }
+}
+
+/**
+ * True when a fully resolved candidate path sits strictly inside a fully
+ * resolved root. Both inputs must already be realpath'd — the route
+ * resolves both sides through the filesystem itself, so `..` segments AND
+ * symlinks (a declared plugin.json avatar may be either) are undone
+ * before the prefix test; a leading `../` or an absolute escape means
+ * "outside".
+ */
+function isWithinRoot(rootReal, candidateReal) {
+  const rel = relative(rootReal, candidateReal)
+  return rel !== '' && rel !== '..' && !rel.startsWith(`..${sep}`) && !isAbsolute(rel)
+}
+
+/**
+ * One state-payload expert card: the scan card minus the internal
+ * absolute `avatarPath`, plus `avatarUrl` — but ONLY for experts the scan
+ * gave a PNG. PNG-less experts carry neither field. Ids are
+ * ID_RE-constrained by the scanner, so the URL needs no percent-encoding.
+ */
+function stateCardOf(expert) {
+  const { avatarPath, ...card } = expert
+  return avatarPath === undefined
+    ? card
+    // DOCUMENT-RELATIVE (ROUTE_BASE minus its leading slash): the web
+    // shell pins <base href="./">, so origin-absolute paths break under
+    // prefix-stripping proxy mounts — the browser resolves this against
+    // the document base (the built-ins' `PATH.slice(1)` convention). The
+    // server-side route itself stays registered under the absolute
+    // ROUTE_BASE (the server matches the post-strip path).
+    : { ...card, avatarUrl: `${ROUTE_BASE.slice(1)}/api/avatar?id=${expert.id}` }
+}
+
+/**
+ * Compose one `/api/state` payload: raw stored path (tilde intact), its
+ * existence flag, the settings revision for conflict protection, the
+ * expert table (cards via `stateCardOf`), and warnings (scan + path
+ * together; a nonexistent path adds its own warning while the scan still
+ * answers an empty table). With an export engine injected (ticket 07)
+ * the payload additionally carries the installed overlay — top-level
+ * installed/broken/orphans lists plus per-card installed/updatable
+ * flags — mirroring wb-market's /api/state shape.
+ * @param {object} deps - { settingsService, catalog, exporter?, ns, config }
+ * @returns {Promise<object>} the state payload
+ */
+async function buildState({ settingsService, catalog, exporter, ns, config }) {
+  const row = settingsRowOf(settingsService, ns)
+  const rawSourcePath = rawOf(row, config)
+  const exists = await pathExists(rawSourcePath)
+  const scan = await catalog.stateOf(rawSourcePath)
+  const warnings = [...scan.warnings]
+  if (!exists) warnings.push(`source path does not exist: ${rawSourcePath}`)
+  const experts = scan.experts.map((expert) => stateCardOf(expert))
+  const state = {
+    sourcePath: rawSourcePath,
+    pathExists: exists,
+    revision: typeof row?.revision === 'number' ? row.revision : undefined,
+    experts,
+    warnings,
+  }
+  if (exporter !== undefined) {
+    const overlay = await exporter.overlay()
+    const installedById = new Map(overlay.installed.map((entry) => [entry.id, entry]))
+    state.experts = experts.map((expert) => {
+      const entry = installedById.get(expert.id)
+      return entry === undefined ? { ...expert, installed: false } : { ...expert, installed: true, updatable: entry.updatable }
+    })
+    state.installed = overlay.installed
+    state.broken = overlay.broken
+    state.orphans = overlay.orphans
+  }
+  return state
+}
+
+/**
+ * The RAW stored source path (tilde intact): the settings form's live
+ * value when the entry exposes one, else the plugin config reference
+ * (volatile or plain) — one truth on both the live host and doubles.
+ */
+function rawOf(row, config) {
+  const fromForm = row?.value?.sourcePath
+  if (typeof fromForm === 'string' && fromForm.trim() !== '') return fromForm
+  return readSourcePath(config)
+}
+
+/** The RAW stored source path every scan-facing caller reads (tilde intact). */
+function currentSourcePath(settingsService, ns, config) {
+  return rawOf(settingsRowOf(settingsService, ns), config)
+}
+
+/** Validate the `sourcePath` field of a config body; returns it verbatim. */
+function requireSourcePath(body) {
+  if (body === null || typeof body !== 'object') throw new Error('body must be a JSON object')
+  const sourcePath = body.sourcePath
+  if (typeof sourcePath !== 'string' || sourcePath.trim() === '') {
+    throw new Error('missing sourcePath')
+  }
+  return sourcePath
+}
+
+/**
+ * Register every importer route on the host webServer. Returns a disposer
+ * that drops them all, so the plugin unloads cleanly. Without an
+ * `exporter` the surface stays read-only (ticket 06 shape); with one,
+ * the install/update/uninstall POST routes join the SAME single-flight
+ * lane — the three operations are mutually exclusive with each other
+ * and with config/refresh.
+ * @param {object} hostCtx - injected context exposing `webServer` + `settings`
+ * @param {{ invalidate(): void, stateOf(raw: string): Promise<object> }} deps - { catalog } the shared scan cache
+ * @param {string} [deps.ns] - this plugin's settings entry id (defaults
+ *   to entryIdOf(hostCtx): the live fiber's entry id, patch id fallback)
+ * @param {object} [deps.config] - the plugin's config reference (volatile
+ *   sourcePath ref or plain object) — the fallback read when the settings
+ *   form row is absent
+ * @param {object} [deps.exporter] - the ticket-07 export engine (optional)
+ */
+export function mountImporterRoutes(hostCtx, { catalog, exporter, ns, config }) {
+  const disposers = []
+  const register = (route) => {
+    const off = hostCtx.webServer.register(route)
+    if (typeof off === 'function') disposers.push(off)
+  }
+
+  /** What buildState reads: settings + the shared scan cache (+ engine). */
+  const entryNs = ns ?? entryIdOf(hostCtx)
+  const deps = { settingsService: hostCtx.settings, catalog, exporter, ns: entryNs, config }
+
+  /** The RAW stored source path (tilde intact) every scan-facing caller reads. */
+  const rawSourcePathOf = () => currentSourcePath(hostCtx.settings, entryNs, config)
+
+  /**
+   * The CURRENT scan table's card for one expert id (undefined when absent)
+   * — the shared lookup of the avatar route.
+   */
+  const currentCardOf = async (id) => {
+    const scan = await deps.catalog.stateOf(rawSourcePathOf())
+    return scan.experts.find((expert) => expert.id === id)
+  }
+
+  /** One mutating operation at a time (settings writes + refresh). */
+  let mutating = false
+
+  /** Shared guard chain for mutating routes: method, origin, single-flight. */
+  function mutationGuard(request, response) {
+    if (request.method !== 'POST') {
+      sendJson(response, 405, { error: 'method not allowed' })
+      return false
+    }
+    if (!sameOrigin(request)) {
+      sendJson(response, 403, { error: 'same-origin required' })
+      return false
+    }
+    if (mutating) {
+      sendJson(response, 409, { error: 'another change is in progress' })
+      return false
+    }
+    mutating = true
+    return true
+  }
+
+  register({
+    kind: 'exact',
+    path: `${ROUTE_BASE}/api/state`,
+    handler: async (request, response) => {
+      if (request.method !== 'GET' && request.method !== 'HEAD') {
+        sendJson(response, 405, { error: 'method not allowed' })
+        return
+      }
+      try {
+        sendJson(response, 200, await buildState(deps))
+      } catch (error) {
+        sendJson(response, 500, { error: errorMessage(error) })
+      }
+    },
+  })
+
+  register({
+    kind: 'exact',
+    path: `${ROUTE_BASE}/api/avatar`,
+    handler: async (request, response) => {
+      if (request.method !== 'GET' && request.method !== 'HEAD') {
+        sendJson(response, 405, { error: 'method not allowed' })
+        return
+      }
+      // Every miss answers ONE uniform 404 — unknown id, charset reject,
+      // PNG-less expert, out-of-root resolution, vanished file — so the
+      // route cannot be probed for which ids exist.
+      const notFound = () => sendJson(response, 404, { error: 'not found' })
+      let id = null
+      try {
+        id = new URL(request.url ?? '/', 'http://internal.invalid').searchParams.get('id')
+      } catch {
+        id = null
+      }
+      if (typeof id !== 'string' || !ID_RE.test(id)) {
+        notFound()
+        return
+      }
+      try {
+        // The card comes from the CURRENT scan table (through the catalog's
+        // fingerprint cache, never a private rescan) — an id that is not in
+        // the table has no avatar to serve.
+        const card = await currentCardOf(id)
+        if (card === undefined || typeof card.avatarPath !== 'string' || card.avatarPath === '') {
+          notFound()
+          return
+        }
+        // Containment on REAL paths: realpath undoes `..` and symlink hops
+        // on both sides, so a declared avatar spelled or linked anywhere
+        // outside the source root fails the check. A missing/unreadable
+        // root or file resolves to null and 404s like any other miss.
+        const rootReal = await realpath(expandTildePath(rawSourcePathOf())).catch(() => null)
+        const avatarReal = await realpath(card.avatarPath).catch(() => null)
+        if (rootReal === null || avatarReal === null || !isWithinRoot(rootReal, avatarReal)) {
+          notFound()
+          return
+        }
+        // Corpus PNGs are a few hundred KiB at most — a single Buffer read
+        // is the stream here (read on demand, never copy). A read that
+        // fails after containment (vanished mid-race, EACCES) 404s like
+        // every other miss — the uniform body leaks no detail.
+        const bytes = await readFile(avatarReal).catch(() => null)
+        if (bytes === null) {
+          notFound()
+          return
+        }
+        response.writeHead(200, {
+          'content-type': 'image/png',
+          'cache-control': 'max-age=60',
+          'content-length': String(bytes.length),
+        })
+        response.end(bytes)
+      } catch (error) {
+        sendJson(response, 500, { error: errorMessage(error) })
+      }
+    },
+  })
+
+  register({
+    kind: 'exact',
+    path: `${ROUTE_BASE}/api/config`,
+    handler: async (request, response) => {
+      if (!mutationGuard(request, response)) return
+      try {
+        const body = await readJsonBody(request)
+        const sourcePath = requireSourcePath(body)
+        const expectedRevision = body.expectedRevision
+        let state
+        try {
+          // Service-level update against THIS entry's Config form (the
+          // 0.2 settings model: no custom namespace — the address is the
+          // plugin's entry id, conflict protection stays revision-based).
+          await hostCtx.settings.update(entryNs, { sourcePath }, expectedRevision)
+          state = await buildState(deps)
+        } catch (error) {
+          if (error?.code === 'SETTINGS_CONFLICT') {
+            sendJson(response, 409, {
+              error: errorMessage(error),
+              code: 'SETTINGS_CONFLICT',
+              expectedRevision: error.expected,
+              revision: error.actual,
+            })
+            return
+          }
+          // A missing form is a setup problem, not a bad request body:
+          // name the entry so the operator knows which Config to check.
+          if (String(error?.message ?? '').includes('No configurable plugin entry')
+            || String(error?.message ?? '').includes('has no volatile fields')) {
+            sendJson(response, 503, {
+              error: `settings form unavailable for entry "${entryNs}" (${errorMessage(error)}); the plugin's Config schema must load for edits`,
+            })
+            return
+          }
+          throw error
+        }
+        sendJson(response, 200, state)
+      } catch (error) {
+        sendJson(response, 400, { error: errorMessage(error) })
+      } finally {
+        mutating = false
+      }
+    },
+  })
+
+  register({
+    kind: 'exact',
+    path: `${ROUTE_BASE}/api/refresh`,
+    handler: async (request, response) => {
+      if (!mutationGuard(request, response)) return
+      try {
+        catalog.invalidate()
+        sendJson(response, 200, await buildState(deps))
+      } catch (error) {
+        sendJson(response, 500, { error: errorMessage(error) })
+      } finally {
+        mutating = false
+      }
+    },
+  })
+
+  // ── ticket 07: install/update/uninstall as expert-folder export ──────────
+
+  if (exporter !== undefined) {
+    /** Engine error codes → HTTP statuses (single-flight 409 stays exclusive to the lane). */
+    const statusOf = (code) => ({
+      CARD_NOT_FOUND: 404,
+      FOLDER_EXISTS: 409,
+      MANIFEST_BROKEN: 409,
+      NOT_EXPORTED: 409,
+      NOT_INSTALLED: 400,
+      CARD_INVALID: 400,
+    })[code] ?? 400
+
+    /** Validate the `{ id }` body of one engine route. */
+    const requireId = (body) => {
+      if (body === null || typeof body !== 'object') throw new Error('body must be a JSON object')
+      const id = body.id
+      if (typeof id !== 'string' || id.trim() === '') throw new Error('missing id')
+      return id
+    }
+
+    /** Register one engine POST route around a bound engine method. */
+    const registerEngineRoute = (name, run) => {
+      register({
+        kind: 'exact',
+        path: `${ROUTE_BASE}/api/${name}`,
+        handler: async (request, response) => {
+          if (!mutationGuard(request, response)) return
+          try {
+            const id = requireId(await readJsonBody(request))
+            const result = await run(id)
+            sendJson(response, 200, { ...result, state: await buildState(deps) })
+          } catch (error) {
+            sendJson(response, error?.code !== undefined ? statusOf(error.code) : 400, {
+              error: errorMessage(error),
+              ...(error?.code !== undefined ? { code: error.code } : {}),
+            })
+          } finally {
+            mutating = false
+          }
+        },
+      })
+    }
+
+    registerEngineRoute('install', (id) => exporter.install(id))
+    registerEngineRoute('update', (id) => exporter.update(id))
+    registerEngineRoute('uninstall', (id) => exporter.uninstall(id))
+  }
+
+  return () => {
+    for (const off of disposers) off()
+  }
+}

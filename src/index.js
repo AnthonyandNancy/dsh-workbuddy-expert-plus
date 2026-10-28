@@ -1,0 +1,190 @@
+/**
+ * dsh-workbuddy-expert-plus host entry: wires the discovery roots
+ * (project `<cwd>/.agents/experts`, user `<dshHome>/experts`, optional
+ * config extras with a required `trust: user`), the cached registry, the
+ * zero-dependency root watcher, the `ctx.experts` service, and the `/expert`
+ * listing command. Every side effect is registered through `ctx.effect` and
+ * therefore reversible on plugin unload.
+ *
+ * Config (DSH 0.2 settings model): exported as a schemastery schema —
+ * `sourcePath` is `.volatile()` so the settings service projects an
+ * editable form under this entry's id, `loader/volatile-update` commits
+ * land in the running reference without remounting, and `roots`/`dshHome`
+ * stay ordinary fields (an edit remounts, which is their correct
+ * semantics — discovery roots rewire wholesale). Schemastery is resolved
+ * through the layered tiers in importer/util.js; outside a dsh host the
+ * export degrades to `undefined` and apply() keeps consuming a plain
+ * object (test doubles, standalone tooling) — never a load failure.
+ */
+
+import { homedir } from 'node:os'
+import { join, resolve } from 'node:path'
+
+import { registerExpertCommand } from './command.js'
+import { mountImporter } from './importer/index.js'
+import { DEFAULT_SOURCE_PATH } from './importer/scanner.js'
+import { resolveSchemastery } from './importer/util.js'
+import { buildDiscoveryRoots, createRegistry } from './registry.js'
+import { mountSelectorRoutes } from './selector-routes.js'
+import { createSwitcher } from './switch.js'
+import { watchRoots } from './watch.js'
+
+/** Cordis plugin name used by loader diagnostics. */
+export const name = 'dsh-workbuddy-expert-plus'
+
+/** The plugin's Config schema (see the module header); undefined when no tier resolves schemastery. */
+let Config
+try {
+  const z = await resolveSchemastery()
+  Config = z.object({
+    sourcePath: z.string().default(DEFAULT_SOURCE_PATH).volatile(),
+    dshHome: z.string(),
+    roots: z.array(z.object({ path: z.string(), trust: z.string() })),
+  })
+} catch {
+  Config = undefined
+}
+export { Config }
+
+/** Expand `~`/`~/` prefixes against the OS home; anything else passes through. */
+function expandHomePath(value) {
+  if (typeof value !== 'string') return value
+  if (value === '~') return homedir()
+  if (value.startsWith('~/') || value.startsWith('~\\')) return join(homedir(), value.slice(2))
+  return value
+}
+
+/**
+ * Resolve the harness home: explicit config > `$DSH_HOME` (when non-blank) >
+ * `~/.dsh` — the same precedence the harness itself uses, inlined here so the
+ * plugin stays zero-dependency.
+ */
+function resolveDshHome(configured, env = process.env) {
+  const fromEnv = typeof env.DSH_HOME === 'string' && env.DSH_HOME.trim() !== '' ? env.DSH_HOME : undefined
+  return resolve(expandHomePath(configured ?? fromEnv ?? join(homedir(), '.dsh')))
+}
+
+/**
+ * Register the expert registry against the host context.
+ * @param {import('@deepseek-ai/cordis').Context} ctx - host context
+ * @param {{dshHome?: string, roots?: Array<{path: string, trust?: string}>}} [config]
+ */
+export function apply(ctx, config = {}) {
+  const warn = (message) => ctx.logger?.warn?.(`dsh-workbuddy-expert-plus: ${message}`)
+  const dshHome = resolveDshHome(config.dshHome)
+  const projectRoot = process.cwd()
+  const roots = buildDiscoveryRoots({
+    projectRoot,
+    dshHome,
+    extraRoots: config.roots,
+    onWarning: warn,
+  })
+
+  const registry = createRegistry({ roots })
+
+  // Soft-switch transaction manager (ticket 03): serialized per session,
+  // agent-scope compositions, in-memory selection state (nothing is appended
+  // to the durable session log — the harness fail-closes on unknown plugin
+  // event types, see src/switch.js). The session-creation helper
+  // (composeForCreation) is exposed on the service for ticket 05's UI.
+  const switcher = createSwitcher({ registry, logger: { warn } })
+
+  // Watcher: root add/remove reflects without restart (invalidates the cache;
+  // list()'s TTL bounds staleness if an event is ever missed).
+  ctx.effect(
+    () => watchRoots(roots.map((root) => root.path), () => registry.invalidate(), { logger: ctx.logger }),
+    'dsh-workbuddy-expert-plus:watch',
+  )
+
+  // Service: ctx.experts.list() — cards including broken rows with reasons.
+  ctx.effect(() => {
+    if (ctx.reflect === undefined || typeof ctx.reflect.provide !== 'function') {
+      warn('ctx.reflect.provide is unavailable — the ctx.experts service was not published')
+      return () => {}
+    }
+    return ctx.reflect.provide('experts', {
+      list: () => registry.list(),
+      switch: (agent, expertId) => switcher.switch(agent, expertId),
+      clear: (agent) => switcher.clear(agent),
+      stateOf: (sessionId) => switcher.stateOf(sessionId),
+      composeForCreation: (agent, expertId) => switcher.composeForCreation(agent, expertId),
+    })
+  }, 'dsh-workbuddy-expert-plus:service')
+
+  // Command: `/expert` lists; `/expert <id>` soft-switches (ticket 03).
+  // Staged inject (the selector-routes lesson): the commands service may
+  // register after this plugin applies, and a synchronous one-shot ctx.get
+  // would silently skip the registration with no retry — the segment mounts
+  // the moment the service is live.
+  ctx.inject(['commands'], (commandsCtx) => {
+    ctx.effect(
+      () => registerExpertCommand(commandsCtx, registry, switcher, roots.map((root) => root.path)),
+      'dsh-workbuddy-expert-plus:command',
+    )
+  })
+
+  // Selector routes (ticket 05): GET /api/experts, POST /api/switch,
+  // POST /api/after-create — the client control's transport. Staged inject
+  // (sister-plugin pattern): the webServer may register after this plugin
+  // applies, and a synchronous ctx.get would silently skip the routes (the
+  // exact 404 seen in the first real-composition check). Agent resolution
+  // stays a defensive seam: the live host's agent-by-sessionId lookup shape
+  // is not part of this plugin's verified contract, so the resolver tries
+  // the plausible service shapes and the routes degrade to a clean domain
+  // error when none resolves (never a fiber crash).
+  ctx.inject(['webServer'], (webServerCtx) => {
+    ctx.effect(() => {
+      const webServer = webServerCtx.webServer
+      if (typeof webServer?.register !== 'function') {
+        warn('webServer is unavailable — the selector routes were not mounted')
+        return () => {}
+      }
+      const resolveAgent = (sessionId) => {
+        for (const serviceName of ['agents', 'sessions']) {
+          const service = typeof ctx.get === 'function' ? ctx.get(serviceName) : undefined
+          if (service === undefined || service === null) continue
+          for (const access of [
+            () => (typeof service.get === 'function' ? service.get(sessionId) : undefined),
+            () => (typeof service.byId === 'object' && service.byId !== null ? service.byId[sessionId] : undefined),
+            () => (typeof service.resolve === 'function' ? service.resolve(sessionId) : undefined),
+          ]) {
+            const agent = access()
+            if (agent !== undefined && agent !== null) return agent
+          }
+        }
+        return undefined
+      }
+      return mountSelectorRoutes({ webServer }, { registry, switcher, resolveAgent })
+    }, 'dsh-workbuddy-expert-plus:selector-routes')
+  })
+
+  // Importer segment: WorkBuddy source settings + market routes. Staged
+  // inject on BOTH services (mountImporter throws when either is
+  // missing): a profile without them leaves the registry/switch core
+  // fully usable, and the segment mounts the moment both services are
+  // live. The export root comes from the SAME resolved dshHome as the
+  // discovery roots (安装 = 导出 与扫描一致), and the plugin's config
+  // reference rides along for the volatile sourcePath reads.
+  // `ownerCtx` is THIS apply context: the volatile watcher and the page
+  // policy inside mountImporter key on the ENTRY fiber, and the
+  // inject-child context handed to this callback is a DIFFERENT fiber —
+  // passing it left both registrations silently dead (fixed 2026-09-30).
+  ctx.inject(['webServer', 'settings'], (importerCtx) => {
+    ctx.effect(() => {
+      let disposed = false
+      let offImporter
+      mountImporter(importerCtx, { config, expertsRoot: join(dshHome, 'experts'), ownerCtx: ctx })
+        .then((off) => {
+          if (disposed) off()
+          else offImporter = off
+        })
+        .catch((error) => {
+          warn(`importer segment not mounted: ${error instanceof Error ? error.message : String(error)}`)
+        })
+      return () => {
+        disposed = true
+        offImporter?.()
+      }
+    }, 'dsh-workbuddy-expert-plus:importer')
+  })
+}
