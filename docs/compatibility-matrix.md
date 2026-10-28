@@ -19,7 +19,7 @@
 | Role | trim + max 24 | Client and server validate |
 | Avatar | data URL, max `160000` bytes | Not auto-generated; optional/omitted |
 | Read-only | refusal code `bot/read-only`; state carries `readOnly` | Creation disabled, no install fallback |
-| Surface | Primary live signal: DS-Bot's Bot-only `sidebar.footer.action` entry `bot-account`, registered only with the Bot shell group. `bot-return` exists in both modes. `bot-return` + storage `agent` is Agent; `bot-return` + storage `bot` is `bot-pending` (both plugin entries hidden during a possible skin swap); residual storage without any DS-Bot footer is `unknown` on plain DSH. `localStorage['ds-bot:surface']` is a cold-start/cross-window fallback; upstream defaults a missing key to **bot** | UI routing only; capability probe remains authoritative |
+| Surface | Primary live signal: DS-Bot's Bot-only `sidebar.footer.action` entry `bot-account`, accepted only from DS-Bot's registrant (`dyn/ds-bot`; `ds-bot` and legacy missing-registrant accepted for compatibility). `bot-return` exists in both modes. `bot-return` + storage `agent` is Agent; `bot-return` + storage `bot` is `bot-pending` (both plugin entries hidden during a possible skin swap); residual storage without any DS-Bot footer is `unknown` on plain DSH. `localStorage['ds-bot:surface']` is a cold-start/cross-window fallback; upstream defaults a missing key to **bot** | UI routing only; capability probe remains authoritative |
 | Sidebar slot | `sidebar.footer.action` | Unique id `workbuddy-expert-plus-market` |
 | Overlay slot | `shell.overlay` | Unique id `workbuddy-expert-plus-market-overlay` |
 | Priority helper | DS-Bot uses `freePriority`, Bot priority `-100` | Own ids/orders; no host shadowing |
