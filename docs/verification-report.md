@@ -80,3 +80,60 @@ scripts passed; `npm run check:package` → 231 files, 39 experts, 190 resources
 every manifest hash verified after extraction; the `.tgz` was re-packed after
 the prompt-baseline, source-routing, registrant-ownership, and overlay-lifecycle
 fixes, and the archive's client/unified/route files match this HEAD.
+
+## 2026-10-28 v0.2.1 market category, Chinese title and Bot card parity
+
+Package: `dsh-workbuddy-expert-plus@0.2.1`  
+Branch: `feat/market-categories-cn-titles`  
+Plan: `docs/superpowers/plans/2026-10-28-market-categories-cn-titles.md`
+
+### Root cause and fix
+
+| Reported symptom | Root cause | Fix | Regression evidence |
+|---|---|---|---|
+| Agent market shows only “未分类 429” | `/market/state` bundled cards carry `categoryId`, while `categoryOf()` read only the legacy local-scan field `category`; `KNOWN_CATEGORY_LABELS` also covered only 6 of the 15 original categories | `categoryOf()` now prefers `categoryId` and falls back to `category`; the label table was restored from `expert_center.json` to all 15 original Chinese names | `test/client-market-cards.test.js`: 15 chips, 429 cards distributed, zero uncategorized, 39 finance cards, category × search filtering |
+| Expert titles show English machine ids | `localeNameOf()` read only `zhName` / `name`, neither of which exists on bundled cards (`displayName` does) | Chinese title selection now prefers whichever human-facing field carries Han characters (`displayName` → `zhName` → `profession` → `name`); pure-English brand names such as `CloudQ` fall back to their Chinese profession instead of the id. Search indexes the same fields | `test/client-market-cards.test.js`: every one of the 429 cards yields a Chinese title; title and profession searches hit the expected card |
+| Bot market cards differ from Agent cards | `BotMarketOverlay` rendered its own inline `wbx-card` markup with no avatar, badges, category row or shared action corner | `ExpertCard` now accepts an injected primary action and status mark. Bot reuses it with “创建 Bot / 再次创建”, carries `avatarFile` to the shared avatar, and reuses the Agent category-chip helpers. Agent keeps its original install/update/uninstall confirm row | `test/client-bot-ui.test.js`: expanded render asserts avatar, Chinese title, id, description, category badge, category chips and only create actions; no `installBtn` appears |
+
+### Automated evidence
+
+| Suite | Command | Result |
+|---|---|---|
+| Unit + integration | `node --test test/*.test.js` | PASS: 86 tests, 0 failed |
+| Complete project chain | `npm test` | PASS: 86 tests + `smoke`, `smoke-client`, `smoke-importer`, `smoke-install` |
+| Artifact verification | `npm run check:package` | PASS: 5,987 files, 429 experts, 5,946 resources, every manifest hash verified after extraction |
+| Installed profile catalog | Node read of `E:\DSHbot\data\profiles\ds-bot\node_modules\dsh-workbuddy-expert-plus` | PASS: version `0.2.1`, 429 experts, `ready: 429`, `blocked: 0`, 15 non-empty categories |
+
+### Real-device evidence (DS-Bot 0.2.10 / DSH 0.2.1-rc.2)
+
+Host: real `app/src/host.mjs` with `DSH_HOME=E:\DSHbot\data` and profile
+`E:\DSHbot\data\profiles\ds-bot`; browser at `http://127.0.0.1:4391/`.
+
+Agent mode (`设置 → WorkBuddy 专家`):
+
+- Category row: 16 buttons = `全部分类` + the original 15 categories.
+- Cards: 429; first title `40-20 外卖券`; first id `meituan-living-assistant-meituan-living-assistant`.
+- First card has an avatar and the `销售商务` category badge.
+- Census: `专家 429 · 内置 429 · 本机 0 · 来源插件 1 · 分类 15`.
+- Clicking `金融投资` narrows the grid to 39 finance cards with Chinese titles.
+- Screenshot: `docs/images/agent-market-categories.png`.
+
+Bot mode (`侧边 WorkBuddy 专家`):
+
+- Category row: 16 buttons with the same 15 categories and live counts.
+- Cards: 429; Chinese titles (`40-20 外卖券`, `阿联酋公共事务专家`, `安迪`, …).
+- Each card has avatar, id, description and category badge; grid is the same two-column card layout as Agent.
+- Card actions: only `创建 Bot` / `再次创建`; zero install/uninstall buttons.
+- Hovering a card reveals its `创建 Bot` corner (`opacity: 1`, `pointer-events: auto`).
+- Opening the first card fills the form with `白必得` / `投行交易助理`, a 5,688-character prompt and the live model selector.
+- Clicking `金融投资` narrows the grid to 39 cards.
+- Screenshot: `docs/images/bot-market-cards.png`.
+
+### Artifact v0.2.1
+
+- `.tgz`: `build/dsh-workbuddy-expert-plus-0.2.1.tgz`
+- SHA-256: `29f48ce7b13bc64bcfdd59bb5a6ca701557bdb95ddabbc166e23b6b7e829aa6e`
+- Files: 5,987
+- Experts: 429 (`ready: 429`, `blocked: 0`)
+- Resources: 5,946
+- Installed into `E:\DSHbot\data\profiles\ds-bot` and exercised on the real host.
