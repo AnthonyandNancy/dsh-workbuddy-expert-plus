@@ -95,7 +95,9 @@ async function main() {
       ok: errors.length === 0,
       tgz: info.filename,
       tgzBytes: info.size,
-      unpackedAt: unpacked,
+      // The temp path is deliberately excluded: it changes every run and
+      // would make a committed reproducibility report dirty on every check.
+      unpackedAt: '<temporary directory>',
       fileCount: files.length,
       resources: files.filter((file) => file.startsWith('resources/experts/')).length,
       manifestExperts: manifest.experts.length,
