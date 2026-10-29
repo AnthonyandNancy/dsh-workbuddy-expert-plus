@@ -422,7 +422,7 @@ var MARKET_CSS = `
 .wbx-launcher:hover:not(:disabled) {
   border-color: var(--dsw-alias-border-l3, rgba(127,127,127,.48));
   background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
-  box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  box-shadow: var(--dsw-shadow-lv1, 0 2px 4px rgba(0,0,0,.08)); }
 .wbx-launcher:active:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.16)); }
 .wbx-launcher:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
 .wbx-launcher:disabled { opacity: .55; cursor: default; }

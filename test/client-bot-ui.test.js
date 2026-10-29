@@ -265,7 +265,7 @@ test('the Bot launcher renders a bordered pill with an icon, label and caret', (
 })
 
 test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state', () => {
-  const block = source.match(/\.wbx-launcher \{[\s\S]*?\n\}/)
+  const block = source.match(/\.wbx-launcher \{[\s\S]*?; \}/)
   assert.ok(block, '.wbx-launcher rule exists')
   assert.match(block[0], /border-radius: 999px/)
   assert.match(block[0], /border: 1px solid var\(--dsw-alias-border-l2,/)
@@ -274,5 +274,7 @@ test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state'
   assert.match(source, /\.wbx-launcher:hover:not\(:disabled\) \{[^}]*--dsw-interactive-bg-hover/)
   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \{[^}]*width: 36px;[^}]*height: 36px;/)
   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-label \{[^}]*clip: rect\(0 0 0 0\)/)
+  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-caret \{[^}]*clip: rect\(0 0 0 0\)/)
+  assert.doesNotMatch(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-icon \{/)
   assert.match(source, /@media \(prefers-reduced-motion: reduce\) \{ \.wbx-launcher \{ transition: none; \} \}/)
 })
