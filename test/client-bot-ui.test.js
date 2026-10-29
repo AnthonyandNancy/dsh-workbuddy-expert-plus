@@ -243,3 +243,17 @@ test('Bot market reuses the Agent card anatomy and category chips', async () => 
   assert.match(rendered, /全部分类/)
   assert.doesNotMatch(rendered, /installBtn/)
 })
+
+test('the Bot launcher renders a bordered pill with an icon, label and caret', () => {
+  assert.match(source, /className: 'wbx-launcher'/)
+  assert.match(source, /'data-wide': props\.wide === false \? 'false' : 'true'/)
+  assert.match(source, /className: 'wbx-launcher-icon'/)
+  assert.match(source, /className: 'wbx-launcher-label'/)
+  assert.match(source, /className: 'wbx-launcher-caret'/)
+  assert.match(source, /t\('nav'\)/)
+  // The caret must be presentation-only: the button label is the nav text.
+  assert.match(source, /'aria-hidden': true/)
+  // No host API beyond the slot owner props.
+  assert.doesNotMatch(source, /useLayoutEffect/)
+  assert.doesNotMatch(source, /getBoundingClientRect/)
+})
