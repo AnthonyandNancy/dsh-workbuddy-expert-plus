@@ -144,6 +144,7 @@ Bot mode (`侧边 WorkBuddy 专家`):
 - 契约测试：`node --test test/client-bot-ui.test.js test/client-surface.test.js test/plugin-lifecycle.test.js` — 全部通过；新增入口 DOM 契约、CSS token/折叠契约、以及 slot 注册处的 `wide` 转发断言。`wide` 透传做过变异验证：删除转发后新断言失败，恢复后通过。
 - 全量回归：`npm test` — 90 tests, 0 fail；`smoke`、`smoke-client`、`smoke-importer`、`smoke-install` 四条全部通过。
 - 打包完整性：`npm run check:package` — `"ok": true`，`files` = 5987，`experts` = 429，`resources` = 5946；tarball 内 `client/client.js` 含 `wbx-launcher-caret` 与 `--dsw-shadow-lv1`。
-- 实机安装：实际运行的 DS-Bot 使用 `E:\DSHbot\data\profiles\ds-bot`（不是文档先前记录的 `C:\Users\guojl\.dsh\profiles\ds-bot`），该 profile 的插件是 GitHub 源安装的 0.2.1，不是本机 tgz。已将本次 `client/client.js` 同步到该 profile 的 `node_modules/dsh-workbuddy-expert-plus/client/client.js`，`node --check` 通过；等待用户重启 DS-Bot 后人工核对展开/折叠/亮暗三态。
+- 实机安装：实际运行的 DS-Bot 使用 `E:\DSHbot\data\profiles\ds-bot`（不是文档先前记录的 `C:\Users\guojl\.dsh\profiles\ds-bot`），该 profile 的插件是 GitHub 源安装的 0.2.1，不是本机 tgz。已将本次 `client/client.js` 同步到该 profile 的 `node_modules/dsh-workbuddy-expert-plus/client/client.js`，`node --check` 通过。
+- 实机确认：用户重启 DS-Bot 后在真实 Bot 侧栏人工核对，展开态（描边胶囊 + 图标 + 文案 + 箭头）、折叠态（36×36 纯图标）与亮/暗主题均显示正常，反馈"没问题"。
 - 视觉证据：`output/playwright/launcher-final.png`（真实 `MARKET_CSS` 渲染：浅色展开、深色展开、折叠 36×36）；生成页 `output/playwright/launcher-final.html`；方案对比页 `output/playwright/launcher-options.html`。
-- 未覆盖：DS-Bot 进程尚未由本次会话重启，实机三态尚未由自动化确认；折叠态依赖宿主向 footer entry 传 `wide`，若未来不再传，入口按展开态渲染（不会变成空图标）。
+- 已知限制：折叠态依赖宿主向 footer entry 传 `wide`，若未来不再传，入口按展开态渲染（不会变成空图标）。
