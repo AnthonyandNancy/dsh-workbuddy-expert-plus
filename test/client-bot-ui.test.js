@@ -263,3 +263,16 @@ test('the Bot launcher renders a bordered pill with an icon, label and caret', (
   assert.doesNotMatch(block, /useLayoutEffect/)
   assert.doesNotMatch(block, /getBoundingClientRect/)
 })
+
+test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state', () => {
+  const block = source.match(/\.wbx-launcher \{[\s\S]*?\n\}/)
+  assert.ok(block, '.wbx-launcher rule exists')
+  assert.match(block[0], /border-radius: 999px/)
+  assert.match(block[0], /border: 1px solid var\(--dsw-alias-border-l2,/)
+  assert.match(block[0], /background: var\(--dsw-alias-bg-layer-2,/)
+  assert.match(block[0], /color: var\(--dsw-alias-label-primary,/)
+  assert.match(source, /\.wbx-launcher:hover:not\(:disabled\) \{[^}]*--dsw-interactive-bg-hover/)
+  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \{[^}]*width: 36px;[^}]*height: 36px;/)
+  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-label \{[^}]*clip: rect\(0 0 0 0\)/)
+  assert.match(source, /@media \(prefers-reduced-motion: reduce\) \{ \.wbx-launcher \{ transition: none; \} \}/)
+})

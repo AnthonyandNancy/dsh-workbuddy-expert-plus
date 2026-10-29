@@ -406,12 +406,37 @@ var MARKET_CSS = `
 }
 
 /* ── Bot mode: sidebar launcher + own overlay (never a host DOM injection) ── */
-.wbx-launcher { display: inline-flex; align-items: center; gap: 6px; width: 100%; padding: 7px 10px;
-  border: 0; border-radius: 8px; background: transparent; cursor: pointer;
-  color: var(--dsw-alias-label-secondary, inherit); font-size: 13px; line-height: 20px; text-align: left; }
-.wbx-launcher:hover:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
-  color: var(--dsw-alias-label-primary, inherit); }
+/* Scheme B: a bordered pill. Every value is a DSH alias token with a
+   theme-agnostic fallback, so a light/dark flip or a third-party theme's
+   overrideTokens() restyles the entry without a re-render. The \`wide\` flag
+   comes from the slot owner props (not a DOM measurement): false collapses
+   the pill to the host rail's 36x36 hit target and keeps the glyph. */
+.wbx-launcher { display: inline-flex; align-items: center; gap: 7px; width: 100%; box-sizing: border-box;
+  height: 32px; padding: 0 10px; overflow: hidden;
+  border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.32));
+  border-radius: 999px;
+  background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.10));
+  color: var(--dsw-alias-label-primary, inherit);
+  font-family: inherit; font-size: 13px; line-height: 20px; font-weight: 500; text-align: left;
+  cursor: pointer; transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease; }
+.wbx-launcher:hover:not(:disabled) {
+  border-color: var(--dsw-alias-border-l3, rgba(127,127,127,.48));
+  background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
+  box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.wbx-launcher:active:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.16)); }
 .wbx-launcher:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
+.wbx-launcher:disabled { opacity: .55; cursor: default; }
+.wbx-launcher-icon, .wbx-launcher-caret { display: inline-flex; flex: none; }
+.wbx-launcher-icon { color: var(--dsw-alias-label-secondary, inherit); }
+.wbx-launcher-caret { margin-left: auto; color: var(--dsw-alias-label-tertiary, var(--dsw-alias-label-secondary, inherit)); }
+.wbx-launcher-label { min-width: 0; flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wbx-launcher[data-wide="false"] { width: 36px; min-width: 36px; height: 36px; padding: 0; gap: 0;
+  justify-content: center; border-radius: 999px; }
+.wbx-launcher[data-wide="false"] .wbx-launcher-label {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.wbx-launcher[data-wide="false"] .wbx-launcher-caret {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .wbx-launcher { transition: none; } }
 .wbx-overlay { position: fixed; inset: 0; z-index: 10020; display: flex; align-items: center; justify-content: center;
   padding: 16px; background: rgba(0,0,0,.42); }
 .wbx-modal { display: flex; flex-direction: column; gap: 10px; box-sizing: border-box; width: min(720px, 100%);
