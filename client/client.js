@@ -2637,7 +2637,15 @@ function createSurfaceStore (options) {
   }
 }
 
-/** The launching cell; hidden unless this window currently paints Bot mode. */
+/**
+ * The launching cell; hidden unless this window currently paints Bot mode.
+ *
+ * Presentation only: `wide` arrives from the `sidebar.footer.action` owner
+ * props (the host passes `{ wide }`), and `data-wide` lets the scoped CSS
+ * collapse the pill to a 36x36 icon in the rail without re-rendering on a
+ * measured width. Missing `wide` (a host that never sends it) is treated as
+ * expanded so an unknown shell keeps the readable label.
+ */
 function BotMarketLauncher (props) {
   var t = props.t
   var store = props.surfaceStore
@@ -2652,8 +2660,37 @@ function BotMarketLauncher (props) {
   if (surface !== 'bot') return null
   return el('button', {
     className: 'wbx-launcher', type: 'button',
+    'data-wide': props.wide === false ? 'false' : 'true',
+    title: t('nav'),
     onClick: function () { if (typeof props.onOpen === 'function') props.onOpen() }
-  }, t('nav'))
+  },
+  el('span', { className: 'wbx-launcher-icon', 'aria-hidden': true }, el(BotMarketLauncherIcon, null)),
+  el('span', { className: 'wbx-launcher-label' }, t('nav')),
+  el('span', { className: 'wbx-launcher-caret', 'aria-hidden': true }, el(BotMarketLauncherCaret, null)))
+}
+
+/**
+ * The launcher glyph: a 16px four-point sparkle matching the host's
+ * `IconSparkle` geometry, inlined because this zero-build bundle may only
+ * require React (no primitives package export is guaranteed in every host).
+ */
+function BotMarketLauncherIcon () {
+  return el('svg', {
+    width: 16, height: 16, viewBox: '0 0 16 16', fill: 'none',
+    stroke: 'currentColor', strokeWidth: 1, focusable: 'false'
+  },
+  el('path', { d: 'M5.875 3C5.875 6.33333 7.54167 8 10.875 8C7.54167 8 5.875 9.66667 5.875 13C5.875 9.66667 4.20833 8 0.875 8C4.20833 8 5.875 6.33333 5.875 3Z' }),
+  el('path', { d: 'M12.375 1.55823C12.375 3.39156 13.2917 4.30823 15.125 4.30823C13.2917 4.30823 12.375 5.22489 12.375 7.05823C12.375 5.22489 11.4583 4.30823 9.625 4.30823C11.4583 4.30823 12.375 3.39156 12.375 1.55823Z' }),
+  el('path', { d: 'M12.375 10.4418C12.375 11.7751 13.0417 12.4418 14.375 12.4418C13.0417 12.4418 12.375 13.1084 12.375 14.4418C12.375 13.1084 11.7083 12.4418 10.375 12.4418C11.7083 12.4418 12.375 11.7751 12.375 10.4418Z' }))
+}
+
+/** A 12px disclosure caret drawn as a stroke path, so it inherits currentColor. */
+function BotMarketLauncherCaret () {
+  return el('svg', {
+    width: 12, height: 12, viewBox: '0 0 12 12', fill: 'none',
+    stroke: 'currentColor', strokeWidth: 1.2,
+    strokeLinecap: 'round', strokeLinejoin: 'round', focusable: 'false'
+  }, el('path', { d: 'M4.5 2.5 8 6l-3.5 3.5' }))
 }
 
 /**
@@ -3376,13 +3413,17 @@ function apply (ctx) {
       order: -150,
       locale: NS,
       inject: function () { return { t: t } }
-    }, function () {
+    }, function (ownerProps) {
       // The launcher must live in the sidebar cell, but the open flag belongs
       // to the overlay cell. A tiny module-scope store keeps them in sync;
       // the surface store makes the cell itself follow live mode switches.
+      // `wide` is the host's own collapsed/expanded flag (SidebarRoot passes
+      // `{ wide }` to every `sidebar.footer.action` entry): forward it as a
+      // presentation hint instead of measuring the DOM.
       return el(BotMarketLauncher, {
         t: t,
         surfaceStore: surfaceStore,
+        wide: ownerProps !== undefined && ownerProps !== null ? ownerProps.wide : undefined,
         onOpen: function () { openBotMarket() }
       })
     })

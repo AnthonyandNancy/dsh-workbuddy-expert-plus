@@ -312,6 +312,41 @@ test('the sidebar launcher follows the live surface store without focus events',
   assert.equal(view.tree(), null, 'switching back to Agent hides it after the host batch')
 })
 
+test('the sidebar launcher exposes the wide flag to CSS and keeps a stable label', async () => {
+  const app = surfaceHarness(botOnly, 'agent')
+  const wideView = renderComponent(module.BotMarketLauncher, {
+    t: (key) => key,
+    surfaceStore: app.store,
+    onOpen() {},
+    wide: true,
+  })
+  const tree = wideView.tree()
+  assert.equal(tree?.type, 'button')
+  assert.equal(tree?.props.className, 'wbx-launcher')
+  assert.equal(tree?.props['data-wide'], 'true')
+  assert.deepEqual(tree?.children.map((child) => child.props.className),
+    ['wbx-launcher-icon', 'wbx-launcher-label', 'wbx-launcher-caret'])
+  assert.equal(tree?.children[1].children[0], 'nav',
+    'the label is the localized nav key, not a hardcoded string')
+  assert.equal(tree?.children[2].props['aria-hidden'], true)
+
+  const railView = renderComponent(module.BotMarketLauncher, {
+    t: (key) => key,
+    surfaceStore: app.store,
+    onOpen() {},
+    wide: false,
+  })
+  assert.equal(railView.tree()?.props['data-wide'], 'false')
+
+  const legacyView = renderComponent(module.BotMarketLauncher, {
+    t: (key) => key,
+    surfaceStore: app.store,
+    onOpen() {},
+  })
+  assert.equal(legacyView.tree()?.props['data-wide'], 'true',
+    'a host that never sends wide keeps the expanded pill')
+})
+
 test('the composer expert seat is hidden only in Bot mode', async () => {
   const agent = surfaceHarness(agentOnly, 'agent')
   const agentView = renderComponent(module.ComposerExpertSeat, {
