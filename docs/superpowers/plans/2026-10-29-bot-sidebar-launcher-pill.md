@@ -39,8 +39,7 @@ test('the Bot launcher renders a bordered pill with an icon, label and caret', (
   // Scope the contract to the launcher implementation: `t('nav')`,
   // `aria-hidden` and these class names also appear in unrelated settings and
   // market code, so a file-wide match would pass without the launcher.
-  const launcher = source.match(/function BotMarketLauncher \(props\) \{[\s\S]*?
-\}/)
+  const launcher = source.match(/function BotMarketLauncher \(props\) \{[\s\S]*?\n\}/)
   assert.ok(launcher, 'BotMarketLauncher is defined')
   const block = launcher[0]
   assert.match(block, /className: 'wbx-launcher'/)
