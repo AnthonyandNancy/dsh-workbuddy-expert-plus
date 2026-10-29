@@ -245,15 +245,21 @@ test('Bot market reuses the Agent card anatomy and category chips', async () => 
 })
 
 test('the Bot launcher renders a bordered pill with an icon, label and caret', () => {
-  assert.match(source, /className: 'wbx-launcher'/)
-  assert.match(source, /'data-wide': props\.wide === false \? 'false' : 'true'/)
-  assert.match(source, /className: 'wbx-launcher-icon'/)
-  assert.match(source, /className: 'wbx-launcher-label'/)
-  assert.match(source, /className: 'wbx-launcher-caret'/)
-  assert.match(source, /t\('nav'\)/)
+  // Scope the contract to the launcher implementation: `t('nav')`,
+  // `aria-hidden` and these class names also appear in unrelated settings and
+  // market code, so a file-wide match would pass without the launcher.
+  const launcher = source.match(/function BotMarketLauncher \(props\) \{[\s\S]*?\n\}/)
+  assert.ok(launcher, 'BotMarketLauncher is defined')
+  const block = launcher[0]
+  assert.match(block, /className: 'wbx-launcher'/)
+  assert.match(block, /'data-wide': props\.wide === false \? 'false' : 'true'/)
+  assert.match(block, /className: 'wbx-launcher-icon'/)
+  assert.match(block, /className: 'wbx-launcher-label'/)
+  assert.match(block, /className: 'wbx-launcher-caret'/)
+  assert.match(block, /t\('nav'\)/)
   // The caret must be presentation-only: the button label is the nav text.
-  assert.match(source, /'aria-hidden': true/)
+  assert.match(block, /'aria-hidden': true/)
   // No host API beyond the slot owner props.
-  assert.doesNotMatch(source, /useLayoutEffect/)
-  assert.doesNotMatch(source, /getBoundingClientRect/)
+  assert.doesNotMatch(block, /useLayoutEffect/)
+  assert.doesNotMatch(block, /getBoundingClientRect/)
 })
