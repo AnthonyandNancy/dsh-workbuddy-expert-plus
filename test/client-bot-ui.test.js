@@ -272,9 +272,20 @@ test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state'
   assert.match(block[0], /background: var\(--dsw-alias-bg-layer-2,/)
   assert.match(block[0], /color: var\(--dsw-alias-label-primary,/)
   assert.match(source, /\.wbx-launcher:hover:not\(:disabled\) \{[^}]*--dsw-interactive-bg-hover/)
+  // The hover shadow must stay a theme token, not a bare rgba theme color.
+  const hover = source.match(/\.wbx-launcher:hover:not\(:disabled\) \{[^}]*; \}/)
+  assert.ok(hover, 'the launcher hover rule exists')
+  assert.match(hover[0], /box-shadow: var\(--dsw-shadow-lv1, [^)]+\)/)
   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \{[^}]*width: 36px;[^}]*height: 36px;/)
   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-label \{[^}]*clip: rect\(0 0 0 0\)/)
-  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-caret \{[^}]*clip: rect\(0 0 0 0\)/)
-  assert.doesNotMatch(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-icon \{/)
+  // The sr-only recipe needs every declaration; `clip` alone still leaves the
+  // caret visually present in some engines.
+  const caret = source.match(/\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-caret \{[^}]*\}/)
+  assert.ok(caret, 'the collapsed caret rule exists')
+  assert.match(caret[0], /position: absolute;[^}]*width: 1px;[^}]*height: 1px;[^}]*overflow: hidden;[^}]*clip: rect\(0 0 0 0\)/)
+  // Reject a grouped collapsed selector (e.g. icon together with the caret)
+  // as well as a direct icon hiding rule; the glyph must survive the rail.
+  assert.doesNotMatch(source, /\.wbx-launcher\[data-wide="false"\][^{]*\.wbx-launcher-icon/)
+  assert.doesNotMatch(source, /\.wbx-launcher-icon[^{]*\{[^}]*display:\s*none/)
   assert.match(source, /@media \(prefers-reduced-motion: reduce\) \{ \.wbx-launcher \{ transition: none; \} \}/)
 })

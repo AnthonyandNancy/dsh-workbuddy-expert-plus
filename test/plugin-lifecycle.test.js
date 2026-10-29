@@ -143,3 +143,30 @@ test('the composer expert entry leaves the slot ledger in Bot mode', async () =>
   dispose()
   assert.equal(app.registered.size, 0, 'dispose releases every slot entry')
 })
+
+test('the footer registration forwards the host wide flag to the launcher', () => {
+  const app = bootClient({ surface: 'bot' })
+  app.ctx.slots.entries = () => [
+    { registrant: 'ds-bot', options: { id: 'bot-account' } },
+    { registrant: 'ds-bot', options: { id: 'bot-return' } },
+  ]
+  const dispose = app.module.apply(app.ctx)
+  const FooterSeat = app.rendered.get('sidebar.footer.action')
+  assert.ok(FooterSeat, 'the footer seat registered')
+
+  const expanded = FooterSeat({ wide: true })
+  assert.equal(expanded.type, app.module.BotMarketLauncher,
+    'the footer cell renders the Bot launcher')
+  assert.equal(expanded.props.wide, true,
+    'wide:true from the slot owner reaches the launcher')
+
+  const rail = FooterSeat({ wide: false })
+  assert.equal(rail.props.wide, false,
+    'wide:false from the slot owner reaches the launcher')
+
+  const legacy = FooterSeat({})
+  assert.equal(legacy.props.wide, undefined,
+    'a host without wide forwards undefined (the launcher expands by default)')
+
+  dispose()
+})
