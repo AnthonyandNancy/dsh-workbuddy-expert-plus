@@ -1,0 +1,39 @@
+# Review package: 42ffeaa..7c13ae3
+
+## Commits
+7c13ae3 test: lock the Bot launcher pill contract
+
+## Files changed
+ test/client-bot-ui.test.js | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+## Diff
+diff --git a/test/client-bot-ui.test.js b/test/client-bot-ui.test.js
+index 36bdb5c..979107f 100644
+--- a/test/client-bot-ui.test.js
++++ b/test/client-bot-ui.test.js
+@@ -236,10 +236,24 @@ test('Bot market reuses the Agent card anatomy and category chips', async () =>
+   assert.match(rendered, /全球发展/)
+   assert.match(rendered, /创建 Bot/)
+   assert.match(rendered, /再次创建/)
+   assert.match(rendered, /wbx-avatar/)
+   assert.match(rendered, /wbx-badge/)
+   assert.match(rendered, /wbx-id/)
+   assert.match(rendered, /wbx-catrow/)
+   assert.match(rendered, /全部分类/)
+   assert.doesNotMatch(rendered, /installBtn/)
+ })
++
++test('the Bot launcher renders a bordered pill with an icon, label and caret', () => {
++  assert.match(source, /className: 'wbx-launcher'/)
++  assert.match(source, /'data-wide': props\.wide === false \? 'false' : 'true'/)
++  assert.match(source, /className: 'wbx-launcher-icon'/)
++  assert.match(source, /className: 'wbx-launcher-label'/)
++  assert.match(source, /className: 'wbx-launcher-caret'/)
++  assert.match(source, /t\('nav'\)/)
++  // The caret must be presentation-only: the button label is the nav text.
++  assert.match(source, /'aria-hidden': true/)
++  // No host API beyond the slot owner props.
++  assert.doesNotMatch(source, /useLayoutEffect/)
++  assert.doesNotMatch(source, /getBoundingClientRect/)
++})

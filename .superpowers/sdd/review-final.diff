@@ -1,0 +1,490 @@
+# Review package: 42ffeaa..2ec539c
+
+## Commits
+2ec539c docs: record the Bot launcher pill verification
+e7b4a6a test: harden the Bot launcher contract
+0308395 fix: route the pill shadow through a theme token
+1ff82db docs: route the pill shadow through a token
+a2fc299 feat: style the Bot launcher as a theme-aware pill
+7f73e63 feat: render the Bot launcher as an icon-label pill
+7b778b5 docs: make the launcher test snippet copy-pasteable
+628fda5 docs: scope the launcher test contract in the plan
+3177ee2 test: scope the Bot launcher contract to its component
+7c13ae3 test: lock the Bot launcher pill contract
+
+## Files changed
+ client/client.js                                   | 82 +++++++++++++++++++---
+ .../plans/2026-10-29-bot-sidebar-launcher-pill.md  | 30 +++++---
+ docs/verification-report.md                        | 10 +++
+ test/client-bot-ui.test.js                         | 46 ++++++++++++
+ test/client-surface.test.js                        | 35 +++++++++
+ test/plugin-lifecycle.test.js                      | 27 +++++++
+ 6 files changed, 211 insertions(+), 19 deletions(-)
+
+## Diff
+diff --git a/client/client.js b/client/client.js
+index 55f7b61..ce42161 100644
+--- a/client/client.js
++++ b/client/client.js
+@@ -399,26 +399,51 @@ var MARKET_CSS = `
+ .wbx-btn:focus-visible, .wbx-chip:focus-visible, .wbx-search:focus-visible, .wbx-path-input:focus-visible,
+ .wbx-warns-toggle:focus-visible, .wbx-group-head:focus-visible {
+   outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
+ @media (prefers-reduced-motion: reduce) {
+   .wbx-skel-card { animation: none; }
+   .wbx-spin { animation: none; }
+   .wbx-corner { transition: none; }
+ }
+ 
+ /* ── Bot mode: sidebar launcher + own overlay (never a host DOM injection) ── */
+-.wbx-launcher { display: inline-flex; align-items: center; gap: 6px; width: 100%; padding: 7px 10px;
+-  border: 0; border-radius: 8px; background: transparent; cursor: pointer;
+-  color: var(--dsw-alias-label-secondary, inherit); font-size: 13px; line-height: 20px; text-align: left; }
+-.wbx-launcher:hover:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
+-  color: var(--dsw-alias-label-primary, inherit); }
++/* Scheme B: a bordered pill. Every value is a DSH alias token with a
++   theme-agnostic fallback, so a light/dark flip or a third-party theme's
++   overrideTokens() restyles the entry without a re-render. The \`wide\` flag
++   comes from the slot owner props (not a DOM measurement): false collapses
++   the pill to the host rail's 36x36 hit target and keeps the glyph. */
++.wbx-launcher { display: inline-flex; align-items: center; gap: 7px; width: 100%; box-sizing: border-box;
++  height: 32px; padding: 0 10px; overflow: hidden;
++  border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.32));
++  border-radius: 999px;
++  background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.10));
++  color: var(--dsw-alias-label-primary, inherit);
++  font-family: inherit; font-size: 13px; line-height: 20px; font-weight: 500; text-align: left;
++  cursor: pointer; transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease; }
++.wbx-launcher:hover:not(:disabled) {
++  border-color: var(--dsw-alias-border-l3, rgba(127,127,127,.48));
++  background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
++  box-shadow: var(--dsw-shadow-lv1, 0 2px 4px rgba(0,0,0,.08)); }
++.wbx-launcher:active:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.16)); }
+ .wbx-launcher:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
++.wbx-launcher:disabled { opacity: .55; cursor: default; }
++.wbx-launcher-icon, .wbx-launcher-caret { display: inline-flex; flex: none; }
++.wbx-launcher-icon { color: var(--dsw-alias-label-secondary, inherit); }
++.wbx-launcher-caret { margin-left: auto; color: var(--dsw-alias-label-tertiary, var(--dsw-alias-label-secondary, inherit)); }
++.wbx-launcher-label { min-width: 0; flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
++.wbx-launcher[data-wide="false"] { width: 36px; min-width: 36px; height: 36px; padding: 0; gap: 0;
++  justify-content: center; border-radius: 999px; }
++.wbx-launcher[data-wide="false"] .wbx-launcher-label {
++  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
++.wbx-launcher[data-wide="false"] .wbx-launcher-caret {
++  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
++@media (prefers-reduced-motion: reduce) { .wbx-launcher { transition: none; } }
+ .wbx-overlay { position: fixed; inset: 0; z-index: 10020; display: flex; align-items: center; justify-content: center;
+   padding: 16px; background: rgba(0,0,0,.42); }
+ .wbx-modal { display: flex; flex-direction: column; gap: 10px; box-sizing: border-box; width: min(720px, 100%);
+   max-height: min(88vh, 900px); overflow: auto; padding: 16px; border-radius: 14px;
+   background: var(--dsw-alias-bg-layer-2, #fff); color: var(--dsw-alias-label-primary, inherit);
+   border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.35));
+   box-shadow: var(--dsw-shadow-lv3, 0 12px 36px rgba(0,0,0,.28)); }
+ .wbx-modal:focus { outline: none; }
+ .wbx-modal-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+ .wbx-modal-head h2 { margin: 0 0 4px; font-size: 16px; line-height: 1.4; }
+@@ -2630,37 +2655,74 @@ function createSurfaceStore (options) {
+         win.removeEventListener('focus', onVisible)
+         if (typeof document !== 'undefined' && document !== null && typeof document.removeEventListener === 'function') {
+           document.removeEventListener('visibilitychange', onVisible)
+         }
+       }
+       listeners.length = 0
+     }
+   }
+ }
+ 
+-/** The launching cell; hidden unless this window currently paints Bot mode. */
++/**
++ * The launching cell; hidden unless this window currently paints Bot mode.
++ *
++ * Presentation only: `wide` arrives from the `sidebar.footer.action` owner
++ * props (the host passes `{ wide }`), and `data-wide` lets the scoped CSS
++ * collapse the pill to a 36x36 icon in the rail without re-rendering on a
++ * measured width. Missing `wide` (a host that never sends it) is treated as
++ * expanded so an unknown shell keeps the readable label.
++ */
+ function BotMarketLauncher (props) {
+   var t = props.t
+   var store = props.surfaceStore
+   var surfaceState = React.useState(store !== undefined && store !== null ? store.get() : 'unknown')
+   var surface = surfaceState[0]
+   var setSurface = surfaceState[1]
+   React.useEffect(function () {
+     if (store === undefined || store === null || typeof store.subscribe !== 'function') return undefined
+     setSurface(store.get())
+     return store.subscribe(setSurface)
+   }, [store])
+   if (surface !== 'bot') return null
+   return el('button', {
+     className: 'wbx-launcher', type: 'button',
++    'data-wide': props.wide === false ? 'false' : 'true',
++    title: t('nav'),
+     onClick: function () { if (typeof props.onOpen === 'function') props.onOpen() }
+-  }, t('nav'))
++  },
++  el('span', { className: 'wbx-launcher-icon', 'aria-hidden': true }, el(BotMarketLauncherIcon, null)),
++  el('span', { className: 'wbx-launcher-label' }, t('nav')),
++  el('span', { className: 'wbx-launcher-caret', 'aria-hidden': true }, el(BotMarketLauncherCaret, null)))
++}
++
++/**
++ * The launcher glyph: a 16px four-point sparkle matching the host's
++ * `IconSparkle` geometry, inlined because this zero-build bundle may only
++ * require React (no primitives package export is guaranteed in every host).
++ */
++function BotMarketLauncherIcon () {
++  return el('svg', {
++    width: 16, height: 16, viewBox: '0 0 16 16', fill: 'none',
++    stroke: 'currentColor', strokeWidth: 1, focusable: 'false'
++  },
++  el('path', { d: 'M5.875 3C5.875 6.33333 7.54167 8 10.875 8C7.54167 8 5.875 9.66667 5.875 13C5.875 9.66667 4.20833 8 0.875 8C4.20833 8 5.875 6.33333 5.875 3Z' }),
++  el('path', { d: 'M12.375 1.55823C12.375 3.39156 13.2917 4.30823 15.125 4.30823C13.2917 4.30823 12.375 5.22489 12.375 7.05823C12.375 5.22489 11.4583 4.30823 9.625 4.30823C11.4583 4.30823 12.375 3.39156 12.375 1.55823Z' }),
++  el('path', { d: 'M12.375 10.4418C12.375 11.7751 13.0417 12.4418 14.375 12.4418C13.0417 12.4418 12.375 13.1084 12.375 14.4418C12.375 13.1084 11.7083 12.4418 10.375 12.4418C11.7083 12.4418 12.375 11.7751 12.375 10.4418Z' }))
++}
++
++/** A 12px disclosure caret drawn as a stroke path, so it inherits currentColor. */
++function BotMarketLauncherCaret () {
++  return el('svg', {
++    width: 12, height: 12, viewBox: '0 0 12 12', fill: 'none',
++    stroke: 'currentColor', strokeWidth: 1.2,
++    strokeLinecap: 'round', strokeLinejoin: 'round', focusable: 'false'
++  }, el('path', { d: 'M4.5 2.5 8 6l-3.5 3.5' }))
+ }
+ 
+ /**
+  * The composer's expert seat. Agent mode keeps the original selector; Bot
+  * mode withdraws it because DS-Bot's composer owns its own add menu.
+  * The shared store makes the switch visible immediately in the same window.
+  *
+  * `unknown` deliberately keeps the selector for a host that never had
+  * DS-Bot (plain DSH). With DS-Bot present but its Bot-only footer entry not
+  * yet visible while storage says bot, the store reports `bot-pending` and
+@@ -3369,27 +3431,31 @@ function apply (ctx) {
+   // the dialog. The launcher renders only on the Bot surface; the overlay
+   // renders only while the host's state is open. One registration, no
+   // unobserved window events, no duplicate dialogs.
+   collect(slots.inject('sidebar.footer.action', function () {
+     return slots.register({
+       name: 'sidebar.footer.action',
+       id: 'workbuddy-expert-plus-market',
+       order: -150,
+       locale: NS,
+       inject: function () { return { t: t } }
+-    }, function () {
++    }, function (ownerProps) {
+       // The launcher must live in the sidebar cell, but the open flag belongs
+       // to the overlay cell. A tiny module-scope store keeps them in sync;
+       // the surface store makes the cell itself follow live mode switches.
++      // `wide` is the host's own collapsed/expanded flag (SidebarRoot passes
++      // `{ wide }` to every `sidebar.footer.action` entry): forward it as a
++      // presentation hint instead of measuring the DOM.
+       return el(BotMarketLauncher, {
+         t: t,
+         surfaceStore: surfaceStore,
++        wide: ownerProps !== undefined && ownerProps !== null ? ownerProps.wide : undefined,
+         onOpen: function () { openBotMarket() }
+       })
+     })
+   }))
+ 
+   collect(slots.inject('shell.overlay', function () {
+     return slots.register({
+       name: 'shell.overlay',
+       id: 'workbuddy-expert-plus-market-overlay',
+       order: 70,
+diff --git a/docs/superpowers/plans/2026-10-29-bot-sidebar-launcher-pill.md b/docs/superpowers/plans/2026-10-29-bot-sidebar-launcher-pill.md
+index ec067d3..3f65d61 100644
+--- a/docs/superpowers/plans/2026-10-29-bot-sidebar-launcher-pill.md
++++ b/docs/superpowers/plans/2026-10-29-bot-sidebar-launcher-pill.md
+@@ -29,31 +29,37 @@
+ **Interfaces:**
+ - Consumes: 现有 `source`（`client/client.js` 的 UTF-8 文本）、`BotMarketLauncher` 的 `props.t / props.surfaceStore / props.onOpen`。
+ - Produces: 一条源码契约测试，锁定胶囊的 DOM 结构 + 类名 + `data-wide`；CSS 契约测试在 Task 3 与样式同批加入，保证 Task 2 的提交点仍然全绿。
+ 
+ - [ ] **Step 1: 写失败测试**
+ 
+ 在 `test/client-bot-ui.test.js` 末尾追加：
+ 
+ ```js
+ test('the Bot launcher renders a bordered pill with an icon, label and caret', () => {
+-  assert.match(source, /className: 'wbx-launcher'/)
+-  assert.match(source, /'data-wide': props\.wide === false \? 'false' : 'true'/)
+-  assert.match(source, /className: 'wbx-launcher-icon'/)
+-  assert.match(source, /className: 'wbx-launcher-label'/)
+-  assert.match(source, /className: 'wbx-launcher-caret'/)
+-  assert.match(source, /t\('nav'\)/)
++  // Scope the contract to the launcher implementation: `t('nav')`,
++  // `aria-hidden` and these class names also appear in unrelated settings and
++  // market code, so a file-wide match would pass without the launcher.
++  const launcher = source.match(/function BotMarketLauncher \(props\) \{[\s\S]*?\n\}/)
++  assert.ok(launcher, 'BotMarketLauncher is defined')
++  const block = launcher[0]
++  assert.match(block, /className: 'wbx-launcher'/)
++  assert.match(block, /'data-wide': props\.wide === false \? 'false' : 'true'/)
++  assert.match(block, /className: 'wbx-launcher-icon'/)
++  assert.match(block, /className: 'wbx-launcher-label'/)
++  assert.match(block, /className: 'wbx-launcher-caret'/)
++  assert.match(block, /t\('nav'\)/)
+   // The caret must be presentation-only: the button label is the nav text.
+-  assert.match(source, /'aria-hidden': true/)
++  assert.match(block, /'aria-hidden': true/)
+   // No host API beyond the slot owner props.
+-  assert.doesNotMatch(source, /useLayoutEffect/)
+-  assert.doesNotMatch(source, /getBoundingClientRect/)
++  assert.doesNotMatch(block, /useLayoutEffect/)
++  assert.doesNotMatch(block, /getBoundingClientRect/)
+ })
+ ```
+ 
+ - [ ] **Step 2: 运行测试并确认失败**
+ 
+ Run:
+ 
+ ```bash
+ cd packages/dsh-workbuddy-expert-plus && node --test test/client-bot-ui.test.js
+ ```
+@@ -273,29 +279,31 @@ Expected: 提交包含 `client/client.js` 与新增测试，且 `git status --sh
+ **Interfaces:**
+ - Consumes: Task 2 产出的 `.wbx-launcher[data-wide]`、`.wbx-launcher-icon`、`.wbx-launcher-label`、`.wbx-launcher-caret`。
+ - Produces: 一组 scoped `.wbx-launcher*` 规则；展开态 32px 高/999px 圆角/1px 描边/图标+标签+箭头；`data-wide="false"` 时 36×36 纯图标；`:focus-visible` 有品牌色描边；`prefers-reduced-motion` 关闭过渡。全部颜色来自 token + fallback。
+ 
+ - [ ] **Step 1: 写 CSS 契约测试并确认失败**
+ 
+ 在 `test/client-bot-ui.test.js` 末尾追加：
+ 
+ ```js
+ test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state', () => {
+-  const block = source.match(/\.wbx-launcher \{[\s\S]*?\n\}/)
++  const block = source.match(/\.wbx-launcher \{[\s\S]*?; \}/)
+   assert.ok(block, '.wbx-launcher rule exists')
+   assert.match(block[0], /border-radius: 999px/)
+   assert.match(block[0], /border: 1px solid var\(--dsw-alias-border-l2,/)
+   assert.match(block[0], /background: var\(--dsw-alias-bg-layer-2,/)
+   assert.match(block[0], /color: var\(--dsw-alias-label-primary,/)
+   assert.match(source, /\.wbx-launcher:hover:not\(:disabled\) \{[^}]*--dsw-interactive-bg-hover/)
+   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \{[^}]*width: 36px;[^}]*height: 36px;/)
+   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-label \{[^}]*clip: rect\(0 0 0 0\)/)
++  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-caret \{[^}]*clip: rect\(0 0 0 0\)/)
++  assert.doesNotMatch(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-icon \{/)
+   assert.match(source, /@media \(prefers-reduced-motion: reduce\) \{ \.wbx-launcher \{ transition: none; \} \}/)
+ })
+ ```
+ 
+ Run:
+ 
+ ```bash
+ cd packages/dsh-workbuddy-expert-plus && node --test test/client-bot-ui.test.js
+ ```
+ 
+@@ -328,21 +336,21 @@ Expected: FAIL，命中 `.wbx-launcher` 的 `border-radius: 999px` / `background
+   height: 32px; padding: 0 10px; overflow: hidden;
+   border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.32));
+   border-radius: 999px;
+   background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.10));
+   color: var(--dsw-alias-label-primary, inherit);
+   font-family: inherit; font-size: 13px; line-height: 20px; font-weight: 500; text-align: left;
+   cursor: pointer; transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease; }
+ .wbx-launcher:hover:not(:disabled) {
+   border-color: var(--dsw-alias-border-l3, rgba(127,127,127,.48));
+   background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
+-  box-shadow: 0 1px 3px rgba(0,0,0,.08); }
++  box-shadow: var(--dsw-shadow-lv1, 0 2px 4px rgba(0,0,0,.08)); }
+ .wbx-launcher:active:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.16)); }
+ .wbx-launcher:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
+ .wbx-launcher:disabled { opacity: .55; cursor: default; }
+ .wbx-launcher-icon, .wbx-launcher-caret { display: inline-flex; flex: none; }
+ .wbx-launcher-icon { color: var(--dsw-alias-label-secondary, inherit); }
+ .wbx-launcher-caret { margin-left: auto; color: var(--dsw-alias-label-tertiary, var(--dsw-alias-label-secondary, inherit)); }
+ .wbx-launcher-label { min-width: 0; flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+ .wbx-launcher[data-wide="false"] { width: 36px; min-width: 36px; height: 36px; padding: 0; gap: 0;
+   justify-content: center; border-radius: 999px; }
+ .wbx-launcher[data-wide="false"] .wbx-launcher-label,
+diff --git a/docs/verification-report.md b/docs/verification-report.md
+index f1bd285..5f09555 100644
+--- a/docs/verification-report.md
++++ b/docs/verification-report.md
+@@ -130,10 +130,20 @@ Bot mode (`侧边 WorkBuddy 专家`):
+ - Screenshot: `docs/images/bot-market-cards.png`.
+ 
+ ### Artifact v0.2.1
+ 
+ - `.tgz`: `build/dsh-workbuddy-expert-plus-0.2.1.tgz`
+ - SHA-256: `29f48ce7b13bc64bcfdd59bb5a6ca701557bdb95ddabbc166e23b6b7e829aa6e`
+ - Files: 5,987
+ - Experts: 429 (`ready: 429`, `blocked: 0`)
+ - Resources: 5,946
+ - Installed into `E:\DSHbot\data\profiles\ds-bot` and exercised on the real host.
++
++## 2026-10-29 — Bot 侧栏入口方案 B（描边胶囊）
++
++- 变更：`client/client.js` 的 `BotMarketLauncher` 改为 32px 描边胶囊（图标 + `nav` 文案 + 箭头），并用 `sidebar.footer.action` 的 `wide` owner prop 驱动 `data-wide`；`data-wide="false"` 收为 36×36 纯图标。颜色全部来自 DSH token（悬停阴影走 `--dsw-shadow-lv1`），亮/暗与第三方主题切换无需重渲染。
++- 契约测试：`node --test test/client-bot-ui.test.js test/client-surface.test.js test/plugin-lifecycle.test.js` — 全部通过；新增入口 DOM 契约、CSS token/折叠契约、以及 slot 注册处的 `wide` 转发断言。`wide` 透传做过变异验证：删除转发后新断言失败，恢复后通过。
++- 全量回归：`npm test` — 90 tests, 0 fail；`smoke`、`smoke-client`、`smoke-importer`、`smoke-install` 四条全部通过。
++- 打包完整性：`npm run check:package` — `"ok": true`，`files` = 5987，`experts` = 429，`resources` = 5946；tarball 内 `client/client.js` 含 `wbx-launcher-caret` 与 `--dsw-shadow-lv1`。
++- 实机安装：实际运行的 DS-Bot 使用 `E:\DSHbot\data\profiles\ds-bot`（不是文档先前记录的 `C:\Users\guojl\.dsh\profiles\ds-bot`），该 profile 的插件是 GitHub 源安装的 0.2.1，不是本机 tgz。已将本次 `client/client.js` 同步到该 profile 的 `node_modules/dsh-workbuddy-expert-plus/client/client.js`，`node --check` 通过；等待用户重启 DS-Bot 后人工核对展开/折叠/亮暗三态。
++- 视觉证据：`output/playwright/launcher-final.png`（真实 `MARKET_CSS` 渲染：浅色展开、深色展开、折叠 36×36）；生成页 `output/playwright/launcher-final.html`；方案对比页 `output/playwright/launcher-options.html`。
++- 未覆盖：DS-Bot 进程尚未由本次会话重启，实机三态尚未由自动化确认；折叠态依赖宿主向 footer entry 传 `wide`，若未来不再传，入口按展开态渲染（不会变成空图标）。
+diff --git a/test/client-bot-ui.test.js b/test/client-bot-ui.test.js
+index 36bdb5c..3fcd481 100644
+--- a/test/client-bot-ui.test.js
++++ b/test/client-bot-ui.test.js
+@@ -236,10 +236,56 @@ test('Bot market reuses the Agent card anatomy and category chips', async () =>
+   assert.match(rendered, /全球发展/)
+   assert.match(rendered, /创建 Bot/)
+   assert.match(rendered, /再次创建/)
+   assert.match(rendered, /wbx-avatar/)
+   assert.match(rendered, /wbx-badge/)
+   assert.match(rendered, /wbx-id/)
+   assert.match(rendered, /wbx-catrow/)
+   assert.match(rendered, /全部分类/)
+   assert.doesNotMatch(rendered, /installBtn/)
+ })
++
++test('the Bot launcher renders a bordered pill with an icon, label and caret', () => {
++  // Scope the contract to the launcher implementation: `t('nav')`,
++  // `aria-hidden` and these class names also appear in unrelated settings and
++  // market code, so a file-wide match would pass without the launcher.
++  const launcher = source.match(/function BotMarketLauncher \(props\) \{[\s\S]*?\n\}/)
++  assert.ok(launcher, 'BotMarketLauncher is defined')
++  const block = launcher[0]
++  assert.match(block, /className: 'wbx-launcher'/)
++  assert.match(block, /'data-wide': props\.wide === false \? 'false' : 'true'/)
++  assert.match(block, /className: 'wbx-launcher-icon'/)
++  assert.match(block, /className: 'wbx-launcher-label'/)
++  assert.match(block, /className: 'wbx-launcher-caret'/)
++  assert.match(block, /t\('nav'\)/)
++  // The caret must be presentation-only: the button label is the nav text.
++  assert.match(block, /'aria-hidden': true/)
++  // No host API beyond the slot owner props.
++  assert.doesNotMatch(block, /useLayoutEffect/)
++  assert.doesNotMatch(block, /getBoundingClientRect/)
++})
++
++test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state', () => {
++  const block = source.match(/\.wbx-launcher \{[\s\S]*?; \}/)
++  assert.ok(block, '.wbx-launcher rule exists')
++  assert.match(block[0], /border-radius: 999px/)
++  assert.match(block[0], /border: 1px solid var\(--dsw-alias-border-l2,/)
++  assert.match(block[0], /background: var\(--dsw-alias-bg-layer-2,/)
++  assert.match(block[0], /color: var\(--dsw-alias-label-primary,/)
++  assert.match(source, /\.wbx-launcher:hover:not\(:disabled\) \{[^}]*--dsw-interactive-bg-hover/)
++  // The hover shadow must stay a theme token, not a bare rgba theme color.
++  const hover = source.match(/\.wbx-launcher:hover:not\(:disabled\) \{[^}]*; \}/)
++  assert.ok(hover, 'the launcher hover rule exists')
++  assert.match(hover[0], /box-shadow: var\(--dsw-shadow-lv1, [^)]+\)/)
++  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \{[^}]*width: 36px;[^}]*height: 36px;/)
++  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-label \{[^}]*clip: rect\(0 0 0 0\)/)
++  // The sr-only recipe needs every declaration; `clip` alone still leaves the
++  // caret visually present in some engines.
++  const caret = source.match(/\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-caret \{[^}]*\}/)
++  assert.ok(caret, 'the collapsed caret rule exists')
++  assert.match(caret[0], /position: absolute;[^}]*width: 1px;[^}]*height: 1px;[^}]*overflow: hidden;[^}]*clip: rect\(0 0 0 0\)/)
++  // Reject a grouped collapsed selector (e.g. icon together with the caret)
++  // as well as a direct icon hiding rule; the glyph must survive the rail.
++  assert.doesNotMatch(source, /\.wbx-launcher\[data-wide="false"\][^{]*\.wbx-launcher-icon/)
++  assert.doesNotMatch(source, /\.wbx-launcher-icon[^{]*\{[^}]*display:\s*none/)
++  assert.match(source, /@media \(prefers-reduced-motion: reduce\) \{ \.wbx-launcher \{ transition: none; \} \}/)
++})
+diff --git a/test/client-surface.test.js b/test/client-surface.test.js
+index 49c8696..32cbc3f 100644
+--- a/test/client-surface.test.js
++++ b/test/client-surface.test.js
+@@ -305,20 +305,55 @@ test('the sidebar launcher follows the live surface store without focus events',
+   await app.transition(botOnly)
+   await view.flush()
+   assert.equal(view.tree()?.type, 'button', 'Bot mode shows the launcher after the host batch')
+   assert.equal(view.tree()?.props.className, 'wbx-launcher')
+ 
+   await app.transition(agentOnly)
+   await view.flush()
+   assert.equal(view.tree(), null, 'switching back to Agent hides it after the host batch')
+ })
+ 
++test('the sidebar launcher exposes the wide flag to CSS and keeps a stable label', async () => {
++  const app = surfaceHarness(botOnly, 'agent')
++  const wideView = renderComponent(module.BotMarketLauncher, {
++    t: (key) => key,
++    surfaceStore: app.store,
++    onOpen() {},
++    wide: true,
++  })
++  const tree = wideView.tree()
++  assert.equal(tree?.type, 'button')
++  assert.equal(tree?.props.className, 'wbx-launcher')
++  assert.equal(tree?.props['data-wide'], 'true')
++  assert.deepEqual(tree?.children.map((child) => child.props.className),
++    ['wbx-launcher-icon', 'wbx-launcher-label', 'wbx-launcher-caret'])
++  assert.equal(tree?.children[1].children[0], 'nav',
++    'the label is the localized nav key, not a hardcoded string')
++  assert.equal(tree?.children[2].props['aria-hidden'], true)
++
++  const railView = renderComponent(module.BotMarketLauncher, {
++    t: (key) => key,
++    surfaceStore: app.store,
++    onOpen() {},
++    wide: false,
++  })
++  assert.equal(railView.tree()?.props['data-wide'], 'false')
++
++  const legacyView = renderComponent(module.BotMarketLauncher, {
++    t: (key) => key,
++    surfaceStore: app.store,
++    onOpen() {},
++  })
++  assert.equal(legacyView.tree()?.props['data-wide'], 'true',
++    'a host that never sends wide keeps the expanded pill')
++})
++
+ test('the composer expert seat is hidden only in Bot mode', async () => {
+   const agent = surfaceHarness(agentOnly, 'agent')
+   const agentView = renderComponent(module.ComposerExpertSeat, {
+     t: (key) => key,
+     surfaceStore: agent.store,
+     session: { id: 's' },
+   })
+   assert.equal(agentView.tree()?.type, module.ExpertSelector,
+     'Agent mode keeps the existing composer expert picker')
+ 
+diff --git a/test/plugin-lifecycle.test.js b/test/plugin-lifecycle.test.js
+index 4c23c42..dbfa331 100644
+--- a/test/plugin-lifecycle.test.js
++++ b/test/plugin-lifecycle.test.js
+@@ -136,10 +136,37 @@ test('the composer expert entry leaves the slot ledger in Bot mode', async () =>
+   assert.equal(app.registered.has('conversation.input.left:workbuddy-expert'), false,
+     'Bot mode must not keep a null-rendering entry in the composer list')
+ 
+   await app.setSurface('agent')
+   assert.equal(app.registered.has('conversation.input.left:workbuddy-expert'), true,
+     'Agent mode re-registers the picker')
+ 
+   dispose()
+   assert.equal(app.registered.size, 0, 'dispose releases every slot entry')
+ })
++
++test('the footer registration forwards the host wide flag to the launcher', () => {
++  const app = bootClient({ surface: 'bot' })
++  app.ctx.slots.entries = () => [
++    { registrant: 'ds-bot', options: { id: 'bot-account' } },
++    { registrant: 'ds-bot', options: { id: 'bot-return' } },
++  ]
++  const dispose = app.module.apply(app.ctx)
++  const FooterSeat = app.rendered.get('sidebar.footer.action')
++  assert.ok(FooterSeat, 'the footer seat registered')
++
++  const expanded = FooterSeat({ wide: true })
++  assert.equal(expanded.type, app.module.BotMarketLauncher,
++    'the footer cell renders the Bot launcher')
++  assert.equal(expanded.props.wide, true,
++    'wide:true from the slot owner reaches the launcher')
++
++  const rail = FooterSeat({ wide: false })
++  assert.equal(rail.props.wide, false,
++    'wide:false from the slot owner reaches the launcher')
++
++  const legacy = FooterSeat({})
++  assert.equal(legacy.props.wide, undefined,
++    'a host without wide forwards undefined (the launcher expands by default)')
++
++  dispose()
++})

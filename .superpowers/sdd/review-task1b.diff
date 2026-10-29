@@ -1,0 +1,46 @@
+# Review package: 42ffeaa..3177ee2
+
+## Commits
+3177ee2 test: scope the Bot launcher contract to its component
+7c13ae3 test: lock the Bot launcher pill contract
+
+## Files changed
+ test/client-bot-ui.test.js | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+## Diff
+diff --git a/test/client-bot-ui.test.js b/test/client-bot-ui.test.js
+index 36bdb5c..661e0c7 100644
+--- a/test/client-bot-ui.test.js
++++ b/test/client-bot-ui.test.js
+@@ -236,10 +236,30 @@ test('Bot market reuses the Agent card anatomy and category chips', async () =>
+   assert.match(rendered, /全球发展/)
+   assert.match(rendered, /创建 Bot/)
+   assert.match(rendered, /再次创建/)
+   assert.match(rendered, /wbx-avatar/)
+   assert.match(rendered, /wbx-badge/)
+   assert.match(rendered, /wbx-id/)
+   assert.match(rendered, /wbx-catrow/)
+   assert.match(rendered, /全部分类/)
+   assert.doesNotMatch(rendered, /installBtn/)
+ })
++
++test('the Bot launcher renders a bordered pill with an icon, label and caret', () => {
++  // Scope the contract to the launcher implementation: `t('nav')`,
++  // `aria-hidden` and these class names also appear in unrelated settings and
++  // market code, so a file-wide match would pass without the launcher.
++  const launcher = source.match(/function BotMarketLauncher \(props\) \{[\s\S]*?\n\}/)
++  assert.ok(launcher, 'BotMarketLauncher is defined')
++  const block = launcher[0]
++  assert.match(block, /className: 'wbx-launcher'/)
++  assert.match(block, /'data-wide': props\.wide === false \? 'false' : 'true'/)
++  assert.match(block, /className: 'wbx-launcher-icon'/)
++  assert.match(block, /className: 'wbx-launcher-label'/)
++  assert.match(block, /className: 'wbx-launcher-caret'/)
++  assert.match(block, /t\('nav'\)/)
++  // The caret must be presentation-only: the button label is the nav text.
++  assert.match(block, /'aria-hidden': true/)
++  // No host API beyond the slot owner props.
++  assert.doesNotMatch(block, /useLayoutEffect/)
++  assert.doesNotMatch(block, /getBoundingClientRect/)
++})

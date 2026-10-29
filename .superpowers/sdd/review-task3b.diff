@@ -1,0 +1,129 @@
+# Review package: a2fc299..0308395
+
+## Commits
+0308395 fix: route the pill shadow through a theme token
+1ff82db docs: route the pill shadow through a token
+
+## Files changed
+ client/client.js                                               | 2 +-
+ docs/superpowers/plans/2026-10-29-bot-sidebar-launcher-pill.md | 6 ++++--
+ test/client-bot-ui.test.js                                     | 4 +++-
+ 3 files changed, 8 insertions(+), 4 deletions(-)
+
+## Diff
+diff --git a/client/client.js b/client/client.js
+index 82a6dc2..ce42161 100644
+--- a/client/client.js
++++ b/client/client.js
+@@ -415,21 +415,21 @@ var MARKET_CSS = `
+   height: 32px; padding: 0 10px; overflow: hidden;
+   border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.32));
+   border-radius: 999px;
+   background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.10));
+   color: var(--dsw-alias-label-primary, inherit);
+   font-family: inherit; font-size: 13px; line-height: 20px; font-weight: 500; text-align: left;
+   cursor: pointer; transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease; }
+ .wbx-launcher:hover:not(:disabled) {
+   border-color: var(--dsw-alias-border-l3, rgba(127,127,127,.48));
+   background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
+-  box-shadow: 0 1px 3px rgba(0,0,0,.08); }
++  box-shadow: var(--dsw-shadow-lv1, 0 2px 4px rgba(0,0,0,.08)); }
+ .wbx-launcher:active:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.16)); }
+ .wbx-launcher:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
+ .wbx-launcher:disabled { opacity: .55; cursor: default; }
+ .wbx-launcher-icon, .wbx-launcher-caret { display: inline-flex; flex: none; }
+ .wbx-launcher-icon { color: var(--dsw-alias-label-secondary, inherit); }
+ .wbx-launcher-caret { margin-left: auto; color: var(--dsw-alias-label-tertiary, var(--dsw-alias-label-secondary, inherit)); }
+ .wbx-launcher-label { min-width: 0; flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+ .wbx-launcher[data-wide="false"] { width: 36px; min-width: 36px; height: 36px; padding: 0; gap: 0;
+   justify-content: center; border-radius: 999px; }
+ .wbx-launcher[data-wide="false"] .wbx-launcher-label {
+diff --git a/docs/superpowers/plans/2026-10-29-bot-sidebar-launcher-pill.md b/docs/superpowers/plans/2026-10-29-bot-sidebar-launcher-pill.md
+index fa1b62c..3f65d61 100644
+--- a/docs/superpowers/plans/2026-10-29-bot-sidebar-launcher-pill.md
++++ b/docs/superpowers/plans/2026-10-29-bot-sidebar-launcher-pill.md
+@@ -279,29 +279,31 @@ Expected: 提交包含 `client/client.js` 与新增测试，且 `git status --sh
+ **Interfaces:**
+ - Consumes: Task 2 产出的 `.wbx-launcher[data-wide]`、`.wbx-launcher-icon`、`.wbx-launcher-label`、`.wbx-launcher-caret`。
+ - Produces: 一组 scoped `.wbx-launcher*` 规则；展开态 32px 高/999px 圆角/1px 描边/图标+标签+箭头；`data-wide="false"` 时 36×36 纯图标；`:focus-visible` 有品牌色描边；`prefers-reduced-motion` 关闭过渡。全部颜色来自 token + fallback。
+ 
+ - [ ] **Step 1: 写 CSS 契约测试并确认失败**
+ 
+ 在 `test/client-bot-ui.test.js` 末尾追加：
+ 
+ ```js
+ test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state', () => {
+-  const block = source.match(/\.wbx-launcher \{[\s\S]*?\n\}/)
++  const block = source.match(/\.wbx-launcher \{[\s\S]*?; \}/)
+   assert.ok(block, '.wbx-launcher rule exists')
+   assert.match(block[0], /border-radius: 999px/)
+   assert.match(block[0], /border: 1px solid var\(--dsw-alias-border-l2,/)
+   assert.match(block[0], /background: var\(--dsw-alias-bg-layer-2,/)
+   assert.match(block[0], /color: var\(--dsw-alias-label-primary,/)
+   assert.match(source, /\.wbx-launcher:hover:not\(:disabled\) \{[^}]*--dsw-interactive-bg-hover/)
+   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \{[^}]*width: 36px;[^}]*height: 36px;/)
+   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-label \{[^}]*clip: rect\(0 0 0 0\)/)
++  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-caret \{[^}]*clip: rect\(0 0 0 0\)/)
++  assert.doesNotMatch(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-icon \{/)
+   assert.match(source, /@media \(prefers-reduced-motion: reduce\) \{ \.wbx-launcher \{ transition: none; \} \}/)
+ })
+ ```
+ 
+ Run:
+ 
+ ```bash
+ cd packages/dsh-workbuddy-expert-plus && node --test test/client-bot-ui.test.js
+ ```
+ 
+@@ -334,21 +336,21 @@ Expected: FAIL，命中 `.wbx-launcher` 的 `border-radius: 999px` / `background
+   height: 32px; padding: 0 10px; overflow: hidden;
+   border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.32));
+   border-radius: 999px;
+   background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.10));
+   color: var(--dsw-alias-label-primary, inherit);
+   font-family: inherit; font-size: 13px; line-height: 20px; font-weight: 500; text-align: left;
+   cursor: pointer; transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease; }
+ .wbx-launcher:hover:not(:disabled) {
+   border-color: var(--dsw-alias-border-l3, rgba(127,127,127,.48));
+   background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
+-  box-shadow: 0 1px 3px rgba(0,0,0,.08); }
++  box-shadow: var(--dsw-shadow-lv1, 0 2px 4px rgba(0,0,0,.08)); }
+ .wbx-launcher:active:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.16)); }
+ .wbx-launcher:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
+ .wbx-launcher:disabled { opacity: .55; cursor: default; }
+ .wbx-launcher-icon, .wbx-launcher-caret { display: inline-flex; flex: none; }
+ .wbx-launcher-icon { color: var(--dsw-alias-label-secondary, inherit); }
+ .wbx-launcher-caret { margin-left: auto; color: var(--dsw-alias-label-tertiary, var(--dsw-alias-label-secondary, inherit)); }
+ .wbx-launcher-label { min-width: 0; flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+ .wbx-launcher[data-wide="false"] { width: 36px; min-width: 36px; height: 36px; padding: 0; gap: 0;
+   justify-content: center; border-radius: 999px; }
+ .wbx-launcher[data-wide="false"] .wbx-launcher-label,
+diff --git a/test/client-bot-ui.test.js b/test/client-bot-ui.test.js
+index 5a9ab79..35df567 100644
+--- a/test/client-bot-ui.test.js
++++ b/test/client-bot-ui.test.js
+@@ -258,21 +258,23 @@ test('the Bot launcher renders a bordered pill with an icon, label and caret', (
+   assert.match(block, /className: 'wbx-launcher-caret'/)
+   assert.match(block, /t\('nav'\)/)
+   // The caret must be presentation-only: the button label is the nav text.
+   assert.match(block, /'aria-hidden': true/)
+   // No host API beyond the slot owner props.
+   assert.doesNotMatch(block, /useLayoutEffect/)
+   assert.doesNotMatch(block, /getBoundingClientRect/)
+ })
+ 
+ test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state', () => {
+-  const block = source.match(/\.wbx-launcher \{[\s\S]*?\n\}/)
++  const block = source.match(/\.wbx-launcher \{[\s\S]*?; \}/)
+   assert.ok(block, '.wbx-launcher rule exists')
+   assert.match(block[0], /border-radius: 999px/)
+   assert.match(block[0], /border: 1px solid var\(--dsw-alias-border-l2,/)
+   assert.match(block[0], /background: var\(--dsw-alias-bg-layer-2,/)
+   assert.match(block[0], /color: var\(--dsw-alias-label-primary,/)
+   assert.match(source, /\.wbx-launcher:hover:not\(:disabled\) \{[^}]*--dsw-interactive-bg-hover/)
+   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \{[^}]*width: 36px;[^}]*height: 36px;/)
+   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-label \{[^}]*clip: rect\(0 0 0 0\)/)
++  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-caret \{[^}]*clip: rect\(0 0 0 0\)/)
++  assert.doesNotMatch(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-icon \{/)
+   assert.match(source, /@media \(prefers-reduced-motion: reduce\) \{ \.wbx-launcher \{ transition: none; \} \}/)
+ })

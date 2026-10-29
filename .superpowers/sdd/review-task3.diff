@@ -1,0 +1,100 @@
+# Review package: 7f73e63..a2fc299
+
+## Commits
+a2fc299 feat: style the Bot launcher as a theme-aware pill
+
+## Files changed
+ client/client.js           | 35 ++++++++++++++++++++++++++++++-----
+ test/client-bot-ui.test.js | 13 +++++++++++++
+ 2 files changed, 43 insertions(+), 5 deletions(-)
+
+## Diff
+diff --git a/client/client.js b/client/client.js
+index dd2e790..82a6dc2 100644
+--- a/client/client.js
++++ b/client/client.js
+@@ -399,26 +399,51 @@ var MARKET_CSS = `
+ .wbx-btn:focus-visible, .wbx-chip:focus-visible, .wbx-search:focus-visible, .wbx-path-input:focus-visible,
+ .wbx-warns-toggle:focus-visible, .wbx-group-head:focus-visible {
+   outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
+ @media (prefers-reduced-motion: reduce) {
+   .wbx-skel-card { animation: none; }
+   .wbx-spin { animation: none; }
+   .wbx-corner { transition: none; }
+ }
+ 
+ /* ── Bot mode: sidebar launcher + own overlay (never a host DOM injection) ── */
+-.wbx-launcher { display: inline-flex; align-items: center; gap: 6px; width: 100%; padding: 7px 10px;
+-  border: 0; border-radius: 8px; background: transparent; cursor: pointer;
+-  color: var(--dsw-alias-label-secondary, inherit); font-size: 13px; line-height: 20px; text-align: left; }
+-.wbx-launcher:hover:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
+-  color: var(--dsw-alias-label-primary, inherit); }
++/* Scheme B: a bordered pill. Every value is a DSH alias token with a
++   theme-agnostic fallback, so a light/dark flip or a third-party theme's
++   overrideTokens() restyles the entry without a re-render. The \`wide\` flag
++   comes from the slot owner props (not a DOM measurement): false collapses
++   the pill to the host rail's 36x36 hit target and keeps the glyph. */
++.wbx-launcher { display: inline-flex; align-items: center; gap: 7px; width: 100%; box-sizing: border-box;
++  height: 32px; padding: 0 10px; overflow: hidden;
++  border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.32));
++  border-radius: 999px;
++  background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.10));
++  color: var(--dsw-alias-label-primary, inherit);
++  font-family: inherit; font-size: 13px; line-height: 20px; font-weight: 500; text-align: left;
++  cursor: pointer; transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease; }
++.wbx-launcher:hover:not(:disabled) {
++  border-color: var(--dsw-alias-border-l3, rgba(127,127,127,.48));
++  background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
++  box-shadow: 0 1px 3px rgba(0,0,0,.08); }
++.wbx-launcher:active:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.16)); }
+ .wbx-launcher:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
++.wbx-launcher:disabled { opacity: .55; cursor: default; }
++.wbx-launcher-icon, .wbx-launcher-caret { display: inline-flex; flex: none; }
++.wbx-launcher-icon { color: var(--dsw-alias-label-secondary, inherit); }
++.wbx-launcher-caret { margin-left: auto; color: var(--dsw-alias-label-tertiary, var(--dsw-alias-label-secondary, inherit)); }
++.wbx-launcher-label { min-width: 0; flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
++.wbx-launcher[data-wide="false"] { width: 36px; min-width: 36px; height: 36px; padding: 0; gap: 0;
++  justify-content: center; border-radius: 999px; }
++.wbx-launcher[data-wide="false"] .wbx-launcher-label {
++  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
++.wbx-launcher[data-wide="false"] .wbx-launcher-caret {
++  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
++@media (prefers-reduced-motion: reduce) { .wbx-launcher { transition: none; } }
+ .wbx-overlay { position: fixed; inset: 0; z-index: 10020; display: flex; align-items: center; justify-content: center;
+   padding: 16px; background: rgba(0,0,0,.42); }
+ .wbx-modal { display: flex; flex-direction: column; gap: 10px; box-sizing: border-box; width: min(720px, 100%);
+   max-height: min(88vh, 900px); overflow: auto; padding: 16px; border-radius: 14px;
+   background: var(--dsw-alias-bg-layer-2, #fff); color: var(--dsw-alias-label-primary, inherit);
+   border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.35));
+   box-shadow: var(--dsw-shadow-lv3, 0 12px 36px rgba(0,0,0,.28)); }
+ .wbx-modal:focus { outline: none; }
+ .wbx-modal-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+ .wbx-modal-head h2 { margin: 0 0 4px; font-size: 16px; line-height: 1.4; }
+diff --git a/test/client-bot-ui.test.js b/test/client-bot-ui.test.js
+index 661e0c7..5a9ab79 100644
+--- a/test/client-bot-ui.test.js
++++ b/test/client-bot-ui.test.js
+@@ -256,10 +256,23 @@ test('the Bot launcher renders a bordered pill with an icon, label and caret', (
+   assert.match(block, /className: 'wbx-launcher-icon'/)
+   assert.match(block, /className: 'wbx-launcher-label'/)
+   assert.match(block, /className: 'wbx-launcher-caret'/)
+   assert.match(block, /t\('nav'\)/)
+   // The caret must be presentation-only: the button label is the nav text.
+   assert.match(block, /'aria-hidden': true/)
+   // No host API beyond the slot owner props.
+   assert.doesNotMatch(block, /useLayoutEffect/)
+   assert.doesNotMatch(block, /getBoundingClientRect/)
+ })
++
++test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state', () => {
++  const block = source.match(/\.wbx-launcher \{[\s\S]*?\n\}/)
++  assert.ok(block, '.wbx-launcher rule exists')
++  assert.match(block[0], /border-radius: 999px/)
++  assert.match(block[0], /border: 1px solid var\(--dsw-alias-border-l2,/)
++  assert.match(block[0], /background: var\(--dsw-alias-bg-layer-2,/)
++  assert.match(block[0], /color: var\(--dsw-alias-label-primary,/)
++  assert.match(source, /\.wbx-launcher:hover:not\(:disabled\) \{[^}]*--dsw-interactive-bg-hover/)
++  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \{[^}]*width: 36px;[^}]*height: 36px;/)
++  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-label \{[^}]*clip: rect\(0 0 0 0\)/)
++  assert.match(source, /@media \(prefers-reduced-motion: reduce\) \{ \.wbx-launcher \{ transition: none; \} \}/)
++})
