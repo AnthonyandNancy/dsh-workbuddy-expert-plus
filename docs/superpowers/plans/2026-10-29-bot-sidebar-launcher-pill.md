@@ -286,7 +286,7 @@ Expected: 提交包含 `client/client.js` 与新增测试，且 `git status --sh
 
 ```js
 test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state', () => {
-  const block = source.match(/\.wbx-launcher \{[\s\S]*?\n\}/)
+  const block = source.match(/\.wbx-launcher \{[\s\S]*?; \}/)
   assert.ok(block, '.wbx-launcher rule exists')
   assert.match(block[0], /border-radius: 999px/)
   assert.match(block[0], /border: 1px solid var\(--dsw-alias-border-l2,/)
@@ -295,6 +295,8 @@ test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state'
   assert.match(source, /\.wbx-launcher:hover:not\(:disabled\) \{[^}]*--dsw-interactive-bg-hover/)
   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \{[^}]*width: 36px;[^}]*height: 36px;/)
   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-label \{[^}]*clip: rect\(0 0 0 0\)/)
+  assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-caret \{[^}]*clip: rect\(0 0 0 0\)/)
+  assert.doesNotMatch(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-icon \{/)
   assert.match(source, /@media \(prefers-reduced-motion: reduce\) \{ \.wbx-launcher \{ transition: none; \} \}/)
 })
 ```
@@ -341,7 +343,7 @@ Expected: FAIL，命中 `.wbx-launcher` 的 `border-radius: 999px` / `background
 .wbx-launcher:hover:not(:disabled) {
   border-color: var(--dsw-alias-border-l3, rgba(127,127,127,.48));
   background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
-  box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  box-shadow: var(--dsw-shadow-lv1, 0 2px 4px rgba(0,0,0,.08)); }
 .wbx-launcher:active:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.16)); }
 .wbx-launcher:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
 .wbx-launcher:disabled { opacity: .55; cursor: default; }
