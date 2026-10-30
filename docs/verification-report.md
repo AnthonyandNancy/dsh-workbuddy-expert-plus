@@ -148,3 +148,52 @@ Bot mode (`侧边 WorkBuddy 专家`):
 - 实机确认：用户重启 DS-Bot 后在真实 Bot 侧栏人工核对，展开态（描边胶囊 + 图标 + 文案 + 箭头）、折叠态（36×36 纯图标）与亮/暗主题均显示正常，反馈"没问题"。
 - 视觉证据：`output/playwright/launcher-final.png`（真实 `MARKET_CSS` 渲染：浅色展开、深色展开、折叠 36×36）；生成页 `output/playwright/launcher-final.html`；方案对比页 `output/playwright/launcher-options.html`。
 - 已知限制：折叠态依赖宿主向 footer entry 传 `wide`，若未来不再传，入口按展开态渲染（不会变成空图标）。
+
+## 2026-10-30 — DS Bot 0.2.4 Bot 模式入口消失与切换实时性
+
+### 根因
+
+| 观测 | 证据 |
+|---|---|
+| DS Bot 0.2.3 | `TeamSidebar` 直接渲染在 `sidebar.workspaces` 的 shell 区域；插件的 `sidebar.footer.action` 入口可见 |
+| DS Bot 0.2.4 | 新增 `LeftColumn`，把可见侧栏 `createPortal(..., document.body)`；`sidebar.js` 注释明确 “The foot stands in for the shell's hidden footer”，Bot 视图的 footer 只渲染 `AccountLauncher` |
+| WorkBuddy 插件 | 入口只注册在 `sidebar.footer.action`；0.2.4 Bot 模式下该 slot 仍存在，但宿主落在隐藏的 shell footer，因此入口从可见 DOM 消失 |
+| 模式切换 | 同一 `createSurfaceStore()` 仍能实时得到 `bot`/`agent`，但入口所在位置本身在 Bot 模式下不可见，用户感知为“切换没有实时响应” |
+
+### 修复
+
+- `client/client.js` 新增 `BotMarketLauncherHost`，仅当 `surface === 'bot'` 时渲染，并挂在公开 `shell.overlay` seat。
+- `shell.overlay` 注册改为同时渲染 `BotMarketLauncherHost` 与既有 `BotMarketOverlayHost`，共享同一 surface store 与模块级 open flag。
+- Agent 模式继续使用原 `sidebar.footer.action` 入口；两处入口不会在 `bot-pending` 或 Agent 态同时出现。
+- 新增样式 `.wbx-launcher-host` 为 232×32 的小面板（窄屏 36×36），`.wbx-overlay-stack` 保持 `pointer-events:none`，只让入口本身 `auto`，不形成全屏命中层。
+- 不接管 `sidebar.workspaces`、不修改 DS Bot 源码/私有 localStorage、不注入宿主 DOM。
+
+### 自动化证据
+
+| 检查 | 命令 | 结果 |
+|---|---|---|
+| 定向 surface/lifecycle | `node --test test/client-surface.test.js test/plugin-lifecycle.test.js` | PASS：20 tests |
+| 全量 unit/integration | `node --test test/*.test.js` | PASS：95 tests, 0 failed |
+| 完整项目链 | `npm test` | PASS：95 tests + 4 smoke scripts |
+| 打包完整性 | `npm run check:package` | PASS：5,987 files, 429 experts, 5,946 resources |
+
+### 宿主层级视觉验证（不是整机验收）
+
+- 生成页：`output/playwright/bot-mode-overlay-host.html`。
+- 截图：`output/playwright/bot-mode-overlay-host.png`。
+- 该页使用真实 `MARKET_CSS`，并复刻 `shell.overlay` 的 `pointer-events:none` 容器与 0.2.4 `LeftColumn` 侧栏形态。
+- Playwright 实测：入口 `232×32`、`label` 宽 168px、命中自身；对话中心 `elementFromPoint` 仍为 `chat`，说明没有全屏遮挡。
+
+### 实机状态
+
+- 运行中的 DS Bot 为 `0.2.4`，数据目录 `E:\DSHbot\data`，profile `E:\DSHbot\data\profiles\ds-bot`。
+- profile 的 `node_modules/dsh-workbuddy-expert-plus` 是软链，指向 `D:\code\ai\dsh-workbuddy-expert\packages\dsh-workbuddy-expert-plus`；两处 `client.js` SHA-256 一致。
+- 运行中的 host 需要应用启动 token，外部浏览器无法直接打开；本次未在运行窗口内完成点击级验收。需要重启 DS Bot 后确认：
+  1. Bot 模式左下角出现「WorkBuddy 专家」入口；
+  2. 打开市场、选择专家、创建 Bot 正常；
+  3. 切到 Agent 模式后入口消失、Agent composer 专家选择器恢复；
+  4. 切回 Bot 模式后入口立即恢复，无需刷新。
+
+### 结论
+
+根因修复与自动化回归已完成；整机点击验收待用户重启 DS Bot 0.2.4 后进行。未将宿主层级夹具结果表述为整机通过。
