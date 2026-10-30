@@ -64,6 +64,7 @@ const sandbox = {
     createElement: () => ({ dataset: {}, textContent: '', remove() {} }),
     querySelector: () => null,
     head: { appendChild() {} },
+    body: {}, // createPortal target; not a real DOM node
   },
   console,
   setTimeout,
@@ -410,6 +411,52 @@ test('leaving Bot mode closes an open market overlay and does not reopen it', as
   module.closeBotMarket()
 })
 
+test('the Bot market dialog portals to body so DS-Bot z-index 25 cannot cover it', async () => {
+  const app = surfaceHarness(botOnly, 'agent')
+  portalTargets.length = 0
+  const host = renderComponent(module.BotMarketOverlayPortal, {
+    t: (key) => key,
+    localeId: 'zh',
+    surfaceStore: app.store,
+  })
+  module.openBotMarket()
+  await host.flush()
+  const tree = host.tree()
+  assert.equal(tree?.props.className, 'wbx-overlay-portal-host')
+  assert.equal(portalTargets.length, 1,
+    'the dialog must leave the z-index 20 shell overlay layer')
+  assert.equal(portalTargets[0], sandbox.document.body,
+    'the portal target is document.body, the same level DS-Bot uses')
+  assert.equal(tree?.children?.[0]?.type, module.BotMarketOverlayHost,
+    'the portal host wraps the existing dialog host')
+  module.closeBotMarket()
+})
+
+test('the Bot market dialog falls back to an inline host without document.body', () => {
+  const app = surfaceHarness(botOnly, 'agent')
+  let noDomDefinition
+  const noDomSandbox = {
+    window: { __ModuleLoader__: { load: (value) => { noDomDefinition = value } } },
+    document: { body: null },
+    console,
+    React: reactStub,
+  }
+  noDomSandbox.globalThis = noDomSandbox
+  vm.runInContext(source, vm.createContext(noDomSandbox), { filename: 'client/client.js' })
+  const fallbackModule = noDomDefinition.factory((name) => (name === 'react-dom'
+    ? { createPortal() { throw new Error('must not portal without document.body') } }
+    : reactStub))
+  fallbackModule.openBotMarket()
+  const view = renderComponent(fallbackModule.BotMarketOverlayPortal, {
+    t: (key) => key,
+    localeId: 'zh',
+    surfaceStore: app.store,
+  })
+  assert.equal(view.tree()?.props.className, 'wbx-overlay-portal-host',
+    'no document.body must degrade to an inline wrapper, not crash')
+  fallbackModule.closeBotMarket()
+})
+
 test('a DS-Bot group swap keeps the last settled surface through the empty window', async () => {
   const app = surfaceHarness(botOnly, 'bot', [{ options: { id: 'bot-plus' } }])
   assert.equal(app.store.get(), 'bot')
@@ -525,6 +572,15 @@ test('the overlay stack does not become a full-screen interactive hit target', (
     'only the small launcher panel is interactive')
   assert.doesNotMatch(module.MARKET_CSS, /\.wbx-overlay-stack \{[^}]*inset: 0;[^}]*pointer-events: auto;/,
     'the stack must not be a full-screen auto layer')
+})
+
+test('the Bot dialog restores pointer events and sits above the DS-Bot left column', () => {
+  assert.match(module.MARKET_CSS, /\.wbx-overlay-portal-host \{[^}]*z-index: 10020;/,
+    'the dialog portal must outrank the left column at z-index 25')
+  assert.match(module.MARKET_CSS, /\.wbx-overlay \{[^}]*pointer-events: auto;/,
+    'the shell overlay layer inherits pointer-events:none, so the dialog must opt back in')
+  assert.match(module.MARKET_CSS, /\.wbx-modal \{[^}]*pointer-events: auto;/,
+    'the scroll container itself must be hit-testable so wheel events reach it')
 })
 
 test('the Bot-mode launcher portals above the DS-Bot left column instead of staying under it', async () => {

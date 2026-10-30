@@ -185,8 +185,9 @@ test('the overlay seat carries a Bot-mode launcher host without a full-screen sh
   assert.equal(overlayTree.props.className, 'wbx-overlay-stack')
   assert.equal(overlayTree.children[0]?.type, app.module.BotMarketLauncherHost,
     'the overlay seat mounts the second Bot-mode launcher host')
-  assert.equal(overlayTree.children[1]?.type, app.module.BotMarketOverlayHost,
-    'the overlay seat still mounts the market dialog host')
+  assert.equal(overlayTree.children[1]?.type, app.module.BotMarketOverlayPortal,
+    'the overlay seat mounts the body-portal wrapper for the market dialog')
+  assert.match(source, /function BotMarketOverlayPortal \(props\)/)
   assert.match(source, /className: 'wbx-launcher-host'/)
   assert.doesNotMatch(source, /wbx-launcher-shield/)
 

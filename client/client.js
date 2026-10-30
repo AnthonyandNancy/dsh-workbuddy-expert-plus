@@ -455,10 +455,11 @@ var MARKET_CSS = `
   .wbx-launcher-host .wbx-launcher-caret {
     position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 }
+.wbx-overlay-portal-host { position: fixed; inset: 0; z-index: 10020; pointer-events: none; }
 .wbx-overlay { position: fixed; inset: 0; z-index: 10020; display: flex; align-items: center; justify-content: center;
-  padding: 16px; background: rgba(0,0,0,.42); }
+  padding: 16px; background: rgba(0,0,0,.42); pointer-events: auto; }
 .wbx-modal { display: flex; flex-direction: column; gap: 10px; box-sizing: border-box; width: min(720px, 100%);
-  max-height: min(88vh, 900px); overflow: auto; padding: 16px; border-radius: 14px;
+  max-height: min(88vh, 900px); overflow: auto; padding: 16px; border-radius: 14px; pointer-events: auto;
   background: var(--dsw-alias-bg-layer-2, #fff); color: var(--dsw-alias-label-primary, inherit);
   border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.35));
   box-shadow: var(--dsw-shadow-lv3, 0 12px 36px rgba(0,0,0,.28)); }
@@ -3128,6 +3129,25 @@ function BotMarketOverlayHost (props) {
   })
 }
 
+/**
+ * The dialog's own body-level root. `shell.overlay` lives in a
+ * `pointer-events:none` layer at z-index 20, and DS-Bot 0.2.4 paints its
+ * visible left column as a body child at z-index 25. Rendering the dialog in
+ * that seat left it painted but not hit-testable and partly covered. The
+ * plugin raises its own React root to body level instead - the same public
+ * portal technique DS-Bot uses for its sidebar, with no host DOM injected.
+ * Hosts without `react-dom` or `document.body` degrade to an inline wrapper.
+ */
+function BotMarketOverlayPortal (props) {
+  var panel = el('div', { className: 'wbx-overlay-portal-host' },
+    el(BotMarketOverlayHost, props))
+  if (ReactDOM !== null && typeof ReactDOM.createPortal === 'function' &&
+      typeof document !== 'undefined' && document !== null && document.body) {
+    return ReactDOM.createPortal(panel, document.body)
+  }
+  return panel
+}
+
 /** The overlay host state: one launcher and at most one overlay registration. */
 
 
@@ -3540,7 +3560,7 @@ function apply (ctx) {
           wide: true,
           onOpen: function () { openBotMarket() }
         }),
-        el(BotMarketOverlayHost, {
+        el(BotMarketOverlayPortal, {
           t: t,
           localeId: getLocale(),
           surfaceStore: surfaceStore
@@ -3607,6 +3627,7 @@ module.exports.BrokenRow = BrokenRow
 module.exports.MarketPage = MarketPage
 module.exports.BotMarketOverlay = BotMarketOverlay
 module.exports.BotMarketOverlayHost = BotMarketOverlayHost
+module.exports.BotMarketOverlayPortal = BotMarketOverlayPortal
 module.exports.openBotMarket = openBotMarket
 module.exports.closeBotMarket = closeBotMarket
 module.exports.BotMarketLauncher = BotMarketLauncher
