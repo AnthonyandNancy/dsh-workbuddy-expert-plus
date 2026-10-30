@@ -73,7 +73,14 @@ const sandbox = {
 sandbox.globalThis = sandbox
 vm.createContext(sandbox)
 vm.runInContext(source, sandbox, { filename: 'client/client.js' })
-const module = definition.factory(() => reactStub)
+const portalTargets = []
+const reactDomStub = {
+  createPortal(node, target) {
+    portalTargets.push(target)
+    return node
+  },
+}
+const module = definition.factory((name) => (name === 'react-dom' ? reactDomStub : reactStub))
 
 function renderComponent(Component, props) {
   const instance = {
@@ -455,9 +462,11 @@ test('the Bot-mode overlay host renders the launcher only on the Bot surface', a
   await app.transition(botOnly)
   await host.flush()
   const tree = host.tree()
-  assert.equal(tree?.props.className, 'wbx-launcher-host')
-  assert.equal(tree?.props['data-screen'], 'bot')
-  assert.equal(tree?.children[0]?.type, module.BotMarketLauncher,
+  assert.equal(tree?.props.className, 'wbx-launcher-portal-host')
+  const panel = tree?.children?.[0]
+  assert.equal(panel?.props.className, 'wbx-launcher-host')
+  assert.equal(panel?.props['data-screen'], 'bot')
+  assert.equal(panel?.children?.[0]?.type, module.BotMarketLauncher,
     'the host delegates to the shared launcher so both entrances stay identical')
 })
 
@@ -505,7 +514,7 @@ test('the overlay launcher stays expanded by default instead of inheriting the f
     onOpen() {},
   })
   const tree = host.tree()
-  assert.equal(tree?.children[0]?.props.wide, true,
+  assert.equal(tree?.children?.[0]?.children?.[0]?.props.wide, true,
     'the overlay host must not force the footer rail state onto its own entrance')
 })
 
@@ -516,4 +525,20 @@ test('the overlay stack does not become a full-screen interactive hit target', (
     'only the small launcher panel is interactive')
   assert.doesNotMatch(module.MARKET_CSS, /\.wbx-overlay-stack \{[^}]*inset: 0;[^}]*pointer-events: auto;/,
     'the stack must not be a full-screen auto layer')
+})
+
+test('the Bot-mode launcher portals above the DS-Bot left column instead of staying under it', async () => {
+  const app = surfaceHarness(botOnly, 'agent')
+  const host = renderComponent(module.BotMarketLauncherHost, {
+    surfaceStore: app.store,
+    t: (key) => key,
+    onOpen() {},
+  })
+  const tree = host.tree()
+  assert.equal(tree?.type, 'div')
+  assert.equal(tree?.props.className, 'wbx-launcher-portal-host',
+    'the host must render through a body portal so DS-Bot z-index 25 cannot cover it')
+  assert.ok(tree?.children?.[0], 'the portal carries the launcher panel')
+  assert.match(module.MARKET_CSS, /\.wbx-launcher-host \{[^}]*z-index: 30;/,
+    'the portal host sits above the DS-Bot left column at z-index 25')
 })

@@ -437,12 +437,13 @@ var MARKET_CSS = `
 .wbx-launcher[data-wide="false"] .wbx-launcher-caret {
   position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { .wbx-launcher { transition: none; } }
-/* Bot mode's overlay entrance: a small fixed panel in the sidebar's foot
-   area, never a full-screen hit target. DS-Bot 0.2.4 hides the shell footer
-   behind its own portalled left column; this host only occupies the corner
-   the shell footer used to end at. */
+/* Bot mode's launcher: a small fixed panel above the shell footer's old
+   corner, never a full-screen hit target. The body portal host sits above
+   DS-Bot 0.2.4's portalled left column (z-index 25) and below its menus
+   (z-index 60); the inner panel stays absolute inside that portal. */
 .wbx-overlay-stack { position: absolute; inset: 0; pointer-events: none; }
-.wbx-launcher-host { position: absolute; left: 12px; bottom: 72px; z-index: 1;
+.wbx-launcher-portal-host { position: fixed; inset: 0; z-index: 30; pointer-events: none; }
+.wbx-launcher-host { position: absolute; left: 12px; bottom: 72px; z-index: 30;
   width: 232px; max-width: calc(100vw - 24px); pointer-events: auto; }
 .wbx-launcher-host .wbx-launcher { width: 100%; }
 @media (max-width: 900px) {
@@ -558,6 +559,15 @@ function ensureRowConfigStyle () {
 }
 
 var React = require('react')
+// DS Bot 0.2.4 portals its visible left column as a body child at z-index 25,
+// while DSH's own shell.overlay layer is pinned at z-index 20 inside the
+// frame. A slot entry can therefore render in the overlay and still sit
+// under the Bot sidebar. react-dom is exported by the same loader as react
+// (the DS Bot client uses it too), so the launcher can ride one body portal
+// above that column without touching DS Bot's DOM.
+var ReactDOM = (function () {
+  try { return require('react-dom') } catch (error) { return null }
+})()
 var el = React.createElement
 
 var DICTS = {
@@ -2729,7 +2739,7 @@ function BotMarketLauncherHost (props) {
     return store.subscribe(setSurface)
   }, [store])
   if (surface !== 'bot') return null
-  return el('div', { className: 'wbx-launcher-host', 'data-screen': 'bot' },
+  var panel = el('div', { className: 'wbx-launcher-host', 'data-screen': 'bot' },
     el(BotMarketLauncher, {
       t: props.t,
       surfaceStore: store,
@@ -2738,6 +2748,16 @@ function BotMarketLauncherHost (props) {
       wide: props.wide === false ? false : true,
       onOpen: props.onOpen
     }))
+  // DS Bot's left column is a body child at z-index 25; DSH's overlay layer
+  // is at z-index 20 inside the frame. Keep the launcher in its own body
+  // portal above the column so it is not merely painted but also clickable.
+  if (ReactDOM !== null && typeof ReactDOM.createPortal === 'function' &&
+      typeof document !== 'undefined' && document !== null) {
+    return ReactDOM.createPortal(
+      el('div', { className: 'wbx-launcher-portal-host' }, panel),
+      document.body)
+  }
+  return panel
 }
 
 /**

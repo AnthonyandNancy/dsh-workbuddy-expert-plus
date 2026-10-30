@@ -157,12 +157,13 @@ Bot mode (`侧边 WorkBuddy 专家`):
 |---|---|
 | DS Bot 0.2.3 | `TeamSidebar` 直接渲染在 `sidebar.workspaces` 的 shell 区域；插件的 `sidebar.footer.action` 入口可见 |
 | DS Bot 0.2.4 | 新增 `LeftColumn`，把可见侧栏 `createPortal(..., document.body)`；`sidebar.js` 注释明确 “The foot stands in for the shell's hidden footer”，Bot 视图的 footer 只渲染 `AccountLauncher` |
-| WorkBuddy 插件 | 入口只注册在 `sidebar.footer.action`；0.2.4 Bot 模式下该 slot 仍存在，但宿主落在隐藏的 shell footer，因此入口从可见 DOM 消失 |
+| WorkBuddy 插件 | 入口只注册在 `sidebar.footer.action`；0.2.4 Bot 模式下该 slot 仍存在，但宿主落在隐藏的 shell footer，因此入口从可见 DOM 消失。仅改挂 `shell.overlay` 仍不够：DSH overlay 层 z-index 20，低于 0.2.4 left column 的 z-index 25，入口能渲染但点不到 |
 | 模式切换 | 同一 `createSurfaceStore()` 仍能实时得到 `bot`/`agent`，但入口所在位置本身在 Bot 模式下不可见，用户感知为“切换没有实时响应” |
 
 ### 修复
 
 - `client/client.js` 新增 `BotMarketLauncherHost`，仅当 `surface === 'bot'` 时渲染，并挂在公开 `shell.overlay` seat。
+- 该 host 使用 `react-dom` 的 `createPortal(..., document.body)`，外层 `.wbx-launcher-portal-host` 固定 z-index 30：高于 DS-Bot left column 的 25，低于其菜单/弹层的 60。没有 `react-dom` 时安全降级为普通面板。
 - `shell.overlay` 注册改为同时渲染 `BotMarketLauncherHost` 与既有 `BotMarketOverlayHost`，共享同一 surface store 与模块级 open flag。
 - Agent 模式继续使用原 `sidebar.footer.action` 入口；两处入口不会在 `bot-pending` 或 Agent 态同时出现。
 - 新增样式 `.wbx-launcher-host` 为 232×32 的小面板（窄屏 36×36），`.wbx-overlay-stack` 保持 `pointer-events:none`，只让入口本身 `auto`，不形成全屏命中层。
@@ -172,9 +173,10 @@ Bot mode (`侧边 WorkBuddy 专家`):
 
 | 检查 | 命令 | 结果 |
 |---|---|---|
-| 定向 surface/lifecycle | `node --test test/client-surface.test.js test/plugin-lifecycle.test.js` | PASS：20 tests |
-| 全量 unit/integration | `node --test test/*.test.js` | PASS：95 tests, 0 failed |
-| 完整项目链 | `npm test` | PASS：95 tests + 4 smoke scripts |
+| 定向 surface/lifecycle | `node --test test/client-surface.test.js test/plugin-lifecycle.test.js` | PASS：21 tests |
+| 全量 unit/integration | `node --test test/*.test.js` | PASS：96 tests, 0 failed |
+| 完整项目链 | `npm test` | PASS：96 tests + 4 smoke scripts |
+| 真实 0.2.4 portal/hit-test | Playwright on DSH Web + packaged `ds-bot@0.2.4` | PASS：body portal、z-index 30、232×32、`hitOwns=true` |
 | 打包完整性 | `npm run check:package` | PASS：5,987 files, 429 experts, 5,946 resources |
 
 ### 宿主层级视觉验证（不是整机验收）
@@ -184,16 +186,26 @@ Bot mode (`侧边 WorkBuddy 专家`):
 - 该页使用真实 `MARKET_CSS`，并复刻 `shell.overlay` 的 `pointer-events:none` 容器与 0.2.4 `LeftColumn` 侧栏形态。
 - Playwright 实测：入口 `232×32`、`label` 宽 168px、命中自身；对话中心 `elementFromPoint` 仍为 `chat`，说明没有全屏遮挡。
 
-### 实机状态
+### 真实 DS Bot 0.2.4 窗口验收
 
-- 运行中的 DS Bot 为 `0.2.4`，数据目录 `E:\DSHbot\data`，profile `E:\DSHbot\data\profiles\ds-bot`。
-- profile 的 `node_modules/dsh-workbuddy-expert-plus` 是软链，指向 `D:\code\ai\dsh-workbuddy-expert\packages\dsh-workbuddy-expert-plus`；两处 `client.js` SHA-256 一致。
-- 运行中的 host 需要应用启动 token，外部浏览器无法直接打开；本次未在运行窗口内完成点击级验收。需要重启 DS Bot 后确认：
-  1. Bot 模式左下角出现「WorkBuddy 专家」入口；
-  2. 打开市场、选择专家、创建 Bot 正常；
-  3. 切到 Agent 模式后入口消失、Agent composer 专家选择器恢复；
-  4. 切回 Bot 模式后入口立即恢复，无需刷新。
+为避免干扰用户正在运行的窗口，使用 0.2.4 包内自带的 DSH `0.2.1-rc.4` CLI 在隔离目录启动：
+
+- 临时 `DSH_HOME`：`.tmp-review/e2e-bot024/data`
+- 临时 profile：`profiles/web`，bundles 为 `dsh-base + dsh-web-app + ds-bot + dsh-workbuddy-expert-plus`
+- `ds-bot` 链接到应用 asar 内的真实 `0.2.4` 包；插件链接到当前工作区源码
+- 端口 `4319`，使用日志中的一次性 token 打开真实页面
+
+实测结果：
+
+| 场景 | 证据 |
+|---|---|
+| Bot 模式入口 | `surface=bot`；`.wbx-launcher-portal-host` 的父节点是 `document.body`，`z-index=30`；入口 `232×32`；`elementFromPoint` 命中 `.wbx-launcher` 内部，`hitOwns=true` |
+| 打开市场 | 点击入口后真实市场出现 429 张专家卡片，每张都有「创建 Bot」按钮 |
+| 切到 Agent | `surface=agent`；`.wbx-launcher` 数量为 0；`.bt-leftcol` 消失；composer 出现「专家」按钮（`expertSeat=1`） |
+| 切回 Bot | 同一窗口立即出现 2 个入口（portal + footer），无需刷新；`surface=bot`、portal 存在 |
+| 冷启动刷新 | 刷新后仍为 `surface=bot`、portal 存在、2 个入口 |
+| 截图 | `output/playwright/bot-mode-real-024.png` |
 
 ### 结论
 
-根因修复与自动化回归已完成；整机点击验收待用户重启 DS Bot 0.2.4 后进行。未将宿主层级夹具结果表述为整机通过。
+根因（隐藏 shell footer + overlay z-index 低于 DS-Bot left column）已修复，并在真实 DSH `0.2.1-rc.4` + DS Bot `0.2.4` 页面中完成点击级验收。自动化 96 tests + 4 smoke 全通过。
