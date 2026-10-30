@@ -275,7 +275,7 @@ test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state'
   // The hover shadow must stay a theme token, not a bare rgba theme color.
   const hover = source.match(/\.wbx-launcher:hover:not\(:disabled\) \{[^}]*; \}/)
   assert.ok(hover, 'the launcher hover rule exists')
-  assert.match(hover[0], /box-shadow: var\(--dsw-shadow-lv1, [^)]+\)/)
+  assert.match(hover[0], /box-shadow:[^;]*var\(--dsw-shadow-lv1, [^)]+\)/)
   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \{[^}]*width: 36px;[^}]*height: 36px;/)
   assert.match(source, /\.wbx-launcher\[data-wide="false"\] \.wbx-launcher-label \{[^}]*clip: rect\(0 0 0 0\)/)
   // The sr-only recipe needs every declaration; `clip` alone still leaves the

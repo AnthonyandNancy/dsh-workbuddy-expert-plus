@@ -574,6 +574,11 @@ test('the overlay stack does not become a full-screen interactive hit target', (
     'the stack must not be a full-screen auto layer')
 })
 
+test('the empty dialog portal never becomes a full-screen click blocker', () => {
+  assert.match(module.MARKET_CSS, /\.wbx-overlay-portal-host \{[^}]*pointer-events: none;/,
+    'the portal wrapper stays transparent to the pointer; only the open overlay opts in')
+})
+
 test('the Bot dialog restores pointer events and sits above the DS-Bot left column', () => {
   assert.match(module.MARKET_CSS, /\.wbx-overlay-portal-host \{[^}]*z-index: 10020;/,
     'the dialog portal must outrank the left column at z-index 25')
