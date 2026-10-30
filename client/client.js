@@ -437,13 +437,14 @@ var MARKET_CSS = `
 .wbx-launcher[data-wide="false"] .wbx-launcher-caret {
   position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { .wbx-launcher { transition: none; } }
-/* Bot mode's launcher: a small fixed panel above the shell footer's old
-   corner, never a full-screen hit target. The body portal host sits above
-   DS-Bot 0.2.4's portalled left column (z-index 25) and below its menus
-   (z-index 60); the inner panel stays absolute inside that portal. */
+/* Bot mode's launcher sits in the sidebar's foot band: the list ends at the
+   44px account row, so the pill anchors 64px above the viewport bottom and
+   spans the column's 12px side insets instead of floating over the list.
+   Never a full-screen hit target. The body portal host sits above DS-Bot
+   0.2.4's portalled left column (z-index 25) and below its menus (60). */
 .wbx-overlay-stack { position: absolute; inset: 0; pointer-events: none; }
 .wbx-launcher-portal-host { position: fixed; inset: 0; z-index: 30; pointer-events: none; }
-.wbx-launcher-host { position: absolute; left: 12px; bottom: 72px; z-index: 30;
+.wbx-launcher-host { position: absolute; left: 12px; bottom: 64px; z-index: 30;
   width: 232px; max-width: calc(100vw - 24px); pointer-events: auto; }
 .wbx-launcher-host .wbx-launcher { width: 100%; }
 @media (max-width: 900px) {

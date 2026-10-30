@@ -542,3 +542,12 @@ test('the Bot-mode launcher portals above the DS-Bot left column instead of stay
   assert.match(module.MARKET_CSS, /\.wbx-launcher-host \{[^}]*z-index: 30;/,
     'the portal host sits above the DS-Bot left column at z-index 25')
 })
+
+test('the Bot overlay launcher sits in the sidebar foot band, not floating over the list', () => {
+  assert.match(module.MARKET_CSS, /\.wbx-launcher-host \{[^}]*bottom: 64px;/,
+    'the launcher anchors just above the 44px account row, inside the sidebar foot band')
+  assert.match(module.MARKET_CSS, /\.wbx-launcher-host \{[^}]*left: 12px;[^}]*width: 232px;/,
+    'the launcher keeps the sidebar column width instead of stretching across the viewport')
+  assert.doesNotMatch(module.MARKET_CSS, /\.wbx-launcher-host \{[^}]*bottom: 72px;/,
+    'the old floating offset would leave a gap above the account row')
+})

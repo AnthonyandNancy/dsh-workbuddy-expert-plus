@@ -199,12 +199,12 @@ Bot mode (`侧边 WorkBuddy 专家`):
 
 | 场景 | 证据 |
 |---|---|
-| Bot 模式入口 | `surface=bot`；`.wbx-launcher-portal-host` 的父节点是 `document.body`，`z-index=30`；入口 `232×32`；`elementFromPoint` 命中 `.wbx-launcher` 内部，`hitOwns=true` |
+| Bot 模式入口 | `surface=bot`；`.wbx-launcher-portal-host` 的父节点是 `document.body`，`z-index=30`；入口 `232×32`、`y=624..656`，账户行 `y=662`，间距 6px；`elementFromPoint` 命中 `.wbx-launcher` 内部，`hitOwns=true` |
 | 打开市场 | 点击入口后真实市场出现 429 张专家卡片，每张都有「创建 Bot」按钮 |
 | 切到 Agent | `surface=agent`；`.wbx-launcher` 数量为 0；`.bt-leftcol` 消失；composer 出现「专家」按钮（`expertSeat=1`） |
 | 切回 Bot | 同一窗口立即出现 2 个入口（portal + footer），无需刷新；`surface=bot`、portal 存在 |
 | 冷启动刷新 | 刷新后仍为 `surface=bot`、portal 存在、2 个入口 |
-| 截图 | `output/playwright/bot-mode-real-024.png` |
+| 截图 | `output/playwright/bot-mode-real-024-foot.png`（入口贴合账户行上方） |
 
 ### 结论
 
