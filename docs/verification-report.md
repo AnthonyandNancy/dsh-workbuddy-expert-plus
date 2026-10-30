@@ -209,3 +209,52 @@ Bot mode (`侧边 WorkBuddy 专家`):
 ### 结论
 
 根因（隐藏 shell footer + overlay z-index 低于 DS-Bot left column）已修复，并在真实 DSH `0.2.1-rc.4` + DS Bot `0.2.4` 页面中完成点击级验收。自动化 96 tests + 4 smoke 全通过。
+
+## 2026-10-30（第二轮）— Bot 市场弹窗滚动/层级与入口悬浮态
+
+### 根因
+
+| 现象 | 真实证据 | 根因 |
+|---|---|---|
+| 弹窗完全不能滚动 | `.wbx-modal` `scrollHeight=31642`、`clientHeight=632`、`overflow-y:auto`，但 computed `pointer-events:none`；`.wbx-overlay` 同为 `none`；`elementFromPoint(640,360)` 命中 `wSkVaW_scrollBody`；真实滚轮后 `scrollTop` 仍为 `0` | 弹窗挂在 `shell.overlay` 的 `.overlayLayer` 内，该层 `pointer-events:none`；上一轮只给 `.wbx-launcher-host` 恢复了 `auto`，漏掉弹窗。命中穿透到聊天区，滚轮自然滚不到弹窗 |
+| 弹窗层级错误、被 Bot 侧栏遮挡 | 弹窗祖先 `.pI_x6G_overlayLayer` 的 `z-index:20`；DS-Bot `.bt-leftcol` 是 body 子节点、`position:fixed`、`z-index:25` | 入口已 portal 到 body，但弹窗仍留在 `z-index:20` 的 shell overlay 内，低于 DS-Bot 侧栏 |
+| 入口 hover 发虚、透出下层 Bot 卡片 | 非 hover `background: rgb(255,255,255)`；hover `background: rgba(127,127,127,.12)`，`opacity:1`、无 `filter`/`backdrop-filter` | `.wbx-launcher:hover` 把不透明底色整体替换成 12% alpha 的 `interactive-bg-hover`，而非在其上叠加 tint。用户截图中的「产品通」头像/文字即下层卡片透出 |
+| 同一位置出现两个入口 | 真实 DOM 同时存在隐藏 shell footer 内的 `.wbx-launcher[data-wide=false]`（36×36，祖先宽 0、被 `overflow:hidden` 裁掉）与 portal 内的 `.wbx-launcher[data-wide=true]`（232×32）；`elementFromPoint` 只命中 portal 入口 | 隐藏 footer 仍渲染 React 树，但被 0 宽祖先裁剪，既不可见也不可点；它不是视觉重影的成因。footer 注册必须保留给 Agent 模式 |
+
+### 修复
+
+- 新增 `BotMarketOverlayPortal`：与入口同一套 public `react-dom` portal，挂到 `document.body`，外层 `.wbx-overlay-portal-host` 为 `fixed inset:0; z-index:10020; pointer-events:none`。没有 `react-dom` 或 `document.body` 时安全降级为普通节点。
+- `.wbx-overlay` 与 `.wbx-modal` 显式 `pointer-events:auto`，恢复命中、滚轮、滚动条拖动与点遮罩关闭；弹窗层级 `10020` 高于 DS-Bot 侧栏 `25`，低于宿主菜单层级。
+- `.wbx-launcher` 底色改为不透明 `var(--dsw-alias-bg-layer-2, rgba(127,127,127,1))`；hover/active 不再改 `background`，改用 `box-shadow: inset 0 0 0 999px <tint>` 叠加，并保留 `--dsw-shadow-lv1` 外层阴影 token。浅色为白底、深色为 `#2c2c2e` 底，均不透明。
+- 空 portal 保持 `pointer-events:none`，不会成为全屏点击拦截层；Agent 模式下 portal 为空且不挡交互。
+
+### 自动化证据
+
+| 检查 | 命令 | 结果 |
+|---|---|---|
+| 定向 surface/lifecycle | `node --test test/client-surface.test.js test/plugin-lifecycle.test.js` | PASS：26 tests |
+| 全量 unit/integration | `node --test test/*.test.js` | PASS：102 tests, 0 failed |
+| 完整项目链 | `npm test` | PASS：102 tests + 4 smoke scripts |
+| 弹窗 portal 目标 | `BotMarketOverlayPortal` 测试 | PASS：portal 目标为 `document.body`；无 `document.body` 时降级为 inline |
+| 弹窗命中/层级契约 | `MARKET_CSS` 测试 | PASS：portal `z-index:10020`；overlay/modal `pointer-events:auto`；空 portal `none` |
+| 入口实底契约 | `MARKET_CSS` 测试 | PASS：resting `rgba(...,1)`；hover/active 无 `background`，只有 inset tint + token 阴影 |
+
+### 真实 DS Bot 0.2.4 窗口验收
+
+同一隔离 DSH `0.2.1-rc.4` profile，重启后 bundle hash 与工作区一致（`f3a6cff…`）：
+
+| 场景 | 实测 |
+|---|---|
+| 弹窗 portal | `.wbx-overlay-portal-host` 父节点为 `BODY`，`z-index=10020`，wrapper `pointer-events:none` |
+| 弹窗命中 | `.wbx-overlay`/`.wbx-modal` 均 `pointer-events:auto`；`elementFromPoint(640,360)` 命中 `.wbx-grid`，不再穿透聊天区 |
+| 真实滚轮 | 鼠标滚轮 500 后 `scrollTop: 500`；再滚 600 后 `scrollTop: 600`，`scrollHeight-clientHeight=31010` |
+| 弹窗高于侧栏 | `.bt-leftcol` 为 `z-index:25`；侧栏区域与弹窗左边缘命中均落在 `.wbx-modal`/`.wbx-overlay`，不再命中 `.bt-leftcol` |
+| 入口 hover（浅色） | `background: rgb(255,255,255)`、`box-shadow` 含 `rgba(127,127,127,0.12) 0 0 0 999px inset` 与 `rgba(0,0,0,0.05) 0 2px 4px`；无下层文字透出 |
+| 入口 hover（深色） | `background: rgb(44,44,46)`、`border: rgba(255,255,255,0.16)`、文字 `rgb(242,242,242)`，仍为实底 |
+| 切到 Agent | `surface=agent`；`.wbx-launcher` 数量 0；空 portal 不挡点击 |
+| 切回 Bot | 入口恢复；弹窗保持关闭（不复活） |
+| 截图 | `output/playwright/bot-overlay-scroll-fixed.png`、`output/playwright/bot-launcher-hover-fixed.png`、`output/playwright/bot-launcher-hover-fixed-dark.png` |
+
+### 结论
+
+弹窗滚动失效（pointer-events 继承）、弹窗层级低于 DS-Bot 侧栏、入口 hover 半透明透底三项均已修复，并在真实 DSH `0.2.1-rc.4` + DS Bot `0.2.4` 窗口中完成滚轮、层级、浅/深色 hover 与模式切换验收。自动化 102 tests + 4 smoke 全通过。
