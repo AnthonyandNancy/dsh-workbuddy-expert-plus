@@ -441,3 +441,79 @@ test('bot-plus alone proves Bot mode even when bot-account never renders', () =>
   assert.equal(app.store.get(), 'bot',
     'the Bot-only composer entry is enough to show the Bot market launcher')
 })
+
+test('the Bot-mode overlay host renders the launcher only on the Bot surface', async () => {
+  const app = surfaceHarness(agentOnly, 'agent')
+  const host = renderComponent(module.BotMarketLauncherHost, {
+    surfaceStore: app.store,
+    t: (key) => key,
+    onOpen() {},
+    wide: true,
+  })
+  assert.equal(host.tree(), null, 'Agent mode must not mount the overlay launcher')
+
+  await app.transition(botOnly)
+  await host.flush()
+  const tree = host.tree()
+  assert.equal(tree?.props.className, 'wbx-launcher-host')
+  assert.equal(tree?.props['data-screen'], 'bot')
+  assert.equal(tree?.children[0]?.type, module.BotMarketLauncher,
+    'the host delegates to the shared launcher so both entrances stay identical')
+})
+
+test('the footer and overlay entrances follow one live surface without double-rendering', async () => {
+  const app = surfaceHarness(botOnly, 'agent')
+  const footer = renderComponent(module.BotMarketLauncher, {
+    t: (key) => key,
+    surfaceStore: app.store,
+    onOpen() {},
+  })
+  const overlay = renderComponent(module.BotMarketLauncherHost, {
+    t: (key) => key,
+    surfaceStore: app.store,
+    onOpen() {},
+    wide: false,
+  })
+  assert.ok(footer.tree(), 'footer launcher exists on the Bot surface')
+  assert.ok(overlay.tree(), 'overlay launcher exists on the Bot surface')
+
+  await app.transition([])
+  await app.conversationTransition([])
+  await footer.flush()
+  await overlay.flush()
+  assert.equal(app.store.get(), 'bot', 'the settle window keeps the last positive surface')
+  assert.ok(overlay.tree(), 'the overlay launcher does not flicker during the Bot to Agent swap')
+
+  await app.transition(agentOnly)
+  await app.storageTransition('agent')
+  await footer.flush()
+  await overlay.flush()
+  assert.equal(footer.tree(), null)
+  assert.equal(overlay.tree(), null, 'no overlay launcher on the Agent surface')
+
+  await app.transition(botOnly)
+  await footer.flush()
+  await overlay.flush()
+  assert.ok(overlay.tree(), 'the overlay launcher returns in the same window on Bot')
+})
+
+test('the overlay launcher stays expanded by default instead of inheriting the footer rail state', async () => {
+  const app = surfaceHarness(botOnly, 'agent')
+  const host = renderComponent(module.BotMarketLauncherHost, {
+    surfaceStore: app.store,
+    t: (key) => key,
+    onOpen() {},
+  })
+  const tree = host.tree()
+  assert.equal(tree?.children[0]?.props.wide, true,
+    'the overlay host must not force the footer rail state onto its own entrance')
+})
+
+test('the overlay stack does not become a full-screen interactive hit target', () => {
+  assert.match(module.MARKET_CSS, /\.wbx-overlay-stack \{[^}]*pointer-events: none;/,
+    'the stack layer must never intercept pointer events itself')
+  assert.match(module.MARKET_CSS, /\.wbx-launcher-host \{[^}]*pointer-events: auto;/,
+    'only the small launcher panel is interactive')
+  assert.doesNotMatch(module.MARKET_CSS, /\.wbx-overlay-stack \{[^}]*inset: 0;[^}]*pointer-events: auto;/,
+    'the stack must not be a full-screen auto layer')
+})

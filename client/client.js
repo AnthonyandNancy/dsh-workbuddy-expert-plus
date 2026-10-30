@@ -437,6 +437,22 @@ var MARKET_CSS = `
 .wbx-launcher[data-wide="false"] .wbx-launcher-caret {
   position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { .wbx-launcher { transition: none; } }
+/* Bot mode's overlay entrance: a small fixed panel in the sidebar's foot
+   area, never a full-screen hit target. DS-Bot 0.2.4 hides the shell footer
+   behind its own portalled left column; this host only occupies the corner
+   the shell footer used to end at. */
+.wbx-overlay-stack { position: absolute; inset: 0; pointer-events: none; }
+.wbx-launcher-host { position: absolute; left: 12px; bottom: 72px; z-index: 1;
+  width: 232px; max-width: calc(100vw - 24px); pointer-events: auto; }
+.wbx-launcher-host .wbx-launcher { width: 100%; }
+@media (max-width: 900px) {
+  .wbx-launcher-host { width: 36px; }
+  .wbx-launcher-host .wbx-launcher { width: 36px; min-width: 36px; height: 36px; padding: 0; gap: 0;
+    justify-content: center; border-radius: 999px; }
+  .wbx-launcher-host .wbx-launcher-label,
+  .wbx-launcher-host .wbx-launcher-caret {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
 .wbx-overlay { position: fixed; inset: 0; z-index: 10020; display: flex; align-items: center; justify-content: center;
   padding: 16px; background: rgba(0,0,0,.42); }
 .wbx-modal { display: flex; flex-direction: column; gap: 10px; box-sizing: border-box; width: min(720px, 100%);
@@ -2695,6 +2711,36 @@ function BotMarketLauncher (props) {
 }
 
 /**
+ * Bot mode's second entrance. DS-Bot 0.2.4 portals its visible sidebar to
+ * document.body and hides the shell footer, so a `sidebar.footer.action`
+ * registration is still in the slot ledger but no longer in the visible tree.
+ * This host rides the public `shell.overlay` seat instead, and renders only
+ * while the shared surface store says Bot is current. It is deliberately a
+ * small fixed panel, never a full-screen hit target.
+ */
+function BotMarketLauncherHost (props) {
+  var store = props.surfaceStore
+  var surfaceState = React.useState(store !== undefined && store !== null ? store.get() : 'unknown')
+  var surface = surfaceState[0]
+  var setSurface = surfaceState[1]
+  React.useEffect(function () {
+    if (store === undefined || store === null || typeof store.subscribe !== 'function') return undefined
+    setSurface(store.get())
+    return store.subscribe(setSurface)
+  }, [store])
+  if (surface !== 'bot') return null
+  return el('div', { className: 'wbx-launcher-host', 'data-screen': 'bot' },
+    el(BotMarketLauncher, {
+      t: props.t,
+      surfaceStore: store,
+      // The overlay host owns its own footprint; the shell footer's rail
+      // flag is unrelated to it. Only an explicit false collapses it.
+      wide: props.wide === false ? false : true,
+      onOpen: props.onOpen
+    }))
+}
+
+/**
  * The launcher glyph: a 16px four-point sparkle matching the host's
  * `IconSparkle` geometry, inlined because this zero-build bundle may only
  * require React (no primitives package export is guaranteed in every host).
@@ -3462,11 +3508,22 @@ function apply (ctx) {
       locale: NS,
       inject: function () { return { t: t } }
     }, function () {
-      return el(BotMarketOverlayHost, {
-        t: t,
-        localeId: getLocale(),
-        surfaceStore: surfaceStore
-      })
+      // DS-Bot 0.2.4 paints Bot mode's visible sidebar from its own portal and
+      // hides the shell footer; this public overlay seat is the only visible
+      // anchor left for a third-party launcher. Keep the dialog host beside it
+      // so the two share one surface store and one module-scope open flag.
+      return el('div', { className: 'wbx-overlay-stack' },
+        el(BotMarketLauncherHost, {
+          t: t,
+          surfaceStore: surfaceStore,
+          wide: true,
+          onOpen: function () { openBotMarket() }
+        }),
+        el(BotMarketOverlayHost, {
+          t: t,
+          localeId: getLocale(),
+          surfaceStore: surfaceStore
+        }))
     })
   }))
 
@@ -3532,6 +3589,7 @@ module.exports.BotMarketOverlayHost = BotMarketOverlayHost
 module.exports.openBotMarket = openBotMarket
 module.exports.closeBotMarket = closeBotMarket
 module.exports.BotMarketLauncher = BotMarketLauncher
+module.exports.BotMarketLauncherHost = BotMarketLauncherHost
 module.exports.botSurfaceHint = botSurfaceHint
 module.exports.createSurfaceStore = createSurfaceStore
 module.exports.ComposerExpertSeat = ComposerExpertSeat
