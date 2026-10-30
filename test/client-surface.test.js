@@ -599,6 +599,20 @@ test('the Bot-mode launcher portals above the DS-Bot left column instead of stay
     'the portal host sits above the DS-Bot left column at z-index 25')
 })
 
+test('the launcher hover keeps an opaque surface and only adds a tint', () => {
+  const base = module.MARKET_CSS.match(/\.wbx-launcher \{[^}]*\}/)?.[0] || ''
+  const hover = module.MARKET_CSS.match(/\.wbx-launcher:hover:not\(:disabled\) \{[^}]*\}/)?.[0] || ''
+  const active = module.MARKET_CSS.match(/\.wbx-launcher:active:not\(:disabled\) \{[^}]*\}/)?.[0] || ''
+  assert.match(base, /background: var\(--dsw-alias-bg-layer-2, rgba\(127,127,127,1\)\)/,
+    'the resting surface must be fully opaque')
+  assert.doesNotMatch(hover, /background:/,
+    'hover must not replace the opaque base with an alpha colour')
+  assert.match(hover, /box-shadow:[^;]*inset/,
+    'hover tint is an inset layer over the opaque base')
+  assert.doesNotMatch(active, /background:/)
+  assert.match(active, /box-shadow:[^;]*inset/)
+})
+
 test('the Bot overlay launcher sits in the sidebar foot band, not floating over the list', () => {
   assert.match(module.MARKET_CSS, /\.wbx-launcher-host \{[^}]*bottom: 64px;/,
     'the launcher anchors just above the 44px account row, inside the sidebar foot band')

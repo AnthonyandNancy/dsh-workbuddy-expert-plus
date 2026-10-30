@@ -415,15 +415,18 @@ var MARKET_CSS = `
   height: 32px; padding: 0 10px; overflow: hidden;
   border: 1px solid var(--dsw-alias-border-l2, rgba(127,127,127,.32));
   border-radius: 999px;
-  background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,.10));
+  /* Opaque at rest: the shell's hover token is only a tint, so using it as
+     the whole background makes the Bot list ghost through the pill. */
+  background: var(--dsw-alias-bg-layer-2, rgba(127,127,127,1));
   color: var(--dsw-alias-label-primary, inherit);
   font-family: inherit; font-size: 13px; line-height: 20px; font-weight: 500; text-align: left;
-  cursor: pointer; transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease; }
+  cursor: pointer; transition: box-shadow 120ms ease, border-color 120ms ease; }
 .wbx-launcher:hover:not(:disabled) {
   border-color: var(--dsw-alias-border-l3, rgba(127,127,127,.48));
-  background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.12));
-  box-shadow: var(--dsw-shadow-lv1, 0 2px 4px rgba(0,0,0,.08)); }
-.wbx-launcher:active:not(:disabled) { background: var(--dsw-interactive-bg-hover, rgba(127,127,127,.16)); }
+  box-shadow: inset 0 0 0 999px var(--dsw-interactive-bg-hover, rgba(127,127,127,.12)),
+    0 2px 4px rgba(0,0,0,.08); }
+.wbx-launcher:active:not(:disabled) {
+  box-shadow: inset 0 0 0 999px var(--dsw-interactive-bg-hover, rgba(127,127,127,.16)); }
 .wbx-launcher:focus-visible { outline: 2px solid var(--dsw-alias-brand-primary, currentColor); outline-offset: 2px; }
 .wbx-launcher:disabled { opacity: .55; cursor: default; }
 .wbx-launcher-icon, .wbx-launcher-caret { display: inline-flex; flex: none; }
