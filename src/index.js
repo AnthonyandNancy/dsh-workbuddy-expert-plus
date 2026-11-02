@@ -204,6 +204,8 @@ export function apply(ctx, config = {}) {
         dshHome,
         pluginVersion: pluginVersionOf(),
         ownerCtx: ctx,
+        webServer: importerCtx.webServer,
+        connection: importerCtx.connection,
       })
         .then((off) => {
           if (disposed) off()

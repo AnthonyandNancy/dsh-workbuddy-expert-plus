@@ -207,3 +207,12 @@ test('the importer forwards the host webServer and connection services', async (
   assert.match(hostSource, /ctx\.inject\(\['webServer', 'settings', 'connection'\]/,
     'the importer segment must wait for the connection service')
 })
+
+test('importerServicesOf reads injected properties when get() is unavailable', async () => {
+  const { importerServicesOf } = await import('../src/importer/index.js')
+  const webServer = { getOrigin: () => 'http://127.0.0.1:3080' }
+  const connection = { requestRejection: () => undefined }
+  const services = importerServicesOf({ webServer, connection, get: () => undefined })
+  assert.equal(services.webServer, webServer)
+  assert.equal(services.connection, connection)
+})

@@ -27,31 +27,37 @@ function sendJson(response, status, payload) {
 }
 
 /**
- * Delegate the browser-trust fence to DSH's Connection service. It is the
- * single authority for loopback, listener-bind, `trustedHosts`, Origin and
- * Sec-Fetch-Site policy, and it also enforces the browser/API credential.
+ * Admit the incoming browser request exactly once through DSH's Connection
+ * service (Host/Origin fence + signed browser credential). The returned Peer
+ * is reused by the in-process /api bridge.
  *
- * @returns {{ ok: true } | { ok: false, code: 'TRUST_REQUIRED'|'TRUST_UNAVAILABLE', reason: string }}
+ * @returns {{ ok: true, peer: object } | { ok: false, code: 'TRUST_REQUIRED'|'TRUST_UNAVAILABLE', reason: string }}
  */
 function requestTrust(ctx, request) {
-  const reject = ctx?.connection?.requestRejection
-  if (typeof reject !== 'function') {
-    return { ok: false, code: 'TRUST_UNAVAILABLE', reason: 'DSH connection.requestRejection is unavailable; upgrade DSH Web' }
+  let admit
+  try {
+    admit = ctx?.connection?.admit
+  } catch (error) {
+    return { ok: false, code: 'TRUST_UNAVAILABLE', reason: error instanceof Error ? error.message : String(error) }
+  }
+  if (typeof admit !== 'function') {
+    return { ok: false, code: 'TRUST_UNAVAILABLE', reason: 'DSH connection.admit is unavailable; upgrade DSH Web' }
   }
   try {
-    const rejection = reject({ headers: request?.headers ?? {} })
-    if (rejection === undefined) return { ok: true }
-    if (rejection === 401) return { ok: false, code: 'TRUST_REQUIRED', reason: 'the DSH browser session is missing, expired, or bound to another authority' }
-    if (rejection === 403) return { ok: false, code: 'TRUST_REQUIRED', reason: 'this authority is not loopback, the listener bind address, or a configured trustedHosts entry' }
-    return { ok: false, code: 'TRUST_REQUIRED', reason: `DSH rejected the request (${String(rejection)})` }
+    const admission = admit.call(ctx.connection, { headers: request?.headers ?? {} })
+    if (admission !== null && typeof admission === 'object' && 'peer' in admission) {
+      return { ok: true, peer: admission.peer }
+    }
+    const rejection = admission?.rejection
+    return { ok: false, code: 'TRUST_REQUIRED', reason: `DSH rejected the request (${String(rejection ?? 'no peer')})` }
   } catch (error) {
     return { ok: false, code: 'TRUST_UNAVAILABLE', reason: error instanceof Error ? error.message : String(error) }
   }
 }
 
 /** Build the in-process fetch for one already-trusted request. */
-function botFetchFor(ctx, request) {
-  return createBotRequestFetch({ connection: ctx?.connection, request })
+function botFetchFor(ctx, request, peer) {
+  return createBotRequestFetch({ connection: ctx?.connection, request, peer })
 }
 
 async function readJsonBody(request, maxBytes = MAX_BODY_BYTES) {
@@ -99,15 +105,15 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
   let mutating = false
 
   function guard(request, response) {
-    if (request.method !== 'POST') { sendJson(response, 405, { error: 'method not allowed' }); return false }
+    if (request.method !== 'POST') { sendJson(response, 405, { error: 'method not allowed' }); return undefined }
     const trust = requestTrust(hostCtx, request)
     if (!trust.ok) {
       sendJson(response, trust.code === 'TRUST_REQUIRED' ? 403 : 503, { error: trust.reason, code: trust.code })
-      return false
+      return undefined
     }
-    if (mutating) { sendJson(response, 409, { error: 'another change is in progress', code: 'BUSY' }); return false }
+    if (mutating) { sendJson(response, 409, { error: 'another change is in progress', code: 'BUSY' }); return undefined }
     mutating = true
-    return true
+    return trust
   }
 
   /**
@@ -237,7 +243,7 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
       const trust = requestTrust(hostCtx, request)
       if (!trust.ok) return sendJson(response, 200, { status: 'unknown', code: trust.code, reason: trust.reason })
       try {
-        sendJson(response, 200, await probe({ fetchImpl: botFetchFor(hostCtx, request) }))
+        sendJson(response, 200, await probe({ fetchImpl: botFetchFor(hostCtx, request, trust.peer) }))
       } catch (error) {
         sendJson(response, 200, { status: 'unknown', code: error?.code ?? 'UNKNOWN', reason: error instanceof Error ? error.message : String(error) })
       }
@@ -249,7 +255,7 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
       kind: 'exact',
       path: `${ROUTE_BASE}/${name}`,
       handler: async (request, response) => {
-        if (!guard(request, response)) return
+        if (guard(request, response) === undefined) return
         try {
           const body = await readJsonBody(request)
           if (body === null || typeof body !== 'object' || typeof body.id !== 'string') throw Object.assign(new Error('id is required'), { code: 'CARD_INVALID' })
@@ -270,7 +276,8 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
       kind: 'exact',
       path: `${ROUTE_BASE}/bot/create`,
       handler: async (request, response) => {
-        if (!guard(request, response)) return
+        const trust = guard(request, response)
+        if (trust === undefined) return
         try {
           const body = await readJsonBody(request, MAX_PROMPT_BODY_BYTES)
           if (body === null || typeof body !== 'object' || typeof body.expertId !== 'string') {
@@ -283,7 +290,7 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
             instructions: body.instructions,
             basePromptSha256: body.basePromptSha256,
             model: body.model,
-          }, { fetchImpl: botFetchFor(hostCtx, request) })
+          }, { fetchImpl: botFetchFor(hostCtx, request, trust.peer) })
           sendJson(response, 200, { ...result, state: await currentState() })
         } catch (error) {
           sendJson(response, STATUS[error?.code] ?? 400, {
@@ -300,7 +307,9 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
       handler: async (request, response) => {
         if (request.method !== 'GET' && request.method !== 'HEAD') return sendJson(response, 405, { error: 'method not allowed' })
         try {
-          sendJson(response, 200, { bindings: await botService.bindings({ fetchImpl: botFetchFor(hostCtx, request) }) })
+          const trust = requestTrust(hostCtx, request)
+          if (!trust.ok) return sendJson(response, 403, { error: trust.reason, code: trust.code })
+          sendJson(response, 200, { bindings: await botService.bindings({ fetchImpl: botFetchFor(hostCtx, request, trust.peer) }) })
         } catch (error) {
           sendJson(response, 502, { error: error instanceof Error ? error.message : String(error) })
         }

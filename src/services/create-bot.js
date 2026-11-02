@@ -131,7 +131,7 @@ export function createBotService({
       if (bot === null || typeof bot !== 'object' || typeof bot.id !== 'string' || bot.id === '') {
         throw new BotServiceError('INVALID_RESPONSE', 'create-bot did not return a Bot id')
       }
-      if (bot.instructions !== undefined && bot.instructions !== editedInstructions) {
+      if (bot.instructions !== undefined && String(bot.instructions) !== editedInstructions.trim()) {
         throw new BotServiceError('PROMPT_MISMATCH', 'DS-Bot stored instructions differ from the submitted prompt')
       }
 

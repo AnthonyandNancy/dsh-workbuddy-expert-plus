@@ -258,3 +258,57 @@ Bot mode (`侧边 WorkBuddy 专家`):
 ### 结论
 
 弹窗滚动失效（pointer-events 继承）、弹窗层级低于 DS-Bot 侧栏、入口 hover 半透明透底三项均已修复，并在真实 DSH `0.2.1-rc.4` + DS Bot `0.2.4` 窗口中完成滚轮、层级、浅/深色 hover 与模式切换验收。自动化 102 tests + 4 smoke 全通过。
+
+## 2026-11-02 — DS-Bot 反向代理 Host 可用性修复
+
+### 根因
+
+| 现象 | 证据 | 根因 |
+|---|---|---|
+| Bot 弹窗显示「DS-Bot 不可用或版本不兼容」 | `/market/environment` 返回 `{status:'incompatible',reason:'DS-Bot requests require a loopback Host'}` | `createBotRequestFetch()` 把浏览器公网 `Host` 当作服务端出站目标并强制 loopback |
+| 修好探测后创建仍 403 | `/market/bot/create` 的 `sameOrigin()` 同样 loopback-only | 插件复制了 DSH 的 trust 策略但只实现 loopback 子集 |
+| 真实创建返回 `PROMPT_MISMATCH` | 真实 prompt 末尾有换行；DS-Bot 0.2.4 存储时 `String(instructions).trim()`，插件却比较原文 | 创建后的校验没有按 DS-Bot 的存储语义比较 |
+
+### 修复
+
+- 入站：所有 Bot 路由委托 `ctx.connection.admit({headers})`；401/403 映射为 `TRUST_REQUIRED`，缺失服务为 `TRUST_UNAVAILABLE`。
+- 进程内桥接：`createBotRequestFetch({connection, request, peer})` 用 owner Peer 调 `connection.createSharedFetchHandler('/api')`；固定内部 URL `http://dsh.inprocess/api/bot`，不发网络请求，不转发 cookie/authorization/host/origin。
+- 服务注入：`src/index.js` 显式把 `importerCtx.webServer` / `importerCtx.connection` 传入 importer，避免 Cordis `get()` 与注入属性差异导致 `undefined`。
+- 创建校验：按 DS-Bot 存储语义比较 `String(bot.instructions) === instructions.trim()`；提交仍保留用户原文。
+- 客户端：`TRUST_REQUIRED`/`TRUST_UNAVAILABLE`/`BRIDGE_UNAVAILABLE`/`absent`/`unknown`/`incompatible`/`readOnly` 分别显示可操作文案。
+
+### 自动化证据
+
+| 检查 | 命令 | 结果 |
+|---|---|---|
+| 全量单测 | `node --test test/*.test.js` | PASS：114 tests, 0 failed |
+| 完整项目链 | `npm test` | PASS：114 tests + 4 smoke scripts |
+| 打包完整性 | `npm run check:package` | PASS：5,987 files, 429 experts, 5,946 resources |
+| 桥接无网络 | `request-fetch.test.js` 替换 `globalThis.fetch` | PASS：零调用 |
+| 未信任 Host | `bundled-routes.test.js` | PASS：probe `TRUST_REQUIRED`；create 403 且不触发 create-bot |
+
+### 真实反向代理验收
+
+环境：隔离 `DSH_HOME=.tmp-review/e2e-bot024/data`，DSH `0.2.1-rc.4`、DS Bot `0.2.4`、插件工作区源码；DSH 监听 `127.0.0.1:4320`，Node 反向代理 `8088` 保留公网 Host。
+
+启动参数：
+
+```bash
+dsh --profile web --host 127.0.0.1 --port 4320 --no-open \
+  --public-url http://dsh.example.com:8088 \
+  --trusted-host dsh.example.com:8088
+```
+
+代理：`http://127.0.0.1:8088` → `http://127.0.0.1:4320`，请求头保留 `Host: dsh.example.com:8088`。
+
+| 场景 | 实测 |
+|---|---|
+| token 交换 | `303`，cookie authority 为 `dsh.example.com:8088` |
+| 代理下探测（带 cookie） | `{"status":"ready",...}`，无 `incompatible` / `loopback Host` |
+| 代理下创建 | HTTP `200`，`botId=session-0439a267-6e8d-4d95-8c44-377c13d4f217`，DS-Bot 状态出现 «Proxy Host Smoke Bot» |
+| 未信任 Host 探测 | `{"status":"unknown","code":"TRUST_REQUIRED","reason":"DSH rejected the request (403)"}` |
+| 未信任 Host 创建 | HTTP `403`，`code=TRUST_REQUIRED`，未调用 create-bot |
+
+### 结论
+
+反向代理导致的 loopback 误判已修复：入站信任由 DSH 统一 admission 裁决，DS-Bot 调用走进程内 owner Peer，不产生网络回环目标，也不搬运浏览器凭据；真实代理下探测与创建均成功，未信任 Host 被拒绝。

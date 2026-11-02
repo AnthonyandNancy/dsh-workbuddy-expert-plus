@@ -120,7 +120,7 @@ test('a prompt edited from the route baseline is accepted by the Bot service', a
     async call(endpoint, payload) {
       calls.push({ endpoint, payload })
       if (endpoint === 'state') return { bots: [], models: [], readOnly: false }
-      if (endpoint === 'create-bot') return { id: 'bot-edited', name: payload.name, role: payload.role, instructions: payload.instructions }
+      if (endpoint === 'create-bot') return { id: 'bot-edited', name: payload.name, role: payload.role, instructions: String(payload.instructions).trim() }
       throw new Error(`unexpected endpoint ${endpoint}`)
     },
   }
@@ -213,7 +213,7 @@ test('bot create with the untouched bundled prompt reads it through the producti
     async call(endpoint, payload) {
       calls.push({ endpoint, payload })
       if (endpoint === 'state') return { bots: [], models: [], readOnly: false }
-      if (endpoint === 'create-bot') return { id: 'bot-default', name: payload.name, role: payload.role, instructions: payload.instructions }
+      if (endpoint === 'create-bot') return { id: 'bot-default', name: payload.name, role: payload.role, instructions: String(payload.instructions).trim() }
       throw new Error(`unexpected endpoint ${endpoint}`)
     },
   }
@@ -258,7 +258,7 @@ test('bot create accepts the largest bundled prompt, not just a small one', asyn
     async call(endpoint, payload) {
       calls.push({ endpoint, payload })
       if (endpoint === 'state') return { bots: [], models: [], readOnly: false }
-      if (endpoint === 'create-bot') return { id: 'bot-big', name: payload.name, role: payload.role, instructions: payload.instructions }
+      if (endpoint === 'create-bot') return { id: 'bot-big', name: payload.name, role: payload.role, instructions: String(payload.instructions).trim() }
       throw new Error(`unexpected endpoint ${endpoint}`)
     },
   }
@@ -304,10 +304,6 @@ function fakeBridgeConnection({ rejection } = {}) {
   const calls = []
   const peer = { id: 'peer-owner' }
   const connection = {
-    requestRejection(request) {
-      calls.push({ kind: 'trust', headers: request.headers })
-      return rejection
-    },
     admit(request) {
       calls.push({ kind: 'admit', headers: request.headers })
       return rejection === undefined ? { peer } : { rejection }
@@ -341,10 +337,10 @@ test('a trusted proxied Host reaches the DS-Bot probe through the in-process bri
   )
   assert.equal(response.status, 200)
   assert.equal(response.body.status, 'ready')
-  assert.deepEqual(calls.find((call) => call.kind === 'trust'), {
-    kind: 'trust',
+  assert.deepEqual(calls.filter((call) => call.kind === 'admit'), [{
+    kind: 'admit',
     headers: { host: 'dsh.example.com', origin: 'https://dsh.example.com', cookie: 'session=abc' },
-  })
+  }])
   const bridged = calls.find((call) => call.kind === 'fetch')
   assert.equal(bridged.url, 'http://dsh.inprocess/api/bot')
   assert.equal(bridged.headers.cookie, undefined)
@@ -396,4 +392,41 @@ test('a missing connection service fails closed', async () => {
   await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/environment').handler(req({ headers: { host: 'dsh.example.com' } }), response)
   assert.equal(response.status, 200)
   assert.equal(response.body.code, 'TRUST_UNAVAILABLE')
+})
+
+test('a proxy-like connection whose methods throw on repeat reads is admitted once', async () => {
+  const server = fakeServer()
+  const calls = []
+  const peer = { id: 'proxy-peer' }
+  const backing = {
+    admit(request) { calls.push({ kind: 'admit', headers: request.headers }); return { peer } },
+    createSharedFetchHandler(channel) { calls.push({ kind: 'handler', channel }); return { async fetch() { return Response.json({ ok: true, value: { bots: [], models: [], readOnly: false } }) } } },
+  }
+  let admitReads = 0
+  const connection = new Proxy(backing, {
+    get(target, prop, receiver) {
+      if (prop === 'admit') {
+        admitReads += 1
+        calls.push({ kind: 'get-admit' })
+        if (admitReads > 1) throw new Error('admit must be read once')
+        return target.admit.bind(receiver)
+      }
+      return Reflect.get(target, prop, receiver)
+    },
+  })
+  mountBundledMarketRoutes({ webServer: Object.assign(server, { getOrigin: () => 'http://127.0.0.1:3080' }), connection }, {
+    catalog,
+    probe: async ({ fetchImpl }) => {
+      await fetchImpl('api/bot', { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{"endpoint":"state"}' })
+      return { status: 'ready' }
+    },
+  })
+  const response = res()
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/environment').handler(
+    req({ headers: { host: 'dsh.example.com' } }),
+    response,
+  )
+  assert.equal(response.status, 200)
+  assert.equal(response.body.status, 'ready')
+  assert.equal(calls.filter((call) => call.kind === 'admit').length, 1)
 })

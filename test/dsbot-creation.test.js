@@ -22,7 +22,7 @@ function fakeApi({ readOnly = null, bots = [], failOnCreate = null } = {}) {
       if (endpoint === 'state') return state
       if (endpoint === 'create-bot') {
         if (failOnCreate !== null) throw failOnCreate
-        const bot = { id: 'bot-1', name: payload.name, role: payload.role, instructions: payload.instructions }
+        const bot = { id: 'bot-1', name: payload.name, role: payload.role, instructions: String(payload.instructions).trim() }
         state.bots.push(bot)
         return bot
       }
@@ -132,4 +132,22 @@ test('an edited prompt is accepted only when based on the exact bundled prompt',
   assert.equal(result.verified, true)
   const sent = api.calls.find((call) => call.endpoint === 'create-bot')
   assert.ok(sent.payload.instructions.endsWith('\nEXTRA'))
+})
+
+test('a prompt with trailing whitespace is accepted when DS-Bot trims it', async () => {
+  const api = fakeApi()
+  const service = createBotService({ adapter: createBundledSourceAdapter(catalog), api })
+  const expertId = await catalog.firstId()
+  // DS-Bot stores String(instructions).trim(); the submit path must compare the
+  // same value or every real multi-line prompt ending in a newline fails.
+  const prompt = `${await catalog.readPrompt(expertId)}\n`
+  const result = await service.create({
+    expertId,
+    name: 'Trimmed Bot',
+    role: 'R',
+    instructions: prompt,
+    basePromptSha256: (await catalog.find(expertId)).files.find((file) => file.path === 'role.md').sha256,
+  })
+  assert.equal(result.verified, true)
+  assert.equal(api.calls.find((call) => call.endpoint === 'create-bot').payload.instructions, prompt)
 })
