@@ -4,7 +4,7 @@
 
 **Goal:** 让 DSH Web 经反向代理/公网域名访问时，DS-Bot 环境探测与 Bot 创建不再因 loopback Host 误报“版本不兼容”，同时不扩大出站/信任面。
 
-**Architecture:** 入站准入直接委托 DSH `connection.requestRejection()`；DS-Bot 调用通过 `connection.admit()` 取 owner Peer，再用 `connection.createSharedFetchHandler('/api')` 进程内桥接，不读取请求 `Host`/`DSH_WEB_URL`，也不转发浏览器凭据。路由把真实失败码（`TRUST_REQUIRED`、`BRIDGE_UNAVAILABLE`、`ABSENT`、`READ_ONLY`、`UNKNOWN`、`INCOMPATIBLE`）透出，客户端按码显示可操作文案。
+**Architecture:** 入站准入通过 DSH `connection.admit()` 一次完成 Host/Origin 与浏览器认证，返回 owner Peer；再用 `connection.createSharedFetchHandler('/api')` 进程内桥接，不读取请求 `Host`/`DSH_WEB_URL`，也不转发浏览器凭据。路由把真实失败码（`TRUST_REQUIRED`、`BRIDGE_UNAVAILABLE`、`ABSENT`、`READ_ONLY`、`UNKNOWN`、`INCOMPATIBLE`）透出，客户端按码显示可操作文案。
 
 **Tech Stack:** Node.js >= 20 ESM（验收使用 Node 24.19.0）、`node:test`、Cordis/DSH `webServer` + `connection` 服务、原生 Fetch、DS-Bot `POST api/bot`、Playwright（真实 DSH Web + 反向代理验收）。
 
@@ -15,7 +15,7 @@
 - 测试运行时：Node `24.19.0`（PATH 中的 `node` 可能是 16，先执行 `export PATH=/d/Develop/nvm/v24.19.0:$PATH`）。
 - 目标宿主：DSH `0.2.1-rc.4`、DS Bot `0.2.4`；插件自身 `0.2.1`。
 - 不修改 DSH、DS-Bot 上游源码；不新增第三方依赖。
-- 入站信任唯一来源：`ctx.connection.requestRejection({ headers })`；禁止在插件内另写 loopback/`trustedHosts`/Origin 规则。
+- 入站信任唯一来源：`ctx.connection.admit({ headers })`；禁止在插件内另写 loopback/`trustedHosts`/Origin 规则。
 - 出站唯一路径：`connection.createSharedFetchHandler('/api')` + `connection.admit()` 的 owner Peer；禁止用请求 `Host`、`Origin`、`X-Forwarded-*`、`DSH_WEB_URL`、`publicUrl` 拼接任何网络 URL。
 - 桥接请求不得携带 `cookie`、`authorization`、`host`、`x-forwarded-*`、`origin`；不得调用全局 `fetch`。
 - 不写浏览器 `localStorage['ds-bot:*']`，不注入宿主 DOM。
@@ -32,7 +32,7 @@
 |---|---|---|
 | `src/adapters/request-fetch.js` | 固定目标构造、凭据剥离、目标合法性 | 修改 |
 | `test/request-fetch.test.js` | 固定目标/凭据/恶意输入单元测试 | 修改 |
-| `src/importer/bundled-routes.js` | 入站 `requestRejection`、错误码、固定目标注入 | 修改 |
+| `src/importer/bundled-routes.js` | 入站 `admit`、错误码、桥接 fetch 注入 | 修改 |
 | `test/bundled-routes.test.js` | 代理 Host 探测/创建/403/无出站集成测试 | 修改 |
 | `src/importer/index.js` | 从宿主注入 `webServer`/`connection` 依赖 | 修改 |
 | `test/plugin-lifecycle.test.js` | 注入契约与缺服务降级测试 | 修改 |
@@ -62,7 +62,7 @@
   - 缺 `admit`/`createSharedFetchHandler` 时抛 `{ code: 'BRIDGE_UNAVAILABLE' }`；
   - handler 返回非 `Response` 时抛 `{ code: 'INCOMPATIBLE' }`。
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 ```js
 import test from 'node:test'
@@ -144,7 +144,7 @@ test('a non-Response handler result is incompatible, not a success', async () =>
 })
 ```
 
-- [ ] **Step 2: 运行测试确认 RED**
+- [x] **Step 2: 运行测试确认 RED**
 
 Run:
 ```bash
@@ -152,7 +152,7 @@ node --test test/request-fetch.test.js
 ```
 Expected: FAIL，旧实现仍读取 `request.headers.host`/转发 cookie，或 `createSharedFetchHandler` 未被调用。
 
-- [ ] **Step 3: 实现进程内桥接**
+- [x] **Step 3: 实现进程内桥接**
 
 ```js
 /**
@@ -207,7 +207,7 @@ export function createBotRequestFetch({ connection, request } = {}) {
 
 > `Request`/`Response` 来自 Node 20+ 全局；实现不得调用全局 `fetch`，测试会替换 `globalThis.fetch` 并断言零调用。
 
-- [ ] **Step 4: 运行测试确认 GREEN**
+- [x] **Step 4: 运行测试确认 GREEN**
 
 Run:
 ```bash
@@ -215,7 +215,7 @@ node --test test/request-fetch.test.js
 ```
 Expected: PASS，4 tests，0 failed。
 
-- [ ] **Step 5: 提交**
+- [x] **Step 5: 提交**
 
 ```bash
 git add src/adapters/request-fetch.js test/request-fetch.test.js
@@ -224,7 +224,7 @@ git commit -m "fix: bridge DS-Bot requests through DSH's in-process api handler"
 
 ---
 
-### Task 2: 路由入站委托 DSH `requestRejection` 并使用桥接 fetch
+### Task 2: 路由入站委托 DSH `connection.admit()` 并使用桥接 fetch
 
 **Files:**
 - Modify: `src/importer/bundled-routes.js:1-90`（删除本地 `sameOrigin`，新增 `requestTrust`，替换 3 处 `createBotRequestFetch`）
@@ -232,15 +232,14 @@ git commit -m "fix: bridge DS-Bot requests through DSH's in-process api handler"
 
 **Interfaces:**
 - Consumes:
-  - `hostCtx.connection.requestRejection({ headers }): 401 | 403 | undefined`
   - `hostCtx.connection.admit({ headers }): { peer } | { rejection }`
   - `hostCtx.connection.createSharedFetchHandler('/api')`
 - Produces:
   - `mountBundledMarketRoutes(hostCtx, { catalog, installer, botService, probe, botEnabled })`
   - `hostCtx` 形状：`{ webServer, connection }`
-  - `requestTrust(hostCtx, request)` 返回 `{ ok: true }` 或 `{ ok: false, code, reason }`。
+  - `requestTrust(hostCtx, request)` 返回 `{ ok: true, peer }` 或 `{ ok: false, code, reason }`。
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 在 `test/bundled-routes.test.js` 末尾追加（直接使用以下测试）：
 
@@ -249,10 +248,6 @@ function fakeBridgeConnection({ rejection } = {}) {
   const calls = []
   const peer = { id: 'peer-owner' }
   const connection = {
-    requestRejection(request) {
-      calls.push({ kind: 'trust', headers: request.headers })
-      return rejection
-    },
     admit(request) {
       calls.push({ kind: 'admit', headers: request.headers })
       return rejection === undefined ? { peer } : { rejection }
@@ -344,47 +339,52 @@ test('a missing connection service fails closed', async () => {
 })
 ```
 
-- [ ] **Step 2: 运行测试确认 RED**
+- [x] **Step 2: 运行测试确认 RED**
 
 Run:
 ```bash
 node --test --test-name-pattern="trusted proxied Host|untrusted proxied Host|untrusted create POST|missing connection" test/bundled-routes.test.js
 ```
-Expected: FAIL，`connection.requestRejection` 未被调用，或仍因 `same-origin required`/`loopback Host` 报错。
+Expected: FAIL，`connection.admit` 未被调用，或仍因 `same-origin required`/`loopback Host` 报错。
 
-- [ ] **Step 3: 实现 trust 与桥接注入**
+- [x] **Step 3: 实现 trust 与桥接注入**
 
 在 `src/importer/bundled-routes.js` 顶部删除 `sameOrigin()`，新增：
 
 ```js
 /**
- * Delegate the browser-trust fence to DSH's Connection service. It is the
- * single authority for loopback, listener-bind, `trustedHosts`, Origin and
- * Sec-Fetch-Site policy, and it also enforces the browser/API credential.
+ * Admit the incoming browser request exactly once through DSH's Connection
+ * service (Host/Origin fence + signed browser credential). The returned Peer
+ * is reused by the in-process /api bridge.
  *
- * @returns {{ ok: true } | { ok: false, code: 'TRUST_REQUIRED'|'TRUST_UNAVAILABLE'|'BRIDGE_UNAVAILABLE', reason: string }}
+ * @returns {{ ok: true, peer: object } | { ok: false, code: 'TRUST_REQUIRED'|'TRUST_UNAVAILABLE', reason: string }}
  */
 function requestTrust(ctx, request) {
-  const reject = ctx?.connection?.requestRejection
-  if (typeof reject !== 'function') {
-    return { ok: false, code: 'TRUST_UNAVAILABLE', reason: 'DSH connection.requestRejection is unavailable; upgrade DSH Web' }
+  let admit
+  try {
+    admit = ctx?.connection?.admit
+  } catch (error) {
+    return { ok: false, code: 'TRUST_UNAVAILABLE', reason: error instanceof Error ? error.message : String(error) }
+  }
+  if (typeof admit !== 'function') {
+    return { ok: false, code: 'TRUST_UNAVAILABLE', reason: 'DSH connection.admit is unavailable; upgrade DSH Web' }
   }
   try {
-    const rejection = reject({ headers: request?.headers ?? {} })
-    if (rejection === undefined) return { ok: true }
-    if (rejection === 401) return { ok: false, code: 'TRUST_REQUIRED', reason: 'the DSH browser session is missing, expired, or bound to another authority' }
-    if (rejection === 403) return { ok: false, code: 'TRUST_REQUIRED', reason: 'this authority is not loopback, the listener bind address, or a configured trustedHosts entry' }
-    return { ok: false, code: 'TRUST_REQUIRED', reason: `DSH rejected the request (${String(rejection)})` }
+    const admission = admit.call(ctx.connection, { headers: request?.headers ?? {} })
+    if (admission !== null && typeof admission === 'object' && 'peer' in admission) {
+      return { ok: true, peer: admission.peer }
+    }
+    const rejection = admission?.rejection
+    return { ok: false, code: 'TRUST_REQUIRED', reason: `DSH rejected the request (${String(rejection ?? 'no peer')})` }
   } catch (error) {
     return { ok: false, code: 'TRUST_UNAVAILABLE', reason: error instanceof Error ? error.message : String(error) }
   }
 }
 
 /** Build the in-process fetch for one already-trusted request. */
-function botFetchFor(ctx, request) {
-  return createBotRequestFetch({ connection: ctx?.connection, request })
+function botFetchFor(ctx, request, peer) {
+  return createBotRequestFetch({ connection: ctx?.connection, request, peer })
 }
-```
 
 把 `guard()` 改为：
 
@@ -427,9 +427,9 @@ function botFetchFor(ctx, request) {
 sendJson(response, 200, { bindings: await botService.bindings({ fetchImpl: botFetchFor(hostCtx, request) }) })
 ```
 
-> 注意：`botFetchFor` 内部仍会调用 `connection.admit()`；路由层 `requestTrust()` 先做一次 `requestRejection()`，两者是不同 API，不能互相替代。
+> 注意：路由层 `requestTrust()` 只做一次 `connection.admit()`，并把返回的 peer 传给 `botFetchFor`；桥接不得再次 admission。
 
-- [ ] **Step 4: 运行测试确认 GREEN**
+- [x] **Step 4: 运行测试确认 GREEN**
 
 Run:
 ```bash
@@ -437,7 +437,7 @@ node --test test/bundled-routes.test.js
 ```
 Expected: PASS，现有测试 + 新增 4 tests，0 failed。
 
-- [ ] **Step 5: 提交**
+- [x] **Step 5: 提交**
 
 ```bash
 git add src/importer/bundled-routes.js test/bundled-routes.test.js
@@ -460,7 +460,7 @@ git commit -m "fix: trust proxied Bot routes through DSH connection"
   - `mountImporter(ctx, { ..., webServer, connection })`
   - `mountBundledMarketRoutes({ webServer, connection }, deps)`
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 在 `test/plugin-lifecycle.test.js` 末尾追加：
 
@@ -468,7 +468,7 @@ git commit -m "fix: trust proxied Bot routes through DSH connection"
 test('the importer forwards the host webServer and connection services', async () => {
   const { importerServicesOf } = await import('../src/importer/index.js')
   const webServer = { getOrigin: () => 'http://127.0.0.1:3080' }
-  const connection = { requestRejection: () => undefined, admit: () => ({ peer: {} }), createSharedFetchHandler: () => ({}) }
+  const connection = { admit: () => ({ peer: {} }), createSharedFetchHandler: () => ({}) }
   const ctx = { get: (name) => ({ webServer, connection })[name] }
   const services = importerServicesOf(ctx)
   assert.equal(services.webServer, webServer)
@@ -481,7 +481,7 @@ test('the importer forwards the host webServer and connection services', async (
 > `source` 是文件顶部已读取的 `client/client.js`；该测试还要读取 `src/index.js`，在同一测试内用
 > `const hostSource = readFileSync(join(root, 'src', 'index.js'), 'utf8')`，并把断言改成 `hostSource`。
 
-- [ ] **Step 2: 运行测试确认 RED**
+- [x] **Step 2: 运行测试确认 RED**
 
 Run:
 ```bash
@@ -489,7 +489,7 @@ node --test --test-name-pattern="forwards the host webServer and connection" tes
 ```
 Expected: FAIL，`importerServicesOf` 未导出，或源码仍是 `['webServer', 'settings']`。
 
-- [ ] **Step 3: 实现透传**
+- [x] **Step 3: 实现透传**
 
 `src/importer/index.js` 顶部新增：
 
@@ -517,7 +517,7 @@ export function importerServicesOf(ctx) {
 
 其余 `mountImporter` 调用保持不变；`importerCtx` 自身已带 `webServer`/`connection`，由 `importerServicesOf(ctx)` 读取。
 
-- [ ] **Step 4: 运行测试确认 GREEN**
+- [x] **Step 4: 运行测试确认 GREEN**
 
 Run:
 ```bash
@@ -525,7 +525,7 @@ node --test test/plugin-lifecycle.test.js test/bundled-routes.test.js
 ```
 Expected: PASS，所有 lifecycle + bundled route tests 通过。
 
-- [ ] **Step 5: 提交**
+- [x] **Step 5: 提交**
 
 ```bash
 git add src/index.js src/importer/index.js test/plugin-lifecycle.test.js
@@ -547,7 +547,7 @@ git commit -m "fix: inject DSH connection into the importer"
   - `botEnvironmentText(env, t): string`
   - `code` 优先于 `status`；`ready` 返回空串。
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 在 `test/client-bot-ui.test.js` 末尾追加：
 
@@ -592,7 +592,7 @@ test('the Bot banner names each environment failure precisely', async () => {
 })
 ```
 
-- [ ] **Step 2: 运行测试确认 RED**
+- [x] **Step 2: 运行测试确认 RED**
 
 Run:
 ```bash
@@ -600,7 +600,7 @@ node --test --test-name-pattern="names each environment failure" test/client-bot
 ```
 Expected: FAIL，`module.botEnvironmentText is not a function`。
 
-- [ ] **Step 3: 新增文案**
+- [x] **Step 3: 新增文案**
 
 中文（`client/client.js` 现有 `botUnavailable` 附近）：
 
@@ -622,7 +622,7 @@ Expected: FAIL，`module.botEnvironmentText is not a function`。
     botIncompatible: 'DS-Bot returned an incompatible response; Bot creation is disabled',
 ```
 
-- [ ] **Step 4: 新增纯函数并接入**
+- [x] **Step 4: 新增纯函数并接入**
 
 在 `BotMarketOverlay` 之前新增：
 
@@ -672,12 +672,12 @@ botBridgeUnavailable: '当前 DSH 版本无法在进程内连接 DS-Bot，请升
 botBridgeUnavailable: 'This DSH version cannot reach DS-Bot in-process; upgrade DSH Web',
 ```
 
-- [ ] **Step 5: 更新现有源码契约测试**
+- [x] **Step 5: 更新现有源码契约测试**
 
 `test/client-bot-ui.test.js` 的 `read-only and unknown environments expose no create action` 目前断言
 `status === 'ready'`/`disabled` 等源码片段；保留该测试，不要删除。新增的纯函数测试覆盖文案分支。
 
-- [ ] **Step 6: 运行测试确认 GREEN**
+- [x] **Step 6: 运行测试确认 GREEN**
 
 Run:
 ```bash
@@ -685,7 +685,7 @@ node --test test/client-bot-ui.test.js
 ```
 Expected: PASS，现有 Bot UI tests + 新增 1 test，0 failed。
 
-- [ ] **Step 7: 提交**
+- [x] **Step 7: 提交**
 
 ```bash
 git add client/client.js test/client-bot-ui.test.js
@@ -706,14 +706,14 @@ git commit -m "fix: name the real DS-Bot environment failure in the Bot dialog"
 - Consumes: Tasks 1-4 的实现。
 - Produces: 可复核的自动化 + 真实代理证据。
 
-- [ ] **Step 1: 运行定向测试**
+- [x] **Step 1: 运行定向测试**
 
 ```bash
 node --test test/request-fetch.test.js test/bundled-routes.test.js test/plugin-lifecycle.test.js test/client-bot-ui.test.js
 ```
 Expected: PASS，0 failed。
 
-- [ ] **Step 2: 运行全量测试**
+- [x] **Step 2: 运行全量测试**
 
 ```bash
 node --test test/*.test.js
@@ -725,7 +725,7 @@ Expected:
 - `npm test`：全部 tests + 4 smoke scripts 通过；
 - `check:package`：通过，文件计数与资源计数输出正常。
 
-- [ ] **Step 3: 启动真实反向代理形态**
+- [x] **Step 3: 启动真实反向代理形态**
 
 在 `.tmp-review/proxy/` 创建最小反向代理（不新增项目依赖）：
 
@@ -777,7 +777,7 @@ PROXY_PORT=8088 UPSTREAM=http://127.0.0.1:3080 PUBLIC_HOST=dsh.example.com:8088 
 echo $! > .tmp-review/proxy/proxy.pid
 ```
 
-- [ ] **Step 4: 用 Playwright 验证探测与创建**
+- [x] **Step 4: 用 Playwright 验证探测与创建**
 
 先完成 DSH 的 token cookie 交换：从 `dsh.log` 取出 `?token=` 的完整 URL，把其中 authority 替换为 `dsh.example.com:8088`（保留 path/query），用同一 Playwright 上下文打开一次，随后打开 `http://dsh.example.com:8088/`。
 
@@ -803,7 +803,7 @@ playwright-cli screenshot --name dsbot-proxy-host-create-fixed
 ```
 把截图落到 `output/playwright/dsbot-proxy-host-fixed.png` 与 `output/playwright/dsbot-proxy-host-create-fixed.png`。
 
-- [ ] **Step 5: 断言负向安全场景**
+- [x] **Step 5: 断言负向安全场景**
 
 用 `curl` 直接向 DSH 监听端口发一个未信任 Host（绕过代理，模拟 DNS rebinding/恶意域名到达本机）：
 
@@ -820,7 +820,7 @@ curl -sS -o .tmp-review/proxy/untrusted-create.json -w '%{http_code}'   -H 'Host
 ```
 Expected: HTTP `403`，响应含 `"code":"TRUST_REQUIRED"`，且 `dsh.log` 中无 `create-bot` 调用记录。
 
-- [ ] **Step 6: 更新验证报告**
+- [x] **Step 6: 更新验证报告**
 
 在 `docs/verification-report.md` 末尾追加（执行后把 `N` 替换为实际输出数字）：
 
@@ -836,7 +836,7 @@ Expected: HTTP `403`，响应含 `"code":"TRUST_REQUIRED"`，且 `dsh.log` 中�
 
 ### 修复
 
-- 入站：所有 Bot 路由委托 `ctx.connection.requestRejection({headers})`；401/403 映射为 `TRUST_REQUIRED`，缺失服务为 `TRUST_UNAVAILABLE`。
+- 入站：所有 Bot 路由委托 `ctx.connection.admit({headers})`；401/403 映射为 `TRUST_REQUIRED`，缺失服务为 `TRUST_UNAVAILABLE`。
 - 进程内桥接：`createBotRequestFetch({connection, request})` 用 `connection.admit()` 取 owner Peer，再用 `connection.createSharedFetchHandler('/api')` 调 `api/bot`；不发网络请求，不转发 cookie/authorization。
 - 客户端：`TRUST_REQUIRED`/`BRIDGE_UNAVAILABLE`/`absent`/`unknown`/`incompatible` 分别显示可操作文案。
 
@@ -863,7 +863,7 @@ Expected: HTTP `403`，响应含 `"code":"TRUST_REQUIRED"`，且 `dsh.log` 中�
 反向代理导致的 loopback 误判已修复；入站信任由 DSH 统一裁决，DS-Bot 调用走进程内 owner Peer，不产生网络回环目标，也不搬运浏览器凭据。
 ```
 
-- [ ] **Step 7: 提交**
+- [x] **Step 7: 提交**
 
 ```bash
 git add docs/verification-report.md output/playwright/dsbot-proxy-host-fixed.png output/playwright/dsbot-proxy-host-create-fixed.png
@@ -881,7 +881,7 @@ git commit -m "docs: verify DS-Bot behind a trusted reverse proxy"
 3. **独立复核**：由另一个 review subagent 检查：
    - 是否仍有请求头参与桥接 URL；
    - 是否仍复制 cookie/authorization；
-   - 是否绕过 `requestRejection`；
+   - 是否绕过 `connection.admit()`；
    - 是否把 `TRUST_REQUIRED` 误标 `INCOMPATIBLE`；
    - 测试是否只验证 mock 而没验证真实调用契约。
 4. **P0/P1 清零**：任何安全/正确性问题必须先修再进入下一任务。

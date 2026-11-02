@@ -124,11 +124,11 @@
 
 ## 5. 方案比较
 
-### 方案 A（推荐）：入站委托 DSH `requestRejection` + 进程内 owner Peer 桥接
+### 方案 A（推荐）：入站委托 DSH `connection.admit()` + 进程内 owner Peer 桥接
 
 **做法：**
 
-1. **入站准入直接委托宿主** `ctx.connection.requestRejection(request)`：
+1. **入站准入直接委托宿主** `ctx.connection.admit({ headers })`：
    - 该 API 是 DSH 的公开契约，内部已实现 loopback、监听绑定地址、`trustedHosts`、Origin 同源、`sec-fetch-site: cross-site` 拒绝等全部规则；
    - 插件不再复制一套容易漂移的 authority 算法；
    - `undefined` 表示通过，`401/403` 原样作为拒绝结果；
@@ -162,8 +162,8 @@
 
 **风险/代价：**
 
-- 依赖 `connection.requestRejection()`、`connection.admit()`、`connection.createSharedFetchHandler()` 三项公开契约；旧宿主缺任一方法必须安全拒绝并提示升级，不放宽信任；
-- `requestRejection`/`admit` 同时检查浏览器认证：未登录/无浏览器 cookie 的请求会得到 401，这与其 `/api` 行为一致；测试必须覆盖“可信但未认证”和“已认证”两种；
+- 依赖 `connection.admit()` 与 `connection.createSharedFetchHandler()` 两项公开契约；旧宿主缺任一方法必须安全拒绝并提示升级，不放宽信任；
+- `admit` 同时检查 Host/Origin 与浏览器认证：未登录/无浏览器 cookie 的请求会得到 401，这与其 `/api` 行为一致；测试必须覆盖“可信但未认证”和“已认证”两种；
 - 桥接请求是 WHATWG `Request`，其 URL 只用于取 `pathname`；必须写测试证明请求头里的公网 Host/Origin 不会进入 handler 的目标；
 - DS-Bot handler 若未来读取 `request.headers.cookie`，桥接将没有该头；需在升级时显式传 owner Peer 或调整协议，不能回退为搬运 cookie。
 
@@ -199,7 +199,7 @@
 | 模块 | 责任 | 输入 | 输出 |
 |---|---|---|---|
 | `src/adapters/request-fetch.js`（改造） | 把 DS-Bot 协议调用桥到宿主共享 `/api` handler | `connection`（`admit` / `createSharedFetchHandler`）, `request.headers` | `fetch(input, init)`；固定内部 URL，携带 owner Peer |
-| `src/importer/bundled-routes.js`（改造） | 入站委托 `requestRejection`，并注入桥接 fetch | `hostCtx`（webServer/connection/settings） | 结构化 HTTP 错误与 probe 状态 |
+| `src/importer/bundled-routes.js`（改造） | 入站委托 `admit`，并注入桥接 fetch | `hostCtx`（webServer/connection/settings） | 结构化 HTTP 错误与 probe 状态 |
 | `src/importer/index.js`（改造） | 把宿主 facts 注入路由 | `webServer`, `connection` | `connection`（桥接）、`getOrigin`（仅诊断） |
 | `client/client.js`（改造） | 展示真实原因 | `environment` payload | `botTrustRequired` / `botAbsent` / `botUnknown` / `botIncompatible` |
 
@@ -207,15 +207,16 @@
 
 对每个请求：
 
-1. 取 `hostCtx.connection`；缺失 → `TRUST_UNAVAILABLE`（不静默放行）。
-2. 调用 `connection.requestRejection({ headers: request.headers })`：
-   - `undefined` → 通过；
-   - `401` → 未认证（浏览器 cookie 缺失/过期/authority 不匹配）；
-   - `403` → Host/Origin 不可信或 cross-site。
-3. 把 `401/403` 原样作为拒绝状态；`environment` 的 probe 以 200 返回
+1. 取 `hostCtx.connection`；缺失或 `admit` 不可用 → `TRUST_UNAVAILABLE`（不静默放行）。
+2. 调用一次 `connection.admit({ headers: request.headers })`：
+   - 返回 `{ peer }` → 通过，并保留 peer 供桥接复用；
+   - 返回 `{ rejection: 401 }` → 未认证（浏览器 cookie 缺失/过期/authority 不匹配）；
+   - 返回 `{ rejection: 403 }` → Host/Origin 不可信或 cross-site。
+3. 把拒绝映射为 `TRUST_REQUIRED`；`environment` 的 probe 以 200 返回
    `{ status: 'unknown', code: 'TRUST_REQUIRED', reason }`，写路由返回 403。
-4. **不**在插件内复制 loopback/`trustedHosts`/Origin 规则；DSH 是该策略的唯一权威。
-5. 若 `requestRejection` 不存在（旧宿主），返回 `TRUST_UNAVAILABLE` 并提示升级 DSH；不退回宽松策略。
+4. **不**在插件内复制 loopback/`trustedHosts`/Origin 规则；DSH 的 `admit()` 是该策略的唯一权威。
+5. 每条路由**只调用一次** `admit()`；桥接复用返回的 peer，不重复 admission。
+6. 若 `admit` 不存在（旧宿主），返回 `TRUST_UNAVAILABLE` 并提示升级 DSH；不退回宽松策略。
 
 ### 6.3 进程内桥接算法
 
@@ -238,7 +239,7 @@
 
 ### 6.4 DS-Bot 认证/身份处理
 
-- **唯一路径**：入站 `requestRejection` 验证 Host/Origin + 浏览器 cookie；`admit` 返回该 cookie 对应的 owner Peer；桥接调用 `handler.fetch(request, peer)`。
+- **唯一路径**：入站 `admit()` 验证 Host/Origin + 浏览器 cookie，并返回该 cookie 对应的 owner Peer；桥接调用 `handler.fetch(request, peer)`。
 - 这是 DSH `/api` 自身的调用路径；DS-Bot 精确 Fetch 路由要求 owner Peer，因此能通过。
 - 不复制、不转发、不伪造浏览器 cookie；Peer 是进程内对象，不经过网络。
 - 若 `admit` 返回 401（cookie 缺失/过期/authority 不匹配）：probe 返回 `TRUST_REQUIRED`，提示重新登录/检查 `--trusted-host`。
@@ -251,17 +252,17 @@
 ```js
 {
   webServer: { host, port, protocol, getOrigin },
-  connection: { requestRejection(request), admit(request), createSharedFetchHandler(channel) },
+  connection: { admit(request), createSharedFetchHandler(channel) },
   fetchImpl?: typeof fetch,
 }
 ```
 
 - `environment` 路由：
-  - 先 `connection.requestRejection({ headers: request.headers })`；非 `undefined` → 200 + `{ status: 'unknown', code: 'TRUST_REQUIRED', reason }`（不误报 incompatible）。
+  - 先 `connection.admit({ headers: request.headers })`；无 `peer` → 200 + `{ status: 'unknown', code: 'TRUST_REQUIRED', reason }`（不误报 incompatible）。
   - 通过后 `probe({ fetchImpl: createBotRequestFetch({ connection, request }) })`。
 - `bot/create` 路由：
   - 保留 `POST` 方法检查和单飞锁；
-  - `requestRejection` 非 `undefined` → 403 `{ code: 'TRUST_REQUIRED' }`；
+  - `admit` 无 `peer` → 403 `{ code: 'TRUST_REQUIRED' }`；
   - `botService.create(..., { fetchImpl: createBotRequestFetch({ connection, request }) })`。
 - `bot/bindings`：同样用桥接 fetch；失败返回 502 但带 `code`。
 - `currentState()` 中 `botService.bindings()` 的静默 catch 保留，但记录 `warn` 一次，避免完全无诊断。
@@ -301,12 +302,12 @@
 
 ### 6.8 测试设计
 
-**单元：`request-rejection.test.js`（新）**
+**单元：`request-admission.test.js`（新）**
 
-- `requestRejection` 返回 `undefined` → 通过；
-- 返回 401/403 → 原样映射为 `TRUST_REQUIRED`，且不调用 probe；
-- `connection` 缺失或 `requestRejection` 不存在 → `TRUST_UNAVAILABLE`；
-- 传参必须是 `{ headers: request.headers }`，不能丢 headers 或传整个 request。
+- `admit` 返回 `{ peer }` → 通过；
+- 返回 `{ rejection: 401/403 }` → 映射为 `TRUST_REQUIRED`，且不调用 probe；
+- `connection` 缺失或 `admit` 不存在 → `TRUST_UNAVAILABLE`；
+- 传参必须是 `{ headers: request.headers }`；每条路由只调用一次 `admit`。
 
 **单元：`request-fetch.test.js`（改造）**
 
@@ -352,7 +353,7 @@
 
 - 分支级回滚：`git revert` 本分支提交即可恢复旧行为。
 - 配置回退：移除 `--trusted-host` 后，公网访问应回到明确的 `TRUST_REQUIRED` 提示（而非旧 `incompatible`）。
-- 若宿主版本差异导致 `connection.requestRejection` 不可用：返回 `TRUST_UNAVAILABLE` 并提示升级/配置，不静默放开。
+- 若宿主版本差异导致 `connection.admit` 不可用：返回 `TRUST_UNAVAILABLE` 并提示升级/配置，不静默放开。
 
 ---
 
@@ -360,11 +361,11 @@
 
 | 风险 | 影响 | 缓解 |
 |---|---|---|
-| 旧宿主无 `connection.requestRejection` | 代理域名无法判定 | 返回 `TRUST_UNAVAILABLE`，不降级为宽松 trust；文档给出升级要求 |
+| 旧宿主无 `connection.admit` | 代理域名无法判定 | 返回 `TRUST_UNAVAILABLE`，不降级为宽松 trust；文档给出升级要求 |
 | 宿主桥接 API 缺失/版本差异 | 创建失败 | 返回 `BRIDGE_UNAVAILABLE` 并提示升级；不回退为本机 HTTP 或搬运 cookie |
 | `admit()` 未返回 owner Peer | 精确 Fetch 路由 403 | probe 显示 `TRUST_REQUIRED`；测试覆盖 401/403 与正常 owner Peer |
-| 宿主 trust 行为随版本变化 | 安全边界不一致 | 不自实现 trust；直接委托 `requestRejection`；测试固定调用契约与失败映射 |
-| 代理剥离 Origin | 误放行 | 由 DSH `requestRejection` 统一裁决；插件不另写规则 |
+| 宿主 trust 行为随版本变化 | 安全边界不一致 | 不自实现 trust；直接委托 `admit`；测试固定调用契约与失败映射 |
+| 代理剥离 Origin | 误放行 | 由 DSH `admit` 统一裁决；插件不另写规则 |
 | 宿主桥接 handler 在监听前不可用 | 早期请求失败 | 路由 handler 内惰性创建；失败返回 503 `BRIDGE_UNAVAILABLE`，不缓存坏值 |
 | 出站错误被误标 incompatible | 误诊 | 错误码映射表 + 客户端分支文案 + 测试 |
 
@@ -384,6 +385,6 @@
 
 - **采用方案 A**，拒绝方案 B/C。
 - **出站唯一路径**：`connection.createSharedFetchHandler('/api')` + `connection.admit()` 的 owner Peer；不使用网络回环，请求头不参与目标。
-- **入站信任唯一来源**：DSH 的 `connection.requestRejection()`（loopback/绑定地址/`trustedHosts`/Origin）；不接受任意公网 Host。
+- **入站信任唯一来源**：DSH 的 `connection.admit()`（loopback/绑定地址/`trustedHosts`/Origin + 浏览器认证）；不接受任意公网 Host。
 - **不搬运 cookie**：Peer 是进程内对象；绝不把公网 cookie 发到 `127.0.0.1` 或伪造 Host。
 - **错误语义优先于“看起来能点”**：宁可明确提示 `TRUST_REQUIRED`/`BRIDGE_UNAVAILABLE`，不再把信任失败伪装成版本不兼容。

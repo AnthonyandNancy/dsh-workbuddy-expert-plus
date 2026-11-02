@@ -281,8 +281,8 @@ Bot mode (`侧边 WorkBuddy 专家`):
 
 | 检查 | 命令 | 结果 |
 |---|---|---|
-| 全量单测 | `node --test test/*.test.js` | PASS：114 tests, 0 failed |
-| 完整项目链 | `npm test` | PASS：114 tests + 4 smoke scripts |
+| 全量单测 | `node --test test/*.test.js` | PASS：115 tests, 0 failed |
+| 完整项目链 | `npm test` | PASS：115 tests + 4 smoke scripts |
 | 打包完整性 | `npm run check:package` | PASS：5,987 files, 429 experts, 5,946 resources |
 | 桥接无网络 | `request-fetch.test.js` 替换 `globalThis.fetch` | PASS：零调用 |
 | 未信任 Host | `bundled-routes.test.js` | PASS：probe `TRUST_REQUIRED`；create 403 且不触发 create-bot |
