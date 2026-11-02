@@ -29,6 +29,25 @@ function req({ method = 'GET', url = '/', headers = {}, body } = {}) {
     async *[Symbol.asyncIterator]() { if (body !== undefined) yield Buffer.from(JSON.stringify(body)) },
   }
 }
+
+function trustedHost(server) {
+  const connection = {
+    requestRejection() { return undefined },
+    admit() { return { peer: { id: 'test-owner' } } },
+    createSharedFetchHandler() {
+      return {
+        async fetch(request) {
+          const body = await request.json()
+          if (body.endpoint === 'state') return Response.json({ ok: true, value: { bots: [], models: [], readOnly: false } })
+          if (body.endpoint === 'create-bot') return Response.json({ ok: true, value: { id: 'bot-test', ...body.payload } })
+          return Response.json({ ok: false, error: { code: 'bot/not-found', message: 'unknown endpoint' } })
+        },
+      }
+    },
+  }
+  return { webServer: Object.assign(server, { getOrigin: () => 'http://127.0.0.1:3080' }), connection }
+}
+
 function res() {
   const r = { status: null, headers: null, chunks: [], ended: false }
   r.writeHead = (status, headers) => { r.status = status; r.headers = headers }
@@ -44,7 +63,7 @@ test('bundled state renders without WorkBuddy and carries both independent statu
     const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.6' })
     const botService = createBotService({ adapter, bindingsPath: join(dir, 'bindings.json') })
     const server = fakeServer()
-    const off = mountBundledMarketRoutes(server, { catalog, installer, botService, probe: async () => ({ status: 'absent' }) })
+    const off = mountBundledMarketRoutes(trustedHost(server), { catalog, installer, botService, probe: async () => ({ status: 'absent' }) })
     const stateRoute = server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/state')
     const response = res()
     await stateRoute.handler(req({ url: '/dsh-workbuddy-expert-plus/api/market/state' }), response)
@@ -66,7 +85,7 @@ test('bundled state renders without WorkBuddy and carries both independent statu
 test('market prompt route returns the complete bundled prompt through the production unified catalog', async () => {
   const unified = createUnifiedCatalog({ bundled: catalog, local: undefined, localEnabled: false })
   const server = fakeServer()
-  mountBundledMarketRoutes(server, { catalog: unified })
+  mountBundledMarketRoutes(trustedHost(server), { catalog: unified })
   const id = await catalog.firstId()
   const response = res()
   await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/prompt')
@@ -80,7 +99,7 @@ test('market prompt route returns the complete bundled prompt through the produc
 test('the prompt route returns the role.md baseline hash, not the aggregate content hash', async () => {
   const unified = createUnifiedCatalog({ bundled: catalog, local: undefined, localEnabled: false })
   const server = fakeServer()
-  mountBundledMarketRoutes(server, { catalog: unified })
+  mountBundledMarketRoutes(trustedHost(server), { catalog: unified })
   const id = await catalog.firstId()
   const expert = await catalog.find(id)
   const roleHash = expert.files.find((file) => file.path === 'role.md').sha256
@@ -108,7 +127,7 @@ test('a prompt edited from the route baseline is accepted by the Bot service', a
   const service = createBotService({ adapter, api })
   const id = await catalog.firstId()
   const server = fakeServer()
-  mountBundledMarketRoutes(server, { catalog: unified, botService: service })
+  mountBundledMarketRoutes(trustedHost(server), { catalog: unified, botService: service })
   const promptResponse = res()
   await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/prompt')
     .handler(req({ url: `/dsh-workbuddy-expert-plus/api/market/prompt?id=${id}` }), promptResponse)
@@ -149,7 +168,7 @@ test('Bot creation rejects read-only and duplicate names before create-bot', asy
     const api = { async call(endpoint, payload) { calls.push({ endpoint, payload }); if (endpoint === 'state') return state; throw new Error('must not create') } }
     const botService = createBotService({ adapter, api, bindingsPath: join(dir, 'bindings.json') })
     const server = fakeServer()
-    mountBundledMarketRoutes(server, { catalog, botService })
+    mountBundledMarketRoutes(trustedHost(server), { catalog, botService })
     const response = res()
     const id = await catalog.firstId()
     await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/bot/create').handler(
@@ -169,7 +188,7 @@ test('install action returns the complete overlay so the card keeps its installe
     const adapter = createBundledSourceAdapter(catalog)
     const installer = createInstallService({ adapter, expertsRoot: join(dir, 'experts'), pluginVersion: '0.1.6' })
     const server = fakeServer()
-    mountBundledMarketRoutes(server, { catalog, installer, botEnabled: false })
+    mountBundledMarketRoutes(trustedHost(server), { catalog, installer, botEnabled: false })
     const id = await catalog.firstId()
     const response = res()
     await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/install').handler(
@@ -200,7 +219,7 @@ test('bot create with the untouched bundled prompt reads it through the producti
   }
   const service = createBotService({ adapter, api })
   const server = fakeServer()
-  mountBundledMarketRoutes(server, { catalog: unified, botService: service })
+  mountBundledMarketRoutes(trustedHost(server), { catalog: unified, botService: service })
   const id = await catalog.firstId()
   const response = res()
   // The dialog sends the prompt it read from /market/prompt. It never omits
@@ -245,7 +264,7 @@ test('bot create accepts the largest bundled prompt, not just a small one', asyn
   }
   const service = createBotService({ adapter, api })
   const server = fakeServer()
-  mountBundledMarketRoutes(server, { catalog: unified, botService: service })
+  mountBundledMarketRoutes(trustedHost(server), { catalog: unified, botService: service })
   const response = res()
   await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/bot/create').handler(
     req({
@@ -263,7 +282,7 @@ test('bot create accepts the largest bundled prompt, not just a small one', asyn
 
 test('market state keeps the fields the market cards render', async () => {
   const server = fakeServer()
-  mountBundledMarketRoutes(server, { catalog, botEnabled: false })
+  mountBundledMarketRoutes(trustedHost(server), { catalog, botEnabled: false })
   const response = res()
   await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/state').handler(
     req({ url: '/dsh-workbuddy-expert-plus/api/market/state' }), response,
@@ -279,4 +298,102 @@ test('market state keeps the fields the market cards render', async () => {
   assert.equal(expert.name, undefined)
   assert.equal(expert.category, undefined,
     'bundled cards use displayName/categoryId; the client must read those names')
+})
+
+function fakeBridgeConnection({ rejection } = {}) {
+  const calls = []
+  const peer = { id: 'peer-owner' }
+  const connection = {
+    requestRejection(request) {
+      calls.push({ kind: 'trust', headers: request.headers })
+      return rejection
+    },
+    admit(request) {
+      calls.push({ kind: 'admit', headers: request.headers })
+      return rejection === undefined ? { peer } : { rejection }
+    },
+    createSharedFetchHandler(channel) {
+      calls.push({ kind: 'handler', channel })
+      return {
+        async fetch(request, admittedPeer) {
+          calls.push({ kind: 'fetch', url: request.url, headers: Object.fromEntries(request.headers), peer: admittedPeer })
+          return Response.json({ ok: true, value: { bots: [], models: [], readOnly: false } })
+        },
+      }
+    },
+  }
+  return { connection, calls, peer }
+}
+
+test('a trusted proxied Host reaches the DS-Bot probe through the in-process bridge', async () => {
+  const server = fakeServer()
+  const { connection, calls } = fakeBridgeConnection()
+  const probe = async ({ fetchImpl }) => {
+    const response = await fetchImpl('api/bot', { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{"endpoint":"state"}' })
+    const value = await response.json()
+    return value.ok ? { status: 'ready', state: value.value } : { status: 'incompatible' }
+  }
+  mountBundledMarketRoutes({ webServer: Object.assign(server, { getOrigin: () => 'http://127.0.0.1:3080' }), connection }, { catalog, probe })
+  const response = res()
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/environment').handler(
+    req({ headers: { host: 'dsh.example.com', origin: 'https://dsh.example.com', cookie: 'session=abc' } }),
+    response,
+  )
+  assert.equal(response.status, 200)
+  assert.equal(response.body.status, 'ready')
+  assert.deepEqual(calls.find((call) => call.kind === 'trust'), {
+    kind: 'trust',
+    headers: { host: 'dsh.example.com', origin: 'https://dsh.example.com', cookie: 'session=abc' },
+  })
+  const bridged = calls.find((call) => call.kind === 'fetch')
+  assert.equal(bridged.url, 'http://dsh.inprocess/api/bot')
+  assert.equal(bridged.headers.cookie, undefined)
+  assert.equal(bridged.peer.id, 'peer-owner')
+})
+
+test('an untrusted proxied Host is reported as TRUST_REQUIRED, not incompatible', async () => {
+  const server = fakeServer()
+  const { connection, calls } = fakeBridgeConnection({ rejection: 403 })
+  mountBundledMarketRoutes({ webServer: Object.assign(server, { getOrigin: () => 'http://127.0.0.1:3080' }), connection }, {
+    catalog,
+    probe: async () => { throw new Error('probe must not run for an untrusted request') },
+  })
+  const response = res()
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/environment').handler(
+    req({ headers: { host: 'evil.example' } }),
+    response,
+  )
+  assert.equal(response.status, 200)
+  assert.equal(response.body.status, 'unknown')
+  assert.equal(response.body.code, 'TRUST_REQUIRED')
+  assert.equal(calls.some((call) => call.kind === 'fetch'), false)
+})
+
+test('an untrusted create POST is refused before create-bot', async () => {
+  const server = fakeServer()
+  const { connection, calls } = fakeBridgeConnection({ rejection: 403 })
+  const botCalls = []
+  const botService = { async create() { botCalls.push('create'); throw new Error('must not run') }, async bindings() { return {} } }
+  mountBundledMarketRoutes({ webServer: Object.assign(server, { getOrigin: () => 'http://127.0.0.1:3080' }), connection }, { catalog, botService })
+  const response = res()
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/bot/create').handler(
+    req({ method: 'POST', headers: { host: 'evil.example' }, body: { expertId: 'x' } }),
+    response,
+  )
+  assert.equal(response.status, 403)
+  assert.equal(response.body.code, 'TRUST_REQUIRED')
+  assert.deepEqual(botCalls, [])
+  assert.equal(calls.some((call) => call.kind === 'fetch'), false)
+})
+
+test('a missing connection service fails closed', async () => {
+  const server = fakeServer()
+  mountBundledMarketRoutes({ webServer: Object.assign(server, { getOrigin: () => 'http://127.0.0.1:3080' }) }, {
+    catalog,
+    probe: async () => { throw new Error('probe must not run without trust') },
+  })
+  const response = res()
+  await server.routes.get('exact /dsh-workbuddy-expert-plus/api/market/environment').handler(req({ headers: { host: 'dsh.example.com' } }), response)
+  assert.equal(response.status, 200)
+  assert.equal(response.body.code, 'TRUST_UNAVAILABLE')
 })

@@ -193,3 +193,17 @@ test('the overlay seat carries a Bot-mode launcher host without a full-screen sh
 
   dispose()
 })
+
+test('the importer forwards the host webServer and connection services', async () => {
+  const { readFileSync: read } = await import('node:fs')
+  const { importerServicesOf } = await import('../src/importer/index.js')
+  const webServer = { getOrigin: () => 'http://127.0.0.1:3080' }
+  const connection = { requestRejection: () => undefined, admit: () => ({ peer: {} }), createSharedFetchHandler: () => ({}) }
+  const ctx = { get: (name) => ({ webServer, connection })[name] }
+  const services = importerServicesOf(ctx)
+  assert.equal(services.webServer, webServer)
+  assert.equal(services.connection, connection)
+  const hostSource = read(join(root, 'src', 'index.js'), 'utf8')
+  assert.match(hostSource, /ctx\.inject\(\['webServer', 'settings', 'connection'\]/,
+    'the importer segment must wait for the connection service')
+})

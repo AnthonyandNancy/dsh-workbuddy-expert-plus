@@ -289,3 +289,44 @@ test('the Bot launcher stylesheet uses theme tokens and a wide-aware rail state'
   assert.doesNotMatch(source, /\.wbx-launcher-icon[^{]*\{[^}]*display:\s*none/)
   assert.match(source, /@media \(prefers-reduced-motion: reduce\) \{ \.wbx-launcher \{ transition: none; \} \}/)
 })
+
+test('the Bot banner names each environment failure precisely', async () => {
+  const vm = await import('node:vm')
+  let definition
+  const sandbox = {
+    window: {
+      __ModuleLoader__: { load: (value) => { definition = value } },
+      localStorage: { getItem: () => null },
+      addEventListener() {},
+      removeEventListener() {},
+    },
+    document: {
+      createElement: () => ({ dataset: {}, textContent: '', remove() {} }),
+      querySelector: () => null,
+      head: { appendChild() {} },
+    },
+    console, setTimeout, clearTimeout,
+    React: { createElement: () => null, useState: (v) => [v, () => {}], useEffect: () => {}, useRef: (v) => ({ current: v }) },
+  }
+  sandbox.globalThis = sandbox
+  vm.createContext(sandbox)
+  vm.runInContext(source, sandbox)
+  const module = definition.factory(() => sandbox.React)
+  const t = (key) => ({
+    botTrustRequired: 'TRUST',
+    botBridgeUnavailable: 'BRIDGE',
+    botAbsent: 'ABSENT',
+    botUnknown: 'UNKNOWN',
+    botIncompatible: 'INCOMPATIBLE',
+    botReadOnly: 'READONLY',
+  })[key] || key
+
+  assert.equal(module.botEnvironmentText({ status: 'unknown', code: 'TRUST_REQUIRED' }, t), 'TRUST')
+  assert.equal(module.botEnvironmentText({ status: 'unknown', code: 'TRUST_UNAVAILABLE' }, t), 'TRUST')
+  assert.equal(module.botEnvironmentText({ status: 'unknown', code: 'BRIDGE_UNAVAILABLE' }, t), 'BRIDGE')
+  assert.equal(module.botEnvironmentText({ status: 'absent' }, t), 'ABSENT')
+  assert.equal(module.botEnvironmentText({ status: 'unknown' }, t), 'UNKNOWN')
+  assert.equal(module.botEnvironmentText({ status: 'incompatible' }, t), 'INCOMPATIBLE')
+  assert.equal(module.botEnvironmentText({ status: 'readOnly' }, t), 'READONLY')
+  assert.equal(module.botEnvironmentText({ status: 'ready' }, t), '')
+})

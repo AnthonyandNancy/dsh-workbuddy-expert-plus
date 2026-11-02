@@ -26,13 +26,32 @@ function sendJson(response, status, payload) {
   response.end(JSON.stringify(payload))
 }
 
-function sameOrigin(request) {
-  const host = request.headers?.host
-  if (host !== undefined && !/^(127\.0\.0\.1|localhost|\[::1\])(?::\d+)?$/i.test(host)) return false
-  if (request.headers?.['sec-fetch-site'] === 'cross-site') return false
-  const origin = request.headers?.origin
-  if (origin === undefined) return true
-  try { return new URL(origin).host === host } catch { return false }
+/**
+ * Delegate the browser-trust fence to DSH's Connection service. It is the
+ * single authority for loopback, listener-bind, `trustedHosts`, Origin and
+ * Sec-Fetch-Site policy, and it also enforces the browser/API credential.
+ *
+ * @returns {{ ok: true } | { ok: false, code: 'TRUST_REQUIRED'|'TRUST_UNAVAILABLE', reason: string }}
+ */
+function requestTrust(ctx, request) {
+  const reject = ctx?.connection?.requestRejection
+  if (typeof reject !== 'function') {
+    return { ok: false, code: 'TRUST_UNAVAILABLE', reason: 'DSH connection.requestRejection is unavailable; upgrade DSH Web' }
+  }
+  try {
+    const rejection = reject({ headers: request?.headers ?? {} })
+    if (rejection === undefined) return { ok: true }
+    if (rejection === 401) return { ok: false, code: 'TRUST_REQUIRED', reason: 'the DSH browser session is missing, expired, or bound to another authority' }
+    if (rejection === 403) return { ok: false, code: 'TRUST_REQUIRED', reason: 'this authority is not loopback, the listener bind address, or a configured trustedHosts entry' }
+    return { ok: false, code: 'TRUST_REQUIRED', reason: `DSH rejected the request (${String(rejection)})` }
+  } catch (error) {
+    return { ok: false, code: 'TRUST_UNAVAILABLE', reason: error instanceof Error ? error.message : String(error) }
+  }
+}
+
+/** Build the in-process fetch for one already-trusted request. */
+function botFetchFor(ctx, request) {
+  return createBotRequestFetch({ connection: ctx?.connection, request })
 }
 
 async function readJsonBody(request, maxBytes = MAX_BODY_BYTES) {
@@ -81,7 +100,11 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
 
   function guard(request, response) {
     if (request.method !== 'POST') { sendJson(response, 405, { error: 'method not allowed' }); return false }
-    if (!sameOrigin(request)) { sendJson(response, 403, { error: 'same-origin required' }); return false }
+    const trust = requestTrust(hostCtx, request)
+    if (!trust.ok) {
+      sendJson(response, trust.code === 'TRUST_REQUIRED' ? 403 : 503, { error: trust.reason, code: trust.code })
+      return false
+    }
     if (mutating) { sendJson(response, 409, { error: 'another change is in progress', code: 'BUSY' }); return false }
     mutating = true
     return true
@@ -211,10 +234,12 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
     handler: async (request, response) => {
       if (request.method !== 'GET' && request.method !== 'HEAD') return sendJson(response, 405, { error: 'method not allowed' })
       if (!botEnabled) return sendJson(response, 200, { status: 'absent', reason: 'Bot integration is disabled' })
+      const trust = requestTrust(hostCtx, request)
+      if (!trust.ok) return sendJson(response, 200, { status: 'unknown', code: trust.code, reason: trust.reason })
       try {
-        sendJson(response, 200, await probe({ fetchImpl: createBotRequestFetch(request) }))
+        sendJson(response, 200, await probe({ fetchImpl: botFetchFor(hostCtx, request) }))
       } catch (error) {
-        sendJson(response, 200, { status: 'unknown', reason: error instanceof Error ? error.message : String(error) })
+        sendJson(response, 200, { status: 'unknown', code: error?.code ?? 'UNKNOWN', reason: error instanceof Error ? error.message : String(error) })
       }
     },
   })
@@ -258,7 +283,7 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
             instructions: body.instructions,
             basePromptSha256: body.basePromptSha256,
             model: body.model,
-          }, { fetchImpl: createBotRequestFetch(request) })
+          }, { fetchImpl: botFetchFor(hostCtx, request) })
           sendJson(response, 200, { ...result, state: await currentState() })
         } catch (error) {
           sendJson(response, STATUS[error?.code] ?? 400, {
@@ -275,7 +300,7 @@ export function mountBundledMarketRoutes(hostCtx, { catalog, installer, botServi
       handler: async (request, response) => {
         if (request.method !== 'GET' && request.method !== 'HEAD') return sendJson(response, 405, { error: 'method not allowed' })
         try {
-          sendJson(response, 200, { bindings: await botService.bindings({ fetchImpl: createBotRequestFetch(request) }) })
+          sendJson(response, 200, { bindings: await botService.bindings({ fetchImpl: botFetchFor(hostCtx, request) }) })
         } catch (error) {
           sendJson(response, 502, { error: error instanceof Error ? error.message : String(error) })
         }

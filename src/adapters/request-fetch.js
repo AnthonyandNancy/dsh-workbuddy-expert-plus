@@ -1,54 +1,64 @@
 /**
- * Build a host-side fetch for DS-Bot's browser route.
+ * Bridge DS-Bot's POST api/bot call through DSH's own shared /api handler.
  *
- * DS-Bot exposes `api/bot` as a same-origin browser endpoint and authenticates
- * with the browser's session cookie. A Node service cannot use the relative
- * URL directly, so this helper turns the incoming plugin request into an
- * absolute loopback URL and forwards only the auth headers (never logs them).
+ * The incoming browser request has already passed DSH's Host/Origin fence and
+ * carries the signed browser credential. `connection.admit()` returns the
+ * owner Peer for that credential; handing it to the shared Fetch handler is
+ * the same path the browser's own /api call takes. Nothing is sent over a
+ * network: the internal URL only supplies the pathname the handler reads, and
+ * browser credentials never leave their own authority.
  */
 
-const LOOPBACK = /^(127\.0\.0\.1|localhost|\[::1\])(?::\d+)?$/i
-const FORWARDED_HEADERS = ['cookie', 'authorization']
+const INTERNAL_API_BOT = 'http://dsh.inprocess/api/bot'
+const ALLOWED_INIT_HEADERS = new Set(['content-type', 'accept'])
 
-export function isLoopbackAuthority(host) {
-  return typeof host === 'string' && LOOPBACK.test(host)
+function bridgeError(code, message) {
+  return Object.assign(new Error(message), { code })
+}
+
+/** Node repeats some headers as arrays; DSH reads string values only. */
+function normalizeHeaders(headers) {
+  const out = {}
+  for (const [name, value] of Object.entries(headers ?? {})) {
+    if (typeof value === 'string') out[name] = value
+    else if (Array.isArray(value)) out[name] = value.join(', ')
+  }
+  return out
 }
 
 /**
- * @param {object} request - IncomingMessage-like request carrying headers
- * @param {{fallbackBase?: string, fetchImpl?: Function}} [options]
- * @returns {(input: string, init: object) => Promise<Response>}
+ * @param {{connection: object, request: object}} options
+ * @returns {(input: string, init?: object) => Promise<Response>}
  */
-export function createBotRequestFetch(request, { fallbackBase = process.env.DSH_WEB_URL, fetchImpl = globalThis.fetch } = {}) {
-  let base = fallbackBase
-  const host = request?.headers?.host
-  if (host !== undefined) {
-    if (!isLoopbackAuthority(host)) {
-      throw Object.assign(new Error('DS-Bot requests require a loopback Host'), { code: 'INCOMPATIBLE' })
+export function createBotRequestFetch({ connection, request } = {}) {
+  if (typeof connection?.createSharedFetchHandler !== 'function' || typeof connection?.admit !== 'function') {
+    throw bridgeError('BRIDGE_UNAVAILABLE', 'DSH connection cannot bridge api/bot in-process; upgrade DSH Web')
+  }
+  const admission = connection.admit({ headers: normalizeHeaders(request?.headers) })
+  if (admission === null || typeof admission !== 'object' || !('peer' in admission)) {
+    const rejection = admission?.rejection
+    throw bridgeError('TRUST_REQUIRED', `DSH rejected the request (${String(rejection ?? 'no peer')})`)
+  }
+  const handler = connection.createSharedFetchHandler('/api')
+  if (handler === null || typeof handler?.fetch !== 'function') {
+    throw bridgeError('BRIDGE_UNAVAILABLE', 'DSH shared /api handler is unavailable')
+  }
+  return async (_input, init = {}) => {
+    const headers = {}
+    for (const [name, value] of Object.entries(init.headers ?? {})) {
+      if (typeof value !== 'string') continue
+      if (ALLOWED_INIT_HEADERS.has(name.toLowerCase())) headers[name.toLowerCase()] = value
     }
-    const forwardedProto = String(request?.headers?.['x-forwarded-proto'] ?? '').split(',')[0].trim().toLowerCase()
-    const protocol = forwardedProto === 'https' ? 'https' : 'http'
-    base = `${protocol}://${host}/`
+    const bridged = new Request(INTERNAL_API_BOT, {
+      method: init.method ?? 'POST',
+      headers,
+      ...(init.body === undefined ? {} : { body: init.body }),
+      ...(init.signal === undefined ? {} : { signal: init.signal }),
+    })
+    const response = await handler.fetch(bridged, admission.peer)
+    if (!(response instanceof Response)) {
+      throw bridgeError('INCOMPATIBLE', 'DSH shared /api handler did not return a Response')
+    }
+    return response
   }
-  if (typeof base !== 'string' || base.trim() === '') {
-    throw Object.assign(new Error('cannot resolve the DS-Bot route origin'), { code: 'INCOMPATIBLE' })
-  }
-  let target
-  try {
-    target = new URL('api/bot', base.endsWith('/') ? base : `${base}/`)
-  } catch {
-    throw Object.assign(new Error('cannot resolve the DS-Bot route origin'), { code: 'INCOMPATIBLE' })
-  }
-  if (!isLoopbackAuthority(target.host)) {
-    throw Object.assign(new Error('DS-Bot route origin is not loopback'), { code: 'INCOMPATIBLE' })
-  }
-  const forwarded = {}
-  for (const name of FORWARDED_HEADERS) {
-    const value = request?.headers?.[name]
-    if (typeof value === 'string' && value !== '') forwarded[name] = value
-  }
-  return async (_input, init = {}) => fetchImpl(target.href, {
-    ...init,
-    headers: { ...(init.headers ?? {}), ...forwarded },
-  })
 }

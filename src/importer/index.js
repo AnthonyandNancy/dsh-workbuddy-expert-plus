@@ -17,6 +17,15 @@ import { mountBundledMarketRoutes } from './bundled-routes.js'
 import { mountImporterRoutes } from './routes.js'
 import { mountPagePolicy, mountVolatileWatch } from './settings.js'
 
+
+/** Read the two host services the Bot trust fence and in-process bridge need. */
+export function importerServicesOf(ctx) {
+  return {
+    webServer: ctx.get('webServer'),
+    connection: ctx.get('connection'),
+  }
+}
+
 /**
  * Mount the market: bundled catalog + legacy routes + optional local scanner.
  * @param {object} ctx - context exposing webServer + settings
@@ -50,7 +59,7 @@ export async function mountImporter(ctx, options = {}) {
     : join(options.dshHome, 'workbuddy-expert-plus', 'bot-bindings.json')
   const botService = createBotService({ adapter: bundledAdapter, bindingsPath: botBindingsPath })
 
-  const offBundledRoutes = mountBundledMarketRoutes(ctx, { catalog, installer, botService })
+  const offBundledRoutes = mountBundledMarketRoutes(importerServicesOf(ctx), { catalog, installer, botService })
   // The legacy WorkBuddy read-only routes remain available as an optional
   // source; the built-in routes above are the mandatory surface.
   const offLegacyRoutes = mountImporterRoutes(ctx, {

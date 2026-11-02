@@ -644,7 +644,12 @@ var DICTS = {
     botModelLabel: '模型',
     botModelDefault: '默认模型',
     botReadOnly: 'DS-Bot 当前只读，无法创建 Bot',
+    botTrustRequired: '当前访问地址未被 DSH 信任，请用 --trusted-host 配置该域名',
+    botBridgeUnavailable: '当前 DSH 版本无法在进程内连接 DS-Bot，请升级 DSH Web',
     botUnavailable: 'DS-Bot 不可用或版本不兼容，无法创建 Bot',
+    botAbsent: 'DS-Bot 未安装或未加载，无法创建 Bot',
+    botUnknown: 'DS-Bot 暂时不可达，请稍后重试',
+    botIncompatible: 'DS-Bot 响应格式不兼容，无法创建 Bot',
     botLoadingPrompt: '正在读取完整 Prompt…',
     botCreateConfirm: '确认创建',
     botCreateDone: 'Bot 创建成功：{id}',
@@ -771,7 +776,12 @@ var DICTS = {
     botModelLabel: 'Model',
     botModelDefault: 'Default model',
     botReadOnly: 'DS-Bot is read-only; Bot creation is disabled',
+    botTrustRequired: 'This address is not trusted by DSH; configure it with --trusted-host',
+    botBridgeUnavailable: 'This DSH version cannot reach DS-Bot in-process; upgrade DSH Web',
     botUnavailable: 'DS-Bot is unavailable or incompatible; Bot creation is disabled',
+    botAbsent: 'DS-Bot is not installed or loaded; Bot creation is disabled',
+    botUnknown: 'DS-Bot is temporarily unreachable; retry later',
+    botIncompatible: 'DS-Bot returned an incompatible response; Bot creation is disabled',
     botLoadingPrompt: 'Loading the complete prompt…',
     botCreateConfirm: 'Create Bot',
     botCreateDone: 'Bot created: {id}',
@@ -2827,6 +2837,22 @@ function ComposerExpertSeat (props) {
  * form, then POST the exact prompt back. Creation is available only when the
  * environment probe says ready; read-only/unknown/incompatible stay disabled.
  */
+/**
+ * The exact banner text for one environment probe. The code wins over the
+ * status because TRUST_REQUIRED is a deployment/configuration answer, not
+ * proof of a DS-Bot protocol mismatch.
+ */
+function botEnvironmentText (env, t) {
+  if (env === null || typeof env !== 'object') return t('botUnknown')
+  if (env.status === 'ready') return ''
+  if (env.code === 'TRUST_REQUIRED' || env.code === 'TRUST_UNAVAILABLE') return t('botTrustRequired')
+  if (env.code === 'BRIDGE_UNAVAILABLE') return t('botBridgeUnavailable')
+  if (env.status === 'readOnly') return t('botReadOnly')
+  if (env.status === 'absent') return t('botAbsent')
+  if (env.status === 'incompatible') return t('botIncompatible')
+  return t('botUnknown')
+}
+
 function BotMarketOverlay (props) {
   var t = props.t
   var localeId = props.localeId || 'zh'
@@ -2959,7 +2985,7 @@ function BotMarketOverlay (props) {
   }
 
   var createDisabled = busy || !ready || selected === null || prompt === '' || name.trim() === ''
-  var statusText = ready ? '' : env.status === 'readOnly' ? t('botReadOnly') : t('botUnavailable')
+  var statusText = botEnvironmentText(env, t)
 
   return el('div', {
     className: 'wbx-overlay',
@@ -3635,6 +3661,7 @@ module.exports.openBotMarket = openBotMarket
 module.exports.closeBotMarket = closeBotMarket
 module.exports.BotMarketLauncher = BotMarketLauncher
 module.exports.BotMarketLauncherHost = BotMarketLauncherHost
+module.exports.botEnvironmentText = botEnvironmentText
 module.exports.botSurfaceHint = botSurfaceHint
 module.exports.createSurfaceStore = createSurfaceStore
 module.exports.ComposerExpertSeat = ComposerExpertSeat

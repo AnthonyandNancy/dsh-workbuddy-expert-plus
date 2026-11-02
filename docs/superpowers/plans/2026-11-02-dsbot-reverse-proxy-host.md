@@ -4,19 +4,20 @@
 
 **Goal:** 让 DSH Web 经反向代理/公网域名访问时，DS-Bot 环境探测与 Bot 创建不再因 loopback Host 误报“版本不兼容”，同时不扩大出站/信任面。
 
-**Architecture:** 入站准入直接委托 DSH `connection.requestRejection()`；出站 DS-Bot 调用目标唯一固定为 `webServer.getOrigin()`，不再读取请求 `Host`/`DSH_WEB_URL`，也不转发浏览器凭据。路由把真实失败码（`TRUST_REQUIRED`、`ABSENT`、`READ_ONLY`、`UNKNOWN`、`INCOMPATIBLE`）透出，客户端按码显示可操作文案。
+**Architecture:** 入站准入直接委托 DSH `connection.requestRejection()`；DS-Bot 调用通过 `connection.admit()` 取 owner Peer，再用 `connection.createSharedFetchHandler('/api')` 进程内桥接，不读取请求 `Host`/`DSH_WEB_URL`，也不转发浏览器凭据。路由把真实失败码（`TRUST_REQUIRED`、`BRIDGE_UNAVAILABLE`、`ABSENT`、`READ_ONLY`、`UNKNOWN`、`INCOMPATIBLE`）透出，客户端按码显示可操作文案。
 
-**Tech Stack:** Node.js >= 20 ESM、`node:test`、Cordis/DSH `webServer` + `connection` 服务、原生 Fetch、DS-Bot `POST api/bot`、Playwright（真实 DSH Web + 反向代理验收）。
+**Tech Stack:** Node.js >= 20 ESM（验收使用 Node 24.19.0）、`node:test`、Cordis/DSH `webServer` + `connection` 服务、原生 Fetch、DS-Bot `POST api/bot`、Playwright（真实 DSH Web + 反向代理验收）。
 
 ## Global Constraints
 
 - 仓库根是 `D:\code\ai\dsh-workbuddy-expert\packages\dsh-workbuddy-expert-plus`；所有 `git` 命令在该目录运行。
 - 当前分支必须是 `fix/dsbot-trusted-proxy-host`，基线 `33b6d2c`。
+- 测试运行时：Node `24.19.0`（PATH 中的 `node` 可能是 16，先执行 `export PATH=/d/Develop/nvm/v24.19.0:$PATH`）。
 - 目标宿主：DSH `0.2.1-rc.4`、DS Bot `0.2.4`；插件自身 `0.2.1`。
 - 不修改 DSH、DS-Bot 上游源码；不新增第三方依赖。
 - 入站信任唯一来源：`ctx.connection.requestRejection({ headers })`；禁止在插件内另写 loopback/`trustedHosts`/Origin 规则。
-- 出站目标唯一来源：`ctx.webServer.getOrigin()`；禁止用请求 `Host`、`Origin`、`X-Forwarded-*`、`DSH_WEB_URL`、`publicUrl` 拼接出站 URL。
-- 出站请求不得携带 `cookie`、`authorization`、`host`、`x-forwarded-*`、`origin`。
+- 出站唯一路径：`connection.createSharedFetchHandler('/api')` + `connection.admit()` 的 owner Peer；禁止用请求 `Host`、`Origin`、`X-Forwarded-*`、`DSH_WEB_URL`、`publicUrl` 拼接任何网络 URL。
+- 桥接请求不得携带 `cookie`、`authorization`、`host`、`x-forwarded-*`、`origin`；不得调用全局 `fetch`。
 - 不写浏览器 `localStorage['ds-bot:*']`，不注入宿主 DOM。
 - 所有代码改动必须先有失败测试（RED），再实现（GREEN），每个任务独立提交。
 - 每个任务结束时运行该任务的定向测试；全量验证在 Task 5。
@@ -55,7 +56,7 @@
   - `connection.admit(request): { peer } | { rejection: 401|403|409 }`
   - 入站 `request.headers`
 - Produces:
-  - `createBotRequestFetch({ connection, request, fetchImpl? }): (input, init) => Promise<Response>`
+  - `createBotRequestFetch({ connection, request }): (input, init) => Promise<Response>`
   - 固定内部 URL `http://dsh.inprocess/api/bot`；
   - `admit` 拒绝时抛 `{ code: 'TRUST_REQUIRED' }`；
   - 缺 `admit`/`createSharedFetchHandler` 时抛 `{ code: 'BRIDGE_UNAVAILABLE' }`；
@@ -170,7 +171,7 @@ function bridgeError(code, message) {
   return Object.assign(new Error(message), { code })
 }
 
-export function createBotRequestFetch({ connection, request, fetchImpl = globalThis.fetch } = {}) {
+export function createBotRequestFetch({ connection, request } = {}) {
   if (typeof connection?.createSharedFetchHandler !== 'function' || typeof connection?.admit !== 'function') {
     throw bridgeError('BRIDGE_UNAVAILABLE', 'DSH connection cannot bridge api/bot in-process; upgrade DSH Web')
   }
@@ -204,7 +205,7 @@ export function createBotRequestFetch({ connection, request, fetchImpl = globalT
 }
 ```
 
-> `fetchImpl` 仅为测试/未来注入保留；当前实现不得调用它，测试可断言它未被调用。`Request`/`Response` 来自 Node 20+ 全局。
+> `Request`/`Response` 来自 Node 20+ 全局；实现不得调用全局 `fetch`，测试会替换 `globalThis.fetch` 并断言零调用。
 
 - [ ] **Step 4: 运行测试确认 GREEN**
 
@@ -878,7 +879,7 @@ git commit -m "docs: verify DS-Bot behind a trusted reverse proxy"
 1. **自检**：`git diff --stat` 只包含该任务文件；`git status --short` 无未预期文件。
 2. **测试证据**：把 RED/GREEN 命令与输出摘要记录到任务报告。
 3. **独立复核**：由另一个 review subagent 检查：
-   - 是否仍有请求头参与出站 URL；
+   - 是否仍有请求头参与桥接 URL；
    - 是否仍复制 cookie/authorization；
    - 是否绕过 `requestRejection`；
    - 是否把 `TRUST_REQUIRED` 误标 `INCOMPATIBLE`；

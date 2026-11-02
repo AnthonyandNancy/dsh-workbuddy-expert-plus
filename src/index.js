@@ -194,7 +194,7 @@ export function apply(ctx, config = {}) {
   // policy inside mountImporter key on the ENTRY fiber, and the
   // inject-child context handed to this callback is a DIFFERENT fiber —
   // passing it left both registrations silently dead (fixed 2026-09-30).
-  ctx.inject(['webServer', 'settings'], (importerCtx) => {
+  ctx.inject(['webServer', 'settings', 'connection'], (importerCtx) => {
     ctx.effect(() => {
       let disposed = false
       let offImporter
